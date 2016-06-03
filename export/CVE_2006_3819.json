@@ -1,0 +1,162 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3819", 
+                "published": "2006-07-26T21:04:00.000-04:00", 
+                "id": "CVE-2006-3819", 
+                "modified": "2011-03-07T21:39:32.673-05:00", 
+                "summary": "Eval injection vulnerability in the configure script in TWiki 4.0.0 through 4.0.4 allows remote attackers to execute arbitrary Perl code via an HTTP POST request containing a parameter name starting with \"TYPEOF\"."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:twiki:twiki:4.0"
+            }, 
+            {
+                "id": "cpe:/a:twiki:twiki:4.0.0"
+            }, 
+            {
+                "id": "cpe:/a:twiki:twiki:4.0.2"
+            }, 
+            {
+                "id": "cpe:/a:twiki:twiki:4.0.1"
+            }, 
+            {
+                "id": "cpe:/a:twiki:twiki:4.0.3"
+            }, 
+            {
+                "id": "cpe:/a:twiki:twiki:4.0.4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.31518", 
+                "id": 31518
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/19188", 
+                "id": 19188
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/27556", 
+                "id": 27556
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://twiki.org/cgi-bin/view/Codev/SecurityAlertCmdExecWithConfigure", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/2995", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/28049", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/19188", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/displayvuln.php?osvdb_id=27556", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1016603", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/21235", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003085", 
+                "signature": "ET WEB_SPECIFIC_APPS TWiki Configure Script TYPEOF Remote Command Execution Attempt"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-3819"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "TWiki configure Script Arbitrary Command Execution", 
+                "file": "twiki_configure_cmd_exec.nasl", 
+                "family": "CGI abuses", 
+                "id": "22123"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,201 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3369", 
+                "published": "2009-09-24T12:30:02.407-04:00", 
+                "id": "CVE-2009-3369", 
+                "modified": "2009-10-31T02:22:56.327-04:00", 
+                "summary": "CgiUserConfigEdit in BackupPC 3.1.0, when SSH keys and Rsync are in use in a multi-user environment, does not restrict users from the ClientNameAlias function, which allows remote authenticated users to read and write sensitive files by modifying ClientNameAlias to match another system, then initiating a backup or restore."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:craig_barratt:backuppc:3.1.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.50220", 
+                "id": 50220
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/57236", 
+                "id": 57236
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://www.redhat.com/archives/fedora-package-announce/2009-October/msg00729.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "https://www.redhat.com/archives/fedora-package-announce/2009-October/msg00694.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=518412", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/37161", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/36393", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/57236", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=542218", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "single_instance", 
+                    "exploit": "6.8", 
+                    "base": "8.5", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-3369"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13557", 
+                "title": "USN-843-1 -- backuppc vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13557"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Core 10 FEDORA-2009-9973 (BackupPC)", 
+                "file": "fcore_2009_9973.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "66137"
+            }, 
+            {
+                "name": "Fedora Core 11 FEDORA-2009-9982 (BackupPC)", 
+                "file": "fcore_2009_9982.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "66136"
+            }, 
+            {
+                "name": "BackupPC ClientNameAlias Function Security Bypass Vulnerability", 
+                "file": "gb_backuppc_clientnamealias_sec_bypass_vuln.nasl", 
+                "family": "General", 
+                "id": "801107"
+            }, 
+            {
+                "name": "Mandrake Security Advisory MDVSA-2009:253 (backuppc)", 
+                "file": "mdksa_2009_253.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "64996"
+            }, 
+            {
+                "name": "Ubuntu USN-843-1 (backuppc)", 
+                "file": "ubuntu_843_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "65750"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 10 : BackupPC-3.1.0-6.fc10 (2009-9973)", 
+                "file": "fedora_2009-9973.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "42282"
+            }, 
+            {
+                "name": "Fedora 11 : BackupPC-3.1.0-7.fc11 (2009-9982)", 
+                "file": "fedora_2009-9982.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "42283"
+            }, 
+            {
+                "name": "Ubuntu 8.04 LTS / 8.10 / 9.04 : backuppc vulnerability (USN-843-1)", 
+                "file": "ubuntu_USN-843-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "42051"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2009-9973", 
+                "id": "FEDORA-2009-9973"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2009-9982", 
+                "id": "FEDORA-2009-9982"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

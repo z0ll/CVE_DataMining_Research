@@ -1,0 +1,160 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0449", 
+                "published": "1999-01-26T00:00:00.000-05:00", 
+                "id": "CVE-1999-0449", 
+                "modified": "2008-09-09T08:34:33.040-04:00", 
+                "summary": "The ExAir sample site in IIS 4 allows remote attackers to cause a denial of service (CPU consumption) via a direct request to the (1) advsearch.asp, (2) query.asp, or (3) search.asp scripts."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:4.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.2845", 
+                "id": 2845
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/193", 
+                "id": 193
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/2", 
+                "id": 2
+            }, 
+            {
+                "url": "http://www.osvdb.org/3", 
+                "id": 3
+            }, 
+            {
+                "url": "http://www.osvdb.org/4", 
+                "id": 4
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/193", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/4", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/3", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/2", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.8", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1028", 
+                "signature": "SERVER-IIS query.asp access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1500", 
+                "signature": "SERVER-WEBAPP ExAir access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0449"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Microsoft IIS advsearch.asp Direct Request Remote DoS", 
+                "file": "ExAir_dos_advsearch.nasl", 
+                "family": "CGI abuses", 
+                "id": "10002"
+            }, 
+            {
+                "name": "Microsoft IIS query.asp Direct Request Remote DoS", 
+                "file": "ExAir_dos_query.nasl", 
+                "family": "CGI abuses", 
+                "id": "10003"
+            }, 
+            {
+                "name": "Microsoft IIS search.asp Direct Request DoS", 
+                "file": "ExAir_dos_search.nasl", 
+                "family": "CGI abuses", 
+                "id": "10004"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

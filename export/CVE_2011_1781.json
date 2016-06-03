@@ -1,0 +1,266 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1781", 
+                "published": "2011-08-29T17:55:00.847-04:00", 
+                "id": "CVE-2011-1781", 
+                "modified": "2011-10-26T23:25:01.480-04:00", 
+                "summary": "SystemTap 1.4, when unprivileged (aka stapusr) mode is enabled, allows local users to cause a denial of service (divide-by-zero error and OOPS) via a crafted ELF program with DWARF expressions that are not properly handled by a stap script that performs stack unwinding (aka backtracing)."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:systemtap:systemtap:1.4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.58406", 
+                "id": 58406
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/47934", 
+                "id": 47934
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://rhn.redhat.com/errata/RHSA-2011-0842.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=702687", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/47934", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2011:155", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://sourceware.org/git/?p=systemtap.git;a=commit;h=fa2e3415185a28542d419a641ecd6cddd52e3cd9", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/44802", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2011/05/20/2", 
+                    "vendor": "MLIST"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "1.9", 
+                    "base": "1.2", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-1781"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27808", 
+                "title": "DEPRECATED: ELSA-2011-0842 -- systemtap security update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27808"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21790", 
+                "title": "RHSA-2011:0842: systemtap security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21790"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23507", 
+                "title": "ELSA-2011:0842: systemtap security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23507"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for systemtap FEDORA-2011-7289", 
+                "file": "gb_fedora_2011_7289_systemtap_fc13.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863106"
+            }, 
+            {
+                "name": "Fedora Update for systemtap FEDORA-2011-7302", 
+                "file": "gb_fedora_2011_7302_systemtap_fc14.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863107"
+            }, 
+            {
+                "name": "RedHat Update for systemtap RHSA-2011:0842-01", 
+                "file": "gb_RHSA-2011_0842-01_systemtap.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870622"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : systemtap (CESA-2011:0841)", 
+                "file": "centos_RHSA-2011-0841.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "67083"
+            }, 
+            {
+                "name": "Fedora 13 : systemtap-1.4-6.fc13 (2011-7289)", 
+                "file": "fedora_2011-7289.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "54835"
+            }, 
+            {
+                "name": "Fedora 14 : systemtap-1.4-6.fc14 (2011-7302)", 
+                "file": "fedora_2011-7302.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "54836"
+            }, 
+            {
+                "name": "Fedora 15 : systemtap-1.4-9.fc15 (2011-7314)", 
+                "file": "fedora_2011-7314.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "54837"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : systemtap (MDVSA-2011:155)", 
+                "file": "mandriva_MDVSA-2011-155.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "61932"
+            }, 
+            {
+                "name": "Oracle Linux 5 : systemtap (ELSA-2011-0841)", 
+                "file": "oraclelinux_ELSA-2011-0841.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68281"
+            }, 
+            {
+                "name": "Oracle Linux 6 : systemtap (ELSA-2011-0842)", 
+                "file": "oraclelinux_ELSA-2011-0842.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68282"
+            }, 
+            {
+                "name": "RHEL 5 : systemtap (RHSA-2011:0841)", 
+                "file": "redhat-RHSA-2011-0841.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "54929"
+            }, 
+            {
+                "name": "RHEL 6 : systemtap (RHSA-2011:0842)", 
+                "file": "redhat-RHSA-2011-0842.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "54930"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : systemtap on SL6.x i386/x86_64", 
+                "file": "sl_20110531_systemtap_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "61062"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2011:155", 
+                "id": "MDVSA-2011:155"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20110842", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2011-0842.html", 
+                    "id": "RHSA-2011:0842", 
+                    "title": "RHSA-2011:0842: systemtap security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=702687", 
+                    "title": "CVE-2011-1769 systemtap: does not guard against DWARF operations div-by-zero errors, which can cause a kernel panic", 
+                    "id": "702687", 
+                    "issue date": "2011-05-31", 
+                    "associated redhat": "RHSA-2011:0842"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=703972", 
+                    "title": "CVE-2011-1781 systemtap: divide by zero stack unwinding flaw", 
+                    "id": "703972", 
+                    "issue date": "2011-05-31", 
+                    "associated redhat": "RHSA-2011:0842"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

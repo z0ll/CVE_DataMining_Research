@@ -1,0 +1,719 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6410", 
+                "published": "2014-09-28T06:55:10.423-04:00", 
+                "id": "CVE-2014-6410", 
+                "modified": "2014-12-06T22:00:09.740-05:00", 
+                "summary": "The __udf_read_inode function in fs/udf/inode.c in the Linux kernel through 3.16.3 does not restrict the amount of ICB indirection, which allows physically proximate attackers to cause a denial of service (infinite loop or stack consumption) via a UDF filesystem with a crafted inode."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.16.2"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.16.3"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.16.0"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.16.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.67543", 
+                "id": 67543
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/69799", 
+                "id": 69799
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/torvalds/linux/commit/c03aa9f6e1f938618e6db2e23afef0574efeeb65", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1141809", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2379-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2378-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2377-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2376-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2375-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2374-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/69799", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2014/09/15/9", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2014-1318.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2014-10/msg00007.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2014-10/msg00006.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=c03aa9f6e1f938618e6db2e23afef0574efeeb65", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "4.7", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-6410"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28418", 
+                "title": "ELSA-2014-1971 -- kernel security and bug fix update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28418"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28399", 
+                "title": "RHSA-2014:1971 -- kernel security and bug fix update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28399"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28126", 
+                "title": "SUSE-SU-2014:1319-1 -- Security update for Linux kernel (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28126"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28612", 
+                "title": "ELSA-2014-1997 -- kernel security and bug fix update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28612"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27703", 
+                "title": "RHSA-2014:1997 -- kernel security and bug fix update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27703"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27182", 
+                "title": "USN-2375-1 -- linux-ec2 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27182"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26882", 
+                "title": "USN-2377-1 -- linux-ti-omap4 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26882"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27719", 
+                "title": "SUSE-SU-2014:1316-1 -- Security update for Linux kernel (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27719"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28482", 
+                "title": "ELSA-2014-3104 -- Unbreakable Enterprise kernel security update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28482"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27155", 
+                "title": "USN-2374-1 -- linux vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27155"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27066", 
+                "title": "USN-2378-1 -- linux-lts-trusty vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27066"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27668", 
+                "title": "ELSA-2014-3105 -- Unbreakable Enterprise kernel security update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27668"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26488", 
+                "title": "USN-2376-1 -- linux vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26488"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26982", 
+                "title": "USN-2379-1 -- linux vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26982"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28305", 
+                "title": "ELSA-2014-3103 -- Unbreakable Enterprise kernel security update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28305"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "CentOS 7 : kernel (CESA-2014:1971)", 
+                "file": "centos_RHSA-2014-1971.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "79876"
+            }, 
+            {
+                "name": "CentOS 6 : kernel (CESA-2014:1997)", 
+                "file": "centos_RHSA-2014-1997.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "80088"
+            }, 
+            {
+                "name": "Debian DLA-118-1 : linux-2.6 security update", 
+                "file": "debian_DLA-118.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "82101"
+            }, 
+            {
+                "name": "Fedora 19 : kernel-3.14.19-100.fc19 (2014-11008)", 
+                "file": "fedora_2014-11008.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "77974"
+            }, 
+            {
+                "name": "Fedora 20 : kernel-3.16.2-201.fc20 (2014-11031)", 
+                "file": "fedora_2014-11031.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "77767"
+            }, 
+            {
+                "name": "Fedora 21 : kernel-3.16.3-300.fc21 (2014-11097)", 
+                "file": "fedora_2014-11097.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "77798"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : kernel (MDVSA-2014:201)", 
+                "file": "mandriva_MDVSA-2014-201.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "78617"
+            }, 
+            {
+                "name": "openSUSE Security Update : the Linux Kernel (openSUSE-SU-2014:1669-1)", 
+                "file": "openSUSE-2014-791.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "80150"
+            }, 
+            {
+                "name": "openSUSE Security Update : the Linux Kernel (openSUSE-SU-2014:1677-1)", 
+                "file": "openSUSE-2014-793.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "80152"
+            }, 
+            {
+                "name": "Oracle Linux 7 : kernel (ELSA-2014-1971)", 
+                "file": "oraclelinux_ELSA-2014-1971.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "79845"
+            }, 
+            {
+                "name": "Oracle Linux 6 : kernel (ELSA-2014-1997)", 
+                "file": "oraclelinux_ELSA-2014-1997.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "80070"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : Unbreakable Enterprise kernel (ELSA-2014-3103)", 
+                "file": "oraclelinux_ELSA-2014-3103.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "80004"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2014-3104)", 
+                "file": "oraclelinux_ELSA-2014-3104.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "80005"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2014-3105)", 
+                "file": "oraclelinux_ELSA-2014-3105.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "80006"
+            }, 
+            {
+                "name": "Oracle Linux 7 : kernel (ELSA-2015-0290)", 
+                "file": "oraclelinux_ELSA-2015-0290.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "81800"
+            }, 
+            {
+                "name": "Oracle Linux 6 : kernel (ELSA-2015-1272)", 
+                "file": "oraclelinux_ELSA-2015-1272.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85097"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : Unbreakable Enterprise kernel (ELSA-2015-3012)", 
+                "file": "oraclelinux_ELSA-2015-3012.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "81966"
+            }, 
+            {
+                "name": "OracleVM 3.3 : kernel-uek (OVMSA-2015-0040)", 
+                "file": "oraclevm_OVMSA-2015-0040.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "82691"
+            }, 
+            {
+                "name": "RHEL 6 : MRG (RHSA-2014:1318)", 
+                "file": "redhat-RHSA-2014-1318.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "78006"
+            }, 
+            {
+                "name": "RHEL 7 : kernel (RHSA-2014:1971)", 
+                "file": "redhat-RHSA-2014-1971.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "79848"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2014:1997)", 
+                "file": "redhat-RHSA-2014-1997.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "80072"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL7.x x86_64", 
+                "file": "sl_20141209_kernel_on_SL7_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "80014"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL6.x i386/x86_64", 
+                "file": "sl_20141216_kernel_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "80099"
+            }, 
+            {
+                "name": "SuSE 11.3 Security Update : Linux kernel (SAT Patch Numbers 9746 / 9749 / 9751)", 
+                "file": "suse_11_kernel-140924.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "78650"
+            }, 
+            {
+                "name": "SuSE 11.3 Security Update : Linux kernel (SAT Patch Number 9750)", 
+                "file": "suse_11_kernel-bigsmp-201409-140924.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "78651"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS : linux vulnerabilities (USN-2374-1)", 
+                "file": "ubuntu_USN-2374-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "78255"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS : linux-ec2 vulnerabilities (USN-2375-1)", 
+                "file": "ubuntu_USN-2375-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "78256"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux vulnerabilities (USN-2376-1)", 
+                "file": "ubuntu_USN-2376-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "78257"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-trusty vulnerabilities (USN-2378-1)", 
+                "file": "ubuntu_USN-2378-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "78258"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux vulnerabilities (USN-2379-1)", 
+                "file": "ubuntu_USN-2379-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "78259"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-6410.html", 
+                "id": "SUSE-SU-2014:1316"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-6410.html", 
+                "id": "SUSE-SU-2014:1319"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2014-1318.html", 
+                    "id": "RHSA-2014:1318", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20141971", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2014-1971.html", 
+                    "id": "RHSA-2014:1971", 
+                    "title": "RHSA-2014:1971: kernel security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1028148", 
+                    "title": "CVE-2013-2929 kernel: exec/ptrace: get_dumpable() incorrect tests", 
+                    "id": "1028148", 
+                    "issue date": "2014-12-09", 
+                    "associated redhat": "RHSA-2014:1971"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1108744", 
+                    "title": "CVE-2014-4027 Kernel: target/rd: imformation leakage", 
+                    "id": "1108744", 
+                    "issue date": "2014-12-09", 
+                    "associated redhat": "RHSA-2014:1971"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1109774", 
+                    "title": "CVE-2014-1739 Kernel: drivers: media: an information leakage", 
+                    "id": "1109774", 
+                    "issue date": "2014-12-09", 
+                    "associated redhat": "RHSA-2014:1971"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1113406", 
+                    "title": "CVE-2014-4652 Kernel: ALSA: control: protect user controls against races & memory disclosure", 
+                    "id": "1113406", 
+                    "issue date": "2014-12-09", 
+                    "associated redhat": "RHSA-2014:1971"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1113445", 
+                    "title": "CVE-2014-4654 CVE-2014-4655 Kernel: ALSA: control: use-after-free in replacing user controls", 
+                    "id": "1113445", 
+                    "issue date": "2014-12-09", 
+                    "associated redhat": "RHSA-2014:1971"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1113470", 
+                    "title": "CVE-2014-4656 Kernel: ALSA: control: integer overflow in id.index & id.numid", 
+                    "id": "1113470", 
+                    "issue date": "2014-12-09", 
+                    "associated redhat": "RHSA-2014:1971"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1122472", 
+                    "title": "CVE-2014-5045 kernel: vfs: refcount issues during unmount on symlink", 
+                    "id": "1122472", 
+                    "issue date": "2014-12-09", 
+                    "associated redhat": "RHSA-2014:1971"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1140325", 
+                    "title": "CVE-2014-3631 kernel: keys: incorrect termination condition in assoc array garbage collection", 
+                    "id": "1140325", 
+                    "issue date": "2014-12-09", 
+                    "associated redhat": "RHSA-2014:1971"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1141173", 
+                    "title": "CVE-2014-3181 Kernel: HID: OOB write in magicmouse driver", 
+                    "id": "1141173", 
+                    "issue date": "2014-12-09", 
+                    "associated redhat": "RHSA-2014:1971"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1141210", 
+                    "title": "CVE-2014-3182 Kernel: HID: logitech-dj OOB array access", 
+                    "id": "1141210", 
+                    "issue date": "2014-12-09", 
+                    "associated redhat": "RHSA-2014:1971"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1141391", 
+                    "title": "CVE-2014-3184 Kernel: HID: off by one error in various _report_fixup routines", 
+                    "id": "1141391", 
+                    "issue date": "2014-12-09", 
+                    "associated redhat": "RHSA-2014:1971"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1141400", 
+                    "title": "CVE-2014-3185 Kernel: USB serial: memory corruption flaw", 
+                    "id": "1141400", 
+                    "issue date": "2014-12-09", 
+                    "associated redhat": "RHSA-2014:1971"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1141407", 
+                    "title": "CVE-2014-3186 Kernel: HID: memory corruption via OOB write", 
+                    "id": "1141407", 
+                    "issue date": "2014-12-09", 
+                    "associated redhat": "RHSA-2014:1971"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1141809", 
+                    "title": "CVE-2014-6410 kernel: udf: Avoid infinite loop when processing indirect ICBs", 
+                    "id": "1141809", 
+                    "issue date": "2014-12-09", 
+                    "associated redhat": "RHSA-2014:1971"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1147850", 
+                    "title": "CVE-2014-3673 kernel: sctp: skb_over_panic when receiving malformed ASCONF chunks", 
+                    "id": "1147850", 
+                    "issue date": "2014-12-09", 
+                    "associated redhat": "RHSA-2014:1971"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1155731", 
+                    "title": "CVE-2014-3687 kernel: net: sctp: fix panic on duplicate ASCONF chunks", 
+                    "id": "1155731", 
+                    "issue date": "2014-12-09", 
+                    "associated redhat": "RHSA-2014:1971"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1155745", 
+                    "title": "CVE-2014-3688 kernel: net: sctp: remote memory pressure from excessive queueing", 
+                    "id": "1155745", 
+                    "issue date": "2014-12-09", 
+                    "associated redhat": "RHSA-2014:1971"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20141997", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2014-1997.html", 
+                    "id": "RHSA-2014:1997", 
+                    "title": "RHSA-2014:1997: kernel security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1134099", 
+                    "title": "CVE-2014-5471 CVE-2014-5472 kernel: isofs: unbound recursion when processing relocated directories", 
+                    "id": "1134099", 
+                    "issue date": "2014-12-16", 
+                    "associated redhat": "RHSA-2014:1997"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1141742", 
+                    "title": "CVE-2012-6657 Kernel: net: guard tcp_set_keepalive against crash", 
+                    "id": "1141742", 
+                    "issue date": "2014-12-16", 
+                    "associated redhat": "RHSA-2014:1997"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1141809", 
+                    "title": "CVE-2014-6410 kernel: udf: Avoid infinite loop when processing indirect ICBs", 
+                    "id": "1141809", 
+                    "issue date": "2014-12-16", 
+                    "associated redhat": "RHSA-2014:1997"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1147850", 
+                    "title": "CVE-2014-3673 kernel: sctp: skb_over_panic when receiving malformed ASCONF chunks", 
+                    "id": "1147850", 
+                    "issue date": "2014-12-16", 
+                    "associated redhat": "RHSA-2014:1997"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1155731", 
+                    "title": "CVE-2014-3687 kernel: net: sctp: fix panic on duplicate ASCONF chunks", 
+                    "id": "1155731", 
+                    "issue date": "2014-12-16", 
+                    "associated redhat": "RHSA-2014:1997"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1155745", 
+                    "title": "CVE-2014-3688 kernel: net: sctp: remote memory pressure from excessive queueing", 
+                    "id": "1155745", 
+                    "issue date": "2014-12-16", 
+                    "associated redhat": "RHSA-2014:1997"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1172806", 
+                    "title": "CVE-2014-9322 kernel: x86: local privesc due to bad_iret and paranoid entry incompatibility", 
+                    "id": "1172806", 
+                    "issue date": "2014-12-16", 
+                    "associated redhat": "RHSA-2014:1997"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2374-1", 
+                "id": "USN-2374-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2375-1", 
+                "id": "USN-2375-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2376-1", 
+                "id": "USN-2376-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2377-1", 
+                "id": "USN-2377-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2378-1", 
+                "id": "USN-2378-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2379-1", 
+                "id": "USN-2379-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

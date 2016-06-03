@@ -1,0 +1,198 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4163", 
+                "published": "2015-06-15T11:59:12.413-04:00", 
+                "id": "CVE-2015-4163", 
+                "modified": "2015-06-17T12:35:56.263-04:00", 
+                "summary": "GNTTABOP_swap_grant_ref in Xen 4.2 through 4.5 does not check the grant table operation version, which allows local guest domains to cause a denial of service (NULL pointer dereference) via a hypercall without a GNTTABOP_setup_table or GNTTABOP_set_version."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:xen:xen:4.2.1"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.3.0"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.4.1:-"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.4.0:-"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.2.0"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.2.2"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.3.1"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.3.4"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.2.3"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.4.0:rc1"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.5.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.75853", 
+                "id": 75853
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xenbits.xen.org/xsa/advisory-134.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.9", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-4163"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3286-1 (xen - security update)", 
+                "file": "deb_3286.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703286"
+            }, 
+            {
+                "name": "Gentoo Linux Local Check: https://security.gentoo.org/glsa/201604-03", 
+                "file": "glsa-201604-03.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "18627"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-3286-1 : xen - security update", 
+                "file": "debian_DSA-3286.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "84169"
+            }, 
+            {
+                "name": "FreeBSD : xen-kernel -- GNTTABOP_swap_grant_ref operation misbehavior (80e846ff-27eb-11e5-a4a5-002590263bf5)", 
+                "file": "freebsd_pkg_80e846ff27eb11e5a4a5002590263bf5.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "84706"
+            }, 
+            {
+                "name": "GLSA-201604-03 : Xen: Multiple vulnerabilities (Venom)", 
+                "file": "gentoo_GLSA-201604-03.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "90380"
+            }, 
+            {
+                "name": "openSUSE Security Update : xen (openSUSE-2015-434) (Venom)", 
+                "file": "openSUSE-2015-434.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84333"
+            }, 
+            {
+                "name": "openSUSE Security Update : xen (openSUSE-2015-435)", 
+                "file": "openSUSE-2015-435.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84334"
+            }, 
+            {
+                "name": "OracleVM 3.3 : xen (OVMSA-2015-0067)", 
+                "file": "oraclevm_OVMSA-2015-0067.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "84139"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : xen (SUSE-SU-2015:1042-1)", 
+                "file": "suse_SU-2015-1042-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84146"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : Xen (SUSE-SU-2015:1045-1)", 
+                "file": "suse_SU-2015-1045-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84190"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : Xen (SUSE-SU-2015:1157-1)", 
+                "file": "suse_SU-2015-1157-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84469"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

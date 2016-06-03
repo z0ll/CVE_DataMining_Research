@@ -1,0 +1,131 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-1114", 
+                "published": "2001-08-13T00:00:00.000-04:00", 
+                "id": "CVE-2001-1114", 
+                "modified": "2008-09-05T16:25:43.453-04:00", 
+                "summary": "book.cgi in NetCode NC Book 0.2b allows remote attackers to execute arbitrary commands via shell metacharacters in the \"current\" parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:netcode:nc_book:0.2b"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.17144", 
+                "id": 17144
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/3178", 
+                "id": 3178
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/static/6986.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/3178", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/204094", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1472", 
+                "signature": "SERVER-WEBAPP book.cgi access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1879", 
+                "signature": "SERVER-WEBAPP book.cgi arbitrary command execution attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-1114"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "NetCode NC Book book.cgi current Parameter Arbitrary Command Execution", 
+                "file": "ncbook_cgi.nasl", 
+                "family": "CGI abuses", 
+                "id": "10721"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

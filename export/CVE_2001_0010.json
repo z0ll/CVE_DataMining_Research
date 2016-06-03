@@ -1,0 +1,209 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-0010", 
+                "published": "2001-02-12T00:00:00.000-05:00", 
+                "id": "CVE-2001-0010", 
+                "modified": "2008-09-10T15:07:01.307-04:00", 
+                "summary": "Buffer overflow in transaction signature (TSIG) handling code in BIND 8 allows remote attackers to gain root privileges."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:isc:bind:8.2.2:p7"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:8.2.2:p6"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:8.2.2:p5"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:8.2.2:p4"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:8.2.1"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:8.2.2"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:8.2"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:8.2.2:p3"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:8.2.2:p2"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:8.2.2:p1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.16377", 
+                "id": 16377
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/2302", 
+                "id": 2302
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/14795", 
+                "id": 14795
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.cert.org/advisories/CA-2001-02.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/2302", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2001-007.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.nai.com/research/covert/advisories/047.asp", 
+                    "vendor": "NAI"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2001/dsa-026", 
+                    "vendor": "DEBIAN"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2100303", 
+                "signature": "GPL DELETED EXPLOIT named tsig overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2100314", 
+                "signature": "GPL DELETED EXPLOIT named tsig overflow attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:303", 
+                "signature": "SERVER-OTHER Bind Buffer Overflow named tsig overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:314", 
+                "signature": "SERVER-OTHER Bind Buffer Overflow named tsig overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-0010"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 026-1 (bind)", 
+                "file": "deb_026_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "53789"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "ISC BIND < 4.9.8 / 8.2.3 Multiple Remote Overflows", 
+                "file": "bind_covert_overflows.nasl", 
+                "family": "DNS", 
+                "id": "10605"
+            }, 
+            {
+                "name": "Debian DSA-026-1 : bind - buffer overflows and information leak", 
+                "file": "debian_DSA-026.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "14863"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2001-007.html", 
+                    "id": "RHSA-2001:007", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-026", 
+                "id": "DSA-026"
+            }
+        ], 
+        "Vmware": []
+    }
+}

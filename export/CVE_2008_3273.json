@@ -1,0 +1,247 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-3273", 
+                "published": "2008-08-10T16:41:00.000-04:00", 
+                "id": "CVE-2008-3273", 
+                "modified": "2012-11-05T23:05:40.623-05:00", 
+                "summary": "JBoss Enterprise Application Platform (aka JBossEAP or EAP) before 4.2.0.CP03, and 4.3.0 before 4.3.0.CP01, allows remote attackers to obtain sensitive information about \"deployed web contexts\" via a request to the status servlet, as demonstrated by a full=true query string."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:jboss:enterprise_application_platform:4.2.0.cp01"
+            }, 
+            {
+                "id": "cpe:/a:jboss:enterprise_application_platform:4.2.0.cp02"
+            }, 
+            {
+                "id": "cpe:/a:jboss:enterprise_application_platform:4.2.0.cp03"
+            }, 
+            {
+                "id": "cpe:/a:jboss:enterprise_application_platform:4.3.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.43603", 
+                "id": 43603
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/30540", 
+                "id": 30540
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://jira.jboss.org/jira/browse/JBPAPP-544", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=457757", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/44235", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1020628", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/30540", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/docs/en-US/JBoss_Enterprise_Application_Platform/4.3.0.cp01/html-single/readme/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.redhat.com/docs/en-US/JBoss_Enterprise_Application_Platform/4.2.0.cp03/html-single/readme/index.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2008-0828.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2008-0827.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2008-0826.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2008-0825.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://marc.info/?l=bugtraq&m=132698550418872&w=2", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://marc.info/?l=bugtraq&m=132698550418872&w=2", 
+                    "vendor": "HP"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "jboss_status.rb", 
+                "file": "metasploit-framework/modules/auxiliary/scanner/http/jboss_status.rb", 
+                "title": "JBoss Status Servlet Information Gathering"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2008-3273"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "JBoss Enterprise Application Platform (EAP) Status Servlet Request Remote Information Disclosure", 
+                "file": "jboss_eap_info_disclosure_vuln.nasl", 
+                "family": "CGI abuses", 
+                "id": "33869"
+            }, 
+            {
+                "name": "RHEL 4 : JBoss EAP (RHSA-2008:0825)", 
+                "file": "redhat-RHSA-2008-0825.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "63860"
+            }, 
+            {
+                "name": "RHEL 4 : JBoss EAP (RHSA-2008:0826)", 
+                "file": "redhat-RHSA-2008-0826.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "63861"
+            }, 
+            {
+                "name": "RHEL 5 : JBoss EAP (RHSA-2008:0827)", 
+                "file": "redhat-RHSA-2008-0827.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "63862"
+            }, 
+            {
+                "name": "RHEL 5 : JBoss EAP (RHSA-2008:0828)", 
+                "file": "redhat-RHSA-2008-0828.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "63863"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [
+            {
+                "url": "http://marc.info/?l=bugtraq&m=132698550418872&w=2", 
+                "id": "SSRT100699"
+            }, 
+            {
+                "url": "http://marc.info/?l=bugtraq&m=132698550418872&w=2", 
+                "id": "HPSBMU02736"
+            }
+        ], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2008-0825.html", 
+                    "id": "RHSA-2008:0825", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2008-0826.html", 
+                    "id": "RHSA-2008:0826", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2008-0827.html", 
+                    "id": "RHSA-2008:0827", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2008-0828.html", 
+                    "id": "RHSA-2008:0828", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

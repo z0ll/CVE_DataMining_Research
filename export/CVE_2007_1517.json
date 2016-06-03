@@ -1,0 +1,165 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1517", 
+                "published": "2007-03-20T16:19:00.000-04:00", 
+                "id": "CVE-2007-1517", 
+                "modified": "2011-03-07T21:52:16.580-05:00", 
+                "summary": "SQL injection vulnerability in comments.php in WSN Guest 1.02 and 1.21 allows remote attackers to execute arbitrary SQL commands via the id parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:paul_knierim:wsn_guest:1.21"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35690", 
+                "id": 35690
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/22969", 
+                "id": 22969
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/34512", 
+                "id": 34512
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/0968", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/22969", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/462814/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://osvdb.org/34512", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/32983", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/3477", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2451", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004253", 
+                "signature": "ET WEB_SPECIFIC_APPS WSN Guest SQL Injection Attempt -- comments.php id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004254", 
+                "signature": "ET WEB_SPECIFIC_APPS WSN Guest SQL Injection Attempt -- comments.php id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004255", 
+                "signature": "ET WEB_SPECIFIC_APPS WSN Guest SQL Injection Attempt -- comments.php id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004256", 
+                "signature": "ET WEB_SPECIFIC_APPS WSN Guest SQL Injection Attempt -- comments.php id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004257", 
+                "signature": "ET WEB_SPECIFIC_APPS WSN Guest SQL Injection Attempt -- comments.php id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004258", 
+                "signature": "ET WEB_SPECIFIC_APPS WSN Guest SQL Injection Attempt -- comments.php id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1517"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

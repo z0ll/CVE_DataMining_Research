@@ -1,0 +1,186 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6491", 
+                "published": "2014-02-01T19:55:04.647-05:00", 
+                "id": "CVE-2013-6491", 
+                "modified": "2014-06-21T00:36:16.280-04:00", 
+                "summary": "The python-qpid client (common/rpc/impl_qpid.py) in OpenStack Oslo before 2013.2 does not enforce SSL connections when qpid_protocol is set to ssl, which allows remote attackers to obtain sensitive information by sniffing the network."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/310.html", 
+                "id": "CWE-310", 
+                "title": "Cryptographic Issues"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:openstack:oslo:2013"
+            }, 
+            {
+                "id": "cpe:/a:redhat:openstack:3.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.66281", 
+                "id": 66281
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=996766", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugs.launchpad.net/oslo/+bug/1158807", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2247-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2014-0112.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "4.3", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-6491"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24438", 
+                "title": "USN-2247-1 -- nova vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24438"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24624", 
+                "title": "USN-2208-1 -- cinder vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24624"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24757", 
+                "title": "USN-2208-2 -- quantum vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24757"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Ubuntu Update for cinder USN-2208-1", 
+                "file": "gb_ubuntu_USN_2208_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841813"
+            }, 
+            {
+                "name": "Ubuntu Update for quantum USN-2208-2", 
+                "file": "gb_ubuntu_USN_2208_2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841817"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Ubuntu 12.10 : cinder vulnerability (USN-2208-1)", 
+                "file": "ubuntu_USN-2208-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "73905"
+            }, 
+            {
+                "name": "Ubuntu 12.10 : quantum vulnerability (USN-2208-2)", 
+                "file": "ubuntu_USN-2208-2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "73906"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 13.10 / 14.04 : nova vulnerabilities (USN-2247-1)", 
+                "file": "ubuntu_USN-2247-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "76109"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2014-0112.html", 
+                    "id": "RHSA-2014:0112", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2247-1", 
+                "id": "USN-2247-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

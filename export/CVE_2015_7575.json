@@ -1,0 +1,1518 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-7575", 
+                "published": "2016-01-08T21:59:10.910-05:00", 
+                "id": "CVE-2015-7575", 
+                "modified": "2016-03-31T08:29:29.330-04:00", 
+                "summary": "Mozilla Network Security Services (NSS) before 3.20.2, as used in Mozilla Firefox before 43.0.2 and Firefox ESR 38.x before 38.5.2, does not reject MD5 signatures in Server Key Exchange messages in TLS 1.2 Handshake Protocol traffic, which makes it easier for man-in-the-middle attackers to spoof servers by triggering a collision."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/19.html", 
+                "id": "CWE-19", 
+                "title": "Data Handling"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:mozilla:network_security_services:3.20.1"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:firefox_esr:38.0"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:firefox_esr:38.5.1"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:firefox_esr:38.5.0"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:firefox_esr:38.0.1"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:firefox_esr:38.1.0"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:firefox_esr:38.1.1"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:firefox_esr:38.2.0"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:firefox_esr:38.0.5"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:firefox_esr:38.2.1"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:firefox_esr:38.3.0"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:firefox_esr:38.4.0"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:firefox:43.0.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.80551", 
+                "id": 80551
+            }, 
+            {
+                "url": "http://www.scip.ch/?vuldb.80139", 
+                "id": 80139
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://developer.mozilla.org/docs/Mozilla/Projects/NSS/NSS_3.20.2_release_notes", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1158489", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.oracle.com/technetwork/topics/security/cpujan2016-2367955.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.mozilla.org/security/announce/2015/mfsa2015-150.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "4.3", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-7575"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:406", 
+                "title": "The MD5 SLOTH vulnerability on TLS 1.2 affects OpenSSL on AIX.", 
+                "class": "vulnerability", 
+                "id": "oval:org.cisecurity:def:406"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:369", 
+                "title": "DSA-3436-1 -- openssl -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:369"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:365", 
+                "title": "DSA-3437-1 -- gnutls26 -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:365"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3436-1 (openssl - security update)", 
+                "file": "deb_3436.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703436"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 3437-1 (gnutls26 - security update)", 
+                "file": "deb_3437.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703437"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 3457-1 (iceweasel - security update)", 
+                "file": "deb_3457.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703457"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 3458-1 (openjdk-7 - security update)", 
+                "file": "deb_3458.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703458"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 3465-1 (openjdk-6 - security update)", 
+                "file": "deb_3465.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703465"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 3491-1 (icedove - security update)", 
+                "file": "deb_3491.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703491"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 3500-1 (openssl - security update)", 
+                "file": "deb_3500.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703500"
+            }, 
+            {
+                "name": "Mozilla Firefox Spoofing Vulnerability - Jan16 (Windows)", 
+                "file": "gb_mozilla_firefox_spoofing_vuln_jan16_win.nasl", 
+                "family": "General", 
+                "id": "802215"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "AIX Java Advisory : java_jan2016_advisory.asc (January 2016 CPU) (SLOTH)", 
+                "file": "aix_java_jan2016_advisory.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "89053"
+            }, 
+            {
+                "name": "AIX OpenSSL Advisory : openssl_advisory16.asc (SLOTH)", 
+                "file": "aix_openssl_advisory16.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "88591"
+            }, 
+            {
+                "name": "Amazon Linux AMI : java-1.7.0-openjdk (ALAS-2016-643) (SLOTH)", 
+                "file": "ala_ALAS-2016-643.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "88655"
+            }, 
+            {
+                "name": "Amazon Linux AMI : nss (ALAS-2016-645) (SLOTH)", 
+                "file": "ala_ALAS-2016-645.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "88657"
+            }, 
+            {
+                "name": "Amazon Linux AMI : java-1.8.0-openjdk (ALAS-2016-647) (SLOTH)", 
+                "file": "ala_ALAS-2016-647.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "88659"
+            }, 
+            {
+                "name": "Amazon Linux AMI : gnutls (ALAS-2016-651) (SLOTH)", 
+                "file": "ala_ALAS-2016-651.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "88663"
+            }, 
+            {
+                "name": "Amazon Linux AMI : openssl (ALAS-2016-661) (DROWN) (SLOTH)", 
+                "file": "ala_ALAS-2016-661.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "89842"
+            }, 
+            {
+                "name": "CentOS 6 / 7 : nss (CESA-2016:0007) (SLOTH)", 
+                "file": "centos_RHSA-2016-0007.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "87780"
+            }, 
+            {
+                "name": "CentOS 6 / 7 : openssl (CESA-2016:0008) (SLOTH)", 
+                "file": "centos_RHSA-2016-0008.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "87781"
+            }, 
+            {
+                "name": "CentOS 6 / 7 : gnutls (CESA-2016:0012) (SLOTH)", 
+                "file": "centos_RHSA-2016-0012.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "87785"
+            }, 
+            {
+                "name": "CentOS 7 : java-1.8.0-openjdk (CESA-2016:0049) (SLOTH)", 
+                "file": "centos_RHSA-2016-0049.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "88060"
+            }, 
+            {
+                "name": "CentOS 6 : java-1.8.0-openjdk (CESA-2016:0050) (SLOTH)", 
+                "file": "centos_RHSA-2016-0050.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "88061"
+            }, 
+            {
+                "name": "CentOS 6 : java-1.7.0-openjdk (CESA-2016:0053) (SLOTH)", 
+                "file": "centos_RHSA-2016-0053.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "88062"
+            }, 
+            {
+                "name": "CentOS 5 / 7 : java-1.7.0-openjdk (CESA-2016:0054) (SLOTH)", 
+                "file": "centos_RHSA-2016-0054.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "88063"
+            }, 
+            {
+                "name": "Debian DLA-410-1 : openjdk-6 security update (SLOTH)", 
+                "file": "debian_DLA-410.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "88580"
+            }, 
+            {
+                "name": "Debian DSA-3436-1 : openssl - security update (SLOTH)", 
+                "file": "debian_DSA-3436.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "87827"
+            }, 
+            {
+                "name": "Debian DSA-3437-1 : gnutls26 - security update (SLOTH)", 
+                "file": "debian_DSA-3437.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "87828"
+            }, 
+            {
+                "name": "Debian DSA-3457-1 : iceweasel - security update (SLOTH)", 
+                "file": "debian_DSA-3457.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "88426"
+            }, 
+            {
+                "name": "Debian DSA-3458-1 : openjdk-7 - security update (SLOTH)", 
+                "file": "debian_DSA-3458.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "88427"
+            }, 
+            {
+                "name": "Debian DSA-3465-1 : openjdk-6 - security update (SLOTH)", 
+                "file": "debian_DSA-3465.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "88568"
+            }, 
+            {
+                "name": "Debian DSA-3491-1 : icedove - security update (SLOTH)", 
+                "file": "debian_DSA-3491.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "88943"
+            }, 
+            {
+                "name": "F5 Networks BIG-IP : SLOTH: TLS 1.2 handshake vulnerability (SOL02201365) (SLOTH)", 
+                "file": "f5_bigip_SOL02201365.nasl", 
+                "family": "F5 Networks Local Security Checks", 
+                "id": "88703"
+            }, 
+            {
+                "name": "FreeBSD : NSS -- MD5 downgrade in TLS 1.2 signatures (10f7bc76-0335-4a88-b391-0b05b3a8ce1c) (SLOTH)", 
+                "file": "freebsd_pkg_10f7bc7603354a88b3910b05b3a8ce1c.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "87609"
+            }, 
+            {
+                "name": "openSUSE Security Update : mozilla-nss (openSUSE-2015-978) (SLOTH)", 
+                "file": "openSUSE-2015-978.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "87717"
+            }, 
+            {
+                "name": "openSUSE Security Update : java-1_8_0-openjdk (openSUSE-2016-105) (SLOTH)", 
+                "file": "openSUSE-2016-105.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88536"
+            }, 
+            {
+                "name": "openSUSE Security Update : java-1_8_0-openjdk (openSUSE-2016-106) (SLOTH)", 
+                "file": "openSUSE-2016-106.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88537"
+            }, 
+            {
+                "name": "openSUSE Security Update : java-1_7_0-openjdk (openSUSE-2016-107) (SLOTH)", 
+                "file": "openSUSE-2016-107.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88538"
+            }, 
+            {
+                "name": "openSUSE Security Update : Java7 (openSUSE-2016-110) (SLOTH)", 
+                "file": "openSUSE-2016-110.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88540"
+            }, 
+            {
+                "name": "openSUSE Security Update : java-1_7_0-openjdk (openSUSE-2016-115) (SLOTH)", 
+                "file": "openSUSE-2016-115.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88541"
+            }, 
+            {
+                "name": "openSUSE Security Update : seamonkey (openSUSE-2016-126) (SLOTH)", 
+                "file": "openSUSE-2016-126.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88547"
+            }, 
+            {
+                "name": "openSUSE Security Update : SeaMonkey (openSUSE-2016-129) (SLOTH)", 
+                "file": "openSUSE-2016-129.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88550"
+            }, 
+            {
+                "name": "openSUSE Security Update : Thunderbird (openSUSE-2016-225) (SLOTH)", 
+                "file": "openSUSE-2016-225.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88830"
+            }, 
+            {
+                "name": "openSUSE Security Update : bouncycastle (openSUSE-2016-282) (SLOTH)", 
+                "file": "openSUSE-2016-282.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "89018"
+            }, 
+            {
+                "name": "openSUSE Security Update : mbedtls (openSUSE-2016-59) (SLOTH)", 
+                "file": "openSUSE-2016-59.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88131"
+            }, 
+            {
+                "name": "openSUSE Security Update : MozillaFirefox (openSUSE-2016-6) (SLOTH)", 
+                "file": "openSUSE-2016-6.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "87719"
+            }, 
+            {
+                "name": "openSUSE Security Update : polarssl (openSUSE-2016-60) (SLOTH)", 
+                "file": "openSUSE-2016-60.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88132"
+            }, 
+            {
+                "name": "Oracle Java SE Multiple Vulnerabilities (January 2016 CPU) (SLOTH)", 
+                "file": "oracle_java_cpu_jan_2016.nasl", 
+                "family": "Windows", 
+                "id": "88045"
+            }, 
+            {
+                "name": "Oracle Java SE Multiple Vulnerabilities (January 2016 CPU) (SLOTH) (Unix)", 
+                "file": "oracle_java_cpu_jan_2016_unix.nasl", 
+                "family": "Misc.", 
+                "id": "88046"
+            }, 
+            {
+                "name": "Oracle JRockit R28 < R28.3.9 Multiple Vulnerabilities (January 2016 CPU) (SLOTH)", 
+                "file": "oracle_jrockit_cpu_jan_2016.nasl", 
+                "family": "Windows", 
+                "id": "88041"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : nss (ELSA-2016-0007) (SLOTH)", 
+                "file": "oraclelinux_ELSA-2016-0007.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "87794"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : openssl (ELSA-2016-0008) (SLOTH)", 
+                "file": "oraclelinux_ELSA-2016-0008.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "87795"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : gnutls (ELSA-2016-0012) (SLOTH)", 
+                "file": "oraclelinux_ELSA-2016-0012.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "87799"
+            }, 
+            {
+                "name": "Oracle Linux 7 : java-1.8.0-openjdk (ELSA-2016-0049) (SLOTH)", 
+                "file": "oraclelinux_ELSA-2016-0049.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "88031"
+            }, 
+            {
+                "name": "Oracle Linux 6 : java-1.8.0-openjdk (ELSA-2016-0050) (SLOTH)", 
+                "file": "oraclelinux_ELSA-2016-0050.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "88069"
+            }, 
+            {
+                "name": "Oracle Linux 6 : java-1.7.0-openjdk (ELSA-2016-0053) (SLOTH)", 
+                "file": "oraclelinux_ELSA-2016-0053.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "88070"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 7 : java-1.7.0-openjdk (ELSA-2016-0054) (SLOTH)", 
+                "file": "oraclelinux_ELSA-2016-0054.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "88071"
+            }, 
+            {
+                "name": "OracleVM 3.3 : openssl (OVMSA-2016-0001) (SLOTH)", 
+                "file": "oraclevm_OVMSA-2016-0001.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "87800"
+            }, 
+            {
+                "name": "RHEL 6 / 7 : nss (RHSA-2016:0007) (SLOTH)", 
+                "file": "redhat-RHSA-2016-0007.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "87807"
+            }, 
+            {
+                "name": "RHEL 6 / 7 : openssl (RHSA-2016:0008) (SLOTH)", 
+                "file": "redhat-RHSA-2016-0008.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "87808"
+            }, 
+            {
+                "name": "RHEL 6 / 7 : gnutls (RHSA-2016:0012) (SLOTH)", 
+                "file": "redhat-RHSA-2016-0012.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "87812"
+            }, 
+            {
+                "name": "RHEL 7 : java-1.8.0-openjdk (RHSA-2016:0049) (SLOTH)", 
+                "file": "redhat-RHSA-2016-0049.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "88035"
+            }, 
+            {
+                "name": "RHEL 6 : java-1.8.0-openjdk (RHSA-2016:0050) (SLOTH)", 
+                "file": "redhat-RHSA-2016-0050.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "88036"
+            }, 
+            {
+                "name": "RHEL 6 : java-1.7.0-openjdk (RHSA-2016:0053) (SLOTH)", 
+                "file": "redhat-RHSA-2016-0053.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "88072"
+            }, 
+            {
+                "name": "RHEL 5 / 7 : java-1.7.0-openjdk (RHSA-2016:0054) (SLOTH)", 
+                "file": "redhat-RHSA-2016-0054.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "88073"
+            }, 
+            {
+                "name": "RHEL 6 / 7 : java-1.8.0-oracle (RHSA-2016:0055) (SLOTH)", 
+                "file": "redhat-RHSA-2016-0055.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "88074"
+            }, 
+            {
+                "name": "RHEL 5 / 6 / 7 : java-1.7.0-oracle (RHSA-2016:0056) (SLOTH)", 
+                "file": "redhat-RHSA-2016-0056.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "88075"
+            }, 
+            {
+                "name": "RHEL 7 : java-1.8.0-ibm (RHSA-2016:0098) (SLOTH)", 
+                "file": "redhat-RHSA-2016-0098.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "88554"
+            }, 
+            {
+                "name": "RHEL 6 / 7 : java-1.7.1-ibm (RHSA-2016:0099) (SLOTH)", 
+                "file": "redhat-RHSA-2016-0099.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "88555"
+            }, 
+            {
+                "name": "RHEL 5 : java-1.7.0-ibm (RHSA-2016:0100) (SLOTH)", 
+                "file": "redhat-RHSA-2016-0100.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "88556"
+            }, 
+            {
+                "name": "RHEL 5 / 6 : java-1.6.0-ibm (RHSA-2016:0101) (SLOTH)", 
+                "file": "redhat-RHSA-2016-0101.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "88557"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : gnutls on SL6.x, SL7.x i386/x86_64 (SLOTH)", 
+                "file": "sl_20160107_gnutls_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "87838"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : nss on SL6.x, SL7.x i386/x86_64 (SLOTH)", 
+                "file": "sl_20160107_nss_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "87840"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : openssl on SL6.x, SL7.x i386/x86_64 (SLOTH)", 
+                "file": "sl_20160107_openssl_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "87841"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : java-1.8.0-openjdk on SL6.x i386/x86_64 (SLOTH)", 
+                "file": "sl_20160120_java_1_8_0_openjdk_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "88037"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : java-1.8.0-openjdk on SL7.x x86_64 (SLOTH)", 
+                "file": "sl_20160120_java_1_8_0_openjdk_on_SL7_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "88078"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : java-1.7.0-openjdk on SL5.x, SL7.x i386/x86_64 (SLOTH)", 
+                "file": "sl_20160121_java_1_7_0_openjdk_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "88079"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : java-1.7.0-openjdk on SL6.x i386/x86_64 (SLOTH)", 
+                "file": "sl_20160121_java_1_7_0_openjdk_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "88080"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : mozilla-nss (SUSE-SU-2016:0149-1) (SLOTH)", 
+                "file": "suse_SU-2016-0149-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "87988"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : mozilla-nss (SUSE-SU-2016:0189-1) (SLOTH)", 
+                "file": "suse_SU-2016-0189-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88082"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : java-1_8_0-openjdk (SUSE-SU-2016:0256-1) (SLOTH)", 
+                "file": "suse_SU-2016-0256-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88453"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : java-1_7_0-openjdk (SUSE-SU-2016:0265-1) (SLOTH)", 
+                "file": "suse_SU-2016-0265-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88485"
+            }, 
+            {
+                "name": "SUSE SLED11 Security Update : java-1_7_0-openjdk (SUSE-SU-2016:0269-1) (SLOTH)", 
+                "file": "suse_SU-2016-0269-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88486"
+            }, 
+            {
+                "name": "SUSE SLES12 Security Update : java-1_8_0-ibm (SUSE-SU-2016:0390-1) (SLOTH)", 
+                "file": "suse_SU-2016-0390-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88692"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : java-1_6_0-ibm (SUSE-SU-2016:0431-1) (SLOTH)", 
+                "file": "suse_SU-2016-0431-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88709"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : java-1_7_0-ibm (SUSE-SU-2016:0433-1) (SLOTH)", 
+                "file": "suse_SU-2016-0433-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88710"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : MozillaFirefox, MozillaFirefox-branding-SLED, MozillaFirefox-branding-SLES-for-VMware, mozilla-nss (SUSE-SU-2016:0584-1) (SLOTH)", 
+                "file": "suse_SU-2016-0584-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "89021"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : java-1_7_0-ibm (SUSE-SU-2016:0636-1) (SLOTH)", 
+                "file": "suse_SU-2016-0636-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "89657"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : java-1_6_0-ibm (SUSE-SU-2016:0770-1) (SLOTH)", 
+                "file": "suse_SU-2016-0770-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "89961"
+            }, 
+            {
+                "name": "SUSE SLES10 Security Update : java-1_6_0-ibm (SUSE-SU-2016:0776-1) (SLOTH)", 
+                "file": "suse_SU-2016-0776-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "89989"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : openssl vulnerability (USN-2863-1) (SLOTH)", 
+                "file": "ubuntu_USN-2863-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "87815"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 14.04 / 15.04 / 15.10 : nss vulnerability (USN-2864-1) (SLOTH)", 
+                "file": "ubuntu_USN-2864-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "87816"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 14.04 / 15.04 : gnutls26, gnutls28 vulnerability (USN-2865-1) (SLOTH)", 
+                "file": "ubuntu_USN-2865-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "87845"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 14.04 / 15.04 / 15.10 : firefox vulnerability (USN-2866-1) (SLOTH)", 
+                "file": "ubuntu_USN-2866-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "87846"
+            }, 
+            {
+                "name": "Ubuntu 14.04 / 15.04 / 15.10 : openjdk-7 vulnerabilities (USN-2884-1) (SLOTH)", 
+                "file": "ubuntu_USN-2884-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "88516"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 14.04 / 15.10 : thunderbird vulnerabilities (USN-2904-1) (SLOTH)", 
+                "file": "ubuntu_USN-2904-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "89776"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20160007", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2016-0007.html", 
+                    "id": "RHSA-2016:0007", 
+                    "title": "RHSA-2016:0007: nss security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1289841", 
+                    "title": "CVE-2015-7575 TLS 1.2 Transcipt Collision attacks against MD5 in key exchange protocol (SLOTH)", 
+                    "id": "1289841", 
+                    "issue date": "2016-01-07", 
+                    "associated redhat": "RHSA-2016:0007"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20160008", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2016-0008.html", 
+                    "id": "RHSA-2016:0008", 
+                    "title": "RHSA-2016:0008: openssl security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1289841", 
+                    "title": "CVE-2015-7575 TLS 1.2 Transcipt Collision attacks against MD5 in key exchange protocol (SLOTH)", 
+                    "id": "1289841", 
+                    "issue date": "2016-01-07", 
+                    "associated redhat": "RHSA-2016:0008"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20160012", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2016-0012.html", 
+                    "id": "RHSA-2016:0012", 
+                    "title": "RHSA-2016:0012: gnutls security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1289841", 
+                    "title": "CVE-2015-7575 TLS 1.2 Transcipt Collision attacks against MD5 in key exchange protocol (SLOTH)", 
+                    "id": "1289841", 
+                    "issue date": "2016-01-07", 
+                    "associated redhat": "RHSA-2016:0012"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20160049", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2016-0049.html", 
+                    "id": "RHSA-2016:0049", 
+                    "title": "RHSA-2016:0049: java-1.8.0-openjdk security update (Critical)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1289841", 
+                    "title": "CVE-2015-7575 TLS 1.2 Transcipt Collision attacks against MD5 in key exchange protocol (SLOTH)", 
+                    "id": "1289841", 
+                    "issue date": "2016-01-20", 
+                    "associated redhat": "RHSA-2016:0049"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298906", 
+                    "title": "CVE-2016-0494 ICU: integer signedness issue in IndicRearrangementProcessor (OpenJDK 2D, 8140543)", 
+                    "id": "1298906", 
+                    "issue date": "2016-01-20", 
+                    "associated redhat": "RHSA-2016:0049"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298949", 
+                    "title": "CVE-2016-0475 OpenJDK: PBE incorrect key lengths (Libraries, 8138589)", 
+                    "id": "1298949", 
+                    "issue date": "2016-01-20", 
+                    "associated redhat": "RHSA-2016:0049"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298957", 
+                    "title": "CVE-2016-0402 OpenJDK: URL deserialization inconsistencies (Networking, 8059054)", 
+                    "id": "1298957", 
+                    "issue date": "2016-01-20", 
+                    "associated redhat": "RHSA-2016:0049"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299073", 
+                    "title": "CVE-2016-0448 OpenJDK: logging of RMI connection secrets (JMX, 8130710)", 
+                    "id": "1299073", 
+                    "issue date": "2016-01-20", 
+                    "associated redhat": "RHSA-2016:0049"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299385", 
+                    "title": "CVE-2016-0466 OpenJDK: insufficient enforcement of totalEntitySizeLimit (JAXP, 8133962)", 
+                    "id": "1299385", 
+                    "issue date": "2016-01-20", 
+                    "associated redhat": "RHSA-2016:0049"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299441", 
+                    "title": "CVE-2016-0483 OpenJDK: incorrect boundary check in JPEG decoder (AWT, 8139017)", 
+                    "id": "1299441", 
+                    "issue date": "2016-01-20", 
+                    "associated redhat": "RHSA-2016:0049"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20160050", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2016-0050.html", 
+                    "id": "RHSA-2016:0050", 
+                    "title": "RHSA-2016:0050: java-1.8.0-openjdk security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1289841", 
+                    "title": "CVE-2015-7575 TLS 1.2 Transcipt Collision attacks against MD5 in key exchange protocol (SLOTH)", 
+                    "id": "1289841", 
+                    "issue date": "2016-01-20", 
+                    "associated redhat": "RHSA-2016:0050"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298906", 
+                    "title": "CVE-2016-0494 ICU: integer signedness issue in IndicRearrangementProcessor (OpenJDK 2D, 8140543)", 
+                    "id": "1298906", 
+                    "issue date": "2016-01-20", 
+                    "associated redhat": "RHSA-2016:0050"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298949", 
+                    "title": "CVE-2016-0475 OpenJDK: PBE incorrect key lengths (Libraries, 8138589)", 
+                    "id": "1298949", 
+                    "issue date": "2016-01-20", 
+                    "associated redhat": "RHSA-2016:0050"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298957", 
+                    "title": "CVE-2016-0402 OpenJDK: URL deserialization inconsistencies (Networking, 8059054)", 
+                    "id": "1298957", 
+                    "issue date": "2016-01-20", 
+                    "associated redhat": "RHSA-2016:0050"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299073", 
+                    "title": "CVE-2016-0448 OpenJDK: logging of RMI connection secrets (JMX, 8130710)", 
+                    "id": "1299073", 
+                    "issue date": "2016-01-20", 
+                    "associated redhat": "RHSA-2016:0050"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299385", 
+                    "title": "CVE-2016-0466 OpenJDK: insufficient enforcement of totalEntitySizeLimit (JAXP, 8133962)", 
+                    "id": "1299385", 
+                    "issue date": "2016-01-20", 
+                    "associated redhat": "RHSA-2016:0050"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299441", 
+                    "title": "CVE-2016-0483 OpenJDK: incorrect boundary check in JPEG decoder (AWT, 8139017)", 
+                    "id": "1299441", 
+                    "issue date": "2016-01-20", 
+                    "associated redhat": "RHSA-2016:0050"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20160053", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2016-0053.html", 
+                    "id": "RHSA-2016:0053", 
+                    "title": "RHSA-2016:0053: java-1.7.0-openjdk security update (Critical)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1273859", 
+                    "title": "CVE-2015-4871 OpenJDK: protected methods can be used as interface methods via DirectMethodHandle (Libraries)", 
+                    "id": "1273859", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0053"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1289841", 
+                    "title": "CVE-2015-7575 TLS 1.2 Transcipt Collision attacks against MD5 in key exchange protocol (SLOTH)", 
+                    "id": "1289841", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0053"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298906", 
+                    "title": "CVE-2016-0494 ICU: integer signedness issue in IndicRearrangementProcessor (OpenJDK 2D, 8140543)", 
+                    "id": "1298906", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0053"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298957", 
+                    "title": "CVE-2016-0402 OpenJDK: URL deserialization inconsistencies (Networking, 8059054)", 
+                    "id": "1298957", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0053"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299073", 
+                    "title": "CVE-2016-0448 OpenJDK: logging of RMI connection secrets (JMX, 8130710)", 
+                    "id": "1299073", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0053"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299385", 
+                    "title": "CVE-2016-0466 OpenJDK: insufficient enforcement of totalEntitySizeLimit (JAXP, 8133962)", 
+                    "id": "1299385", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0053"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299441", 
+                    "title": "CVE-2016-0483 OpenJDK: incorrect boundary check in JPEG decoder (AWT, 8139017)", 
+                    "id": "1299441", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0053"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20160054", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2016-0054.html", 
+                    "id": "RHSA-2016:0054", 
+                    "title": "RHSA-2016:0054: java-1.7.0-openjdk security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1273859", 
+                    "title": "CVE-2015-4871 OpenJDK: protected methods can be used as interface methods via DirectMethodHandle (Libraries)", 
+                    "id": "1273859", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0054"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1289841", 
+                    "title": "CVE-2015-7575 TLS 1.2 Transcipt Collision attacks against MD5 in key exchange protocol (SLOTH)", 
+                    "id": "1289841", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0054"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298906", 
+                    "title": "CVE-2016-0494 ICU: integer signedness issue in IndicRearrangementProcessor (OpenJDK 2D, 8140543)", 
+                    "id": "1298906", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0054"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298957", 
+                    "title": "CVE-2016-0402 OpenJDK: URL deserialization inconsistencies (Networking, 8059054)", 
+                    "id": "1298957", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0054"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299073", 
+                    "title": "CVE-2016-0448 OpenJDK: logging of RMI connection secrets (JMX, 8130710)", 
+                    "id": "1299073", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0054"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299385", 
+                    "title": "CVE-2016-0466 OpenJDK: insufficient enforcement of totalEntitySizeLimit (JAXP, 8133962)", 
+                    "id": "1299385", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0054"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299441", 
+                    "title": "CVE-2016-0483 OpenJDK: incorrect boundary check in JPEG decoder (AWT, 8139017)", 
+                    "id": "1299441", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0054"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20160055", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2016-0055.html", 
+                    "id": "RHSA-2016:0055", 
+                    "title": "RHSA-2016:0055: java-1.8.0-oracle security update (Critical)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1281756", 
+                    "title": "CVE-2015-8126 CVE-2015-8472 libpng: Buffer overflow vulnerabilities in png_get_PLTE/png_set_PLTE functions", 
+                    "id": "1281756", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0055"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1289841", 
+                    "title": "CVE-2015-7575 TLS 1.2 Transcipt Collision attacks against MD5 in key exchange protocol (SLOTH)", 
+                    "id": "1289841", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0055"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298906", 
+                    "title": "CVE-2016-0494 ICU: integer signedness issue in IndicRearrangementProcessor (OpenJDK 2D, 8140543)", 
+                    "id": "1298906", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0055"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298949", 
+                    "title": "CVE-2016-0475 OpenJDK: PBE incorrect key lengths (Libraries, 8138589)", 
+                    "id": "1298949", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0055"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298957", 
+                    "title": "CVE-2016-0402 OpenJDK: URL deserialization inconsistencies (Networking, 8059054)", 
+                    "id": "1298957", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0055"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299073", 
+                    "title": "CVE-2016-0448 OpenJDK: logging of RMI connection secrets (JMX, 8130710)", 
+                    "id": "1299073", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0055"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299385", 
+                    "title": "CVE-2016-0466 OpenJDK: insufficient enforcement of totalEntitySizeLimit (JAXP, 8133962)", 
+                    "id": "1299385", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0055"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299441", 
+                    "title": "CVE-2016-0483 OpenJDK: incorrect boundary check in JPEG decoder (AWT, 8139017)", 
+                    "id": "1299441", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0055"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20160056", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2016-0056.html", 
+                    "id": "RHSA-2016:0056", 
+                    "title": "RHSA-2016:0056: java-1.7.0-oracle security update (Critical)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1281756", 
+                    "title": "CVE-2015-8126 CVE-2015-8472 libpng: Buffer overflow vulnerabilities in png_get_PLTE/png_set_PLTE functions", 
+                    "id": "1281756", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0056"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1289841", 
+                    "title": "CVE-2015-7575 TLS 1.2 Transcipt Collision attacks against MD5 in key exchange protocol (SLOTH)", 
+                    "id": "1289841", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0056"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298906", 
+                    "title": "CVE-2016-0494 ICU: integer signedness issue in IndicRearrangementProcessor (OpenJDK 2D, 8140543)", 
+                    "id": "1298906", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0056"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298957", 
+                    "title": "CVE-2016-0402 OpenJDK: URL deserialization inconsistencies (Networking, 8059054)", 
+                    "id": "1298957", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0056"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299073", 
+                    "title": "CVE-2016-0448 OpenJDK: logging of RMI connection secrets (JMX, 8130710)", 
+                    "id": "1299073", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0056"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299385", 
+                    "title": "CVE-2016-0466 OpenJDK: insufficient enforcement of totalEntitySizeLimit (JAXP, 8133962)", 
+                    "id": "1299385", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0056"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299441", 
+                    "title": "CVE-2016-0483 OpenJDK: incorrect boundary check in JPEG decoder (AWT, 8139017)", 
+                    "id": "1299441", 
+                    "issue date": "2016-01-21", 
+                    "associated redhat": "RHSA-2016:0056"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20160099", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2016-0099.html", 
+                    "id": "RHSA-2016:0099", 
+                    "title": "RHSA-2016:0099: java-1.7.1-ibm security update (Critical)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1276416", 
+                    "title": "CVE-2015-7981 libpng: Out-of-bounds read in png_convert_to_rfc1123", 
+                    "id": "1276416", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0099"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1281756", 
+                    "title": "CVE-2015-8126 CVE-2015-8472 libpng: Buffer overflow vulnerabilities in png_get_PLTE/png_set_PLTE functions", 
+                    "id": "1281756", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0099"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1289841", 
+                    "title": "CVE-2015-7575 TLS 1.2 Transcipt Collision attacks against MD5 in key exchange protocol (SLOTH)", 
+                    "id": "1289841", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0099"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1291312", 
+                    "title": "CVE-2015-8540 libpng: underflow read in png_check_keyword()", 
+                    "id": "1291312", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0099"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298906", 
+                    "title": "CVE-2016-0494 ICU: integer signedness issue in IndicRearrangementProcessor (OpenJDK 2D, 8140543)", 
+                    "id": "1298906", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0099"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298957", 
+                    "title": "CVE-2016-0402 OpenJDK: URL deserialization inconsistencies (Networking, 8059054)", 
+                    "id": "1298957", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0099"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299073", 
+                    "title": "CVE-2016-0448 OpenJDK: logging of RMI connection secrets (JMX, 8130710)", 
+                    "id": "1299073", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0099"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299385", 
+                    "title": "CVE-2016-0466 OpenJDK: insufficient enforcement of totalEntitySizeLimit (JAXP, 8133962)", 
+                    "id": "1299385", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0099"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299441", 
+                    "title": "CVE-2016-0483 OpenJDK: incorrect boundary check in JPEG decoder (AWT, 8139017)", 
+                    "id": "1299441", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0099"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1302689", 
+                    "title": "CVE-2015-5041 IBM JDK: J9 JVM allows code to invoke non-public interface methods", 
+                    "id": "1302689", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0099"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20160100", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2016-0100.html", 
+                    "id": "RHSA-2016:0100", 
+                    "title": "RHSA-2016:0100: java-1.7.0-ibm security update (Critical)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1276416", 
+                    "title": "CVE-2015-7981 libpng: Out-of-bounds read in png_convert_to_rfc1123", 
+                    "id": "1276416", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0100"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1281756", 
+                    "title": "CVE-2015-8126 CVE-2015-8472 libpng: Buffer overflow vulnerabilities in png_get_PLTE/png_set_PLTE functions", 
+                    "id": "1281756", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0100"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1289841", 
+                    "title": "CVE-2015-7575 TLS 1.2 Transcipt Collision attacks against MD5 in key exchange protocol (SLOTH)", 
+                    "id": "1289841", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0100"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1291312", 
+                    "title": "CVE-2015-8540 libpng: underflow read in png_check_keyword()", 
+                    "id": "1291312", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0100"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298906", 
+                    "title": "CVE-2016-0494 ICU: integer signedness issue in IndicRearrangementProcessor (OpenJDK 2D, 8140543)", 
+                    "id": "1298906", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0100"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298957", 
+                    "title": "CVE-2016-0402 OpenJDK: URL deserialization inconsistencies (Networking, 8059054)", 
+                    "id": "1298957", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0100"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299073", 
+                    "title": "CVE-2016-0448 OpenJDK: logging of RMI connection secrets (JMX, 8130710)", 
+                    "id": "1299073", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0100"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299385", 
+                    "title": "CVE-2016-0466 OpenJDK: insufficient enforcement of totalEntitySizeLimit (JAXP, 8133962)", 
+                    "id": "1299385", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0100"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299441", 
+                    "title": "CVE-2016-0483 OpenJDK: incorrect boundary check in JPEG decoder (AWT, 8139017)", 
+                    "id": "1299441", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0100"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1302689", 
+                    "title": "CVE-2015-5041 IBM JDK: J9 JVM allows code to invoke non-public interface methods", 
+                    "id": "1302689", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0100"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20160101", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2016-0101.html", 
+                    "id": "RHSA-2016:0101", 
+                    "title": "RHSA-2016:0101: java-1.6.0-ibm security update (Critical)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1276416", 
+                    "title": "CVE-2015-7981 libpng: Out-of-bounds read in png_convert_to_rfc1123", 
+                    "id": "1276416", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1281756", 
+                    "title": "CVE-2015-8126 CVE-2015-8472 libpng: Buffer overflow vulnerabilities in png_get_PLTE/png_set_PLTE functions", 
+                    "id": "1281756", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1289841", 
+                    "title": "CVE-2015-7575 TLS 1.2 Transcipt Collision attacks against MD5 in key exchange protocol (SLOTH)", 
+                    "id": "1289841", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1291312", 
+                    "title": "CVE-2015-8540 libpng: underflow read in png_check_keyword()", 
+                    "id": "1291312", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298906", 
+                    "title": "CVE-2016-0494 ICU: integer signedness issue in IndicRearrangementProcessor (OpenJDK 2D, 8140543)", 
+                    "id": "1298906", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298957", 
+                    "title": "CVE-2016-0402 OpenJDK: URL deserialization inconsistencies (Networking, 8059054)", 
+                    "id": "1298957", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299073", 
+                    "title": "CVE-2016-0448 OpenJDK: logging of RMI connection secrets (JMX, 8130710)", 
+                    "id": "1299073", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299385", 
+                    "title": "CVE-2016-0466 OpenJDK: insufficient enforcement of totalEntitySizeLimit (JAXP, 8133962)", 
+                    "id": "1299385", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1299441", 
+                    "title": "CVE-2016-0483 OpenJDK: incorrect boundary check in JPEG decoder (AWT, 8139017)", 
+                    "id": "1299441", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1302689", 
+                    "title": "CVE-2015-5041 IBM JDK: J9 JVM allows code to invoke non-public interface methods", 
+                    "id": "1302689", 
+                    "issue date": "2016-02-02", 
+                    "associated redhat": "RHSA-2016:0101"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

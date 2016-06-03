@@ -1,0 +1,171 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-0581", 
+                "published": "2005-05-02T00:00:00.000-04:00", 
+                "id": "CVE-2005-0581", 
+                "modified": "2008-09-05T16:46:42.117-04:00", 
+                "summary": "Multiple buffer overflows in Computer Associates (CA) License Client and Server 0.1.0.15 allow remote attackers to execute arbitrary code via (1) certain long fields in the Checksum item in a GCR request, (2) a long IP address, hostname, or netmask values in a GCR request, (3) a long last parameter in a GETCONFIG packet, or (4) long values in a request with an invalid format."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:ca:license_software:0.1.0.15"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.24522", 
+                "id": 24522
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/14389", 
+                "id": 14389
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.idefense.com/application/poi/display?id=215&type=vulnerabilities", 
+                    "vendor": "IDEFENSE"
+                }, 
+                {
+                    "url": "http://www.idefense.com/application/poi/display?id=214&type=vulnerabilities", 
+                    "vendor": "IDEFENSE"
+                }, 
+                {
+                    "url": "http://www.idefense.com/application/poi/display?id=213&type=vulnerabilities", 
+                    "vendor": "IDEFENSE"
+                }, 
+                {
+                    "url": "http://www.idefense.com/application/poi/display?id=210&type=vulnerabilities", 
+                    "vendor": "IDEFENSE"
+                }, 
+                {
+                    "url": "http://supportconnectw.ca.com/public/ca_common_docs/security_notice.asp", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110979326828704&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "license_gcr.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/brightstor/license_gcr.rb", 
+                "title": "CA BrightStor ARCserve License Service GCR NETWORK Buffer Overflow"
+            }, 
+            {
+                "id": "calicclnt_getconfig.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/license/calicclnt_getconfig.rb", 
+                "title": "Network Associates PGP KeyServer 7 LDAP Buffer Overflow"
+            }, 
+            {
+                "id": "calicserv_getconfig.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/license/calicserv_getconfig.rb", 
+                "title": "Network Associates PGP KeyServer 7 LDAP Buffer Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/ca_license_gcr", 
+                "id": "exploit_info/ca_license_gcr", 
+                "title": "Computer Associates License Service GCR buffer overflow"
+            }, 
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/ca_license_invalid_command", 
+                "id": "exploit_info/ca_license_invalid_command", 
+                "title": "Computer Associates License Service invalid command buffer overflow"
+            }, 
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/ca_license_getconfig", 
+                "id": "exploit_info/ca_license_getconfig", 
+                "title": "Computer Associates License Service GETCONFIG buffer overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-0581"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CA License Service Multiple Vulnerabilities", 
+                "file": "CA_License_Service_Stack_Overflow.nasl", 
+                "family": "Web application abuses", 
+                "id": "17307"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CA License Service Multiple Vulnerabilities", 
+                "file": "CA_License_Service_Stack_Overflow.nasl", 
+                "family": "Windows", 
+                "id": "17307"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

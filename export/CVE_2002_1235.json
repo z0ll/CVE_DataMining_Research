@@ -1,0 +1,348 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-1235", 
+                "published": "2002-11-04T00:00:00.000-05:00", 
+                "id": "CVE-2002-1235", 
+                "modified": "2008-09-05T16:30:07.000-04:00", 
+                "summary": "The kadm_ser_in function in (1) the Kerberos v4compatibility administration daemon (kadmind4) in the MIT Kerberos 5 (krb5) krb5-1.2.6 and earlier, (2) kadmind in KTH Kerberos 4 (eBones) before 1.2.1, and (3) kadmind in KTH Kerberos 5 (Heimdal) before 0.5.1 when compiled with Kerberos 4 support, does not properly verify the length field of a request, which allows remote attackers to execute arbitrary code via a buffer overflow attack."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:kth:kth_kerberos_5:0.5.1"
+            }, 
+            {
+                "id": "cpe:/a:mit:kerberos:5-1.2.6"
+            }, 
+            {
+                "id": "cpe:/a:kth:kth_kerberos_4:1.2.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.19130", 
+                "id": 19130
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/6024", 
+                "id": 6024
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.cert.org/advisories/CA-2002-29.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/875073", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/6024", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2002/dsa-184", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=103539530729206&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2002-242.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.pdc.kth.se/heimdal/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.linux-mandrake.com/en/security/2002/MDKSA-2002-073.php", 
+                    "vendor": "MANDRAKE"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/static/10430.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2002/dsa-185", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2002/dsa-183", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://web.mit.edu/kerberos/www/advisories/MITKRB5-SA-2002-002-kadm4.txt", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://web.mit.edu/kerberos/www/advisories/2002-002-kadm4_attacksig.txt", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=103582805330339&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=103582517126392&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=103564944215101&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://distro.conectiva.com.br/atualizacoes/?id=a&anuncio=000534", 
+                    "vendor": "CONECTIVA"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2002-10/0399.html", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2002-026.txt.asc", 
+                    "vendor": "NETBSD"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/875073", 
+                "id": "VU#875073"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "shellcode-detect", 
+                "id": "sid:2101898", 
+                "signature": "GPL EXPLOIT kadmind buffer overflow attempt 2"
+            }, 
+            {
+                "classtype": "shellcode-detect", 
+                "id": "sid:2101894", 
+                "signature": "GPL EXPLOIT kadmind buffer overflow attempt"
+            }, 
+            {
+                "classtype": "shellcode-detect", 
+                "id": "sid:2101896", 
+                "signature": "GPL EXPLOIT kadmind buffer overflow attempt"
+            }, 
+            {
+                "classtype": "shellcode-detect", 
+                "id": "sid:2101899", 
+                "signature": "GPL EXPLOIT kadmind buffer overflow attempt 3"
+            }, 
+            {
+                "classtype": "shellcode-detect", 
+                "id": "sid:2101895", 
+                "signature": "GPL EXPLOIT kadmind buffer overflow attempt"
+            }, 
+            {
+                "classtype": "shellcode-detect", 
+                "id": "sid:2101897", 
+                "signature": "GPL EXPLOIT kadmind buffer overflow attempt"
+            }, 
+            {
+                "classtype": "successful-admin", 
+                "id": "sid:2101900", 
+                "signature": "GPL EXPLOIT successful kadmind buffer overflow attempt"
+            }, 
+            {
+                "classtype": "successful-admin", 
+                "id": "sid:2101901", 
+                "signature": "GPL EXPLOIT successful kadmind buffer overflow attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "shellcode-detect", 
+                "id": "sid:1894", 
+                "signature": "INDICATOR-SHELLCODE kadmind buffer overflow attempt"
+            }, 
+            {
+                "category": "shellcode-detect", 
+                "id": "sid:1895", 
+                "signature": "INDICATOR-SHELLCODE kadmind buffer overflow attempt"
+            }, 
+            {
+                "category": "shellcode-detect", 
+                "id": "sid:1896", 
+                "signature": "INDICATOR-SHELLCODE kadmind buffer overflow attempt"
+            }, 
+            {
+                "category": "shellcode-detect", 
+                "id": "sid:1897", 
+                "signature": "INDICATOR-SHELLCODE kadmind buffer overflow attempt"
+            }, 
+            {
+                "category": "shellcode-detect", 
+                "id": "sid:1898", 
+                "signature": "INDICATOR-SHELLCODE kadmind buffer overflow attempt"
+            }, 
+            {
+                "category": "shellcode-detect", 
+                "id": "sid:1899", 
+                "signature": "INDICATOR-SHELLCODE kadmind buffer overflow attempt"
+            }, 
+            {
+                "category": "successful-admin", 
+                "id": "sid:1900", 
+                "signature": "SERVER-OTHER successful kadmind buffer overflow attempt"
+            }, 
+            {
+                "category": "successful-admin", 
+                "id": "sid:1901", 
+                "signature": "SERVER-OTHER successful kadmind buffer overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-1235"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 183-1 (krb5)", 
+                "file": "deb_183_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "53693"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 184-1 (krb4)", 
+                "file": "deb_184_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "53434"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 185-1 (heimdal)", 
+                "file": "deb_185_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "53435"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-178-1 : heimdal - remote command execution", 
+                "file": "debian_DSA-178.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "15015"
+            }, 
+            {
+                "name": "Debian DSA-183-1 : krb5 - buffer overflow", 
+                "file": "debian_DSA-183.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "15020"
+            }, 
+            {
+                "name": "Debian DSA-184-1 : krb4 - buffer overflow", 
+                "file": "debian_DSA-184.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "15021"
+            }, 
+            {
+                "name": "Debian DSA-185-1 : heimdal - buffer overflow", 
+                "file": "debian_DSA-185.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "15022"
+            }, 
+            {
+                "name": "Mandrake Linux Security Advisory : krb5 (MDKSA-2002:073-1)", 
+                "file": "mandrake_MDKSA-2002-073.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "13973"
+            }, 
+            {
+                "name": "RHEL 2.1 : krb5 (RHSA-2002:250)", 
+                "file": "redhat-RHSA-2002-250.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "12331"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2002-242.html", 
+                    "id": "RHSA-2002:242", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-183", 
+                "id": "DSA-183"
+            }, 
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-184", 
+                "id": "DSA-184"
+            }, 
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-185", 
+                "id": "DSA-185"
+            }
+        ], 
+        "Vmware": []
+    }
+}

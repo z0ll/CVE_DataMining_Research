@@ -1,0 +1,182 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0728", 
+                "published": "2010-03-10T15:13:03.777-05:00", 
+                "id": "CVE-2010-0728", 
+                "modified": "2010-03-10T00:00:00.000-05:00", 
+                "summary": "smbd in Samba 3.3.11, 3.4.6, and 3.5.0, when libcap support is enabled, runs with the CAP_DAC_OVERRIDE capability, which allows remote authenticated users to bypass intended file permissions via standard filesystem operations with any client."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:samba:samba:3.4.6"
+            }, 
+            {
+                "id": "cpe:/a:samba:samba:3.3.11"
+            }, 
+            {
+                "id": "cpe:/a:samba:samba:3.5.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.52109", 
+                "id": 52109
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.samba.org/show_bug.cgi?id=7222", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.samba.org/samba/security/CVE-2010-0728", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.samba.org/samba/history/samba-3.5.1.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.samba.org/samba/history/samba-3.4.7.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.samba.org/samba/history/samba-3.3.12.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://lists.samba.org/archive/samba-announce/2010/000211.html", 
+                    "vendor": "MLIST"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "single_instance", 
+                    "exploit": "6.8", 
+                    "base": "8.5", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-0728"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for samba FEDORA-2010-14678", 
+                "file": "gb_fedora_2010_14678_samba_fc12.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "862419"
+            }, 
+            {
+                "name": "Fedora Update for samba FEDORA-2010-3999", 
+                "file": "gb_fedora_2010_3999_samba_fc12.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "861772"
+            }, 
+            {
+                "name": "Fedora Update for samba FEDORA-2010-4050", 
+                "file": "gb_fedora_2010_4050_samba_fc11.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "861775"
+            }, 
+            {
+                "name": "Samba CAP_DAC_OVERRIDE File Permissions Security Bypass Vulnerability", 
+                "file": "gb_samba_38606.nasl", 
+                "family": "General", 
+                "id": "100522"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 201206-22 (Samba)", 
+                "file": "glsa_201206_22.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "71548"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "GLSA-201206-22 : Samba: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201206-22.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "59675"
+            }, 
+            {
+                "name": "Samba CAP_DAC_OVERRIDE File Permission Security Bypass", 
+                "file": "samba_file_permissions_security_bypass.nasl", 
+                "family": "Misc.", 
+                "id": "45047"
+            }, 
+            {
+                "name": "Samba CAP_DAC_OVERRIDE File Permission Security Bypass (version check)", 
+                "file": "samba_file_permissions_security_bypass_version.nasl", 
+                "family": "Misc.", 
+                "id": "45046"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

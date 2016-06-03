@@ -1,0 +1,185 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2717", 
+                "published": "2005-08-29T16:14:00.000-04:00", 
+                "id": "CVE-2005-2717", 
+                "modified": "2011-03-07T21:24:56.470-05:00", 
+                "summary": "PHP remote file inclusion vulnerability in WebCalendar before 1.0.1 allows remote attackers to execute arbitrary PHP code when opening settings.php, possibly via send_reminders.php or other scripts."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:webcalendar:webcalendar:1.0.0:rc1"
+            }, 
+            {
+                "id": "cpe:/a:webcalendar:webcalendar:1.0.0"
+            }, 
+            {
+                "id": "cpe:/a:webcalendar:webcalendar:1.0.0:rc3"
+            }, 
+            {
+                "id": "cpe:/a:webcalendar:webcalendar:1.0.0:rc2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.26163", 
+                "id": 26163
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/14651", 
+                "id": 14651
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/14651", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://sourceforge.net/project/shownotes.php?release_id=350336", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2005/1513", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/22136", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2005/dsa-799", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1014849", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/16675", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/16528", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2002898", 
+                "signature": "ET WEB_SPECIFIC_APPS PHP Web Calendar Remote File Inclusion Attempt"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-2717"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: webcalendar", 
+                "file": "freebsd_WebCalendar.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "55637"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 799-1 (webcalendar)", 
+                "file": "deb_799_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "55209"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-799-1 : webcalendar - remote code execution", 
+                "file": "debian_DSA-799.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "19569"
+            }, 
+            {
+                "name": "FreeBSD : WebCalendar -- remote file inclusion vulnerability (60f8fe7b-3cfb-11da-baa2-0004614cc33d)", 
+                "file": "freebsd_pkg_60f8fe7b3cfb11dabaa20004614cc33d.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "21436"
+            }, 
+            {
+                "name": "WebCalendar send_reminders.php includedir Parameter Remote File Inclusion", 
+                "file": "webcalendar_includedir_file_includes.nasl", 
+                "family": "CGI abuses", 
+                "id": "19502"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-799", 
+                "id": "DSA-799"
+            }
+        ], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,228 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3400", 
+                "published": "2011-12-13T19:55:01.450-05:00", 
+                "id": "CVE-2011-3400", 
+                "modified": "2013-01-29T23:42:31.807-05:00", 
+                "summary": "Microsoft Windows XP SP2 and SP3 and Server 2003 SP2 do not properly handle OLE objects in memory, which allows remote attackers to execute arbitrary code via a crafted object in a file, aka \"OLE Property Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2:itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp3"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp:-:sp2:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.4478", 
+                "id": 4478
+            }, 
+            {
+                "url": "http://www.scip.ch/?vuldb.4450", 
+                "id": 4450
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0030832", 
+                "id": "2011-A-0165", 
+                "title": "Microsoft Windows Object Linking and Embedding (OLE) Remote Code Execution Vulnerability"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA11-347A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS11-093", 
+                    "vendor": "MS"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms11_093_ole32.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/browser/ms11_093_ole32.rb", 
+                "title": "MS11-093 Microsoft Windows OLE Object File Handling Remote Code Execution"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/19002", 
+                "id": 19002, 
+                "file": "platforms/windows/remote/19002.rb"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/microsoft_ole_object_file", 
+                "id": "exploit_info/microsoft_ole_object_file", 
+                "title": "Microsoft OLE Object File Handling vulnerability"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-3400"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:14668", 
+                "title": "OLE Property Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:14668"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Windows OLE Remote Code Execution Vulnerability (2624667)", 
+                "file": "secpod_ms11-093.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "902596"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS11-093: Vulnerability in OLE Could Allow Remote Code Execution (2624667)", 
+                "file": "smb_nt_ms11-093.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "57279"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in OLE Could Allow Remote Code Execution", 
+                "id": "Vulnerability in OLE Could Allow Remote Code Execution", 
+                "title": "2624667"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2624667", 
+                "id": "2624667", 
+                "title": "Vulnerability in OLE Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS11-093", 
+                "id": "MS11-093", 
+                "title": "Vulnerability in OLE Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

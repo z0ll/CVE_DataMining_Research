@@ -1,0 +1,264 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3971", 
+                "published": "2010-12-22T16:00:17.723-05:00", 
+                "id": "CVE-2010-3971", 
+                "modified": "2011-07-18T22:40:59.877-04:00", 
+                "summary": "Use-after-free vulnerability in the CSharedStyleSheet::Notify function in the Cascading Style Sheets (CSS) parser in mshtml.dll, as used in Microsoft Internet Explorer 6 through 8 and other products, allows remote attackers to execute arbitrary code or cause a denial of service (application crash) via a self-referential @import rule in a stylesheet, aka \"CSS Memory Corruption Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:ie:7"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:8"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.55832", 
+                "id": 55832
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/45246", 
+                "id": 45246
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/69796", 
+                "id": 69796
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/634956", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.wooyun.org/bugs/wooyun-2010-0885", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2011/0318", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2010/3156", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1024922", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/45246", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/Bulletin/MS11-003.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/advisory/2488013.mspx", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/15746", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/15708", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://www.breakingpointsystems.com/community/blog/ie-vulnerability/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://support.avaya.com/css/P8/documents/100127294", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/42510", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://seclists.org/fulldisclosure/2010/Dec/110", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://blogs.technet.com/b/srd/archive/2011/01/07/assessing-the-risk-of-public-issues-currently-being-tracked-by-the-msrc.aspx", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/634956", 
+                "id": "VU#634956"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2012075", 
+                "signature": "ET WEB_CLIENT Possible Internet Explorer CSS Parser Remote Code Execution Attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2012149", 
+                "signature": "ET WEB_CLIENT MS10-090 IE CSS Exploit Metasploit POC Specific Unicoded"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms11_003_ie_css_import.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/browser/ms11_003_ie_css_import.rb", 
+                "title": "MS11-003 Microsoft Internet Explorer CSS Recursive Import Use After Free"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/15708", 
+                "id": 15708, 
+                "file": "http://www.exploit-db.com/download/15708"
+            }, 
+            {
+                "url": "http://www.exploit-db.com/exploits/15746", 
+                "id": 15746, 
+                "file": "http://www.exploit-db.com/download/15746"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/ie_css_import", 
+                "id": "exploit_info/ie_css_import", 
+                "title": "Microsoft Internet Explorer CSS Import Use-After-Free Code Execution"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-3971"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:12382", 
+                "title": "CSS Memory Corruption Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:12382"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Internet Explorer Multiple Vulnerabilities (2482017)", 
+                "file": "secpod_ms11-003.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "901180"
+            }, 
+            {
+                "name": "Microsoft Internet Explorer CSS Import Rule Use-after-free Vulnerability", 
+                "file": "secpod_ms_ie_use_after_free_dos_vuln.nasl", 
+                "family": "General", 
+                "id": "902325"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS KB2488013: Internet Explorer CSS Import Rule Processing Arbitrary Code Execution", 
+                "file": "smb_kb2488013.nasl", 
+                "family": "Windows", 
+                "id": "51587"
+            }, 
+            {
+                "name": "MS11-003: Cumulative Security Update for Internet Explorer (2482017)", 
+                "file": "smb_nt_ms11-003.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "51903"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Cumulative Security Update for Internet Explorer", 
+                "id": "Cumulative Security Update for Internet Explorer", 
+                "title": "2482017"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2482017", 
+                "id": "2482017", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS11-003", 
+                "id": "MS11-003", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

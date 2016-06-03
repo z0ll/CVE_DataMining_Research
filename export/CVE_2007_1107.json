@@ -1,0 +1,190 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1107", 
+                "published": "2007-02-26T12:28:00.000-05:00", 
+                "id": "CVE-2007-1107", 
+                "modified": "2009-09-15T00:58:51.483-04:00", 
+                "summary": "SQL injection vulnerability in thumbnails.php in Coppermine Photo Gallery (CPG) 1.3.x allows remote authenticated users to execute arbitrary SQL commands via a cpg131_fav cookie.  NOTE: it was later reported that 1.4.10, 1.4.14, and other 1.4.x versions are also affected using similar cookies."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:coppermine:coppermine_photo_gallery:1.3.4"
+            }, 
+            {
+                "id": "cpe:/a:coppermine:coppermine_photo_gallery:1.3"
+            }, 
+            {
+                "id": "cpe:/a:coppermine:coppermine_photo_gallery:1.3.2"
+            }, 
+            {
+                "id": "cpe:/a:coppermine:coppermine_photo_gallery:1.3.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35221", 
+                "id": 35221
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/27372", 
+                "id": 27372
+            }, 
+            {
+                "url": "http://www.securityfocus.com/bid/22709", 
+                "id": 22709
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/33133", 
+                "id": 33133
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/39806", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/27372", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/461158/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/4961", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/4950", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/3371", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://osvdb.org/33133", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/32688", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/22709", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2297", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004809", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery (CPG) SQL Injection Attempt -- thumbnails.php cpg131_fav SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004810", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery (CPG) SQL Injection Attempt -- thumbnails.php cpg131_fav UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004811", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery (CPG) SQL Injection Attempt -- thumbnails.php cpg131_fav INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004812", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery (CPG) SQL Injection Attempt -- thumbnails.php cpg131_fav DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004813", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery (CPG) SQL Injection Attempt -- thumbnails.php cpg131_fav ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004815", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery (CPG) SQL Injection Attempt -- thumbnails.php cpg131_fav UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1107"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

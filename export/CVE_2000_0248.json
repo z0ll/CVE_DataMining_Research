@@ -1,0 +1,134 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0248", 
+                "published": "2000-04-24T00:00:00.000-04:00", 
+                "id": "CVE-2000-0248", 
+                "modified": "2008-09-10T15:03:45.853-04:00", 
+                "summary": "The web GUI for the Linux Virtual Server (LVS) software in the Red Hat Linux Piranha package has a backdoor password that allows remote attackers to execute arbitrary commands."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:redhat:linux:6.2::sparc"
+            }, 
+            {
+                "id": "cpe:/o:redhat:linux:6.2::i386"
+            }, 
+            {
+                "id": "cpe:/o:redhat:linux:6.2::alpha"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.15484", 
+                "id": 15484
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/alerts/advise46.php3", 
+                    "vendor": "ISS"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-recon", 
+                "id": "sid:2002331", 
+                "signature": "ET WEB_SPECIFIC_APPS Piranha default passwd attempt"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "piranha_passwd_exec.rb", 
+                "file": "metasploit-framework/modules/exploits/linux/http/piranha_passwd_exec.rb", 
+                "title": "RedHat Piranha Virtual Server Package passwd.php3 Arbitrary Command Execution"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2000-0248"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Piranhas RH6.2 default password", 
+                "file": "piranha.nasl", 
+                "family": "CGI abuses", 
+                "id": "10381"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2000-014-10.html", 
+                    "id": "RHSA-2000:014-10", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

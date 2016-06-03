@@ -1,0 +1,185 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1965", 
+                "published": "2011-08-10T17:55:01.657-04:00", 
+                "id": "CVE-2011-1965", 
+                "modified": "2012-02-13T23:06:36.273-05:00", 
+                "summary": "Tcpip.sys in the TCP/IP stack in Microsoft Windows 7 Gold and SP1 and Windows Server 2008 R2 and R2 SP1 does not properly implement URL-based QoS, which allows remote attackers to cause a denial of service (reboot) via a crafted URL to a web server, aka \"TCP/IP QOS Denial of Service Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_7:-:sp1:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:r2::itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:r2:sp1:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_7:-:sp1:x32"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_7:-:-:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:r2:sp1:itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_7:-:-:x32"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:r2::x64"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.58236", 
+                "id": 58236
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA11-221A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/Bulletin/MS11-064.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/8474", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "7.1", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/17981", 
+                "id": 17981, 
+                "file": "platforms/windows/dos/17981.py"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-1965"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:12318", 
+                "title": "TCP/IP QOS Denial of Service Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:12318"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Windows TCP/IP Stack Denial of Service Vulnerability (2563894)", 
+                "file": "secpod_ms11-064.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "900296"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS11-064: Vulnerabilities in TCP/IP Stack Could Allow Denial of Service (2563894) (uncredentialed check)", 
+                "file": "qos_kb2563894.nasl", 
+                "family": "Windows", 
+                "id": "56044"
+            }, 
+            {
+                "name": "MS11-064: Vulnerabilities in TCP/IP Stack Could Allow Denial of Service (2563894)", 
+                "file": "smb_nt_ms11-064.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "55794"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerabilities in TCP/IP Stack Could Allow Denial of Service", 
+                "id": "Vulnerabilities in TCP/IP Stack Could Allow Denial of Service", 
+                "title": "2563894"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2563894", 
+                "id": "2563894", 
+                "title": "Vulnerabilities in TCP/IP Stack Could Allow Denial of Service"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS11-064", 
+                "id": "MS11-064", 
+                "title": "Vulnerabilities in TCP/IP Stack Could Allow Denial of Service"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

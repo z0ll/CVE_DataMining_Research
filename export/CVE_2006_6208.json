@@ -1,0 +1,310 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6208", 
+                "published": "2006-11-30T20:28:00.000-05:00", 
+                "id": "CVE-2006-6208", 
+                "modified": "2011-03-07T21:45:36.687-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in Enthrallweb eClassifieds allow remote attackers to execute arbitrary SQL commands via the (1) AD_ID, (2) cat_id, (3) sub_id, and (4) ad_id parameters to (a) ad.asp, the (5) cid parameter to (b) dircat.asp, and the (6) sid parameter to (c) dirSub.asp."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:enthrallweb:eclassifieds"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33546", 
+                "id": 33546
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21192", 
+                "id": 21192
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30423", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4642", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21192", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/452102/100/100/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23050", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://s-a-p.ca/index.php?page=OurAdvisories&id=46", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/1943", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007042", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp AD_ID SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007043", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp AD_ID UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007044", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp AD_ID INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007045", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp AD_ID DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007046", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp AD_ID ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007047", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp AD_ID UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007048", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp cat_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007059", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp cat_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007050", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp cat_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007051", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp cat_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007052", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp cat_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007053", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp cat_id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007054", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp sub_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007055", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp sub_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007056", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp sub_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007057", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp sub_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007058", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp sub_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007049", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp sub_id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007024", 
+                "signature": "ET DELETED Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp ad_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007025", 
+                "signature": "ET DELETED Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp ad_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007026", 
+                "signature": "ET DELETED Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp ad_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007027", 
+                "signature": "ET DELETED Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp ad_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007028", 
+                "signature": "ET DELETED Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp ad_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007029", 
+                "signature": "ET DELETED Enthrallweb eClassifieds SQL Injection Attempt -- ad.asp ad_id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007030", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- dircat.asp cid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007031", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- dircat.asp cid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007032", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- dircat.asp cid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007033", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- dircat.asp cid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007034", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- dircat.asp cid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007035", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- dircat.asp cid UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007036", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- dirSub.asp sid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007037", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- dirSub.asp sid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007038", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- dirSub.asp sid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007039", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- dirSub.asp sid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007040", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- dirSub.asp sid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007041", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eClassifieds SQL Injection Attempt -- dirSub.asp sid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6208"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

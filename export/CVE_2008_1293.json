@@ -1,0 +1,205 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1293", 
+                "published": "2008-04-29T09:09:00.000-04:00", 
+                "id": "CVE-2008-1293", 
+                "modified": "2009-02-21T00:00:00.000-05:00", 
+                "summary": "ldm in Linux Terminal Server Project (LTSP) 0.99 and 2 passes the -ac option to the X server on each LTSP client, which allows remote attackers to connect to this server via TCP port 6006 (aka display :6)."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:ltsp:linux_terminal_server_project:2"
+            }, 
+            {
+                "id": "cpe:/a:ltsp:linux_terminal_server_project:0.99"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.42181", 
+                "id": 42181
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/28960", 
+                "id": 28960
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/42080", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.ubuntulinux.org/support/documentation/usn/usn-610-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1019940", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/28960", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2008/03/12/3", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2008/03/11/2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2008/dsa-1561", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/30099", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/29959", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=469462", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "6.5", 
+                    "base": "4.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "adjacent_network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2008-1293"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:7398", 
+                "title": "DSA-1561 ldm -- programming error", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:7398"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17723", 
+                "title": "USN-610-1 -- ltsp vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17723"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20319", 
+                "title": "DSA-1561-1 ltsp - information disclosure", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20319"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 1561-1 (ldm)", 
+                "file": "deb_1561_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "60866"
+            }, 
+            {
+                "name": "Ubuntu Update for quagga USN-2941-1", 
+                "file": "gb_ubuntu_USN_610_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840319"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-1561-1 : ldm - programming error", 
+                "file": "debian_DSA-1561.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "32085"
+            }, 
+            {
+                "name": "Ubuntu 6.06 LTS / 7.04 / 7.10 : ltsp vulnerability (USN-610-1)", 
+                "file": "ubuntu_USN-610-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "32190"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-610-1", 
+                "id": "USN-610-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-1561", 
+                "id": "DSA-1561"
+            }
+        ], 
+        "Vmware": []
+    }
+}

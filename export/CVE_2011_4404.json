@@ -1,0 +1,163 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4404", 
+                "published": "2011-11-18T22:58:55.760-05:00", 
+                "id": "CVE-2011-4404", 
+                "modified": "2011-12-12T23:09:28.643-05:00", 
+                "summary": "The default configuration of the HTTP server in Jetty in vSphere Update Manager in VMware vCenter Update Manager 4.0 before Update 4 and 4.1 before Update 2 allows remote attackers to conduct directory traversal attacks and read arbitrary files via unspecified vectors, a related issue to CVE-2009-1523."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/16.html", 
+                "id": "CWE-16", 
+                "title": "Configuration"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:vmware:vcenter_update_manager:4.1"
+            }, 
+            {
+                "id": "cpe:/a:vmware:vcenter_update_manager:4.0"
+            }, 
+            {
+                "id": "cpe:/a:vmware:vcenter_update_manager:4.0:update_1"
+            }, 
+            {
+                "id": "cpe:/a:vmware:vcenter_update_manager:4.0:update_2"
+            }, 
+            {
+                "id": "cpe:/a:vmware:vcenter_update_manager:4.0:update_3"
+            }, 
+            {
+                "id": "cpe:/a:vmware:vcenter_update_manager:4.1:update_1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.59468", 
+                "id": 59468
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0030769", 
+                "id": "2011-A-0160", 
+                "title": "Multiple Vulnerabilities in VMware vCenter Server 4.0 and vCenter Update Manager 4.0"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vmware.com/security/advisories/VMSA-2011-0014.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1026341", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://jetty.codehaus.org/jetty/jetty-6/xref/org/mortbay/jetty/servlet/DefaultServlet.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://jetty.codehaus.org/jetty/jetty-6/xref/org/mortbay/jetty/handler/ResourceHandler.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "vmware_update_manager_traversal.rb", 
+                "file": "metasploit-framework/modules/auxiliary/scanner/vmware/vmware_update_manager_traversal.rb", 
+                "title": "VMWare Update Manager 4 Directory Traversal"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/18138", 
+                "id": 18138, 
+                "file": "platforms/windows/remote/18138.txt"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-4404"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "VMware vCenter Update Manager Directory Traversal (VMSA-2011-0014)", 
+                "file": "vmware_vcenter_update_mgr_vmsa-2011-0014.nasl", 
+                "family": "CGI abuses", 
+                "id": "56958"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": [
+            {
+                "url": "https://www.vmware.com/security/advisories/VMSA-2011-0014.html", 
+                "id": "VMSA-2011-0014"
+            }
+        ]
+    }
+}

@@ -1,0 +1,157 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1555", 
+                "published": "2007-03-20T18:19:00.000-04:00", 
+                "id": "CVE-2007-1555", 
+                "modified": "2011-03-07T21:52:20.720-05:00", 
+                "summary": "SQL injection vulnerability in forum.php in the Minerva mod 2.0.21 build 238a and earlier for phpBB allows remote attackers to execute arbitrary SQL commands via the c parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:minerva:minerva"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35730", 
+                "id": 35730
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/23036", 
+                "id": 23036
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/33748", 
+                "id": 33748
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1028", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/23036", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/3519", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/33082", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/33748", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004164", 
+                "signature": "ET WEB_SPECIFIC_APPS Minerva mod SQL Injection Attempt -- forum.php c SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004165", 
+                "signature": "ET WEB_SPECIFIC_APPS Minerva mod SQL Injection Attempt -- forum.php c UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004166", 
+                "signature": "ET WEB_SPECIFIC_APPS Minerva mod SQL Injection Attempt -- forum.php c INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004167", 
+                "signature": "ET WEB_SPECIFIC_APPS Minerva mod SQL Injection Attempt -- forum.php c DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004168", 
+                "signature": "ET WEB_SPECIFIC_APPS Minerva mod SQL Injection Attempt -- forum.php c ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004169", 
+                "signature": "ET WEB_SPECIFIC_APPS Minerva mod SQL Injection Attempt -- forum.php c UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1555"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

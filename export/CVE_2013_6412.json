@@ -1,0 +1,256 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6412", 
+                "published": "2014-01-22T19:55:03.300-05:00", 
+                "id": "CVE-2013-6412", 
+                "modified": "2014-01-23T12:55:35.650-05:00", 
+                "summary": "The transform_save function in transform.c in Augeas 1.0.0 through 1.1.0 does not properly calculate the permission values when the umask contains a \"7,\" which causes world-writable permissions to be used for new files and allows local users to modify the files via unspecified vectors."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:augeas:augeas:1.1.0"
+            }, 
+            {
+                "id": "cpe:/a:augeas:augeas:1.0.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.66167", 
+                "id": 66167
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/hercules-team/augeas/pull/58", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://github.com/hercules-team/augeas/commit/f5b4fc0c", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1034261", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2014-0044.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-6412"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26988", 
+                "title": "DEPRECATED: ELSA-2014-0044 -- augeas security update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26988"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26875", 
+                "title": "DEPRECATED: SUSE-SU-2014:1017-1 -- Security update for augeas", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26875"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:25960", 
+                "title": "SUSE-SU-2014:1017-1 -- Security update for augeas", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:25960"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24181", 
+                "title": "ELSA-2014:0044: augeas security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24181"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22025", 
+                "title": "RHSA-2014:0044: augeas security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22025"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CentOS Update for augeas CESA-2014:0044 centos6", 
+                "file": "gb_CESA-2014_0044_augeas_centos6.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881862"
+            }, 
+            {
+                "name": "Fedora Update for augeas FEDORA-2014-2445", 
+                "file": "gb_fedora_2014_2445_augeas_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867601"
+            }, 
+            {
+                "name": "Fedora Update for augeas FEDORA-2014-2452", 
+                "file": "gb_fedora_2014_2452_augeas_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867597"
+            }, 
+            {
+                "name": "RedHat Update for augeas RHSA-2014:0044-01", 
+                "file": "gb_RHSA-2014_0044-01_augeas.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "871113"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : augeas (ALAS-2014-286)", 
+                "file": "ala_ALAS-2014-286.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "72304"
+            }, 
+            {
+                "name": "CentOS 6 : augeas (CESA-2014:0044)", 
+                "file": "centos_RHSA-2014-0044.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "72045"
+            }, 
+            {
+                "name": "Debian DLA-28-1 : augeas security update", 
+                "file": "debian_DLA-28.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "82176"
+            }, 
+            {
+                "name": "Fedora 19 : augeas-1.2.0-1.fc19 (2014-2445)", 
+                "file": "fedora_2014-2445.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "73031"
+            }, 
+            {
+                "name": "Fedora 20 : augeas-1.2.0-1.fc20 (2014-2452)", 
+                "file": "fedora_2014-2452.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "73032"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : augeas (MDVSA-2014:022)", 
+                "file": "mandriva_MDVSA-2014-022.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "72134"
+            }, 
+            {
+                "name": "Oracle Linux 6 : augeas (ELSA-2014-0044)", 
+                "file": "oraclelinux_ELSA-2014-0044.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "72058"
+            }, 
+            {
+                "name": "RHEL 6 : augeas (RHSA-2014:0044)", 
+                "file": "redhat-RHSA-2014-0044.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "72060"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : augeas on SL6.x i386/x86_64", 
+                "file": "sl_20140120_augeas_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "72083"
+            }, 
+            {
+                "name": "SuSE 11.3 Security Update : augeas (SAT Patch Number 9574)", 
+                "file": "suse_11_augeas-140730.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "77196"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20140044", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2014-0044.html", 
+                    "id": "RHSA-2014:0044", 
+                    "title": "RHSA-2014:0044: augeas security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1034261", 
+                    "title": "CVE-2013-6412 augeas: incorrect permissions set on newly created files", 
+                    "id": "1034261", 
+                    "issue date": "2014-01-20", 
+                    "associated redhat": "RHSA-2014:0044"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

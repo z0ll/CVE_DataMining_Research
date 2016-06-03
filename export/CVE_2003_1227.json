@@ -1,0 +1,183 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-1227", 
+                "published": "2003-12-31T00:00:00.000-05:00", 
+                "id": "CVE-2003-1227", 
+                "modified": "2008-09-05T16:36:22.807-04:00", 
+                "summary": "PHP remote file include vulnerability in index.php for Gallery 1.4 and 1.4-pl1, when running on Windows or in Configuration mode on Unix, allows remote attackers to inject arbitrary PHP code via a URL in the GALLERY_BASEDIR parameter, a different vulnerability than CVE-2002-1412.  NOTE: this issue might be exploitable only during installation, or if the administrator has not run a security script after installation."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:gallery_project:gallery:1.4"
+            }, 
+            {
+                "id": "cpe:/a:gallery_project:gallery:1.4_pl1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.21159", 
+                "id": 21159
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/8814", 
+                "id": 8814
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/8814", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/341044", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/13419", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/341098", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/341094", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:2306", 
+                "signature": "SERVER-WEBAPP gallery remote file include attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2003-1227"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Gallery index.php GALLERY_BASEDIR Parameter Remote File Inclusion", 
+                "file": "gallery_injection2.nasl", 
+                "family": "CGI abuses", 
+                "id": "11876"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

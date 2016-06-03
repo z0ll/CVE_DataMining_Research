@@ -1,0 +1,227 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0040", 
+                "published": "2004-03-03T00:00:00.000-05:00", 
+                "id": "CVE-2004-0040", 
+                "modified": "2008-09-10T15:24:55.257-04:00", 
+                "summary": "Stack-based buffer overflow in Check Point VPN-1 Server 4.1 through 4.1 SP6 and Check Point SecuRemote/SecureClient 4.1 through 4.1 build 4200 allows remote attackers to execute arbitrary code via an ISAKMP packet with a large Certificate Request packet."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:checkpoint:vpn-1:next_generation_fp1"
+            }, 
+            {
+                "id": "cpe:/a:checkpoint:vpn-1:4.1:sp5a"
+            }, 
+            {
+                "id": "cpe:/a:checkpoint:firewall-1:next_generation_fp0"
+            }, 
+            {
+                "id": "cpe:/a:checkpoint:firewall-1:4.1:sp5"
+            }, 
+            {
+                "id": "cpe:/a:checkpoint:firewall-1:4.1"
+            }, 
+            {
+                "id": "cpe:/a:checkpoint:vpn-1:next_generation_fp0"
+            }, 
+            {
+                "id": "cpe:/a:checkpoint:firewall-1:4.1:sp3"
+            }, 
+            {
+                "id": "cpe:/a:checkpoint:firewall-1:4.1:sp4"
+            }, 
+            {
+                "id": "cpe:/a:checkpoint:firewall-1:4.1:sp5a"
+            }, 
+            {
+                "id": "cpe:/a:checkpoint:firewall-1:4.1:sp1"
+            }, 
+            {
+                "id": "cpe:/a:checkpoint:firewall-1:4.1:sp2"
+            }, 
+            {
+                "id": "cpe:/a:checkpoint:firewall-1:next_generation_fp1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.504", 
+                "id": 504
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/9582", 
+                "id": 9582
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/3821", 
+                "id": 3821
+            }, 
+            {
+                "url": "http://www.osvdb.org/4432", 
+                "id": 4432
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/873334", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/9582", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/14150", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=107604682227031&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/alerts/id/163", 
+                    "vendor": "ISS"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/4432", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/3821", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/o-073.shtml", 
+                    "vendor": "CIAC"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/873334", 
+                "id": "VU#873334"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102380", 
+                "signature": "GPL EXPLOIT ISAKMP fifth payload certificate request length overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102376", 
+                "signature": "GPL EXPLOIT ISAKMP first payload certificate request length overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102379", 
+                "signature": "GPL EXPLOIT ISAKMP forth payload certificate request length overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102377", 
+                "signature": "GPL EXPLOIT ISAKMP second payload certificate request length overflow attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2376", 
+                "signature": "SERVER-OTHER ISAKMP first payload certificate request length overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2377", 
+                "signature": "SERVER-OTHER ISAKMP second payload certificate request length overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2378", 
+                "signature": "SERVER-OTHER ISAKMP third payload certificate request length overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2379", 
+                "signature": "SERVER-OTHER ISAKMP forth payload certificate request length overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2380", 
+                "signature": "SERVER-OTHER ISAKMP fifth payload certificate request length overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0040"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

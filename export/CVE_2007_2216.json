@@ -1,0 +1,190 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2216", 
+                "published": "2007-08-14T17:17:00.000-04:00", 
+                "id": "CVE-2007-2216", 
+                "modified": "2011-03-07T00:00:00.000-05:00", 
+                "summary": "The tblinf32.dll (aka vstlbinf.dll) ActiveX control for Internet Explorer 5.01, 6 SP1, and 7 uses an incorrect IObjectsafety implementation, which allows remote attackers to execute arbitrary code by requesting the HelpString property, involving a crafted DLL file argument to the TypeLibInfoFromFile function, which overwrites the HelpStringDll property to call the DLLGetDocumentation function in another DLL file, aka \"ActiveX Object Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/16.html", 
+                "id": "CWE-16", 
+                "title": "Configuration"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:ie:7"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:6:sp1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:5.01"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.3244", 
+                "id": 3244
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/25289", 
+                "id": 25289
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/36396", 
+                "id": 36396
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA07-226A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/25289", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/2869", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/476742/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/36396", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1018562", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/26419", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/ie_tblinf32_iobjectsafety", 
+                "id": "exploit_info/ie_tblinf32_iobjectsafety", 
+                "title": "Internet Explorer tblinf32.dll ActiveX IObjectsafety vulnerability"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2216"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:2109", 
+                "title": "ActiveX Object Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:2109"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Cumulative Security Update for Internet Explorer (937143)", 
+                "file": "ms07-045.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "102058"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS07-045: Cumulative Security Update for Internet Explorer (937143)", 
+                "file": "smb_nt_ms07-045.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "25883"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Cumulative Security Update for Internet Explorer", 
+                "id": "Cumulative Security Update for Internet Explorer", 
+                "title": "937143"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/937143", 
+                "id": "937143", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS07-045", 
+                "id": "MS07-045", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

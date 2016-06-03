@@ -1,0 +1,204 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0183", 
+                "published": "2012-05-08T20:55:01.867-04:00", 
+                "id": "CVE-2012-0183", 
+                "modified": "2013-01-29T23:46:15.960-05:00", 
+                "summary": "Microsoft Word 2003 SP3 and 2007 SP2 and SP3, Office 2008 and 2011 for Mac, and Office Compatibility Pack SP2 and SP3 allow remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via crafted RTF data, aka \"RTF Mismatch Vulnerability.\""
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:word:2007:sp3"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:office_compatibility_pack::sp2"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:office:2008::mac"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:word:2007:sp2"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:word:2003:sp3"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:office_compatibility_pack::sp3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.5345", 
+                "id": 5345
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0032316", 
+                "id": "2012-A-0083", 
+                "title": "Microsoft Office Word Remote Code Execution Vulnerability"
+            }
+        ], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/53344", 
+                "id": 53344
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA12-129A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS12-029", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1027035", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/53344", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/49111", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2015790", 
+                "signature": "ET WEB_CLIENT Microsoft Rich Text File download - SET"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/18894", 
+                "id": 18894, 
+                "file": "platforms/windows/dos/18894.txt"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-0183"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:15327", 
+                "title": "RTF Mismatch Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:15327"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Office Word Remote Code Execution Vulnerability (2680352)", 
+                "file": "secpod_ms12-029.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "902911"
+            }, 
+            {
+                "name": "Microsoft Office Word Remote Code Execution Vulnerability-2680352 (Mac OS X)", 
+                "file": "secpod_ms12-029_macosx.nasl", 
+                "family": "Mac OS X Local Security Checks", 
+                "id": "902912"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS12-029 / MS12-030: Vulnerabilities in Microsoft Office Could Allow Remote Code Execution (2680352 / 2663830) (Mac OS X)", 
+                "file": "macosx_ms_office_may2012.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "59046"
+            }, 
+            {
+                "name": "MS12-029: Vulnerability in Microsoft Word Could Allow Remote Code Execution (2680352)", 
+                "file": "smb_nt_ms12-029.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "59037"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in Microsoft Word Could Allow Remote Code Execution", 
+                "id": "Vulnerability in Microsoft Word Could Allow Remote Code Execution", 
+                "title": "2596880"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2680352", 
+                "id": "2680352", 
+                "title": "Vulnerability in Microsoft Word Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS12-029", 
+                "id": "MS12-029", 
+                "title": "Vulnerability in Microsoft Word Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

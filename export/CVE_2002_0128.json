@@ -1,0 +1,147 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0128", 
+                "published": "2002-03-25T00:00:00.000-05:00", 
+                "id": "CVE-2002-0128", 
+                "modified": "2008-09-05T16:27:14.980-04:00", 
+                "summary": "cgitest.exe in Sambar Server 5.1 before Beta 4 allows remote attackers to cause a denial of service, and possibly execute arbitrary code, via a long argument."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:sambar:sambar_server:5.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.18025", 
+                "id": 18025
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/3885", 
+                "id": 3885
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/3885", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/250545", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.sambar.com/security.htm", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/static/7894.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.der-keiler.de/Mailing-Lists/securityfocus/bugtraq/2002-02/0083.html", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1587", 
+                "signature": "SERVER-WEBAPP cgitest.exe access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-0128"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Sambar web server DOS", 
+                "file": "sambar_DoS.nasl", 
+                "family": "Denial of Service", 
+                "id": "11131"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Sambar Server cgitest.exe Remote Overflow", 
+                "file": "cgitest.nasl", 
+                "family": "CGI abuses", 
+                "id": "10040"
+            }, 
+            {
+                "name": "Sambar Server Multiple CGI Remote Overflow", 
+                "file": "sambar_DoS.nasl", 
+                "family": "CGI abuses", 
+                "id": "11131"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

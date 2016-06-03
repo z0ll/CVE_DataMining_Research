@@ -1,0 +1,333 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-6564", 
+                "published": "2015-08-23T21:59:01.657-04:00", 
+                "id": "CVE-2015-6564", 
+                "modified": "2015-08-25T23:01:09.133-04:00", 
+                "summary": "Use-after-free vulnerability in the mm_answer_pam_free_ctx function in monitor.c in sshd in OpenSSH before 7.0 on non-OpenBSD platforms might allow local users to gain privileges by leveraging control of the sshd uid to send an unexpectedly early MONITOR_REQ_PAM_FREE_CTX request."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:openbsd:openssh:6.9"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.77397", 
+                "id": 77397
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/openssh/openssh-portable/commit/5e75f5198769056089fb06c4d738ab0e5abc66f7", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/08/22/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openssh.com/txt/release-7.0", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://seclists.org/fulldisclosure/2015/Aug/54", 
+                    "vendor": "FULLDISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "6.9", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-6564"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:266", 
+                "title": "AIX Use-after-free Vulnerability in the mm_answer_pam_free_ctx function", 
+                "class": "vulnerability", 
+                "id": "oval:org.cisecurity:def:266"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "AIX OpenSSH Vulnerabilities : openssh_advisory6.asc", 
+                "file": "aix_openssh_advisory6.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "86656"
+            }, 
+            {
+                "name": "Amazon Linux AMI : openssh (ALAS-2015-592)", 
+                "file": "ala_ALAS-2015-592.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "85750"
+            }, 
+            {
+                "name": "Amazon Linux AMI : openssh (ALAS-2015-625)", 
+                "file": "ala_ALAS-2015-625.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "87351"
+            }, 
+            {
+                "name": "CentOS 7 : openssh (CESA-2015:2088)", 
+                "file": "centos_RHSA-2015-2088.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "87128"
+            }, 
+            {
+                "name": "Fedora 21 : openssh-6.6.1p1-16.fc21 (2015-13469)", 
+                "file": "fedora_2015-13469.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "85668"
+            }, 
+            {
+                "name": "FreeBSD : OpenSSH -- PAM vulnerabilities (2920c449-4850-11e5-825f-c80aa9043978)", 
+                "file": "freebsd_pkg_2920c449485011e5825fc80aa9043978.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "85594"
+            }, 
+            {
+                "name": "GLSA-201512-04 : OpenSSH: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201512-04.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "87545"
+            }, 
+            {
+                "name": "Oracle Linux 7 : openssh (ELSA-2015-2088)", 
+                "file": "oraclelinux_ELSA-2015-2088.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "87019"
+            }, 
+            {
+                "name": "RHEL 7 : openssh (RHSA-2015:2088)", 
+                "file": "redhat-RHSA-2015-2088.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "86967"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : openssh on SL7.x x86_64", 
+                "file": "sl_20151119_openssh_on_SL7_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "87567"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : openssh (SUSE-SU-2015:1544-1) (Logjam)", 
+                "file": "suse_SU-2015-1544-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85928"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : openssh (SUSE-SU-2015:1547-1) (Logjam)", 
+                "file": "suse_SU-2015-1547-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85929"
+            }, 
+            {
+                "name": "SUSE SLED11 Security Update : openssh (SUSE-SU-2015:1547-2) (Logjam)", 
+                "file": "suse_SU-2015-1547-2.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85941"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : openssh (SUSE-SU-2015:1581-1) (Logjam)", 
+                "file": "suse_SU-2015-1581-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "86057"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : openssh (SUSE-SU-2015:1695-1) (Logjam)", 
+                "file": "suse_SU-2015-1695-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "86339"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20152088", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-2088.html", 
+                    "id": "RHSA-2015:2088", 
+                    "title": "RHSA-2015:2088: openssh security, bug fix, and enhancement update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1125110", 
+                    "title": "pam_namespace usage is not consistent across system-wide PAM configuration", 
+                    "id": "1125110", 
+                    "issue date": "2015-05-11", 
+                    "associated redhat": "RHSA-2015:2088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1160377", 
+                    "title": "sftp is failing using wildcards and many files", 
+                    "id": "1160377", 
+                    "issue date": "2015-05-11", 
+                    "associated redhat": "RHSA-2015:2088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1178116", 
+                    "title": "Default selinux policy prevents ssh-ldap-helper from connecting to LDAP server", 
+                    "id": "1178116", 
+                    "issue date": "2015-05-11", 
+                    "associated redhat": "RHSA-2015:2088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1181591", 
+                    "title": "No Documentation= line in the sshd.service file", 
+                    "id": "1181591", 
+                    "issue date": "2015-05-11", 
+                    "associated redhat": "RHSA-2015:2088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1184938", 
+                    "title": "Provide LDIF version of LPK schema", 
+                    "id": "1184938", 
+                    "issue date": "2015-05-11", 
+                    "associated redhat": "RHSA-2015:2088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1187597", 
+                    "title": "sshd -T does not show all (default) options, inconsistency", 
+                    "id": "1187597", 
+                    "issue date": "2015-05-11", 
+                    "associated redhat": "RHSA-2015:2088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1197666", 
+                    "title": "ssh client using HostbasedAuthentication aborts in FIPS mode", 
+                    "id": "1197666", 
+                    "issue date": "2015-05-11", 
+                    "associated redhat": "RHSA-2015:2088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1197989", 
+                    "title": "RFE: option to let openssh/sftp force the exact permissions on newly uploaded files", 
+                    "id": "1197989", 
+                    "issue date": "2015-05-11", 
+                    "associated redhat": "RHSA-2015:2088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1238238", 
+                    "title": "openssh: weakness of agent locking (ssh-add -x) to password guessing", 
+                    "id": "1238238", 
+                    "issue date": "2015-05-11", 
+                    "associated redhat": "RHSA-2015:2088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245969", 
+                    "title": "CVE-2015-5600 openssh: MaxAuthTries limit bypass via duplicates in KbdInteractiveDevices", 
+                    "id": "1245969", 
+                    "issue date": "2015-05-11", 
+                    "associated redhat": "RHSA-2015:2088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1252844", 
+                    "title": "CVE-2015-6563 openssh: Privilege separation weakness related to PAM support", 
+                    "id": "1252844", 
+                    "issue date": "2015-05-11", 
+                    "associated redhat": "RHSA-2015:2088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1252852", 
+                    "title": "CVE-2015-6564 openssh: Use-after-free bug related to PAM support", 
+                    "id": "1252852", 
+                    "issue date": "2015-05-11", 
+                    "associated redhat": "RHSA-2015:2088"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,145 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-0527", 
+                "published": "2001-08-14T00:00:00.000-04:00", 
+                "id": "CVE-2001-0527", 
+                "modified": "2008-09-05T16:24:19.630-04:00", 
+                "summary": "DCScripts DCForum versions 2000 and earlier allow a remote attacker to gain additional privileges by inserting pipe symbols (|) and newlines into the last name in the registration form, which will create an extra entry in the registration database."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:dcscripts:dcforum:6.0"
+            }, 
+            {
+                "id": "cpe:/a:dcscripts:dcforum_2000:1.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.17156", 
+                "id": 17156
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/2728", 
+                "id": 2728
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/480", 
+                "id": 480
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/static/6538.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.dcscripts.com/dcforum/dcfNews/167.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2001-05/0122.html", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/2728", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/480", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:817", 
+                "signature": "SERVER-WEBAPP dcboard.cgi invalid user addition attempt"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:818", 
+                "signature": "SERVER-WEBAPP dcforum.cgi access"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1410", 
+                "signature": "SERVER-WEBAPP dcboard.cgi access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-0527"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

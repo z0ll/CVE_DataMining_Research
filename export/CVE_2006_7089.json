@@ -1,0 +1,135 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-7089", 
+                "published": "2007-03-02T16:18:00.000-05:00", 
+                "id": "CVE-2006-7089", 
+                "modified": "2008-09-05T17:16:23.827-04:00", 
+                "summary": "SQL injection vulnerability in connexion.php in Ban 0.1 allows remote attackers to execute arbitrary SQL commands via the id parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:ban:ban:0.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35278", 
+                "id": 35278
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/29863", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=116205673106780&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004772", 
+                "signature": "ET WEB_SPECIFIC_APPS Ban SQL Injection Attempt -- connexion.php id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004773", 
+                "signature": "ET WEB_SPECIFIC_APPS Ban SQL Injection Attempt -- connexion.php id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004774", 
+                "signature": "ET WEB_SPECIFIC_APPS Ban SQL Injection Attempt -- connexion.php id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004775", 
+                "signature": "ET WEB_SPECIFIC_APPS Ban SQL Injection Attempt -- connexion.php id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004776", 
+                "signature": "ET WEB_SPECIFIC_APPS Ban SQL Injection Attempt -- connexion.php id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004778", 
+                "signature": "ET WEB_SPECIFIC_APPS Ban SQL Injection Attempt -- connexion.php id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-7089"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

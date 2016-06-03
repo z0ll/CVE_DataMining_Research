@@ -1,0 +1,187 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3003", 
+                "published": "2007-06-04T13:30:00.000-04:00", 
+                "id": "CVE-2007-3003", 
+                "modified": "2012-10-30T22:36:58.123-04:00", 
+                "summary": "Multiple SQL injection vulnerabilities in myBloggie 2.1.6 and earlier allow remote attackers to execute arbitrary SQL commands via the (1) cat_id or (2) year parameter to index.php in a viewuser action, different vectors than CVE-2005-1500 and CVE-2005-4225."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:mywebland:mybloggie:2.1.6"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.37097", 
+                "id": 37097
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/24249", 
+                "id": 24249
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/38345", 
+                "id": 38345
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34627", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/24249", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/470112/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://osvdb.org/38345", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2769", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004469", 
+                "signature": "ET WEB_SPECIFIC_APPS myBloggie SQL Injection Attempt -- index.php cat_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004470", 
+                "signature": "ET WEB_SPECIFIC_APPS myBloggie SQL Injection Attempt -- index.php cat_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004471", 
+                "signature": "ET WEB_SPECIFIC_APPS myBloggie SQL Injection Attempt -- index.php cat_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004472", 
+                "signature": "ET WEB_SPECIFIC_APPS myBloggie SQL Injection Attempt -- index.php cat_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004473", 
+                "signature": "ET WEB_SPECIFIC_APPS myBloggie SQL Injection Attempt -- index.php cat_id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004474", 
+                "signature": "ET WEB_SPECIFIC_APPS myBloggie SQL Injection Attempt -- index.php year SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004475", 
+                "signature": "ET WEB_SPECIFIC_APPS myBloggie SQL Injection Attempt -- index.php year UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004476", 
+                "signature": "ET WEB_SPECIFIC_APPS myBloggie SQL Injection Attempt -- index.php year INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004477", 
+                "signature": "ET WEB_SPECIFIC_APPS myBloggie SQL Injection Attempt -- index.php year DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004478", 
+                "signature": "ET WEB_SPECIFIC_APPS myBloggie SQL Injection Attempt -- index.php year ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004479", 
+                "signature": "ET WEB_SPECIFIC_APPS myBloggie SQL Injection Attempt -- index.php year UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004492", 
+                "signature": "ET WEB_SPECIFIC_APPS myBloggie SQL Injection Attempt -- index.php cat_id SELECT"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-3003"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

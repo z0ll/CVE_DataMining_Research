@@ -1,0 +1,358 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3404", 
+                "published": "2014-02-10T13:15:10.013-05:00", 
+                "id": "CVE-2012-3404", 
+                "modified": "2014-02-10T16:12:43.540-05:00", 
+                "summary": "The vfprintf function in stdio-common/vfprintf.c in libc in GNU C Library (aka glibc) 2.12 and other versions does not properly calculate a buffer length, which allows context-dependent attackers to bypass the FORTIFY_SOURCE format-string protection mechanism and cause a denial of service (stack corruption and crash) via a format string that uses positional parameters and many format specifiers."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:12.04:-:lts"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:11.04"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:11.10"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:10.04:-:lts"
+            }, 
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:6"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:8.04:-:lts"
+            }, 
+            {
+                "id": "cpe:/a:redhat:enterprise_virtualization:3.0"
+            }, 
+            {
+                "id": "cpe:/a:gnu:glibc:2.12"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.69277", 
+                "id": 69277
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://sourceware.org/bugzilla/show_bug.cgi?id=12445", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=833703", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1589-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/07/11/17", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2012-1200.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2012-1098.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-3404"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23014", 
+                "title": "ELSA-2012:1098: glibc security and bug fix update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23014"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18234", 
+                "title": "USN-1589-2 -- glibc regression", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18234"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27827", 
+                "title": "DEPRECATED: ELSA-2012-1098 -- glibc security and bug fix update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27827"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21252", 
+                "title": "RHSA-2012:1098: glibc security and bug fix update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21252"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18163", 
+                "title": "USN-1589-1 -- eglibc, glibc vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18163"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3169-1 (eglibc - security update)", 
+                "file": "deb_3169.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703169"
+            }, 
+            {
+                "name": "CentOS Update for glibc CESA-2012:1098 centos6", 
+                "file": "gb_CESA-2012_1098_glibc_centos6.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881067"
+            }, 
+            {
+                "name": "RedHat Update for glibc RHSA-2012:1098-01", 
+                "file": "gb_RHSA-2012_1098-01_glibc.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870794"
+            }, 
+            {
+                "name": "Ubuntu Update for eglibc USN-1589-1", 
+                "file": "gb_ubuntu_USN_1589_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841171"
+            }, 
+            {
+                "name": "Ubuntu Update for glibc USN-1589-2", 
+                "file": "gb_ubuntu_USN_1589_2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841254"
+            }, 
+            {
+                "name": "VMSA-2012-0018: VMware security updates for vCSA and ESXi", 
+                "file": "gb_VMSA-2012-0018.nasl", 
+                "family": "VMware Local Security Checks", 
+                "id": "103627"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : glibc (ALAS-2012-109)", 
+                "file": "ala_ALAS-2012-109.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "69599"
+            }, 
+            {
+                "name": "CentOS 6 : glibc (CESA-2012:1098)", 
+                "file": "centos_RHSA-2012-1098.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "60066"
+            }, 
+            {
+                "name": "F5 Networks BIG-IP : GNU C Library (glibc) vulnerability (SOL16364)", 
+                "file": "f5_bigip_SOL16364.nasl", 
+                "family": "F5 Networks Local Security Checks", 
+                "id": "82577"
+            }, 
+            {
+                "name": "GLSA-201503-04 : GNU C Library: Multiple vulnerabilities (GHOST)", 
+                "file": "gentoo_GLSA-201503-04.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "81689"
+            }, 
+            {
+                "name": "Oracle Linux 6 : glibc (ELSA-2012-1098)", 
+                "file": "oraclelinux_ELSA-2012-1098.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68583"
+            }, 
+            {
+                "name": "RHEL 6 : glibc (RHSA-2012:1098)", 
+                "file": "redhat-RHSA-2012-1098.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "60058"
+            }, 
+            {
+                "name": "RHEL 6 : rhev-hypervisor6 (RHSA-2012:1200)", 
+                "file": "redhat-RHSA-2012-1200.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "78931"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : glibc on SL6.x i386/x86_64", 
+                "file": "sl_20120718_glibc_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "61369"
+            }, 
+            {
+                "name": "SuSE 11.2 Security Update : glibc (SAT Patch Number 7110)", 
+                "file": "suse_11_glibc-121129.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "64150"
+            }, 
+            {
+                "name": "Ubuntu 8.04 LTS / 10.04 LTS / 11.04 / 11.10 / 12.04 LTS : eglibc, glibc vulnerabilities (USN-1589-1)", 
+                "file": "ubuntu_USN-1589-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "62388"
+            }, 
+            {
+                "name": "Ubuntu 8.04 LTS : glibc regression (USN-1589-2)", 
+                "file": "ubuntu_USN-1589-2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "63285"
+            }, 
+            {
+                "name": "ESXi 5.0 < Build 912577 Multiple Vulnerabilities (remote check)", 
+                "file": "vmware_esxi_5_0_build_912577_remote.nasl", 
+                "family": "Misc.", 
+                "id": "70885"
+            }, 
+            {
+                "name": "ESXi 5.1 < Build 1063671 Multiple Vulnerabilities (remote check)", 
+                "file": "vmware_esxi_5_1_build_1063671_remote.nasl", 
+                "family": "Misc.", 
+                "id": "70886"
+            }, 
+            {
+                "name": "VMSA-2012-0018 : VMware security updates for vCSA and ESXi", 
+                "file": "vmware_VMSA-2012-0018.nasl", 
+                "family": "VMware ESX Local Security Checks", 
+                "id": "63332"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2012-1200.html", 
+                    "id": "RHSA-2012:1200", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20121098", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2012-1098.html", 
+                    "id": "RHSA-2012:1098", 
+                    "title": "RHSA-2012:1098: glibc security and bug fix update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=826943", 
+                    "title": "CVE-2012-3406 glibc: printf() unbound alloca() usage in case of positional parameters + many format specs", 
+                    "id": "826943", 
+                    "issue date": "2012-07-18", 
+                    "associated redhat": "RHSA-2012:1098"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=833703", 
+                    "title": "CVE-2012-3404 glibc: incorrect size calculation in formatted printing can lead to FORTIFY_SOURCE format string protection bypass", 
+                    "id": "833703", 
+                    "issue date": "2012-07-18", 
+                    "associated redhat": "RHSA-2012:1098"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=833704", 
+                    "title": "CVE-2012-3405 glibc: incorrect use of extend_alloca() in formatted printing can lead to FORTIFY_SOURCE format string protection bypass", 
+                    "id": "833704", 
+                    "issue date": "2012-07-18", 
+                    "associated redhat": "RHSA-2012:1098"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=837026", 
+                    "title": "libresolv dumps core when IPv6 address in resolv.conf", 
+                    "id": "837026", 
+                    "issue date": "2012-07-18", 
+                    "associated redhat": "RHSA-2012:1098"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1589-1", 
+                "id": "USN-1589-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

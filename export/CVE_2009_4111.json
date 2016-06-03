@@ -1,0 +1,238 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-4111", 
+                "published": "2009-11-29T08:07:52.890-05:00", 
+                "id": "CVE-2009-4111", 
+                "modified": "2010-12-07T01:43:37.463-05:00", 
+                "summary": "Argument injection vulnerability in Mail/sendmail.php in the Mail package 1.1.14, 1.2.0b2, and possibly other versions for PEAR allows remote attackers to read and write arbitrary files via a crafted $recipients parameter, and possibly other parameters, a different vulnerability than CVE-2009-4023."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:pear:mail:1.2.0b2"
+            }, 
+            {
+                "id": "cpe:/a:pear:mail:1.1.14"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.50944", 
+                "id": 50944
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/37395", 
+                "id": 37395
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/37395", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2009/11/28/2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2009/11/23/8", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2009/dsa-1938", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/37458", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://pear.php.net/bugs/bug.php?id=16200", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2010-11/msg00001.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-4111"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 1938-1 (php-mail)", 
+                "file": "deb_1938_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "66298"
+            }, 
+            {
+                "name": "Fedora Core 11 FEDORA-2009-12348 (php-pear-Mail)", 
+                "file": "fcore_2009_12348.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "66427"
+            }, 
+            {
+                "name": "Fedora Core 12 FEDORA-2009-12395 (php-pear-Mail)", 
+                "file": "fcore_2009_12395.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "66429"
+            }, 
+            {
+                "name": "Fedora Core 10 FEDORA-2009-12439 (php-pear-Mail)", 
+                "file": "fcore_2009_12439.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "66431"
+            }, 
+            {
+                "name": "Mandriva Update for php-pear-Mail MDVSA-2010:025 (php-pear-Mail)", 
+                "file": "gb_mandriva_MDVSA_2010_025.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "830853"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "GLSA-201412-09 : Multiple packages, Multiple vulnerabilities fixed in 2011", 
+                "file": "gentoo_GLSA-201412-09.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "79962"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : php-pear-Mail (MDVSA-2010:025)", 
+                "file": "mandriva_MDVSA-2010-025.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "44303"
+            }, 
+            {
+                "name": "openSUSE Security Update : php5-pear-mail (openSUSE-SU-2010:0909-1)", 
+                "file": "suse_11_1_php5-pear-mail-101022.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "50369"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2009-4111.html", 
+                "id": "SUSE-SR:2010:020"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-1938", 
+                "id": "DSA-1938"
+            }
+        ], 
+        "Vmware": []
+    }
+}

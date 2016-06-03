@@ -1,0 +1,260 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-1049", 
+                "published": "2004-12-31T00:00:00.000-05:00", 
+                "id": "CVE-2004-1049", 
+                "modified": "2008-09-10T15:28:50.853-04:00", 
+                "summary": "Integer overflow in the LoadImage API of the USER32 Lib for Microsoft Windows allows remote attackers to execute arbitrary code via a .bmp, .cur, .ico or .ani file with a large image size field, which leads to a buffer overflow, aka the \"Cursor and Icon Format Handling Vulnerability.\""
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp4::fr"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2003_server:r2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_nt"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp3"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp1"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp1:tablet_pc"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::gold"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.1088", 
+                "id": 1088
+            }, 
+            {
+                "url": "http://www.scip.ch/?vuldb.1087", 
+                "id": 1087
+            }, 
+            {
+                "url": "http://www.scip.ch/?vuldb.1086", 
+                "id": 1086
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/12095", 
+                "id": 12095
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/12623", 
+                "id": 12623
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA05-012A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/625856", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.xfocus.net/flashsky/icoExp/index.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/Security/bulletin/ms05-002.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110382891718076&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/18668", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/12095", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/12623", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/p-094.shtml", 
+                    "vendor": "CIAC"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1012684", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/13645", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/625856", 
+                "id": "VU#625856"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "4.9", 
+                    "base": "5.1", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2103079", 
+                "signature": "GPL WEB_CLIENT Microsoft ANI file parsing overflow"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-user", 
+                "id": "sid:3079", 
+                "signature": "BROWSER-IE Microsoft Internet Explorer ANI file parsing buffer overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/windows_cursor_icon", 
+                "id": "exploit_info/windows_cursor_icon", 
+                "title": "Windows Cursor and Icon handling vulnerability"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-1049"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:2956", 
+                "title": "LoadImage Cursor and Icon Format Handling Vulnerability (XP)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:2956"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:4671", 
+                "title": "LoadImage Cursor and Icon Format Handling Vulnerability (Windows 2000)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:4671"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:3355", 
+                "title": "LoadImage Cursor and Icon Format Handling Vulnerability (NT 4.0)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:3355"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:3220", 
+                "title": "LoadImage Cursor and Icon Format Handling Vulnerability (Server 2003)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:3220"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:3097", 
+                "title": "LoadImage Cursor and Icon Format Handling Vulnerability (Terminal Server)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:3097"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS05-002: Cursor and Icon Format Handling Code Execution (891711)", 
+                "file": "smb_nt_ms05-002.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "16124"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in Cursor and Icon Format Handling Could Allow Remote Code Execution", 
+                "id": "Vulnerability in Cursor and Icon Format Handling Could Allow Remote Code Execution", 
+                "title": "891711"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/891711", 
+                "id": "891711", 
+                "title": "Vulnerability in Cursor and Icon Format Handling Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS05-002", 
+                "id": "MS05-002", 
+                "title": "Vulnerability in Cursor and Icon Format Handling Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,192 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0033", 
+                "published": "2002-05-29T00:00:00.000-04:00", 
+                "id": "CVE-2002-0033", 
+                "modified": "2008-09-05T16:27:00.247-04:00", 
+                "summary": "Heap-based buffer overflow in cfsd_calloc function of Solaris cachefsd allows remote attackers to execute arbitrary code via a request with a long directory and cache name."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:sun:solaris:7.0::sparc"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:8.0::x86"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:8.0::sparc"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:7.0::x86"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:2.5.1::x86"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:2.6::sparc"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:2.5.1::sparc"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:2.6::x86"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.18145", 
+                "id": 18145
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/4674", 
+                "id": 4674
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.cert.org/advisories/CA-2002-11.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/635811", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F44309", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2002-05/0026.html", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/4674", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/static/8999.php", 
+                    "vendor": "XF"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/635811", 
+                "id": "VU#635811"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "rpc-portmap", 
+                "id": "sid:2101747", 
+                "signature": "GPL RPC portmap cachefsd request TCP"
+            }, 
+            {
+                "classtype": "rpc-portmap", 
+                "id": "sid:2101746", 
+                "signature": "GPL RPC portmap cachefsd request UDP"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:1746", 
+                "signature": "PROTOCOL-RPC portmap cachefsd request UDP"
+            }, 
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:1747", 
+                "signature": "PROTOCOL-RPC portmap cachefsd request TCP"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/solaris_cachefsd", 
+                "id": "exploit_info/solaris_cachefsd", 
+                "title": "cachefsd heap overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-0033"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:31", 
+                "title": "Solaris 8/9 cachefsd Heap Overflow Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:31"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:124", 
+                "title": "Solaris 7 cachefsd Heap Overflow Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:124"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

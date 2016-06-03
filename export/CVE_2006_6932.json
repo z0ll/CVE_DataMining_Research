@@ -1,0 +1,204 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6932", 
+                "published": "2007-01-16T18:28:00.000-05:00", 
+                "id": "CVE-2006-6932", 
+                "modified": "2008-09-05T17:15:59.517-04:00", 
+                "summary": "Multiple SQL injection vulnerabilities in Image Gallery with Access Database allow remote attackers to execute arbitrary SQL commands via (1) the id parameter to (a) dispimage.asp, or the (2) order or (3) page parameter to (b) default.asp."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:image_gallery_with_access_database:image_gallery_with_access_database"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34396", 
+                "id": 34396
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21131", 
+                "id": 21131
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/21131", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/451875/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2147", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005639", 
+                "signature": "ET WEB_SPECIFIC_APPS Image Gallery with Access Database SQL Injection Attempt -- dispimage.asp id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005640", 
+                "signature": "ET WEB_SPECIFIC_APPS Image Gallery with Access Database SQL Injection Attempt -- dispimage.asp id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005641", 
+                "signature": "ET WEB_SPECIFIC_APPS Image Gallery with Access Database SQL Injection Attempt -- dispimage.asp id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005642", 
+                "signature": "ET WEB_SPECIFIC_APPS Image Gallery with Access Database SQL Injection Attempt -- dispimage.asp id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005643", 
+                "signature": "ET WEB_SPECIFIC_APPS Image Gallery with Access Database SQL Injection Attempt -- dispimage.asp id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005644", 
+                "signature": "ET WEB_SPECIFIC_APPS Image Gallery with Access Database SQL Injection Attempt -- dispimage.asp id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005645", 
+                "signature": "ET WEB_SPECIFIC_APPS Image Gallery with Access Database SQL Injection Attempt -- default.asp order SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005646", 
+                "signature": "ET WEB_SPECIFIC_APPS Image Gallery with Access Database SQL Injection Attempt -- default.asp order UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005647", 
+                "signature": "ET WEB_SPECIFIC_APPS Image Gallery with Access Database SQL Injection Attempt -- default.asp order INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005648", 
+                "signature": "ET WEB_SPECIFIC_APPS Image Gallery with Access Database SQL Injection Attempt -- default.asp order DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005649", 
+                "signature": "ET WEB_SPECIFIC_APPS Image Gallery with Access Database SQL Injection Attempt -- default.asp order ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005650", 
+                "signature": "ET WEB_SPECIFIC_APPS Image Gallery with Access Database SQL Injection Attempt -- default.asp order UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005651", 
+                "signature": "ET WEB_SPECIFIC_APPS Image Gallery with Access Database SQL Injection Attempt -- default.asp page SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005652", 
+                "signature": "ET WEB_SPECIFIC_APPS Image Gallery with Access Database SQL Injection Attempt -- default.asp page UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005653", 
+                "signature": "ET WEB_SPECIFIC_APPS Image Gallery with Access Database SQL Injection Attempt -- default.asp page INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005654", 
+                "signature": "ET WEB_SPECIFIC_APPS Image Gallery with Access Database SQL Injection Attempt -- default.asp page DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005655", 
+                "signature": "ET WEB_SPECIFIC_APPS Image Gallery with Access Database SQL Injection Attempt -- default.asp page ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005656", 
+                "signature": "ET WEB_SPECIFIC_APPS Image Gallery with Access Database SQL Injection Attempt -- default.asp page UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6932"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,180 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0434", 
+                "published": "2004-07-07T00:00:00.000-04:00", 
+                "id": "CVE-2004-0434", 
+                "modified": "2008-09-10T15:26:23.367-04:00", 
+                "summary": "k5admind (kadmind) for Heimdal allows remote attackers to execute arbitrary code via a Kerberos 4 compatibility administration request whose framing length is less than 2, which leads to a heap-based buffer overflow."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:kth:heimdal"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.21917", 
+                "id": 21917
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/16071", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2004/dsa-504", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://security.gentoo.org/glsa/glsa-200405-23.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=108386148126457&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://lists.grok.org.uk/pipermail/full-disclosure/2004-May/020998.html", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-04:09.kadmind.asc", 
+                    "vendor": "FREEBSD"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0434"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 504-1 (heimdal)", 
+                "file": "deb_504_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "53194"
+            }, 
+            {
+                "name": "FreeBSD Ports: heimdal", 
+                "file": "freebsd_heimdal.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52468"
+            }, 
+            {
+                "name": "FreeBSD Security Advisory (FreeBSD-SA-04:09.kadmind.asc)", 
+                "file": "freebsdsa_kadmind.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52651"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 200405-23 (Heimdal)", 
+                "file": "glsa_200405_23.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "54583"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-504-1 : heimdal - missing input sanitising", 
+                "file": "debian_DSA-504.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "15341"
+            }, 
+            {
+                "name": "FreeBSD : heimdal kadmind remote heap buffer overflow (66)", 
+                "file": "freebsd_heimdal_061_1.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "12550"
+            }, 
+            {
+                "name": "FreeBSD : heimdal kadmind remote heap buffer overflow (446dbecb-9edc-11d8-9366-0020ed76ef5a)", 
+                "file": "freebsd_pkg_446dbecb9edc11d893660020ed76ef5a.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "36947"
+            }, 
+            {
+                "name": "GLSA-200405-23 : Heimdal: Kerberos 4 buffer overflow in kadmin", 
+                "file": "gentoo_GLSA-200405-23.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "14509"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200405-23", 
+                "id": "GLSA-200405-23"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-504", 
+                "id": "DSA-504"
+            }
+        ], 
+        "Vmware": []
+    }
+}

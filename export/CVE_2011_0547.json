@@ -1,0 +1,250 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0547", 
+                "published": "2011-08-19T17:55:01.447-04:00", 
+                "id": "CVE-2011-0547", 
+                "modified": "2013-11-15T00:32:29.757-05:00", 
+                "summary": "Multiple integer overflows in vxsvc.exe in the Veritas Enterprise Administrator service in Symantec Veritas Storage Foundation 5.1 and earlier, Veritas Storage Foundation Cluster File System (SFCFS) 5.1 and earlier, Veritas Storage Foundation Cluster File System Enterprise for Oracle RAC (SFCFSORAC) 5.1 and earlier, Veritas Dynamic Multi-Pathing (DMP) 5.1, and NetBackup PureDisk 6.5.x through 6.6.1.x allow remote attackers to execute arbitrary code via (1) a crafted Unicode string, related to the vxveautil.value_binary_unpack function; (2) a crafted ASCII string, related to the vxveautil.value_binary_unpack function; or (3) a crafted value, related to the vxveautil.kv_binary_unpack function, leading to a buffer overflow."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:symantec:netbackup_puredisk:6.6.1"
+            }, 
+            {
+                "id": "cpe:/a:symantec:netbackup_puredisk:6.5.0.1"
+            }, 
+            {
+                "id": "cpe:/a:symantec:netbackup_puredisk:6.5.1.2"
+            }, 
+            {
+                "id": "cpe:/a:symantec:veritas_dynamic_multi-pathing:5.1"
+            }, 
+            {
+                "id": "cpe:/a:symantec:veritas_storage_foundation_cluster_file_system_for_oracle_rac:5.1"
+            }, 
+            {
+                "id": "cpe:/a:symantec:netbackup_puredisk:6.6.1.1"
+            }, 
+            {
+                "id": "cpe:/a:symantec:netbackup_puredisk:6.6.1.2"
+            }, 
+            {
+                "id": "cpe:/a:symantec:veritas_storage_foundation:5.0"
+            }, 
+            {
+                "id": "cpe:/a:symantec:veritas_storage_foundation_cluster_file_system_for_oracle_rac:5.0"
+            }, 
+            {
+                "id": "cpe:/a:symantec:netbackup_puredisk:6.5.1"
+            }, 
+            {
+                "id": "cpe:/a:symantec:netbackup_puredisk:6.5.1.1"
+            }, 
+            {
+                "id": "cpe:/a:symantec:veritas_storage_foundation:5.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.58339", 
+                "id": 58339
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0029948", 
+                "id": "2011-B-0108", 
+                "title": "Multiple Buffer Overflow Vulnerabilities in Symantec Veritas Enterprise Administrator Service"
+            }
+        ], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/49014", 
+                "id": 49014
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.symantec.com/business/support/index?page=content&id=TECH165536", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://zerodayinitiative.com/advisories/ZDI-11-264/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://zerodayinitiative.com/advisories/ZDI-11-263/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://zerodayinitiative.com/advisories/ZDI-11-262/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.symantec.com/security_response/securityupdates/detail.jsp?fid=security_advisory&pvid=security_advisory&year=2011&suid=20110815_00", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/49014", 
+                    "vendor": "BID"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-0547"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:14792", 
+                "title": "HP-UX running VEA, Remote Denial of Service (DoS), Execution of Arbitrary Code", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:14792"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "HP-UX PHCO_42173 : HP-UX running VEA, Remote Denial of Service (DoS), Execution of Arbitrary Code (HPSBUX02700 SSRT100506 rev.2)", 
+                "file": "hpux_PHCO_42173.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "56825"
+            }, 
+            {
+                "name": "HP-UX PHCO_42175 : HP-UX running VEA, Remote Denial of Service (DoS), Execution of Arbitrary Code (HPSBUX02700 SSRT100506 rev.2)", 
+                "file": "hpux_PHCO_42175.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "56826"
+            }, 
+            {
+                "name": "HP-UX PHCO_42176 : HP-UX running VEA, Remote Denial of Service (DoS), Execution of Arbitrary Code (HPSBUX02700 SSRT100506 rev.2)", 
+                "file": "hpux_PHCO_42176.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "56827"
+            }, 
+            {
+                "name": "HP-UX PHCO_42177 : HP-UX running VEA, Remote Denial of Service (DoS), Execution of Arbitrary Code (HPSBUX02700 SSRT100506 rev.2)", 
+                "file": "hpux_PHCO_42177.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "56828"
+            }, 
+            {
+                "name": "HP-UX PHCO_42178 : HP-UX running VEA, Remote Denial of Service (DoS), Execution of Arbitrary Code (HPSBUX02700 SSRT100506 rev.2)", 
+                "file": "hpux_PHCO_42178.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "56829"
+            }, 
+            {
+                "name": "HP-UX PHCO_42179 : HP-UX running VEA, Remote Denial of Service (DoS), Execution of Arbitrary Code (HPSBUX02700 SSRT100506 rev.2)", 
+                "file": "hpux_PHCO_42179.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "56830"
+            }, 
+            {
+                "name": "HP-UX PHCO_42180 : HP-UX running VEA, Remote Denial of Service (DoS), Execution of Arbitrary Code (HPSBUX02700 SSRT100506 rev.2)", 
+                "file": "hpux_PHCO_42180.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "56831"
+            }, 
+            {
+                "name": "HP-UX PHCO_42181 : HP-UX running VEA, Remote Denial of Service (DoS), Execution of Arbitrary Code (HPSBUX02700 SSRT100506 rev.2)", 
+                "file": "hpux_PHCO_42181.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "56832"
+            }, 
+            {
+                "name": "HP-UX PHCO_42182 : HP-UX running VEA, Remote Denial of Service (DoS), Execution of Arbitrary Code (HPSBUX02700 SSRT100506 rev.2)", 
+                "file": "hpux_PHCO_42182.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "56833"
+            }, 
+            {
+                "name": "HP-UX PHCO_42316 : HP-UX running VEA, Remote Denial of Service (DoS), Execution of Arbitrary Code (HPSBUX02700 SSRT100506 rev.2)", 
+                "file": "hpux_PHCO_42316.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "56834"
+            }, 
+            {
+                "name": "HP-UX PHCO_42317 : HP-UX running VEA, Remote Denial of Service (DoS), Execution of Arbitrary Code (HPSBUX02700 SSRT100506 rev.2)", 
+                "file": "hpux_PHCO_42317.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "56835"
+            }, 
+            {
+                "name": "Symantec Veritas Enterprise Administrator Service (vxsvc) Multiple Integer Overflows (SYM11-010)", 
+                "file": "veritas_storage_foundation_vxsvc_multiple_vulns.nasl", 
+                "family": "Windows", 
+                "id": "55983"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

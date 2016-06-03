@@ -1,0 +1,161 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2750", 
+                "published": "2007-05-17T16:30:00.000-04:00", 
+                "id": "CVE-2007-2750", 
+                "modified": "2011-03-07T21:55:00.393-05:00", 
+                "summary": "SQL injection vulnerability in print.php in SimpNews 2.40.01 and earlier allows remote attackers to execute arbitrary SQL commands via the newsnr parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:simpnews:simpnews:2.40.01"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.36877", 
+                "id": 36877
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/24028", 
+                "id": 24028
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/36090", 
+                "id": 36090
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1856", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/3942", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://osvdb.org/36090", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34356", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/24028", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25296", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003852", 
+                "signature": "ET WEB_SPECIFIC_APPS SimpNews SQL Injection Attempt -- print.php newsnr SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003853", 
+                "signature": "ET WEB_SPECIFIC_APPS SimpNews SQL Injection Attempt -- print.php newsnr UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003854", 
+                "signature": "ET WEB_SPECIFIC_APPS SimpNews SQL Injection Attempt -- print.php newsnr INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003855", 
+                "signature": "ET WEB_SPECIFIC_APPS SimpNews SQL Injection Attempt -- print.php newsnr DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003856", 
+                "signature": "ET WEB_SPECIFIC_APPS SimpNews SQL Injection Attempt -- print.php newsnr ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003857", 
+                "signature": "ET WEB_SPECIFIC_APPS SimpNews SQL Injection Attempt -- print.php newsnr UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2750"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

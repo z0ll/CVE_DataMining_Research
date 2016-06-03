@@ -1,0 +1,153 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0421", 
+                "published": "2002-08-12T00:00:00.000-04:00", 
+                "id": "CVE-2002-0421", 
+                "modified": "2008-09-05T16:27:58.993-04:00", 
+                "summary": "IIS 4.0 allows local users to bypass the \"User cannot change password\" policy for Windows NT by directly calling .htr password changing programs in the /iisadmpwd directory, including (1) aexp2.htr, (2) aexp2b.htr, (3) aexp3.htr , or (4) aexp4.htr."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_nt:4.0:sp6a:server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_nt:4.0:sp2:server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_nt:4.0:sp1:server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_nt:4.0:sp4:server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_nt:4.0:sp6:server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_nt:4.0:sp3:server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_nt:4.0::server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_nt:4.0:sp5:server"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.18497", 
+                "id": 18497
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/4236", 
+                "id": 4236
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/4236", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/static/8388.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://online.securityfocus.com/archive/1/259963", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2101487", 
+                "signature": "GPL EXPLOIT /iisadmpwd/aexp2.htr access"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1487", 
+                "signature": "SERVER-IIS /iisadmpwd/aexp2.htr access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-0421"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Microsoft IIS /iisadmpwd/aexp2.htr Password Policy Bypass", 
+                "file": "iis_authentification_manager.nasl", 
+                "family": "Web Servers", 
+                "id": "10371"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

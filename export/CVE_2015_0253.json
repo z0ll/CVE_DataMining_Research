@@ -1,0 +1,183 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0253", 
+                "published": "2015-07-20T19:59:00.067-04:00", 
+                "id": "CVE-2015-0253", 
+                "modified": "2015-09-18T21:59:52.030-04:00", 
+                "summary": "The read_request_line function in server/protocol.c in the Apache HTTP Server 2.4.12 does not initialize the protocol structure member, which allows remote attackers to cause a denial of service (NULL pointer dereference and process crash) by sending a request that lacks a method to an installation that enables the INCLUDES filter and has an ErrorDocument 400 directive specifying a local URI."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:apache:http_server:2.4.12"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.76731", 
+                "id": 76731
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://support.apple.com/kb/HT205031", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://support.apple.com/HT205219", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://github.com/apache/httpd/commit/6a974059190b8a0c7e499f4ab12fe108127099cb", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bz.apache.org/bugzilla/show_bug.cgi?id=57531", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.apache.org/dist/httpd/CHANGES_2.4", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://lists.apple.com/archives/security-announce/2015/Sep/msg00004.html", 
+                    "vendor": "APPLE"
+                }, 
+                {
+                    "url": "http://lists.apple.com/archives/security-announce/2015/Aug/msg00001.html", 
+                    "vendor": "APPLE"
+                }, 
+                {
+                    "url": "http://httpd.apache.org/security/vulnerabilities_24.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-0253"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : httpd24 (ALAS-2015-579)", 
+                "file": "ala_ALAS-2015-579.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "85452"
+            }, 
+            {
+                "name": "Apache 2.4.x < 2.4.16 Multiple Vulnerabilities", 
+                "file": "apache_2_4_16.nasl", 
+                "family": "Web Servers", 
+                "id": "84959"
+            }, 
+            {
+                "name": "Fedora 22 : httpd-2.4.16-1.fc22 (2015-11689)", 
+                "file": "fedora_2015-11689.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "84906"
+            }, 
+            {
+                "name": "Fedora 21 : httpd-2.4.16-1.fc21 (2015-11792)", 
+                "file": "fedora_2015-11792.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "85092"
+            }, 
+            {
+                "name": "FreeBSD : apache24 -- multiple vulnerabilities (a12494c1-2af4-11e5-86ff-14dae9d210b8)", 
+                "file": "freebsd_pkg_a12494c12af411e586ff14dae9d210b8.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "84781"
+            }, 
+            {
+                "name": "Mac OS X < 10.10.5 Multiple Vulnerabilities", 
+                "file": "macosx_10_10_5.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "85408"
+            }, 
+            {
+                "name": "Mac OS X Multiple Vulnerabilities (Security Update 2015-006)", 
+                "file": "macosx_SecUpd2015-006.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "85409"
+            }, 
+            {
+                "name": "Mac OS X : OS X Server < 5.0.3 Multiple Vulnerabilities", 
+                "file": "macosx_server_5_0_3.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "86066"
+            }, 
+            {
+                "name": "Slackware 14.0 / 14.1 / current : httpd (SSA:2015-198-01)", 
+                "file": "Slackware_SSA_2015-198-01.nasl", 
+                "family": "Slackware Local Security Checks", 
+                "id": "84829"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

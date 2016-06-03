@@ -1,0 +1,181 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3447", 
+                "published": "2012-08-20T14:55:03.293-04:00", 
+                "id": "CVE-2012-3447", 
+                "modified": "2012-08-21T00:00:00.000-04:00", 
+                "summary": "virt/disk/api.py in OpenStack Compute (Nova) 2012.1.x before 2012.1.2 and Folsom before Folsom-3 allows remote authenticated users to overwrite arbitrary files via a symlink attack on a file in an image that uses a symlink that is only readable by root.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2012-3361."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:openstack:nova:2012.1"
+            }, 
+            {
+                "id": "cpe:/a:openstack:folsom"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.61706", 
+                "id": 61706
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/54869", 
+                "id": 54869
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/openstack/nova/commit/d9577ce9f266166a297488445b5b0c93c1ddb368", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://github.com/openstack/nova/commit/ce4b2e27be45a85b310237615c47eb53f37bb5f3", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://review.openstack.org/#/c/10953/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=845106", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "https://bugs.launchpad.net/nova/+bug/1031311", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/77539", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/54869", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/08/07/1", 
+                    "vendor": "MLIST"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "single_instance", 
+                    "exploit": "6.8", 
+                    "base": "4.9", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-3447"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17962", 
+                "title": "USN-1545-1 -- nova vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17962"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for openstack-nova FEDORA-2012-11756", 
+                "file": "gb_fedora_2012_11756_openstack-nova_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864637"
+            }, 
+            {
+                "name": "Fedora Update for openstack-nova FEDORA-2013-1816", 
+                "file": "gb_fedora_2013_1816_openstack-nova_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865334"
+            }, 
+            {
+                "name": "Ubuntu Update for nova USN-1545-1", 
+                "file": "gb_ubuntu_USN_1545_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841121"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 17 : openstack-nova-2012.1.1-15.fc17 (2012-11756)", 
+                "file": "fedora_2012-11756.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "61615"
+            }, 
+            {
+                "name": "Ubuntu 11.10 / 12.04 LTS : nova vulnerability (USN-1545-1)", 
+                "file": "ubuntu_USN-1545-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "61643"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

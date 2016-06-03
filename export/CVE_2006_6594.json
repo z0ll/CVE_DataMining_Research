@@ -1,0 +1,147 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6594", 
+                "published": "2006-12-15T14:28:00.000-05:00", 
+                "id": "CVE-2006-6594", 
+                "modified": "2011-03-07T21:46:31.393-05:00", 
+                "summary": "SQL injection vulnerability in utilities/usermessages.asp in ScriptMate User Manager 2.0 allows remote attackers to execute arbitrary SQL commands via the mesid parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:scriptmate:user_manager:2.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33882", 
+                "id": 33882
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/5025", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.hackerscenter.com/archive/view.asp?id=26656", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1017384", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30902", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23372", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006309", 
+                "signature": "ET WEB_SPECIFIC_APPS ScriptMate User Manager SQL Injection Attempt -- usermessages.asp mesid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006310", 
+                "signature": "ET WEB_SPECIFIC_APPS ScriptMate User Manager SQL Injection Attempt -- usermessages.asp mesid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006311", 
+                "signature": "ET WEB_SPECIFIC_APPS ScriptMate User Manager SQL Injection Attempt -- usermessages.asp mesid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006312", 
+                "signature": "ET WEB_SPECIFIC_APPS ScriptMate User Manager SQL Injection Attempt -- usermessages.asp mesid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006313", 
+                "signature": "ET WEB_SPECIFIC_APPS ScriptMate User Manager SQL Injection Attempt -- usermessages.asp mesid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006314", 
+                "signature": "ET WEB_SPECIFIC_APPS ScriptMate User Manager SQL Injection Attempt -- usermessages.asp mesid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6594"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

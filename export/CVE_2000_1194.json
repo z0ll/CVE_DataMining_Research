@@ -1,0 +1,138 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-1194", 
+                "published": "2001-08-31T00:00:00.000-04:00", 
+                "id": "CVE-2000-1194", 
+                "modified": "2008-09-05T16:22:53.293-04:00", 
+                "summary": "Argosoft FRP server 1.0 allows remote attackers to cause a denial of service, and possibly execute arbitrary commands, via a long string to the (1) USER or (2) CWD commands."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:argosoft:ftp_server:1.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.17260", 
+                "id": 17260
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/1227", 
+                "id": 1227
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/1227", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.mdma.za.net/fk/FK9.zip", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2101919", 
+                "signature": "GPL FTP CWD overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2101734", 
+                "signature": "GPL FTP USER overflow attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:1734", 
+                "signature": "PROTOCOL-FTP USER overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:1919", 
+                "signature": "PROTOCOL-FTP CWD overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2000-1194"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Multiple FTP Server Command Handling Overflow", 
+                "file": "ftp_overflow.nasl", 
+                "family": "FTP", 
+                "id": "10084"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

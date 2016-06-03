@@ -1,0 +1,171 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3809", 
+                "published": "2015-05-26T11:59:02.900-04:00", 
+                "id": "CVE-2015-3809", 
+                "modified": "2015-05-27T13:07:10.327-04:00", 
+                "summary": "The dissect_lbmr_pser function in epan/dissectors/packet-lbmr.c in the LBMR dissector in Wireshark 1.12.x before 1.12.5 does not properly track the current offset, which allows remote attackers to cause a denial of service (infinite loop) via a crafted packet."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:wireshark:wireshark:1.12.3"
+            }, 
+            {
+                "id": "cpe:/a:wireshark:wireshark:1.12.0"
+            }, 
+            {
+                "id": "cpe:/a:wireshark:wireshark:1.12.2"
+            }, 
+            {
+                "id": "cpe:/a:wireshark:wireshark:1.12.4"
+            }, 
+            {
+                "id": "cpe:/a:wireshark:wireshark:1.12.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.75423", 
+                "id": 75423
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://code.wireshark.org/review/gitweb?p=wireshark.git;a=commit;h=c19860dba8d158c42865c3d9051b6f318cb41169", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=11036", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.wireshark.org/security/wnpa-sec-2015-12.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.8", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-3809"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:177", 
+                "title": "DSA-3277-1 -- wireshark -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:177"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3277-1 (wireshark - security update)", 
+                "file": "deb_3277.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703277"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-3277-1 : wireshark - security update", 
+                "file": "debian_DSA-3277.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "83960"
+            }, 
+            {
+                "name": "FreeBSD : wireshark -- multiple vulnerabilities (a13500d0-0570-11e5-aab1-d050996490d0)", 
+                "file": "freebsd_pkg_a13500d0057011e5aab1d050996490d0.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "83902"
+            }, 
+            {
+                "name": "GLSA-201510-03 : Wireshark: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201510-03.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "86688"
+            }, 
+            {
+                "name": "openSUSE Security Update : Wireshark (openSUSE-2015-379)", 
+                "file": "openSUSE-2015-379.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83805"
+            }, 
+            {
+                "name": "Wireshark 1.10.x < 1.10.14 / 1.12.x < 1.12.5 Multiple DoS Vulnerabilities", 
+                "file": "wireshark_1_12_5.nasl", 
+                "family": "Windows", 
+                "id": "83488"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

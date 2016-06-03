@@ -1,0 +1,137 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-1283", 
+                "published": "2001-10-12T00:00:00.000-04:00", 
+                "id": "CVE-2001-1283", 
+                "modified": "2008-09-10T15:10:10.523-04:00", 
+                "summary": "The webmail interface for Ipswitch IMail 7.04 and earlier allows remote authenticated users to cause a denial of service (crash) via a mailbox name that contains a large number of . (dot) or other characters to programs such as (1) readmail.cgi or (2) printmail.cgi, possibly due to a buffer overflow that may allow execution of arbitrary code."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:ipswitch:imail:7.0.4"
+            }, 
+            {
+                "id": "cpe:/a:ipswitch:imail:6.0.6"
+            }, 
+            {
+                "id": "cpe:/a:ipswitch:imail:6.0.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.17487", 
+                "id": 17487
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/3427", 
+                "id": 3427
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.ipswitch.com/Support/IMail/news.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2001-10/0082.html", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/3427", 
+                    "vendor": "BID"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:2216", 
+                "signature": "SERVER-WEBAPP Ipswitch IMail readmail.cgi access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:2217", 
+                "signature": "SERVER-WEBAPP Ipswitch IMail printmail.cgi access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-1283"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Multiple Dangerous CGI Script Detection", 
+                "file": "dangerous_cgis.nasl", 
+                "family": "CGI abuses", 
+                "id": "11748"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

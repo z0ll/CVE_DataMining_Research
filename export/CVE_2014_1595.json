@@ -1,0 +1,185 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1595", 
+                "published": "2014-12-11T06:59:09.243-05:00", 
+                "id": "CVE-2014-1595", 
+                "modified": "2015-01-30T21:59:03.570-05:00", 
+                "summary": "Mozilla Firefox before 34.0, Firefox ESR 31.x before 31.3, and Thunderbird before 31.3 on Apple OS X 10.10 omit a CoreGraphics disable-logging action that is needed by jemalloc-based applications, which allows local users to obtain sensitive information by reading /tmp files, as demonstrated by credential information."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/199.html", 
+                "id": "CWE-199", 
+                "title": "Information Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:mozilla:firefox_esr:31.1.0"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:firefox_esr:31.0"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:firefox_esr:31.1.1"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:thunderbird:31.2"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:firefox_esr:31.2"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:firefox:33.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.68875", 
+                "id": 68875
+            }, 
+            {
+                "url": "http://www.scip.ch/?vuldb.68314", 
+                "id": 68314
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1092855", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.reddit.com/r/netsec/comments/2ocxac/apple_coregraphics_framework_on_os_x_1010_is/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.mozilla.org/security/announce/2014/mfsa2014-90.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://support.apple.com/HT204244", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://lists.apple.com/archives/security-announce/2015/Jan/msg00003.html", 
+                    "vendor": "APPLE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "2.1", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-1595"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27870", 
+                "title": "SUSE-SU-2014:1624-1 -- Security update for Mozilla Firefox (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27870"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "FreeBSD : mozilla -- multiple vulnerabilities (7ae61870-9dd2-4884-a2f2-f19bb5784d09)", 
+                "file": "freebsd_pkg_7ae618709dd24884a2f2f19bb5784d09.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "79707"
+            }, 
+            {
+                "name": "Mac OS X < 10.10.2 Multiple Vulnerabilities (POODLE)", 
+                "file": "macosx_10_10_2.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "81087"
+            }, 
+            {
+                "name": "Firefox ESR 31.x < 31.3 Multiple Vulnerabilities (Mac OS X)", 
+                "file": "macosx_firefox_31_3_esr.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "79661"
+            }, 
+            {
+                "name": "Firefox < 34.0 Multiple Vulnerabilities (Mac OS X)", 
+                "file": "macosx_firefox_34.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "79662"
+            }, 
+            {
+                "name": "Mozilla Thunderbird < 31.3 Multiple Vulnerabilities (Mac OS X)", 
+                "file": "macosx_thunderbird_31_3.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "79663"
+            }, 
+            {
+                "name": "SuSE 11.3 Security Update : Mozilla Firefox (SAT Patch Number 10064)", 
+                "file": "suse_11_firefox-201412-141208.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "80023"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

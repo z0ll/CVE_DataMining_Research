@@ -1,0 +1,156 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-1815", 
+                "published": "2005-06-01T00:00:00.000-04:00", 
+                "id": "CVE-2005-1815", 
+                "modified": "2008-09-05T16:50:10.370-04:00", 
+                "summary": "Multiple buffer overflows in Hummingbird Connectivity inetD 10.0.0.1 and 9.0.0.4 allows attackers to cause a denial of service and possibly execute arbitrary code via (1) an FTP command with a long argument to FTPD (ftpdw.exe) or (2) a large amount of data to LPD (Lpdw.exe)."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:hummingbird:connectivity:7.1"
+            }, 
+            {
+                "id": "cpe:/a:hummingbird:connectivity:10.0"
+            }, 
+            {
+                "id": "cpe:/a:hummingbird:connectivity:9.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.25407", 
+                "id": 25407
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/13790", 
+                "id": 13790
+            }, 
+            {
+                "url": "http://www.securityfocus.com/bid/13788", 
+                "id": 13788
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/13790", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/13788", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/15557", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://connectivity.hummingbird.com/support/nc/exceed/lpdw_advisory.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://connectivity.hummingbird.com/support/nc/exceed/ftpd_advisory.html?cks=y", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "hummingbird_exceed.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/lpd/hummingbird_exceed.rb", 
+                "title": "Hummingbird Connectivity 10 SP5 LPD Buffer Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/hummingbird_lpd_bo", 
+                "id": "exploit_info/hummingbird_lpd_bo", 
+                "title": "Hummingbird InetD LPD buffer overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-1815"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Hummingbird InetD FTP Component (ftpdw.exe) Command Overflow", 
+                "file": "hummingbird_ftpd_overflow.nasl", 
+                "family": "FTP", 
+                "id": "18402"
+            }, 
+            {
+                "name": "Hummingbird InetD LPD Component (Lpdw.exe) Data Overflow", 
+                "file": "hummingbird_lpd_overflow.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "18403"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

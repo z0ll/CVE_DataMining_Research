@@ -1,0 +1,181 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1668", 
+                "published": "2008-08-13T14:41:00.000-04:00", 
+                "id": "CVE-2008-1668", 
+                "modified": "2013-07-17T11:41:05.520-04:00", 
+                "summary": "ftpd.c in (1) wu-ftpd 2.4.2 and (2) ftpd in HP HP-UX B.11.11 assigns uid 0 to the FTP client in certain operating-system misconfigurations in which PAM authentication can succeed even though no passwd entry is available for a user, which allows remote attackers to gain privileges, as demonstrated by a login attempt for an LDAP account when nsswitch.conf does not specify LDAP for passwd information."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:hp:hp-ux:11.11"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.43681", 
+                "id": 43681
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0017142", 
+                "id": "2008-T-0045", 
+                "title": "HP-UX Running ftpd Remote Privileged Access Vulnerability"
+            }
+        ], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/30666", 
+                "id": 30666
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/44414", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2008/2364", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1020682", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/30666", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2008/08/20/4", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/31471", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c01525562", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c01525562", 
+                    "vendor": "HP"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2008-1668"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:5971", 
+                "title": "HP-UX Running ftpd, Remote Privileged Access", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:5971"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "HP StorageWorks Default Accounts and Directory Traversal Vulnerabilities", 
+                "file": "gb_hp_ux_HPSBUX02356.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "835163"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "HP-UX ftpd PAM Authentication Configuration Weakness Authentication Bypass", 
+                "file": "hpux_ftpd_priv_escalation.nasl", 
+                "family": "FTP", 
+                "id": "33899"
+            }, 
+            {
+                "name": "HP-UX PHNE_38458 : HP-UX Running ftpd, Remote Privileged Access (HPSBUX02356 SSRT080051 rev.1)", 
+                "file": "hpux_PHNE_38458.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "33936"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [
+            {
+                "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c01525562", 
+                "id": "SSRT080051"
+            }, 
+            {
+                "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c01525562", 
+                "id": "HPSBUX02356"
+            }
+        ], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

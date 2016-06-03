@@ -1,0 +1,977 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0914", 
+                "published": "2013-03-22T07:59:11.507-04:00", 
+                "id": "CVE-2013-0914", 
+                "modified": "2014-02-06T23:45:24.997-05:00", 
+                "summary": "The flush_signal_handlers function in kernel/signal.c in the Linux kernel before 3.8.4 preserves the value of the sa_restorer field across an exec operation, which makes it easier for local users to bypass the ASLR protection mechanism via a crafted application containing a sigaction system call."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.8.0"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.8.3"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.8.1"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.8.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.7997", 
+                "id": 7997
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/torvalds/linux/commit/2ca39528c01a933f6689cd6505ce65bd6d68a530", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=2ca39528c01a933f6689cd6505ce65bd6d68a530", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=920499", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1798-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1797-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1796-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1795-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1794-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1793-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1792-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1788-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1787-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2013/03/11/8", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2013:176", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://www.kernel.org/pub/linux/kernel/v3.x/ChangeLog-3.8.4", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2013-1051.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2013-12/msg00129.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2013-07/msg00018.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "3.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-0914"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23917", 
+                "title": "ELSA-2013:1051: kernel security and bug fix update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23917"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24665", 
+                "title": "SUSE-SU-2014:0287-1 -- Security update for Linux kernel", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24665"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27495", 
+                "title": "DEPRECATED: ELSA-2013-1034 -- kernel security and bug fix update (low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27495"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22737", 
+                "title": "ELSA-2013:1034: kernel security and bug fix update (Low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22737"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:25846", 
+                "title": "SUSE-SU-2013:0759-1 -- Security update for Linux kernel", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:25846"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26098", 
+                "title": "SUSE-SU-2013:0759-2 -- Security update for Linux kernel", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26098"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24982", 
+                "title": "SUSE-SU-2014:0536-1 -- Security update for Linux kernel", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24982"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26661", 
+                "title": "ELSA-2013-1034-1 -- kernel security and bug fix update (low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26661"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27457", 
+                "title": "DEPRECATED: ELSA-2013-1051 -- kernel security and bug fix update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27457"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21235", 
+                "title": "RHSA-2013:1051: kernel security and bug fix update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21235"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:25739", 
+                "title": "SUSE-SU-2013:1832-1 -- Security update for Linux kernel", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:25739"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18323", 
+                "title": "USN-1788-1 -- linux-lts-backport-oneiric vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18323"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21197", 
+                "title": "RHSA-2013:1034: kernel security and bug fix update (Low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21197"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17453", 
+                "title": "USN-1787-1 -- linux vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17453"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17993", 
+                "title": "USN-1796-1 -- linux vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17993"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17897", 
+                "title": "USN-1794-1 -- linux-ti-omap4 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17897"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18322", 
+                "title": "USN-1793-1 -- linux vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18322"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17686", 
+                "title": "USN-1795-1 -- linux-lts-quantal vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17686"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27433", 
+                "title": "ELSA-2013-2537 -- unbreakable enterprise kernel security update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27433"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27383", 
+                "title": "ELSA-2013-2538 -- unbreakable enterprise kernel security update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27383"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19799", 
+                "title": "DSA-2668-1 linux-2.6 - several", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:19799"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18083", 
+                "title": "USN-1792-1 -- linux vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18083"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18356", 
+                "title": "USN-1798-1 -- linux-ec2 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18356"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18336", 
+                "title": "USN-1797-1 -- linux-ti-omap4 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18336"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2668-1 (linux-2.6 - privilege escalation/denial of service/information leak)", 
+                "file": "deb_2668.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "892668"
+            }, 
+            {
+                "name": "CentOS Update for kernel CESA-2013:1034 centos5", 
+                "file": "gb_CESA-2013_1034_kernel_centos5.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881763"
+            }, 
+            {
+                "name": "CentOS Update for kernel CESA-2013:1051 centos6", 
+                "file": "gb_CESA-2013_1051_kernel_centos6.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881773"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-10695", 
+                "file": "gb_fedora_2013_10695_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865961"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-12530", 
+                "file": "gb_fedora_2013_12530_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866067"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-12990", 
+                "file": "gb_fedora_2013_12990_kernel_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866210"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-13536", 
+                "file": "gb_fedora_2013_13536_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866121"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-15151", 
+                "file": "gb_fedora_2013_15151_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866832"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-16336", 
+                "file": "gb_fedora_2013_16336_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866896"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-17010", 
+                "file": "gb_fedora_2013_17010_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866901"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-17942", 
+                "file": "gb_fedora_2013_17942_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866934"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-18364", 
+                "file": "gb_fedora_2013_18364_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866964"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-18822", 
+                "file": "gb_fedora_2013_18822_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867001"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-20748", 
+                "file": "gb_fedora_2013_20748_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867054"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-21822", 
+                "file": "gb_fedora_2013_21822_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867096"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-22695", 
+                "file": "gb_fedora_2013_22695_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867119"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-3893", 
+                "file": "gb_fedora_2013_3893_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865479"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-3909", 
+                "file": "gb_fedora_2013_3909_kernel_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865488"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-4012", 
+                "file": "gb_fedora_2013_4012_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865490"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-4240", 
+                "file": "gb_fedora_2013_4240_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865494"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-4357", 
+                "file": "gb_fedora_2013_4357_kernel_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865509"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-6041", 
+                "file": "gb_fedora_2013_6041_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865576"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-6537", 
+                "file": "gb_fedora_2013_6537_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865593"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-6999", 
+                "file": "gb_fedora_2013_6999_kernel_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865597"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-9123", 
+                "file": "gb_fedora_2013_9123_kernel_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866035"
+            }, 
+            {
+                "name": "RedHat Update for kernel RHSA-2013:1034-01", 
+                "file": "gb_RHSA-2013_1034-01_kernel.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "871016"
+            }, 
+            {
+                "name": "RedHat Update for kernel RHSA-2013:1051-01", 
+                "file": "gb_RHSA-2013_1051-01_kernel.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "871020"
+            }, 
+            {
+                "name": "SuSE Update for 3.0.80 openSUSE-SU-2013:1187-1 (3.0.80)", 
+                "file": "gb_suse_2013_1187_1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "850509"
+            }, 
+            {
+                "name": "Ubuntu Update for linux USN-1787-1", 
+                "file": "gb_ubuntu_USN_1787_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841387"
+            }, 
+            {
+                "name": "Ubuntu Update for linux-lts-backport-oneiric USN-1788-1", 
+                "file": "gb_ubuntu_USN_1788_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841384"
+            }, 
+            {
+                "name": "Ubuntu Update for linux USN-1792-1", 
+                "file": "gb_ubuntu_USN_1792_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841397"
+            }, 
+            {
+                "name": "Ubuntu Update for linux USN-1793-1", 
+                "file": "gb_ubuntu_USN_1793_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841395"
+            }, 
+            {
+                "name": "Ubuntu Update for linux-ti-omap4 USN-1794-1", 
+                "file": "gb_ubuntu_USN_1794_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841390"
+            }, 
+            {
+                "name": "Ubuntu Update for linux-lts-quantal USN-1795-1", 
+                "file": "gb_ubuntu_USN_1795_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841393"
+            }, 
+            {
+                "name": "Ubuntu Update for linux USN-1796-1", 
+                "file": "gb_ubuntu_USN_1796_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841392"
+            }, 
+            {
+                "name": "Ubuntu Update for linux-ti-omap4 USN-1797-1", 
+                "file": "gb_ubuntu_USN_1797_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841398"
+            }, 
+            {
+                "name": "Ubuntu Update for linux-ec2 USN-1798-1", 
+                "file": "gb_ubuntu_USN_1798_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841391"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : kernel (ALAS-2013-200)", 
+                "file": "ala_ALAS-2013-200.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "69758"
+            }, 
+            {
+                "name": "Amazon Linux AMI : kernel (ALAS-2013-218)", 
+                "file": "ala_ALAS-2013-218.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "70222"
+            }, 
+            {
+                "name": "CentOS 5 : kernel (CESA-2013:1034)", 
+                "file": "centos_RHSA-2013-1034.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "67235"
+            }, 
+            {
+                "name": "CentOS 6 : kernel (CESA-2013:1051)", 
+                "file": "centos_RHSA-2013-1051.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "68940"
+            }, 
+            {
+                "name": "Debian DSA-2668-1 : linux-2.6 - privilege escalation/denial of service/information leak", 
+                "file": "debian_DSA-2668.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "66431"
+            }, 
+            {
+                "name": "Fedora 18 : kernel-3.8.3-201.fc18 (2013-3893)", 
+                "file": "fedora_2013-3893.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "65594"
+            }, 
+            {
+                "name": "Fedora 17 : kernel-3.8.3-103.fc17 (2013-3909)", 
+                "file": "fedora_2013-3909.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "65650"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : kernel (MDVSA-2013:176)", 
+                "file": "mandriva_MDVSA-2013-176.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "66975"
+            }, 
+            {
+                "name": "openSUSE Security Update : kernel (openSUSE-SU-2013:1971-1)", 
+                "file": "openSUSE-2013-1034.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74878"
+            }, 
+            {
+                "name": "Oracle Linux 5 : kernel (ELSA-2013-1034-1)", 
+                "file": "oraclelinux_ELSA-2013-1034-1.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68843"
+            }, 
+            {
+                "name": "Oracle Linux 5 : kernel (ELSA-2013-1034)", 
+                "file": "oraclelinux_ELSA-2013-1034.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68844"
+            }, 
+            {
+                "name": "Oracle Linux 6 : kernel (ELSA-2013-1051)", 
+                "file": "oraclelinux_ELSA-2013-1051.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68920"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2013-2537)", 
+                "file": "oraclelinux_ELSA-2013-2537.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68977"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2013-2538)", 
+                "file": "oraclelinux_ELSA-2013-2538.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68978"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise Kernel (ELSA-2013-2546)", 
+                "file": "oraclelinux_ELSA-2013-2546.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "69942"
+            }, 
+            {
+                "name": "RHEL 6 : MRG (RHSA-2013:0829)", 
+                "file": "redhat-RHSA-2013-0829.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "76660"
+            }, 
+            {
+                "name": "RHEL 5 : kernel (RHSA-2013:1034)", 
+                "file": "redhat-RHSA-2013-1034.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "67219"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2013:1051)", 
+                "file": "redhat-RHSA-2013-1051.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "68921"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL5.x i386/x86_64", 
+                "file": "sl_20130710_kernel_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "67241"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL6.x i386/x86_64", 
+                "file": "sl_20130716_kernel_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "68945"
+            }, 
+            {
+                "name": "SuSE 11.2 Security Update : Linux kernel (SAT Patch Numbers 7667 / 7669 / 7675)", 
+                "file": "suse_11_kernel-130426.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "66344"
+            }, 
+            {
+                "name": "SUSE SLES10 Security Update : kernel (SUSE-SU-2013:1832-1)", 
+                "file": "suse_SU-2013-1832-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83603"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : kernel (SUSE-SU-2014:0287-1)", 
+                "file": "suse_SU-2014-0287-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83611"
+            }, 
+            {
+                "name": "SUSE SLES10 Security Update : kernel (SUSE-SU-2014:0536-1)", 
+                "file": "suse_SU-2014-0536-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83618"
+            }, 
+            {
+                "name": "Ubuntu 11.10 : linux vulnerabilities (USN-1787-1)", 
+                "file": "ubuntu_USN-1787-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "65788"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS : linux-lts-backport-oneiric vulnerabilities (USN-1788-1)", 
+                "file": "ubuntu_USN-1788-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "65800"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS : linux vulnerabilities (USN-1792-1)", 
+                "file": "ubuntu_USN-1792-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "65868"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux vulnerabilities (USN-1793-1)", 
+                "file": "ubuntu_USN-1793-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "65869"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-quantal vulnerabilities (USN-1795-1)", 
+                "file": "ubuntu_USN-1795-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "65870"
+            }, 
+            {
+                "name": "Ubuntu 12.10 : linux vulnerabilities (USN-1796-1)", 
+                "file": "ubuntu_USN-1796-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "65871"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS : linux-ec2 vulnerabilities (USN-1798-1)", 
+                "file": "ubuntu_USN-1798-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "65872"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2013:176", 
+                "id": "MDVSA-2013:176"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2013-0914.html", 
+                "id": "openSUSE-SU-2013:1187"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2013-0914.html", 
+                "id": "openSUSE-SU-2013:1971"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20131034", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2013-1034.html", 
+                    "id": "RHSA-2013:1034", 
+                    "title": "RHSA-2013:1034: kernel security and bug fix update (Low)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=920499", 
+                    "title": "CVE-2013-0914 Kernel: sa_restorer information leak", 
+                    "id": "920499", 
+                    "issue date": "2013-07-10", 
+                    "associated redhat": "RHSA-2013:1034"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=922404", 
+                    "title": "CVE-2012-6545 Kernel: Bluetooth: RFCOMM - information leak", 
+                    "id": "922404", 
+                    "issue date": "2013-07-10", 
+                    "associated redhat": "RHSA-2013:1034"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=922414", 
+                    "title": "CVE-2012-6544 Kernel: Bluetooth: HCI & L2CAP information leaks", 
+                    "id": "922414", 
+                    "issue date": "2013-07-10", 
+                    "associated redhat": "RHSA-2013:1034"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=949932", 
+                    "title": "CVE-2013-1929 Kernel: tg3: buffer overflow in VPD firmware parsing", 
+                    "id": "949932", 
+                    "issue date": "2013-07-10", 
+                    "associated redhat": "RHSA-2013:1034"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=955216", 
+                    "title": "CVE-2013-3222 Kernel: atm: update msg_namelen in vcc_recvmsg()", 
+                    "id": "955216", 
+                    "issue date": "2013-07-10", 
+                    "associated redhat": "RHSA-2013:1034"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=955599", 
+                    "title": "CVE-2013-3224 Kernel: Bluetooth: possible info leak in bt_sock_recvmsg()", 
+                    "id": "955599", 
+                    "issue date": "2013-07-10", 
+                    "associated redhat": "RHSA-2013:1034"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=956094", 
+                    "title": "CVE-2013-3231 Kernel: llc: Fix missing msg_namelen update in llc_ui_recvmsg", 
+                    "id": "956094", 
+                    "issue date": "2013-07-10", 
+                    "associated redhat": "RHSA-2013:1034"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=956145", 
+                    "title": "CVE-2013-3235 Kernel: tipc: info leaks via msg_name in recv_msg/recv_stream", 
+                    "id": "956145", 
+                    "issue date": "2013-07-10", 
+                    "associated redhat": "RHSA-2013:1034"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20131051", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2013-1051.html", 
+                    "id": "RHSA-2013:1051", 
+                    "title": "RHSA-2013:1051: kernel security and bug fix update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=920499", 
+                    "title": "CVE-2013-0914 Kernel: sa_restorer information leak", 
+                    "id": "920499", 
+                    "issue date": "2013-07-16", 
+                    "associated redhat": "RHSA-2013:1051"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=920783", 
+                    "title": "CVE-2013-1848 kernel: ext3: format string issues", 
+                    "id": "920783", 
+                    "issue date": "2013-07-16", 
+                    "associated redhat": "RHSA-2013:1051"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=922353", 
+                    "title": "CVE-2012-6548 Kernel: udf: information leak on export", 
+                    "id": "922353", 
+                    "issue date": "2013-07-16", 
+                    "associated redhat": "RHSA-2013:1051"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=924689", 
+                    "title": "CVE-2013-2634 kernel: Information leak in the Data Center Bridging (DCB) component", 
+                    "id": "924689", 
+                    "issue date": "2013-07-16", 
+                    "associated redhat": "RHSA-2013:1051"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=924690", 
+                    "title": "CVE-2013-2635 kernel: Information leak in the RTNETLINK component", 
+                    "id": "924690", 
+                    "issue date": "2013-07-16", 
+                    "associated redhat": "RHSA-2013:1051"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=952197", 
+                    "title": "CVE-2013-3301 Kernel: tracing: NULL pointer dereference", 
+                    "id": "952197", 
+                    "issue date": "2013-07-16", 
+                    "associated redhat": "RHSA-2013:1051"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=955216", 
+                    "title": "CVE-2013-3222 Kernel: atm: update msg_namelen in vcc_recvmsg()", 
+                    "id": "955216", 
+                    "issue date": "2013-07-16", 
+                    "associated redhat": "RHSA-2013:1051"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=955599", 
+                    "title": "CVE-2013-3224 Kernel: Bluetooth: possible info leak in bt_sock_recvmsg()", 
+                    "id": "955599", 
+                    "issue date": "2013-07-16", 
+                    "associated redhat": "RHSA-2013:1051"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=955649", 
+                    "title": "CVE-2013-3225 Kernel: Bluetooth: RFCOMM - missing msg_namelen update in rfcomm_sock_recvmsg", 
+                    "id": "955649", 
+                    "issue date": "2013-07-16", 
+                    "associated redhat": "RHSA-2013:1051"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=968484", 
+                    "title": "CVE-2013-2128 Kernel: net: oops from tcp_collapse() when using splice(2)", 
+                    "id": "968484", 
+                    "issue date": "2013-07-16", 
+                    "associated redhat": "RHSA-2013:1051"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=969518", 
+                    "title": "CVE-2013-2852 kernel: b43: format string leaking into error msgs", 
+                    "id": "969518", 
+                    "issue date": "2013-07-16", 
+                    "associated redhat": "RHSA-2013:1051"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1787-1", 
+                "id": "USN-1787-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1788-1", 
+                "id": "USN-1788-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1792-1", 
+                "id": "USN-1792-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1793-1", 
+                "id": "USN-1793-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1794-1", 
+                "id": "USN-1794-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1795-1", 
+                "id": "USN-1795-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1796-1", 
+                "id": "USN-1796-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1797-1", 
+                "id": "USN-1797-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1798-1", 
+                "id": "USN-1798-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

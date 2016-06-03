@@ -1,0 +1,171 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8041", 
+                "published": "2015-11-09T11:59:10.560-05:00", 
+                "id": "CVE-2015-8041", 
+                "modified": "2015-11-10T11:39:27.590-05:00", 
+                "summary": "Multiple integer overflows in the NDEF record parser in hostapd before 2.5 and wpa_supplicant before 2.5 allow remote attackers to cause a denial of service (process crash or infinite loop) via a large payload length field value in an (1) WPS or (2) P2P NFC NDEF record, which triggers an out-of-bounds read."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:w1.fi:hostapd:2.4"
+            }, 
+            {
+                "id": "cpe:/o:novell:opensuse:13.2"
+            }, 
+            {
+                "id": "cpe:/o:novell:opensuse:13.1"
+            }, 
+            {
+                "id": "cpe:/a:w1.fi:wpa_supplicant:2.4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.79102", 
+                "id": 79102
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://w1.fi/cgit/hostap/plain/wpa_supplicant/ChangeLog", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://w1.fi/cgit/hostap/plain/hostapd/ChangeLog", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/11/02/5", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://w1.fi/security/2015-5/incomplete-wps-and-p2p-nfc-ndef-record-payload-length-validation.txt", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2015-11/msg00041.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2015-11/msg00037.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-8041"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:296", 
+                "title": "DSA-3397-1 wpa -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:296"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3397-1 (wpa - security update)", 
+                "file": "deb_3397.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703397"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-3397-1 : wpa - security update", 
+                "file": "debian_DSA-3397.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "86833"
+            }, 
+            {
+                "name": "FreeBSD : wpa_supplicant -- WPS_NFC option payload length validation vulnerability (c93c9395-25e1-11e5-a4a5-002590263bf5)", 
+                "file": "freebsd_pkg_c93c939525e111e5a4a5002590263bf5.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "84653"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2015-8041.html", 
+                "id": "openSUSE-SU-2015:1912"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2015-8041.html", 
+                "id": "openSUSE-SU-2015:1920"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

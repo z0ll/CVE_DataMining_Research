@@ -1,0 +1,158 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6577", 
+                "published": "2006-12-15T14:28:00.000-05:00", 
+                "id": "CVE-2006-6577", 
+                "modified": "2008-09-05T17:15:05.753-04:00", 
+                "summary": "SQL injection vulnerability in polls.php in Neocrome Land Down Under (LDU) 8.x and earlier allows remote attackers to execute arbitrary SQL commands via the id parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:neocrome:land_down_under:8.0"
+            }, 
+            {
+                "id": "cpe:/a:neocrome:seditio:1.10"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33865", 
+                "id": 33865
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21366", 
+                "id": 21366
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/21366", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/453134/100/200/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30616", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2037", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006315", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Land Down Under (LDU) SQL Injection Attempt -- polls.php id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006316", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Land Down Under (LDU) SQL Injection Attempt -- polls.php id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006317", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Land Down Under (LDU) SQL Injection Attempt -- polls.php id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006318", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Land Down Under (LDU) SQL Injection Attempt -- polls.php id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006319", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Land Down Under (LDU) SQL Injection Attempt -- polls.php id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006320", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Land Down Under (LDU) SQL Injection Attempt -- polls.php id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6577"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Land Down Under / Seditio polls.php id Parameter SQL Injection", 
+                "file": "ldu_id_sql_injection.nasl", 
+                "family": "CGI abuses", 
+                "id": "23782"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

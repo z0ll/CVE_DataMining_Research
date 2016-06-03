@@ -1,0 +1,191 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2854", 
+                "published": "2007-05-24T15:30:00.000-04:00", 
+                "id": "CVE-2007-2854", 
+                "modified": "2011-03-07T21:55:12.360-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in account_change.php in BtiTracker 1.4.1 and earlier allow remote attackers to execute arbitrary SQL commands via the (1) style or (2) langue parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:bti-tracker:bti-tracker:1.4.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.36965", 
+                "id": 36965
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/24094", 
+                "id": 24094
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/36316", 
+                "id": 36316
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1921", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/24094", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/3970", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://osvdb.org/36316", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34447", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25382", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004023", 
+                "signature": "ET WEB_SPECIFIC_APPS BtiTracker SQL Injection Attempt -- account_change.php style SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004024", 
+                "signature": "ET WEB_SPECIFIC_APPS BtiTracker SQL Injection Attempt -- account_change.php style UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004025", 
+                "signature": "ET WEB_SPECIFIC_APPS BtiTracker SQL Injection Attempt -- account_change.php style INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004026", 
+                "signature": "ET WEB_SPECIFIC_APPS BtiTracker SQL Injection Attempt -- account_change.php style DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004027", 
+                "signature": "ET WEB_SPECIFIC_APPS BtiTracker SQL Injection Attempt -- account_change.php style ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004028", 
+                "signature": "ET WEB_SPECIFIC_APPS BtiTracker SQL Injection Attempt -- account_change.php style UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004029", 
+                "signature": "ET WEB_SPECIFIC_APPS BtiTracker SQL Injection Attempt -- account_change.php langue SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004030", 
+                "signature": "ET WEB_SPECIFIC_APPS BtiTracker SQL Injection Attempt -- account_change.php langue UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004031", 
+                "signature": "ET WEB_SPECIFIC_APPS BtiTracker SQL Injection Attempt -- account_change.php langue INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004032", 
+                "signature": "ET WEB_SPECIFIC_APPS BtiTracker SQL Injection Attempt -- account_change.php langue DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004033", 
+                "signature": "ET WEB_SPECIFIC_APPS BtiTracker SQL Injection Attempt -- account_change.php langue ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004034", 
+                "signature": "ET WEB_SPECIFIC_APPS BtiTracker SQL Injection Attempt -- account_change.php langue UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2854"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,199 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3248", 
+                "published": "2014-11-16T12:59:03.113-05:00", 
+                "id": "CVE-2014-3248", 
+                "modified": "2014-11-17T13:42:25.450-05:00", 
+                "summary": "Untrusted search path vulnerability in Puppet Enterprise 2.8 before 2.8.7, Puppet before 2.7.26 and 3.x before 3.6.2, Facter 1.6.x and 2.x before 2.0.2, Hiera before 1.3.4, and Mcollective before 2.5.2, when running with Ruby 1.9.1 or earlier, allows local users to gain privileges via a Trojan horse file in the current working directory, as demonstrated using (1) rubygems/defaults/operating_system.rb, (2) Win32API.rb, (3) Win32API.so, (4) safe_yaml.rb, (5) safe_yaml/deep.rb, or (6) safe_yaml/deep.so; or (7) operatingsystem.rb, (8) operatingsystem.so, (9) osfamily.rb, or (10) osfamily.so in puppet/confine."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/17.html", 
+                "id": "CWE-17", 
+                "title": "Code"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:puppetlabs:facter:1.6.18"
+            }, 
+            {
+                "id": "cpe:/a:puppetlabs:puppet:3.6.1"
+            }, 
+            {
+                "id": "cpe:/a:puppetlabs:hiera:1.3.3"
+            }, 
+            {
+                "id": "cpe:/a:puppetlabs:puppet:2.7.26"
+            }, 
+            {
+                "id": "cpe:/a:puppetlabs:marionette-collective:2.5.1"
+            }, 
+            {
+                "id": "cpe:/a:puppetlabs:facter:2.0.1"
+            }, 
+            {
+                "id": "cpe:/a:puppetlabs:puppet:2.8.6::~~enterprise~~~"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.72889", 
+                "id": 72889
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/68035", 
+                "id": 68035
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/68035", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://rowediness.com/2014/06/13/cve-2014-3248-a-little-problem-with-puppet/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://puppetlabs.com/security/cve/cve-2014-3248", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "1.9", 
+                    "base": "6.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-3248"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26240", 
+                "title": "SUSE-SU-2014:0880-1 -- Security update for puppet", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26240"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : facter (ALAS-2014-456)", 
+                "file": "ala_ALAS-2014-456.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "79840"
+            }, 
+            {
+                "name": "Amazon Linux AMI : puppet (ALAS-2015-484)", 
+                "file": "ala_ALAS-2015-484.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "81330"
+            }, 
+            {
+                "name": "Fedora 20 : facter-1.7.6-1.fc20 (2014-12699)", 
+                "file": "fedora_2014-12699.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "79389"
+            }, 
+            {
+                "name": "GLSA-201412-15 : MCollective: Privilege escalation", 
+                "file": "gentoo_GLSA-201412-15.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "79968"
+            }, 
+            {
+                "name": "GLSA-201412-45 : Facter: Privilege escalation", 
+                "file": "gentoo_GLSA-201412-45.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "80266"
+            }, 
+            {
+                "name": "Puppet < 2.7.26 / 3.6.2 and Enterprise 2.8.x < 2.8.7 Multiple Vulnerabilities", 
+                "file": "puppet_2_7_26.nasl", 
+                "family": "CGI abuses", 
+                "id": "76344"
+            }, 
+            {
+                "name": "Oracle Solaris Third-Party Patch Update : facter (cve_2014_3248_untrusted_search)", 
+                "file": "solaris11_facter_20141120.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "80604"
+            }, 
+            {
+                "name": "Oracle Solaris Third-Party Patch Update : puppet (multiple_vulnerabilities_in_puppet1)", 
+                "file": "solaris11_puppet_20141216.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "80745"
+            }, 
+            {
+                "name": "SuSE 11.3 Security Update : puppet (SAT Patch Number 9472)", 
+                "file": "suse_11_puppet-140630.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "76424"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

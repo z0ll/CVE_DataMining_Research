@@ -1,0 +1,152 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1481", 
+                "published": "2007-03-16T17:19:00.000-04:00", 
+                "id": "CVE-2007-1481", 
+                "modified": "2011-03-07T21:52:12.750-05:00", 
+                "summary": "SQL injection vulnerability in index.php in WBBlog allows remote attackers to execute arbitrary SQL commands via the e_id parameter in a viewentry cmd."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:wbblog:wbblog"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35643", 
+                "id": 35643
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/22998", 
+                "id": 22998
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1001", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/3490", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/33010", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/22998", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/24532", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004313", 
+                "signature": "ET WEB_SPECIFIC_APPS WBBlog SQL Injection Attempt -- index.php e_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004314", 
+                "signature": "ET WEB_SPECIFIC_APPS WBBlog SQL Injection Attempt -- index.php e_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004315", 
+                "signature": "ET WEB_SPECIFIC_APPS WBBlog SQL Injection Attempt -- index.php e_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004316", 
+                "signature": "ET WEB_SPECIFIC_APPS WBBlog SQL Injection Attempt -- index.php e_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004318", 
+                "signature": "ET WEB_SPECIFIC_APPS WBBlog SQL Injection Attempt -- index.php e_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004317", 
+                "signature": "ET WEB_SPECIFIC_APPS WBBlog SQL Injection Attempt -- index.php e_id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1481"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

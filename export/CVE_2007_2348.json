@@ -1,0 +1,257 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2348", 
+                "published": "2007-04-27T14:19:00.000-04:00", 
+                "id": "CVE-2007-2348", 
+                "modified": "2013-01-22T22:35:33.370-05:00", 
+                "summary": "mirror --script in lftp before 3.5.9 does not properly quote shell metacharacters, which might allow remote user-assisted attackers to execute shell commands via a malicious script.  NOTE: it is not clear whether this issue crosses security boundaries, since the script already supports commands such as \"get\" which could overwrite executable files."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:alexander_v._lukyanov:lftp:3.5.8"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.36479", 
+                "id": 36479
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/23736", 
+                "id": 23736
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1590", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/36559", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2009-1278.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://lftp.yar.ru/news.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://bugs.gentoo.org/show_bug.cgi?id=173524", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://issues.rpath.com/browse/RPL-1229", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/23736", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25132", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25107", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2348"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22494", 
+                "title": "ELSA-2009:1278: lftp security and bug fix update (Low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22494"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28929", 
+                "title": "RHSA-2009:1278 -- lftp security and bug fix update (Low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28929"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:10806", 
+                "title": "mirror --script in lftp before 3.5.9 does not properly quote shell metacharacters, which might allow remote user-assisted attackers to execute shell commands via a malicious script.  NOTE: it is not clear whether this issue crosses security boundaries, since the script already supports commands such as \"get\" which could overwrite executable files.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:10806"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CentOS Update for lftp CESA-2009:1278 centos5 i386", 
+                "file": "gb_CESA-2009_1278_lftp_centos5_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880878"
+            }, 
+            {
+                "name": "CentOS Security Advisory CESA-2009:1278 (lftp)", 
+                "file": "ovcesa2009_1278.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "64930"
+            }, 
+            {
+                "name": "RedHat Security Advisory RHSA-2009:1278", 
+                "file": "RHSA_2009_1278.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "64806"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : lftp (CESA-2009:1278)", 
+                "file": "centos_RHSA-2009-1278.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "43780"
+            }, 
+            {
+                "name": "RHEL 5 : lftp (RHSA-2009:1278)", 
+                "file": "redhat-RHSA-2009-1278.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "40836"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : lftp on SL5.x i386/x86_64", 
+                "file": "sl_20090902_lftp_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "60654"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20091278", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2009-1278.html", 
+                    "id": "RHSA-2009:1278", 
+                    "title": "RHSA-2009:1278: lftp security and bug fix update (Low)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=236238", 
+                    "title": "CVE-2007-2348 lftp mirror --script does not escape names and targets of symbolic links", 
+                    "id": "236238", 
+                    "issue date": "2009-09-01", 
+                    "associated redhat": "RHSA-2009:1278"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=239334", 
+                    "title": "lftp affected by problems described in CVE-2007-2348", 
+                    "id": "239334", 
+                    "issue date": "2009-09-01", 
+                    "associated redhat": "RHSA-2009:1278"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=308721", 
+                    "title": "bump lftp to current version 3.7.11", 
+                    "id": "308721", 
+                    "issue date": "2009-09-01", 
+                    "associated redhat": "RHSA-2009:1278"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=422881", 
+                    "title": "Using lftp with -c options causes hangs", 
+                    "id": "422881", 
+                    "issue date": "2009-09-01", 
+                    "associated redhat": "RHSA-2009:1278"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=434294", 
+                    "title": "lftp corrupts data when using (m)put's -c option on sftp transport", 
+                    "id": "434294", 
+                    "issue date": "2009-09-01", 
+                    "associated redhat": "RHSA-2009:1278"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=461922", 
+                    "title": "[RHEL 5] lftp 'help mirror' does not display all options defined in manpage.", 
+                    "id": "461922", 
+                    "issue date": "2009-09-01", 
+                    "associated redhat": "RHSA-2009:1278"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

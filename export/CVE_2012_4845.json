@@ -1,0 +1,238 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-4845", 
+                "published": "2012-10-20T06:41:27.930-04:00", 
+                "id": "CVE-2012-4845", 
+                "modified": "2013-12-05T00:18:47.333-05:00", 
+                "summary": "The FTP client in IBM AIX 6.1 and 7.1, and VIOS 2.2.1.4-FP-25 SP-02, does not properly manage privileges in an RBAC environment, which allows attackers to bypass intended file-read restrictions by leveraging the setuid installation of the ftp executable file."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:ibm:aix:7.1"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:6.1"
+            }, 
+            {
+                "id": "cpe:/o:ibm:vios:2.2.1.4:fp-25_sp-02"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.6805", 
+                "id": 6805
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0034480", 
+                "id": "2012-B-0107", 
+                "title": "IBM AIX Security Bypass Vulnerability"
+            }
+        ], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/56134", 
+                "id": 56134
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/79279", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/56134", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IV28787", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IV28785", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IV28715", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IV23331", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://aix.software.ibm.com/aix/efixes/security/ftp_advisory1.asc", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "6.8", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-4845"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19695", 
+                "title": "AIX ftp vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:19695"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "AIX 6.1 TL 7 : ftp (IV23331)", 
+                "file": "aix_IV23331.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "63734"
+            }, 
+            {
+                "name": "AIX 6.1 TL 8 : ftp (IV28651)", 
+                "file": "aix_IV28651.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "64509"
+            }, 
+            {
+                "name": "AIX 6.1 TL 6 : ftp (IV28715)", 
+                "file": "aix_IV28715.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "63737"
+            }, 
+            {
+                "name": "AIX 7.1 TL 0 : ftp (IV28785)", 
+                "file": "aix_IV28785.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "63741"
+            }, 
+            {
+                "name": "AIX 7.1 TL 1 : ftp (IV28787)", 
+                "file": "aix_IV28787.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "63742"
+            }, 
+            {
+                "name": "AIX 7.1 TL 2 : ftp (IV30669)", 
+                "file": "aix_IV30669.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "64510"
+            }, 
+            {
+                "name": "AIX 6.1 TL 7 : bos.mp64 (U854618)", 
+                "file": "aix_U854618.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "65708"
+            }, 
+            {
+                "name": "AIX 6.1 TL 9 : bos.mp64 (U854672)", 
+                "file": "aix_U854672.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "71163"
+            }, 
+            {
+                "name": "AIX 6.1 TL 6 : bos.mp64 (U854751)", 
+                "file": "aix_U854751.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "65711"
+            }, 
+            {
+                "name": "AIX 7.1 : bos.mp64 (U854839)", 
+                "file": "aix_U854839.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "66275"
+            }, 
+            {
+                "name": "AIX 7.1 TL 1 : bos.mp64 (U854884)", 
+                "file": "aix_U854884.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "66278"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IV23331", 
+                "id": "IV23331"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IV28715", 
+                "id": "IV28715"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IV28785", 
+                "id": "IV28785"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IV28787", 
+                "id": "IV28787"
+            }
+        ], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

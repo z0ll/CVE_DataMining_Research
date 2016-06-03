@@ -1,0 +1,146 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-1053", 
+                "published": "1999-09-13T00:00:00.000-04:00", 
+                "id": "CVE-1999-1053", 
+                "modified": "2008-09-05T16:18:36.713-04:00", 
+                "summary": "guestbook.pl cleanses user-inserted SSI commands by removing text between \"<!--\" and \"-->\" separators, which allows remote attackers to execute arbitrary commands when guestbook.pl is run on Apache 1.3.9 and possibly other versions, since Apache allows other closing sequences besides \"-->\"."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:apache:http_server:1.3.9"
+            }, 
+            {
+                "id": "cpe:/a:matt_wright:matt_wright_guestbook:2.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14840", 
+                "id": 14840
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/776", 
+                "id": 776
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/776", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/82/27560", 
+                    "vendor": "VULN-DEV"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/82/27296", 
+                    "vendor": "VULN-DEV"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/33674", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1140", 
+                "signature": "SERVER-WEBAPP guestbook.pl access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "guestbook_ssi_exec.rb", 
+                "file": "metasploit-framework/modules/exploits/unix/webapp/guestbook_ssi_exec.rb", 
+                "title": "Matt Wright guestbook.pl Arbitrary Command Execution"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-1053"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "guestbook.pl", 
+                "file": "guestbook_pl.nasl", 
+                "family": "Web application abuses", 
+                "id": "10099"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Matt Wright guestbook.pl Arbitrary Command Execution", 
+                "file": "guestbook_pl.nasl", 
+                "family": "CGI abuses", 
+                "id": "10099"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

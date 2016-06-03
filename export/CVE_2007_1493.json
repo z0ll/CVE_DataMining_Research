@@ -1,0 +1,139 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1493", 
+                "published": "2007-03-16T18:19:00.000-04:00", 
+                "id": "CVE-2007-1493", 
+                "modified": "2008-09-05T17:20:38.733-04:00", 
+                "summary": "nukesentinel.php in NukeSentinel 2.5.06 and earlier uses a permissive regular expression to validate an IP address, which allows remote attackers to execute arbitrary SQL commands via the Client-IP HTTP header, due to an incomplete patch for CVE-2007-1172."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:nukescripts:nukesentinel:2.5.06"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35655", 
+                "id": 35655
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/462453/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://attrition.org/pipermail/vim/2007-March/001429.html", 
+                    "vendor": "VIM"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2430", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004307", 
+                "signature": "ET WEB_SPECIFIC_APPS NukeSentinel SQL Injection Attempt -- nukesentinel.php SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004308", 
+                "signature": "ET WEB_SPECIFIC_APPS NukeSentinel SQL Injection Attempt -- nukesentinel.php UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004309", 
+                "signature": "ET WEB_SPECIFIC_APPS NukeSentinel SQL Injection Attempt -- nukesentinel.php INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004310", 
+                "signature": "ET WEB_SPECIFIC_APPS NukeSentinel SQL Injection Attempt -- nukesentinel.php DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004311", 
+                "signature": "ET WEB_SPECIFIC_APPS NukeSentinel SQL Injection Attempt -- nukesentinel.php ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004312", 
+                "signature": "ET WEB_SPECIFIC_APPS NukeSentinel SQL Injection Attempt -- nukesentinel.php UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1493"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

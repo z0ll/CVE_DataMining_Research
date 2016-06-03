@@ -1,0 +1,674 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0465", 
+                "published": "2003-08-18T00:00:00.000-04:00", 
+                "id": "CVE-2003-0465", 
+                "modified": "2010-08-21T00:16:08.113-04:00", 
+                "summary": "The kernel strncpy function in Linux 2.4 and 2.5 does not %NUL pad the buffer on architectures other than x86, as opposed to the expected behavior of strncpy as implemented in libc, which could lead to information leaks."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:2.4.0"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:2.5.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.20683", 
+                "id": 20683
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2004-188.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=linux-kernel&m=105796415223490&w=2", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=linux-kernel&m=105796021120436&w=2", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2003-0465"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:10285", 
+                "title": "The kernel strncpy function in Linux 2.4 and 2.5 does not %NUL pad the buffer on architectures other than x86, as opposed to the expected behavior of strncpy as implemented in libc, which could lead to information leaks.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:10285"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "RHEL 3 : kernel (RHSA-2004:188)", 
+                "file": "redhat-RHSA-2004-188.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "12494"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20040188", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2004-188.html", 
+                    "id": "RHSA-2004:188", 
+                    "title": "RHSA-2004:188: Updated kernel packages available for Red Hat Enterprise Linux 3 Update 2 (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=102194", 
+                    "title": "Disk READ performance worse compared with 2.4.20-18.9smp", 
+                    "id": "102194", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=104633", 
+                    "title": "The synchronous write() system call of RHEL3.0 is slower than that of RHEL2.1.", 
+                    "id": "104633", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=106503", 
+                    "title": "ia64 kernel stops allocating memory too early when overcommit_memory set to strict", 
+                    "id": "106503", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=106584", 
+                    "title": "'cp -p' returns error when destination is an nfs directory", 
+                    "id": "106584", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=106969", 
+                    "title": "Random stall during boot-up", 
+                    "id": "106969", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=108958", 
+                    "title": "MINSIGSTKSZ mismatch between ia32 and ia64", 
+                    "id": "108958", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=109618", 
+                    "title": "3ware raid extremely low throughput", 
+                    "id": "109618", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=109843", 
+                    "title": "Typo in module parameter  of scsi_mod module", 
+                    "id": "109843", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=109914", 
+                    "title": "PATCH: LTC5351-Large external array causes SIGILL in 32-bit", 
+                    "id": "109914", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=110170", 
+                    "title": "[PATCH] LTC5381- rhel 3 will need to pick up the cyclone-lpj-fix patch", 
+                    "id": "110170", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=110999", 
+                    "title": "clock is running to fast on IBM x445", 
+                    "id": "110999", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=111250", 
+                    "title": "tg3 driver fails to autonegotiate correctly", 
+                    "id": "111250", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=111264", 
+                    "title": "ada compiler crashes on even hello-world", 
+                    "id": "111264", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=111287", 
+                    "title": "[PATCH] alternate signal stack bug corrupts RNaT bits", 
+                    "id": "111287", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=111629", 
+                    "title": "ACL over NFS problem", 
+                    "id": "111629", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=111681", 
+                    "title": "Invalid ICMP type 11 messages echo'd to console", 
+                    "id": "111681", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=111768", 
+                    "title": "/proc/pid/statm can return negative values", 
+                    "id": "111768", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=111903", 
+                    "title": "[PATCH] oops in IUCV code", 
+                    "id": "111903", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=111911", 
+                    "title": "avoid hang during initialization on I/O errors", 
+                    "id": "111911", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=112190", 
+                    "title": "Duplicate get_partition_list bug to track Bugzilla 111342 in Taroon -", 
+                    "id": "112190", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=112359", 
+                    "title": "RHEL 3.0 using v6.06.00b11 driver attached to McData switch doesn't log in or scan devices successfully.", 
+                    "id": "112359", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=112449", 
+                    "title": "(TG3) driver doesn't work properly with bcm5700 nic", 
+                    "id": "112449", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=112584", 
+                    "title": "reservation error code, corrupts request queue", 
+                    "id": "112584", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=112764", 
+                    "title": "RHEL3 kernel not preventing or recovering from fork bomb when ulimit used", 
+                    "id": "112764", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=112826", 
+                    "title": "LTC5732 - MMIO alignment error when inserting the olympic TR module.", 
+                    "id": "112826", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=113071", 
+                    "title": "[PATCH] RHEL3 ia64: 32 bit applications don't dump core properly", 
+                    "id": "113071", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=113072", 
+                    "title": "[PATCH] RHEL3/ia64: strace -f on multithreaded 32 bit applications doesn't work", 
+                    "id": "113072", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=113099", 
+                    "title": "CAN-2003-0461 /proc reveals char count", 
+                    "id": "113099", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=113100", 
+                    "title": "CAN-2003-0465 kernel strncpy padding", 
+                    "id": "113100", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=113103", 
+                    "title": "CAN-2003-0984 minor /dev/rtc leak", 
+                    "id": "113103", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=113171", 
+                    "title": "lousy read performance on megaraid with 2.4.21-4.0.2.EL", 
+                    "id": "113171", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=113341", 
+                    "title": "netdump - various race conditions that lead to hangs in panic()/die()", 
+                    "id": "113341", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=113413", 
+                    "title": "too many ipv6 aliases cause kernel oops", 
+                    "id": "113413", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=113604", 
+                    "title": "CAN-2004-0003 r128 DRI", 
+                    "id": "113604", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=113809", 
+                    "title": "depmod is not run for kernel-2.4.21-9.EL from Quaterly Update #1", 
+                    "id": "113809", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=113890", 
+                    "title": "[PATCH] Excutable compiled on x86 can cause kernel seg fault on x86_64", 
+                    "id": "113890", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=114052", 
+                    "title": "Raw device performance poor under WS 3 Dreamworks IT#29689", 
+                    "id": "114052", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=114135", 
+                    "title": "LSI Megaraid(2) performance subpar in RHEL3, using RHEL3 kernel", 
+                    "id": "114135", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=114553", 
+                    "title": "Bad performance with Q1 update kernel (-9EL)", 
+                    "id": "114553", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=114560", 
+                    "title": "zfcp updates for RHEL3 U2", 
+                    "id": "114560", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=114773", 
+                    "title": "Panic in elf_core_copy_regs() core dumping ia32 binary", 
+                    "id": "114773", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=114869", 
+                    "title": "date returns future year of 586562", 
+                    "id": "114869", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=114940", 
+                    "title": "RHEL 3.0 default QLogic driver v6.06.00b11 spews sg_low_free and QUEUE FULL messages at load time.", 
+                    "id": "114940", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=114942", 
+                    "title": "Running I/O on RHEL 3.0 and using the v6.06.00b11 driver, the driver ran out of memory and began arbitrarily killing processes.", 
+                    "id": "114942", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=115273", 
+                    "title": "bad disk I/O performance with the 2.4.21-4.ELsmp kernel", 
+                    "id": "115273", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=115438", 
+                    "title": "strange load - kswapd/IO ?", 
+                    "id": "115438", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=115823", 
+                    "title": "CAN-2004-0010 ncpfs hole (unsupported)", 
+                    "id": "115823", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=116916", 
+                    "title": "tg3 driver doesn't support bonding driver's ALB mode", 
+                    "id": "116916", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=117741", 
+                    "title": "P4 2.8ghz HT, Using RHEL WS 3.0 Update 1, latest SMP Kernel, see only 1 CPU", 
+                    "id": "117741", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=117941", 
+                    "title": "frequent kernel panics", 
+                    "id": "117941", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=118397", 
+                    "title": "system needlessly thrashing swap partition", 
+                    "id": "118397", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=118556", 
+                    "title": "MTRRs not initialized correctly", 
+                    "id": "118556", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=118647", 
+                    "title": "kswapd in state R and D load constant at 1+", 
+                    "id": "118647", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=118882", 
+                    "title": "Machine doesn't boot SMP Kernel after installation", 
+                    "id": "118882", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=118885", 
+                    "title": "[PATCH] kernel panics when removing expired IPsec SAs", 
+                    "id": "118885", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=119174", 
+                    "title": "/proc/cpuinfo vendor_id is wrong. shows $", 
+                    "id": "119174", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=119545", 
+                    "title": "kernel module binfmt_misc missing", 
+                    "id": "119545", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=119903", 
+                    "title": "nfs peformance very bad on EL3", 
+                    "id": "119903", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=120341", 
+                    "title": "Runaway processes with USB console on Blade Center", 
+                    "id": "120341", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=122077", 
+                    "title": "servers freeze (only respond to ping and sysrq) periodically", 
+                    "id": "122077", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:188"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

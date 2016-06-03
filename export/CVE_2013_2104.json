@@ -1,0 +1,221 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-2104", 
+                "published": "2014-01-21T13:55:09.413-05:00", 
+                "id": "CVE-2013-2104", 
+                "modified": "2014-01-22T16:57:44.780-05:00", 
+                "summary": "python-keystoneclient before 0.2.4, as used in OpenStack Keystone (Folsom), does not properly check expiry for PKI tokens, which allows remote authenticated users to (1) retain use of a token after it has expired, or (2) use a revoked token once it expires."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:openstack:python-keystoneclient:0.2.3"
+            }, 
+            {
+                "id": "cpe:/a:openstack:python-keystoneclient:0.2.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.66153", 
+                "id": 66153
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugs.launchpad.net/python-keystoneclient/+bug/1179615", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1875-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1851-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2013/05/28/7", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2013-0944.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2013-06/msg00198.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "5.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-2104"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:16572", 
+                "title": "USN-1851-1 -- libdmx vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:16572"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17063", 
+                "title": "USN-1875-1 -- OpenStack Keystone vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17063"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for openstack-keystone FEDORA-2013-10713", 
+                "file": "gb_fedora_2013_10713_openstack-keystone_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866452"
+            }, 
+            {
+                "name": "Fedora Update for python-keystoneclient FEDORA-2013-14302", 
+                "file": "gb_fedora_2013_14302_python-keystoneclient_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866740"
+            }, 
+            {
+                "name": "Ubuntu Update for python-keystoneclient USN-1851-1", 
+                "file": "gb_ubuntu_USN_1851_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841450"
+            }, 
+            {
+                "name": "Ubuntu Update for keystone USN-1875-1", 
+                "file": "gb_ubuntu_USN_1875_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841479"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 18 : openstack-keystone-2012.2.4-5.fc18 (2013-10713)", 
+                "file": "fedora_2013-10713.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "69288"
+            }, 
+            {
+                "name": "Fedora 19 : python-keystoneclient-0.2.3-7.fc19 (2013-14302)", 
+                "file": "fedora_2013-14302.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "69361"
+            }, 
+            {
+                "name": "openSUSE Security Update : openstack-keystone (openSUSE-SU-2013:1089-1)", 
+                "file": "openSUSE-2013-540.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75063"
+            }, 
+            {
+                "name": "Ubuntu 13.04 : python-keystoneclient vulnerability (USN-1851-1)", 
+                "file": "ubuntu_USN-1851-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "66783"
+            }, 
+            {
+                "name": "Ubuntu 12.10 / 13.04 : keystone vulnerabilities (USN-1875-1)", 
+                "file": "ubuntu_USN-1875-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "66893"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2013-2104.html", 
+                "id": "openSUSE-SU-2013:1089"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2013-0944.html", 
+                    "id": "RHSA-2013:0944", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1851-1", 
+                "id": "USN-1851-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1875-1", 
+                "id": "USN-1875-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

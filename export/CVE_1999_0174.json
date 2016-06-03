@@ -1,0 +1,136 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0174", 
+                "published": "1997-02-01T00:00:00.000-05:00", 
+                "id": "CVE-1999-0174", 
+                "modified": "2008-09-09T08:33:54.180-04:00", 
+                "summary": "The view-source CGI program allows remote attackers to read arbitrary files via a .. (dot dot) attack."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:netscape:communicator:4.5"
+            }, 
+            {
+                "id": "cpe:/a:netscape:communicator:4.0"
+            }, 
+            {
+                "id": "cpe:/a:netscape:communicator:4.07"
+            }, 
+            {
+                "id": "cpe:/a:netscape:communicator:4.05"
+            }, 
+            {
+                "id": "cpe:/a:netscape:communicator:4.06"
+            }, 
+            {
+                "id": "cpe:/a:netscape:communicator:4.6"
+            }, 
+            {
+                "id": "cpe:/a:netscape:communicator:4.51"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.13848", 
+                "id": 13848
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": []
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "6.4", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:848", 
+                "signature": "SERVER-WEBAPP view-source directory traversal"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:849", 
+                "signature": "SERVER-WEBAPP view-source access"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1482", 
+                "signature": "SERVER-WEBAPP view_source access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0174"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Multiple Vendor view_source CGI Traversal Arbitrary File Access", 
+                "file": "view_source_cgi.nasl", 
+                "family": "CGI abuses", 
+                "id": "10294"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

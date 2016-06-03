@@ -1,0 +1,306 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0533", 
+                "published": "2004-06-01T00:00:00.000-04:00", 
+                "id": "CVE-2003-0533", 
+                "modified": "2008-09-10T15:19:32.727-04:00", 
+                "summary": "Stack-based buffer overflow in certain Active Directory service functions in LSASRV.DLL of the Local Security Authority Subsystem Service (LSASS) in Microsoft Windows NT 4.0 SP6a, 2000 SP2 through SP4, XP SP1, Server 2003, NetMeeting, Windows 98, and Windows ME, allows remote attackers to execute arbitrary code via a packet that causes the DsRolerUpgradeDownlevelServer function to create long debug entries for the DCPROMO.LOG log file, as exploited by the Sasser worm."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_me"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp4::fr"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_nt:4.0:sp6a"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2003_server:r2"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:netmeeting"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp1:tablet_pc"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_98::gold"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.599", 
+                "id": 599
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/10108", 
+                "id": 10108
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/5248", 
+                "id": 5248
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/753212", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA04-104A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms04-011.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.eeye.com/html/Research/Advisories/AD20040413C.html", 
+                    "vendor": "EEYE"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=108325860431471&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://lists.grok.org.uk/pipermail/full-disclosure/2004-April/020069.html", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/15699", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/10108", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/o-114.shtml", 
+                    "vendor": "CIAC"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/753212", 
+                "id": "VU#753212"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "misc-activity", 
+                "id": "sid:2000046", 
+                "signature": "ET NETBIOS MS04011 Lsasrv.dll RPC exploit (Win2k)"
+            }, 
+            {
+                "classtype": "misc-activity", 
+                "id": "sid:2000033", 
+                "signature": "ET NETBIOS MS04011 Lsasrv.dll RPC exploit (WinXP)"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102508", 
+                "signature": "GPL NETBIOS DCERPC LSASS DsRolerUpgradeDownlevelServer Exploit attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102507", 
+                "signature": "GPL NETBIOS DCERPC LSASS bind attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102524", 
+                "signature": "GPL NETBIOS DCERPC LSASS direct bind attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102511", 
+                "signature": "GPL NETBIOS SMB DCERPC LSASS DsRolerUpgradeDownlevelServer exploit attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102510", 
+                "signature": "GPL NETBIOS SMB DCERPC LSASS bind attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102525", 
+                "signature": "GPL NETBIOS SMB DCERPC LSASS direct bind attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102509", 
+                "signature": "GPL NETBIOS SMB DCERPC LSASS unicode bind attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102514", 
+                "signature": "GPL NETBIOS SMB-DS DCERPC LSASS DsRolerUpgradeDownlevelServer exploit attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102512", 
+                "signature": "GPL NETBIOS SMB-DS DCERPC LSASS bind attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102526", 
+                "signature": "GPL NETBIOS SMB-DS DCERPC LSASS direct bind attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102513", 
+                "signature": "GPL NETBIOS SMB-DS DCERPC LSASS unicode bind attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2508", 
+                "signature": "OS-WINDOWS DCERPC NCACN-IP-TCP lsass DsRolerUpgradeDownlevelServer overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2511", 
+                "signature": "OS-WINDOWS DCERPC NCADG-IP-UDP lsass DsRolerUpgradeDownlevelServer overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms04_011_lsass.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/smb/ms04_011_lsass.rb", 
+                "title": "MS04-011 Microsoft LSASS Service DsRolerUpgradeDownlevelServer Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/windows_lsass", 
+                "id": "exploit_info/windows_lsass", 
+                "title": "Windows LSASS buffer overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2003-0533"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:898", 
+                "title": "Windows XP LSASS Buffer Overflow (Sasser Worm Vulnerability)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:898"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:883", 
+                "title": "Windows 2000 LSASS Buffer Overflow (Sasser Worm Vulnerability)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:883"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:919", 
+                "title": "Windows Server 2003 LSASS Buffer Overflow (Sasser Worm Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:919"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS04-011: Security Update for Microsoft Windows (835732) (uncredentialed check)", 
+                "file": "smb_kb835732.nasl", 
+                "family": "Windows", 
+                "id": "12209"
+            }, 
+            {
+                "name": "MS04-011: Microsoft Hotfix (credentialed check) (835732)", 
+                "file": "smb_nt_ms04-011.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "12205"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Security Update for Microsoft Windows", 
+                "id": "Security Update for Microsoft Windows", 
+                "title": "835732"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/835732", 
+                "id": "835732", 
+                "title": "Security Update for Microsoft Windows"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS04-011", 
+                "id": "MS04-011", 
+                "title": "Security Update for Microsoft Windows"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

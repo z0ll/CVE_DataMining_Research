@@ -1,0 +1,216 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3431", 
+                "published": "2011-01-24T13:00:01.970-05:00", 
+                "id": "CVE-2010-3431", 
+                "modified": "2012-07-23T23:21:44.097-04:00", 
+                "summary": "The privilege-dropping implementation in the (1) pam_env and (2) pam_mail modules in Linux-PAM (aka pam) 1.1.2 does not check the return value of the setfsuid system call, which might allow local users to obtain sensitive information by leveraging an unintended uid, as demonstrated by a symlink attack on the .pam_environment file in a user s home directory.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2010-3435."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:kernel:linux-pam:1.1.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.56214", 
+                "id": 56214
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=641361", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2010/09/21/11", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2010/10/25/2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2010/10/03/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2010/09/27/4", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2010/09/21/8", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2010/09/21/3", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2010/09/21/10", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://git.altlinux.org/people/ldv/packages/?p=pam.git;a=commit;h=843807a3a90f52e7538be756616510730a24739a", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2010/09/24/2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://security.gentoo.org/glsa/glsa-201206-31.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/49711", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2010/09/27/7", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2010/09/27/5", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2010/09/27/10", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2010/09/21/9", 
+                    "vendor": "MLIST"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "1.9", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-3431"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13730", 
+                "title": "USN-1140-2 -- pam regression", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13730"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13977", 
+                "title": "USN-1140-1 -- pam vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13977"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Ubuntu Update for pam USN-1140-1", 
+                "file": "gb_ubuntu_USN_1140_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840672"
+            }, 
+            {
+                "name": "Ubuntu Update for pam USN-1140-2", 
+                "file": "gb_ubuntu_USN_1140_2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840673"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 201206-31 (pam)", 
+                "file": "glsa_201206_31.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "71557"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "GLSA-201206-31 : Linux-PAM: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201206-31.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "59704"
+            }, 
+            {
+                "name": "Ubuntu 8.04 LTS / 10.04 LTS / 10.10 / 11.04 : pam vulnerabilities (USN-1140-1)", 
+                "file": "ubuntu_USN-1140-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "55102"
+            }, 
+            {
+                "name": "Ubuntu 8.04 LTS / 10.04 LTS / 10.10 / 11.04 : pam regression (USN-1140-2)", 
+                "file": "ubuntu_USN-1140-2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "55103"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/201206-31", 
+                "id": "GLSA-201206-31"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,187 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4613", 
+                "published": "2014-02-05T14:55:28.657-05:00", 
+                "id": "CVE-2011-4613", 
+                "modified": "2014-02-24T19:16:33.353-05:00", 
+                "summary": "The X.Org X wrapper (xserver-wrapper.c) in Debian GNU/Linux and Ubuntu Linux does not properly verify the TTY of a user who is starting X, which allows local users to bypass intended access restrictions by associating stdin with a file that is misinterpreted as the console TTY."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:x:x_server:-"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:10.10"
+            }, 
+            {
+                "id": "cpe:/o:ubuntu:linux"
+            }, 
+            {
+                "id": "cpe:/o:debian:debian_linux"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:11.04"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:11.10"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:10.04:-:lts"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.5692", 
+                "id": 5692
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1349-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2011/dsa-2364", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=652249", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/18040", 
+                "id": 18040, 
+                "file": "platforms/linux/local/18040.c"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-4613"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:14754", 
+                "title": "DSA-2364-1 xorg -- incorrect permission check", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:14754"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:14490", 
+                "title": "USN-1349-1 -- X.Org vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:14490"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2364-1 (xorg)", 
+                "file": "deb_2364_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "70576"
+            }, 
+            {
+                "name": "Ubuntu Update for xorg USN-1349-1", 
+                "file": "gb_ubuntu_USN_1349_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840878"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-2364-1 : xorg - incorrect permission check", 
+                "file": "debian_DSA-2364.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "57504"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS / 10.10 / 11.04 / 11.10 : xorg vulnerability (USN-1349-1)", 
+                "file": "ubuntu_USN-1349-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "57707"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1349-1", 
+                "id": "USN-1349-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2364", 
+                "id": "DSA-2364"
+            }
+        ], 
+        "Vmware": []
+    }
+}

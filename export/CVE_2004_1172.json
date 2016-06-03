@@ -1,0 +1,201 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-1172", 
+                "published": "2005-01-10T00:00:00.000-05:00", 
+                "id": "CVE-2004-1172", 
+                "modified": "2008-09-05T16:40:35.823-04:00", 
+                "summary": "Stack-based buffer overflow in the Agent Browser in Veritas Backup Exec 8.x before 8.60.3878 Hotfix 68, and 9.x before 9.1.4691 Hotfix 40, allows remote attackers to execute arbitrary code via a registration request with a long hostname."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:symantec_veritas:backup_exec:9.1"
+            }, 
+            {
+                "id": "cpe:/a:symantec_veritas:backup_exec:8.5"
+            }, 
+            {
+                "id": "cpe:/a:symantec_veritas:backup_exec:9.0"
+            }, 
+            {
+                "id": "cpe:/a:symantec_veritas:backup_exec:8.6"
+            }, 
+            {
+                "id": "cpe:/a:symantec_veritas:backup_exec:8.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.1065", 
+                "id": 1065
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/11974", 
+                "id": 11974
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/12418", 
+                "id": 12418
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/907729", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/11974", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/18506", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.idefense.com/application/poi/display?id=169", 
+                    "vendor": "IDEFENSE"
+                }, 
+                {
+                    "url": "http://www.frsirt.com/exploits/20050111.101_BXEC.cpp.php", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://seer.support.veritas.com/docs/273850.htm", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://seer.support.veritas.com/docs/273422.htm", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://seer.support.veritas.com/docs/273420.htm", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://seer.support.veritas.com/docs/273419.htm", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/13495/", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/907729", 
+                "id": "VU#907729"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:3084", 
+                "signature": "SERVER-OTHER Veritas backup overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "name_service.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/backupexec/name_service.rb", 
+                "title": "Veritas Backup Exec Name Service Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/backup_exec_agent_browser_hostname", 
+                "id": "exploit_info/backup_exec_agent_browser_hostname", 
+                "title": "VERITAS Backup Exec Agent Browser hostname buffer overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-1172"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "get_host_name(", 
+                "file": "gb_veritas_backup_exec_agent_browser_bof_vuln.nasl", 
+                "family": "Buffer overflow", 
+                "id": "802981"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "VERITAS Backup Exec Agent Browser Remote Buffer Overflow", 
+                "file": "veritas_backup_exec_overflow.nasl", 
+                "family": "Windows", 
+                "id": "16230"
+            }, 
+            {
+                "name": "VERITAS Backup Exec Agent Browser Registration Request Remote Overflow", 
+                "file": "veritas_backup_exec_overflow2.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "16232"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

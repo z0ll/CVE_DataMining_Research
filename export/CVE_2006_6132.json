@@ -1,0 +1,190 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6132", 
+                "published": "2006-11-27T20:07:00.000-05:00", 
+                "id": "CVE-2006-6132", 
+                "modified": "2011-03-07T21:45:15.000-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in Link Exchange Lite allow remote attackers to execute arbitrary SQL commands via (1) the search engine field to search.asp and (2) psearch parameter to linkslist.asp."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:softacid:link_exchange_lite:1.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33461", 
+                "id": 33461
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21239", 
+                "id": 21239
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30460", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4656", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21239", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/452256/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23068", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://s-a-p.ca/index.php?page=OurAdvisories&id=53", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/1920", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007362", 
+                "signature": "ET WEB_SPECIFIC_APPS Link Exchange Lite SQL Injection Attempt -- linkslist.asp psearch SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007364", 
+                "signature": "ET WEB_SPECIFIC_APPS Link Exchange Lite SQL Injection Attempt -- linkslist.asp psearch UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007363", 
+                "signature": "ET WEB_SPECIFIC_APPS Link Exchange Lite SQL Injection Attempt -- linkslist.asp psearch INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007365", 
+                "signature": "ET WEB_SPECIFIC_APPS Link Exchange Lite SQL Injection Attempt -- linkslist.asp psearch DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007366", 
+                "signature": "ET WEB_SPECIFIC_APPS Link Exchange Lite SQL Injection Attempt -- linkslist.asp psearch ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007367", 
+                "signature": "ET WEB_SPECIFIC_APPS Link Exchange Lite SQL Injection Attempt -- linkslist.asp psearch UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007368", 
+                "signature": "ET WEB_SPECIFIC_APPS Link Exchange Lite SQL Injection Attempt -- search.asp SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007369", 
+                "signature": "ET WEB_SPECIFIC_APPS Link Exchange Lite SQL Injection Attempt -- search.asp UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007370", 
+                "signature": "ET WEB_SPECIFIC_APPS Link Exchange Lite SQL Injection Attempt -- search.asp INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007371", 
+                "signature": "ET WEB_SPECIFIC_APPS Link Exchange Lite SQL Injection Attempt -- search.asp DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007372", 
+                "signature": "ET WEB_SPECIFIC_APPS Link Exchange Lite SQL Injection Attempt -- search.asp ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007373", 
+                "signature": "ET WEB_SPECIFIC_APPS Link Exchange Lite SQL Injection Attempt -- search.asp UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6132"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,340 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4097", 
+                "published": "2008-09-18T11:04:27.377-04:00", 
+                "id": "CVE-2008-4097", 
+                "modified": "2012-10-30T23:03:45.233-04:00", 
+                "summary": "MySQL 5.0.51a allows local users to bypass certain privilege checks by calling CREATE TABLE on a MyISAM table with modified (1) DATA DIRECTORY or (2) INDEX DIRECTORY arguments that are associated with symlinks within pathnames for subdirectories of the MySQL home data directory, which are followed when tables are created in the future. NOTE: this vulnerability exists because of an incomplete fix for CVE-2008-2079."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:mysql:mysql:5.0.51a"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.44075", 
+                "id": 44075
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/45648", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-671-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2008/09/16/3", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2008/09/09/20", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:094", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/32769", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/32759", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2008-11/msg00001.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=480292#25", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=480292#25", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "single_instance", 
+                    "exploit": "3.9", 
+                    "base": "4.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2008-4097"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:16963", 
+                "title": "USN-671-1 -- mysql-dfsg-5.0 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:16963"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:7628", 
+                "title": "DSA-1662 mysql-dfsg-5.0 -- authorisation bypass", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:7628"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18440", 
+                "title": "DSA-1662-1 mysql-dfsg-5.0 - authorisation bypass", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18440"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 1662-1 (mysql-dfsg-5.0)", 
+                "file": "deb_1662_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "61852"
+            }, 
+            {
+                "name": "FreeBSD Ports: mysql-server", 
+                "file": "freebsd_mysql-server15.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "63095"
+            }, 
+            {
+                "name": "Ubuntu Update for erlang vulnerability USN-624-2", 
+                "file": "gb_ubuntu_USN_671_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840292"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 201201-02 (MySQL)", 
+                "file": "glsa_201201_02.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "70803"
+            }, 
+            {
+                "name": "Mandrake Security Advisory MDVSA-2009:094 (mysql)", 
+                "file": "mdksa_2009_094.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "63872"
+            }, 
+            {
+                "name": "Mandriva Security Advisory MDVSA-2009:326 (mysql)", 
+                "file": "mdksa_2009_326.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "66425"
+            }, 
+            {
+                "name": "SLES10: Security update for MySQL", 
+                "file": "sles10_mysql0.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "65884"
+            }, 
+            {
+                "name": "SLES9: Security update for MySQL", 
+                "file": "sles9p5040120.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "65610"
+            }, 
+            {
+                "name": "SuSE Security Summary SUSE-SR:2009:001 (OpenSuSE 11.1)", 
+                "file": "suse_sr_2009_001.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "63186"
+            }, 
+            {
+                "name": "SuSE Security Summary SUSE-SR:2009:001 (OpenSuSE 11.0)", 
+                "file": "suse_sr_2009_001a.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "63187"
+            }, 
+            {
+                "name": "SuSE Security Summary SUSE-SR:2009:001 (OpenSuSE 10.3)", 
+                "file": "suse_sr_2009_001b.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "63188"
+            }, 
+            {
+                "name": "Ubuntu USN-763-1 (xine-lib)", 
+                "file": "ubuntu_763_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "64143"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : mysql (CESA-2009:1289)", 
+                "file": "centos_RHSA-2009-1289.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "43782"
+            }, 
+            {
+                "name": "CentOS 4 : mysql (CESA-2010:0110)", 
+                "file": "centos_RHSA-2010-0110.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "44647"
+            }, 
+            {
+                "name": "FreeBSD : mysql -- MyISAM table privileges security bypass vulnerability for symlinked paths (738f8f9e-d661-11dd-a765-0030843d3802)", 
+                "file": "freebsd_pkg_738f8f9ed66111dda7650030843d3802.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "35279"
+            }, 
+            {
+                "name": "GLSA-201201-02 : MySQL: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201201-02.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "57446"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : mysql (MDVSA-2009:094)", 
+                "file": "mandriva_MDVSA-2009-094.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "36943"
+            }, 
+            {
+                "name": "MySQL < 5.0.88 / 5.1.42 / 5.5.0 / 6.0.14 MyISAM CREATE TABLE Privilege Check Bypass", 
+                "file": "mysql_6_0_14_priv_bypass.nasl", 
+                "family": "Databases", 
+                "id": "17812"
+            }, 
+            {
+                "name": "Oracle Linux 4 : mysql (ELSA-2010-0110)", 
+                "file": "oraclelinux_ELSA-2010-0110.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "67998"
+            }, 
+            {
+                "name": "RHEL 5 : mysql (RHSA-2009:1289)", 
+                "file": "redhat-RHSA-2009-1289.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "63890"
+            }, 
+            {
+                "name": "RHEL 4 : mysql (RHSA-2010:0110)", 
+                "file": "redhat-RHSA-2010-0110.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "44635"
+            }, 
+            {
+                "name": "SuSE9 Security Update : MySQL (YOU Patch Number 12256)", 
+                "file": "suse9_12256.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "41243"
+            }, 
+            {
+                "name": "openSUSE Security Update : libmysqlclient-devel (libmysqlclient-devel-210)", 
+                "file": "suse_11_0_libmysqlclient-devel-080919.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "40026"
+            }, 
+            {
+                "name": "openSUSE 10 Security Update : libmysqlclient-devel (libmysqlclient-devel-5619)", 
+                "file": "suse_libmysqlclient-devel-5619.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "35248"
+            }, 
+            {
+                "name": "openSUSE 10 Security Update : mysql (mysql-5613)", 
+                "file": "suse_mysql-5613.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "34985"
+            }, 
+            {
+                "name": "SuSE 10 Security Update : MySQL (ZYPP Patch Number 5618)", 
+                "file": "suse_mysql-5618.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "34765"
+            }, 
+            {
+                "name": "Ubuntu 6.06 LTS / 7.10 / 8.04 LTS : mysql-dfsg-5.0 vulnerabilities (USN-671-1)", 
+                "file": "ubuntu_USN-671-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "37299"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:094", 
+                "id": "MDVSA-2009:094"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2008-4097.html", 
+                "id": "SUSE-SR:2008:025"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-671-1", 
+                "id": "USN-671-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,138 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0006", 
+                "published": "1998-07-14T00:00:00.000-04:00", 
+                "id": "CVE-1999-0006", 
+                "modified": "2008-09-09T08:33:31.180-04:00", 
+                "summary": "Buffer overflow in POP servers based on BSD/Qualcomm s qpopper allows remote attackers to gain root access using a long PASS command."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:qualcomm:qpopper:2.4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14177", 
+                "id": 14177
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/133", 
+                "id": 133
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/133", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "ftp://patches.sgi.com/support/free/security/advisories/19980801-01-I", 
+                    "vendor": "SGI"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2100286", 
+                "signature": "GPL POP3 x86 BSD overflow"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2100289", 
+                "signature": "GPL POP3 x86 SCO overflow"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:286", 
+                "signature": "PROTOCOL-POP EXPLOIT x86 BSD overflow"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:289", 
+                "signature": "PROTOCOL-POP EXPLOIT x86 SCO overflow"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0006"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Qpopper PASS Command Remote Overflow", 
+                "file": "qpopper.nasl", 
+                "family": "Misc.", 
+                "id": "10196"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,148 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0387", 
+                "published": "2007-01-19T18:28:00.000-05:00", 
+                "id": "CVE-2007-0387", 
+                "modified": "2008-11-13T01:31:45.347-05:00", 
+                "summary": "SQL injection vulnerability in models/category.php in the Weblinks component for Joomla! SVN 20070118 (com_weblinks) allows remote attackers to execute arbitrary SQL commands via the catid parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:joomla:joomla:2007-01-18"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34535", 
+                "id": 34535
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/34792", 
+                "id": 34792
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.hackers.ir/advisories/festival.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://osvdb.org/34792", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/fulldisclosure/2007-01/0355.html", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/459203/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005292", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- category.php catid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005293", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- category.php catid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005294", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- category.php catid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005295", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- category.php catid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005296", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- category.php catid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005297", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- category.php catid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-0387"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

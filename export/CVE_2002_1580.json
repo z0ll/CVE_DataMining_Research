@@ -1,0 +1,190 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-1580", 
+                "published": "2004-06-14T00:00:00.000-04:00", 
+                "id": "CVE-2002-1580", 
+                "modified": "2008-09-05T16:30:58.873-04:00", 
+                "summary": "Integer overflow in imapparse.c for Cyrus IMAP server 1.4 and 2.1.10 allows remote attackers to execute arbitrary code via a large length value that facilitates a buffer overflow attack, a different vulnerability than CVE-2002-1347."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:carnegie_mellon_university:cyrus_imap_server:1.4"
+            }, 
+            {
+                "id": "cpe:/a:carnegie_mellon_university:cyrus_imap_server:2.0.16"
+            }, 
+            {
+                "id": "cpe:/a:carnegie_mellon_university:cyrus_imap_server:1.5.19"
+            }, 
+            {
+                "id": "cpe:/a:carnegie_mellon_university:cyrus_imap_server:2.1.9"
+            }, 
+            {
+                "id": "cpe:/a:carnegie_mellon_university:cyrus_imap_server:2.1.10"
+            }, 
+            {
+                "id": "cpe:/a:carnegie_mellon_university:cyrus_imap_server:2.0.12"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.21897", 
+                "id": 21897
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/6298", 
+                "id": 6298
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/740169", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/10744", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/6298", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/301864", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2002/dsa-215", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://distro.conectiva.com.br/atualizacoes/?id=a&anuncio=000557", 
+                    "vendor": "CONECTIVA"
+                }, 
+                {
+                    "url": "http://asg.web.cmu.edu/cyrus/download/imapd/changes.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://distro.conectiva.com/atualizacoes/?id=a&anuncio=000557", 
+                    "vendor": "CONECTIVA"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/740169", 
+                "id": "VU#740169"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "misc-attack", 
+                "id": "sid:1993", 
+                "signature": "PROTOCOL-IMAP login literal buffer overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-1580"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: cyrus", 
+                "file": "freebsd_cyrus.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52444"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-215-1 : cyrus-imapd - buffer overflow", 
+                "file": "debian_DSA-215.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "15052"
+            }, 
+            {
+                "name": "FreeBSD : Cyrus IMAP pre-authentication heap overflow vulnerability (33)", 
+                "file": "freebsd_cyrus_2017.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "12532"
+            }, 
+            {
+                "name": "FreeBSD : Cyrus IMAP pre-authentication heap overflow vulnerability (35f6fdf8-a425-11d8-9c6d-0020ed76ef5a)", 
+                "file": "freebsd_pkg_35f6fdf8a42511d89c6d0020ed76ef5a.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "36492"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-215", 
+                "id": "DSA-215"
+            }
+        ], 
+        "Vmware": []
+    }
+}

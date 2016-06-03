@@ -1,0 +1,151 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0695", 
+                "published": "2004-07-27T00:00:00.000-04:00", 
+                "id": "CVE-2004-0695", 
+                "modified": "2008-09-10T15:27:25.413-04:00", 
+                "summary": "Stack-based buffer overflow in the FTP service for 4D WebSTAR 5.3.2 and earlier allows remote attackers to execute arbitrary code via a long FTP command."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:4d:webstar:5.2.4"
+            }, 
+            {
+                "id": "cpe:/a:4d:webstar:5.3"
+            }, 
+            {
+                "id": "cpe:/a:4d:webstar:5.2"
+            }, 
+            {
+                "id": "cpe:/a:4d:webstar:5.2.1"
+            }, 
+            {
+                "id": "cpe:/a:4d:webstar:5.2.2"
+            }, 
+            {
+                "id": "cpe:/a:4d:webstar:5.2.3"
+            }, 
+            {
+                "id": "cpe:/a:4d:webstar:5.3.1"
+            }, 
+            {
+                "id": "cpe:/a:4d:webstar:5.3.2"
+            }, 
+            {
+                "id": "cpe:/a:4d:webstar:4.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.21946", 
+                "id": 21946
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/16686", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.atstake.com/research/advisories/2004/a071304-1.txt", 
+                    "vendor": "ATSTAKE"
+                }, 
+                {
+                    "url": "ftp://ftp.4d.com/ACI_PRODUCT_REFERENCE_LIBRARY/4D_PRODUCT_DOCUMENTATION/PDF_Docs_by_4D_Product_A-Z/4D_WebSTAR/Software_Change_History.txt", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:1734", 
+                "signature": "PROTOCOL-FTP USER overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "webstar_ftp_user.rb", 
+                "file": "metasploit-framework/modules/exploits/osx/ftp/webstar_ftp_user.rb", 
+                "title": "WebSTAR FTP Server USER Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0695"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "4D WebStar Pre-authentication FTP Overflow", 
+                "file": "4d_webstar_ftp_overflow.nasl", 
+                "family": "FTP", 
+                "id": "14195"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

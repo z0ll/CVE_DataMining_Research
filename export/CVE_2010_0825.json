@@ -1,0 +1,200 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0825", 
+                "published": "2010-04-05T11:30:01.140-04:00", 
+                "id": "CVE-2010-0825", 
+                "modified": "2010-05-13T01:59:18.467-04:00", 
+                "summary": "lib-src/movemail.c in movemail in emacs 22 and 23 allows local users to read, modify, or delete arbitrary mailbox files via a symlink attack, related to improper file-permission checks."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:gnu:emacs:23.1"
+            }, 
+            {
+                "id": "cpe:/a:gnu:emacs:22.2"
+            }, 
+            {
+                "id": "cpe:/a:gnu:emacs:22.3"
+            }, 
+            {
+                "id": "cpe:/a:gnu:emacs:22.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.52575", 
+                "id": 52575
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugs.launchpad.net/ubuntu/+bug/531569", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/57457", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2010/0952", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2010/0734", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-919-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:083", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/39155", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "4.4", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-0825"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13126", 
+                "title": "USN-919-1 -- emacs22, emacs23 vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13126"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: movemail", 
+                "file": "freebsd_movemail.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "67356"
+            }, 
+            {
+                "name": "Mandriva Update for initscripts MDVA-2010:083 (initscripts)", 
+                "file": "gb_mandriva_MDVA_2010_083.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "830921"
+            }, 
+            {
+                "name": "Mandriva Update for emacs MDVSA-2010:083 (emacs)", 
+                "file": "gb_mandriva_MDVSA_2010_083.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "831005"
+            }, 
+            {
+                "name": "Ubuntu Update for emacs22, emacs23 vulnerability USN-919-1", 
+                "file": "gb_ubuntu_USN_919_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840409"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "FreeBSD : emacs -- movemail symlink race condition (5253)", 
+                "file": "freebsd_pkg_f6b6beaa4e0e11df83fb0015587e2cc1.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "45616"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : emacs (MDVSA-2010:083)", 
+                "file": "mandriva_MDVSA-2010-083.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "45588"
+            }, 
+            {
+                "name": "Ubuntu 8.04 LTS / 8.10 / 9.04 / 9.10 : emacs22, emacs23 vulnerability (USN-919-1)", 
+                "file": "ubuntu_USN-919-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "45377"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:083", 
+                "id": "MDVSA-2010:083"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-919-1", 
+                "id": "USN-919-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

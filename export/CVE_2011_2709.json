@@ -1,0 +1,247 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2709", 
+                "published": "2012-06-21T11:55:10.347-04:00", 
+                "id": "CVE-2011-2709", 
+                "modified": "2013-03-01T23:33:00.747-05:00", 
+                "summary": "libgssapi and libgssglue before 0.4 do not properly check privileges, which allows local users to load untrusted configuration files and execute arbitrary code via the GSSAPI_MECH_CONF environment variable, as demonstrated using mount.nfs."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:umich:libgssapi:0.1"
+            }, 
+            {
+                "id": "cpe:/a:umich:libgssglue:0.3"
+            }, 
+            {
+                "id": "cpe:/a:umich:libgssglue:0.2"
+            }, 
+            {
+                "id": "cpe:/a:umich:libgssapi:0.3"
+            }, 
+            {
+                "id": "cpe:/a:umich:libgssapi:0.2"
+            }, 
+            {
+                "id": "cpe:/a:umich:libgssglue:0.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.61049", 
+                "id": 61049
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/48490", 
+                "id": 48490
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.citi.umich.edu/projects/nfsv4/linux/libgssglue/libgssglue-0.4.tar.gz", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.novell.com/show_bug.cgi?id=694598", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/48490", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2011/08/12/10", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2011/07/22/4", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2011/07/21/3", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/50973", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/50785", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/45075", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lwn.net/Alerts/449415/", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2012-June/082297.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2012-June/082072.html", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "1.9", 
+                    "base": "6.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-2709"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18172", 
+                "title": "USN-1612-1 -- libgssglue vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18172"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for libgssglue FEDORA-2012-7971", 
+                "file": "gb_fedora_2012_7971_libgssglue_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864469"
+            }, 
+            {
+                "name": "Fedora Update for libgssglue FEDORA-2012-8067", 
+                "file": "gb_fedora_2012_8067_libgssglue_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864295"
+            }, 
+            {
+                "name": "Ubuntu Update for libgssglue USN-1612-1", 
+                "file": "gb_ubuntu_USN_1612_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841191"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 201209-22 (libgssglue)", 
+                "file": "glsa_201209_22.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "72456"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 17 : libgssglue-0.4-0.fc17 (2012-7971)", 
+                "file": "fedora_2012-7971.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "59531"
+            }, 
+            {
+                "name": "Fedora 16 : libgssglue-0.4-0.fc16 (2012-8067)", 
+                "file": "fedora_2012-8067.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "59429"
+            }, 
+            {
+                "name": "GLSA-201209-22 : libgssglue: Privilege escalation", 
+                "file": "gentoo_GLSA-201209-22.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "62364"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : libgssglue (MDVSA-2013:043)", 
+                "file": "mandriva_MDVSA-2013-043.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "66057"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS / 11.04 / 11.10 / 12.04 LTS : libgssglue vulnerability (USN-1612-1)", 
+                "file": "ubuntu_USN-1612-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "62557"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2012-7971", 
+                "id": "FEDORA-2012-7971"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2012-8067", 
+                "id": "FEDORA-2012-8067"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2011-2709.html", 
+                "id": "SUSE-SU-2011:0696"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

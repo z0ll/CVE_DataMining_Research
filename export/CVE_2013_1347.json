@@ -1,0 +1,242 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1347", 
+                "published": "2013-05-05T07:07:00.527-04:00", 
+                "id": "CVE-2013-1347", 
+                "modified": "2013-12-30T23:22:23.870-05:00", 
+                "summary": "Microsoft Internet Explorer 8 does not properly handle objects in memory, which allows remote attackers to execute arbitrary code by accessing an object that (1) was not properly allocated or (2) is deleted, as exploited in the wild in May 2013."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:8"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.8601", 
+                "id": 8601
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/ncas/alerts/TA13-134A", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/advisory/2847140", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/25294", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS13-038", 
+                    "vendor": "MS"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2016822", 
+                "signature": "ET WEB_CLIENT Possible CVE-2013-1347 IE 0-day used in DOL attack"
+            }, 
+            {
+                "classtype": "trojan-activity", 
+                "id": "sid:2019371", 
+                "signature": "ET CURRENT_EVENTS DRIVEBY Sednit EK IE Exploit CVE-2013-1347 M1"
+            }, 
+            {
+                "classtype": "trojan-activity", 
+                "id": "sid:2019372", 
+                "signature": "ET CURRENT_EVENTS DRIVEBY Sednit EK IE Exploit CVE-2013-1347 M2"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "trojan-activity", 
+                "id": "sid:27144", 
+                "signature": "EXPLOIT-KIT Private exploit kit outbound traffic"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ie_cgenericelement_uaf.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/browser/ie_cgenericelement_uaf.rb", 
+                "title": "MS13-038 Microsoft Internet Explorer CGenericElement Object Use-After-Free Vulnerability"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/25294", 
+                "id": 25294, 
+                "file": "http://www.exploit-db.com/download/25294"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/ie_cgenericelement_memory_corruption", 
+                "id": "exploit_info/ie_cgenericelement_memory_corruption", 
+                "title": "Internet Explorer CGenericElement Object Use-after-free Vulnerability"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-1347"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:16727", 
+                "title": "Internet Explorer Use After Free Vulnerability - MS13-038", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:16727"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "MS Internet Explorer Remote Code Execution Vulnerability (2847140)", 
+                "file": "gb_ms_ie_remote_code_exe_vuln_2847140.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "803395"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS KB2847140: Vulnerability in Internet Explorer 8 Could Allow Remote Code Execution (deprecated)", 
+                "file": "smb_kb2847140.nasl", 
+                "family": "Windows", 
+                "id": "66329"
+            }, 
+            {
+                "name": "MS13-038: Security Update for Internet Explorer (2847204)", 
+                "file": "smb_nt_ms13-038.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "66413"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Security Update for Internet Explorer", 
+                "id": "Security Update for Internet Explorer", 
+                "title": "2847204"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2847204", 
+                "id": "2847204", 
+                "title": "Security Update for Internet Explorer"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS13-038", 
+                "id": "MS13-038", 
+                "title": "Security Update for Internet Explorer"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

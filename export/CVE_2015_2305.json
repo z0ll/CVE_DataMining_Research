@@ -1,0 +1,340 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2305", 
+                "published": "2015-03-30T06:59:11.663-04:00", 
+                "id": "CVE-2015-2305", 
+                "modified": "2015-10-09T22:00:37.353-04:00", 
+                "summary": "Integer overflow in the regcomp implementation in the Henry Spencer BSD regex library (aka rxspencer) alpha3.8.g5 on 32-bit platforms, as used in NetBSD through 6.1.5 and other products, might allow context-dependent attackers to execute arbitrary code via a large regular expression that leads to a heap-based buffer overflow."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:novell:opensuse:13.2"
+            }, 
+            {
+                "id": "cpe:/o:novell:opensuse:13.1"
+            }, 
+            {
+                "id": "cpe:/o:debian:debian_linux:7.0"
+            }, 
+            {
+                "id": "cpe:/a:rxspencer_project:rxspencer:3.8.g5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.74065", 
+                "id": 74065
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/695940", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "https://support.apple.com/HT205267", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://guidovranken.wordpress.com/2015/02/04/full-disclosure-heap-overflow-in-h-spencers-regex-library-on-32-bit-systems/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2594-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id/1031947", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2015/dsa-3195", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://php.net/ChangeLog-5.php", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2015/03/11/8", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2015/02/07/14", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2015-04/msg00002.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-05/msg00026.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.apple.com/archives/security-announce/2015/Sep/msg00008.html", 
+                    "vendor": "APPLE"
+                }, 
+                {
+                    "url": "http://blog.clamav.net/2015/04/clamav-0987-has-been-released.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/695940", 
+                "id": "VU#695940"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-2305"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:29157", 
+                "title": "HP-UX  Apache Server Suite running Apache Tomcat or PHP, Remote Denial of Service (DoS) and Other Vulnerabilities", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:29157"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:49", 
+                "title": "DSA-3195-1 -- php5 -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:49"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3195-1 (php5 - security update)", 
+                "file": "deb_3195.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703195"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : php54 (ALAS-2015-506)", 
+                "file": "ala_ALAS-2015-506.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "82834"
+            }, 
+            {
+                "name": "Amazon Linux AMI : php55 (ALAS-2015-507)", 
+                "file": "ala_ALAS-2015-507.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "82835"
+            }, 
+            {
+                "name": "Amazon Linux AMI : php56 (ALAS-2015-508)", 
+                "file": "ala_ALAS-2015-508.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "82836"
+            }, 
+            {
+                "name": "Amazon Linux AMI : php (ALAS-2015-524)", 
+                "file": "ala_ALAS-2015-524.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "83494"
+            }, 
+            {
+                "name": "ClamAV < 0.98.7 Multiple Vulnerabilities", 
+                "file": "clamav_0_98_7.nasl", 
+                "family": "Misc.", 
+                "id": "83352"
+            }, 
+            {
+                "name": "Debian DLA-444-1 : php5 security update", 
+                "file": "debian_DLA-444.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "89044"
+            }, 
+            {
+                "name": "Debian DSA-3195-1 : php5 - security update", 
+                "file": "debian_DSA-3195.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "81926"
+            }, 
+            {
+                "name": "FreeBSD : clamav -- multiple vulnerabilities (3d0428b2-fdfb-11e4-894f-d050996490d0)", 
+                "file": "freebsd_pkg_3d0428b2fdfb11e4894fd050996490d0.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "83555"
+            }, 
+            {
+                "name": "FreeBSD : Several vulnerabilities found in PHP (742563d4-d776-11e4-b595-4061861086c1)", 
+                "file": "freebsd_pkg_742563d4d77611e4b5954061861086c1.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "82514"
+            }, 
+            {
+                "name": "Mac OS X < 10.11 Multiple Vulnerabilities (GHOST)", 
+                "file": "macosx_10_11.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "86270"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : clamav (MDVSA-2015:221)", 
+                "file": "mandriva_MDVSA-2015-221.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "83245"
+            }, 
+            {
+                "name": "openSUSE Security Update : php5 (openSUSE-2015-282)", 
+                "file": "openSUSE-2015-282.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "82516"
+            }, 
+            {
+                "name": "openSUSE Security Update : clamav (openSUSE-2015-366)", 
+                "file": "openSUSE-2015-366.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83558"
+            }, 
+            {
+                "name": "PHP 5.4.x < 5.4.39 Multiple Vulnerabilities", 
+                "file": "php_5_4_39.nasl", 
+                "family": "CGI abuses", 
+                "id": "82025"
+            }, 
+            {
+                "name": "PHP 5.5.x < 5.5.23 Multiple Vulnerabilities", 
+                "file": "php_5_5_23.nasl", 
+                "family": "CGI abuses", 
+                "id": "82026"
+            }, 
+            {
+                "name": "PHP 5.6.x < 5.6.7 Multiple Vulnerabilities", 
+                "file": "php_5_6_7.nasl", 
+                "family": "CGI abuses", 
+                "id": "82027"
+            }, 
+            {
+                "name": "Slackware 14.0 / 14.1 / current : php (SSA:2015-111-10)", 
+                "file": "Slackware_SSA_2015-111-10.nasl", 
+                "family": "Slackware Local Security Checks", 
+                "id": "82923"
+            }, 
+            {
+                "name": "SuSE 11.3 Security Update : clamav (SAT Patch Number 10664)", 
+                "file": "suse_11_clamav-150507.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83461"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : MySQL (SUSE-SU-2015:0946-1) (FREAK)", 
+                "file": "suse_SU-2015-0946-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83860"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : php53 (SUSE-SU-2015:1018-1)", 
+                "file": "suse_SU-2015-1018-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84082"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS / 12.04 LTS / 14.04 / 14.10 : php5 vulnerabilities (USN-2572-1)", 
+                "file": "ubuntu_USN-2572-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "82911"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 14.04 / 14.10 / 15.04 : clamav vulnerabilities (USN-2594-1)", 
+                "file": "ubuntu_USN-2594-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83255"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2015-2305.html", 
+                "id": "SUSE-SU-2015:0946"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2015-2305.html", 
+                "id": "openSUSE-SU-2015:0644"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2594-1", 
+                "id": "USN-2594-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3195", 
+                "id": "DSA-3195"
+            }
+        ], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,210 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1848", 
+                "published": "2015-05-14T10:59:07.897-04:00", 
+                "id": "CVE-2015-1848", 
+                "modified": "2015-05-15T11:30:37.940-04:00", 
+                "summary": "The pcs daemon (pcsd) in PCS 0.9.137 and earlier does not set the secure flag for a cookie in an https session, which makes it easier for remote attackers to capture this cookie by intercepting its transmission within an http session.  NOTE: this issue was SPLIT per ADT2 due to different vulnerability types. CVE-2015-3983 is for the issue with not setting the HTTPOnly flag."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/310.html", 
+                "id": "CWE-310", 
+                "title": "Cryptographic Issues"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:fedora:pacemaker_configuration_system:0.9.137"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.75396", 
+                "id": 75396
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/attachment.cgi?id=1009855", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-0990.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-0980.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-1848"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "CentOS 7 : pcs (CESA-2015:0980)", 
+                "file": "centos_RHSA-2015-0980.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "83375"
+            }, 
+            {
+                "name": "CentOS 6 : pcs (CESA-2015:0990)", 
+                "file": "centos_RHSA-2015-0990.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "83379"
+            }, 
+            {
+                "name": "Fedora 20 : pcs-0.9.115-3.fc20 (2015-8761)", 
+                "file": "fedora_2015-8761.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "83998"
+            }, 
+            {
+                "name": "Fedora 22 : pcs-0.9.139-4.fc22 (2015-8765)", 
+                "file": "fedora_2015-8765.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "83999"
+            }, 
+            {
+                "name": "Fedora 21 : pcs-0.9.137-4.fc21 (2015-8788)", 
+                "file": "fedora_2015-8788.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "84001"
+            }, 
+            {
+                "name": "PCS Daemon (pcsd) Cookie Signing Multiple Vulnerabilities", 
+                "file": "pcsd_info_disclosure.nasl", 
+                "family": "CGI abuses", 
+                "id": "84289"
+            }, 
+            {
+                "name": "RHEL 7 : pcs (RHSA-2015:0980)", 
+                "file": "redhat-RHSA-2015-0980.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "83405"
+            }, 
+            {
+                "name": "RHEL 6 : pcs (RHSA-2015:0990)", 
+                "file": "redhat-RHSA-2015-0990.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "83411"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : pcs on SL6.x i386/srpm/x86_64", 
+                "file": "sl_20150512_pcs_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "83453"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : pcs on SL7.x x86_64", 
+                "file": "sl_20150512_pcs_on_SL7_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "83454"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20150980", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-0980.html", 
+                    "id": "RHSA-2015:0980", 
+                    "title": "RHSA-2015:0980: pcs security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1208294", 
+                    "title": "CVE-2015-1848 CVE-2015-3983 pcs: improper web session variable signing", 
+                    "id": "1208294", 
+                    "issue date": "2015-05-12", 
+                    "associated redhat": "RHSA-2015:0980"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20150990", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-0990.html", 
+                    "id": "RHSA-2015:0990", 
+                    "title": "RHSA-2015:0990: pcs security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1208294", 
+                    "title": "CVE-2015-1848 CVE-2015-3983 pcs: improper web session variable signing", 
+                    "id": "1208294", 
+                    "issue date": "2015-05-12", 
+                    "associated redhat": "RHSA-2015:0990"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

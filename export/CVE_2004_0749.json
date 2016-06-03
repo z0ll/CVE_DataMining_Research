@@ -1,0 +1,235 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0749", 
+                "published": "2004-12-23T00:00:00.000-05:00", 
+                "id": "CVE-2004-0749", 
+                "modified": "2008-09-05T16:39:17.937-04:00", 
+                "summary": "The mod_authz_svn module in Subversion 1.0.7 and earlier does not properly restrict access to all metadata on unreadable paths, which could allow remote attackers to gain sensitive information via (1) svn log -v, (2) svn propget, or (3) svn blame, and other commands that follow renames."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:gentoo:linux:1.4:rc1"
+            }, 
+            {
+                "id": "cpe:/o:gentoo:linux:1.4:rc3"
+            }, 
+            {
+                "id": "cpe:/o:gentoo:linux:0.7"
+            }, 
+            {
+                "id": "cpe:/a:subversion:subversion:1.0.3"
+            }, 
+            {
+                "id": "cpe:/a:subversion:subversion:1.0.4"
+            }, 
+            {
+                "id": "cpe:/a:subversion:subversion:1.0.5"
+            }, 
+            {
+                "id": "cpe:/a:subversion:subversion:1.0.6"
+            }, 
+            {
+                "id": "cpe:/o:gentoo:linux:1.4:rc2"
+            }, 
+            {
+                "id": "cpe:/a:subversion:subversion:1.0.1"
+            }, 
+            {
+                "id": "cpe:/a:subversion:subversion:1.0.2"
+            }, 
+            {
+                "id": "cpe:/o:gentoo:linux:1.1a"
+            }, 
+            {
+                "id": "cpe:/a:subversion:subversion:1.0.7"
+            }, 
+            {
+                "id": "cpe:/o:gentoo:linux:1.2"
+            }, 
+            {
+                "id": "cpe:/a:subversion:subversion:1.1.0_rc2"
+            }, 
+            {
+                "id": "cpe:/a:subversion:subversion:1.0"
+            }, 
+            {
+                "id": "cpe:/a:subversion:subversion:1.1.0_rc3"
+            }, 
+            {
+                "id": "cpe:/o:gentoo:linux:1.4"
+            }, 
+            {
+                "id": "cpe:/a:subversion:subversion:1.1.0_rc1"
+            }, 
+            {
+                "id": "cpe:/o:gentoo:linux:0.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.22580", 
+                "id": 22580
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/11243", 
+                "id": 11243
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/17472", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/11243", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.gentoo.org/security/en/glsa/glsa-200409-35.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://subversion.tigris.org/security/CAN-2004-0749-advisory.txt", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://fedoranews.org/updates/FEDORA-2004-318.shtml", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0749"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: subversion, subversion-perl, subversion-python", 
+                "file": "freebsd_subversion.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52373"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 200409-35 (Subversion)", 
+                "file": "glsa_200409_35.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "54691"
+            }, 
+            {
+                "name": "Subversion Module unreadeable path information disclosure", 
+                "file": "subversion_1_0_8.nasl", 
+                "family": "Remote file access", 
+                "id": "14800"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora Core 2 : subversion-1.0.8-1 (2004-318)", 
+                "file": "fedora_2004-318.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "14808"
+            }, 
+            {
+                "name": "FreeBSD : subversion -- WebDAV fails to protect metadata (184f5d0b-0fe8-11d9-8a8a-000c41e2cdad)", 
+                "file": "freebsd_pkg_184f5d0b0fe811d98a8a000c41e2cdad.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "37142"
+            }, 
+            {
+                "name": "FreeBSD : subversion -- WebDAV fails to protect metadata (188)", 
+                "file": "freebsd_subversion_108.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "14844"
+            }, 
+            {
+                "name": "GLSA-200409-35 : Subversion: Metadata information leak", 
+                "file": "gentoo_GLSA-200409-35.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "15406"
+            }, 
+            {
+                "name": "Subversion < 1.0.8 / 1.1.0-rc4 mod_authz_svn Unreadable Path Metadata Information Disclosure", 
+                "file": "subversion_1_0_8.nasl", 
+                "family": "Misc.", 
+                "id": "14800"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2004-318", 
+                "id": "FEDORA-2004-318"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200409-35", 
+                "id": "GLSA-200409-35"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

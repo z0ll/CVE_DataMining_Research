@@ -1,0 +1,139 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1373", 
+                "published": "2007-03-09T19:19:00.000-05:00", 
+                "id": "CVE-2007-1373", 
+                "modified": "2008-11-13T01:34:46.473-05:00", 
+                "summary": "Stack-based buffer overflow in Mercury/32 (aka Mercury Mail Transport System) 4.01b and earlier allows remote attackers to execute arbitrary code via a long LOGIN command.  NOTE: this might be the same issue as CVE-2006-5961."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:pmail:mercury_mail_transport_system:4.01b"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35525", 
+                "id": 35525
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/33883", 
+                "id": 33883
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/32848", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/24367", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/33883", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://lists.grok.org.uk/pipermail/full-disclosure/2007-March/052802.html", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2398", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-user", 
+                "id": "sid:1842", 
+                "signature": "PROTOCOL-IMAP login buffer overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "mercury_login.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/imap/mercury_login.rb", 
+                "title": "Mercury/32 LOGIN Buffer Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/mercury_imap_continuation", 
+                "id": "exploit_info/mercury_imap_continuation", 
+                "title": "Mercury IMAP data continuation buffer overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1373"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

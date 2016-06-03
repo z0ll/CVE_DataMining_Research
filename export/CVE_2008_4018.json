@@ -1,0 +1,230 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4018", 
+                "published": "2008-09-10T21:13:52.867-04:00", 
+                "id": "CVE-2008-4018", 
+                "modified": "2011-03-07T22:11:48.923-05:00", 
+                "summary": "swcons in bos.rte.console in IBM AIX 5.2.0 through 6.1.1 allows local users in the system group to create or overwrite an arbitrary file, and establish weak permissions and root ownership for this file, via unspecified vectors.  NOTE: this can be leveraged to gain privileges. NOTE: this issue exists because of an incomplete fix for CVE-2007-5805."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:ibm:aix:5.3"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:5.2"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:6.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.43996", 
+                "id": 43996
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/30999", 
+                "id": 30999
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/44903", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2008/2490", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/30999", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IZ28943", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IZ18341", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IZ18339", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IZ18338", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IZ18335", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IZ18334", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1020818", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/31739", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://aix.software.ibm.com/aix/efixes/security/swcons_advisory.asc", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2008-4018"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:5932", 
+                "title": "IBM AIX 'swcons' Insecure File Creation Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:5932"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "AIX 5.3 TL 8 : swcons (IZ18334)", 
+                "file": "aix_IZ18334.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "63758"
+            }, 
+            {
+                "name": "AIX 5.2 TL 0 : swcons (IZ18335)", 
+                "file": "aix_IZ18335.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "63759"
+            }, 
+            {
+                "name": "AIX 5.3 TL 7 : swcons (IZ18338)", 
+                "file": "aix_IZ18338.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "63760"
+            }, 
+            {
+                "name": "AIX 5.3 TL 0 : swcons (IZ18339)", 
+                "file": "aix_IZ18339.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "63761"
+            }, 
+            {
+                "name": "AIX 6.1 TL 0 : swcons (IZ18341)", 
+                "file": "aix_IZ18341.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "63762"
+            }, 
+            {
+                "name": "AIX 6.1 TL 1 : swcons (IZ28943)", 
+                "file": "aix_IZ28943.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "63773"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IZ18334", 
+                "id": "IZ18334"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IZ18335", 
+                "id": "IZ18335"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IZ18338", 
+                "id": "IZ18338"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IZ18339", 
+                "id": "IZ18339"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IZ18341", 
+                "id": "IZ18341"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IZ28943", 
+                "id": "IZ28943"
+            }
+        ], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,519 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2922", 
+                "published": "2015-05-27T06:59:06.987-04:00", 
+                "id": "CVE-2015-2922", 
+                "modified": "2015-08-25T22:01:44.733-04:00", 
+                "summary": "The ndisc_router_discovery function in net/ipv6/ndisc.c in the Neighbor Discovery (ND) protocol implementation in the IPv6 stack in the Linux kernel before 3.19.6 allows remote attackers to reconfigure a hop-limit setting via a small hop_limit value in a Router Advertisement (RA) message."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/17.html", 
+                "id": "CWE-17", 
+                "title": "Code"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.19.5"
+            }, 
+            {
+                "id": "cpe:/o:debian:debian_linux:7.0"
+            }, 
+            {
+                "id": "cpe:/o:debian:debian_linux:8.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.74666", 
+                "id": 74666
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/torvalds/linux/commit/6fd99094de2b83d1d4c8457f2c83483b2828e75a", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1203712", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/04/04/2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.kernel.org/pub/linux/kernel/v3.x/ChangeLog-3.19.6", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2015/dsa-3237", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-1564.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=6fd99094de2b83d1d4c8457f2c83483b2828e75a", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "6.5", 
+                    "base": "3.3", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "adjacent_network"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-2922"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:72", 
+                "title": "DSA-3237-1 -- linux -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:72"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3237-1 (linux - security update)", 
+                "file": "deb_3237.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703237"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 6 : kernel (CESA-2015:1221)", 
+                "file": "centos_RHSA-2015-1221.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "84769"
+            }, 
+            {
+                "name": "CentOS 7 : kernel (CESA-2015:1534)", 
+                "file": "centos_RHSA-2015-1534.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "85305"
+            }, 
+            {
+                "name": "Debian DLA-246-2 : linux-2.6 regression update", 
+                "file": "debian_DLA-246.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "84252"
+            }, 
+            {
+                "name": "Debian DSA-3237-1 : linux - security update", 
+                "file": "debian_DSA-3237.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "83065"
+            }, 
+            {
+                "name": "F5 Networks BIG-IP : Linux kernel vulnerability (SOL51518670)", 
+                "file": "f5_bigip_SOL51518670.nasl", 
+                "family": "F5 Networks Local Security Checks", 
+                "id": "90102"
+            }, 
+            {
+                "name": "Fedora 22 : kernel-4.0.0-1.fc22 (2015-6100)", 
+                "file": "fedora_2015-6100.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "83040"
+            }, 
+            {
+                "name": "Fedora 20 : kernel-3.19.4-100.fc20 (2015-6294)", 
+                "file": "fedora_2015-6294.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "83019"
+            }, 
+            {
+                "name": "Fedora 21 : kernel-3.19.4-200.fc21 (2015-6320)", 
+                "file": "fedora_2015-6320.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "83020"
+            }, 
+            {
+                "name": "openSUSE Security Update : the Linux Kernel (openSUSE-2015-543)", 
+                "file": "openSUSE-2015-543.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85432"
+            }, 
+            {
+                "name": "openSUSE Security Update : the Linux Kernel (openSUSE-2016-124)", 
+                "file": "openSUSE-2016-124.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88545"
+            }, 
+            {
+                "name": "Oracle Linux 6 : kernel (ELSA-2015-1221)", 
+                "file": "oraclelinux_ELSA-2015-1221.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "84757"
+            }, 
+            {
+                "name": "Oracle Linux 6 : kernel (ELSA-2015-1272)", 
+                "file": "oraclelinux_ELSA-2015-1272.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85097"
+            }, 
+            {
+                "name": "Oracle Linux 7 : kernel (ELSA-2015-1534)", 
+                "file": "oraclelinux_ELSA-2015-1534.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85247"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : Unbreakable Enterprise kernel (ELSA-2015-3048)", 
+                "file": "oraclelinux_ELSA-2015-3048.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "84786"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2015-3049)", 
+                "file": "oraclelinux_ELSA-2015-3049.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "84818"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2015-3050)", 
+                "file": "oraclelinux_ELSA-2015-3050.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "84819"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : Unbreakable Enterprise kernel (ELSA-2015-3064)", 
+                "file": "oraclelinux_ELSA-2015-3064.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85177"
+            }, 
+            {
+                "name": "OracleVM 3.3 : kernel-uek (OVMSA-2015-0094)", 
+                "file": "oraclevm_OVMSA-2015-0094.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "84891"
+            }, 
+            {
+                "name": "OracleVM 3.3 : kernel-uek (OVMSA-2015-0109)", 
+                "file": "oraclevm_OVMSA-2015-0109.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "85188"
+            }, 
+            {
+                "name": "OracleVM 3.2 : kernel-uek (OVMSA-2016-0037)", 
+                "file": "oraclevm_OVMSA-2016-0037.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "90019"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2015:1221)", 
+                "file": "redhat-RHSA-2015-1221.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "84758"
+            }, 
+            {
+                "name": "RHEL 7 : kernel (RHSA-2015:1534)", 
+                "file": "redhat-RHSA-2015-1534.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "85248"
+            }, 
+            {
+                "name": "RHEL 6 : kernel-rt (RHSA-2015:1564)", 
+                "file": "redhat-RHSA-2015-1564.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "85249"
+            }, 
+            {
+                "name": "RHEL 7 : kernel-rt (RHSA-2015:1565)", 
+                "file": "redhat-RHSA-2015-1565.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "85705"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL6.x i386/x86_64", 
+                "file": "sl_20150714_kernel_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "84790"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL7.x x86_64", 
+                "file": "sl_20150805_kernel_on_SL7_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "85264"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : kernel (SUSE-SU-2015:1071-1)", 
+                "file": "suse_SU-2015-1071-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84227"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : kernel (SUSE-SU-2015:1174-1)", 
+                "file": "suse_SU-2015-1174-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84545"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : kernel (SUSE-SU-2015:1478-1)", 
+                "file": "suse_SU-2015-1478-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85764"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux vulnerability (USN-2585-1)", 
+                "file": "ubuntu_USN-2585-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83177"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-trusty vulnerabilities (USN-2587-1)", 
+                "file": "ubuntu_USN-2587-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83178"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux vulnerabilities (USN-2588-1)", 
+                "file": "ubuntu_USN-2588-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83179"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-utopic vulnerabilities (USN-2589-1)", 
+                "file": "ubuntu_USN-2589-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83180"
+            }, 
+            {
+                "name": "Ubuntu 14.10 : linux vulnerabilities (USN-2590-1)", 
+                "file": "ubuntu_USN-2590-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83181"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1564.html", 
+                    "id": "RHSA-2015:1564", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151221", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1221.html", 
+                    "id": "RHSA-2015:1221", 
+                    "title": "RHSA-2015:1221: kernel security, bug fix, and enhancement update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1192519", 
+                    "title": "CVE-2015-1593 kernel: Linux stack ASLR implementation Integer overflow", 
+                    "id": "1192519", 
+                    "issue date": "2015-07-14", 
+                    "associated redhat": "RHSA-2015:1221"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1201887", 
+                    "title": "CVE-2011-5321 Kernel: tty: driver reference leakage in tty_open", 
+                    "id": "1201887", 
+                    "issue date": "2015-07-14", 
+                    "associated redhat": "RHSA-2015:1221"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1203712", 
+                    "title": "CVE-2015-2922 kernel: denial of service (DoS) attack against IPv6 network stacks due to improper handling of Router Advertisements.", 
+                    "id": "1203712", 
+                    "issue date": "2015-07-14", 
+                    "associated redhat": "RHSA-2015:1221"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1208598", 
+                    "title": "CVE-2015-2830 kernel: int80 fork from 64-bit tasks mishandling", 
+                    "id": "1208598", 
+                    "issue date": "2015-07-14", 
+                    "associated redhat": "RHSA-2015:1221"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1218074", 
+                    "title": "CVE-2015-3636 kernel: ping sockets: use-after-free leading to local privilege escalation", 
+                    "id": "1218074", 
+                    "issue date": "2015-07-14", 
+                    "associated redhat": "RHSA-2015:1221"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151534", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1534.html", 
+                    "id": "RHSA-2015:1534", 
+                    "title": "RHSA-2015:1534: kernel security and bug fix update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1203712", 
+                    "title": "CVE-2015-2922 kernel: denial of service (DoS) attack against IPv6 network stacks due to improper handling of Router Advertisements.", 
+                    "id": "1203712", 
+                    "issue date": "2015-08-05", 
+                    "associated redhat": "RHSA-2015:1534"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1204722", 
+                    "title": "CVE-2015-2666 kernel: execution in the early microcode loader", 
+                    "id": "1204722", 
+                    "issue date": "2015-08-05", 
+                    "associated redhat": "RHSA-2015:1534"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1208684", 
+                    "title": "CVE-2014-9715 kernel: netfilter connection tracking extensions denial of service", 
+                    "id": "1208684", 
+                    "issue date": "2015-08-05", 
+                    "associated redhat": "RHSA-2015:1534"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1218074", 
+                    "title": "CVE-2015-3636 kernel: ping sockets: use-after-free leading to local privilege escalation", 
+                    "id": "1218074", 
+                    "issue date": "2015-08-05", 
+                    "associated redhat": "RHSA-2015:1534"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151565", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1565.html", 
+                    "id": "RHSA-2015:1565", 
+                    "title": "RHSA-2015:1565: kernel-rt security, bug fix, and enhancement update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1203712", 
+                    "title": "CVE-2015-2922 kernel: denial of service (DoS) attack against IPv6 network stacks due to improper handling of Router Advertisements.", 
+                    "id": "1203712", 
+                    "issue date": "2015-07-03", 
+                    "associated redhat": "RHSA-2015:1565"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1204722", 
+                    "title": "CVE-2015-2666 kernel: execution in the early microcode loader", 
+                    "id": "1204722", 
+                    "issue date": "2015-07-03", 
+                    "associated redhat": "RHSA-2015:1565"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1208684", 
+                    "title": "CVE-2014-9715 kernel: netfilter connection tracking extensions denial of service", 
+                    "id": "1208684", 
+                    "issue date": "2015-07-03", 
+                    "associated redhat": "RHSA-2015:1565"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1218074", 
+                    "title": "CVE-2015-3636 kernel: ping sockets: use-after-free leading to local privilege escalation", 
+                    "id": "1218074", 
+                    "issue date": "2015-07-03", 
+                    "associated redhat": "RHSA-2015:1565"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1234470", 
+                    "title": "kernel-rt: update to the RHEL7.1.z batch 4 source tree", 
+                    "id": "1234470", 
+                    "issue date": "2015-07-03", 
+                    "associated redhat": "RHSA-2015:1565"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3237", 
+                "id": "DSA-3237"
+            }
+        ], 
+        "Vmware": []
+    }
+}

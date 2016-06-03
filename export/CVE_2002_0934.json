@@ -1,0 +1,148 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0934", 
+                "published": "2002-10-04T00:00:00.000-04:00", 
+                "id": "CVE-2002-0934", 
+                "modified": "2008-09-05T16:29:20.270-04:00", 
+                "summary": "Directory traversal vulnerability in Jon Hedley AlienForm2 (typically installed as af.cgi or alienform.cgi) allows remote attackers to read or modify arbitrary files via an illegal character in the middle of a .. (dot dot) sequence in the parameters (1) _browser_out or (2) _out_file."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:jon_hedley:alienform2:1.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.18870", 
+                "id": 18870
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/4983", 
+                "id": 4983
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/4983", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/static/9325.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2002-06/0068.html", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "6.4", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1822", 
+                "signature": "SERVER-WEBAPP AlienForm alienform.cgi directory traversal attempt"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1823", 
+                "signature": "SERVER-WEBAPP AlienForm af.cgi directory traversal attempt"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1824", 
+                "signature": "SERVER-WEBAPP AlienForm alienform.cgi access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1825", 
+                "signature": "SERVER-WEBAPP AlienForm af.cgi access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-0934"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "AlienForm CGI script", 
+                "file": "alienform.nasl", 
+                "family": "Web application abuses", 
+                "id": "11027"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "AlienForm2 alienform.cgi Traversal Arbitrary File Manipulation", 
+                "file": "alienform.nasl", 
+                "family": "CGI abuses", 
+                "id": "11027"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

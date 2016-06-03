@@ -1,0 +1,203 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0283", 
+                "published": "2011-02-10T13:00:55.317-05:00", 
+                "id": "CVE-2011-0283", 
+                "modified": "2011-09-21T23:27:56.960-04:00", 
+                "summary": "The Key Distribution Center (KDC) in MIT Kerberos 5 (aka krb5) 1.9 allows remote attackers to cause a denial of service (NULL pointer dereference and daemon crash) via a malformed request packet that does not trigger a response packet."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:mit:kerberos:5-1.9"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.56440", 
+                "id": 56440
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/46272", 
+                "id": 46272
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2011/0330", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1025037", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/46272", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/516299/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2011-002.txt", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/8073", 
+                    "vendor": "SREASON"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/43260", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-0283"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: krb5", 
+                "file": "freebsd_krb512.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "69597"
+            }, 
+            {
+                "name": "Fedora Update for krb5 FEDORA-2011-14673", 
+                "file": "gb_fedora_2011_14673_krb5_fc15.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863621"
+            }, 
+            {
+                "name": "Fedora Update for krb5 FEDORA-2011-16284", 
+                "file": "gb_fedora_2011_16284_krb5_fc15.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863707"
+            }, 
+            {
+                "name": "Fedora Update for krb5 FEDORA-2012-8805", 
+                "file": "gb_fedora_2012_8805_krb5_fc15.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864443"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 201201-13 (mit-krb5)", 
+                "file": "glsa_201201_13.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "70814"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : krb5 (CESA-2011:0199)", 
+                "file": "centos_RHSA-2011-0199.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "53418"
+            }, 
+            {
+                "name": "FreeBSD : krb5 -- MITKRB5-SA-2011-002, KDC vulnerable to hang when using LDAP back end (4ab413ea-66ce-11e0-bf05-d445f3aa24f0)", 
+                "file": "freebsd_pkg_4ab413ea66ce11e0bf05d445f3aa24f0.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "53440"
+            }, 
+            {
+                "name": "GLSA-201201-13 : MIT Kerberos 5: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201201-13.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "57655"
+            }, 
+            {
+                "name": "Oracle Linux 5 : krb5 (ELSA-2011-0199)", 
+                "file": "oraclelinux_ELSA-2011-0199.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68195"
+            }, 
+            {
+                "name": "Oracle Linux 6 : krb5 (ELSA-2011-0200)", 
+                "file": "oraclelinux_ELSA-2011-0200.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68196"
+            }, 
+            {
+                "name": "RHEL 5 : krb5 (RHSA-2011:0199)", 
+                "file": "redhat-RHSA-2011-0199.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "51917"
+            }, 
+            {
+                "name": "RHEL 6 : krb5 (RHSA-2011:0200)", 
+                "file": "redhat-RHSA-2011-0200.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "51918"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

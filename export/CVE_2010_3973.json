@@ -1,0 +1,255 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3973", 
+                "published": "2010-12-23T13:00:03.150-05:00", 
+                "id": "CVE-2010-3973", 
+                "modified": "2011-07-18T22:41:00.187-04:00", 
+                "summary": "The WMITools ActiveX control in WBEMSingleView.ocx 1.50.1131.0 in Microsoft WMI Administrative Tools 1.1 and earlier in Microsoft Windows XP SP2 and SP3 allows remote attackers to execute arbitrary code via a crafted argument to the AddContextRef method, possibly an untrusted pointer dereference, aka \"Microsoft WMITools ActiveX Control Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:wmi_administrative_tools:1.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.55850", 
+                "id": 55850
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/45546", 
+                "id": 45546
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/69942", 
+                "id": 69942
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/725596", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/64250", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.wooyun.org/bug.php?action=view&id=1006", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2010/3301", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/45546", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/Bulletin/MS11-027.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/15809", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/42693", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://blogs.technet.com/b/srd/archive/2011/01/07/assessing-the-risk-of-public-issues-currently-being-tracked-by-the-msrc.aspx", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/725596", 
+                "id": "VU#725596"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2012158", 
+                "signature": "ET ACTIVEX Possible Microsoft WMI Administration Tools WEBSingleView.ocx ActiveX Buffer Overflow Attempt"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "wmi_admintools.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/browser/wmi_admintools.rb", 
+                "title": "Microsoft WMI Administration Tools ActiveX Buffer Overflow"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/15809", 
+                "id": 15809, 
+                "file": "http://www.exploit-db.com/download/15809"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/microsoft_wmi_admin_tools_addcontextref", 
+                "id": "exploit_info/microsoft_wmi_admin_tools_addcontextref", 
+                "title": "Microsoft WMI Administrative Tools ActiveX Control AddContextRef vulnerability"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-3973"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:12475", 
+                "title": "Microsoft WMITools ActiveX Control Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:12475"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft IE Developer Tools WMITools and Windows Messenger ActiveX Control Vulnerability (2508272)", 
+                "file": "secpod_ms11-027.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "900281"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS11-027: Cumulative Security Update of ActiveX Kill Bits (2508272)", 
+                "file": "smb_nt_ms11-027.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "53384"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Cumulative Security Update of ActiveX Kill Bits", 
+                "id": "Cumulative Security Update of ActiveX Kill Bits", 
+                "title": "2508272"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2508272", 
+                "id": "2508272", 
+                "title": "Cumulative Security Update of ActiveX Kill Bits"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS11-027", 
+                "id": "MS11-027", 
+                "title": "Cumulative Security Update of ActiveX Kill Bits"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

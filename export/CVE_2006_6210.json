@@ -1,0 +1,152 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6210", 
+                "published": "2006-11-30T20:28:00.000-05:00", 
+                "id": "CVE-2006-6210", 
+                "modified": "2008-09-05T17:14:11.457-04:00", 
+                "summary": "SQL injection vulnerability in listpics.asp in ASP ListPics 5.0 allows remote attackers to execute arbitrary SQL commands via the ID parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:iisworks:asp_listpics:5.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33548", 
+                "id": 33548
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21279", 
+                "id": 21279
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30511", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21279", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/452569/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.aria-security.com/forum/showthread.php?t=41", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/1946", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007000", 
+                "signature": "ET WEB_SPECIFIC_APPS ASP ListPics SQL Injection Attempt -- listpics.asp ID SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007001", 
+                "signature": "ET WEB_SPECIFIC_APPS ASP ListPics SQL Injection Attempt -- listpics.asp ID UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007002", 
+                "signature": "ET WEB_SPECIFIC_APPS ASP ListPics SQL Injection Attempt -- listpics.asp ID INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007003", 
+                "signature": "ET WEB_SPECIFIC_APPS ASP ListPics SQL Injection Attempt -- listpics.asp ID DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007004", 
+                "signature": "ET WEB_SPECIFIC_APPS ASP ListPics SQL Injection Attempt -- listpics.asp ID ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007005", 
+                "signature": "ET WEB_SPECIFIC_APPS ASP ListPics SQL Injection Attempt -- listpics.asp ID UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6210"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

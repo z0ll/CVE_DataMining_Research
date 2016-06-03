@@ -1,0 +1,139 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6403", 
+                "published": "2006-12-09T21:28:00.000-05:00", 
+                "id": "CVE-2006-6403", 
+                "modified": "2008-09-05T17:14:39.333-04:00", 
+                "summary": "mystats.php in MyStats 1.0.8 and earlier allows remote attackers to obtain the installation path via (1) details and (2) by array parameters, probably resulting in a path disclosure in an error message."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:mystats:mystats:1.0.8"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33715", 
+                "id": 33715
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30213", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1017210", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=116344068502988&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006627", 
+                "signature": "ET WEB_SPECIFIC_APPS MyStats SQL Injection Attempt -- mystats.php details SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006628", 
+                "signature": "ET WEB_SPECIFIC_APPS MyStats SQL Injection Attempt -- mystats.php details UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006629", 
+                "signature": "ET WEB_SPECIFIC_APPS MyStats SQL Injection Attempt -- mystats.php details INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006630", 
+                "signature": "ET WEB_SPECIFIC_APPS MyStats SQL Injection Attempt -- mystats.php details DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006631", 
+                "signature": "ET WEB_SPECIFIC_APPS MyStats SQL Injection Attempt -- mystats.php details ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006632", 
+                "signature": "ET WEB_SPECIFIC_APPS MyStats SQL Injection Attempt -- mystats.php details UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6403"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

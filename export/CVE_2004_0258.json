@@ -1,0 +1,216 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0258", 
+                "published": "2004-11-23T00:00:00.000-05:00", 
+                "id": "CVE-2004-0258", 
+                "modified": "2011-03-07T21:15:33.423-05:00", 
+                "summary": "Multiple buffer overflows in RealOne Player, RealOne Player 2.0, RealOne Enterprise Desktop, and RealPlayer Enterprise allow remote attackers to execute arbitrary code via malformed (1) .RP, (2) .RT, (3) .RAM, (4) .RPM or (5) .SMIL files."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:realnetworks:realone_player:6.0.11.818"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realone_player:2.0::win"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realplayer:8.0::mac_os"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realone_enterprise_desktop:6.0.11.774"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realplayer:8.0::unix"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realone_player:2.0"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realplayer:10.0_beta"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realone_player:6.0.11.853"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realone_player:6.0.11.841"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realone_player:6.0.11.868"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realone_desktop_manager"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realplayer:8.0::win32"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realone_player:1.0"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realone_player:6.0.11.830"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.22402", 
+                "id": 22402
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/9579", 
+                "id": 9579
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/473814", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/9579", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=107608748813559&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/15040", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.service.real.com/help/faq/security/040123_player/EN/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.nextgenss.com/advisories/realone.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/o-075.shtml", 
+                    "vendor": "CIAC"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/vulnwatch/2004-q1/0027.html", 
+                    "vendor": "VULNWATCH"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/473814", 
+                "id": "VU#473814"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "4.9", 
+                    "base": "7.6", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2102438", 
+                "signature": "GPL DELETED RealPlayer playlist file URL overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2102439", 
+                "signature": "GPL DELETED RealPlayer playlist http URL overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2102440", 
+                "signature": "GPL DELETED RealPlayer playlist rtsp URL overflow attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-user", 
+                "id": "sid:2438", 
+                "signature": "FILE-MULTIMEDIA RealNetworks RealPlayer playlist file URL overflow attempt"
+            }, 
+            {
+                "category": "attempted-user", 
+                "id": "sid:2439", 
+                "signature": "FILE-MULTIMEDIA RealNetworks RealPlayer playlist http URL overflow attempt"
+            }, 
+            {
+                "category": "attempted-user", 
+                "id": "sid:2440", 
+                "signature": "FILE-MULTIMEDIA RealNetworks RealPlayer playlist rtsp URL overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0258"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "RealPlayer File Handler Arbitrary Code Execution", 
+                "file": "realplayer_file_handler_overflow.nasl", 
+                "family": "Windows", 
+                "id": "12044"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

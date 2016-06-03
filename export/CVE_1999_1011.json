@@ -1,0 +1,199 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-1011", 
+                "published": "1999-07-19T00:00:00.000-04:00", 
+                "id": "CVE-1999-1011", 
+                "modified": "2011-03-07T21:01:28.643-05:00", 
+                "summary": "The Remote Data Service (RDS) DataFactory component of Microsoft Data Access Components (MDAC) in IIS 3.x and 4.x exposes unsafe methods, which allows remote attackers to execute arbitrary commands."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:data_access_components:1.5"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:4.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:index_server:2.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:3.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:site_server:3.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:data_access_components:2.1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:data_access_components:2.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14731", 
+                "id": 14731
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/529", 
+                "id": 529
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/272", 
+                "id": 272
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms99-025.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/272", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms98-004.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/j-054.shtml", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/j-054.shtml", 
+                    "vendor": "CIAC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2101023", 
+                "signature": "GPL WEB_SERVER msadcs.dll access"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1023", 
+                "signature": "SERVER-IIS msadcs.dll access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "msadc.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/iis/msadc.rb", 
+                "title": "MS99-025 Microsoft IIS MDAC msadcs.dll RDS Arbitrary Remote Command Execution"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-1011"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "RDS / MDAC Vulnerability (msadcs.dll) located", 
+                "file": "msadcs_dll.nasl", 
+                "family": "Web Servers", 
+                "id": "10357"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Microsoft IIS MDAC RDS (msadcs.dll) Arbitrary Remote Command Execution", 
+                "file": "msadcs_dll.nasl", 
+                "family": "Web Servers", 
+                "id": "10357"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/184375", 
+                "id": "184375", 
+                "title": "Unauthorized ODBC Data Access with RDS and IIS"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS99-025", 
+                "id": "MS99-025", 
+                "title": "Re-Release: Unauthorized Access to IIS Servers through ODBC Data Access with RDS"
+            }, 
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS98-004", 
+                "id": "MS98-004", 
+                "title": "Unauthorized ODBC Data Access with RDS and IIS"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,167 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4039", 
+                "published": "2014-06-17T11:55:06.237-04:00", 
+                "id": "CVE-2014-4039", 
+                "modified": "2015-03-11T21:59:40.877-04:00", 
+                "summary": "ppc64-diag 2.6.1 uses 0775 permissions for /tmp/diagSEsnap and does not properly restrict permissions for /tmp/diagSEsnap/snapH.tar.gz, which allows local users to obtain sensitive information by reading files in this archive, as demonstrated by /var/log/messages and /etc/yaboot.conf."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:ppc64-diag_project:ppc64-diag:2.6.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.70072", 
+                "id": 70072
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1109371", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-0383.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2014/06/17/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2014-07/msg00018.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "2.1", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-4039"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-4039.html", 
+                "id": "SUSE-SU-2014:0928"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20150383", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-0383.html", 
+                    "id": "RHSA-2015:0383", 
+                    "title": "RHSA-2015:0383: ppc64-diag security, bug fix, and enhancement update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1109371", 
+                    "title": "CVE-2014-4038 CVE-2014-4039 ppc64-diag: multiple temporary file races", 
+                    "id": "1109371", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0383"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151320", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1320.html", 
+                    "id": "RHSA-2015:1320", 
+                    "title": "RHSA-2015:1320: ppc64-diag security, bug fix and enhancement update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1109371", 
+                    "title": "CVE-2014-4038 CVE-2014-4039 ppc64-diag: multiple temporary file races", 
+                    "id": "1109371", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1320"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1131501", 
+                    "title": "Mislabeled file '/var/lock/subsys/rtas_errd' found", 
+                    "id": "1131501", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1320"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

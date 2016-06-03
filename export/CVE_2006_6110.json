@@ -1,0 +1,165 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6110", 
+                "published": "2006-11-26T17:07:00.000-05:00", 
+                "id": "CVE-2006-6110", 
+                "modified": "2008-09-05T17:13:56.320-04:00", 
+                "summary": "Multiple SQL injection vulnerabilities in an unspecified BPG-InfoTech Content Management System product allow remote attackers to execute arbitrary SQL commands via the (1) vjob parameter in publications_list.asp or (2) InfoID parameter in publication_view.asp."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:bpg-infotech:content_management_system"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33439", 
+                "id": 33439
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/451537/100/100/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/1915", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007452", 
+                "signature": "ET WEB_SPECIFIC_APPS BPG-InfoTech Content Management System SQL Injection Attempt -- publications_list.asp vjob SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007453", 
+                "signature": "ET WEB_SPECIFIC_APPS BPG-InfoTech Content Management System SQL Injection Attempt -- publications_list.asp vjob UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007454", 
+                "signature": "ET WEB_SPECIFIC_APPS BPG-InfoTech Content Management System SQL Injection Attempt -- publications_list.asp vjob INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007455", 
+                "signature": "ET WEB_SPECIFIC_APPS BPG-InfoTech Content Management System SQL Injection Attempt -- publications_list.asp vjob DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007456", 
+                "signature": "ET WEB_SPECIFIC_APPS BPG-InfoTech Content Management System SQL Injection Attempt -- publications_list.asp vjob ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007457", 
+                "signature": "ET WEB_SPECIFIC_APPS BPG-InfoTech Content Management System SQL Injection Attempt -- publications_list.asp vjob UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007458", 
+                "signature": "ET WEB_SPECIFIC_APPS BPG-InfoTech Content Management System SQL Injection Attempt -- publication_view.asp InfoID SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007459", 
+                "signature": "ET WEB_SPECIFIC_APPS BPG-InfoTech Content Management System SQL Injection Attempt -- publication_view.asp InfoID UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007460", 
+                "signature": "ET WEB_SPECIFIC_APPS BPG-InfoTech Content Management System SQL Injection Attempt -- publication_view.asp InfoID INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007461", 
+                "signature": "ET WEB_SPECIFIC_APPS BPG-InfoTech Content Management System SQL Injection Attempt -- publication_view.asp InfoID DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007462", 
+                "signature": "ET WEB_SPECIFIC_APPS BPG-InfoTech Content Management System SQL Injection Attempt -- publication_view.asp InfoID ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007463", 
+                "signature": "ET WEB_SPECIFIC_APPS BPG-InfoTech Content Management System SQL Injection Attempt -- publication_view.asp InfoID UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6110"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

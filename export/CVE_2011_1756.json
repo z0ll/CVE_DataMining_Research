@@ -1,0 +1,198 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1756", 
+                "published": "2011-06-20T22:52:43.607-04:00", 
+                "id": "CVE-2011-1756", 
+                "modified": "2011-10-26T00:00:00.000-04:00", 
+                "summary": "modules/xmpp/serv_xmpp.c in Citadel 7.86 and earlier does not properly detect recursion during entity expansion, which allows remote attackers to cause a denial of service (memory and CPU consumption) via a crafted XML document containing a large number of nested entity references, a similar issue to CVE-2003-1564."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:citadel:citadel:7.11"
+            }, 
+            {
+                "id": "cpe:/a:citadel:citadel:7.84"
+            }, 
+            {
+                "id": "cpe:/a:citadel:citadel:7.80"
+            }, 
+            {
+                "id": "cpe:/a:citadel:citadel:7.82"
+            }, 
+            {
+                "id": "cpe:/a:citadel:citadel:7.50"
+            }, 
+            {
+                "id": "cpe:/a:citadel:citadel:7.81"
+            }, 
+            {
+                "id": "cpe:/a:citadel:citadel:7.60"
+            }, 
+            {
+                "id": "cpe:/a:citadel:citadel:7.86"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.57748", 
+                "id": 57748
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/48071", 
+                "id": 48071
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://security.debian.org/debian-security/pool/updates/main/c/citadel/citadel_7.83-2squeeze2.diff.gz", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://code.citadel.org/cgit.cgi/git.citadel.org/commit/?id=95040add546a705cc2d1d8f16293141f9f9845a6", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://code.citadel.org/cgit.cgi/git.citadel.org/commit/?id=27c991cc2059f5530d3d4e9689dc976b745f5b0c", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/48071", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2011/dsa-2250", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/44788", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://packages.debian.org/changelogs/pool/main/c/citadel/citadel_7.83-2squeeze2/changelog", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://packages.debian.org/changelogs/pool/main/c/citadel/citadel_7.37-8+lenny1/changelog", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-1756"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:12869", 
+                "title": "DSA-2250-1 citadel -- denial of service", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:12869"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2250-1 (citadel)", 
+                "file": "deb_2250_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "69957"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-2250-1 : citadel - denial of service", 
+                "file": "debian_DSA-2250.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "55038"
+            }, 
+            {
+                "name": "RHEL 5 : jabberd (RHSA-2011:0881)", 
+                "file": "redhat-RHSA-2011-0881.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "63984"
+            }, 
+            {
+                "name": "RHEL 5 : jabberd (RHSA-2011:0882)", 
+                "file": "redhat-RHSA-2011-0882.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "63985"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2250", 
+                "id": "DSA-2250"
+            }
+        ], 
+        "Vmware": []
+    }
+}

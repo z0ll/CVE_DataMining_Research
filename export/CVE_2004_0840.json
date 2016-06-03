@@ -1,0 +1,191 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0840", 
+                "published": "2004-11-03T00:00:00.000-05:00", 
+                "id": "CVE-2004-0840", 
+                "modified": "2008-09-10T15:28:01.837-04:00", 
+                "summary": "The SMTP (Simple Mail Transfer Protocol) component of Microsoft Windows XP 64-bit Edition, Windows Server 2003, Windows Server 2003 64-bit Edition, and the Exchange Routing Engine component of Exchange Server 2003, allows remote attackers to execute arbitrary code via a malicious DNS response message containing length values that are not properly validated."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:exchange_server:2003"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp:::64-bit"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2003_server:r2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2003_server:64-bit"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.898", 
+                "id": 898
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/11374", 
+                "id": 11374
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/394792", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/17660", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/17621", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms04-035.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/11374", 
+                    "vendor": "BID"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/394792", 
+                "id": "VU#394792"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0840"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:5509", 
+                "title": "Exchange Server 2003 Routing Engine Buffer Overflow", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:5509"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:3460", 
+                "title": "Exchange Server 2003 (Windows Server 2003, 64-Bit Edition) Routing Engine Buffer Overflow", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:3460"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:2300", 
+                "title": "Exchange Server 2003 (INTERIM) Routing Engine Buffer Overflow", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:2300"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft SMTP Service and Exchange Routing Engine Buffer Overflow Vulnerability", 
+                "file": "gb_ms04_035.nasl", 
+                "family": "SMTP problems", 
+                "id": "100607"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Microsoft Windows/Exchange SMTP DNS Lookup Overflow (885881)", 
+                "file": "mssmtp_code_execution.nasl", 
+                "family": "SMTP problems", 
+                "id": "15464"
+            }, 
+            {
+                "name": "MS04-035: Vulnerability in SMTP Could Allow Remote Code Execution (885881)", 
+                "file": "smb_nt_ms04-035.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "17976"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in SMTP Could Allow Remote Code Execution", 
+                "id": "Vulnerability in SMTP Could Allow Remote Code Execution", 
+                "title": "890066"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/885881", 
+                "id": "885881", 
+                "title": "Vulnerability in SMTP Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS04-035", 
+                "id": "MS04-035", 
+                "title": "Vulnerability in SMTP Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

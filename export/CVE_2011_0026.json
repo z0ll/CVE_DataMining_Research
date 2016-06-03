@@ -1,0 +1,198 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0026", 
+                "published": "2011-01-11T20:00:01.807-05:00", 
+                "id": "CVE-2011-0026", 
+                "modified": "2011-07-18T22:42:39.687-04:00", 
+                "summary": "Integer signedness error in the SQLConnectW function in an ODBC API (odbc32.dll) in Microsoft Data Access Components (MDAC) 2.8 SP1 and SP2, and Windows Data Access Components (WDAC) 6.0, allows remote attackers to execute arbitrary code via a long string in the Data Source Name (DSN) and a crafted szDSN argument, which bypasses a signed comparison and leads to a buffer overflow, aka \"DSN Overflow Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:data_access_components:2.8:sp1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:data_access_components:2.8:sp2"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:windows_data_access_components:6.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.4238", 
+                "id": 4238
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0025887", 
+                "id": "2011-A-0004", 
+                "title": "Microsoft Data Access Components Remote Code Execution Vulnerabilities"
+            }
+        ], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/45695", 
+                "id": 45695
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/70443", 
+                "id": 70443
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA11-011A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/Bulletin/MS11-002.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.zerodayinitiative.com/advisories/ZDI-11-001/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2011/0075", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1024947", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/45695", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://support.avaya.com/css/P8/documents/100124846", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/42804", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/70443", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-0026"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:12333", 
+                "title": "DSN Overflow Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:12333"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Windows Data Access Components Remote Code Execution Vulnerabilities (2451910)", 
+                "file": "secpod_ms11-002.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "902281"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS11-002: Vulnerabilities in Microsoft Data Access Components Could Allow Remote Code Execution (2451910)", 
+                "file": "smb_nt_ms11-002.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "51455"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerabilities in Microsoft Data Access Components Could Allow Remote Code Execution", 
+                "id": "Vulnerabilities in Microsoft Data Access Components Could Allow Remote Code Execution", 
+                "title": "2419640"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2451910", 
+                "id": "2451910", 
+                "title": "Vulnerabilities in Microsoft Data Access Components Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS11-002", 
+                "id": "MS11-002", 
+                "title": "Vulnerabilities in Microsoft Data Access Components Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

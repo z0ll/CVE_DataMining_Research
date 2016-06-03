@@ -1,0 +1,218 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1887", 
+                "published": "2009-06-26T14:30:00.860-04:00", 
+                "id": "CVE-2009-1887", 
+                "modified": "2010-08-21T01:32:54.970-04:00", 
+                "summary": "agent/snmp_agent.c in snmpd in net-snmp 5.0.9 in Red Hat Enterprise Linux (RHEL) 3 allows remote attackers to cause a denial of service (daemon crash) via a crafted SNMP GETBULK request that triggers a divide-by-zero error.  NOTE: this vulnerability exists because of an incorrect fix for CVE-2008-4309."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:red_hat:enterprise_linux:3::es"
+            }, 
+            {
+                "id": "cpe:/o:red_hat:enterprise_linux:3::as"
+            }, 
+            {
+                "id": "cpe:/a:net-snmp:net-snmp:5.0.9"
+            }, 
+            {
+                "id": "cpe:/o:red_hat:enterprise_linux:3::ws"
+            }, 
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:3.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.48769", 
+                "id": 48769
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=506903", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2009-1124.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:156", 
+                    "vendor": "MANDRIVA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-1887"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:9716", 
+                "title": "agent/snmp_agent.c in snmpd in net-snmp 5.0.9 in Red Hat Enterprise Linux (RHEL) 3 allows remote attackers to cause a denial of service (daemon crash) via a crafted SNMP GETBULK request that triggers a divide-by-zero error.  NOTE: this vulnerability exists because of an incorrect fix for CVE-2008-4309.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:9716"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:8426", 
+                "title": "VMware net-snmp divide-by-zero vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:8426"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CentOS Update for net-snmp CESA-2009:1124 centos3 i386", 
+                "file": "gb_CESA-2009_1124_net-snmp_centos3_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880819"
+            }, 
+            {
+                "name": "Mandrake Security Advisory MDVSA-2009:156 (net-snmp)", 
+                "file": "mdksa_2009_156.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "64456"
+            }, 
+            {
+                "name": "CentOS Security Advisory CESA-2009:1124 (net-snmp)", 
+                "file": "ovcesa2009_1124.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "64326"
+            }, 
+            {
+                "name": "RedHat Security Advisory RHSA-2009:1124", 
+                "file": "RHSA_2009_1124.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "64277"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 3 : net-snmp (CESA-2009:1124)", 
+                "file": "centos_RHSA-2009-1124.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "39523"
+            }, 
+            {
+                "name": "Oracle Linux 3 : net-snmp (ELSA-2009-1124)", 
+                "file": "oraclelinux_ELSA-2009-1124.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "67880"
+            }, 
+            {
+                "name": "RHEL 3 : net-snmp (RHSA-2009:1124)", 
+                "file": "redhat-RHSA-2009-1124.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "39527"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : net-snmp on SL3.x i386/x86_64", 
+                "file": "sl_20090625_net_snmp_on_SL3_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "60607"
+            }, 
+            {
+                "name": "VMSA-2010-0003 : ESX Service Console update for net-snmp", 
+                "file": "vmware_VMSA-2010-0003.nasl", 
+                "family": "VMware ESX Local Security Checks", 
+                "id": "44642"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:156", 
+                "id": "MDVSA-2009:156"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20091124", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2009-1124.html", 
+                    "id": "RHSA-2009:1124", 
+                    "title": "RHSA-2009:1124: net-snmp security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=506903", 
+                    "title": "CVE-2009-1887 net-snmp: DoS (division by zero) via SNMP GetBulk requests", 
+                    "id": "506903", 
+                    "issue date": "2009-06-25", 
+                    "associated redhat": "RHSA-2009:1124"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

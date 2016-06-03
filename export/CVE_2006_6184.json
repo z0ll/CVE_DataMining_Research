@@ -1,0 +1,177 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6184", 
+                "published": "2006-11-30T19:28:00.000-05:00", 
+                "id": "CVE-2006-6184", 
+                "modified": "2013-12-12T22:37:09.297-05:00", 
+                "summary": "Multiple stack-based buffer overflows in Allied Telesyn TFTP Server (AT-TFTP) 1.9, and possibly earlier, allow remote attackers to cause a denial of service (crash) or execute arbitrary code via a long filename in a (1) GET or (2) PUT command."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:alliedtelesyn:at-tftp:1.9"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33522", 
+                "id": 33522
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21320", 
+                "id": 21320
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/11350", 
+                "id": 11350
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30539", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4737", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21320", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/452743/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/11350", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/24952", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/16350", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/8120", 
+                    "vendor": "SREASON"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23106", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/1929", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "attftp_long_filename.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/tftp/attftp_long_filename.rb", 
+                "title": "Allied Telesyn TFTP Server 1.9 Long Filename Overflow"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/16350", 
+                "id": 16350, 
+                "file": "http://www.exploit-db.com/download/16350"
+            }, 
+            {
+                "url": "http://www.exploit-db.com/exploits/24952", 
+                "id": 24952, 
+                "file": "http://www.exploit-db.com/download/24952"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6184"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "raw_string(crap(data:raw_string(0x41), length: 228)", 
+                "file": "gb_at_tftp_filename_bof_vuln.nasl", 
+                "family": "Denial of Service", 
+                "id": "802065"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "AT-TFTP Server Filename Handling Remote Overflow", 
+                "file": "at_tftpd_long_filename_overflow.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "23736"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

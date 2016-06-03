@@ -1,0 +1,227 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0400", 
+                "published": "2002-06-18T00:00:00.000-04:00", 
+                "id": "CVE-2002-0400", 
+                "modified": "2008-09-10T15:11:55.897-04:00", 
+                "summary": "ISC BIND 9 before 9.2.1 allows remote attackers to cause a denial of service (shutdown) via a malformed DNS packet that triggers an error condition that is not properly handled when the rdataset parameter to the dns_message_findtype() function in message.c is not NULL, aka DoS_findtype."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:isc:bind:9.1.1"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:9.1.3"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:9.1"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:9.2"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:9.1.2"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:9.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.18249", 
+                "id": 18249
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/4936", 
+                "id": 4936
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/739123", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.cert.org/advisories/CA-2002-15.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/4936", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2003-154.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2002-119.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2002-105.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.novell.com/linux/security/advisories/2002_21_bind9.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/static/9250.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.isc.org/index.pl?/sw/bind/bind-security.php", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://frontal2.mandriva.com/security/advisories?name=MDKSA-2002:038", 
+                    "vendor": "MANDRAKE"
+                }, 
+                {
+                    "url": "http://distro.conectiva.com.br/atualizacoes/?id=a&anuncio=000494", 
+                    "vendor": "CONECTIVA"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/hp/2002-q3/0022.html", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "ftp://ftp.caldera.com/pub/updates/OpenUNIX/CSSA-2002-SCO.24.1/CSSA-2002-SCO.24.1.txt", 
+                    "vendor": "CALDERA"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/739123", 
+                "id": "VU#739123"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-0400"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "ISC BIND < 9.2.1 rdataset Parameter Malformed DNS Packet DoS", 
+                "file": "bind9_dos.nasl", 
+                "family": "DNS", 
+                "id": "11051"
+            }, 
+            {
+                "name": "Mandrake Linux Security Advisory : bind (MDKSA-2002:038-1)", 
+                "file": "mandrake_MDKSA-2002-038.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "13943"
+            }, 
+            {
+                "name": "RHEL 2.1 : bind (RHSA-2002:119)", 
+                "file": "redhat-RHSA-2002-119.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "12635"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [
+            {
+                "url": "http://archives.neohapsis.com/archives/hp/2002-q3/0022.html", 
+                "id": "HPSBUX0207-202"
+            }
+        ], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2002-0400.html", 
+                "id": "SuSE-SA:2002:021"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2002-105.html", 
+                    "id": "RHSA-2002:105", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2002-119.html", 
+                    "id": "RHSA-2002:119", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2003-154.html", 
+                    "id": "RHSA-2003:154", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

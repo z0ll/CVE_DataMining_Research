@@ -1,0 +1,221 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-4797", 
+                "published": "2005-12-31T00:00:00.000-05:00", 
+                "id": "CVE-2005-4797", 
+                "modified": "2011-03-07T21:29:01.283-05:00", 
+                "summary": "Directory traversal vulnerability in printd line printer daemon (lpd) in Solaris 7 through 10 allows remote attackers to delete arbitrary files via \"..\" sequences in an \"Unlink data file\" command."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:sun:solaris:9.0:x86_update_2"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:8.0"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:10.0::x86"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:9.0::x86"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:10.0::sparc"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:8.0::x86"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:9.0::sparc"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:7.0::x86"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:7.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.1685", 
+                "id": 1685
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/14510", 
+                "id": 14510
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/18650", 
+                "id": 18650
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/21773", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/14510", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/p-280.shtml", 
+                    "vendor": "CIAC"
+                }, 
+                {
+                    "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-101842-1", 
+                    "vendor": "SUNALERT"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1014635", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/16367", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2005/1342", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/18650", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://downloads.securityfocus.com/vulnerabilities/exploits/solaris_lpd_unlink.pm", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "cascade_delete.rb", 
+                "file": "metasploit-framework/modules/auxiliary/dos/solaris/lpd/cascade_delete.rb", 
+                "title": "Solaris LPD Arbitrary File Delete"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-4797"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Solaris 10 (sparc) : 120467-05", 
+                "file": "solaris10_120467.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "19449"
+            }, 
+            {
+                "name": "Solaris 10 (x86) : 120468-05", 
+                "file": "solaris10_x86_120468.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "19454"
+            }, 
+            {
+                "name": "Solaris 7 (sparc) : 107115-20", 
+                "file": "solaris7_107115.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "13100"
+            }, 
+            {
+                "name": "Solaris 7 (x86) : 107116-20", 
+                "file": "solaris7_x86_107116.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "13205"
+            }, 
+            {
+                "name": "Solaris 8 (sparc) : 109320-22", 
+                "file": "solaris8_109320.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "13319"
+            }, 
+            {
+                "name": "Solaris 8 (x86) : 109321-22", 
+                "file": "solaris8_x86_109321.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "13427"
+            }, 
+            {
+                "name": "Solaris 9 (sparc) : 113329-30", 
+                "file": "solaris9_113329.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "13537"
+            }, 
+            {
+                "name": "Solaris 9 (x86) : 114980-31", 
+                "file": "solaris9_x86_114980.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "13619"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

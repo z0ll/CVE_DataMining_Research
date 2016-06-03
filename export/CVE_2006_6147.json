@@ -1,0 +1,190 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6147", 
+                "published": "2006-11-28T18:28:00.000-05:00", 
+                "id": "CVE-2006-6147", 
+                "modified": "2011-03-07T21:45:18.830-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in JiRos Links Manager allow remote attackers to execute arbitrary SQL commands via the (1) LinkID parameter to openlink.asp or the (2) CategoryID parameter to viewlinks.asp."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:jiros:links_manager:1.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33474", 
+                "id": 33474
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21226", 
+                "id": 21226
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30462", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4664", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21226", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/452265/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.frsirt.com/english/reference-2006-4664-1.php", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1017280", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23063", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007350", 
+                "signature": "ET WEB_SPECIFIC_APPS JiRos Links Manager SQL Injection Attempt -- openlink.asp LinkID SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007351", 
+                "signature": "ET WEB_SPECIFIC_APPS JiRos Links Manager SQL Injection Attempt -- openlink.asp LinkID UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007352", 
+                "signature": "ET WEB_SPECIFIC_APPS JiRos Links Manager SQL Injection Attempt -- openlink.asp LinkID INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007353", 
+                "signature": "ET WEB_SPECIFIC_APPS JiRos Links Manager SQL Injection Attempt -- openlink.asp LinkID DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007354", 
+                "signature": "ET WEB_SPECIFIC_APPS JiRos Links Manager SQL Injection Attempt -- openlink.asp LinkID ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007355", 
+                "signature": "ET WEB_SPECIFIC_APPS JiRos Links Manager SQL Injection Attempt -- openlink.asp LinkID UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007356", 
+                "signature": "ET WEB_SPECIFIC_APPS JiRos Links Manager SQL Injection Attempt -- viewlinks.asp CategoryID SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007357", 
+                "signature": "ET WEB_SPECIFIC_APPS JiRos Links Manager SQL Injection Attempt -- viewlinks.asp CategoryID UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007358", 
+                "signature": "ET WEB_SPECIFIC_APPS JiRos Links Manager SQL Injection Attempt -- viewlinks.asp CategoryID INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007359", 
+                "signature": "ET WEB_SPECIFIC_APPS JiRos Links Manager SQL Injection Attempt -- viewlinks.asp CategoryID DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007360", 
+                "signature": "ET WEB_SPECIFIC_APPS JiRos Links Manager SQL Injection Attempt -- viewlinks.asp CategoryID ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007361", 
+                "signature": "ET WEB_SPECIFIC_APPS JiRos Links Manager SQL Injection Attempt -- viewlinks.asp CategoryID UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6147"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

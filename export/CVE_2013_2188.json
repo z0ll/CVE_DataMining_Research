@@ -1,0 +1,174 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-2188", 
+                "published": "2013-07-16T10:08:50.947-04:00", 
+                "id": "CVE-2013-2188", 
+                "modified": "2013-07-16T00:00:00.000-04:00", 
+                "summary": "A certain Red Hat patch to the do_filp_open function in fs/namei.c in the kernel package before 2.6.32-358.11.1.el6 on Red Hat Enterprise Linux (RHEL) 6 does not properly handle failure to obtain write permissions, which allows local users to cause a denial of service (system crash) by leveraging access to a filesystem that is mounted read-only."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:6"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.9561", 
+                "id": 9561
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=975406", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "4.7", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-2188"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20755", 
+                "title": "RHSA-2013:0911: kernel security, bug fix, and enhancement update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20755"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24098", 
+                "title": "ELSA-2013:0911: kernel security, bug fix, and enhancement update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24098"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "CentOS 6 : kernel (CESA-2013:0911)", 
+                "file": "centos_RHSA-2013-0911.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "66887"
+            }, 
+            {
+                "name": "Oracle Linux 6 : kernel (ELSA-2013-0911)", 
+                "file": "oraclelinux_ELSA-2013-0911.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68834"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2013:0911)", 
+                "file": "redhat-RHSA-2013-0911.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "66853"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20130911", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2013-0911.html", 
+                    "id": "RHSA-2013:0911", 
+                    "title": "RHSA-2013:0911: kernel security, bug fix, and enhancement update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=949981", 
+                    "title": "CVE-2013-1935 kernel: kvm: pv_eoi guest updates with interrupts disabled", 
+                    "id": "949981", 
+                    "issue date": "2013-06-10", 
+                    "associated redhat": "RHSA-2013:0911"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=950490", 
+                    "title": "CVE-2013-1943 kernel: kvm: missing check in kvm_set_memory_region()", 
+                    "id": "950490", 
+                    "issue date": "2013-06-10", 
+                    "associated redhat": "RHSA-2013:0911"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=957705", 
+                    "title": "CVE-2013-2017 kernel: veth: double-free flaw in case of congestion", 
+                    "id": "957705", 
+                    "issue date": "2013-06-10", 
+                    "associated redhat": "RHSA-2013:0911"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

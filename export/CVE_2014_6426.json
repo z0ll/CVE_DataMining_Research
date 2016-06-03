@@ -1,0 +1,267 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6426", 
+                "published": "2014-09-20T06:55:06.370-04:00", 
+                "id": "CVE-2014-6426", 
+                "modified": "2014-11-05T03:28:53.633-05:00", 
+                "summary": "The dissect_hip_tlv function in epan/dissectors/packet-hip.c in the HIP dissector in Wireshark 1.12.x before 1.12.1 does not properly handle a NULL tree, which allows remote attackers to cause a denial of service (infinite loop) via a crafted packet."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:wireshark:wireshark:1.12.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.67702", 
+                "id": 67702
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0054757", 
+                "id": "2014-B-0129", 
+                "title": "Multiple Vulnerabilities in Wireshark"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://code.wireshark.org/review/gitweb?p=wireshark.git;a=commit;h=d9e5021fe79973d00ddd8fcef0bbefbaae63dd0f", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.wireshark.org/security/wnpa-sec-2014-16.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2014-1676.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://linux.oracle.com/errata/ELSA-2014-1676", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-6426"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27300", 
+                "title": "ELSA-2014-1676 -- wireshark security update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27300"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26890", 
+                "title": "RHSA-2014:1676 -- wireshark security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26890"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : wireshark (ALAS-2014-446)", 
+                "file": "ala_ALAS-2014-446.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "79295"
+            }, 
+            {
+                "name": "CentOS 6 / 7 : wireshark (CESA-2014:1676)", 
+                "file": "centos_RHSA-2014-1676.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "78608"
+            }, 
+            {
+                "name": "GLSA-201412-52 : Wireshark: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201412-52.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "80273"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : wireshark (ELSA-2014-1676)", 
+                "file": "oraclelinux_ELSA-2014-1676.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "78619"
+            }, 
+            {
+                "name": "RHEL 6 / 7 : wireshark (RHSA-2014:1676)", 
+                "file": "redhat-RHSA-2014-1676.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "78620"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : wireshark on SL6.x, SL7.x i386/x86_64", 
+                "file": "sl_20141021_wireshark_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "78649"
+            }, 
+            {
+                "name": "Oracle Solaris Third-Party Patch Update : wireshark (multiple_vulnerabilities_in_wireshark11)", 
+                "file": "solaris11_wireshark_20141120.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "80816"
+            }, 
+            {
+                "name": "Wireshark 1.12.x < 1.12.1 Multiple DoS Vulnerabilities", 
+                "file": "wireshark_1_12_1.nasl", 
+                "family": "Windows", 
+                "id": "77732"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20141676", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2014-1676.html", 
+                    "id": "RHSA-2014:1676", 
+                    "title": "RHSA-2014:1676: wireshark security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1142602", 
+                    "title": "CVE-2014-6429 CVE-2014-6430 CVE-2014-6431 CVE-2014-6432 wireshark: DOS Sniffer file parser flaw (wnpa-sec-2014-19)", 
+                    "id": "1142602", 
+                    "issue date": "2014-10-21", 
+                    "associated redhat": "RHSA-2014:1676"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1142603", 
+                    "title": "CVE-2014-6428 wireshark: SES dissector crash (wnpa-sec-2014-18)", 
+                    "id": "1142603", 
+                    "issue date": "2014-10-21", 
+                    "associated redhat": "RHSA-2014:1676"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1142604", 
+                    "title": "CVE-2014-6427 wireshark: RTSP dissector crash (wnpa-sec-2014-17)", 
+                    "id": "1142604", 
+                    "issue date": "2014-10-21", 
+                    "associated redhat": "RHSA-2014:1676"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1142606", 
+                    "title": "CVE-2014-6426 wireshark: HIP dissector infinite loop (wnpa-sec-2014-16)", 
+                    "id": "1142606", 
+                    "issue date": "2014-10-21", 
+                    "associated redhat": "RHSA-2014:1676"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1142608", 
+                    "title": "CVE-2014-6425 wireshark: CUPS dissector crash (wnpa-sec-2014-15)", 
+                    "id": "1142608", 
+                    "issue date": "2014-10-21", 
+                    "associated redhat": "RHSA-2014:1676"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1142609", 
+                    "title": "CVE-2014-6424 wireshark: Netflow dissector crash (wnpa-sec-2014-14)", 
+                    "id": "1142609", 
+                    "issue date": "2014-10-21", 
+                    "associated redhat": "RHSA-2014:1676"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1142610", 
+                    "title": "CVE-2014-6423 wireshark: MEGACO dissector infinite loop (wnpa-sec-2014-13)", 
+                    "id": "1142610", 
+                    "issue date": "2014-10-21", 
+                    "associated redhat": "RHSA-2014:1676"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1142611", 
+                    "title": "CVE-2014-6421 CVE-2014-6422 wireshark: RTP dissector crash (wnpa-sec-2014-12)", 
+                    "id": "1142611", 
+                    "issue date": "2014-10-21", 
+                    "associated redhat": "RHSA-2014:1676"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

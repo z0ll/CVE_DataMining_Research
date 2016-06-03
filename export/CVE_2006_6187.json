@@ -1,0 +1,313 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6187", 
+                "published": "2006-11-30T19:28:00.000-05:00", 
+                "id": "CVE-2006-6187", 
+                "modified": "2011-03-07T21:45:34.643-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in ClickTech Click Gallery allow remote attackers to execute arbitrary SQL commands via the (1) currentpage or (2) gallery_id parameter to (a) view_gallery.asp, the (3) image_id parameter to (b) download_image.asp, the currentpage or (5) orderby parameter to (c) gallery.asp, or the currentpage parameter to (d) view_recent.asp."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:clicktech:clickgallery:5.1"
+            }, 
+            {
+                "id": "cpe:/a:clicktech:clickgallery:5.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33525", 
+                "id": 33525
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21311", 
+                "id": 21311
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4743", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/452733/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.aria-security.com/forum/showthread.php?t=49", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23136", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30535", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21311", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/1937", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007229", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- view_gallery.asp currentpage SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007230", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- view_gallery.asp currentpage UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007231", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- view_gallery.asp currentpage INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007232", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- view_gallery.asp currentpage DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007233", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- view_gallery.asp currentpage ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007234", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- view_gallery.asp currentpage UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007235", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- view_gallery.asp gallery_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007236", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- view_gallery.asp gallery_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007237", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- view_gallery.asp gallery_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007238", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- view_gallery.asp gallery_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007239", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- view_gallery.asp gallery_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007240", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- view_gallery.asp gallery_id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007241", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- download_image.asp image_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007242", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- download_image.asp image_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007243", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- download_image.asp image_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007244", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- download_image.asp image_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007245", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- download_image.asp image_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007246", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- download_image.asp image_id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007247", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- gallery.asp currentpage SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007248", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- gallery.asp currentpage UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007249", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- gallery.asp currentpage INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007250", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- gallery.asp currentpage DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007251", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- gallery.asp currentpage ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007252", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- gallery.asp currentpage UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007253", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- gallery.asp orderby SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007254", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- gallery.asp orderby UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007255", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- gallery.asp orderby INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007256", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- gallery.asp orderby DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007257", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- gallery.asp orderby ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007258", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- gallery.asp orderby UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007259", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- view_recent.asp currentpage SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007260", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- view_recent.asp currentpage UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007261", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- view_recent.asp currentpage INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007262", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- view_recent.asp currentpage DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007263", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- view_recent.asp currentpage ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007264", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Gallery SQL Injection Attempt -- view_recent.asp currentpage UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6187"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

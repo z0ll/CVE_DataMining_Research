@@ -1,0 +1,221 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-2737", 
+                "published": "2009-08-11T06:30:00.670-04:00", 
+                "id": "CVE-2009-2737", 
+                "modified": "2009-08-26T01:25:45.170-04:00", 
+                "summary": "The EditCSVAction function in cgi/actions.py in Roundup 1.2 before 1.2.1, 1.4 through 1.4.6, and possibly other versions does not properly check permissions, which allows remote authenticated users with edit or create privileges for a class to modify arbitrary items within that class, as demonstrated by editing all queries, modifying settings, and adding roles to users."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:toni_mueller:roundup:1.2.0"
+            }, 
+            {
+                "id": "cpe:/a:toni_mueller:roundup:1.4.2"
+            }, 
+            {
+                "id": "cpe:/a:toni_mueller:roundup:1.4.3"
+            }, 
+            {
+                "id": "cpe:/a:toni_mueller:roundup:1.4.4"
+            }, 
+            {
+                "id": "cpe:/a:toni_mueller:roundup:1.4.5"
+            }, 
+            {
+                "id": "cpe:/a:toni_mueller:roundup:1.4.6"
+            }, 
+            {
+                "id": "cpe:/a:toni_mueller:roundup:1.4.0"
+            }, 
+            {
+                "id": "cpe:/a:toni_mueller:roundup:1.4.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.49347", 
+                "id": 49347
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/34059", 
+                "id": 34059
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/56368", 
+                "id": 56368
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.debian.org/security/2009/dsa-1754", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "https://www.redhat.com/archives/fedora-package-announce/2009-March/msg00439.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "https://www.redhat.com/archives/fedora-package-announce/2009-March/msg00429.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=489355", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/34059", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/56368", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/34192", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://issues.roundup-tracker.org/issue2550521", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=518768", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "5.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-2737"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 1754-1 (roundup)", 
+                "file": "deb_1754_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "63796"
+            }, 
+            {
+                "name": "Fedora Core 10 FEDORA-2009-2583 (roundup)", 
+                "file": "fcore_2009_2583.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "63532"
+            }, 
+            {
+                "name": "Fedora Core 9 FEDORA-2009-2591 (roundup)", 
+                "file": "fcore_2009_2591.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "63533"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-1754-1 : roundup - insufficient access checks", 
+                "file": "debian_DSA-1754.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "36134"
+            }, 
+            {
+                "name": "Fedora 10 : roundup-1.4.6-4.fc10 (2009-2583)", 
+                "file": "fedora_2009-2583.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "36875"
+            }, 
+            {
+                "name": "Fedora 9 : roundup-1.4.6-4.fc9 (2009-2591)", 
+                "file": "fedora_2009-2591.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "35909"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2009-2583", 
+                "id": "FEDORA-2009-2583"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2009-2591", 
+                "id": "FEDORA-2009-2591"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-1754", 
+                "id": "DSA-1754"
+            }
+        ], 
+        "Vmware": []
+    }
+}

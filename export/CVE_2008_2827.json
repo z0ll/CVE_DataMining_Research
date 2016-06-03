@@ -1,0 +1,204 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-2827", 
+                "published": "2008-06-23T15:41:00.000-04:00", 
+                "id": "CVE-2008-2827", 
+                "modified": "2008-11-25T01:42:14.953-05:00", 
+                "summary": "The rmtree function in lib/File/Path.pm in Perl 5.10 does not properly check permissions before performing a chmod, which allows local users to modify the permissions of arbitrary files via a symlink attack, a different vulnerability than CVE-2005-0448 and CVE-2004-0452."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:perl:perl:5.10"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.42876", 
+                "id": 42876
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/29902", 
+                "id": 29902
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://www.redhat.com/archives/fedora-package-announce/2008-June/msg01025.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/43308", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1020373", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/29902", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2008:165", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/31687", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/30837", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/30790", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://rt.cpan.org/Public/Bug/Display.html?id=36982", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2008-08/msg00006.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=487319", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2008-2827"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Core 10 FEDORA-2009-7680 (perl)", 
+                "file": "fcore_2009_7680.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "64402"
+            }, 
+            {
+                "name": "Family Connections argv[1] Parameter Remote Arbitrary Command Execution Vulnerability", 
+                "file": "gb_fedora_2008_5739_perl_fc9.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "860509"
+            }, 
+            {
+                "name": "Mandriva Update for mysql MDVA-2012:049 (mysql)", 
+                "file": "gb_mandriva_MDVSA_2008_165.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "830420"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 9 : perl-5.10.0-27.fc9 (2008-5739)", 
+                "file": "fedora_2008-5739.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "33371"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : perl (MDVSA-2008:165)", 
+                "file": "mandriva_MDVSA-2008-165.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "37106"
+            }, 
+            {
+                "name": "openSUSE Security Update : perl (perl-101)", 
+                "file": "suse_11_0_perl-080715.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "40104"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2008-5739", 
+                "id": "FEDORA-2008-5739"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2008:165", 
+                "id": "MDVSA-2008:165"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2008-2827.html", 
+                "id": "SUSE-SR:2008:017"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

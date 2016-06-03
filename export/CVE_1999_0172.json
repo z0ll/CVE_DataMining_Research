@@ -1,0 +1,126 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0172", 
+                "published": "1995-08-02T00:00:00.000-04:00", 
+                "id": "CVE-1999-0172", 
+                "modified": "2008-09-09T08:33:54.040-04:00", 
+                "summary": "FormMail CGI program allows remote execution of commands."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:matt_wright:formmail"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.13705", 
+                "id": 13705
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": []
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2100884", 
+                "signature": "GPL EXPLOIT formmail access"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2101610", 
+                "signature": "GPL EXPLOIT formmail arbitrary command execution attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1610", 
+                "signature": "SERVER-WEBAPP formmail arbitrary command execution attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0172"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "formmail.pl", 
+                "file": "formmail_pl.nasl", 
+                "family": "Web application abuses", 
+                "id": "10076"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Matthew Wright FormMail CGI (formmail.cgi) Arbitrary Mail Relay", 
+                "file": "formmail_pl.nasl", 
+                "family": "CGI abuses", 
+                "id": "10076"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

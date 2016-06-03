@@ -1,0 +1,148 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3235", 
+                "published": "2007-06-14T21:30:00.000-04:00", 
+                "id": "CVE-2007-3235", 
+                "modified": "2012-10-30T22:37:58.967-04:00", 
+                "summary": "Cross-site scripting (XSS) vulnerability in low.php in Fuzzylime Forum 1.0 allows remote attackers to inject arbitrary web script or HTML via the topic parameter.  NOTE: this might be resultant from SQL injection."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:fuzzylime_forum:fuzzylime_forum:1.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.37308", 
+                "id": 37308
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/36405", 
+                "id": 36405
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.milw0rm.com/exploits/4062", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://osvdb.org/36405", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34840", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25653", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "4.3", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005330", 
+                "signature": "ET WEB_SPECIFIC_APPS Fuzzylime Forum SQL Injection Attempt -- low.php topic SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005331", 
+                "signature": "ET WEB_SPECIFIC_APPS Fuzzylime Forum SQL Injection Attempt -- low.php topic UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005332", 
+                "signature": "ET WEB_SPECIFIC_APPS Fuzzylime Forum SQL Injection Attempt -- low.php topic INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005333", 
+                "signature": "ET WEB_SPECIFIC_APPS Fuzzylime Forum SQL Injection Attempt -- low.php topic DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005334", 
+                "signature": "ET WEB_SPECIFIC_APPS Fuzzylime Forum SQL Injection Attempt -- low.php topic ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005335", 
+                "signature": "ET WEB_SPECIFIC_APPS Fuzzylime Forum SQL Injection Attempt -- low.php topic UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-3235"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

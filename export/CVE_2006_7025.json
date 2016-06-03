@@ -1,0 +1,156 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-7025", 
+                "published": "2007-02-22T22:28:00.000-05:00", 
+                "id": "CVE-2006-7025", 
+                "modified": "2011-03-07T21:47:45.203-05:00", 
+                "summary": "SQL injection vulnerability in admin/config.php in Bookmark4U 2.0 and 2.1 allows remote attackers to inject arbitrary SQL command via the sqlcmd parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:sangwan_kim:bookmark4u:2.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35159", 
+                "id": 35159
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/24795", 
+                "id": 24795
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/25956", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/1456", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/24795", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.attrition.org/pipermail/vim/2007-February/001373.html", 
+                    "vendor": "VIM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/19758", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=full-disclosure&m=114555163911635&w=2", 
+                    "vendor": "FULLDISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004828", 
+                "signature": "ET WEB_SPECIFIC_APPS Bookmark4U SQL Injection Attempt -- config.php sqlcmd SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004829", 
+                "signature": "ET WEB_SPECIFIC_APPS Bookmark4U SQL Injection Attempt -- config.php sqlcmd UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004830", 
+                "signature": "ET WEB_SPECIFIC_APPS Bookmark4U SQL Injection Attempt -- config.php sqlcmd INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004831", 
+                "signature": "ET WEB_SPECIFIC_APPS Bookmark4U SQL Injection Attempt -- config.php sqlcmd DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004832", 
+                "signature": "ET WEB_SPECIFIC_APPS Bookmark4U SQL Injection Attempt -- config.php sqlcmd ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004833", 
+                "signature": "ET WEB_SPECIFIC_APPS Bookmark4U SQL Injection Attempt -- config.php sqlcmd UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-7025"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

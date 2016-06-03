@@ -1,0 +1,157 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1425", 
+                "published": "2007-03-12T21:19:00.000-04:00", 
+                "id": "CVE-2007-1425", 
+                "modified": "2011-03-07T21:52:06.783-05:00", 
+                "summary": "SQL injection vulnerability in index.php in Triexa SonicMailer Pro 3.2.3 and earlier allows remote attackers to execute arbitrary SQL commands via the list parameter in an archive action."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:triexa:sonicmailer_pro:3.2.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35579", 
+                "id": 35579
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/22920", 
+                "id": 22920
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/33986", 
+                "id": 33986
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/0905", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/22920", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/3457", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/24474", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/33986", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004379", 
+                "signature": "ET WEB_SPECIFIC_APPS Triexa SonicMailer Pro SQL Injection Attempt -- index.php list SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004380", 
+                "signature": "ET WEB_SPECIFIC_APPS Triexa SonicMailer Pro SQL Injection Attempt -- index.php list UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004381", 
+                "signature": "ET WEB_SPECIFIC_APPS Triexa SonicMailer Pro SQL Injection Attempt -- index.php list INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004382", 
+                "signature": "ET WEB_SPECIFIC_APPS Triexa SonicMailer Pro SQL Injection Attempt -- index.php list DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004383", 
+                "signature": "ET WEB_SPECIFIC_APPS Triexa SonicMailer Pro SQL Injection Attempt -- index.php list ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004384", 
+                "signature": "ET WEB_SPECIFIC_APPS Triexa SonicMailer Pro SQL Injection Attempt -- index.php list UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1425"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,242 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3672", 
+                "published": "2009-12-02T06:30:00.453-05:00", 
+                "id": "CVE-2009-3672", 
+                "modified": "2010-08-21T00:00:00.000-04:00", 
+                "summary": "Microsoft Internet Explorer 6 and 7 does not properly handle objects in memory that (1) were not properly initialized or (2) are deleted, which allows remote attackers to execute arbitrary code via vectors involving a call to the getElementsByTagName method for the STYLE tag name, selection of the single element in the returned list, and a change to the outerHTML property of this element, related to Cascading Style Sheets (CSS) and mshtml.dll, aka \"HTML Object Memory Corruption Vulnerability.\" NOTE: some of these details are obtained from third party information. NOTE: this issue was originally assigned CVE-2009-4054, but Microsoft assigned a duplicate identifier of CVE-2009-3672. CVE consumers should use this identifier instead of CVE-2009-4054."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:6:sp1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:7"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:6"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.4061", 
+                "id": 4061
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/37085", 
+                "id": 37085
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA09-342A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/515749", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2009/3301", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.symantec.com/connect/blogs/zero-day-internet-explorer-exploit-published", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1023293", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/37085", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/507984/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/Bulletin/MS09-072.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/advisory/977981.mspx", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/37448", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/515749", 
+                "id": "VU#515749"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms09_072_style_object.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/browser/ms09_072_style_object.rb", 
+                "title": "MS09-072 Microsoft Internet Explorer Style getElementsByTagName Memory Corruption"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-3672"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:6381", 
+                "title": "HTML Object Memory Corruption Vulnerability (CVE-2009-3672)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:6381"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "MS Internet Explorer Style Object Remote Code Execution Vulnerability", 
+                "file": "gb_ms_ie_style_object_remote_code_exec_vuln.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "800727"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS09-072: Cumulative Security Update for Internet Explorer (976325)", 
+                "file": "smb_nt_ms09-072.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "43064"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Cumulative Security Update for Internet Explorer", 
+                "id": "Cumulative Security Update for Internet Explorer", 
+                "title": "976325"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/976325", 
+                "id": "976325", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS09-072", 
+                "id": "MS09-072", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

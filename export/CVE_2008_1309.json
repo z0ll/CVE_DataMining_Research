@@ -1,0 +1,196 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1309", 
+                "published": "2008-03-12T13:44:00.000-04:00", 
+                "id": "CVE-2008-1309", 
+                "modified": "2011-06-16T00:00:00.000-04:00", 
+                "summary": "The RealAudioObjects.RealAudio ActiveX control in rmoc3260.dll in RealNetworks RealPlayer Enterprise, RealPlayer 10, RealPlayer 10.5 before build 6.0.12.1675, and RealPlayer 11 before 11.0.3 build 6.0.14.806 does not properly manage memory for the (1) Console or (2) Controls property, which allows remote attackers to execute arbitrary code or cause a denial of service (browser crash) via a series of assignments of long string values, which triggers an overwrite of freed heap memory."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:realnetworks:realplayer:10.0"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realplayer:11"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realplayer:::enterprise"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realplayer:10.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.41480", 
+                "id": 41480
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/28157", 
+                "id": 28157
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/831457", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/41087", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/41087", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.zerodayinitiative.com/advisories/ZDI-08-047/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2008/2194/references", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2008/0842", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1020563", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1019576", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/28157", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/494779/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/5332", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://service.real.com/realplayer/security/07252008_player/en/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/29315", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lists.grok.org.uk/pipermail/full-disclosure/2008-March/060659.html", 
+                    "vendor": "FULLDISC"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/831457", 
+                "id": "VU#831457"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "realplayer_console.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/browser/realplayer_console.rb", 
+                "title": "RealPlayer rmoc3260.dll ActiveX Control Heap Corruption"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2008-1309"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "RealPlayer for Windows < Build 6.0.14.806 / 6.0.12.1675 Multiple Vulnerabilities", 
+                "file": "realplayer_6_0_14_806.nasl", 
+                "family": "Windows", 
+                "id": "33744"
+            }, 
+            {
+                "name": "RealPlayer ActiveX (rmoc3260.dll) Console Property Memory Corruption Arbitrary Code Execution", 
+                "file": "realplayer_rmoc3260_activex.nasl", 
+                "family": "Windows", 
+                "id": "31418"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

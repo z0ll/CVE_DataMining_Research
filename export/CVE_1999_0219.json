@@ -1,0 +1,142 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0219", 
+                "published": "1997-07-01T00:00:00.000-04:00", 
+                "id": "CVE-1999-0219", 
+                "modified": "2008-09-09T08:34:01.930-04:00", 
+                "summary": "Buffer overflow in FTP Serv-U 2.5 allows remote authenticated users to cause a denial of service (crash) via a long (1) CWD or (2) LS (list) command."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:cat_soft:serv-u:2.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.13929", 
+                "id": 13929
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/269", 
+                "id": 269
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/205", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/269", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=ntbugtraq&m=92582581330282&w=2", 
+                    "vendor": "NTBUGTRAQ"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=ntbugtraq&m=92574916930144&w=2", 
+                    "vendor": "NTBUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.8", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2101919", 
+                "signature": "GPL FTP CWD overflow attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:1919", 
+                "signature": "PROTOCOL-FTP CWD overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0219"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Multiple FTP Server Command Handling Overflow", 
+                "file": "ftp_overflow.nasl", 
+                "family": "FTP", 
+                "id": "10084"
+            }, 
+            {
+                "name": "Serv-U CWD Command Overflow", 
+                "file": "ftp_servu_dos.nasl", 
+                "family": "FTP", 
+                "id": "10089"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

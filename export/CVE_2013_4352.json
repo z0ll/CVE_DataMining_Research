@@ -1,0 +1,216 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4352", 
+                "published": "2014-07-20T07:12:48.683-04:00", 
+                "id": "CVE-2013-4352", 
+                "modified": "2014-08-04T14:48:52.673-04:00", 
+                "summary": "The cache_invalidate function in modules/cache/cache_storage.c in the mod_cache module in the Apache HTTP Server 2.4.6, when a caching forward proxy is enabled, allows remote HTTP servers to cause a denial of service (NULL pointer dereference and daemon crash) via vectors that trigger a missing hostname value."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:apache:http_server:2.4.6"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.67184", 
+                "id": 67184
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1120604", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://svn.apache.org/viewvc/httpd/httpd/trunk/modules/cache/cache_storage.c?r1=1491564&r2=1523235&diff_format=h", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://svn.apache.org/viewvc/httpd/httpd/trunk/modules/cache/cache_storage.c", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://httpd.apache.org/security/vulnerabilities_24.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "4.3", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-4352"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27351", 
+                "title": "ELSA-2014-0921 -- httpd security update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27351"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:25253", 
+                "title": "RHSA-2014:0921: httpd security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:25253"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Apache 2.4.6 Remote DoS", 
+                "file": "apache_2_4_7.nasl", 
+                "family": "Web Servers", 
+                "id": "76914"
+            }, 
+            {
+                "name": "CentOS 7 : httpd (CESA-2014:0921)", 
+                "file": "centos_RHSA-2014-0921.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "76716"
+            }, 
+            {
+                "name": "openSUSE Security Update : apache2 (openSUSE-SU-2014:1044-1)", 
+                "file": "openSUSE-2014-503.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "77292"
+            }, 
+            {
+                "name": "Oracle Linux 7 : httpd (ELSA-2014-0921)", 
+                "file": "oraclelinux_ELSA-2014-0921.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "76745"
+            }, 
+            {
+                "name": "RHEL 7 : httpd (RHSA-2014:0921)", 
+                "file": "redhat-RHSA-2014-0921.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "76905"
+            }, 
+            {
+                "name": "Oracle Solaris Third-Party Patch Update : apache (multiple_denial_of_service_dos5)", 
+                "file": "solaris11_apache_20141014.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "80589"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20140921", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2014-0921.html", 
+                    "id": "RHSA-2014:0921", 
+                    "title": "RHSA-2014:0921: httpd security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1120596", 
+                    "title": "CVE-2014-0231 httpd: mod_cgid denial of service", 
+                    "id": "1120596", 
+                    "issue date": "2014-07-23", 
+                    "associated redhat": "RHSA-2014:0921"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1120599", 
+                    "title": "CVE-2014-0117 httpd: mod_proxy denial of service", 
+                    "id": "1120599", 
+                    "issue date": "2014-07-23", 
+                    "associated redhat": "RHSA-2014:0921"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1120601", 
+                    "title": "CVE-2014-0118 httpd: mod_deflate denial of service", 
+                    "id": "1120601", 
+                    "issue date": "2014-07-23", 
+                    "associated redhat": "RHSA-2014:0921"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1120603", 
+                    "title": "CVE-2014-0226 httpd: mod_status heap-based buffer overflow", 
+                    "id": "1120603", 
+                    "issue date": "2014-07-23", 
+                    "associated redhat": "RHSA-2014:0921"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1120604", 
+                    "title": "CVE-2013-4352 httpd: mod_cache NULL pointer dereference crash", 
+                    "id": "1120604", 
+                    "issue date": "2014-07-23", 
+                    "associated redhat": "RHSA-2014:0921"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

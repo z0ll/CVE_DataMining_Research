@@ -1,0 +1,191 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-0848", 
+                "published": "2006-02-22T18:02:00.000-05:00", 
+                "id": "CVE-2006-0848", 
+                "modified": "2013-08-18T00:52:56.583-04:00", 
+                "summary": "The \"Open  safe  files after downloading\" option in Safari on Apple Mac OS X allows remote user-assisted attackers to execute arbitrary commands by tricking a user into downloading a __MACOSX folder that contains metadata (resource fork) that invokes the Terminal, which automatically interprets the script using bash, as demonstrated using a ZIP file that contains a script with a safe file extension."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/16.html", 
+                "id": "CWE-16", 
+                "title": "Configuration"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:apple:mac_os_x:10.4.5"
+            }, 
+            {
+                "id": "cpe:/o:apple:mac_os_x_server:10.4.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.28854", 
+                "id": 28854
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/16736", 
+                "id": 16736
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/23510", 
+                "id": 23510
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA06-062A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA06-053A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/999708", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/24808", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/0671", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/16736", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/23510", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.mathematik.uni-ulm.de/numerik/staff/lehn/macosx.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.heise.de/english/newsticker/news/69862", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.frsirt.com/exploits/20060222.safari_safefiles_exec.pm.php", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1015652", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/18963", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://docs.info.apple.com/article.html?artnum=303382", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/999708", 
+                "id": "VU#999708"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "4.9", 
+                    "base": "5.1", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "safari_metadata_archive.rb", 
+                "file": "metasploit-framework/modules/exploits/osx/browser/safari_metadata_archive.rb", 
+                "title": "Safari Archive Metadata Command Execution"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/safari_safe_file_explicit_bind", 
+                "id": "exploit_info/safari_safe_file_explicit_bind", 
+                "title": "Safari archive metadata command execution"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-0848"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Mac OS X Multiple Vulnerabilities (Security Update 2006-001)", 
+                "file": "macosx_SecUpd2006-001.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "20990"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

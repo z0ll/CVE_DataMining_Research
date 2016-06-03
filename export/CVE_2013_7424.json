@@ -1,0 +1,317 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-7424", 
+                "published": "2015-08-26T15:59:00.110-04:00", 
+                "id": "CVE-2013-7424", 
+                "modified": "2015-08-27T10:00:27.510-04:00", 
+                "summary": "The getaddrinfo function in glibc before 2.15, when compiled with libidn and the AI_IDN flag is used, allows context-dependent attackers to cause a denial of service (invalid free) and possibly execute arbitrary code via unspecified vectors, as demonstrated by an internationalized domain name to ping6."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/17.html", 
+                "id": "CWE-17", 
+                "title": "Code"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:gnu:glibc:2.14.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.69211", 
+                "id": 69211
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://sourceware.org/git/gitweb.cgi?p=glibc.git;a=commitdiff;h=2e96f1c7", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://sourceware.org/bugzilla/show_bug.cgi?id=18011", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=981942", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1186614", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/01/29/21", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-1627.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "4.9", 
+                    "base": "5.1", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-7424"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:37", 
+                "title": "DSA-3169-1 -- eglibc -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:37"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3169-1 (eglibc - security update)", 
+                "file": "deb_3169.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703169"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 6 : glibc (CESA-2014:1391)", 
+                "file": "centos_RHSA-2014-1391.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "79180"
+            }, 
+            {
+                "name": "CentOS 5 : glibc (CESA-2015:1627)", 
+                "file": "centos_RHSA-2015-1627.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "85459"
+            }, 
+            {
+                "name": "Debian DLA-165-1 : eglibc security update", 
+                "file": "debian_DLA-165.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "82149"
+            }, 
+            {
+                "name": "Debian DSA-3169-1 : eglibc - security update", 
+                "file": "debian_DSA-3169.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "81448"
+            }, 
+            {
+                "name": "F5 Networks BIG-IP : glibc vulnerability (SOL16472)", 
+                "file": "f5_bigip_SOL16472.nasl", 
+                "family": "F5 Networks Local Security Checks", 
+                "id": "82905"
+            }, 
+            {
+                "name": "Oracle Linux 6 : glibc (ELSA-2014-1391)", 
+                "file": "oraclelinux_ELSA-2014-1391.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "78524"
+            }, 
+            {
+                "name": "Oracle Linux 5 : glibc (ELSA-2015-1627)", 
+                "file": "oraclelinux_ELSA-2015-1627.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85487"
+            }, 
+            {
+                "name": "RHEL 6 : glibc (RHSA-2014:1391)", 
+                "file": "redhat-RHSA-2014-1391.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "78408"
+            }, 
+            {
+                "name": "RHEL 5 : glibc (RHSA-2015:1627)", 
+                "file": "redhat-RHSA-2015-1627.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "85442"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : glibc on SL5.x i386/x86_64", 
+                "file": "sl_20150817_glibc_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "85498"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20141391", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2014-1391.html", 
+                    "id": "RHSA-2014:1391", 
+                    "title": "RHSA-2014:1391: glibc security, bug fix, and enhancement update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=905941", 
+                    "title": "Fix memory fencing error in unwind-forcedunwind.c", 
+                    "id": "905941", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1391"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=981942", 
+                    "title": "CVE-2013-7424 glibc: ping6 with idn causes crash", 
+                    "id": "981942", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1391"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=995839", 
+                    "title": "CVE-2013-4237 glibc: Buffer overwrite when using readdir_r on file systems returning file names longer than NAME_MAX characters", 
+                    "id": "995839", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1391"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1022280", 
+                    "title": "CVE-2013-4458 glibc: Stack (frame) overflow in getaddrinfo() when called with AF_INET6", 
+                    "id": "1022280", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1391"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1027101", 
+                    "title": "Race condition using ATOMIC_FASTBINS.", 
+                    "id": "1027101", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1391"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1032628", 
+                    "title": "Symbol lookup in elf/dl-lookup.c results in returning wrong values", 
+                    "id": "1032628", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1391"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1043557", 
+                    "title": "nscd segfaults when running sudo with netgroup caching enabled.", 
+                    "id": "1043557", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1391"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1044628", 
+                    "title": "getaddrinfo return EAI_NONAME instead of EAI_AGAIN in case the DNS query times out", 
+                    "id": "1044628", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1391"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1087833", 
+                    "title": "nscd-2.12-1.132.el6 enters busy loop on long netgroup entry via nss_ldap of nslcd", 
+                    "id": "1087833", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1391"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1099025", 
+                    "title": "ftime() possibly broken on ppc", 
+                    "id": "1099025", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1391"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151627", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1627.html", 
+                    "id": "RHSA-2015:1627", 
+                    "title": "RHSA-2015:1627: glibc security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1186614", 
+                    "title": "CVE-2013-7424 glibc: Invalid-free when using getaddrinfo()", 
+                    "id": "1186614", 
+                    "issue date": "2015-08-17", 
+                    "associated redhat": "RHSA-2015:1627"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

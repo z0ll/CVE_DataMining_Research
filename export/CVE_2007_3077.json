@@ -1,0 +1,161 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3077", 
+                "published": "2007-06-06T06:30:00.000-04:00", 
+                "id": "CVE-2007-3077", 
+                "modified": "2011-03-07T21:55:37.330-05:00", 
+                "summary": "SQL injection vulnerability in listmembers.php in EQdkp 1.3.2 and earlier allows remote attackers to execute arbitrary SQL commands via the rank parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:eqdkp:eqdkp:1.3.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.37145", 
+                "id": 37145
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/24294", 
+                "id": 24294
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/36410", 
+                "id": 36410
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34699", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/2059", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/24294", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/4030", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25548", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/36410", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004624", 
+                "signature": "ET WEB_SPECIFIC_APPS EQdkp SQL Injection Attempt -- listmembers.php rank SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004625", 
+                "signature": "ET WEB_SPECIFIC_APPS EQdkp SQL Injection Attempt -- listmembers.php rank UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004626", 
+                "signature": "ET WEB_SPECIFIC_APPS EQdkp SQL Injection Attempt -- listmembers.php rank INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004627", 
+                "signature": "ET WEB_SPECIFIC_APPS EQdkp SQL Injection Attempt -- listmembers.php rank DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004628", 
+                "signature": "ET WEB_SPECIFIC_APPS EQdkp SQL Injection Attempt -- listmembers.php rank ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004629", 
+                "signature": "ET WEB_SPECIFIC_APPS EQdkp SQL Injection Attempt -- listmembers.php rank UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-3077"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

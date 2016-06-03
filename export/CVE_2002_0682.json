@@ -1,0 +1,152 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0682", 
+                "published": "2002-07-23T00:00:00.000-04:00", 
+                "id": "CVE-2002-0682", 
+                "modified": "2008-09-05T16:28:40.427-04:00", 
+                "summary": "Cross-site scripting vulnerability in Apache Tomcat 4.0.3 allows remote attackers to execute script as other web users via script in a URL with the /servlet/ mapping, which does not filter the script when an exception is thrown by the servlet."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:apache:tomcat:4.0.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.18426", 
+                "id": 18426
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/5193", 
+                "id": 5193
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/4973", 
+                "id": 4973
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://archives.neohapsis.com/archives/vulnwatch/2002-q3/0014.html", 
+                    "vendor": "VULNWATCH"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/9520", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/5193", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/4973", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=102631703811297&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2101827", 
+                "signature": "GPL DELETED Tomcat servlet mapping cross site scripting attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1827", 
+                "signature": "SERVER-APACHE Apache Tomcat servlet mapping cross site scripting attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-0682"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Apache Tomcat /servlet Cross Site Scripting", 
+                "file": "apache_Tomcat_Servlet_XSS.nasl", 
+                "family": "Web application abuses", 
+                "id": "11041"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Apache Tomcat /servlet Mapping XSS", 
+                "file": "apache_Tomcat_Servlet_XSS.nasl", 
+                "family": "CGI abuses : XSS", 
+                "id": "11041"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

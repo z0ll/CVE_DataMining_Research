@@ -1,0 +1,179 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-2237", 
+                "published": "2014-04-01T02:35:53.637-04:00", 
+                "id": "CVE-2014-2237", 
+                "modified": "2015-04-22T21:59:24.787-04:00", 
+                "summary": "The memcache token backend in OpenStack Identity (Keystone) 2013.1 through 2.013.1.4, 2013.2 through 2013.2.2, and icehouse before icehouse-3, when issuing a trust token with impersonation enabled, does not include this token in the trustee s token-index-list, which prevents the token from being invalidated by bulk token revocation and allows the trustee to bypass intended access restrictions."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:openstack:keystone:2013.1.4"
+            }, 
+            {
+                "id": "cpe:/a:openstack:keystone:2013.2.2"
+            }, 
+            {
+                "id": "cpe:/a:openstack:keystone:2013.1"
+            }, 
+            {
+                "id": "cpe:/a:openstack:keystone:2013.1.3"
+            }, 
+            {
+                "id": "cpe:/a:openstack:keystone:2013.1.2"
+            }, 
+            {
+                "id": "cpe:/a:openstack:keystone:2013.1.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.66843", 
+                "id": 66843
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/65895", 
+                "id": 65895
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugs.launchpad.net/keystone/+bug/1260080", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/65895", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2014/03/04/16", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2014-0580.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-2237"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for openstack-keystone FEDORA-2014-4210", 
+                "file": "gb_fedora_2014_4210_openstack-keystone_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867673"
+            }, 
+            {
+                "name": "Fedora Update for openstack-keystone FEDORA-2014-4903", 
+                "file": "gb_fedora_2014_4903_openstack-keystone_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867703"
+            }, 
+            {
+                "name": "Fedora Update for openstack-keystone FEDORA-2014-5497", 
+                "file": "gb_fedora_2014_5497_openstack-keystone_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867750"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 19 : openstack-keystone-2013.1.5-2.fc19 (2014-4210)", 
+                "file": "fedora_2014-4210.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "73353"
+            }, 
+            {
+                "name": "Fedora 20 : openstack-keystone-2013.2.3-2.fc20 (2014-4903)", 
+                "file": "fedora_2014-4903.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "73601"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2014-0580.html", 
+                    "id": "RHSA-2014:0580", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

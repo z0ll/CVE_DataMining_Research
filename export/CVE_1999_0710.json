@@ -1,0 +1,319 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0710", 
+                "published": "1999-07-25T00:00:00.000-04:00", 
+                "id": "CVE-1999-0710", 
+                "modified": "2008-09-09T08:35:15.397-04:00", 
+                "summary": "The Squid package in Red Hat Linux 5.2 and 6.0, and other distributions, installs cachemgr.cgi in a public web directory, which allows remote attackers to use it as an intermediary to connect to other systems."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:redhat:linux:5.2"
+            }, 
+            {
+                "id": "cpe:/o:redhat:linux:6.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14741", 
+                "id": 14741
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/2059", 
+                "id": 2059
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/2385", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/2059", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2005-489.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-1999-025.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/archives/rh52-errata-general.html#squid", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.redhat.com/archives/fedora-announce-list/2005-May/msg00025.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2004/dsa-576", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://fedoranews.org/updates/FEDORA--.shtml", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1206", 
+                "signature": "SERVER-WEBAPP cachemgr.cgi access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0710"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:10071", 
+                "title": "The Squid package in Red Hat Linux 5.2 and 6.0, and other distributions, installs cachemgr.cgi in a public web directory, which allows remote attackers to use it as an intermediary to connect to other systems.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:10071"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "RedHat 6.0 cachemgr.cgi", 
+                "file": "cachemgr_cgi.nasl", 
+                "family": "Web application abuses", 
+                "id": "10034"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 576-1 (squid)", 
+                "file": "deb_576_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "53268"
+            }, 
+            {
+                "name": "FreeBSD Ports: squid", 
+                "file": "freebsd_squid13.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52733"
+            }, 
+            {
+                "name": "SLES9: Security update for squid", 
+                "file": "sles9p5015546.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "65297"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Squid cachemgr.cgi Proxied Port Scanning", 
+                "file": "cachemgr_cgi.nasl", 
+                "family": "CGI abuses", 
+                "id": "10034"
+            }, 
+            {
+                "name": "CentOS 3 / 4 : squid (CESA-2005:415)", 
+                "file": "centos_RHSA-2005-415.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "21822"
+            }, 
+            {
+                "name": "Debian DSA-576-1 : squid - several vulnerabilities", 
+                "file": "debian_DSA-576.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "15674"
+            }, 
+            {
+                "name": "Fedora Core 3 : squid-2.5.STABLE9-1.FC3.6 (2005-373)", 
+                "file": "fedora_2005-373.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "18337"
+            }, 
+            {
+                "name": "FreeBSD : squid -- possible abuse of cachemgr.cgi (a395397c-c7c8-11d9-9e1e-c296ac722cb3)", 
+                "file": "freebsd_pkg_a395397cc7c811d99e1ec296ac722cb3.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "19055"
+            }, 
+            {
+                "name": "RHEL 3 / 4 : squid (RHSA-2005:415)", 
+                "file": "redhat-RHSA-2005-415.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "18500"
+            }, 
+            {
+                "name": "RHEL 2.1 : squid (RHSA-2005:489)", 
+                "file": "redhat-RHSA-2005-489.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "18471"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2005-373", 
+                "id": "FEDORA-2005-373"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FLSA-2006:152809", 
+                "id": "FLSA-2006:152809"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-1999-025.html", 
+                    "id": "RHSA-1999:025", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2005-489.html", 
+                    "id": "RHSA-2005:489", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20050415", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2005-415.html", 
+                    "id": "RHSA-2005:415", 
+                    "title": "RHSA-2005:415: squid security update (Low)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=125007", 
+                    "title": "insecure permissions for squid.conf", 
+                    "id": "125007", 
+                    "issue date": "2005-06-14", 
+                    "associated redhat": "RHSA-2005:415"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=150232", 
+                    "title": "CAN-2005-0626 Cookie leak in squid", 
+                    "id": "150232", 
+                    "issue date": "2005-06-14", 
+                    "associated redhat": "RHSA-2005:415"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=150907", 
+                    "title": "LDAP Authentication fails with an assertion error.", 
+                    "id": "150907", 
+                    "issue date": "2005-06-14", 
+                    "associated redhat": "RHSA-2005:415"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=151412", 
+                    "title": "CAN-2005-1345 Unexpected access control results on configuration errors", 
+                    "id": "151412", 
+                    "issue date": "2005-06-14", 
+                    "associated redhat": "RHSA-2005:415"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=151423", 
+                    "title": "CAN-2005-0718 Segmentation fault on failed PUT/POST request", 
+                    "id": "151423", 
+                    "issue date": "2005-06-14", 
+                    "associated redhat": "RHSA-2005:415"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=156161", 
+                    "title": "CVE-1999-0710 cachemgr.cgi access control bypass", 
+                    "id": "156161", 
+                    "issue date": "2005-06-14", 
+                    "associated redhat": "RHSA-2005:415"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=157455", 
+                    "title": "CAN-2005-1519 DNS lookups unreliable on untrusted networks", 
+                    "id": "157455", 
+                    "issue date": "2005-06-14", 
+                    "associated redhat": "RHSA-2005:415"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-576", 
+                "id": "DSA-576"
+            }
+        ], 
+        "Vmware": []
+    }
+}

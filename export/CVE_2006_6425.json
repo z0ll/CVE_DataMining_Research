@@ -1,0 +1,205 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6425", 
+                "published": "2006-12-26T20:28:00.000-05:00", 
+                "id": "CVE-2006-6425", 
+                "modified": "2011-03-07T21:45:59.860-05:00", 
+                "summary": "Stack-based buffer overflow in the IMAP daemon (IMAPD) in Novell NetMail before 3.52e FTF2 allows remote authenticated users to execute arbitrary code via unspecified vectors involving the APPEND command."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:novell:netmail:3.10:h"
+            }, 
+            {
+                "id": "cpe:/a:novell:netmail:3.5.2:e-ftfl"
+            }, 
+            {
+                "id": "cpe:/a:novell:netmail:3.0.3a:a"
+            }, 
+            {
+                "id": "cpe:/a:novell:netmail:3.0.3a:b"
+            }, 
+            {
+                "id": "cpe:/a:novell:netmail:3.1:f"
+            }, 
+            {
+                "id": "cpe:/a:novell:netmail:3.5"
+            }, 
+            {
+                "id": "cpe:/a:novell:netmail:3.10:a"
+            }, 
+            {
+                "id": "cpe:/a:novell:netmail:3.10:b"
+            }, 
+            {
+                "id": "cpe:/a:novell:netmail:3.1"
+            }, 
+            {
+                "id": "cpe:/a:novell:netmail:3.10:c"
+            }, 
+            {
+                "id": "cpe:/a:novell:netmail:3.10:d"
+            }, 
+            {
+                "id": "cpe:/a:novell:netmail:3.10:e"
+            }, 
+            {
+                "id": "cpe:/a:novell:netmail:3.10:f"
+            }, 
+            {
+                "id": "cpe:/a:novell:netmail:3.10:g"
+            }, 
+            {
+                "id": "cpe:/a:novell:netmail:3.0.1"
+            }, 
+            {
+                "id": "cpe:/a:novell:netmail:3.10"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34037", 
+                "id": 34037
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21723", 
+                "id": 21723
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/258753", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "https://secure-support.novell.com/KanisaPlatform/Publishing/134/3096026_f.SAL_Public.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.zerodayinitiative.com/advisories/ZDI-06-054.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/455200/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1017437", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23437", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/5134", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21723", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2080", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/258753", 
+                "id": "VU#258753"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "9.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "misc-attack", 
+                "id": "sid:3066", 
+                "signature": "PROTOCOL-IMAP append overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "novell_netmail_append.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/imap/novell_netmail_append.rb", 
+                "title": "Novell NetMail IMAP APPEND Buffer Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/netmail_imap_append", 
+                "id": "exploit_info/netmail_imap_append", 
+                "title": "NetMail IMAP APPEND command buffer overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6425"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

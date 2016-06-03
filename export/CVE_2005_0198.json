@@ -1,0 +1,234 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-0198", 
+                "published": "2005-05-02T00:00:00.000-04:00", 
+                "id": "CVE-2005-0198", 
+                "modified": "2010-08-21T00:25:38.733-04:00", 
+                "summary": "A logic error in the CRAM-MD5 code for the University of Washington IMAP (UW-IMAP) server, when Challenge-Response Authentication Mechanism with MD5 (CRAM-MD5) is enabled, does not properly enforce all the required conditions for successful authentication, which allows remote attackers to authenticate as arbitrary users."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:university_of_washington:uw-imap"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.24332", 
+                "id": 24332
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/12391", 
+                "id": 12391
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/CRDY-68QSL5", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/702777", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2005-128.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.gentoo.org/security/en/glsa/glsa-200502-02.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/12391", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:026", 
+                    "vendor": "MANDRAKE"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1013037", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/14097", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/14057", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/702777", 
+                "id": "VU#702777"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-0198"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:11306", 
+                "title": "Buffer overflow in enscript before 1.6.4 has unknown impact and attack vectors, possibly related to the font escape sequence.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:11306"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: imap-uw", 
+                "file": "freebsd_imap-uw.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "53002"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 200502-02 (uw-imap)", 
+                "file": "glsa_200502_02.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "54834"
+            }, 
+            {
+                "name": "SLES9: Security update for imap", 
+                "file": "sles9p5009350.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "65215"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "FreeBSD : imap-uw -- authentication bypass when CRAM-MD5 is enabled (d1bbc235-c0c9-45cd-8d2d-c1b8fd22e616)", 
+                "file": "freebsd_pkg_d1bbc235c0c945cd8d2dc1b8fd22e616.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "19131"
+            }, 
+            {
+                "name": "GLSA-200502-02 : UW IMAP: CRAM-MD5 authentication bypass", 
+                "file": "gentoo_GLSA-200502-02.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "16439"
+            }, 
+            {
+                "name": "Mandrake Linux Security Advisory : imap (MDKSA-2005:026)", 
+                "file": "mandrake_MDKSA-2005-026.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "16292"
+            }, 
+            {
+                "name": "RHEL 3 : imap (RHSA-2005:128)", 
+                "file": "redhat-RHSA-2005-128.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "17207"
+            }, 
+            {
+                "name": "SuSE9 Security Update : imap (YOU Patch Number 9885)", 
+                "file": "suse9_9885.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "41348"
+            }, 
+            {
+                "name": "SUSE-SA:2005:012: imap", 
+                "file": "suse_SA_2005_012.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "17242"
+            }, 
+            {
+                "name": "UW-IMAP CRAM-MD5 Remote Authentication Bypass", 
+                "file": "uw_imap_crammd5_bypass.nasl", 
+                "family": "Misc.", 
+                "id": "16272"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20050128", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2005-128.html", 
+                    "id": "RHSA-2005:128", 
+                    "title": "RHSA-2005:128: imap security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=145469", 
+                    "title": "CAN-2005-0198 user validation issue in imap when using CRAM-MD5 authetication", 
+                    "id": "145469", 
+                    "issue date": "2005-02-23", 
+                    "associated redhat": "RHSA-2005:128"
+                }
+            }
+        ], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200502-02", 
+                "id": "GLSA-200502-02"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

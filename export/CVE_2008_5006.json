@@ -1,0 +1,240 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-5006", 
+                "published": "2008-11-10T09:12:56.170-05:00", 
+                "id": "CVE-2008-5006", 
+                "modified": "2009-01-23T01:43:17.500-05:00", 
+                "summary": "smtp.c in the c-client library in University of Washington IMAP Toolkit 2007b allows remote SMTP servers to cause a denial of service (NULL pointer dereference and application crash) by responding to the QUIT command with a close of the TCP connection instead of the expected 221 response code."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:university_of_washington:imap_toolkit:2007b"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.44952", 
+                "id": 44952
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/32280", 
+                "id": 32280
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/46604", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/32280", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2008/11/03/5", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:146", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2008/dsa-1685", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/33142", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2008-5006"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:8142", 
+                "title": "DSA-1685 uw-imap -- buffer overflows, null pointer dereference", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:8142"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19876", 
+                "title": "DSA-1685-1 uw-imap - multiple vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:19876"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 1685-1 (uw-imap)", 
+                "file": "deb_1685_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "62955"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 200911-03 (c-client uw-imap)", 
+                "file": "glsa_200911_03.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "66333"
+            }, 
+            {
+                "name": "Mandrake Security Advisory MDVSA-2009:146 (imap)", 
+                "file": "mdksa_2009_146.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "64342"
+            }, 
+            {
+                "name": "Mandriva Security Advisory MDVSA-2009:146-1 (imap)", 
+                "file": "mdksa_2009_146_1.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "66554"
+            }, 
+            {
+                "name": "Mandrake Security Advisory MDVSA-2009:166 (c-client)", 
+                "file": "mdksa_2009_166.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "64499"
+            }, 
+            {
+                "name": "SuSE Security Summary SUSE-SR:2009:001 (OpenSuSE 11.1)", 
+                "file": "suse_sr_2009_001.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "63186"
+            }, 
+            {
+                "name": "SuSE Security Summary SUSE-SR:2009:001 (OpenSuSE 11.0)", 
+                "file": "suse_sr_2009_001a.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "63187"
+            }, 
+            {
+                "name": "SuSE Security Summary SUSE-SR:2009:001 (OpenSuSE 10.3)", 
+                "file": "suse_sr_2009_001b.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "63188"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-1685-1 : uw-imap - buffer overflows, NULL pointer dereference", 
+                "file": "debian_DSA-1685.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "35091"
+            }, 
+            {
+                "name": "GLSA-200911-03 : UW IMAP toolkit: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-200911-03.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "42913"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : imap (MDVSA-2009:146-1)", 
+                "file": "mandriva_MDVSA-2009-146.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "39573"
+            }, 
+            {
+                "name": "openSUSE Security Update : imap (imap-368)", 
+                "file": "suse_11_0_imap-081217.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "39987"
+            }, 
+            {
+                "name": "openSUSE Security Update : imap (imap-368)", 
+                "file": "suse_11_1_imap-081217.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "40232"
+            }, 
+            {
+                "name": "openSUSE 10 Security Update : imap (imap-5868)", 
+                "file": "suse_imap-5868.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "35247"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:146", 
+                "id": "MDVSA-2009:146"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-1685", 
+                "id": "DSA-1685"
+            }
+        ], 
+        "Vmware": []
+    }
+}

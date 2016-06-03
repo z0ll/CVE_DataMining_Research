@@ -1,0 +1,192 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-5563", 
+                "published": "2012-12-17T20:55:03.507-05:00", 
+                "id": "CVE-2012-5563", 
+                "modified": "2013-08-22T02:46:42.293-04:00", 
+                "summary": "OpenStack Keystone, as used in OpenStack Folsom 2012.2, does not properly implement token expiration, which allows remote authenticated users to bypass intended authorization restrictions by creating new tokens through token chaining.  NOTE: this issue exists because of a CVE-2012-3426 regression."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/255.html", 
+                "id": "CWE-255", 
+                "title": "Credentials Management"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:openstack:folsom:2012.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.63195", 
+                "id": 63195
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/56727", 
+                "id": 56727
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/11/28/6", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/11/28/5", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "https://github.com/openstack/keystone/commit/f9d4766249a72d8f88d75dcf1575b28dd3496681", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://github.com/openstack/keystone/commit/38c7e46a640a94da4da89a39a5a1ea9c081f1eb5", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugs.launchpad.net/keystone/+bug/1079216", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/80370", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1641-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/56727", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/51436", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/51423", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2012-1557.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "4.0", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-5563"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17820", 
+                "title": "USN-1641-1 -- keystone vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17820"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Ubuntu Update for keystone USN-1641-1", 
+                "file": "gb_ubuntu_USN_1641_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841227"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 18 : openstack-keystone-2012.2.1-1.fc18 (2012-19584)", 
+                "file": "fedora_2012-19584.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "63213"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 12.10 : keystone vulnerabilities (USN-1641-1)", 
+                "file": "ubuntu_USN-1641-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "63093"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2012-1557.html", 
+                    "id": "RHSA-2012:1557", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1641-1", 
+                "id": "USN-1641-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

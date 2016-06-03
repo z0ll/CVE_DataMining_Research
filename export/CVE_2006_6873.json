@@ -1,0 +1,182 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6873", 
+                "published": "2006-12-31T00:00:00.000-05:00", 
+                "id": "CVE-2006-6873", 
+                "modified": "2011-03-07T21:47:12.347-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in mod.php in eNdonesia 8.4 allow remote attackers to execute arbitrary SQL commands via (1) the did parameter in a (a) viewdisk operation (diskusi mod), or the (2) cid parameter in a (b) viewlink (katalog mod) or (b) viewcat (diskusi mod) operation."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:endonesia:endonesia:8.4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34178", 
+                "id": 34178
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21333", 
+                "id": 21333
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/5187", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21333", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23502", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/31115", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/3004", 
+                    "vendor": "MILW0RM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005925", 
+                "signature": "ET WEB_SPECIFIC_APPS eNdonesia SQL Injection Attempt -- mod.php did SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005926", 
+                "signature": "ET WEB_SPECIFIC_APPS eNdonesia SQL Injection Attempt -- mod.php did UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005927", 
+                "signature": "ET WEB_SPECIFIC_APPS eNdonesia SQL Injection Attempt -- mod.php did INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005928", 
+                "signature": "ET WEB_SPECIFIC_APPS eNdonesia SQL Injection Attempt -- mod.php did DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005929", 
+                "signature": "ET WEB_SPECIFIC_APPS eNdonesia SQL Injection Attempt -- mod.php did ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005930", 
+                "signature": "ET WEB_SPECIFIC_APPS eNdonesia SQL Injection Attempt -- mod.php did UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005931", 
+                "signature": "ET WEB_SPECIFIC_APPS eNdonesia SQL Injection Attempt -- mod.php cid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005932", 
+                "signature": "ET WEB_SPECIFIC_APPS eNdonesia SQL Injection Attempt -- mod.php cid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005933", 
+                "signature": "ET WEB_SPECIFIC_APPS eNdonesia SQL Injection Attempt -- mod.php cid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005934", 
+                "signature": "ET WEB_SPECIFIC_APPS eNdonesia SQL Injection Attempt -- mod.php cid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005935", 
+                "signature": "ET WEB_SPECIFIC_APPS eNdonesia SQL Injection Attempt -- mod.php cid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005936", 
+                "signature": "ET WEB_SPECIFIC_APPS eNdonesia SQL Injection Attempt -- mod.php cid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6873"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,177 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0784", 
+                "published": "2007-02-06T12:28:00.000-05:00", 
+                "id": "CVE-2007-0784", 
+                "modified": "2008-09-05T17:18:49.100-04:00", 
+                "summary": "SQL injection vulnerability in login.asp for tPassword in the Raymond BERTHOU script collection (aka RBL - ASP) allows remote attackers to execute arbitrary SQL commands via the (1) User and (2) Password parameters."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:rbl:tpassword"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34846", 
+                "id": 34846
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/458560/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/458495/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.attrition.org/pipermail/vim/2007-January/001259.html", 
+                    "vendor": "VIM"
+                }, 
+                {
+                    "url": "http://forums.avenir-geopolitique.net/viewtopic.php?t=2607", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2225", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005021", 
+                "signature": "ET WEB_SPECIFIC_APPS Raymond BERTHOU script SQL Injection Attempt -- login.asp user SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005022", 
+                "signature": "ET WEB_SPECIFIC_APPS Raymond BERTHOU script SQL Injection Attempt -- login.asp user UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005023", 
+                "signature": "ET WEB_SPECIFIC_APPS Raymond BERTHOU script SQL Injection Attempt -- login.asp user INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005024", 
+                "signature": "ET WEB_SPECIFIC_APPS Raymond BERTHOU script SQL Injection Attempt -- login.asp user DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005025", 
+                "signature": "ET WEB_SPECIFIC_APPS Raymond BERTHOU script SQL Injection Attempt -- login.asp user ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005026", 
+                "signature": "ET WEB_SPECIFIC_APPS Raymond BERTHOU script SQL Injection Attempt -- login.asp user UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005027", 
+                "signature": "ET WEB_SPECIFIC_APPS Raymond BERTHOU script SQL Injection Attempt -- login.asp password SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005028", 
+                "signature": "ET WEB_SPECIFIC_APPS Raymond BERTHOU script SQL Injection Attempt -- login.asp password UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005029", 
+                "signature": "ET WEB_SPECIFIC_APPS Raymond BERTHOU script SQL Injection Attempt -- login.asp password INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005030", 
+                "signature": "ET WEB_SPECIFIC_APPS Raymond BERTHOU script SQL Injection Attempt -- login.asp password DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005031", 
+                "signature": "ET WEB_SPECIFIC_APPS Raymond BERTHOU script SQL Injection Attempt -- login.asp password ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005032", 
+                "signature": "ET WEB_SPECIFIC_APPS Raymond BERTHOU script SQL Injection Attempt -- login.asp password UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-0784"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,174 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0399", 
+                "published": "2004-07-07T00:00:00.000-04:00", 
+                "id": "CVE-2004-0399", 
+                "modified": "2008-09-10T15:26:13.493-04:00", 
+                "summary": "Stack-based buffer overflow in Exim 3.35, and other versions before 4, when the sender_verify option is true, allows remote attackers to cause a denial of service and possibly execute arbitrary code during sender verification."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:university_of_cambridge:exim"
+            }, 
+            {
+                "id": "cpe:/a:university_of_cambridge:exim:3.35"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.647", 
+                "id": 647
+            }, 
+            {
+                "url": "http://www.scip.ch/?vuldb.646", 
+                "id": 646
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/16079", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.guninski.com/exim1.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2004/dsa-502", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2004/dsa-501", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://lists.grok.org.uk/pipermail/full-disclosure/2004-May/021015.html", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/11558", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102590", 
+                "signature": "GPL SMTP MAIL FROM overflow attempt"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0399"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 501-1 (exim)", 
+                "file": "deb_501_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "53191"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 502-1 (exim-tls)", 
+                "file": "deb_502_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "53192"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-501-1 : exim - buffer overflow", 
+                "file": "debian_DSA-501.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "15338"
+            }, 
+            {
+                "name": "Debian DSA-502-1 : exim-tls - buffer overflow", 
+                "file": "debian_DSA-502.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "15339"
+            }, 
+            {
+                "name": "Exim < 3.36 / 4.33 Multiple Remote Overflows", 
+                "file": "exim_mult_overflow.nasl", 
+                "family": "SMTP problems", 
+                "id": "12232"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-501", 
+                "id": "DSA-501"
+            }, 
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-502", 
+                "id": "DSA-502"
+            }
+        ], 
+        "Vmware": []
+    }
+}

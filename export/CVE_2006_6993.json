@@ -1,0 +1,225 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6993", 
+                "published": "2007-02-12T06:28:00.000-05:00", 
+                "id": "CVE-2006-6993", 
+                "modified": "2011-03-07T21:47:39.737-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in pages/addcomment2.php in Neuron Blog 1.1 allow remote attackers to inject arbitrary SQL commands via the (1) commentname, (2) commentmail, (3) commentwebsite, and (4) comment parameters.  NOTE: the provenance of this information is unknown; the details are obtained solely from third party information."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:dev:neuron_blog:1.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34949", 
+                "id": 34949
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/1406", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/19703", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004936", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php commentname SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004937", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php commentname UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004938", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php commentname INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004939", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php commentname DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004940", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php commentname ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004941", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php commentname UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004942", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php commentmail SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004943", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php commentmail UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004945", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php commentmail INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004946", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php commentmail DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004947", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php commentmail ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004948", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php commentmail UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004949", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php commentwebsite SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004950", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php commentwebsite UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004951", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php commentwebsite INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004952", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php commentwebsite DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004953", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php commentwebsite ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004954", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php commentwebsite UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004955", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php comment SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004956", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php comment UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004957", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php comment INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004958", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php comment DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004959", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php comment ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004960", 
+                "signature": "ET WEB_SPECIFIC_APPS Neuron Blog SQL Injection Attempt -- addcomment2.php comment UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6993"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

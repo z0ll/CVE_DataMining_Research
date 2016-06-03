@@ -1,0 +1,165 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3196", 
+                "published": "2007-06-12T19:30:00.000-04:00", 
+                "id": "CVE-2007-3196", 
+                "modified": "2012-10-30T22:37:40.030-04:00", 
+                "summary": "SQL injection vulnerability in vBSupport.php in vSupport Integrated Ticket System 3.x.x allows remote attackers to execute arbitrary SQL commands via the ticketid parameter in a showticket action."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:jelsoft:vbsupport_integrated_ticket_system:2.0.0_beta_1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.37266", 
+                "id": 37266
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/24397", 
+                "id": 24397
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/37331", 
+                "id": 37331
+            }, 
+            {
+                "url": "http://www.osvdb.org/38811", 
+                "id": 38811
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34804", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/24397", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/470966/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://osvdb.org/38811", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/37331", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2795", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005354", 
+                "signature": "ET WEB_SPECIFIC_APPS vSupport Integrated Ticket System SQL Injection Attempt -- vBSupport.php ticketid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005355", 
+                "signature": "ET WEB_SPECIFIC_APPS vSupport Integrated Ticket System SQL Injection Attempt -- vBSupport.php ticketid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005356", 
+                "signature": "ET WEB_SPECIFIC_APPS vSupport Integrated Ticket System SQL Injection Attempt -- vBSupport.php ticketid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005357", 
+                "signature": "ET WEB_SPECIFIC_APPS vSupport Integrated Ticket System SQL Injection Attempt -- vBSupport.php ticketid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005358", 
+                "signature": "ET WEB_SPECIFIC_APPS vSupport Integrated Ticket System SQL Injection Attempt -- vBSupport.php ticketid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005359", 
+                "signature": "ET WEB_SPECIFIC_APPS vSupport Integrated Ticket System SQL Injection Attempt -- vBSupport.php ticketid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-3196"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

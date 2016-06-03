@@ -1,0 +1,402 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2730", 
+                "published": "2015-07-05T22:01:01.250-04:00", 
+                "id": "CVE-2015-2730", 
+                "modified": "2015-08-31T14:18:43.887-04:00", 
+                "summary": "Mozilla Network Security Services (NSS) before 3.19.1, as used in Mozilla Firefox before 39.0, Firefox ESR 31.x before 31.8 and 38.x before 38.1, and other products, does not properly perform Elliptical Curve Cryptography (ECC) multiplications, which makes it easier for remote attackers to spoof ECDSA signatures via unspecified vectors."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/310.html", 
+                "id": "CWE-310", 
+                "title": "Cryptographic Issues"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:mozilla:network_security_services:3.19"
+            }, 
+            {
+                "id": "cpe:/o:novell:suse_linux_enterprise_desktop:12.0"
+            }, 
+            {
+                "id": "cpe:/o:novell:suse_linux_enterprise_software_development_kit:12.0"
+            }, 
+            {
+                "id": "cpe:/o:debian:debian_linux:7.0"
+            }, 
+            {
+                "id": "cpe:/o:debian:debian_linux:8.0"
+            }, 
+            {
+                "id": "cpe:/o:novell:suse_linux_enterprise_server:11:sp4"
+            }, 
+            {
+                "id": "cpe:/o:novell:suse_linux_enterprise_server:12.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.76285", 
+                "id": 76285
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://developer.mozilla.org/docs/Mozilla/Projects/NSS/NSS_3.19.1_release_notes", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1125025", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.mozilla.org/security/announce/2015/mfsa2015-64.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2015/dsa-3336", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00034.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00033.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "4.3", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-2730"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:58", 
+                "title": "DSA-3336-1 -- nss -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:58"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3336-1 (nss - security update)", 
+                "file": "deb_3336.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703336"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : nss-softokn (ALAS-2015-596)", 
+                "file": "ala_ALAS-2015-596.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "86074"
+            }, 
+            {
+                "name": "CentOS 5 : nss (CESA-2015:1664)", 
+                "file": "centos_RHSA-2015-1664.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "85634"
+            }, 
+            {
+                "name": "CentOS 6 / 7 : nss-softokn (CESA-2015:1699)", 
+                "file": "centos_RHSA-2015-1699.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "86501"
+            }, 
+            {
+                "name": "Debian DLA-315-1 : nss security update", 
+                "file": "debian_DLA-315.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "86154"
+            }, 
+            {
+                "name": "Debian DSA-3336-1 : nss - security update", 
+                "file": "debian_DSA-3336.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "85466"
+            }, 
+            {
+                "name": "FreeBSD : mozilla -- multiple vulnerabilities (44d9daee-940c-4179-86bb-6e3ffd617869) (Logjam)", 
+                "file": "freebsd_pkg_44d9daee940c417986bb6e3ffd617869.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "84780"
+            }, 
+            {
+                "name": "GLSA-201512-10 : Mozilla Products: Multiple vulnerabilities (Bar Mitzvah) (Logjam)", 
+                "file": "gentoo_GLSA-201512-10.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "87710"
+            }, 
+            {
+                "name": "Firefox ESR < 31.8 Multiple Vulnerabilities (Mac OS X) (Logjam)", 
+                "file": "macosx_firefox_31_8_esr.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "84575"
+            }, 
+            {
+                "name": "Firefox ESR < 38.1 Multiple Vulnerabilities (Mac OS X) (Logjam)", 
+                "file": "macosx_firefox_38_1_esr.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "84576"
+            }, 
+            {
+                "name": "Firefox < 39.0 Multiple Vulnerabilities (Mac OS X) (Logjam)", 
+                "file": "macosx_firefox_39_0.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "84577"
+            }, 
+            {
+                "name": "Firefox ESR < 31.8 Multiple Vulnerabilities (Logjam)", 
+                "file": "mozilla_firefox_31_8_esr.nasl", 
+                "family": "Windows", 
+                "id": "84579"
+            }, 
+            {
+                "name": "Firefox ESR < 38.1 Multiple Vulnerabilities (Logjam)", 
+                "file": "mozilla_firefox_38_1_esr.nasl", 
+                "family": "Windows", 
+                "id": "84580"
+            }, 
+            {
+                "name": "Firefox < 39.0 Multiple Vulnerabilities (Logjam)", 
+                "file": "mozilla_firefox_39_0.nasl", 
+                "family": "Windows", 
+                "id": "84581"
+            }, 
+            {
+                "name": "openSUSE Security Update : MozillaFirefox / mozilla-nss (openSUSE-2015-480) (Logjam)", 
+                "file": "openSUSE-2015-480.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84720"
+            }, 
+            {
+                "name": "openSUSE Security Update : MozillaThunderbird (openSUSE-2015-495) (Logjam)", 
+                "file": "openSUSE-2015-495.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84864"
+            }, 
+            {
+                "name": "Oracle Linux 5 : nss (ELSA-2015-1664)", 
+                "file": "oraclelinux_ELSA-2015-1664.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85611"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : nss-softokn (ELSA-2015-1699)", 
+                "file": "oraclelinux_ELSA-2015-1699.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85732"
+            }, 
+            {
+                "name": "OracleVM 3.3 : nss-softokn (OVMSA-2015-0118)", 
+                "file": "oraclevm_OVMSA-2015-0118.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "85733"
+            }, 
+            {
+                "name": "RHEL 5 : nss (RHSA-2015:1664)", 
+                "file": "redhat-RHSA-2015-1664.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "85615"
+            }, 
+            {
+                "name": "RHEL 6 / 7 : nss-softokn (RHSA-2015:1699)", 
+                "file": "redhat-RHSA-2015-1699.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "85969"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : nss on SL5.x i386/x86_64", 
+                "file": "sl_20150824_nss_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "85623"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : nss-softokn on SL6.x, SL7.x i386/x86_64", 
+                "file": "sl_20150901_nss_softokn_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "85759"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : MozillaFirefox, mozilla-nspr, mozilla-nss (SUSE-SU-2015:1268-2)", 
+                "file": "suse_SU-2015-1268-2.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84898"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : MozillaFirefox, mozilla-nspr, mozilla-nss (SUSE-SU-2015:1269-1)", 
+                "file": "suse_SU-2015-1269-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84899"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : MozillaFirefox, mozilla-nss (SUSE-SU-2015:1449-1) (Logjam)", 
+                "file": "suse_SU-2015-1449-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85721"
+            }, 
+            {
+                "name": "Ubuntu 14.04 / 14.10 / 15.04 : firefox vulnerabilities (USN-2656-1) (Logjam)", 
+                "file": "ubuntu_USN-2656-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "84664"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : firefox vulnerabilities (USN-2656-2) (Logjam)", 
+                "file": "ubuntu_USN-2656-2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "84794"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 14.04 / 14.10 / 15.04 : nss vulnerabilities (USN-2672-1)", 
+                "file": "ubuntu_USN-2672-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "84666"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2015-2730.html", 
+                "id": "SUSE-SU-2015:1268"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2015-2730.html", 
+                "id": "SUSE-SU-2015:1269"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151185", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1185.html", 
+                    "id": "RHSA-2015:1185", 
+                    "title": "RHSA-2015:1185: nss security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1223211", 
+                    "title": "CVE-2015-4000 LOGJAM: TLS connections which support export grade DHE key-exchange are vulnerable to MITM attacks", 
+                    "id": "1223211", 
+                    "issue date": "2015-06-25", 
+                    "associated redhat": "RHSA-2015:1185"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151664", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1664.html", 
+                    "id": "RHSA-2015:1664", 
+                    "title": "RHSA-2015:1664: nss security, bug fix, and enhancement update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1236954", 
+                    "title": "CVE-2015-2730 NSS: ECDSA signature validation fails to handle some signatures correctly (MFSA 2015-64)", 
+                    "id": "1236954", 
+                    "issue date": "2015-08-24", 
+                    "associated redhat": "RHSA-2015:1664"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1236967", 
+                    "title": "CVE-2015-2721 NSS: incorrectly permited skipping of ServerKeyExchange (MFSA 2015-71)", 
+                    "id": "1236967", 
+                    "issue date": "2015-08-24", 
+                    "associated redhat": "RHSA-2015:1664"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151699", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1699.html", 
+                    "id": "RHSA-2015:1699", 
+                    "title": "RHSA-2015:1699: nss-softokn security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1236954", 
+                    "title": "CVE-2015-2730 NSS: ECDSA signature validation fails to handle some signatures correctly (MFSA 2015-64)", 
+                    "id": "1236954", 
+                    "issue date": "2015-09-01", 
+                    "associated redhat": "RHSA-2015:1699"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3336", 
+                "id": "DSA-3336"
+            }
+        ], 
+        "Vmware": []
+    }
+}

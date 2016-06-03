@@ -1,0 +1,153 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2342", 
+                "published": "2007-04-27T12:19:00.000-04:00", 
+                "id": "CVE-2007-2342", 
+                "modified": "2011-03-07T21:54:02.563-05:00", 
+                "summary": "SQL injection vulnerability in error.asp in CreaScripts CreaDirectory 1.2 allows remote attackers to execute arbitrary SQL commands via the id parameter, a different vector than CVE-2006-6083."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:creascripts:creadirectory:1.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.36473", 
+                "id": 36473
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/23564", 
+                "id": 23564
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/35638", 
+                "id": 35638
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1476", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/23564", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/3767", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://osvdb.org/35638", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003752", 
+                "signature": "ET WEB_SPECIFIC_APPS CreaScripts CreaDirectory SQL Injection Attempt -- error.asp id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003753", 
+                "signature": "ET WEB_SPECIFIC_APPS CreaScripts CreaDirectory SQL Injection Attempt -- error.asp id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003754", 
+                "signature": "ET WEB_SPECIFIC_APPS CreaScripts CreaDirectory SQL Injection Attempt -- error.asp id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003755", 
+                "signature": "ET WEB_SPECIFIC_APPS CreaScripts CreaDirectory SQL Injection Attempt -- error.asp id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003756", 
+                "signature": "ET WEB_SPECIFIC_APPS CreaScripts CreaDirectory SQL Injection Attempt -- error.asp id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003757", 
+                "signature": "ET WEB_SPECIFIC_APPS CreaScripts CreaDirectory SQL Injection Attempt -- error.asp id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2342"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

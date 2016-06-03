@@ -1,0 +1,213 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/668.html", 
+                "id": "CWE-668", 
+                "title": "Exposure of Resource to Wrong Sphere"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/199.html", 
+                "id": "CWE-199", 
+                "title": "Information Management Errors"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/717.html", 
+                "id": "CWE-717", 
+                "title": "OWASP Top Ten 2007 Category A6 - Information Leakage and Improper Error Handling"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/840.html", 
+                "id": "CWE-840", 
+                "title": "Business Logic Errors"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/963.html", 
+                "id": "CWE-963", 
+                "title": "SFP Secondary Cluster: Exposed Data"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/13.html", 
+                "id": 13
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/169.html", 
+                "id": 169
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/22.html", 
+                "id": 22
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/472.html", 
+                "id": 472
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/59.html", 
+                "id": 59
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/60.html", 
+                "id": 60
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/79.html", 
+                "id": 79
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0632", 
+                "published": "2013-01-16T19:55:01.200-05:00", 
+                "id": "CVE-2013-0632", 
+                "modified": "2014-01-17T00:12:06.673-05:00", 
+                "summary": "administrator.cfc in Adobe ColdFusion 9.0, 9.0.1, 9.0.2, and 10 allows remote attackers to bypass authentication and possibly execute arbitrary code by logging in to the RDS component using the default empty password and leveraging this session to access the administrative web interface, as exploited in the wild in January 2013."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/200.html", 
+                "id": "CWE-200", 
+                "title": "Information Exposure"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:adobe:coldfusion:9.0"
+            }, 
+            {
+                "id": "cpe:/a:adobe:coldfusion:10.0"
+            }, 
+            {
+                "id": "cpe:/a:adobe:coldfusion:9.0.2"
+            }, 
+            {
+                "id": "cpe:/a:adobe:coldfusion:9.0.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.7338", 
+                "id": 7338
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.exploit-db.com/exploits/30210", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://www.adobe.com/support/security/bulletins/apsb13-03.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.adobe.com/support/security/advisories/apsa13-01.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2017366", 
+                "signature": "ET WEB_SERVER Coldfusion 9 Auth Bypass CVE-2013-0632"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/30210", 
+                "id": 30210, 
+                "file": "http://www.exploit-db.com/download/30210"
+            }, 
+            {
+                "url": "http://www.exploit-db.com/exploits/24946", 
+                "id": 24946, 
+                "file": "platforms/multiple/remote/24946.rb"
+            }, 
+            {
+                "url": "http://www.exploit-db.com/exploits/27755", 
+                "id": 27755, 
+                "file": "platforms/windows/webapps/27755.txt"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-0632"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Adobe ColdFusion Authentication Bypass (APSB13-03)", 
+                "file": "coldfusion_apsb13-03_auth_bypass.nasl", 
+                "family": "CGI abuses", 
+                "id": "64689"
+            }, 
+            {
+                "name": "Adobe ColdFusion Multiple Vulnerabilities (APSB13-03) (credentialed check)", 
+                "file": "coldfusion_win_apsb13-03.nasl", 
+                "family": "Windows", 
+                "id": "66526"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

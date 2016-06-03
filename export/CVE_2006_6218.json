@@ -1,0 +1,208 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6218", 
+                "published": "2006-11-30T20:28:00.000-05:00", 
+                "id": "CVE-2006-6218", 
+                "modified": "2008-09-05T17:14:12.630-04:00", 
+                "summary": "Multiple SQL injection vulnerabilities in index.php in dev4u CMS allow remote attackers to execute arbitrary SQL commands via the (1) seite_id, (2) gruppe_id.php, and (3) go_target parameters."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:dev4u:dev4u_cms"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33556", 
+                "id": 33556
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21170", 
+                "id": 21170
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30395", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21170", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/452008/100/200/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.majorsecurity.de/index_2.php?major_rls=major_rls36", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006951", 
+                "signature": "ET WEB_SPECIFIC_APPS dev4u CMS SQL Injection Attempt -- index.php seite_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006952", 
+                "signature": "ET WEB_SPECIFIC_APPS dev4u CMS SQL Injection Attempt -- index.php seite_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006953", 
+                "signature": "ET WEB_SPECIFIC_APPS dev4u CMS SQL Injection Attempt -- index.php seite_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006954", 
+                "signature": "ET WEB_SPECIFIC_APPS dev4u CMS SQL Injection Attempt -- index.php seite_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006955", 
+                "signature": "ET WEB_SPECIFIC_APPS dev4u CMS SQL Injection Attempt -- index.php seite_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006956", 
+                "signature": "ET WEB_SPECIFIC_APPS dev4u CMS SQL Injection Attempt -- index.php seite_id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006957", 
+                "signature": "ET WEB_SPECIFIC_APPS dev4u CMS SQL Injection Attempt -- index.php gruppe_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006958", 
+                "signature": "ET WEB_SPECIFIC_APPS dev4u CMS SQL Injection Attempt -- index.php gruppe_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006959", 
+                "signature": "ET WEB_SPECIFIC_APPS dev4u CMS SQL Injection Attempt -- index.php gruppe_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006960", 
+                "signature": "ET WEB_SPECIFIC_APPS dev4u CMS SQL Injection Attempt -- index.php gruppe_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006961", 
+                "signature": "ET WEB_SPECIFIC_APPS dev4u CMS SQL Injection Attempt -- index.php gruppe_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006962", 
+                "signature": "ET WEB_SPECIFIC_APPS dev4u CMS SQL Injection Attempt -- index.php gruppe_id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006963", 
+                "signature": "ET WEB_SPECIFIC_APPS dev4u CMS SQL Injection Attempt -- index.php go_target SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006964", 
+                "signature": "ET WEB_SPECIFIC_APPS dev4u CMS SQL Injection Attempt -- index.php go_target UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006965", 
+                "signature": "ET WEB_SPECIFIC_APPS dev4u CMS SQL Injection Attempt -- index.php go_target INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006966", 
+                "signature": "ET WEB_SPECIFIC_APPS dev4u CMS SQL Injection Attempt -- index.php go_target DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006967", 
+                "signature": "ET WEB_SPECIFIC_APPS dev4u CMS SQL Injection Attempt -- index.php go_target ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006968", 
+                "signature": "ET WEB_SPECIFIC_APPS dev4u CMS SQL Injection Attempt -- index.php go_target UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6218"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

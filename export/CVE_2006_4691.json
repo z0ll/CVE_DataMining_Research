@@ -1,0 +1,208 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4691", 
+                "published": "2006-11-14T16:07:00.000-05:00", 
+                "id": "CVE-2006-4691", 
+                "modified": "2011-03-07T21:41:54.250-05:00", 
+                "summary": "Stack-based buffer overflow in the NetpManageIPCConnect function in the Workstation service (wkssvc.dll) in Microsoft Windows 2000 SP4 and XP SP2 allows remote attackers to execute arbitrary code via NetrJoinDomain2 RPC messages with a long hostname."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp4::fr"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp2:tablet_pc"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.2684", 
+                "id": 2684
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0013115", 
+                "id": "2006-A-0054", 
+                "title": "Microsoft Windows Workstation Service Remote Code Execution Vulnerability"
+            }
+        ], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/20985", 
+                "id": 20985
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA06-318A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/778036", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms06-070.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/22883", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/29948", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4508", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/20985", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/451588/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1017221", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://research.eeye.com/html/advisories/published/AD20061114.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://research.eeye.com/html/advisories/published/AD20061114.html", 
+                    "vendor": "EEYE"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/778036", 
+                "id": "VU#778036"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms06_070_wkssvc.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/smb/ms06_070_wkssvc.rb", 
+                "title": "MS06-070 Microsoft Workstation Service NetpManageIPCConnect Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/windows_workstation_ipcconnect", 
+                "id": "exploit_info/windows_workstation_ipcconnect", 
+                "title": "Windows Workstation service NetpManageIPCConnect buffer overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-4691"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:908", 
+                "title": "Microsoft Client Service for NetWare Memory Corruption Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:908"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:607", 
+                "title": "Workstation Service Memory Corruption Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:607"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS06-070: Vulnerability in Workstation Service Could Allow Remote Code Execution (924270)", 
+                "file": "smb_nt_ms06-070.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "23646"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in Workstation Service Could Allow Remote Code Execution", 
+                "id": "Vulnerability in Workstation Service Could Allow Remote Code Execution", 
+                "title": "924270"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/924270", 
+                "id": "924270", 
+                "title": "Vulnerability in Workstation Service Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS06-070", 
+                "id": "MS06-070", 
+                "title": "Vulnerability in Workstation Service Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

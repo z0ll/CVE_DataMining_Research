@@ -1,0 +1,208 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-0012", 
+                "published": "2001-02-12T00:00:00.000-05:00", 
+                "id": "CVE-2001-0012", 
+                "modified": "2008-09-10T15:07:01.447-04:00", 
+                "summary": "BIND 4 and BIND 8 allow remote attackers to access sensitive information such as environment variables."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:isc:bind:8.2.2:p7"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:8.2.2:p6"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:8.2.2:p5"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:8.2.2:p4"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:4.9.6"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:4.9.5"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:8.2.1"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:4.9.5:p1"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:4.9.3"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:8.2.2"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:8.2"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:4.9.7"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:8.2.2:p3"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:8.2.2:p2"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:8.2.2:p1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.16379", 
+                "id": 16379
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/2321", 
+                "id": 2321
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.cert.org/advisories/CA-2001-02.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/2321", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2001-007.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.nai.com/research/covert/advisories/047.asp", 
+                    "vendor": "NAI"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2001/dsa-026", 
+                    "vendor": "DEBIAN"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-recon", 
+                "id": "sid:2921", 
+                "signature": "PROTOCOL-DNS UDP inverse query"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:2922", 
+                "signature": "PROTOCOL-DNS TCP inverse query"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-0012"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 026-1 (bind)", 
+                "file": "deb_026_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "53789"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "ISC BIND < 4.9.8 / 8.2.3 Multiple Remote Overflows", 
+                "file": "bind_covert_overflows.nasl", 
+                "family": "DNS", 
+                "id": "10605"
+            }, 
+            {
+                "name": "Debian DSA-026-1 : bind - buffer overflows and information leak", 
+                "file": "debian_DSA-026.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "14863"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2001-007.html", 
+                    "id": "RHSA-2001:007", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-026", 
+                "id": "DSA-026"
+            }
+        ], 
+        "Vmware": []
+    }
+}

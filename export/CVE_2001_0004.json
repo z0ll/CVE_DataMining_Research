@@ -1,0 +1,148 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-0004", 
+                "published": "2001-02-12T00:00:00.000-05:00", 
+                "id": "CVE-2001-0004", 
+                "modified": "2008-09-05T16:23:01.620-04:00", 
+                "summary": "IIS 5.0 and 4.0 allows remote attackers to read the source code for executable web server programs by appending \"%3F+.htr\" to the requested URL, which causes the files to be parsed by the .HTR ISAPI extension, aka a variant of the \"File Fragment Reading via .HTR\" vulnerability."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:4.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:5.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.16371", 
+                "id": 16371
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/2313", 
+                "id": 2313
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/MS01-004.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=97897954625305&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/static/5903.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/2313", 
+                    "vendor": "BID"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "misc-activity", 
+                "id": "sid:987", 
+                "signature": "FILE-IDENTIFY .htr access file download request"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1016", 
+                "signature": "SERVER-IIS global.asa access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1725", 
+                "signature": "SERVER-IIS +.htr code fragment attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-0004"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/285985", 
+                "id": "285985", 
+                "title": "Malformed .HTR Request Allows Reading of File Fragments"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS01-004", 
+                "id": "MS01-004", 
+                "title": "Malformed .HTR Request Allows Reading of File Fragments"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

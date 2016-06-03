@@ -1,0 +1,283 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2652", 
+                "published": "2012-08-07T16:55:03.360-04:00", 
+                "id": "CVE-2012-2652", 
+                "modified": "2014-03-05T23:37:56.093-05:00", 
+                "summary": "The bdrv_open function in Qemu 1.0 does not properly handle the failure of the mkstemp function, when in snapshot node, which allows local users to overwrite or read arbitrary files via a symlink attack on an unspecified temporary file."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:qemu:qemu:1.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.61501", 
+                "id": 61501
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/53725", 
+                "id": 53725
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1522-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/53725", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2012/dsa-2545", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/50689", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/50132", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2012-09/msg00024.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://git.qemu.org/?p=qemu-stable-0.15.git;a=log", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://git.kernel.org/?p=virt/kvm/qemu-kvm.git;a=commit;h=eba25057b9a5e19d10ace2bc7716667a31297169", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "4.4", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-2652"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19980", 
+                "title": "DSA-2545-1 qemu - multiple", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:19980"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18066", 
+                "title": "USN-1522-1 -- qemu-kvm vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18066"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18326", 
+                "title": "DSA-2542-1 qemu-kvm - multiple", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18326"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2542-1 (qemu-kvm)", 
+                "file": "deb_2542_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "72171"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 2545-1 (qemu)", 
+                "file": "deb_2545_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "72174"
+            }, 
+            {
+                "name": "Fedora Update for qemu FEDORA-2012-11302", 
+                "file": "gb_fedora_2012_11302_qemu_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864610"
+            }, 
+            {
+                "name": "Fedora Update for qemu FEDORA-2012-11305", 
+                "file": "gb_fedora_2012_11305_qemu_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864612"
+            }, 
+            {
+                "name": "Fedora Update for qemu FEDORA-2012-15606", 
+                "file": "gb_fedora_2012_15606_qemu_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864789"
+            }, 
+            {
+                "name": "Fedora Update for qemu FEDORA-2012-15740", 
+                "file": "gb_fedora_2012_15740_qemu_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864778"
+            }, 
+            {
+                "name": "Fedora Update for qemu FEDORA-2013-0934", 
+                "file": "gb_fedora_2013_0934_qemu_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865266"
+            }, 
+            {
+                "name": "Fedora Update for qemu FEDORA-2013-0971", 
+                "file": "gb_fedora_2013_0971_qemu_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865241"
+            }, 
+            {
+                "name": "Fedora Update for qemu FEDORA-2013-6211", 
+                "file": "gb_fedora_2013_6211_qemu_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865592"
+            }, 
+            {
+                "name": "Ubuntu Update for qemu-kvm USN-1522-1", 
+                "file": "gb_ubuntu_USN_1522_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841096"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 201210-04 (ebuild)", 
+                "file": "glsa_201210_04.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "72520"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-2542-1 : qemu-kvm - multiple vulnerabilities", 
+                "file": "debian_DSA-2542.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "62013"
+            }, 
+            {
+                "name": "Debian DSA-2545-1 : qemu - multiple vulnerabilities", 
+                "file": "debian_DSA-2545.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "62016"
+            }, 
+            {
+                "name": "Fedora 17 : qemu-1.0.1-1.fc17 (2012-11302)", 
+                "file": "fedora_2012-11302.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "61471"
+            }, 
+            {
+                "name": "Fedora 16 : qemu-0.15.1-7.fc16 (2012-11305)", 
+                "file": "fedora_2012-11305.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "61472"
+            }, 
+            {
+                "name": "GLSA-201210-04 : qemu-kvm: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201210-04.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "62634"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : qemu (MDVSA-2013:121)", 
+                "file": "mandriva_MDVSA-2013-121.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "66133"
+            }, 
+            {
+                "name": "openSUSE Security Update : kvm (openSUSE-SU-2012:0832-1)", 
+                "file": "openSUSE-2012-364.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74666"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS / 11.04 / 11.10 / 12.04 LTS : qemu-kvm vulnerability (USN-1522-1)", 
+                "file": "ubuntu_USN-1522-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "61411"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2012-2652.html", 
+                "id": "SUSE-SU-2012:1202"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1522-1", 
+                "id": "USN-1522-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2545", 
+                "id": "DSA-2545"
+            }
+        ], 
+        "Vmware": []
+    }
+}

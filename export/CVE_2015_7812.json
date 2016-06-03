@@ -1,0 +1,182 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-7812", 
+                "published": "2015-11-17T10:59:14.830-05:00", 
+                "id": "CVE-2015-7812", 
+                "modified": "2015-11-18T12:50:31.440-05:00", 
+                "summary": "The hypercall_create_continuation function in arch/arm/domain.c in Xen 4.4.x through 4.6.x allows local guest users to cause a denial of service (host crash) via a preemptable hypercall to the multicall interface."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/254.html", 
+                "id": "CWE-254", 
+                "title": "Security Features"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:xen:xen:4.4.2"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.5.1"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.6.0"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.4.1:-"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.4.0:-"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.4.3"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.5.2"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.5.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.78954", 
+                "id": 78954
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xenbits.xen.org/xsa/advisory-145.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id/1034031", 
+                    "vendor": "SECTRACK"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.9", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-7812"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:336", 
+                "title": "DSA-3414-1 -- xen -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:336"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3414-1 (xen - security update)", 
+                "file": "deb_3414.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703414"
+            }, 
+            {
+                "name": "Gentoo Linux Local Check: https://security.gentoo.org/glsa/201604-03", 
+                "file": "glsa-201604-03.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "18627"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-3414-1 : xen - security update", 
+                "file": "debian_DSA-3414.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "87288"
+            }, 
+            {
+                "name": "Fedora 21 : xen-4.4.3-7.fc21 (2015-242be2c240)", 
+                "file": "fedora_2015-242be2c240.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "89177"
+            }, 
+            {
+                "name": "Fedora 22 : xen-4.5.1-14.fc22 (2015-6f6b79efe2)", 
+                "file": "fedora_2015-6f6b79efe2.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "89278"
+            }, 
+            {
+                "name": "Fedora 23 : xen-4.5.1-14.fc23 (2015-a931b02be2)", 
+                "file": "fedora_2015-a931b02be2.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "89359"
+            }, 
+            {
+                "name": "GLSA-201604-03 : Xen: Multiple vulnerabilities (Venom)", 
+                "file": "gentoo_GLSA-201604-03.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "90380"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

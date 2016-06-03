@@ -1,0 +1,583 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5477", 
+                "published": "2015-07-29T10:59:05.397-04:00", 
+                "id": "CVE-2015-5477", 
+                "modified": "2015-08-25T22:02:53.217-04:00", 
+                "summary": "named in ISC BIND 9.x before 9.9.7-P2 and 9.10.x before 9.10.2-P3 allows remote attackers to cause a denial of service (REQUIRE assertion failure and daemon exit) via TKEY queries."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/19.html", 
+                "id": "CWE-19", 
+                "title": "Data Handling"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:isc:bind:9.9.7:p1"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:9.10.2:p2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.76834", 
+                "id": 76834
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://kb.isc.org/article/AA-01272", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2693-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2015/dsa-3319", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-1515.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-1514.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-1513.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-08/msg00001.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00050.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00048.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00045.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00044.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00043.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.8", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-dos", 
+                "id": "sid:2021572", 
+                "signature": "ET EXPLOIT Possible BIND9 DoS CVE-2015-5477 M1"
+            }, 
+            {
+                "classtype": "attempted-dos", 
+                "id": "sid:2021573", 
+                "signature": "ET EXPLOIT Possible BIND9 DoS CVE-2015-5477 M2"
+            }, 
+            {
+                "classtype": "attempted-dos", 
+                "id": "sid:2021574", 
+                "signature": "ET EXPLOIT Possible BIND9 DoS CVE-2015-5477 M3"
+            }, 
+            {
+                "classtype": "attempted-dos", 
+                "id": "sid:2021575", 
+                "signature": "ET EXPLOIT Possible BIND9 DoS CVE-2015-5477 M4"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "bind_tkey.rb", 
+                "file": "metasploit-framework/modules/auxiliary/dos/dns/bind_tkey.rb", 
+                "title": "BIND TKEY Query Denial of Service"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/37721", 
+                "id": 37721, 
+                "file": "platforms/multiple/dos/37721.c"
+            }, 
+            {
+                "url": "http://www.exploit-db.com/exploits/37723", 
+                "id": 37723, 
+                "file": "platforms/multiple/dos/37723.py"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-5477"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:10", 
+                "title": "HP-UX Running BIND, Remote Denial of Service (DoS)", 
+                "class": "vulnerability", 
+                "id": "oval:org.cisecurity:def:10"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:87", 
+                "title": "DSA-3319-1 -- bind9 -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:87"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3319-1 (bind9 - security update)", 
+                "file": "deb_3319.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703319"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "AIX 7.1 TL 2 : bind9 (IV75690)", 
+                "file": "aix_IV75690.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "85414"
+            }, 
+            {
+                "name": "AIX 6.1 TL 9 : bind9 (IV75692)", 
+                "file": "aix_IV75692.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "85415"
+            }, 
+            {
+                "name": "AIX 7.1 TL 3 : bind9 (IV75693)", 
+                "file": "aix_IV75693.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "85416"
+            }, 
+            {
+                "name": "AIX 6.1 TL 8 : bind9 (IV75694)", 
+                "file": "aix_IV75694.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "85417"
+            }, 
+            {
+                "name": "AIX 5.3 TL 12 : bind9 (IV75966)", 
+                "file": "aix_IV75966.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "85450"
+            }, 
+            {
+                "name": "Amazon Linux AMI : bind (ALAS-2015-573)", 
+                "file": "ala_ALAS-2015-573.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "85044"
+            }, 
+            {
+                "name": "ISC BIND 9.7.x < 9.9.7-P2 / 9.10.x < 9.10.2-P3 TKEY Query Handling Remote DoS", 
+                "file": "bind9_9102_p3.nasl", 
+                "family": "DNS", 
+                "id": "85241"
+            }, 
+            {
+                "name": "CentOS 6 / 7 : bind (CESA-2015:1513)", 
+                "file": "centos_RHSA-2015-1513.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "85047"
+            }, 
+            {
+                "name": "CentOS 5 : bind (CESA-2015:1514)", 
+                "file": "centos_RHSA-2015-1514.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "85048"
+            }, 
+            {
+                "name": "CentOS 5 : bind97 (CESA-2015:1515)", 
+                "file": "centos_RHSA-2015-1515.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "85049"
+            }, 
+            {
+                "name": "Debian DLA-285-1 : bind9 security update", 
+                "file": "debian_DLA-285.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "85052"
+            }, 
+            {
+                "name": "Debian DSA-3319-1 : bind9 - security update", 
+                "file": "debian_DSA-3319.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "85053"
+            }, 
+            {
+                "name": "F5 Networks BIG-IP : BIND vulnerability (SOL16909)", 
+                "file": "f5_bigip_SOL16909.nasl", 
+                "family": "F5 Networks Local Security Checks", 
+                "id": "86011"
+            }, 
+            {
+                "name": "Fedora 22 : bind99-9.9.7-6.P2.fc22 (2015-12316)", 
+                "file": "fedora_2015-12316.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "85169"
+            }, 
+            {
+                "name": "Fedora 22 : bind-9.10.2-4.P3.fc22 (2015-12335)", 
+                "file": "fedora_2015-12335.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "85170"
+            }, 
+            {
+                "name": "Fedora 21 : bind-9.9.6-10.P1.fc21 (2015-12357)", 
+                "file": "fedora_2015-12357.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "85171"
+            }, 
+            {
+                "name": "FreeBSD : bind -- denial of service vulnerability (731cdeaa-3564-11e5-9970-14dae9d210b8)", 
+                "file": "freebsd_pkg_731cdeaa356411e5997014dae9d210b8.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "85066"
+            }, 
+            {
+                "name": "GLSA-201510-01 : BIND: Denial of Service", 
+                "file": "gentoo_GLSA-201510-01.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "86435"
+            }, 
+            {
+                "name": "Juniper Junos TKEY Query Handling DoS (JSA10718)", 
+                "file": "juniper_jsa10718.nasl", 
+                "family": "Junos Local Security Checks", 
+                "id": "88093"
+            }, 
+            {
+                "name": "Mac OS X : OS X Server < 4.1.5 BIND DoS", 
+                "file": "macosx_server_4_1_5.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "85410"
+            }, 
+            {
+                "name": "McAfee Firewall Enterprise DoS (SB10126)", 
+                "file": "mcafee_firewall_enterprise_SB10126.nasl", 
+                "family": "Firewalls", 
+                "id": "85402"
+            }, 
+            {
+                "name": "openSUSE Security Update : bind (openSUSE-2015-530)", 
+                "file": "openSUSE-2015-530.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85187"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : bind (ELSA-2015-1513)", 
+                "file": "oraclelinux_ELSA-2015-1513.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85067"
+            }, 
+            {
+                "name": "Oracle Linux 5 : bind (ELSA-2015-1514)", 
+                "file": "oraclelinux_ELSA-2015-1514.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85116"
+            }, 
+            {
+                "name": "Oracle Linux 5 : bind97 (ELSA-2015-1515)", 
+                "file": "oraclelinux_ELSA-2015-1515.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85117"
+            }, 
+            {
+                "name": "OracleVM 3.3 : bind (OVMSA-2015-0105)", 
+                "file": "oraclevm_OVMSA-2015-0105.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "85146"
+            }, 
+            {
+                "name": "RHEL 6 / 7 : bind (RHSA-2015:1513)", 
+                "file": "redhat-RHSA-2015-1513.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "85068"
+            }, 
+            {
+                "name": "RHEL 5 : bind (RHSA-2015:1514)", 
+                "file": "redhat-RHSA-2015-1514.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "85069"
+            }, 
+            {
+                "name": "RHEL 5 : bind97 (RHSA-2015:1515)", 
+                "file": "redhat-RHSA-2015-1515.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "85070"
+            }, 
+            {
+                "name": "RHEL 6 : bind (RHSA-2016:0078)", 
+                "file": "redhat-RHSA-2016-0078.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "88479"
+            }, 
+            {
+                "name": "RHEL 6 : bind (RHSA-2016:0079)", 
+                "file": "redhat-RHSA-2016-0079.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "88480"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : bind97 on SL5.x i386/x86_64", 
+                "file": "sl_20150729_bind97_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "85119"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : bind on SL5.x i386/x86_64", 
+                "file": "sl_20150729_bind_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "85120"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : bind on SL6.x, SL7.x i386/x86_64", 
+                "file": "sl_20150729_bind_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "85211"
+            }, 
+            {
+                "name": "Slackware 13.0 / 13.1 / 13.37 / 14.0 / 14.1 / current : bind (SSA:2015-209-01)", 
+                "file": "Slackware_SSA_2015-209-01.nasl", 
+                "family": "Slackware Local Security Checks", 
+                "id": "85043"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : bind (SUSE-SU-2015:1304-1)", 
+                "file": "suse_SU-2015-1304-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85121"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : bind (SUSE-SU-2015:1316-1)", 
+                "file": "suse_SU-2015-1316-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85151"
+            }, 
+            {
+                "name": "SUSE SLES10 Security Update : bind (SUSE-SU-2015:1322-1)", 
+                "file": "suse_SU-2015-1322-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85179"
+            }, 
+            {
+                "name": "SUSE SLES10 Security Update : bind (SUSE-SU-2016:0227-1)", 
+                "file": "suse_SU-2016-0227-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88178"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 14.04 / 15.04 : bind9 vulnerabilities (USN-2693-1)", 
+                "file": "ubuntu_USN-2693-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85081"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2015-5477.html", 
+                "id": "SUSE-SU-2015:1304"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2015-5477.html", 
+                "id": "SUSE-SU-2015:1305"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2015-5477.html", 
+                "id": "SUSE-SU-2015:1316"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2015-5477.html", 
+                "id": "SUSE-SU-2015:1322"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2015-5477.html", 
+                "id": "openSUSE-SU-2015:1326"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2015-5477.html", 
+                "id": "openSUSE-SU-2015:1335"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151513", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1513.html", 
+                    "id": "RHSA-2015:1513", 
+                    "title": "RHSA-2015:1513: bind security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1247361", 
+                    "title": "CVE-2015-5477 bind: TKEY query handling flaw leading to denial of service", 
+                    "id": "1247361", 
+                    "issue date": "2015-07-28", 
+                    "associated redhat": "RHSA-2015:1513"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151514", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1514.html", 
+                    "id": "RHSA-2015:1514", 
+                    "title": "RHSA-2015:1514: bind security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1247361", 
+                    "title": "CVE-2015-5477 bind: TKEY query handling flaw leading to denial of service", 
+                    "id": "1247361", 
+                    "issue date": "2015-07-28", 
+                    "associated redhat": "RHSA-2015:1514"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151515", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1515.html", 
+                    "id": "RHSA-2015:1515", 
+                    "title": "RHSA-2015:1515: bind97 security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1247361", 
+                    "title": "CVE-2015-5477 bind: TKEY query handling flaw leading to denial of service", 
+                    "id": "1247361", 
+                    "issue date": "2015-07-28", 
+                    "associated redhat": "RHSA-2015:1515"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20160078", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2016-0078.html", 
+                    "id": "RHSA-2016:0078", 
+                    "title": "RHSA-2016:0078: bind security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1171912", 
+                    "title": "CVE-2014-8500 bind: delegation handling denial of service", 
+                    "id": "1171912", 
+                    "issue date": "2016-01-28", 
+                    "associated redhat": "RHSA-2016:0078"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1247361", 
+                    "title": "CVE-2015-5477 bind: TKEY query handling flaw leading to denial of service", 
+                    "id": "1247361", 
+                    "issue date": "2016-01-28", 
+                    "associated redhat": "RHSA-2016:0078"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1259087", 
+                    "title": "CVE-2015-5722 bind: malformed DNSSEC key failed assertion denial of service", 
+                    "id": "1259087", 
+                    "issue date": "2016-01-28", 
+                    "associated redhat": "RHSA-2016:0078"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1291176", 
+                    "title": "CVE-2015-8000 bind: responses with a malformed class attribute can trigger an assertion failure in db.c", 
+                    "id": "1291176", 
+                    "issue date": "2016-01-28", 
+                    "associated redhat": "RHSA-2016:0078"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2693-1", 
+                "id": "USN-2693-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3319", 
+                "id": "DSA-3319"
+            }
+        ], 
+        "Vmware": []
+    }
+}

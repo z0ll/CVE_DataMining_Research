@@ -1,0 +1,270 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8602", 
+                "published": "2014-12-10T21:59:03.233-05:00", 
+                "id": "CVE-2014-8602", 
+                "modified": "2015-02-25T21:59:08.570-05:00", 
+                "summary": "iterator.c in NLnet Labs Unbound before 1.5.1 does not limit delegation chaining, which allows remote attackers to cause a denial of service (memory and CPU consumption) via a large or infinite number of referrals."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:nlnetlabs:unbound:1.5.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.68440", 
+                "id": 68440
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/264212", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "https://unbound.net/downloads/CVE-2014-8602.txt", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://unbound.net/downloads/patch_cve_2014_8602.diff", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2484-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2014/dsa-3097", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://cert.ssi.gouv.fr/site/CERTFR-2014-AVI-512/index.html", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/264212", 
+                "id": "VU#264212"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "4.3", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-8602"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28332", 
+                "title": "DSA-3097-1 -- unbound security update", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28332"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3097-1 (unbound - security update)", 
+                "file": "deb_3097.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703097"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 7 : unbound (CESA-2015:2455)", 
+                "file": "centos_RHSA-2015-2455.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "87159"
+            }, 
+            {
+                "name": "Debian DLA-107-1 : unbound security update", 
+                "file": "debian_DLA-107.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "82091"
+            }, 
+            {
+                "name": "Debian DSA-3097-1 : unbound - security update", 
+                "file": "debian_DSA-3097.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "79884"
+            }, 
+            {
+                "name": "F5 Networks BIG-IP : Unbound vulnerability (SOL15931)", 
+                "file": "f5_bigip_SOL15931.nasl", 
+                "family": "F5 Networks Local Security Checks", 
+                "id": "80231"
+            }, 
+            {
+                "name": "Fedora 21 : unbound-1.5.1-2.fc21 (2014-16647)", 
+                "file": "fedora_2014-16647.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "80140"
+            }, 
+            {
+                "name": "Fedora 20 : unbound-1.5.1-2.fc20 (2014-16671)", 
+                "file": "fedora_2014-16671.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "80142"
+            }, 
+            {
+                "name": "FreeBSD : unbound -- can be tricked into following an endless series of delegations, this consumes a lot of resources (10d73529-7f4b-11e4-af66-00215af774f0)", 
+                "file": "freebsd_pkg_10d735297f4b11e4af6600215af774f0.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "79810"
+            }, 
+            {
+                "name": "openSUSE Security Update : unbound (openSUSE-SU-2014:1688-1)", 
+                "file": "openSUSE-2014-800.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "80246"
+            }, 
+            {
+                "name": "Oracle Linux 7 : unbound (ELSA-2015-2455)", 
+                "file": "oraclelinux_ELSA-2015-2455.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "87041"
+            }, 
+            {
+                "name": "RHEL 7 : unbound (RHSA-2015:2455)", 
+                "file": "redhat-RHSA-2015-2455.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "86991"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : unbound on SL7.x x86_64", 
+                "file": "sl_20151119_unbound_on_SL7_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "87577"
+            }, 
+            {
+                "name": "Ubuntu 14.04 / 14.10 : unbound vulnerability (USN-2484-1)", 
+                "file": "ubuntu_USN-2484-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "81019"
+            }, 
+            {
+                "name": "Unbound < 1.5.1 Delegation Handling Recursive Referral Handling Resource Exhaustion DoS", 
+                "file": "unbound_1_5_1.nasl", 
+                "family": "DNS", 
+                "id": "87870"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20152455", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-2455.html", 
+                    "id": "RHSA-2015:2455", 
+                    "title": "RHSA-2015:2455: unbound security and bug fix update (Low)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1172065", 
+                    "title": "CVE-2014-8602 unbound: specially crafted request can lead to denial of service", 
+                    "id": "1172065", 
+                    "issue date": "2015-08-14", 
+                    "associated redhat": "RHSA-2015:2455"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1180267", 
+                    "title": "root key management does not comply with RFC5011", 
+                    "id": "1180267", 
+                    "issue date": "2015-08-14", 
+                    "associated redhat": "RHSA-2015:2455"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1180995", 
+                    "title": "unbound is installing files under /etc/tmpfiles.d/", 
+                    "id": "1180995", 
+                    "issue date": "2015-08-14", 
+                    "associated redhat": "RHSA-2015:2455"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2484-1", 
+                "id": "USN-2484-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3097", 
+                "id": "DSA-3097"
+            }
+        ], 
+        "Vmware": []
+    }
+}

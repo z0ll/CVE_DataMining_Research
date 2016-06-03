@@ -1,0 +1,191 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3964", 
+                "published": "2010-12-16T14:33:03.367-05:00", 
+                "id": "CVE-2010-3964", 
+                "modified": "2011-07-18T00:00:00.000-04:00", 
+                "summary": "Unrestricted file upload vulnerability in the Document Conversions Launcher Service in Microsoft Office SharePoint Server 2007 SP2, when the Document Conversions Load Balancer Service is enabled, allows remote attackers to execute arbitrary code via a crafted SOAP request to TCP port 8082, aka \"Malformed Request Code Execution Vulnerability.\""
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:sharepoint_server:2007:sp2:x64"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:sharepoint_server:2007:sp2:x32"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.4229", 
+                "id": 4229
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/45264", 
+                "id": 45264
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/69817", 
+                "id": 69817
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA10-348A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/Bulletin/MS10-104.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.zerodayinitiative.com/advisories/ZDI-10-287/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2010/3226", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1024886", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/45264", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/42631", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/69817", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms10_104_sharepoint.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/misc/ms10_104_sharepoint.rb", 
+                "title": "MS10-104 Microsoft Office SharePoint Server 2007 Remote Code Execution"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/ms_sharepoint_file_upload_via_malformed_soap", 
+                "id": "exploit_info/ms_sharepoint_file_upload_via_malformed_soap", 
+                "title": "Microsoft SharePoint Office Document Load Balancer SOAP Vulnerability"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-3964"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:11737", 
+                "title": "Malformed Request Code Execution Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:11737"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft SharePoint Could Allow Remote Code Execution Vulnerability (2455005)", 
+                "file": "secpod_ms10-104.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "902324"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS10-104: Vulnerability in Microsoft SharePoint Could Allow Remote Code Execution (2455005)", 
+                "file": "smb_nt_ms10-104.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "51176"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in Microsoft SharePoint Could Allow Remote Code Execution", 
+                "id": "Vulnerability in Microsoft SharePoint Could Allow Remote Code Execution", 
+                "title": "2433089"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2455005", 
+                "id": "2455005", 
+                "title": "Vulnerability in Microsoft SharePoint Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS10-104", 
+                "id": "MS10-104", 
+                "title": "Vulnerability in Microsoft SharePoint Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

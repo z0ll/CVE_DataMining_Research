@@ -1,0 +1,261 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0506", 
+                "published": "2014-03-27T06:55:04.357-04:00", 
+                "id": "CVE-2014-0506", 
+                "modified": "2014-06-21T00:38:38.783-04:00", 
+                "summary": "Use-after-free vulnerability in Adobe Flash Player before 11.7.700.275 and 11.8.x through 13.0.x before 13.0.0.182 on Windows and OS X and before 11.2.202.350 on Linux, Adobe AIR before 13.0.0.83 on Android, Adobe AIR SDK before 13.0.0.83, and Adobe AIR SDK & Compiler before 13.0.0.83 allows remote attackers to execute arbitrary code, and possibly bypass an Internet Explorer sandbox protection mechanism, via unspecified vectors, as demonstrated by VUPEN during a Pwn2Own competition at CanSecWest 2014."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:adobe:flash_player:12.0.0.77"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.12721", 
+                "id": 12721
+            }, 
+            {
+                "url": "http://www.scip.ch/?vuldb.12720", 
+                "id": 12720
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0048681", 
+                "id": "2014-A-0047", 
+                "title": "Multiple Vulnerabilities in Adobe Flash Player and AIR"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.pwn2own.com/2014/03/pwn2own-results-for-wednesday-day-one/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://twitter.com/thezdi/statuses/443886338077495296", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://security.gentoo.org/glsa/glsa-201405-04.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://helpx.adobe.com/security/products/flash-player/apsb14-09.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-0506"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24647", 
+                "title": "ELSA-2014:0380: flash-plugin security update (Critical)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24647"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24439", 
+                "title": "RHSA-2014:0380: flash-plugin security update (Critical)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24439"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24657", 
+                "title": "Use-after-free vulnerability in Adobe Flash Player which less then 12.0.0.77 and less then 11.7.700.275 and Adobe AIR before 13.0.0.83", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:24657"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:25532", 
+                "title": "SUSE-SU-2014:0535-1 -- Security update for flash-player", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:25532"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Adobe AIR <= AIR 4.0.0.1628 Multiple Vulnerabilities (APSB14-09)", 
+                "file": "adobe_air_apsb14-09.nasl", 
+                "family": "Windows", 
+                "id": "73432"
+            }, 
+            {
+                "name": "Flash Player <= 11.7.700.272 / 12.0.0.77 Multiple Vulnerabilities (APSB14-09)", 
+                "file": "flash_player_apsb14-09.nasl", 
+                "family": "Windows", 
+                "id": "73433"
+            }, 
+            {
+                "name": "GLSA-201405-04 : Adobe Flash Player: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201405-04.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "73860"
+            }, 
+            {
+                "name": "Google Chrome < 34.0.1847.116 Multiple Vulnerabilities", 
+                "file": "google_chrome_34_0_1847_116.nasl", 
+                "family": "Windows", 
+                "id": "73419"
+            }, 
+            {
+                "name": "Adobe AIR for Mac <= 4.0.0.1628 Multiple Vulnerabilities (APSB14-09)", 
+                "file": "macosx_adobe_air_13_0_0_83.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "73434"
+            }, 
+            {
+                "name": "Flash Player for Mac <= 11.7.700.272 / 12.0.0.77 Multiple Vulnerabilities (APSB14-09) (Mac OS X)", 
+                "file": "macosx_flash_player_13_0_0_182.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "73435"
+            }, 
+            {
+                "name": "Google Chrome < 34.0.1847.116 Multiple Vulnerabilities (Mac OS X)", 
+                "file": "macosx_google_chrome_34_0_1847_116.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "73420"
+            }, 
+            {
+                "name": "openSUSE Security Update : flash-player (openSUSE-SU-2014:0549-1)", 
+                "file": "openSUSE-2014-307.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75328"
+            }, 
+            {
+                "name": "RHEL 5 / 6 : flash-plugin (RHSA-2014:0380)", 
+                "file": "redhat-RHSA-2014-0380.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "73451"
+            }, 
+            {
+                "name": "MS KB2942844: Update for Vulnerabilities in Adobe Flash Player in Internet Explorer", 
+                "file": "smb_kb2942844.nasl", 
+                "family": "Windows", 
+                "id": "73418"
+            }, 
+            {
+                "name": "SuSE 11.3 Security Update : flash-player (SAT Patch Number 9120)", 
+                "file": "suse_11_flash-player-140411.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "73591"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20140380", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2014-0380.html", 
+                    "id": "RHSA-2014:0380", 
+                    "title": "RHSA-2014:0380: flash-plugin security update (Critical)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1085581", 
+                    "title": "CVE-2014-0506 CVE-2014-0507 flash-plugin: two flaws leading to code execution (APSB14-09)", 
+                    "id": "1085581", 
+                    "issue date": "2014-04-09", 
+                    "associated redhat": "RHSA-2014:0380"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1085585", 
+                    "title": "CVE-2014-0508 flash-plugin: information disclosure flaw (APSB14-09)", 
+                    "id": "1085585", 
+                    "issue date": "2014-04-09", 
+                    "associated redhat": "RHSA-2014:0380"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1085586", 
+                    "title": "CVE-2014-0509 flash-plugin: cross-site scripting flaw (APSB14-09)", 
+                    "id": "1085586", 
+                    "issue date": "2014-04-09", 
+                    "associated redhat": "RHSA-2014:0380"
+                }
+            }
+        ], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/201405-04", 
+                "id": "GLSA-201405-04"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

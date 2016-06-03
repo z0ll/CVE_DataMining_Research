@@ -1,0 +1,266 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-7145", 
+                "published": "2014-09-28T06:55:10.720-04:00", 
+                "id": "CVE-2014-7145", 
+                "modified": "2015-03-18T21:59:22.287-04:00", 
+                "summary": "The SMB2_tcon function in fs/cifs/smb2pdu.c in the Linux kernel before 3.16.3 allows remote CIFS servers to cause a denial of service (NULL pointer dereference and client system crash) or possibly have unspecified other impact by deleting the IPC$ share during resolution of DFS referrals."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.16.2"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.16.0"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.16.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.71592", 
+                "id": 71592
+            }, 
+            {
+                "url": "http://www.scip.ch/?vuldb.67558", 
+                "id": 67558
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/69867", 
+                "id": 69867
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/torvalds/linux/commit/18f39e7be0121317550d03e267e3ebd4dbfbb3ce", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2394-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/69867", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2014/09/22/4", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.kernel.org/pub/linux/kernel/v3.x/ChangeLog-3.16.3", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-0102.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=18f39e7be0121317550d03e267e3ebd4dbfbb3ce", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.8", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-7145"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28239", 
+                "title": "USN-2395-1 -- Linux kernel vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28239"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28115", 
+                "title": "USN-2394-1 -- Linux kernel (Trusty HWE) vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28115"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "CentOS 7 : kernel (CESA-2015:0102)", 
+                "file": "centos_RHSA-2015-0102.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "81089"
+            }, 
+            {
+                "name": "Oracle Linux 7 : kernel (ELSA-2015-0102)", 
+                "file": "oraclelinux_ELSA-2015-0102.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "81067"
+            }, 
+            {
+                "name": "Oracle Linux 7 : kernel (ELSA-2015-0290)", 
+                "file": "oraclelinux_ELSA-2015-0290.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "81800"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : Unbreakable Enterprise kernel (ELSA-2015-3003)", 
+                "file": "oraclelinux_ELSA-2015-3003.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "81100"
+            }, 
+            {
+                "name": "RHEL 7 : kernel (RHSA-2015:0102)", 
+                "file": "redhat-RHSA-2015-0102.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "81070"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL7.x x86_64", 
+                "file": "sl_20150128_kernel_on_SL7_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "81073"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-trusty vulnerabilities (USN-2394-1)", 
+                "file": "ubuntu_USN-2394-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "78764"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux vulnerabilities (USN-2395-1)", 
+                "file": "ubuntu_USN-2395-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "78765"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20150102", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-0102.html", 
+                    "id": "RHSA-2015:0102", 
+                    "title": "RHSA-2015:0102: kernel security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1111180", 
+                    "title": "CVE-2014-4171 Kernel: mm/shmem: denial of service", 
+                    "id": "1111180", 
+                    "issue date": "2015-01-28", 
+                    "associated redhat": "RHSA-2015:0102"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1134099", 
+                    "title": "CVE-2014-5471 CVE-2014-5472 kernel: isofs: unbound recursion when processing relocated directories", 
+                    "id": "1134099", 
+                    "issue date": "2015-01-28", 
+                    "associated redhat": "RHSA-2015:0102"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1147522", 
+                    "title": "CVE-2014-7145 Kernel: cifs: NULL pointer dereference in SMB2_tcon", 
+                    "id": "1147522", 
+                    "issue date": "2015-01-28", 
+                    "associated redhat": "RHSA-2015:0102"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1163087", 
+                    "title": "CVE-2014-7841 kernel: net: sctp: NULL pointer dereference in af->from_addr_param on malformed packet", 
+                    "id": "1163087", 
+                    "issue date": "2015-01-28", 
+                    "associated redhat": "RHSA-2015:0102"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1163792", 
+                    "title": "CVE-2014-7822 kernel: splice: lack of generic write checks", 
+                    "id": "1163792", 
+                    "issue date": "2015-01-28", 
+                    "associated redhat": "RHSA-2015:0102"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2394-1", 
+                "id": "USN-2394-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

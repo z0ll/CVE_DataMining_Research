@@ -1,0 +1,156 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0737", 
+                "published": "1999-05-07T00:00:00.000-04:00", 
+                "id": "CVE-1999-0737", 
+                "modified": "2008-09-09T08:35:19.007-04:00", 
+                "summary": "The viewcode.asp sample file in IIS and Site Server allows remote attackers to read arbitrary files."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:4.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14638", 
+                "id": 14638
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms99-013.asp", 
+                    "vendor": "MS"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2101403", 
+                "signature": "GPL WEB_SERVER viewcode access"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1032", 
+                "signature": "SERVER-IIS showcode access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1033", 
+                "signature": "SERVER-IIS viewcode access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1034", 
+                "signature": "SERVER-IIS viewcode access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1035", 
+                "signature": "SERVER-IIS viewcode access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1036", 
+                "signature": "SERVER-IIS viewcode access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1043", 
+                "signature": "SERVER-IIS viewcode.asp access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0737"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Check for dangerous IIS default files", 
+                "file": "iis_viewcode.nasl", 
+                "family": "Web Servers", 
+                "id": "10576"
+            }
+        ], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/231368", 
+                "id": "231368", 
+                "title": "Patches Available for File Viewers Vulnerability"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS99-013", 
+                "id": "MS99-013", 
+                "title": "Patches Available for File Viewers Vulnerability"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

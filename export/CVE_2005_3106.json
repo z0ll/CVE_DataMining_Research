@@ -1,0 +1,362 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3106", 
+                "published": "2005-09-30T06:05:00.000-04:00", 
+                "id": "CVE-2005-3106", 
+                "modified": "2010-08-21T00:33:09.697-04:00", 
+                "summary": "Race condition in Linux 2.6, when threads are sharing memory mapping via CLONE_VM (such as linuxthreads and vfork), might allow local users to cause a denial of service (deadlock) by triggering a core dump while waiting for a thread that has just performed an exec."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:2.6.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.26458", 
+                "id": 26458
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/15049", 
+                "id": 15049
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://linux.bkbits.net:8080/linux-2.6/diffs/fs/exec.c@1.156?nav=index.html%7Csrc/%7Csrc/fs%7Chist/fs/exec.c", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/usn-199-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/15049", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/427980/100/0/threaded", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2006-0101.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:072", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2005/dsa-922", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/18510", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/18056", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/17141", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "1.9", 
+                    "base": "1.2", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-3106"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:9108", 
+                "title": "Race condition in Linux 2.6, when threads are sharing memory mapping via CLONE_VM (such as linuxthreads and vfork), might allow local users to cause a denial of service (deadlock) by triggering a core dump while waiting for a thread that has just performed an exec.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:9108"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 922-1 (kernel-source-2.4.27)", 
+                "file": "deb_922_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "56014"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 4 : kernel (CESA-2006:0101)", 
+                "file": "centos_RHSA-2006-0101.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "21977"
+            }, 
+            {
+                "name": "Debian DSA-922-1 : kernel-source-2.6.8 - several vulnerabilities", 
+                "file": "debian_DSA-922.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "22788"
+            }, 
+            {
+                "name": "RHEL 4 : kernel (RHSA-2006:0101)", 
+                "file": "redhat-RHSA-2006-0101.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "20732"
+            }, 
+            {
+                "name": "Ubuntu 4.10 / 5.04 : linux-source-2.6.10, linux-source-2.6.8.1 vulnerabilities (USN-199-1)", 
+                "file": "ubuntu_USN-199-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "20613"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FLSA:157459-3", 
+                "id": "FLSA:157459-3"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:072", 
+                "id": "MDKSA-2006:072"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20060101", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2006-0101.html", 
+                    "id": "RHSA-2006:0101", 
+                    "title": "RHSA-2006:0101: kernel security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=158861", 
+                    "title": "CVE-2004-1190 Continued raw access issues", 
+                    "id": "158861", 
+                    "issue date": "2006-01-17", 
+                    "associated redhat": "RHSA-2006:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=165679", 
+                    "title": "CVE-2005-2458 gzip/zlib flaws", 
+                    "id": "165679", 
+                    "issue date": "2006-01-17", 
+                    "associated redhat": "RHSA-2006:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=167696", 
+                    "title": "CVE-2005-2800 SCSI proc DoS", 
+                    "id": "167696", 
+                    "issue date": "2006-01-17", 
+                    "associated redhat": "RHSA-2006:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=168659", 
+                    "title": "CVE-2005-3044 lost fput and sockfd_put could lead to DoS", 
+                    "id": "168659", 
+                    "issue date": "2006-01-17", 
+                    "associated redhat": "RHSA-2006:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=168777", 
+                    "title": "CVE-2005-3276 sys_get_thread_area minor info leak", 
+                    "id": "168777", 
+                    "issue date": "2006-01-17", 
+                    "associated redhat": "RHSA-2006:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=168924", 
+                    "title": "CVE-2005-2709 More sysctl flaws", 
+                    "id": "168924", 
+                    "issue date": "2006-01-17", 
+                    "associated redhat": "RHSA-2006:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=169130", 
+                    "title": "CVE-2005-3356 double decrement of mqueue_mnt->mnt_count in sys_mq_open", 
+                    "id": "169130", 
+                    "issue date": "2006-01-17", 
+                    "associated redhat": "RHSA-2006:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=170262", 
+                    "title": "CVE-2005-3106 exec_mmap race DoS", 
+                    "id": "170262", 
+                    "issue date": "2006-01-17", 
+                    "associated redhat": "RHSA-2006:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=171002", 
+                    "title": "CVE-2005-3109 HFS oops", 
+                    "id": "171002", 
+                    "issue date": "2006-01-17", 
+                    "associated redhat": "RHSA-2006:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=174078", 
+                    "title": "[RHEL4] CVE-2005-3784 auto-reap DoS", 
+                    "id": "174078", 
+                    "issue date": "2006-01-17", 
+                    "associated redhat": "RHSA-2006:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=174081", 
+                    "title": "CVE-2005-3806 ipv6 DOS", 
+                    "id": "174081", 
+                    "issue date": "2006-01-17", 
+                    "associated redhat": "RHSA-2006:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=174337", 
+                    "title": "[RHEL4] CVE-2005-3857 lease printk DoS", 
+                    "id": "174337", 
+                    "issue date": "2006-01-17", 
+                    "associated redhat": "RHSA-2006:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=174343", 
+                    "title": "CVE-2005-3858 ip6_input_finish DoS", 
+                    "id": "174343", 
+                    "issue date": "2006-01-17", 
+                    "associated redhat": "RHSA-2006:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=174345", 
+                    "title": "CVE-2005-3848 dst_entry leak DoS", 
+                    "id": "174345", 
+                    "issue date": "2006-01-17", 
+                    "associated redhat": "RHSA-2006:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=174807", 
+                    "title": "CVE-2002-2185 IGMP DoS", 
+                    "id": "174807", 
+                    "issue date": "2006-01-17", 
+                    "associated redhat": "RHSA-2006:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=175683", 
+                    "title": "CVE-2005-3358 panic caused by bad args to set_mempolicy", 
+                    "id": "175683", 
+                    "issue date": "2006-01-17", 
+                    "associated redhat": "RHSA-2006:0101"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=176812", 
+                    "title": "CVE-2005-4605 Kernel memory disclosure", 
+                    "id": "176812", 
+                    "issue date": "2006-01-17", 
+                    "associated redhat": "RHSA-2006:0101"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-199-1", 
+                "id": "USN-199-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-922", 
+                "id": "DSA-922"
+            }
+        ], 
+        "Vmware": []
+    }
+}

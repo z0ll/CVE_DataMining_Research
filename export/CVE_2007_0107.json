@@ -1,0 +1,210 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0107", 
+                "published": "2007-01-08T19:28:00.000-05:00", 
+                "id": "CVE-2007-0107", 
+                "modified": "2011-03-07T21:48:48.500-05:00", 
+                "summary": "WordPress before 2.0.6, when mbstring is enabled for PHP, decodes alternate character sets after escaping the SQL query, which allows remote attackers to bypass SQL injection protection schemes and execute arbitrary SQL commands via multibyte charsets, as demonstrated using UTF-7."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:wordpress:wordpress:2.0.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34271", 
+                "id": 34271
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21907", 
+                "id": 21907
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/31579", 
+                "id": 31579
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/31297", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21907", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/456049/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.openpkg.com/security/advisories/OpenPKG-SA-2007.005.html", 
+                    "vendor": "OPENPKG"
+                }, 
+                {
+                    "url": "http://www.hardened-php.net/advisory_022007.141.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://wordpress.org/development/2007/01/wordpress-206/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23595", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/0061", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://osvdb.org/31579", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2112", 
+                    "vendor": "SREASON"
+                }, 
+                {
+                    "url": "http://security.gentoo.org/glsa/glsa-200701-10.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23741", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005865", 
+                "signature": "ET DELETED WordPress SQL Injection Attempt -- wp-trackback.php SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005866", 
+                "signature": "ET DELETED WordPress SQL Injection Attempt -- wp-trackback.php UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005867", 
+                "signature": "ET DELETED WordPress SQL Injection Attempt -- wp-trackback.php INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005868", 
+                "signature": "ET DELETED WordPress SQL Injection Attempt -- wp-trackback.php DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005869", 
+                "signature": "ET DELETED WordPress SQL Injection Attempt -- wp-trackback.php ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005870", 
+                "signature": "ET DELETED WordPress SQL Injection Attempt -- wp-trackback.php UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-0107"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Gentoo Security Advisory GLSA 200701-10 (wordpress)", 
+                "file": "glsa_200701_10.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "57970"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "GLSA-200701-10 : WordPress: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-200701-10.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "24208"
+            }, 
+            {
+                "name": "WordPress Trackback Charset Decoding SQL Injection", 
+                "file": "wordpress_trackback_charset_sql_injection.nasl", 
+                "family": "CGI abuses", 
+                "id": "24011"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200701-10", 
+                "id": "GLSA-200701-10"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

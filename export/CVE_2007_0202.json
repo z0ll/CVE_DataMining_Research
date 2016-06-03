@@ -1,0 +1,182 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0202", 
+                "published": "2007-01-11T06:28:00.000-05:00", 
+                "id": "CVE-2007-0202", 
+                "modified": "2011-03-07T21:49:00.283-05:00", 
+                "summary": "SQL injection vulnerability in index.php in @lex Guestbook 4.0.2 and earlier, when magic_quotes_gpc is disabled, allows remote attackers to execute arbitrary SQL commands via the lang parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:alexphpteam:alex_guestbook:3.13"
+            }, 
+            {
+                "id": "cpe:/a:alexphpteam:alex_guestbook:3.12"
+            }, 
+            {
+                "id": "cpe:/a:alexphpteam:alex_guestbook:4.0.2"
+            }, 
+            {
+                "id": "cpe:/a:alexphpteam:alex_guestbook:4.0.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34347", 
+                "id": 34347
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21926", 
+                "id": 21926
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/31707", 
+                "id": 31707
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/31393", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/0137", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21926", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/456218/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23637", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/31707", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://acid-root.new.fr/poc/20070107.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2135", 
+                    "vendor": "SREASON"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/3103", 
+                    "vendor": "MILW0RM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005772", 
+                "signature": "ET WEB_SPECIFIC_APPS @lex Guestbook SQL Injection Attempt -- index.php lang SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005773", 
+                "signature": "ET WEB_SPECIFIC_APPS @lex Guestbook SQL Injection Attempt -- index.php lang UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005774", 
+                "signature": "ET WEB_SPECIFIC_APPS @lex Guestbook SQL Injection Attempt -- index.php lang INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005775", 
+                "signature": "ET WEB_SPECIFIC_APPS @lex Guestbook SQL Injection Attempt -- index.php lang DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005776", 
+                "signature": "ET WEB_SPECIFIC_APPS @lex Guestbook SQL Injection Attempt -- index.php lang ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005777", 
+                "signature": "ET WEB_SPECIFIC_APPS @lex Guestbook SQL Injection Attempt -- index.php lang UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-0202"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,202 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0429", 
+                "published": "2010-08-24T14:00:23.190-04:00", 
+                "id": "CVE-2010-0429", 
+                "modified": "2010-08-25T00:00:00.000-04:00", 
+                "summary": "libspice, as used in QEMU-KVM in the Hypervisor (aka rhev-hypervisor) in Red Hat Enterprise Virtualization (RHEV) 2.2 and qspice 0.3.0, does not properly restrict the addresses upon which memory-management actions are performed, which allows guest OS users to cause a denial of service (guest OS crash) or possibly gain privileges via unspecified vectors."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:redhat:qspice:0.3.0"
+            }, 
+            {
+                "id": "cpe:/a:redhat:enterprise_virtualization:2.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.54461", 
+                "id": 54461
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0633.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0622.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=568701", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "single_instance", 
+                    "exploit": "2.7", 
+                    "base": "6.6", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-0429"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22045", 
+                "title": "RHSA-2010:0633: qspice security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22045"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27950", 
+                "title": "DEPRECATED: ELSA-2010-0633 -- qspice security update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27950"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22924", 
+                "title": "ELSA-2010:0633: qspice security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22924"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : qspice (CESA-2010:0633)", 
+                "file": "centos_RHSA-2010-0633.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "48911"
+            }, 
+            {
+                "name": "Oracle Linux 5 : qspice (ELSA-2010-0633)", 
+                "file": "oraclelinux_ELSA-2010-0633.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68086"
+            }, 
+            {
+                "name": "RHEL 5 : rhev-hypervisor (RHSA-2010:0622)", 
+                "file": "redhat-RHSA-2010-0622.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "79276"
+            }, 
+            {
+                "name": "RHEL 5 : qspice (RHSA-2010:0633)", 
+                "file": "redhat-RHSA-2010-0633.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "63948"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : qspice on SL5.x x86_64", 
+                "file": "sl_20100819_qspice_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "60838"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0622.html", 
+                    "id": "RHSA-2010:0622", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20100633", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0633.html", 
+                    "id": "RHSA-2010:0633", 
+                    "title": "RHSA-2010:0633: qspice security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=568699", 
+                    "title": "CVE-2010-0428 libspice: Insufficient guest provided pointers validation", 
+                    "id": "568699", 
+                    "issue date": "2010-08-19", 
+                    "associated redhat": "RHSA-2010:0633"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=568701", 
+                    "title": "CVE-2010-0429 libspice: Relying on guest provided data structures to indicate memory allocation", 
+                    "id": "568701", 
+                    "issue date": "2010-08-19", 
+                    "associated redhat": "RHSA-2010:0633"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

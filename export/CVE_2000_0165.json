@@ -1,0 +1,125 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0165", 
+                "published": "1999-11-13T00:00:00.000-05:00", 
+                "id": "CVE-2000-0165", 
+                "modified": "2008-09-10T15:03:08.337-04:00", 
+                "summary": "The Delegate application proxy has several buffer overflows which allow a remote attacker to execute commands."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:etl:delegate:5.9"
+            }, 
+            {
+                "id": "cpe:/a:etl:delegate:6.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14975", 
+                "id": 14975
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/templates/archive.pike?list=1&date=2000-02-15&msg=Pine.BSF.4.21.0002192249290.10784-100000@freefall.freebsd.org", 
+                    "vendor": "FREEBSD"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/k-023.shtml", 
+                    "vendor": "CIAC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:305", 
+                "signature": "SERVER-OTHER delegate proxy overflow"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1558", 
+                "signature": "SERVER-WEBAPP Delegate whois overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2000-0165"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "DeleGate Multiple Function Remote Overflows", 
+                "file": "delegate_overflow.nasl", 
+                "family": "Firewalls", 
+                "id": "10054"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

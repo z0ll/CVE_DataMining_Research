@@ -1,0 +1,191 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0917", 
+                "published": "2000-12-19T00:00:00.000-05:00", 
+                "id": "CVE-2000-0917", 
+                "modified": "2008-09-05T16:22:11.513-04:00", 
+                "summary": "Format string vulnerability in use_syslog() function in LPRng 3.6.24 allows remote attackers to execute arbitrary commands."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:trustix:secure_linux:1.0"
+            }, 
+            {
+                "id": "cpe:/o:caldera:openlinux_eserver:2.3"
+            }, 
+            {
+                "id": "cpe:/o:caldera:openlinux"
+            }, 
+            {
+                "id": "cpe:/o:trustix:secure_linux:1.1"
+            }, 
+            {
+                "id": "cpe:/a:caldera:openlinux_ebuilder:3.0"
+            }, 
+            {
+                "id": "cpe:/o:redhat:linux:7.0"
+            }, 
+            {
+                "id": "cpe:/o:caldera:openlinux_edesktop:2.4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.16128", 
+                "id": 16128
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/1712", 
+                "id": 1712
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/421", 
+                "id": 421
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.cert.org/advisories/CA-2000-22.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/static/5287.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/1712", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2000-065.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.calderasystems.com/support/security/advisories/CSSA-2000-033.0.txt", 
+                    "vendor": "CALDERA"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2000-09/0293.html", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-00:56.lprng.asc", 
+                    "vendor": "FREEBSD"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2100302", 
+                "signature": "GPL EXPLOIT Redhat 7.0 lprd overflow"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:301", 
+                "signature": "SERVER-OTHER LPRng overflow"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:302", 
+                "signature": "OS-LINUX Redhat 7.0 lprd overflow"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "lprng_format_string.rb", 
+                "file": "metasploit-framework/modules/exploits/linux/misc/lprng_format_string.rb", 
+                "title": "LPRng use_syslog Remote Format String Vulnerability"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2000-0917"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "LPRng use_syslog() Remote Format String Arbitrary Command Execution", 
+                "file": "LPRng.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "10522"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2000-065.html", 
+                    "id": "RHSA-2000:065", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,171 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0833", 
+                "published": "1999-11-10T00:00:00.000-05:00", 
+                "id": "CVE-1999-0833", 
+                "modified": "2008-09-09T08:36:01.477-04:00", 
+                "summary": "Buffer overflow in BIND 8.2 via NXT records."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:isc:bind:8.2.1"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:7.0::x86"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:7.0"
+            }, 
+            {
+                "id": "cpe:/a:isc:bind:8.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14964", 
+                "id": 14964
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/788", 
+                "id": 788
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/788", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "ftp://ftp.caldera.com/pub/security/OpenLinux/CSSA-1999-034.1.txt", 
+                    "vendor": "CALDERA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2100258", 
+                "signature": "GPL DNS EXPLOIT named 8.2->8.2.1"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2100259", 
+                "signature": "GPL DNS named overflow ADM"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:258", 
+                "signature": "SERVER-OTHER Bind Buffer Overflow via NXT records"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:259", 
+                "signature": "SERVER-OTHER Bind Buffer Overflow via NXT records named overflow ADM"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:260", 
+                "signature": "SERVER-OTHER Bind Buffer Overflow via NXT records named overflow ADMROCKS"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0833"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "ISC BIND < 4.9.7-REL / 8.2.2-P5 Multiple Remote Vulnerabilities", 
+                "file": "bind_vulnerable.nasl", 
+                "family": "DNS", 
+                "id": "10029"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-1999-0833.html", 
+                "id": "19991111 Security hole in bind8 &lt; 8.2.2p2 and bind4 &lt; 4.9.7-REL"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-1999-054-01.html", 
+                    "id": "RHSA-1999:054-01", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/19991116", 
+                "id": 19991116
+            }
+        ], 
+        "Vmware": []
+    }
+}

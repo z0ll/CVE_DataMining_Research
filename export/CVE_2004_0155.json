@@ -1,0 +1,238 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0155", 
+                "published": "2004-06-01T00:00:00.000-04:00", 
+                "id": "CVE-2004-0155", 
+                "modified": "2010-08-21T00:19:39.160-04:00", 
+                "summary": "The KAME IKE Daemon Racoon, when authenticating a peer during Phase 1, validates the X.509 certificate but does not verify the RSA signature authentication, which allows remote attackers to establish unauthorized IP connections or conduct man-in-the-middle attacks using a valid, trusted X.509 certificate."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:kame:racoon"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.21878", 
+                "id": 21878
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/10072", 
+                "id": 10072
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/552398", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2004-165.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=108369640424244&w=2", 
+                    "vendor": "APPLE"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=108136746911000&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/10072", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:069", 
+                    "vendor": "MANDRAKE"
+                }, 
+                {
+                    "url": "http://www.gentoo.org/security/en/glsa/glsa-200406-17.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/11328", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "ftp://ftp.sco.com/pub/updates/UnixWare/SCOSA-2005.10/SCOSA-2005.10.txt", 
+                    "vendor": "SCO"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2004:027", 
+                    "vendor": "MANDRAKE"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/552398", 
+                "id": "VU#552398"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0155"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:945", 
+                "title": "Racoon IKE Daemon Unauthorized X.509 Certificate Connection Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:945"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:9291", 
+                "title": "The KAME IKE Daemon Racoon, when authenticating a peer during Phase 1, validates the X.509 certificate but does not verify the RSA signature authentication, which allows remote attackers to establish unauthorized IP connections or conduct man-in-the-middle attacks using a valid, trusted X.509 certificate.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:9291"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: racoon", 
+                "file": "freebsd_racoon2.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52485"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 200406-17 (IPsec-Tools)", 
+                "file": "glsa_200406_17.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "54602"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "FreeBSD : racoon fails to verify signature during Phase 1 (d8769838-8814-11d8-90d1-0020ed76ef5a)", 
+                "file": "freebsd_pkg_d8769838881411d890d10020ed76ef5a.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "37923"
+            }, 
+            {
+                "name": "FreeBSD : racoon fails to verify signature during Phase 1 (163)", 
+                "file": "freebsd_racoon_20040407b.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "12608"
+            }, 
+            {
+                "name": "GLSA-200406-17 : IPsec-Tools: authentication bug in racoon", 
+                "file": "gentoo_GLSA-200406-17.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "14528"
+            }, 
+            {
+                "name": "Mac OS X Multiple Vulnerabilities (Security Update 2004-05-03)", 
+                "file": "macosx_SecUpd20040503.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "12518"
+            }, 
+            {
+                "name": "Mandrake Linux Security Advisory : ipsec-tools (MDKSA-2004:027)", 
+                "file": "mandrake_MDKSA-2004-027.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "14126"
+            }, 
+            {
+                "name": "Mandrake Linux Security Advisory : ipsec-tools (MDKSA-2004:069)", 
+                "file": "mandrake_MDKSA-2004-069.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "14168"
+            }, 
+            {
+                "name": "RHEL 3 : ipsec-tools (RHSA-2004:165)", 
+                "file": "redhat-RHSA-2004-165.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "12488"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20040165", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2004-165.html", 
+                    "id": "RHSA-2004:165", 
+                    "title": "RHSA-2004:165: ipsec-tools security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=120253", 
+                    "title": "CAN-2004-0155/CAN-2004-0164/CAN-2004-0403 IPSEC vulnerabilities", 
+                    "id": "120253", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:165"
+                }
+            }
+        ], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200406-17", 
+                "id": "GLSA-200406-17"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

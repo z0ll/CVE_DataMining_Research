@@ -1,0 +1,165 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-0660", 
+                "published": "2001-10-30T00:00:00.000-05:00", 
+                "id": "CVE-2001-0660", 
+                "modified": "2008-09-05T16:24:37.847-04:00", 
+                "summary": "Outlook Web Access (OWA) in Microsoft Exchange 5.5, SP4 and earlier, allows remote attackers to identify valid user email addresses by directly accessing a back-end function that processes the global address list (GAL)."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:exchange_server:5.5:sp4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.17571", 
+                "id": 17571
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/3301", 
+                "id": 3301
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms01-047.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://support.microsoft.com/support/kb/articles/Q307/1/95.ASP", 
+                    "vendor": "MSKB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/static/7089.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/3301", 
+                    "vendor": "BID"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1567", 
+                "signature": "SERVER-IIS /exchange/root.asp attempt"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1568", 
+                "signature": "SERVER-IIS /exchange/root.asp access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-0660"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Exchange Public Folders Information Leak", 
+                "file": "exchange_public_folders_information_leak.nasl", 
+                "family": "General", 
+                "id": "10755"
+            }, 
+            {
+                "name": "Outlook Web anonymous access", 
+                "file": "owa-anonymous.nasl", 
+                "family": "Web application abuses", 
+                "id": "10781"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Microsoft Outlook Web Access (OWA) Anonymous Access", 
+                "file": "owa-anonymous.nasl", 
+                "family": "CGI abuses", 
+                "id": "10781"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Q307195", 
+                "id": "Q307195", 
+                "title": ""
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/307195", 
+                "id": "307195", 
+                "title": "OWA Function Allows Unauthenticated User to Enumerate Global Address List"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS01-047", 
+                "id": "MS01-047", 
+                "title": "OWA Function Allows Unauthenticated User to Enumerate Global Address List"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

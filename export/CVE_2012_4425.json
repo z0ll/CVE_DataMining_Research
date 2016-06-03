@@ -1,0 +1,268 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-4425", 
+                "published": "2012-09-18T13:55:08.020-04:00", 
+                "id": "CVE-2012-4425", 
+                "modified": "2012-10-31T00:04:04.327-04:00", 
+                "summary": "libgio, when used in setuid or other privileged programs in spice-gtk and possibly other products, allows local users to gain privileges and execute arbitrary code via the DBUS_SYSTEM_BUS_ADDRESS environment variable.  NOTE: it could be argued that this is a vulnerability in the applications that do not cleanse environment variables, not in libgio itself."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:gtk:libgio:-"
+            }, 
+            {
+                "id": "cpe:/a:freedesktop:spice-gtk:-"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.62321", 
+                "id": 62321
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/55555", 
+                "id": 55555
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/85480", 
+                "id": 85480
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://permalink.gmane.org/gmane.linux.redhat.fedora.extras.cvs/853051", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=857283", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.spinics.net/lists/spice-devel/msg01940.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/55555", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/09/17/2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/09/14/2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/09/12/6", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/21323", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2012-1284.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "6.9", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/21323", 
+                "id": 21323, 
+                "file": "http://www.exploit-db.com/download/21323"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-4425"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20906", 
+                "title": "RHSA-2012:1284: spice-gtk security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20906"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27586", 
+                "title": "DEPRECATED: ELSA-2012-1284 -- spice-gtk security update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27586"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23989", 
+                "title": "ELSA-2012:1284: spice-gtk security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23989"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CentOS Update for spice-glib CESA-2012:1284 centos6", 
+                "file": "gb_CESA-2012_1284_spice-glib_centos6.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881506"
+            }, 
+            {
+                "name": "Fedora Update for spice-gtk FEDORA-2012-14046", 
+                "file": "gb_fedora_2012_14046_spice-gtk_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864762"
+            }, 
+            {
+                "name": "Fedora Update for spice-gtk FEDORA-2012-14107", 
+                "file": "gb_fedora_2012_14107_spice-gtk_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864732"
+            }, 
+            {
+                "name": "RedHat Update for spice-gtk RHSA-2012:1284-01", 
+                "file": "gb_RHSA-2012_1284-01_spice-gtk.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870837"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 6 : spice-gtk (CESA-2012:1284)", 
+                "file": "centos_RHSA-2012-1284.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "62187"
+            }, 
+            {
+                "name": "Fedora 18 : qemu-1.2.0-3.fc18 / spice-0.11.3-1.fc18 / spice-gtk-0.13.29-4.fc18 / etc (2012-13513)", 
+                "file": "fedora_2012-13513.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "62157"
+            }, 
+            {
+                "name": "Fedora 16 : spice-gtk-0.11-5.fc16 (2012-14046)", 
+                "file": "fedora_2012-14046.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "62418"
+            }, 
+            {
+                "name": "Fedora 17 : spice-gtk-0.12-5.fc17 (2012-14107)", 
+                "file": "fedora_2012-14107.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "62331"
+            }, 
+            {
+                "name": "GLSA-201406-29 : spice-gtk: Privilege escalation", 
+                "file": "gentoo_GLSA-201406-29.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "76273"
+            }, 
+            {
+                "name": "Oracle Linux 6 : spice-gtk (ELSA-2012-1284)", 
+                "file": "oraclelinux_ELSA-2012-1284.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68628"
+            }, 
+            {
+                "name": "RHEL 6 : spice-gtk (RHSA-2012:1284)", 
+                "file": "redhat-RHSA-2012-1284.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "62170"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : spice-gtk on SL6.x i386/x86_64", 
+                "file": "sl_20120917_spice_gtk_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "62175"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20121284", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2012-1284.html", 
+                    "id": "RHSA-2012:1284", 
+                    "title": "RHSA-2012:1284: spice-gtk security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=857283", 
+                    "title": "CVE-2012-4425 spice-gtk/glib: Possible privilege escalation via un-sanitized environment variable", 
+                    "id": "857283", 
+                    "issue date": "2012-09-17", 
+                    "associated redhat": "RHSA-2012:1284"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,197 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0943", 
+                "published": "2014-05-22T19:55:02.830-04:00", 
+                "id": "CVE-2012-0943", 
+                "modified": "2014-05-29T20:19:09.397-04:00", 
+                "summary": "debian/guest-account in Light Display Manager (lightdm) 1.0.x before 1.0.6 and 1.1.x before 1.1.7, as used in Ubuntu Linux 11.10, allows local users to delete arbitrary files via a space in the name of a file in /tmp.  NOTE: this identifier was SPLIT per ADT1/ADT2 due to different codebases and affected versions. CVE-2012-6648 has been assigned for the gdm-guest-session issue."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:robert_ancell:lightdm:1.1.1"
+            }, 
+            {
+                "id": "cpe:/a:robert_ancell:lightdm:1.1.0"
+            }, 
+            {
+                "id": "cpe:/a:robert_ancell:lightdm:1.0.1"
+            }, 
+            {
+                "id": "cpe:/a:robert_ancell:lightdm:1.0.2"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:11.10"
+            }, 
+            {
+                "id": "cpe:/a:robert_ancell:lightdm:1.0.0"
+            }, 
+            {
+                "id": "cpe:/a:robert_ancell:lightdm:1.0.5"
+            }, 
+            {
+                "id": "cpe:/a:robert_ancell:lightdm:1.0.4"
+            }, 
+            {
+                "id": "cpe:/a:robert_ancell:lightdm:1.0.3"
+            }, 
+            {
+                "id": "cpe:/a:robert_ancell:lightdm:1.1.4"
+            }, 
+            {
+                "id": "cpe:/a:robert_ancell:lightdm:1.1.5"
+            }, 
+            {
+                "id": "cpe:/a:robert_ancell:lightdm:1.1.2"
+            }, 
+            {
+                "id": "cpe:/a:robert_ancell:lightdm:1.1.3"
+            }, 
+            {
+                "id": "cpe:/a:robert_ancell:lightdm:1.1.6"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.69777", 
+                "id": 69777
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1399-2", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "https://launchpadlibrarian.net/96471251/lightdm.secure-cleanup.debdiff", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "https://bugs.launchpad.net/ubuntu/%2Bsource/lightdm/%2Bbug/953044", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "2.1", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-0943"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:15279", 
+                "title": "USN-1399-1 -- gdm-guest-session vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:15279"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:15427", 
+                "title": "USN-1399-2 -- Light Display Manager vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:15427"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Ubuntu Update for gdm-guest-session USN-1399-1", 
+                "file": "gb_ubuntu_USN_1399_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840947"
+            }, 
+            {
+                "name": "Ubuntu Update for lightdm USN-1399-2", 
+                "file": "gb_ubuntu_USN_1399_2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840931"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Ubuntu 10.04 LTS / 10.10 / 11.04 : gdm-guest-session vulnerability (USN-1399-1)", 
+                "file": "ubuntu_USN-1399-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "58340"
+            }, 
+            {
+                "name": "Ubuntu 11.10 : lightdm vulnerability (USN-1399-2)", 
+                "file": "ubuntu_USN-1399-2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "58341"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1399-2", 
+                "id": "USN-1399-2"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,178 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5373", 
+                "published": "2007-10-11T06:17:00.000-04:00", 
+                "id": "CVE-2007-5373", 
+                "modified": "2008-09-05T17:30:34.057-04:00", 
+                "summary": "ldapscripts 1.4 and 1.7 sends a password as a command line argument when calling some LDAP programs, which might allow local users to read the password by listing the process and its arguments, as demonstrated by a call to ldappasswd in the _changepassword function."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/310.html", 
+                "id": "CWE-310", 
+                "title": "Cryptographic Issues"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:ldapscripts:ldapscripts:1.7"
+            }, 
+            {
+                "id": "cpe:/a:ldapscripts:ldapscripts:1.4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.39192", 
+                "id": 39192
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/25982", 
+                "id": 25982
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://secunia.com/advisories/27111", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=445582", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/37029", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/25982", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2008/dsa-1517", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/29395", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "2.1", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-5373"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:8052", 
+                "title": "DSA-1517 ldapscripts -- programming error", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:8052"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20197", 
+                "title": "DSA-1517-1 ldapscripts - information disclosure", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20197"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 1517-1 (ldapscripts)", 
+                "file": "deb_1517_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "60569"
+            }, 
+            {
+                "name": "FreeBSD Ports: ldapscripts", 
+                "file": "freebsd_ldapscripts.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "58779"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-1517-1 : ldapscripts - programming error", 
+                "file": "debian_DSA-1517.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "31588"
+            }, 
+            {
+                "name": "FreeBSD : ldapscripts -- Command Line User Credentials Disclosure (3a81017a-8154-11dc-9283-0016179b2dd5)", 
+                "file": "freebsd_pkg_3a81017a815411dc92830016179b2dd5.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "27550"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-1517", 
+                "id": "DSA-1517"
+            }
+        ], 
+        "Vmware": []
+    }
+}

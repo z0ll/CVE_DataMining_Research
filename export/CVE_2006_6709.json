@@ -1,0 +1,242 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6709", 
+                "published": "2006-12-22T20:28:00.000-05:00", 
+                "id": "CVE-2006-6709", 
+                "modified": "2008-09-05T17:15:25.750-04:00", 
+                "summary": "Multiple SQL injection vulnerabilities in MGinternet Property Site Manager allow remote attackers to execute arbitrary SQL commands via the (1) p parameter to (a) detail.asp; the (2) l, (3) typ, or (4) loc parameter to (b) listings.asp; or the (5) Password or (6) Username parameter to (c) admin_login.asp.  NOTE: some of these details are obtained from third party information."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:mginternet:property_site_manager"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33996", 
+                "id": 33996
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21073", 
+                "id": 21073
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30291", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30289", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21073", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/451565", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2078", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006225", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- detail.asp p SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006226", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- detail.asp p UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006227", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- detail.asp p INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006228", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- detail.asp p DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006229", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- detail.asp p ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006230", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- detail.asp p UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006231", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- listings.asp l SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006232", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- listings.asp l UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006233", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- listings.asp l INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006234", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- listings.asp l DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006235", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- listings.asp l ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006236", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- listings.asp l UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006237", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- listings.asp typ SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006238", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- listings.asp typ UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006239", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- listings.asp typ INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006240", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- listings.asp typ DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006241", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- listings.asp typ ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006242", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- listings.asp typ UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006243", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- listings.asp loc SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006244", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- listings.asp loc UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006245", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- listings.asp loc INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006246", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- listings.asp loc DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006247", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- listings.asp loc ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006248", 
+                "signature": "ET WEB_SPECIFIC_APPS MGinternet Property Site Manager SQL Injection Attempt -- listings.asp loc UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6709"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

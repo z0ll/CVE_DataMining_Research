@@ -1,0 +1,222 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0920", 
+                "published": "2012-06-05T18:55:09.437-04:00", 
+                "id": "CVE-2012-0920", 
+                "modified": "2012-06-20T00:00:00.000-04:00", 
+                "summary": "Use-after-free vulnerability in Dropbear SSH Server 0.52 through 2012.54, when command restriction and public key authentication are enabled, allows remote authenticated users to execute arbitrary code and bypass command restrictions via multiple crafted command requests, related to \"channels concurrency.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:matt_johnston:dropbear_ssh_server:0.53"
+            }, 
+            {
+                "id": "cpe:/a:matt_johnston:dropbear_ssh_server:2011.54"
+            }, 
+            {
+                "id": "cpe:/a:matt_johnston:dropbear_ssh_server:0.53.1"
+            }, 
+            {
+                "id": "cpe:/a:matt_johnston:dropbear_ssh_server:0.52"
+            }, 
+            {
+                "id": "cpe:/a:matt_johnston:dropbear_ssh_server:2012.54"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.60899", 
+                "id": 60899
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/52159", 
+                "id": 52159
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/79590", 
+                "id": 79590
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://www.mantor.org/~northox/misc/CVE-2012-0920.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "https://secure.ucc.asn.au/hg/dropbear/rev/818108bf7749", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/73444", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/52159", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/79590", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2012/dsa-2456", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/48929", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/48147", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://matt.ucc.asn.au/dropbear/CHANGES", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "single_instance", 
+                    "exploit": "3.9", 
+                    "base": "7.1", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-0920"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18111", 
+                "title": "DSA-2456-1 dropbear - use after free", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18111"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2456-1 (dropbear - use after free)", 
+                "file": "deb_2456_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "892456"
+            }, 
+            {
+                "name": "FreeBSD Ports: dropbear", 
+                "file": "freebsd_dropbear.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "71162"
+            }, 
+            {
+                "name": "Fedora Update for dropbear FEDORA-2012-10934", 
+                "file": "gb_fedora_2012_10934_dropbear_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864567"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-2456-1 : dropbear - use after free", 
+                "file": "debian_DSA-2456.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "58853"
+            }, 
+            {
+                "name": "Dropbear SSH Server Channel Concurrency Use-after-free Remote Code Execution", 
+                "file": "dropbear_ssh_55.nasl", 
+                "family": "Misc.", 
+                "id": "58183"
+            }, 
+            {
+                "name": "Fedora 16 : dropbear-0.55-1.fc16 (2012-10934)", 
+                "file": "fedora_2012-10934.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "60148"
+            }, 
+            {
+                "name": "FreeBSD : dropbear -- arbitrary code execution (eba70db4-6640-11e1-98af-00262d8b701d)", 
+                "file": "freebsd_pkg_eba70db4664011e198af00262d8b701d.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "58202"
+            }, 
+            {
+                "name": "GLSA-201309-20 : Dropbear: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201309-20.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "70160"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2456", 
+                "id": "DSA-2456"
+            }
+        ], 
+        "Vmware": []
+    }
+}

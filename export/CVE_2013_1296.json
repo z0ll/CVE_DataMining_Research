@@ -1,0 +1,197 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1296", 
+                "published": "2013-04-09T18:55:01.203-04:00", 
+                "id": "CVE-2013-1296", 
+                "modified": "2013-11-02T23:30:53.550-04:00", 
+                "summary": "The Remote Desktop ActiveX control in mstscax.dll in Microsoft Remote Desktop Connection Client 6.1 and 7.0 does not properly handle objects in memory, which allows remote attackers to execute arbitrary code via a web page that triggers access to a deleted object, and allows remote RDP servers to execute arbitrary code via unspecified vectors that trigger access to a deleted object, aka \"RDP ActiveX Control Remote Code Execution Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:remote_desktop_connection:7.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:remote_desktop_connection:6.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.8199", 
+                "id": 8199
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0037618", 
+                "id": "2013-A-0082", 
+                "title": "Microsoft Windows Remote Desktop Client Remote Code Execution Vulnerability"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/ncas/alerts/TA13-100A", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS13-029", 
+                    "vendor": "MS"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-1296"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:16598", 
+                "title": "Microsoft Windows Remote Desktop Client remote code execution vulnerability - MS13-029", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:16598"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft RDP ActiveX Control Remote Code Execution Vulnerability (2828223)", 
+                "file": "secpod_ms13-029.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "901217"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS13-029: Vulnerability in Remote Desktop Client Could Allow Remote Code Execution (2828223)", 
+                "file": "smb_nt_ms13-029.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "65876"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in Remote Desktop Client Could Allow Remote Code Execution", 
+                "id": "Vulnerability in Remote Desktop Client Could Allow Remote Code Execution", 
+                "title": "2813347"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2828223", 
+                "id": "2828223", 
+                "title": "Vulnerability in Remote Desktop Client Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS13-029", 
+                "id": "MS13-029", 
+                "title": "Vulnerability in Remote Desktop Client Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

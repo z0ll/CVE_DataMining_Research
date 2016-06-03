@@ -1,0 +1,425 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4170", 
+                "published": "2010-12-07T17:00:02.437-05:00", 
+                "id": "CVE-2010-4170", 
+                "modified": "2012-07-27T23:14:13.307-04:00", 
+                "summary": "The staprun runtime tool in SystemTap 1.3 does not properly clear the environment before executing modprobe, which allows local users to gain privileges by setting the MODPROBE_OPTIONS environment variable to specify a malicious configuration file."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:systemtap:systemtap:1.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.55665", 
+                "id": 55665
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/44914", 
+                "id": 44914
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/69489", 
+                "id": 69489
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://sources.redhat.com/git/gitweb.cgi?p=systemtap.git;a=commit;h=b7565b41228bea196cefa3a7d43ab67f8f9152e2", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/63344", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1024754", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/44914", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2010-0895.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2010-0894.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/15620", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2011/dsa-2348", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://sources.redhat.com/ml/systemtap/2010-q4/msg00230.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/46920", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/42318", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/42306", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/42263", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/42256", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2010-November/051127.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2010-November/051122.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2010-November/051115.html", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/15620", 
+                "id": 15620, 
+                "file": "platforms/linux/local/15620.sh"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-4170"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:15202", 
+                "title": "DSA-2348-1 systemtap -- several", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:15202"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22050", 
+                "title": "RHSA-2010:0894: systemtap security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22050"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27763", 
+                "title": "DEPRECATED: ELSA-2010-0894 -- systemtap security update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27763"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23511", 
+                "title": "ELSA-2010:0894: systemtap security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23511"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22608", 
+                "title": "DEPRECATED: ELSA-2010:0894: systemtap security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22608"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2348-1 (systemtap)", 
+                "file": "deb_2348_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "70564"
+            }, 
+            {
+                "name": "CentOS Update for systemtap CESA-2010:0894 centos5 i386", 
+                "file": "gb_CESA-2010_0894_systemtap_centos5_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880645"
+            }, 
+            {
+                "name": "CentOS Update for systemtap CESA-2010:0895 centos4 i386", 
+                "file": "gb_CESA-2010_0895_systemtap_centos4_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880455"
+            }, 
+            {
+                "name": "Fedora Update for systemtap FEDORA-2010-17865", 
+                "file": "gb_fedora_2010_17865_systemtap_fc14.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "862679"
+            }, 
+            {
+                "name": "Fedora Update for systemtap FEDORA-2010-17868", 
+                "file": "gb_fedora_2010_17868_systemtap_fc12.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "862558"
+            }, 
+            {
+                "name": "Fedora Update for systemtap FEDORA-2010-17873", 
+                "file": "gb_fedora_2010_17873_systemtap_fc13.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "862559"
+            }, 
+            {
+                "name": "Fedora Update for systemtap FEDORA-2011-7289", 
+                "file": "gb_fedora_2011_7289_systemtap_fc13.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863106"
+            }, 
+            {
+                "name": "Fedora Update for systemtap FEDORA-2011-7302", 
+                "file": "gb_fedora_2011_7302_systemtap_fc14.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863107"
+            }, 
+            {
+                "name": "RedHat Update for systemtap RHSA-2010:0894-01", 
+                "file": "gb_RHSA-2010_0894-01_systemtap.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870360"
+            }, 
+            {
+                "name": "RedHat Update for systemtap RHSA-2010:0895-01", 
+                "file": "gb_RHSA-2010_0895-01_systemtap.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870359"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : systemtap (CESA-2010:0894)", 
+                "file": "centos_RHSA-2010-0894.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "50809"
+            }, 
+            {
+                "name": "CentOS 4 : systemtap (CESA-2010:0895)", 
+                "file": "centos_RHSA-2010-0895.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "50810"
+            }, 
+            {
+                "name": "Debian DSA-2348-1 : systemtap - several vulnerabilities", 
+                "file": "debian_DSA-2348.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "56881"
+            }, 
+            {
+                "name": "Fedora 14 : systemtap-1.3-3.fc14 (2010-17865)", 
+                "file": "fedora_2010-17865.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "50655"
+            }, 
+            {
+                "name": "Fedora 12 : systemtap-1.3-3.fc12 (2010-17868)", 
+                "file": "fedora_2010-17868.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "50656"
+            }, 
+            {
+                "name": "Fedora 13 : systemtap-1.3-3.fc13 (2010-17873)", 
+                "file": "fedora_2010-17873.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "50657"
+            }, 
+            {
+                "name": "Fedora 13 : systemtap-1.4-6.fc13 (2011-7289)", 
+                "file": "fedora_2011-7289.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "54835"
+            }, 
+            {
+                "name": "Fedora 14 : systemtap-1.4-6.fc14 (2011-7302)", 
+                "file": "fedora_2011-7302.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "54836"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : systemtap (ELSA-2010-0894)", 
+                "file": "oraclelinux_ELSA-2010-0894.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68146"
+            }, 
+            {
+                "name": "Oracle Linux 4 : systemtap (ELSA-2010-0895)", 
+                "file": "oraclelinux_ELSA-2010-0895.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68147"
+            }, 
+            {
+                "name": "RHEL 5 / 6 : systemtap (RHSA-2010:0894)", 
+                "file": "redhat-RHSA-2010-0894.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "50646"
+            }, 
+            {
+                "name": "RHEL 4 : systemtap (RHSA-2010:0895)", 
+                "file": "redhat-RHSA-2010-0895.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "50647"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : systemtap on SL4.x i386/x86_64", 
+                "file": "sl_20101117_systemtap_on_SL4_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "60903"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : systemtap on SL5.x i386/x86_64", 
+                "file": "sl_20101117_systemtap_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "60904"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2010-17865", 
+                "id": "FEDORA-2010-17865"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2010-17868", 
+                "id": "FEDORA-2010-17868"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2010-17873", 
+                "id": "FEDORA-2010-17873"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20100894", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0894.html", 
+                    "id": "RHSA-2010:0894", 
+                    "title": "RHSA-2010:0894: systemtap security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=653604", 
+                    "title": "CVE-2010-4170 Systemtap: Insecure loading of modules", 
+                    "id": "653604", 
+                    "issue date": "2010-11-17", 
+                    "associated redhat": "RHSA-2010:0894"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=653606", 
+                    "title": "CVE-2010-4171 Systemtap: Ability to remove unused modules by unprivileged user", 
+                    "id": "653606", 
+                    "issue date": "2010-11-17", 
+                    "associated redhat": "RHSA-2010:0894"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20100895", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0895.html", 
+                    "id": "RHSA-2010:0895", 
+                    "title": "RHSA-2010:0895: systemtap security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=653604", 
+                    "title": "CVE-2010-4170 Systemtap: Insecure loading of modules", 
+                    "id": "653604", 
+                    "issue date": "2010-11-17", 
+                    "associated redhat": "RHSA-2010:0895"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2348", 
+                "id": "DSA-2348"
+            }
+        ], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,125 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4023", 
+                "published": "2006-08-08T20:04:00.000-04:00", 
+                "id": "CVE-2006-4023", 
+                "modified": "2008-09-05T17:08:40.383-04:00", 
+                "summary": "The ip2long function in PHP 5.1.4 and earlier may incorrectly validate an arbitrary string and return a valid network IP address, which allows remote attackers to obtain network information and facilitate other attacks, as demonstrated using SQL injection in the X-FORWARDED-FOR Header in index.php in MiniBB 2.0.  NOTE: it could be argued that the ip2long behavior represents a risk for security-relevant issues in a way that is similar to strcpy s role in buffer overflows, in which case this would be a class of implementation bugs that would require separate CVE items for each PHP application that uses ip2long in a security-relevant manner."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:php:php:4.3.3"
+            }, 
+            {
+                "id": "cpe:/a:php:php:5.1.4"
+            }, 
+            {
+                "id": "cpe:/a:php:php:5.0.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.31695", 
+                "id": 31695
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/441708/100/100/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/441529/100/100/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1016609", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://retrogod.altervista.org/php_ip2long.htm", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-4023"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "PHP ip2long Function String Validation Weakness", 
+                "file": "php_ip2long_sql_injection.nasl", 
+                "family": "CGI abuses", 
+                "id": "17715"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,142 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0432", 
+                "published": "2000-05-16T00:00:00.000-04:00", 
+                "id": "CVE-2000-0432", 
+                "modified": "2008-09-10T15:04:40.633-04:00", 
+                "summary": "The calender.pl and the calendar_admin.pl calendar scripts by Matt Kruse allow remote attackers to execute arbitrary commands via shell metacharacters."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:matt_kruse:calendar_script:2.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.15563", 
+                "id": 15563
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/1215", 
+                "id": 1215
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/1215", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2000-05/0173.html", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1455", 
+                "signature": "SERVER-WEBAPP calendar.pl access"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1456", 
+                "signature": "SERVER-WEBAPP calender_admin.pl access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1536", 
+                "signature": "SERVER-WEBAPP calendar_admin.pl arbitrary command execution attempt"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1537", 
+                "signature": "SERVER-WEBAPP calendar_admin.pl access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1701", 
+                "signature": "SERVER-WEBAPP calendar-admin.pl access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2000-0432"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Matt Kruse calendar_admin.pl Shell Metacharacter Arbitrary Command Execution", 
+                "file": "calendar.nasl", 
+                "family": "CGI abuses", 
+                "id": "10506"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,241 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3893", 
+                "published": "2013-09-18T06:08:24.867-04:00", 
+                "id": "CVE-2013-3893", 
+                "modified": "2014-01-23T23:35:05.100-05:00", 
+                "summary": "Use-after-free vulnerability in the SetMouseCapture implementation in mshtml.dll in Microsoft Internet Explorer 6 through 11 allows remote attackers to execute arbitrary code via crafted JavaScript strings, as demonstrated by use of an ms-help: URL that triggers loading of hxds.dll."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:6"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:10"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:7"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:11:release-preview"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:11:developer-preview"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:8"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:9"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.10313", 
+                "id": 10313
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0040759", 
+                "id": "2013-A-0188", 
+                "title": "Cumulative Security Update for Microsoft Internet Explorer"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/ncas/alerts/TA13-288A", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS13-080", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/advisory/2887505", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://pastebin.com/raw.php?i=Hx1L5gu6", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://jvndb.jvn.jp/ja/contents/2013/JVNDB-2013-000093.html", 
+                    "vendor": "JVNDB"
+                }, 
+                {
+                    "url": "http://jvn.jp/en/jp/JVN27443259/index.html", 
+                    "vendor": "JVN"
+                }, 
+                {
+                    "url": "http://blogs.technet.com/b/srd/archive/2013/10/08/ms13-080-addresses-two-vulnerabilities-under-limited-targeted-attacks.aspx", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://blogs.technet.com/b/srd/archive/2013/09/17/cve-2013-3893-fix-it-workaround-available.aspx", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2017478", 
+                "signature": "ET WEB_CLIENT CVE-2013-3893 IE Memory Corruption Vulnerability"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2017479", 
+                "signature": "ET WEB_CLIENT CVE-2013-3893 IE Memory Corruption Vulnerability"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2017480", 
+                "signature": "ET WEB_CLIENT CVE-2013-3893 IE Memory Corruption Vulnerability"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2017477", 
+                "signature": "ET WEB_CLIENT CVE-2013-3893 Possible IE Memory Corruption Vulnerability with HXDS ASLR Bypass"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ie_setmousecapture_uaf.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/browser/ie_setmousecapture_uaf.rb", 
+                "title": "MS13-080 Microsoft Internet Explorer SetMouseCapture Use-After-Free"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/28974", 
+                "id": 28974, 
+                "file": "platforms/windows/remote/28974.rb"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/ie_onlosecapture_event_uaf", 
+                "id": "exploit_info/ie_onlosecapture_event_uaf", 
+                "title": "Internet Explorer HTML Rendering Engine onLoseCapture Use-After-Free Vulnerability"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-3893"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18665", 
+                "title": "Internet Explorer Memory Corruption Vulnerability (CVE-2013-3893) - MS13-080", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:18665"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Internet Explorer Multiple Memory Corruption Vulnerabilities (2879017)", 
+                "file": "gb_microsoft_security_advisory_2887505.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "803867"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS KB2887505: Vulnerability in Internet Explorer Could Allow Remote Code Execution", 
+                "file": "smb_kb2887505.nasl", 
+                "family": "Windows", 
+                "id": "69931"
+            }, 
+            {
+                "name": "MS13-080: Cumulative Security Update for Internet Explorer (2879017)", 
+                "file": "smb_nt_ms13-080.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "70332"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Cumulative Security Update for Internet Explorer", 
+                "id": "Cumulative Security Update for Internet Explorer", 
+                "title": "2884101"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2879017", 
+                "id": "2879017", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS13-080", 
+                "id": "MS13-080", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

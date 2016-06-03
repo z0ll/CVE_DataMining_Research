@@ -1,0 +1,184 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1036", 
+                "published": "2007-02-21T06:28:00.000-05:00", 
+                "id": "CVE-2007-1036", 
+                "modified": "2009-03-16T00:00:00.000-04:00", 
+                "summary": "The default configuration of JBoss does not restrict access to the (1) console and (2) web management interfaces, which allows remote attackers to bypass authentication and gain administrative access via direct requests."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:jboss:jboss_application_server"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35113", 
+                "id": 35113
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/33744", 
+                "id": 33744
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/632656", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/32596", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1017677", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/460605/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/460597/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/460695/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://wiki.jboss.org/wiki/Wiki.jsp?page=SecureTheJmxConsole", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://wiki.jboss.org/wiki/Wiki.jsp?page=SecureJBoss", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://osvdb.org/33744", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/632656", 
+                "id": "VU#632656"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2015747", 
+                "signature": "ET WEB_SPECIFIC_APPS Possible JBoss/JMX InvokerServlet Auth Bypass Attempt"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "jboss_invoke_deploy.rb", 
+                "file": "metasploit-framework/modules/exploits/multi/http/jboss_invoke_deploy.rb", 
+                "title": "JBoss DeploymentFileRepository WAR Deployment (via JMXInvokerServlet)"
+            }, 
+            {
+                "id": "jboss_maindeployer.rb", 
+                "file": "metasploit-framework/modules/exploits/multi/http/jboss_maindeployer.rb", 
+                "title": "JBoss JMX Console Deployer Upload and Execute"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1036"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Cisco Prime Data Center Network Manager RMI Remote Code Execution (uncredentialed check)", 
+                "file": "cisco_prime_dcnm_6_1_2.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "67247"
+            }, 
+            {
+                "name": "Cisco Prime Data Center Network Manager RMI Remote Code Execution (credentialed check)", 
+                "file": "cisco_prime_dcnm_6_1_2_local.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "67248"
+            }, 
+            {
+                "name": "Apache Tomcat / JBoss EJBInvokerServlet / JMXInvokerServlet Multiple Vulnerabilities", 
+                "file": "jmxinvokerservlet_ejbinvokerservlet_rce.nasl", 
+                "family": "CGI abuses", 
+                "id": "70414"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

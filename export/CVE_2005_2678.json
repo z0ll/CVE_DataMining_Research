@@ -1,0 +1,129 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2678", 
+                "published": "2005-08-23T00:00:00.000-04:00", 
+                "id": "CVE-2005-2678", 
+                "modified": "2011-03-07T21:24:52.347-05:00", 
+                "summary": "Microsoft IIS 5.1 and 6 allows remote attackers to spoof the SERVER_NAME variable to bypass security checks and conduct various attacks via a GET request with an http://localhost URI, which makes it appear as if the request is coming from localhost."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:5.1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:6.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:5.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.1704", 
+                "id": 1704
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2005/1503", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/16548", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://ingehenriksen.blogspot.com/2005/08/remote-iis-5x-and-iis-60-server-name.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=112474727903399&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:100000139", 
+                "signature": "GPL WEB_SERVER WEB-IIS Remote IIS Server Name spoof attempt loopback IP"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2100139", 
+                "signature": "GPL WEB_SERVER WEB-IIS Remote IIS Server Name spoof attempt loopback IP"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-2678"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

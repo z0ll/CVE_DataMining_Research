@@ -1,0 +1,191 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6828", 
+                "published": "2006-12-31T00:00:00.000-05:00", 
+                "id": "CVE-2006-6828", 
+                "modified": "2011-03-07T21:47:07.970-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in Efkan Forum 1.0 and earlier allow remote attackers to execute arbitrary SQL commands via (1) the grup parameter in admin.asp, or the id parameter in (2) default.asp or (3) admin.asp.  NOTE: The provenance of this information is unknown; the details are obtained solely from third party information. The default.asp/grup vector is already covered by CVE-2006-6794."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:efkan_forum:efkan_forum:1.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34133", 
+                "id": 34133
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/5150", 
+                    "vendor": "VUPEN"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005985", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- admin.asp grup SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005986", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- admin.asp grup UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005987", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- admin.asp grup INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005988", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- admin.asp grup DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005989", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- admin.asp grup ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005990", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- admin.asp grup UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005991", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- default.asp id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005992", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- default.asp id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005993", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- default.asp id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005994", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- default.asp id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005995", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- default.asp id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005996", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- default.asp id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005997", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- admin.asp id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005998", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- admin.asp id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005999", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- admin.asp id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006000", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- admin.asp id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006001", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- admin.asp id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006002", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- admin.asp id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6828"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

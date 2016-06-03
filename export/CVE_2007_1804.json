@@ -1,0 +1,188 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1804", 
+                "published": "2007-04-02T19:19:00.000-04:00", 
+                "id": "CVE-2007-1804", 
+                "modified": "2011-03-07T21:52:57.000-05:00", 
+                "summary": "PulseAudio 0.9.5 allows remote attackers to cause a denial of service (daemon crash) via (1) a PA_PSTREAM_DESCRIPTOR_LENGTH value of FRAME_SIZE_MAX_ALLOW sent on TCP port 9875, which triggers a p->export assertion failure in do_read; (2) a PA_PSTREAM_DESCRIPTOR_LENGTH value of 0 sent on TCP port 9875, which triggers a length assertion failure in pa_memblock_new; or (3) an empty packet on UDP port 9875, which triggers a t assertion failure in pa_sdp_parse; and allows remote authenticated users to cause a denial of service (daemon crash) via a crafted packet on TCP port 9875 that (4) triggers a maxlength assertion failure in pa_memblockq_new, (5) triggers a size assertion failure in pa_xmalloc, or (6) plays a certain sound file."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:pulseaudio:pulseaudio:0.9.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35944", 
+                "id": 35944
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/23240", 
+                "id": 23240
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://aluigi.altervista.org/adv/pulsex-adv.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/33315", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1214", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://aluigi.org/poc/pulsex.zip", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/usn-465-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/23240", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.novell.com/linux/security/advisories/2007_13_sr.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2008:065", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25787", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25431", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.8", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1804"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Mandriva Update for mysql MDVA-2012:049 (mysql)", 
+                "file": "gb_mandriva_MDVSA_2008_065.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "830363"
+            }, 
+            {
+                "name": "Ubuntu Update for quagga USN-2941-1", 
+                "file": "gb_ubuntu_USN_465_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840160"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Mandriva Linux Security Advisory : pulseaudio (MDVSA-2008:065)", 
+                "file": "mandriva_MDVSA-2008-065.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "37991"
+            }, 
+            {
+                "name": "openSUSE 10 Security Update : pulseaudio (pulseaudio-3637)", 
+                "file": "suse_pulseaudio-3637.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "27405"
+            }, 
+            {
+                "name": "Ubuntu 7.04 : pulseaudio vulnerability (USN-465-1)", 
+                "file": "ubuntu_USN-465-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "28065"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2008:065", 
+                "id": "MDVSA-2008:065"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2007-1804.html", 
+                "id": "SUSE-SR:2007:013"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-465-1", 
+                "id": "USN-465-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

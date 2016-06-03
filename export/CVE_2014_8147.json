@@ -1,0 +1,226 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8147", 
+                "published": "2015-05-25T18:59:01.927-04:00", 
+                "id": "CVE-2014-8147", 
+                "modified": "2016-04-06T08:37:43.243-04:00", 
+                "summary": "The resolveImplicitLevels function in common/ubidi.c in the Unicode Bidirectional Algorithm implementation in ICU4C in International Components for Unicode (ICU) before 55.1 uses an integer data type that is inconsistent with a header file, which allows remote attackers to cause a denial of service (incorrect malloc followed by invalid free) or possibly execute arbitrary code via crafted text."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:apple:watchos:1.0.1"
+            }, 
+            {
+                "id": "cpe:/o:apple:mac_os_x:10.10.4"
+            }, 
+            {
+                "id": "cpe:/a:icu_project:international_components_for_unicode:54.0"
+            }, 
+            {
+                "id": "cpe:/a:icu_project:international_components_for_unicode:53.0"
+            }, 
+            {
+                "id": "cpe:/a:icu_project:international_components_for_unicode:52.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.78102", 
+                "id": 78102
+            }, 
+            {
+                "url": "http://www.scip.ch/?vuldb.75528", 
+                "id": 75528
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/602540", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.oracle.com/technetwork/topics/security/cpuoct2015-2367953.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://support.apple.com/HT205267", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://support.apple.com/HT205213", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://raw.githubusercontent.com/pedrib/PoC/master/generic/i-c-u-fail.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://seclists.org/fulldisclosure/2015/May/14", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2015/05/05/6", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://lists.apple.com/archives/security-announce/2015/Sep/msg00008.html", 
+                    "vendor": "APPLE"
+                }, 
+                {
+                    "url": "http://lists.apple.com/archives/security-announce/2015/Sep/msg00005.html", 
+                    "vendor": "APPLE"
+                }, 
+                {
+                    "url": "http://bugs.icu-project.org/trac/changeset/37080", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/602540", 
+                "id": "VU#602540"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-8147"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:51", 
+                "title": "DSA-3323-1 -- icu -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:51"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3323-1 (icu - security update)", 
+                "file": "deb_3323.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703323"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-3323-1 : icu - security update", 
+                "file": "debian_DSA-3323.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "85162"
+            }, 
+            {
+                "name": "GLSA-201507-04 : International Components for Unicode: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201507-04.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "84603"
+            }, 
+            {
+                "name": "Mac OS X < 10.11 Multiple Vulnerabilities (GHOST)", 
+                "file": "macosx_10_11.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "86270"
+            }, 
+            {
+                "name": "openSUSE Security Update : Qt 5 (openSUSE-2015-953)", 
+                "file": "openSUSE-2015-953.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "87627"
+            }, 
+            {
+                "name": "openSUSE Security Update : LibreOffice and related libraries (openSUSE-2016-273)", 
+                "file": "openSUSE-2016-273.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "89016"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : Recommended update for LibreOffice (SUSE-SU-2015:1915-1)", 
+                "file": "suse_SU-2015-1915-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "86757"
+            }, 
+            {
+                "name": "SUSE SLED11 Security Update : Recommended update for LibreOffice (SUSE-SU-2016:0324-1)", 
+                "file": "suse_SU-2016-0324-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88575"
+            }, 
+            {
+                "name": "Ubuntu 14.04 / 14.10 / 15.04 : icu vulnerabilities (USN-2605-1)", 
+                "file": "ubuntu_USN-2605-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83345"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

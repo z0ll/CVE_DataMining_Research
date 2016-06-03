@@ -1,0 +1,152 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-2367", 
+                "published": "2013-07-31T09:20:18.803-04:00", 
+                "id": "CVE-2013-2367", 
+                "modified": "2013-07-31T00:00:00.000-04:00", 
+                "summary": "Multiple unspecified vulnerabilities in HP SiteScope 11.20 and 11.21, when SOAP is used, allow remote attackers to execute arbitrary code via unknown vectors, aka ZDI-CAN-1678."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:hp:sitescope:11.21"
+            }, 
+            {
+                "id": "cpe:/a:hp:sitescope:11.20"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.64584", 
+                "id": 64584
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0039815", 
+                "id": "2013-A-0150", 
+                "title": "Multiple Remote Code Execution Vulnerabilities in HP SiteScope"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://h20564.www2.hp.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c03861260", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "https://h20564.www2.hp.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c03861260", 
+                    "vendor": "HP"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "hp_sitescope_runomagentcommand.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/http/hp_sitescope_runomagentcommand.rb", 
+                "title": "HP SiteScope Remote Code Execution"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [
+            {
+                "url": "http://www.d2sec.com/exploits/hp_sitescope_runomagentcommand_11.20_rce.html", 
+                "title": "HP SiteScope runOMAgentCommand 11.20 RCE"
+            }
+        ], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/hp_sitescope_soap_runomagentcommand", 
+                "id": "exploit_info/hp_sitescope_soap_runomagentcommand", 
+                "title": "HP SiteScope APIBSMIntegrationImpl runOMAgentCommand SOAP Request Vulnerability"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-2367"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "HP SiteScope Multiple Unspecified Remote Code Execution Vulnerabilities", 
+                "file": "hp_sitescope_hpsbgn02904.nasl", 
+                "family": "CGI abuses", 
+                "id": "69195"
+            }, 
+            {
+                "name": "HP SiteScope SOAP Call runOMAgentCommand SOAP Request Arbitrary Remote Code Execution", 
+                "file": "hp_sitescope_runomagentcommand.nasl", 
+                "family": "CGI abuses", 
+                "id": "69983"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [
+            {
+                "url": "https://h20564.www2.hp.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c03861260", 
+                "id": "HPSBGN02904"
+            }, 
+            {
+                "url": "https://h20564.www2.hp.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c03861260", 
+                "id": "SSRT101073"
+            }
+        ], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

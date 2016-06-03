@@ -1,0 +1,255 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-1640", 
+                "published": "2010-05-26T14:30:01.827-04:00", 
+                "id": "CVE-2010-1640", 
+                "modified": "2010-09-09T01:41:45.287-04:00", 
+                "summary": "Off-by-one error in the parseicon function in libclamav/pe_icons.c in ClamAV 0.96 allows remote attackers to cause a denial of service (crash) via a crafted PE icon that triggers an out-of-bounds read, related to improper rounding during scaling."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:clamav:clamav:0.96"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.53359", 
+                "id": 53359
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/40318", 
+                "id": 40318
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://git.clamav.net/gitweb?p=clamav-devel.git;a=blobdiff;f=libclamav/pe_icons.c;h=3f1bc5be69d0f9d84e576814d1a3cc6f40c4ff2c;hp=39a714f05968f9e929576bf171dd0eb58bf06bef;hb=7f0e3bbf77382d9782e0189bf80f5f59a95779b3;hpb=f0eb394501ec21b9fe67f36cbf5db788711d4236", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://wwws.clamav.net/bugzilla/show_bug.cgi?id=2031", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/58825", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2010/1214", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/40318", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2010/05/21/7", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:110", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/39895", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2010-08/msg00001.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://git.clamav.net/gitweb?p=clamav-devel.git;a=blob_plain;f=ChangeLog;hb=clamav-0.96.1", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "4.3", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-1640"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "ClamAV parseicon() Denial Of Service Vulnerability", 
+                "file": "gb_clamav_40318.nasl", 
+                "family": "Denial of Service", 
+                "id": "100656"
+            }, 
+            {
+                "name": "Mandriva Update for dbus MDVA-2010:110 (dbus)", 
+                "file": "gb_mandriva_MDVA_2010_110.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "830963"
+            }, 
+            {
+                "name": "Mandriva Update for clamav MDVSA-2010:110 (clamav)", 
+                "file": "gb_mandriva_MDVSA_2010_110.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "831063"
+            }, 
+            {
+                "name": "Ubuntu Update for clamav vulnerabilities USN-945-1", 
+                "file": "gb_ubuntu_USN_945_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840437"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 201009-06 (clamav)", 
+                "file": "glsa_201009_06.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "69030"
+            }, 
+            {
+                "name": "ClamAV cli_pdf() and cli_scanicon() Denial of Service Vulnerabilities (Win", 
+                "file": "secpod_clamav_mult_dos_vuln_win.nasl", 
+                "family": "Denial of Service", 
+                "id": "902189"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "ClamAV < 0.96.1 Multiple Vulnerabilities", 
+                "file": "clamav_0_96_1.nasl", 
+                "family": "Misc.", 
+                "id": "46706"
+            }, 
+            {
+                "name": "GLSA-201009-06 : Clam AntiVirus: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201009-06.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "49127"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : clamav (MDVSA-2010:110)", 
+                "file": "mandriva_MDVSA-2010-110.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "46744"
+            }, 
+            {
+                "name": "SuSE9 Security Update : clamav (YOU Patch Number 12619)", 
+                "file": "suse9_12619.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "47795"
+            }, 
+            {
+                "name": "openSUSE Security Update : clamav (openSUSE-SU-2010:0414-1)", 
+                "file": "suse_11_0_clamav-100526.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "47796"
+            }, 
+            {
+                "name": "openSUSE Security Update : clamav (openSUSE-SU-2010:0414-1)", 
+                "file": "suse_11_1_clamav-100526.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "47797"
+            }, 
+            {
+                "name": "openSUSE Security Update : clamav (openSUSE-SU-2010:0414-1)", 
+                "file": "suse_11_2_clamav-100526.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "47798"
+            }, 
+            {
+                "name": "SuSE 11 / 11.1 Security Update : clamav (SAT Patch Numbers 2479 / 2480)", 
+                "file": "suse_11_clamav-100526.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "50897"
+            }, 
+            {
+                "name": "SuSE 10 Security Update : clamav (ZYPP Patch Number 7056)", 
+                "file": "suse_clamav-7056.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "49838"
+            }, 
+            {
+                "name": "Ubuntu 9.04 / 9.10 / 10.04 LTS : clamav vulnerabilities (USN-945-1)", 
+                "file": "ubuntu_USN-945-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "46752"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:110", 
+                "id": "MDVSA-2010:110"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2010-1640.html", 
+                "id": "SUSE-SR:2010:014"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,249 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1603", 
+                "published": "2009-05-11T12:30:00.187-04:00", 
+                "id": "CVE-2009-1603", 
+                "modified": "2009-08-08T01:26:21.250-04:00", 
+                "summary": "src/tools/pkcs11-tool.c in pkcs11-tool in OpenSC 0.11.7, when used with unspecified third-party PKCS#11 modules, generates RSA keys with incorrect public exponents, which allows attackers to read the cleartext form of messages that were intended to be encrypted."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/310.html", 
+                "id": "CWE-310", 
+                "title": "Cryptographic Issues"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:opensc-project:opensc:0.11.7"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.48115", 
+                "id": 48115
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2009/05/08/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "https://www.redhat.com/archives/fedora-package-announce/2009-May/msg01432.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "https://www.redhat.com/archives/fedora-package-announce/2009-May/msg01420.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "https://www.redhat.com/archives/fedora-package-announce/2009-June/msg00097.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "https://www.redhat.com/archives/fedora-package-announce/2009-June/msg00095.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2009/1295", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.opensc-project.org/pipermail/opensc-announce/2009-May/000025.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:123", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://security.gentoo.org/glsa/glsa-200908-01.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/36074", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/35309", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/35293", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/35035", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "4.3", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-1603"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Core 10 FEDORA-2009-4928 (mingw32-opensc)", 
+                "file": "fcore_2009_4928.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "64107"
+            }, 
+            {
+                "name": "Fedora Core 11 FEDORA-2009-4967 (mingw32-opensc)", 
+                "file": "fcore_2009_4967.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "64108"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 200908-01 (opensc)", 
+                "file": "glsa_200908_01.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "64566"
+            }, 
+            {
+                "name": "Mandrake Security Advisory MDVSA-2009:123 (opensc)", 
+                "file": "mdksa_2009_123.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "64138"
+            }, 
+            {
+                "name": "OpenSC Incorrect RSA Keys Generation Vulnerability", 
+                "file": "secpod_opensc_insecure_key_generation_vuln.nasl", 
+                "family": "Privilege escalation", 
+                "id": "900639"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 9 : opensc-0.11.8-1.fc9 (2009-4883)", 
+                "file": "fedora_2009-4883.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "38958"
+            }, 
+            {
+                "name": "Fedora 10 : opensc-0.11.8-1.fc10 (2009-4919)", 
+                "file": "fedora_2009-4919.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "38960"
+            }, 
+            {
+                "name": "Fedora 10 : mingw32-opensc-0.11.8-1.fc10 (2009-4928)", 
+                "file": "fedora_2009-4928.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "38993"
+            }, 
+            {
+                "name": "Fedora 11 : mingw32-opensc-0.11.8-1.fc11 (2009-4967)", 
+                "file": "fedora_2009-4967.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "38994"
+            }, 
+            {
+                "name": "GLSA-200908-01 : OpenSC: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-200908-01.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "40462"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : opensc (MDVSA-2009:123)", 
+                "file": "mandriva_MDVSA-2009-123.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "48146"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2009-4883", 
+                "id": "FEDORA-2009-4883"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2009-4919", 
+                "id": "FEDORA-2009-4919"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2009-4928", 
+                "id": "FEDORA-2009-4928"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2009-4967", 
+                "id": "FEDORA-2009-4967"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:123", 
+                "id": "MDVSA-2009:123"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200908-01", 
+                "id": "GLSA-200908-01"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

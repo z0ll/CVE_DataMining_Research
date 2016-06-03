@@ -1,0 +1,199 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0103", 
+                "published": "2010-03-10T15:13:02.667-05:00", 
+                "id": "CVE-2010-0103", 
+                "modified": "2010-03-10T00:00:00.000-05:00", 
+                "summary": "UsbCharger.dll in the Energizer DUO USB battery charger software contains a backdoor that is implemented through the Arucer.dll file in the %WINDIR%\\system32 directory, which allows remote attackers to download arbitrary programs onto a Windows PC, and execute these programs, via a request to TCP port 7777."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:energizer:duo_usb"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.52107", 
+                "id": 52107
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/38571", 
+                "id": 38571
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/154421", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.symantec.com/connect/blogs/trojan-found-usb-battery-charger-software", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/38571", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.marketwatch.com/story/energizer-announces-duo-charger-and-usb-charger-software-problem-2010-03-05", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/154421", 
+                "id": "VU#154421"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "energizer_duo_detect.rb", 
+                "file": "metasploit-framework/modules/auxiliary/scanner/backdoor/energizer_duo_detect.rb", 
+                "title": "Energizer DUO Trojan Scanner"
+            }, 
+            {
+                "id": "energizer_duo_payload.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/backdoor/energizer_duo_payload.rb", 
+                "title": "Energizer DUO USB Battery Charger Arucer.dll Trojan Code Execution"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-0103"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Energizer DUO USB Battery Charger Software Backdoor", 
+                "file": "gb_energizer_duo_usb_unauth_access_vuln.nasl", 
+                "family": "General", 
+                "id": "800491"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Arugizer Backdoor Detection", 
+                "file": "arugizer_backdoor.nasl", 
+                "family": "Backdoors", 
+                "id": "45005"
+            }, 
+            {
+                "name": "Energizer DUO USB Battery Charger Software Backdoor (credentialed check)", 
+                "file": "energizer_duo_arugizer_backdoor.nasl", 
+                "family": "Backdoors", 
+                "id": "45006"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

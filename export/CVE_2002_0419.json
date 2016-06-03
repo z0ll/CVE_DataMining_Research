@@ -1,0 +1,190 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/668.html", 
+                "id": "CWE-668", 
+                "title": "Exposure of Resource to Wrong Sphere"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/199.html", 
+                "id": "CWE-199", 
+                "title": "Information Management Errors"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/717.html", 
+                "id": "CWE-717", 
+                "title": "OWASP Top Ten 2007 Category A6 - Information Leakage and Improper Error Handling"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/840.html", 
+                "id": "CWE-840", 
+                "title": "Business Logic Errors"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/963.html", 
+                "id": "CWE-963", 
+                "title": "SFP Secondary Cluster: Exposed Data"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/13.html", 
+                "id": 13
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/169.html", 
+                "id": 169
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/22.html", 
+                "id": 22
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/472.html", 
+                "id": 472
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/59.html", 
+                "id": 59
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/60.html", 
+                "id": 60
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/79.html", 
+                "id": 79
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0419", 
+                "published": "2002-08-12T00:00:00.000-04:00", 
+                "id": "CVE-2002-0419", 
+                "modified": "2013-06-06T00:00:00.000-04:00", 
+                "summary": "Information leaks in IIS 4 through 5.1 allow remote attackers to obtain potentially sensitive information or more easily conduct brute force attacks via responses from the server in which (2) in certain configurations, the server IP address is provided as the realm for Basic authentication, which could reveal real IP addresses that were obscured by NAT, or (3) when NTLM authentication is used, the NetBIOS name of the server and its Windows NT domain are revealed in response to an Authorization request.  NOTE: this entry originally contained a vector (1) in which the server reveals whether it supports Basic or NTLM authentication through 401 Access Denied error messages.  CVE has REJECTED this vector; it is not a vulnerability because the information is already available through legitimate use, since authentication cannot proceed without specifying a scheme that is supported by both the client and the server."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/200.html", 
+                "id": "CWE-200", 
+                "title": "Information Exposure"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:4.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:5.1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:4.0:alpha"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:5.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.18495", 
+                "id": 18495
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/4235", 
+                "id": 4235
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/4235", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/static/8382.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=101535399100534&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-0419"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Microsoft IIS Authentication Method Enumeration", 
+                "file": "iis_auth_scheme.nasl", 
+                "family": "Web Servers", 
+                "id": "11871"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

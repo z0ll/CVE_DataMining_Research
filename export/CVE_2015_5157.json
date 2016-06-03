@@ -1,0 +1,339 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5157", 
+                "published": "2015-08-31T06:59:11.830-04:00", 
+                "id": "CVE-2015-5157", 
+                "modified": "2015-08-31T14:31:47.590-04:00", 
+                "summary": "arch/x86/entry/entry_64.S in the Linux kernel before 4.1.6 on the x86_64 platform mishandles IRET faults in processing NMIs that occurred during userspace execution, which might allow local users to gain privileges by triggering an NMI."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:4.1.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.77497", 
+                "id": 77497
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/torvalds/linux/commit/9b6e6a8334d56354853f9c255d1395c2ba570e0a", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/07/22/7", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.1.6", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=9b6e6a8334d56354853f9c255d1395c2ba570e0a", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-5157"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:157", 
+                "title": "DSA-3313-1 -- linux -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:157"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3313-1 (linux - security update)", 
+                "file": "deb_3313.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703313"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 7 : kernel (CESA-2016:0185)", 
+                "file": "centos_RHSA-2016-0185.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "88759"
+            }, 
+            {
+                "name": "Debian DSA-3313-1 : linux - security update", 
+                "file": "debian_DSA-3313.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "84965"
+            }, 
+            {
+                "name": "openSUSE Security Update : the Linux Kernel (openSUSE-2016-124)", 
+                "file": "openSUSE-2016-124.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88545"
+            }, 
+            {
+                "name": "openSUSE Security Update : the Linux Kernel (openSUSE-2016-136)", 
+                "file": "openSUSE-2016-136.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88605"
+            }, 
+            {
+                "name": "Oracle Linux 7 : kernel (ELSA-2016-0185)", 
+                "file": "oraclelinux_ELSA-2016-0185.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "88778"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : Unbreakable Enterprise kernel (ELSA-2016-3519)", 
+                "file": "oraclelinux_ELSA-2016-3519.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "88857"
+            }, 
+            {
+                "name": "OracleVM 3.3 : Unbreakable / etc (OVMSA-2016-0014)", 
+                "file": "oraclevm_OVMSA-2016-0014.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "88858"
+            }, 
+            {
+                "name": "RHEL 7 : kernel (RHSA-2016:0185)", 
+                "file": "redhat-RHSA-2016-0185.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "88786"
+            }, 
+            {
+                "name": "RHEL 7 : kernel-rt (RHSA-2016:0212)", 
+                "file": "redhat-RHSA-2016-0212.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "88791"
+            }, 
+            {
+                "name": "RHEL 6 : kernel-rt (RHSA-2016:0224)", 
+                "file": "redhat-RHSA-2016-0224.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "88792"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL7.x x86_64", 
+                "file": "sl_20160216_kernel_on_SL7_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "88799"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : kernel-source (SUSE-SU-2015:1727-1)", 
+                "file": "suse_SU-2015-1727-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "86378"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : kernel (SUSE-SU-2015:2108-1)", 
+                "file": "suse_SU-2015-2108-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "87104"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : kernel (SUSE-SU-2015:2339-1)", 
+                "file": "suse_SU-2015-2339-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "87651"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-trusty vulnerabilities (USN-2687-1)", 
+                "file": "ubuntu_USN-2687-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85075"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux vulnerabilities (USN-2688-1)", 
+                "file": "ubuntu_USN-2688-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85076"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-utopic vulnerabilities (USN-2689-1)", 
+                "file": "ubuntu_USN-2689-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85077"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-vivid vulnerabilities (USN-2690-1)", 
+                "file": "ubuntu_USN-2690-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85078"
+            }, 
+            {
+                "name": "Ubuntu 15.04 : linux vulnerabilities (USN-2691-1)", 
+                "file": "ubuntu_USN-2691-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85079"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux vulnerabilities (USN-2700-1)", 
+                "file": "ubuntu_USN-2700-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85158"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-trusty vulnerabilities (USN-2701-1)", 
+                "file": "ubuntu_USN-2701-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85159"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20160185", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2016-0185.html", 
+                    "id": "RHSA-2016:0185", 
+                    "title": "RHSA-2016:0185: kernel security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1259577", 
+                    "title": "CVE-2015-5157 kernel: x86-64: IRET faults during NMIs processing", 
+                    "id": "1259577", 
+                    "issue date": "2016-02-16", 
+                    "associated redhat": "RHSA-2016:0185"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1272371", 
+                    "title": "CVE-2015-7872 kernel: Keyrings crash triggerable by unprivileged user", 
+                    "id": "1272371", 
+                    "issue date": "2016-02-16", 
+                    "associated redhat": "RHSA-2016:0185"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20160212", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2016-0212.html", 
+                    "id": "RHSA-2016:0212", 
+                    "title": "RHSA-2016:0212: kernel-rt security, bug fix, and enhancement update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1259577", 
+                    "title": "CVE-2015-5157 kernel: x86-64: IRET faults during NMIs processing", 
+                    "id": "1259577", 
+                    "issue date": "2016-02-16", 
+                    "associated redhat": "RHSA-2016:0212"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1272371", 
+                    "title": "CVE-2015-7872 kernel: Keyrings crash triggerable by unprivileged user", 
+                    "id": "1272371", 
+                    "issue date": "2016-02-16", 
+                    "associated redhat": "RHSA-2016:0212"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1282591", 
+                    "title": "kernel-rt: update to the RHEL7.2.z batch 2 source tree", 
+                    "id": "1282591", 
+                    "issue date": "2016-02-16", 
+                    "associated redhat": "RHSA-2016:0212"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1293229", 
+                    "title": "RCU stalls message on realtime kernel", 
+                    "id": "1293229", 
+                    "issue date": "2016-02-16", 
+                    "associated redhat": "RHSA-2016:0212"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1293230", 
+                    "title": "rt: netpoll: live lock with NAPI polling and busy polling on realtime kernel", 
+                    "id": "1293230", 
+                    "issue date": "2016-02-16", 
+                    "associated redhat": "RHSA-2016:0212"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

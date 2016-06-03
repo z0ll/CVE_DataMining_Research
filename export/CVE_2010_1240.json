@@ -1,0 +1,321 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-1240", 
+                "published": "2010-04-05T11:30:01.313-04:00", 
+                "id": "CVE-2010-1240", 
+                "modified": "2012-11-05T23:38:55.860-05:00", 
+                "summary": "Adobe Reader and Acrobat 9.x before 9.3.3, and 8.x before 8.2.3 on Windows and Mac OS X, do not restrict the contents of one text field in the Launch File warning dialog, which makes it easier for remote attackers to trick users into executing an arbitrary local program that was specified in a PDF document, as demonstrated by a text field that claims that the Open button will enable the user to read an encrypted message."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:adobe:acrobat_reader:9.3.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.52579", 
+                "id": 52579
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA10-231A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2010/1636", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1024159", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.adobe.com/support/security/bulletins/apsb10-15.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://lists.immunitysec.com/pipermail/dailydave/2010-April/006075.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://blog.didierstevens.com/2010/06/29/quickpost-no-escape-from-pdf/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://blog.didierstevens.com/2010/03/29/escape-from-pdf/", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "adobe_pdf_embedded_exe.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/fileformat/adobe_pdf_embedded_exe.rb", 
+                "title": "Adobe Doc.media.newPlayer Use After Free Vulnerability"
+            }, 
+            {
+                "id": "adobe_pdf_embedded_exe_nojs.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/fileformat/adobe_pdf_embedded_exe_nojs.rb", 
+                "title": "Adobe Doc.media.newPlayer Use After Free Vulnerability"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-1240"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22991", 
+                "title": "ELSA-2010:0503: acroread security update (Critical)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22991"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22247", 
+                "title": "RHSA-2010:0503: acroread security update (Critical)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22247"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:7466", 
+                "title": "Adobe Reader 9.3.1 on Windows does not restrict the contents of one text field in the Launch File warning dialog", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:7466"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Adobe Reader PDF Handling Multiple Vulnerabilities (Win)", 
+                "file": "gb_adobe_reader_pdf_doc_mult_vuln_win.nasl", 
+                "family": "General", 
+                "id": "801304"
+            }, 
+            {
+                "name": "SuSE Update for acroread SUSE-SA:2010:029", 
+                "file": "gb_suse_2010_029.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "850135"
+            }, 
+            {
+                "name": "SuSE Update for acroread SUSE-SA:2010:037", 
+                "file": "gb_suse_2010_037.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "850141"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Adobe Acrobat < 9.3.3 / 8.2.3  Multiple Vulnerabilities (APSB10-15)", 
+                "file": "adobe_acrobat_apsb10-15.nasl", 
+                "family": "Windows", 
+                "id": "47164"
+            }, 
+            {
+                "name": "Adobe Acrobat < 9.3.4 / 8.2.4  Multiple Vulnerabilities (APSB10-17)", 
+                "file": "adobe_acrobat_apsb10-17.nasl", 
+                "family": "Windows", 
+                "id": "48374"
+            }, 
+            {
+                "name": "Adobe Reader < 9.3.3 / 8.2.3  Multiple Vulnerabilities (APSB10-15)", 
+                "file": "adobe_reader_apsb10-15.nasl", 
+                "family": "Windows", 
+                "id": "47165"
+            }, 
+            {
+                "name": "Adobe Reader < 9.3.4 / 8.2.4  Multiple Vulnerabilities (APSB10-17)", 
+                "file": "adobe_reader_apsb10-17.nasl", 
+                "family": "Windows", 
+                "id": "48375"
+            }, 
+            {
+                "name": "RHEL 4 / 5 : acroread (RHSA-2010:0503)", 
+                "file": "redhat-RHSA-2010-0503.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "47869"
+            }, 
+            {
+                "name": "openSUSE Security Update : acroread (openSUSE-SU-2010:0359-1)", 
+                "file": "suse_11_0_acroread-100708.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "47690"
+            }, 
+            {
+                "name": "openSUSE Security Update : acroread (openSUSE-SU-2010:0359-1)", 
+                "file": "suse_11_1_acroread-100708.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "47692"
+            }, 
+            {
+                "name": "openSUSE Security Update : acroread (openSUSE-SU-2010:0573-1)", 
+                "file": "suse_11_1_acroread-100826.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "49083"
+            }, 
+            {
+                "name": "openSUSE Security Update : acroread (openSUSE-SU-2010:0359-1)", 
+                "file": "suse_11_2_acroread-100706.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "47694"
+            }, 
+            {
+                "name": "openSUSE Security Update : acroread (openSUSE-SU-2010:0573-1)", 
+                "file": "suse_11_2_acroread-100826.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "49084"
+            }, 
+            {
+                "name": "openSUSE Security Update : acroread (openSUSE-SU-2010:0573-1)", 
+                "file": "suse_11_3_acroread-100826.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75418"
+            }, 
+            {
+                "name": "SuSE 11 / 11.1 Security Update : acroread (SAT Patch Numbers 2639 / 2640)", 
+                "file": "suse_11_acroread-100702.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "50882"
+            }, 
+            {
+                "name": "SuSE 11 / 11.1 Security Update : Acrobat Reader (SAT Patch Numbers 3008 / 3009)", 
+                "file": "suse_11_acroread-100825.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "50883"
+            }, 
+            {
+                "name": "SuSE 11 / 11.1 Security Update : acroread (SAT Patch Numbers 2637 / 2641)", 
+                "file": "suse_11_acroread_ja-100702.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "50886"
+            }, 
+            {
+                "name": "SuSE 11 / 11.1 Security Update : acroread_ja (SAT Patch Numbers 3004 / 3005)", 
+                "file": "suse_11_acroread_ja-100825.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "50887"
+            }, 
+            {
+                "name": "SuSE 10 Security Update : acroread (ZYPP Patch Number 7087)", 
+                "file": "suse_acroread-7087.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "51701"
+            }, 
+            {
+                "name": "SuSE 10 Security Update : Acrobat Reader (ZYPP Patch Number 7131)", 
+                "file": "suse_acroread-7131.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "51702"
+            }, 
+            {
+                "name": "SuSE 10 Security Update : acroread (ZYPP Patch Number 7086)", 
+                "file": "suse_acroread_ja-7086.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "51713"
+            }, 
+            {
+                "name": "SuSE 10 Security Update : acroread_ja (ZYPP Patch Number 7132)", 
+                "file": "suse_acroread_ja-7132.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "51714"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20100503", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0503.html", 
+                    "id": "RHSA-2010:0503", 
+                    "title": "RHSA-2010:0503: acroread security update (Critical)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=600692", 
+                    "title": "CVE-2010-1297 acroread, flash-plugin: Arbitrary code execution by opening a specially-crafted PDF file with malicious SWF content (APSA10-01)", 
+                    "id": "600692", 
+                    "issue date": "2010-06-30", 
+                    "associated redhat": "RHSA-2010:0503"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=609203", 
+                    "title": "acroread: multiple code execution flaws (APSB10-15)", 
+                    "id": "609203", 
+                    "issue date": "2010-06-30", 
+                    "associated redhat": "RHSA-2010:0503"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

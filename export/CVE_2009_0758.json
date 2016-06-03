@@ -1,0 +1,324 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-0758", 
+                "published": "2009-03-03T11:30:05.313-05:00", 
+                "id": "CVE-2009-0758", 
+                "modified": "2010-08-12T10:13:50.063-04:00", 
+                "summary": "The originates_from_local_legacy_unicast_socket function in avahi-core/server.c in avahi-daemon 0.6.23 does not account for the network byte order of a port number when processing incoming multicast packets, which allows remote attackers to cause a denial of service (network bandwidth and CPU consumption) via a crafted legacy unicast mDNS query packet that triggers a multicast packet storm."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:avahi:avahi-daemon:0.6.23"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.46943", 
+                "id": 46943
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/33946", 
+                "id": 33946
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/33946", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2009/03/02/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:076", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2010/dsa-2086", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/38420", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2010-02/msg00000.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=517683", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.8", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-0758"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22345", 
+                "title": "RHSA-2010:0528: avahi security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22345"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22789", 
+                "title": "ELSA-2010:0528: avahi security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22789"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28248", 
+                "title": "DEPRECATED: ELSA-2010-0528 -- avahi security update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28248"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:12699", 
+                "title": "DSA-2086-1 avahi -- several", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:12699"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13324", 
+                "title": "USN-992-1 -- avahi vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13324"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2086-1 (avahi)", 
+                "file": "deb_2086_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "67842"
+            }, 
+            {
+                "name": "CentOS Update for avahi CESA-2010:0528 centos5 i386", 
+                "file": "gb_CESA-2010_0528_avahi_centos5_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880614"
+            }, 
+            {
+                "name": "RedHat Update for avahi RHSA-2010:0528-01", 
+                "file": "gb_RHSA-2010_0528-01_avahi.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870289"
+            }, 
+            {
+                "name": "Ubuntu Update for avahi vulnerabilities USN-992-1", 
+                "file": "gb_ubuntu_USN_992_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840511"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 200904-10 (avahi)", 
+                "file": "glsa_200904_10.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "63804"
+            }, 
+            {
+                "name": "Mandrake Security Advisory MDVSA-2009:076 (avahi)", 
+                "file": "mdksa_2009_076.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "63588"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : avahi (CESA-2010:0528)", 
+                "file": "centos_RHSA-2010-0528.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "47739"
+            }, 
+            {
+                "name": "Debian DSA-2086-1 : avahi - several vulnerabilities", 
+                "file": "debian_DSA-2086.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "48248"
+            }, 
+            {
+                "name": "GLSA-200904-10 : Avahi: Denial of Service", 
+                "file": "gentoo_GLSA-200904-10.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "36138"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : avahi (MDVSA-2009:076)", 
+                "file": "mandriva_MDVSA-2009-076.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "37087"
+            }, 
+            {
+                "name": "Oracle Linux 5 : avahi (ELSA-2010-0528)", 
+                "file": "oraclelinux_ELSA-2010-0528.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68061"
+            }, 
+            {
+                "name": "RHEL 5 : avahi (RHSA-2010:0528)", 
+                "file": "redhat-RHSA-2010-0528.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "47874"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : avahi on SL5.x i386/x86_64", 
+                "file": "sl_20100713_avahi_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "60814"
+            }, 
+            {
+                "name": "openSUSE Security Update : avahi (avahi-1832)", 
+                "file": "suse_11_0_avahi-100119.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "44361"
+            }, 
+            {
+                "name": "openSUSE Security Update : avahi (avahi-1832)", 
+                "file": "suse_11_1_avahi-100119.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "44367"
+            }, 
+            {
+                "name": "SuSE 11 Security Update : avahi (SAT Patch Number 1827)", 
+                "file": "suse_11_avahi-100119.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "44378"
+            }, 
+            {
+                "name": "SuSE 10 Security Update : avahi (ZYPP Patch Number 6787)", 
+                "file": "suse_avahi-6787.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "51719"
+            }, 
+            {
+                "name": "SuSE 10 Security Update : avahi (ZYPP Patch Number 6790)", 
+                "file": "suse_avahi-6790.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "49831"
+            }, 
+            {
+                "name": "Ubuntu 8.04 LTS / 9.04 / 9.10 / 10.04 LTS : avahi vulnerabilities (USN-992-1)", 
+                "file": "ubuntu_USN-992-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "49761"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:076", 
+                "id": "MDVSA-2009:076"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2009-0758.html", 
+                "id": "SUSE-SR:2010:002"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20100528", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0528.html", 
+                    "id": "RHSA-2010:0528", 
+                    "title": "RHSA-2010:0528: avahi security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=488314", 
+                    "title": "CVE-2009-0758 avahi: remote DoS via legacy unicast mDNS queries", 
+                    "id": "488314", 
+                    "issue date": "2010-07-13", 
+                    "associated redhat": "RHSA-2010:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=607293", 
+                    "title": "CVE-2010-2244 avahi: assertion failure after receiving a packet with corrupted checksum", 
+                    "id": "607293", 
+                    "issue date": "2010-07-13", 
+                    "associated redhat": "RHSA-2010:0528"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2086", 
+                "id": "DSA-2086"
+            }
+        ], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,144 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-0096", 
+                "published": "2001-02-12T00:00:00.000-05:00", 
+                "id": "CVE-2001-0096", 
+                "modified": "2008-09-05T16:23:15.620-04:00", 
+                "summary": "FrontPage Server Extensions (FPSE) in IIS 4.0 and 5.0 allows remote attackers to cause a denial of service via a malformed form, aka the \"Malformed Web Form Submission\" vulnerability."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:4.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:5.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.16425", 
+                "id": 16425
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/MS00-100.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/static/5823.php", 
+                    "vendor": "XF"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2100937", 
+                "signature": "GPL WEB_SERVER _vti_rpc access"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:937", 
+                "signature": "SERVER-OTHER Microsoft Frontpage _vti_rpc access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:939", 
+                "signature": "SERVER-OTHER Microsoft Frontpage posting"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-0096"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "IIS FrontPage DoS", 
+                "file": "IIS_frontpage_DOS_2.nasl", 
+                "family": "Denial of Service", 
+                "id": "10585"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Microsoft IIS Frontpage Server Extensions (FPSE) Malformed Form DoS", 
+                "file": "IIS_frontpage_DOS_2.nasl", 
+                "family": "Web Servers", 
+                "id": "10585"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS00-100", 
+                "id": "MS00-100", 
+                "title": ""
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

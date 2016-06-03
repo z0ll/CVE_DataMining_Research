@@ -1,0 +1,460 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6204", 
+                "published": "2006-11-30T20:28:00.000-05:00", 
+                "id": "CVE-2006-6204", 
+                "modified": "2011-03-07T21:45:36.347-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in Enthrallweb eHomes allow remote attackers to execute arbitrary SQL commands via the (1) cid parameter to (a) dircat.asp; the (2) sid parameter to (b) dirSub.asp; the (3) TYPE_ID parameter to (c) types.asp; the (4) AD_ID parameter to (d) homeDetail.asp; the (5) cat parameter to (e) result.asp; the (6) compare, (7) clear, and (8) adID parameters to (f) compareHomes.asp; and the (9) aminprice, (10) amaxprice, and (11) abedrooms parameters to (g) result.asp."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:enthrallweb:ehomes"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33542", 
+                "id": 33542
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21193", 
+                "id": 21193
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30419", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4643", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21193", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/452107/100/100/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23016", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://s-a-p.ca/index.php?page=OurAdvisories&id=50", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/1942", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007076", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- dircat.asp cid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007077", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- dircat.asp cid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007078", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- dircat.asp cid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007079", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- dircat.asp cid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007080", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- dircat.asp cid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007081", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- dircat.asp cid UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007082", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- dirSub.asp sid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007083", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- dirSub.asp sid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007084", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- dirSub.asp sid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007085", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- dirSub.asp sid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007086", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- dirSub.asp sid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007087", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- dirSub.asp sid UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007088", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- types.asp TYPE_ID SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007089", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- types.asp TYPE_ID UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007090", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- types.asp TYPE_ID INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007091", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- types.asp TYPE_ID DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007092", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- types.asp TYPE_ID ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007093", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- types.asp TYPE_ID UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007094", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- homeDetail.asp AD_ID SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007095", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- homeDetail.asp AD_ID UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007096", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- homeDetail.asp AD_ID INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007097", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- homeDetail.asp AD_ID DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007098", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- homeDetail.asp AD_ID ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007099", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- homeDetail.asp AD_ID UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007100", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp cat SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007101", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp cat UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007102", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp cat INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007103", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp cat DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007104", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp cat ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007105", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp cat UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007106", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- compareHomes.asp compare SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007107", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- compareHomes.asp compare UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007108", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- compareHomes.asp compare INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007109", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- compareHomes.asp compare DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007110", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- compareHomes.asp compare ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007111", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- compareHomes.asp compare UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007112", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- compareHomes.asp clear SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007113", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- compareHomes.asp clear UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007114", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- compareHomes.asp clear INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007115", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- compareHomes.asp clear DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007116", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- compareHomes.asp clear ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007117", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- compareHomes.asp clear UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007118", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- compareHomes.asp adID SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007119", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- compareHomes.asp adID UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007120", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- compareHomes.asp adID INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007121", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- compareHomes.asp adID DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007122", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- compareHomes.asp adID ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007123", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- compareHomes.asp adID UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007124", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp aminprice SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007125", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp aminprice UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007126", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp aminprice INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007127", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp aminprice DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007128", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp aminprice ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007129", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp aminprice UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007130", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp amaxprice SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007131", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp amaxprice UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007132", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp amaxprice INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007133", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp amaxprice DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007134", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp amaxprice ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007135", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp amaxprice UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007136", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp abedrooms SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007137", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp abedrooms UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007138", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp abedrooms INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007139", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp abedrooms DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007140", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp abedrooms ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007141", 
+                "signature": "ET WEB_SPECIFIC_APPS Enthrallweb eHomes SQL Injection Attempt -- result.asp abedrooms UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6204"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

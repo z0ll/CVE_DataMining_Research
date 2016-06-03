@@ -1,0 +1,217 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-1256", 
+                "published": "2002-12-23T00:00:00.000-05:00", 
+                "id": "CVE-2002-1256", 
+                "modified": "2008-09-10T15:14:10.337-04:00", 
+                "summary": "The SMB signing capability in the Server Message Block (SMB) protocol in Microsoft Windows 2000 and Windows XP allows attackers to disable the digital signing settings in an SMB session to force the data to be sent unsigned, then inject data into the session without detection, e.g. by modifying group policy information sent from a domain controller."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_2000_terminal_services::sp1"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000_terminal_services::sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000:::server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp2:professional"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp2:datacenter_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp1:professional"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp3:professional"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp1:advanced_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp3:datacenter_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp2:advanced_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp3:advanced_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp1:datacenter_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp:::home"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp:::64-bit"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::gold:professional"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000:::professional"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp2:server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000_terminal_services"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000:::advanced_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp1:server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000_terminal_services::sp3"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp3:server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000:::datacenter_server"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.19231", 
+                "id": 19231
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/6367", 
+                "id": 6367
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms02-070.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/10843", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/6367", 
+                    "vendor": "BID"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-1256"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:277", 
+                "title": "SMB Session Digital Signature Sidestep", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:277"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Flaw in SMB Signing Could Enable Group Policy to be Modified (329170)", 
+                "file": "smb_nt_ms02-070.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "11215"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS02-070: Flaw in SMB Signing Could Enable Group Policy to be Modified (329170)", 
+                "file": "smb_nt_ms02-070.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "11215"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Flaw in SMB Signing Could Enable Group Policy to be Modified", 
+                "id": "Flaw in SMB Signing Could Enable Group Policy to be Modified", 
+                "title": "329170"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/329170", 
+                "id": "329170", 
+                "title": "Flaw in SMB Signing Could Enable Group Policy to be Modified"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS02-070", 
+                "id": "MS02-070", 
+                "title": "Flaw in SMB Signing Could Enable Group Policy to be Modified"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

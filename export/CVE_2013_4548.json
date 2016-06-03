@@ -1,0 +1,203 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4548", 
+                "published": "2013-11-08T10:55:13.747-05:00", 
+                "id": "CVE-2013-4548", 
+                "modified": "2014-12-02T22:00:09.150-05:00", 
+                "summary": "The mm_newkeys_from_blob function in monitor_wrap.c in sshd in OpenSSH 6.2 and 6.3, when an AES-GCM cipher is used, does not properly initialize memory for a MAC context data structure, which allows remote authenticated users to bypass intended ForceCommand and login-shell restrictions via packet data that provides a crafted callback address."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:openbsd:openssh:6.2"
+            }, 
+            {
+                "id": "cpe:/a:openbsd:openssh:6.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.11124", 
+                "id": 11124
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2014-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.openssh.com/txt/gcmrekey.adv", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2013/11/08/3", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://marc.info/?l=bugtraq&m=141576985122836&w=2", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2013-11/msg00017.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "single_instance", 
+                    "exploit": "6.8", 
+                    "base": "6.0", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-4548"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19115", 
+                "title": "USN-2014-1 -- openssh vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:19115"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22458", 
+                "title": "AIX OpenSSH Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:22458"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28406", 
+                "title": "HP-UX running HP Secure Shell, Remote Denial of Service (DoS) and other Vulnerabilities", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:28406"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "SuSE Update for openssh openSUSE-SU-2013:1726-1 (openssh)", 
+                "file": "gb_suse_2013_1726_1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "850553"
+            }, 
+            {
+                "name": "Ubuntu Update for openssh USN-2014-1", 
+                "file": "gb_ubuntu_USN_2014_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841624"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "AIX OpenSSH Vulnerability : openssh_advisory3.asc", 
+                "file": "aix_openssh_advisory3.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "73308"
+            }, 
+            {
+                "name": "OpenSSH 6.2 and 6.3 AES-GCM Cipher Memory Corruption", 
+                "file": "openssh_gcm.nasl", 
+                "family": "Misc.", 
+                "id": "70895"
+            }, 
+            {
+                "name": "openSUSE Security Update : openssh (openSUSE-SU-2013:1726-1)", 
+                "file": "openSUSE-2013-875.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75204"
+            }, 
+            {
+                "name": "Slackware 14.1 / current : openssh (SSA:2013-322-02)", 
+                "file": "Slackware_SSA_2013-322-02.nasl", 
+                "family": "Slackware Local Security Checks", 
+                "id": "70952"
+            }, 
+            {
+                "name": "Ubuntu 13.10 : openssh vulnerability (USN-2014-1)", 
+                "file": "ubuntu_USN-2014-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "70798"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [
+            {
+                "url": "http://marc.info/?l=bugtraq&m=141576985122836&w=2", 
+                "id": "SSRT101487"
+            }
+        ], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2013-4548.html", 
+                "id": "openSUSE-SU-2013:1726"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2014-1", 
+                "id": "USN-2014-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,337 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4043", 
+                "published": "2014-10-06T19:55:08.530-04:00", 
+                "id": "CVE-2014-4043", 
+                "modified": "2016-04-06T08:13:11.890-04:00", 
+                "summary": "The posix_spawn_file_actions_addopen function in glibc before 2.20 does not copy its path argument in accordance with the POSIX specification, which allows context-dependent attackers to trigger use-after-free vulnerabilities."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:novell:opensuse:13.1"
+            }, 
+            {
+                "id": "cpe:/a:gnu:glibc:2.19"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.13587", 
+                "id": 13587
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/68006", 
+                "id": 68006
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://sourceware.org/git/gitweb.cgi?p=glibc.git;h=89e435f3559c53084498e9baad22172b64429362", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://sourceware.org/git/gitweb.cgi?p=glibc.git;a=blobdiff;f=posix/spawn_faction_addopen.c;h=40800b8e6e81341501c0fb8a91009529e2048dec;hp=47f62425b696a4fdd511b2a057746322eb6518db;hb=89e435f3559c53084498e9baad22172b64429362;hpb=c3a2ebe1f7541cc35937621e08c28ff88afd0845", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://sourceware.org/git/gitweb.cgi?p=glibc.git;a=blobdiff;f=ChangeLog;h=3020b9ac232315df362521aeaf85f21cb9926db8;hp=d86e73963dd9fb5e21b1a28326630337226812aa;hb=89e435f3559c53084498e9baad22172b64429362;hpb=c3a2ebe1f7541cc35937621e08c28ff88afd0845", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://sourceware.org/bugzilla/show_bug.cgi?id=17048", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1109263", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/93784", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/68006", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2014:152", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-08/msg00012.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-4043"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26627", 
+                "title": "SUSE-SU-2014:1122-1 -- Security update for glibc", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26627"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26817", 
+                "title": "SUSE-SU-2014:1128-1 -- Security update for glibc", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26817"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:25541", 
+                "title": "SUSE-SU-2014:0920-1 -- Security update for glibc", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:25541"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26211", 
+                "title": "USN-2306-1 -- eglibc vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26211"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:37", 
+                "title": "DSA-3169-1 -- eglibc -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:37"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26728", 
+                "title": "USN-2306-3 -- eglibc regression", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26728"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26402", 
+                "title": "USN-2306-2 -- eglibc regression", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26402"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3169-1 (eglibc - security update)", 
+                "file": "deb_3169.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703169"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DLA-165-1 : eglibc security update", 
+                "file": "debian_DLA-165.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "82149"
+            }, 
+            {
+                "name": "Debian DSA-3169-1 : eglibc - security update", 
+                "file": "debian_DSA-3169.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "81448"
+            }, 
+            {
+                "name": "GLSA-201503-04 : GNU C Library: Multiple vulnerabilities (GHOST)", 
+                "file": "gentoo_GLSA-201503-04.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "81689"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : glibc (MDVSA-2014:152)", 
+                "file": "mandriva_MDVSA-2014-152.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "77040"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : glibc (MDVSA-2015:168)", 
+                "file": "mandriva_MDVSA-2015-168.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "82421"
+            }, 
+            {
+                "name": "openSUSE Security Update : glibc (openSUSE-2015-544)", 
+                "file": "openSUSE-2015-544.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85433"
+            }, 
+            {
+                "name": "Slackware 14.1 / current : glibc (SSA:2014-296-01)", 
+                "file": "Slackware_SSA_2014-296-01.nasl", 
+                "family": "Slackware Local Security Checks", 
+                "id": "78656"
+            }, 
+            {
+                "name": "SuSE 11.3 Security Update : glibc (SAT Patch Number 9477)", 
+                "file": "suse_11_glibc-140701.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "76604"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : glibc (SUSE-SU-2014:1122-1)", 
+                "file": "suse_SU-2014-1122-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83637"
+            }, 
+            {
+                "name": "SUSE SLES10 Security Update : glibc (SUSE-SU-2014:1128-1)", 
+                "file": "suse_SU-2014-1128-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83638"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : glibc (SUSE-SU-2015:0167-1)", 
+                "file": "suse_SU-2015-0167-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83674"
+            }, 
+            {
+                "name": "SUSE SLES10 Security Update : glibc (SUSE-SU-2015:0170-1)", 
+                "file": "suse_SU-2015-0170-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83675"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS / 12.04 LTS / 14.04 : eglibc vulnerabilities (USN-2306-1)", 
+                "file": "ubuntu_USN-2306-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "76999"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS : eglibc regression (USN-2306-2)", 
+                "file": "ubuntu_USN-2306-2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "77019"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS : eglibc regression (USN-2306-3)", 
+                "file": "ubuntu_USN-2306-3.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "77568"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2014:152", 
+                "id": "MDVSA-2014:152"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-4043.html", 
+                "id": "openSUSE-SU-2015:1387"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

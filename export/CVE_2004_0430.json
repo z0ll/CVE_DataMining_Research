@@ -1,0 +1,162 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0430", 
+                "published": "2004-07-07T00:00:00.000-04:00", 
+                "id": "CVE-2004-0430", 
+                "modified": "2008-09-05T16:38:25.537-04:00", 
+                "summary": "Stack-based buffer overflow in AppleFileServer for Mac OS X 10.3.3 and earlier allows remote attackers to execute arbitrary code via a LoginExt packet for a Cleartext Password User Authentication Method (UAM) request with a PathName argument that includes an AFPName type string that is longer than the associated length field."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:apple:mac_os_x_server:10.3.3"
+            }, 
+            {
+                "id": "cpe:/o:apple:mac_os_x:10.3.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.21915", 
+                "id": 21915
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/5762", 
+                "id": 5762
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/648406", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/16049", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.atstake.com/research/advisories/2004/a050304-1.txt", 
+                    "vendor": "ATSTAKE"
+                }, 
+                {
+                    "url": "http://www.securiteam.com/securitynews/5QP0115CUO.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1010039", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/11539", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lists.apple.com/mhonarc/security-announce/msg00049.html", 
+                    "vendor": "APPLE"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/648406", 
+                "id": "VU#648406"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "4.9", 
+                    "base": "5.1", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2545", 
+                "signature": "SERVER-OTHER AFP FPLoginExt username buffer overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "loginext.rb", 
+                "file": "metasploit-framework/modules/exploits/osx/afp/loginext.rb", 
+                "title": "AppleFileServer LoginExt PathName Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0430"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Mac OS X < 10.3.4 Multiple Vulnerabilities", 
+                "file": "macosx_multiple_vulns.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "12257"
+            }, 
+            {
+                "name": "Mac OS X Multiple Vulnerabilities (Security Update 2004-05-03)", 
+                "file": "macosx_SecUpd20040503.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "12518"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

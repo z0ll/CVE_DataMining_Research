@@ -1,0 +1,152 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5691", 
+                "published": "2013-09-23T06:18:59.237-04:00", 
+                "id": "CVE-2013-5691", 
+                "modified": "2013-10-23T23:48:24.330-04:00", 
+                "summary": "The (1) IPv6 and (2) ATM ioctl request handlers in the kernel in FreeBSD 8.3 through 9.2-STABLE do not validate SIOCSIFADDR, SIOCSIFBRDADDR, SIOCSIFDSTADDR, and SIOCSIFNETMASK requests, which allows local users to perform link-layer actions, cause a denial of service (panic), or possibly gain privileges via a crafted application."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:freebsd:freebsd:8.3"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:9.0"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:9.1"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:9.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.10257", 
+                "id": 10257
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://svnweb.freebsd.org/base?view=revision&revision=255442", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.freebsd.org/security/advisories/FreeBSD-SA-13:12.ifioctl.asc", 
+                    "vendor": "FREEBSD"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2013/dsa-2769", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/54861", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "6.9", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-5691"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2769-1 (kfreebsd-9 - privilege escalation/denial of service)", 
+                "file": "deb_2769.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "892769"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-2769-1 : kfreebsd-9 - privilege escalation/denial of service", 
+                "file": "debian_DSA-2769.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "70353"
+            }, 
+            {
+                "name": "FreeBSD : FreeBSD -- Insufficient credential checks in network ioctl(2) (4d87d357-202c-11e3-be06-000c29ee3065)", 
+                "file": "freebsd_pkg_4d87d357202c11e3be06000c29ee3065.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "70261"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2769", 
+                "id": "DSA-2769"
+            }
+        ], 
+        "Vmware": []
+    }
+}

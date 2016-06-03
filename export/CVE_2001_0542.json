@@ -1,0 +1,174 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-0542", 
+                "published": "2001-12-20T00:00:00.000-05:00", 
+                "id": "CVE-2001-0542", 
+                "modified": "2008-09-10T15:08:20.227-04:00", 
+                "summary": "Buffer overflows in Microsoft SQL Server 7.0 and 2000 allow attackers with access to SQL Server to execute arbitrary code through the functions (1) raiserror, (2) formatmessage, or (3) xp_sprintf.  NOTE: the C runtime format string vulnerability reported in MS01-060 is identified by CVE-2001-0879."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:sql_server:2000"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:sql_server:7.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.17759", 
+                "id": 17759
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/3733", 
+                "id": 3733
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/700575", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/static/7724.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/3733", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/MS01-060.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.atstake.com/research/advisories/2001/a122001-1.txt", 
+                    "vendor": "ATSTAKE"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=100891252317406&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/700575", 
+                "id": "VU#700575"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2100704", 
+                "signature": "GPL DELETED xp_sprintf possible buffer overflow"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-user", 
+                "id": "sid:704", 
+                "signature": "SERVER-MSSQL xp_sprintf possible buffer overflow"
+            }, 
+            {
+                "category": "attempted-user", 
+                "id": "sid:1386", 
+                "signature": "SERVER-MSSQL raiserror possible buffer overflow"
+            }, 
+            {
+                "category": "attempted-user", 
+                "id": "sid:1387", 
+                "signature": "SQL raiserror possible buffer overflow"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-0542"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:83", 
+                "title": "Microsoft SQL Server 3-Function Buffer Overflow", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:83"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/", 
+                "id": "", 
+                "title": "SQL Server Text Formatting Functions Contain Unchecked Buffers"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS01-060", 
+                "id": "MS01-060", 
+                "title": "SQL Server Text Formatting Functions Contain Unchecked Buffers"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,219 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1176", 
+                "published": "2011-03-29T14:55:02.003-04:00", 
+                "id": "CVE-2011-1176", 
+                "modified": "2011-09-06T23:15:33.643-04:00", 
+                "summary": "The configuration merger in itk.c in the Steinar H. Gunderson mpm-itk Multi-Processing Module 2.2.11-01 and 2.2.11-02 for the Apache HTTP Server does not properly handle certain configuration sections that specify NiceValue but not AssignUserID, which might allow remote attackers to gain privileges by leveraging the root uid and root gid of an mpm-itk process."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/16.html", 
+                "id": "CWE-16", 
+                "title": "Configuration"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:steinar_h_gunderson:mpm-itk:2.2.11-01"
+            }, 
+            {
+                "id": "cpe:/a:steinar_h_gunderson:mpm-itk:2.2.11-02"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.56961", 
+                "id": 56961
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/46953", 
+                "id": 46953
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://openwall.com/lists/oss-security/2011/03/21/13", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2011/03/20/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://lists.err.no/pipermail/mpm-itk/2011-March/000393.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=618857", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/66248", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2011/0824", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2011/0749", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2011/0748", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/46953", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2011:057", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2011/dsa-2202", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://lists.err.no/pipermail/mpm-itk/2011-March/000394.html", 
+                    "vendor": "MLIST"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "4.3", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-1176"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20246", 
+                "title": "DSA-2202-1 apache2 - failure to drop root privileges", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20246"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:15211", 
+                "title": "USN-1259-1 -- Apache vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:15211"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2202-1 (apache2)", 
+                "file": "deb_2202_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "69338"
+            }, 
+            {
+                "name": "Mandriva Update for apache MDVSA-2011:057 (apache)", 
+                "file": "gb_mandriva_MDVSA_2011_057.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "831357"
+            }, 
+            {
+                "name": "Ubuntu Update for apache2 USN-1259-1", 
+                "file": "gb_ubuntu_USN_1259_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840798"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-2202-1 : apache2 - failure to drop root privileges", 
+                "file": "debian_DSA-2202.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "52949"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : apache (MDVSA-2011:057)", 
+                "file": "mandriva_MDVSA-2011-057.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "53244"
+            }, 
+            {
+                "name": "Ubuntu 8.04 LTS / 10.04 LTS / 10.10 / 11.04 / 11.10 : apache2, apache2-mpm-itk vulnerabilities (USN-1259-1)", 
+                "file": "ubuntu_USN-1259-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "56778"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2011:057", 
+                "id": "MDVSA-2011:057"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2202", 
+                "id": "DSA-2202"
+            }
+        ], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,310 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0729", 
+                "published": "2010-03-16T15:30:00.430-04:00", 
+                "id": "CVE-2010-0729", 
+                "modified": "2010-08-21T01:39:59.510-04:00", 
+                "summary": "A certain Red Hat patch for the Linux kernel in Red Hat Enterprise Linux (RHEL) 4 on the ia64 platform allows local users to use ptrace on an arbitrary process, and consequently gain privileges, via vectors related to a missing ptrace_check_attach call."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.52212", 
+                "id": 52212
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/38702", 
+                "id": 38702
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=572007", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/38702", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2010-0394.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2010/03/12/2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://support.avaya.com/css/P8/documents/100090459", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "6.9", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-0729"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:8687", 
+                "title": "A certain Red Hat patch for the Linux kernel in Red Hat Enterprise Linux (RHEL) 4 on the ia64 platform allows local users to use ptrace on an arbitrary process, and consequently gain privileges, via vectors related to a missing ptrace_check_attach call.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:8687"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "RedHat Update for kernel RHSA-2010:0394-01", 
+                "file": "gb_RHSA-2010_0394-01_kernel.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870263"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 4 : kernel (CESA-2010:0394)", 
+                "file": "centos_RHSA-2010-0394.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "46256"
+            }, 
+            {
+                "name": "Oracle Linux 4 : kernel (ELSA-2010-0394)", 
+                "file": "oraclelinux_ELSA-2010-0394.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68036"
+            }, 
+            {
+                "name": "RHEL 4 : kernel (RHSA-2010:0394)", 
+                "file": "redhat-RHSA-2010-0394.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "46306"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL4.x i386/x86_64", 
+                "file": "sl_20100505_kernel_on_SL4_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "60787"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20100394", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0394.html", 
+                    "id": "RHSA-2010:0394", 
+                    "title": "RHSA-2010:0394: kernel security, bug fix, and enhancement update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=563223", 
+                    "title": "[RFE ] Connlimit kernel module support [rhel-4.9] [rhel-4.8.z]", 
+                    "id": "563223", 
+                    "issue date": "2010-05-05", 
+                    "associated redhat": "RHSA-2010:0394"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=566624", 
+                    "title": "CVE-2010-1083 kernel: information leak via userspace USB interface", 
+                    "id": "566624", 
+                    "issue date": "2010-05-05", 
+                    "associated redhat": "RHSA-2010:0394"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=567168", 
+                    "title": "CVE-2010-1085 kernel: ALSA: hda-intel: Avoid divide by zero crash", 
+                    "id": "567168", 
+                    "issue date": "2010-05-05", 
+                    "associated redhat": "RHSA-2010:0394"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=567205", 
+                    "title": "RHEL4.8: Broadcom 5761 NIC does not work [rhel-4.8.z]", 
+                    "id": "567205", 
+                    "issue date": "2010-05-05", 
+                    "associated redhat": "RHSA-2010:0394"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=569237", 
+                    "title": "CVE-2010-1086 kernel: dvb-core: DoS bug in ULE decapsulation code", 
+                    "id": "569237", 
+                    "issue date": "2010-05-05", 
+                    "associated redhat": "RHSA-2010:0394"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=572007", 
+                    "title": "CVE-2010-0729 kernel: ia64: ptrace: peek_or_poke requests miss ptrace_check_attach()", 
+                    "id": "572007", 
+                    "issue date": "2010-05-05", 
+                    "associated redhat": "RHSA-2010:0394"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=574392", 
+                    "title": "[RHEL4 Xen]: i386 Guest crash when host has >= 64G RAM [rhel-4.8.z]", 
+                    "id": "574392", 
+                    "issue date": "2010-05-05", 
+                    "associated redhat": "RHSA-2010:0394"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=577234", 
+                    "title": "qla2xxx flash programming changes in 4.8 broke diskdump [rhel-4.8.z]", 
+                    "id": "577234", 
+                    "issue date": "2010-05-05", 
+                    "associated redhat": "RHSA-2010:0394"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=577711", 
+                    "title": "CVE-2010-1188 kernel: ipv6: skb is unexpectedly freed", 
+                    "id": "577711", 
+                    "issue date": "2010-05-05", 
+                    "associated redhat": "RHSA-2010:0394"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=580089", 
+                    "title": "virtio_net 'eth0' interface in a RHEL 4.8 KVM virtual machine becomes unresponsive due to stopped state [rhel-4.8.z]", 
+                    "id": "580089", 
+                    "issue date": "2010-05-05", 
+                    "associated redhat": "RHSA-2010:0394"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=580842", 
+                    "title": "[RHEL 4] bonding option arp_validate=3 does not seem to function properly with vlan tagging [rhel-4.8.z]", 
+                    "id": "580842", 
+                    "issue date": "2010-05-05", 
+                    "associated redhat": "RHSA-2010:0394"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=582241", 
+                    "title": "[RHEL 4.7] oprofile doesn't work with Nehalem (kernel support) [rhel-4.8.z]", 
+                    "id": "582241", 
+                    "issue date": "2010-05-05", 
+                    "associated redhat": "RHSA-2010:0394"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=582908", 
+                    "title": "RHEL4.8-i686 panic in vfs_getattr64() Bad EIP value. [rhel-4.8.z]", 
+                    "id": "582908", 
+                    "issue date": "2010-05-05", 
+                    "associated redhat": "RHSA-2010:0394"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=582911", 
+                    "title": "i386 rhel4.8 kvm guests crashes in virtio during installation [rhel-4.8.z]", 
+                    "id": "582911", 
+                    "issue date": "2010-05-05", 
+                    "associated redhat": "RHSA-2010:0394"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=582913", 
+                    "title": "[Intel 4.9] Support arch_perfmon for oprofile (kernel support) [rhel-4.8.z]", 
+                    "id": "582913", 
+                    "issue date": "2010-05-05", 
+                    "associated redhat": "RHSA-2010:0394"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

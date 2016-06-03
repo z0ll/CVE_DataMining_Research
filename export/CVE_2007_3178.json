@@ -1,0 +1,255 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3178", 
+                "published": "2007-06-11T18:30:00.000-04:00", 
+                "id": "CVE-2007-3178", 
+                "modified": "2008-11-15T01:51:41.250-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in Zindizayn Okul Web Sistemi 1.0 allow remote attackers to execute arbitrary SQL commands via the (1) id or (2) pass parameter to (a) mezungiris.asp or (b) ogretmenkontrol.asp."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:zindizayn_okul_web_sistemi:zindizayn_okul_web_sistemi:1.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.37241", 
+                "id": 37241
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/24174", 
+                "id": 24174
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/38348", 
+                "id": 38348
+            }, 
+            {
+                "url": "http://www.osvdb.org/38349", 
+                "id": 38349
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/469710/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://osvdb.org/38349", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/38348", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34559", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/24174", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2798", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005192", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- mezungiris.asp id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005193", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- mezungiris.asp id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005194", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- mezungiris.asp id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005195", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- mezungiris.asp id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005196", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- mezungiris.asp id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005197", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- mezungiris.asp id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005198", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- mezungiris.asp pass SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005199", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- mezungiris.asp pass UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005200", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- mezungiris.asp pass INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005201", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- mezungiris.asp pass DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005202", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- mezungiris.asp pass ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005203", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- mezungiris.asp pass UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005204", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- ogretmenkontrol.asp pass SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005205", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- ogretmenkontrol.asp pass UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005206", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- ogretmenkontrol.asp pass INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005207", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- ogretmenkontrol.asp pass DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005208", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- ogretmenkontrol.asp pass ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005209", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- ogretmenkontrol.asp pass UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005210", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- ogretmenkontrol.asp id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005211", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- ogretmenkontrol.asp id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005212", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- ogretmenkontrol.asp id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005213", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- ogretmenkontrol.asp id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005214", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- ogretmenkontrol.asp id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005215", 
+                "signature": "ET WEB_SPECIFIC_APPS Zindizayn Okul Web Sistemi SQL Injection Attempt -- ogretmenkontrol.asp id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-3178"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

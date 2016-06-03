@@ -1,0 +1,207 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0082", 
+                "published": "2004-03-03T00:00:00.000-05:00", 
+                "id": "CVE-2004-0082", 
+                "modified": "2008-09-05T16:37:29.147-04:00", 
+                "summary": "The mksmbpasswd shell script (mksmbpasswd.sh) in Samba 3.0.0 and 3.0.1, when creating an account but marking it as disabled, may overwrite the user password with an uninitialized buffer, which could enable the account with a more easily guessable password."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:samba:samba:3.0"
+            }, 
+            {
+                "id": "cpe:/a:samba:samba:3.0.1"
+            }, 
+            {
+                "id": "cpe:/a:samba:samba:3.0.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.512", 
+                "id": 512
+            }, 
+            {
+                "url": "http://www.scip.ch/?vuldb.511", 
+                "id": 511
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/9637", 
+                "id": 9637
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/3919", 
+                "id": 3919
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/9637", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2004-064.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/15132", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vuxml.org/freebsd/3388eff9-5d6e-11d8-80e3-0020ed76ef5a.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://us1.samba.org/samba/ftp/WHATSNEW-3.0.2a.txt", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/3919", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/o-078.shtml", 
+                    "vendor": "CIAC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0082"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:10675", 
+                "title": "The mksmbpasswd shell script (mksmbpasswd.sh) in Samba 3.0.0 and 3.0.1, when creating an account but marking it as disabled, may overwrite the user password with an uninitialized buffer, which could enable the account with a more easily guessable password.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:10675"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:827", 
+                "title": "Samba mksmboasswd Disabled Account Creation Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:827"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: samba", 
+                "file": "freebsd_samba5.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52527"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "FreeBSD : Samba 3.0.x password initialization bug (3388eff9-5d6e-11d8-80e3-0020ed76ef5a)", 
+                "file": "freebsd_pkg_3388eff95d6e11d880e30020ed76ef5a.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "37695"
+            }, 
+            {
+                "name": "FreeBSD : Samba 3.0.x password initialization bug (172)", 
+                "file": "freebsd_samba_301_2.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "12611"
+            }, 
+            {
+                "name": "RHEL 3 : samba (RHSA-2004:064)", 
+                "file": "redhat-RHSA-2004-064.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "12467"
+            }, 
+            {
+                "name": "Samba < 3.0.2 mksmbpasswd.sh Uninitialized Passwords", 
+                "file": "samba_mksmbpasswd.nasl", 
+                "family": "Misc.", 
+                "id": "17722"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20040064", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2004-064.html", 
+                    "id": "RHSA-2004:064", 
+                    "title": "RHSA-2004:064: samba security update (Low)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=114995", 
+                    "title": "CAN-2004-0082 mksmbpasswd vulnerability", 
+                    "id": "114995", 
+                    "issue date": "2004-05-21", 
+                    "associated redhat": "RHSA-2004:064"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

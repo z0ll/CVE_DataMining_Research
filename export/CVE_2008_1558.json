@@ -1,0 +1,213 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1558", 
+                "published": "2008-03-31T13:44:00.000-04:00", 
+                "id": "CVE-2008-1558", 
+                "modified": "2011-03-07T22:07:16.393-05:00", 
+                "summary": "Uncontrolled array index in the sdpplin_parse function in stream/realrtsp/sdpplin.c in MPlayer 1.0 rc2 allows remote attackers to overwrite memory and execute arbitrary code via a large streamid SDP parameter.  NOTE: this issue has been referred to as an integer overflow."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:mplayer:mplayer:1.0_rc2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.41761", 
+                "id": 41761
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/28851", 
+                "id": 28851
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2008/0997/references", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/5307", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2008:196", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://security.gentoo.org/glsa/glsa-200805-22.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/30412", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/29515", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/41490", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/28851", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2008/dsa-1552", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/29921", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2008-1558"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19422", 
+                "title": "DSA-1552-1 mplayer - arbitrary code execution", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:19422"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:7852", 
+                "title": "DSA-1552 mplayer -- missing input sanitising", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:7852"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 1552-1 (mplayer)", 
+                "file": "deb_1552_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "60799"
+            }, 
+            {
+                "name": "Mandriva Update for mysql MDVA-2012:049 (mysql)", 
+                "file": "gb_mandriva_MDVSA_2008_196.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "830637"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 200805-22 (mplayer)", 
+                "file": "glsa_200805_22.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "61113"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-1552-1 : mplayer - missing input sanitising", 
+                "file": "debian_DSA-1552.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "32007"
+            }, 
+            {
+                "name": "GLSA-200805-22 : MPlayer: User-assisted execution of arbitrary code", 
+                "file": "gentoo_GLSA-200805-22.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "32490"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : mplayer (MDVSA-2008:196)", 
+                "file": "mandriva_MDVSA-2008-196.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "36349"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2008:196", 
+                "id": "MDVSA-2008:196"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200805-22", 
+                "id": "GLSA-200805-22"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-1552", 
+                "id": "DSA-1552"
+            }
+        ], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,190 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0967", 
+                "published": "2000-12-19T00:00:00.000-05:00", 
+                "id": "CVE-2000-0967", 
+                "modified": "2008-09-05T16:22:18.950-04:00", 
+                "summary": "PHP 3 and 4 do not properly cleanse user-injected format strings, which allows remote attackers to execute arbitrary commands by triggering error messages that are improperly written to the error logs."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:php:php:3.0"
+            }, 
+            {
+                "id": "cpe:/a:php:php:4.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.16178", 
+                "id": 16178
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/1786", 
+                "id": 1786
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/434", 
+                "id": 434
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/static/5359.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/1786", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2000-095.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2000-088.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.linux-mandrake.com/en/security/MDKSA-2000-062.php3?dis=7.1", 
+                    "vendor": "MANDRAKE"
+                }, 
+                {
+                    "url": "http://www.calderasystems.com/support/security/advisories/CSSA-2000-037.0.txt", 
+                    "vendor": "CALDERA"
+                }, 
+                {
+                    "url": "http://www.atstake.com/research/advisories/2000/a101200-1.txt", 
+                    "vendor": "ATSTAKE"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2000-10/0204.html", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-00:75.php.asc", 
+                    "vendor": "FREEBSD"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1086", 
+                "signature": "SERVER-WEBAPP strings overflow"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2000-0967"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Mandrake Linux Security Advisory : mod_php3 (MDKSA-2000:062)", 
+                "file": "mandrake_MDKSA-2000-062.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "61849"
+            }, 
+            {
+                "name": "PHP Error Log Format String Command Injection", 
+                "file": "php_log.nasl", 
+                "family": "CGI abuses", 
+                "id": "10535"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2000-088.html", 
+                    "id": "RHSA-2000:088", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2000-095.html", 
+                    "id": "RHSA-2000:095", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/20001014a", 
+                "id": "20001014a"
+            }, 
+            {
+                "url": "https://security-tracker.debian.org/tracker/20001014b", 
+                "id": "20001014b"
+            }
+        ], 
+        "Vmware": []
+    }
+}

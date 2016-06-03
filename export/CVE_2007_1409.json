@@ -1,0 +1,189 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1409", 
+                "published": "2007-03-10T17:19:00.000-05:00", 
+                "id": "CVE-2007-1409", 
+                "modified": "2008-09-05T17:20:25.360-04:00", 
+                "summary": "WordPress allows remote attackers to obtain sensitive information via a direct request for wp-admin/admin-functions.php, which reveals the path in an error message."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:wordpress:wordpress:2.1.1"
+            }, 
+            {
+                "id": "cpe:/a:wordpress:wordpress:2.1"
+            }, 
+            {
+                "id": "cpe:/a:wordpress:wordpress:2.0.6"
+            }, 
+            {
+                "id": "cpe:/a:wordpress:wordpress:2.0.7"
+            }, 
+            {
+                "id": "cpe:/a:wordpress:wordpress:2.0"
+            }, 
+            {
+                "id": "cpe:/a:wordpress:wordpress:2.0.1"
+            }, 
+            {
+                "id": "cpe:/a:wordpress:wordpress:2.0.5"
+            }, 
+            {
+                "id": "cpe:/a:wordpress:wordpress:2.0.2"
+            }, 
+            {
+                "id": "cpe:/a:wordpress:wordpress:2.0.3"
+            }, 
+            {
+                "id": "cpe:/a:wordpress:wordpress:2.0.4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35562", 
+                "id": 35562
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/462249/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/462230/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.gentoo.org/security/en/glsa/glsa-200703-23.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/24566", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004403", 
+                "signature": "ET WEB_SPECIFIC_APPS WordPress SQL Injection Attempt -- admin-functions.php SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004404", 
+                "signature": "ET WEB_SPECIFIC_APPS WordPress SQL Injection Attempt -- admin-functions.php UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004405", 
+                "signature": "ET WEB_SPECIFIC_APPS WordPress SQL Injection Attempt -- admin-functions.php INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004406", 
+                "signature": "ET WEB_SPECIFIC_APPS WordPress SQL Injection Attempt -- admin-functions.php DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004407", 
+                "signature": "ET WEB_SPECIFIC_APPS WordPress SQL Injection Attempt -- admin-functions.php ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004408", 
+                "signature": "ET WEB_SPECIFIC_APPS WordPress SQL Injection Attempt -- admin-functions.php UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1409"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Gentoo Security Advisory GLSA 200703-23 (wordpress)", 
+                "file": "glsa_200703_23.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "58161"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "GLSA-200703-23 : WordPress: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-200703-23.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "24889"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200703-23", 
+                "id": "GLSA-200703-23"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

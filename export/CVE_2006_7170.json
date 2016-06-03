@@ -1,0 +1,294 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-7170", 
+                "published": "2007-03-20T06:19:00.000-04:00", 
+                "id": "CVE-2006-7170", 
+                "modified": "2008-09-05T17:16:36.123-04:00", 
+                "summary": "Multiple SQL injection vulnerabilities in Koan Software Mega Mall allow remote attackers to execute arbitrary SQL commands via the (1) t, (2) productId, (3) sk, (4) x, or (5) so parameter to (a) product_review.php; or the (6) orderNo parameter to (b) order-track.php."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:koan_software:mega_mall"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35676", 
+                "id": 35676
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21072", 
+                "id": 21072
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30214", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21072", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=116343783720459&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004271", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php t SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004272", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php t UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004273", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php t INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004274", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php t DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004275", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php t ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004276", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php t UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004277", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php productId SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004278", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php productId UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004279", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php productId INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004280", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php productId DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004281", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php productId ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004282", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php productId UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004283", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php sk SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004284", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php sk UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004285", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php sk INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004286", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php sk DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004287", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php sk ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004288", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php sk UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004289", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php x SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004290", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php x UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004291", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php x INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004292", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php x DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004293", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php x ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004294", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php x UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004295", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php so SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004296", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php so UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004297", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php so INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004298", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php so DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004299", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php so ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004300", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- product_review.php so UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004301", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- order-track.php orderNo SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004302", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- order-track.php orderNo UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004303", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- order-track.php orderNo INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004304", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- order-track.php orderNo DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004305", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- order-track.php orderNo ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004306", 
+                "signature": "ET WEB_SPECIFIC_APPS Koan Software Mega Mall SQL Injection Attempt -- order-track.php orderNo UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-7170"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

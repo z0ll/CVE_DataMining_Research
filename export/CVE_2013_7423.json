@@ -1,0 +1,423 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-7423", 
+                "published": "2015-02-24T10:59:00.050-05:00", 
+                "id": "CVE-2013-7423", 
+                "modified": "2015-06-03T21:59:13.990-04:00", 
+                "summary": "The send_dg function in resolv/res_send.c in GNU C Library (aka glibc or libc6) before 2.20 does not properly reuse file descriptors, which allows remote attackers to send DNS queries to unintended locations via a large number of request that trigger a call to the getaddrinfo function."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/17.html", 
+                "id": "CWE-17", 
+                "title": "Code"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:novell:opensuse:13.1"
+            }, 
+            {
+                "id": "cpe:/a:gnu:glibc:2.20"
+            }, 
+            {
+                "id": "cpe:/o:novell:opensuse:13.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.69030", 
+                "id": 69030
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/72844", 
+                "id": 72844
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://sourceware.org/bugzilla/show_bug.cgi?id=15946", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://github.com/golang/go/issues/6336", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2519-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/72844", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/01/28/20", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2015-02/msg00089.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-7423"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : glibc (ALAS-2015-513)", 
+                "file": "ala_ALAS-2015-513.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "83056"
+            }, 
+            {
+                "name": "Amazon Linux AMI : glibc (ALAS-2015-617)", 
+                "file": "ala_ALAS-2015-617.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "87343"
+            }, 
+            {
+                "name": "CentOS 6 : glibc (CESA-2015:0863)", 
+                "file": "centos_RHSA-2015-0863.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "82928"
+            }, 
+            {
+                "name": "CentOS 7 : glibc (CESA-2015:2199)", 
+                "file": "centos_RHSA-2015-2199.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "87142"
+            }, 
+            {
+                "name": "Debian DLA-165-1 : eglibc security update", 
+                "file": "debian_DLA-165.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "82149"
+            }, 
+            {
+                "name": "GLSA-201602-02 : GNU C Library: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201602-02.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "88822"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : glibc (MDVSA-2015:218)", 
+                "file": "mandriva_MDVSA-2015-218.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "83170"
+            }, 
+            {
+                "name": "openSUSE Security Update : glibc (openSUSE-2015-173)", 
+                "file": "openSUSE-2015-173.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "81560"
+            }, 
+            {
+                "name": "Oracle Linux 6 : glibc (ELSA-2015-0863)", 
+                "file": "oraclelinux_ELSA-2015-0863.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "82980"
+            }, 
+            {
+                "name": "Oracle Linux 7 : glibc (ELSA-2015-2199)", 
+                "file": "oraclelinux_ELSA-2015-2199.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "87092"
+            }, 
+            {
+                "name": "OracleVM 3.3 : glibc (OVMSA-2015-0055)", 
+                "file": "oraclevm_OVMSA-2015-0055.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "82983"
+            }, 
+            {
+                "name": "OracleVM 3.3 : glibc (OVMSA-2016-0013) (GHOST)", 
+                "file": "oraclevm_OVMSA-2016-0013.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "88783"
+            }, 
+            {
+                "name": "RHEL 6 : glibc (RHSA-2015:0863)", 
+                "file": "redhat-RHSA-2015-0863.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "82984"
+            }, 
+            {
+                "name": "RHEL 7 : glibc (RHSA-2015:2199)", 
+                "file": "redhat-RHSA-2015-2199.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "86937"
+            }, 
+            {
+                "name": "RHEL 7 : glibc (RHSA-2015:2589)", 
+                "file": "redhat-RHSA-2015-2589.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "88573"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : glibc on SL6.x i386/x86_64", 
+                "file": "sl_20150421_glibc_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "82987"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : glibc on SL7.x x86_64", 
+                "file": "sl_20151119_glibc_on_SL7_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "87556"
+            }, 
+            {
+                "name": "SuSE 11.3 Security Update : glibc (SAT Patch Number 10357)", 
+                "file": "suse_11_glibc-150226.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "81667"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : glibc (SUSE-SU-2015:0526-1)", 
+                "file": "suse_SU-2015-0526-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83701"
+            }, 
+            {
+                "name": "SUSE SLES10 Security Update : glibc (SUSE-SU-2015:0550-1)", 
+                "file": "suse_SU-2015-0550-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83704"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : glibc (SUSE-SU-2015:0551-1)", 
+                "file": "suse_SU-2015-0551-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83705"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS / 12.04 LTS / 14.04 / 14.10 : eglibc, glibc vulnerabilities (USN-2519-1)", 
+                "file": "ubuntu_USN-2519-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "81572"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2013-7423.html", 
+                "id": "openSUSE-SU-2015:0351"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20150863", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-0863.html", 
+                    "id": "RHSA-2015:0863", 
+                    "title": "RHSA-2015:0863: glibc security and bug fix update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1187109", 
+                    "title": "CVE-2013-7423 glibc: getaddrinfo() writes DNS queries to random file descriptors under high load", 
+                    "id": "1187109", 
+                    "issue date": "2015-04-21", 
+                    "associated redhat": "RHSA-2015:0863"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1199525", 
+                    "title": "CVE-2015-1781 glibc: buffer overflow in gethostbyname_r() and related functions with misaligned buffer", 
+                    "id": "1199525", 
+                    "issue date": "2015-04-21", 
+                    "associated redhat": "RHSA-2015:0863"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20152199", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-2199.html", 
+                    "id": "RHSA-2015:2199", 
+                    "title": "RHSA-2015:2199: glibc security, bug fix, and enhancement update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1064066", 
+                    "title": "Test suite failure: test-ldouble", 
+                    "id": "1064066", 
+                    "issue date": "2015-04-29", 
+                    "associated redhat": "RHSA-2015:2199"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1098042", 
+                    "title": "getaddrinfo return EAI_NONAME instead of EAI_AGAIN in case the DNS query times out", 
+                    "id": "1098042", 
+                    "issue date": "2015-04-29", 
+                    "associated redhat": "RHSA-2015:2199"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1144133", 
+                    "title": "calloc in dl-reloc.c computes size incorrectly", 
+                    "id": "1144133", 
+                    "issue date": "2015-04-29", 
+                    "associated redhat": "RHSA-2015:2199"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1187109", 
+                    "title": "CVE-2013-7423 glibc: getaddrinfo() writes DNS queries to random file descriptors under high load", 
+                    "id": "1187109", 
+                    "issue date": "2015-04-29", 
+                    "associated redhat": "RHSA-2015:2199"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1188235", 
+                    "title": "CVE-2015-1472 glibc: heap buffer overflow in glibc swscanf", 
+                    "id": "1188235", 
+                    "issue date": "2015-04-29", 
+                    "associated redhat": "RHSA-2015:2199"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1195762", 
+                    "title": "glibc: _IO_wstr_overflow integer overflow", 
+                    "id": "1195762", 
+                    "issue date": "2015-04-29", 
+                    "associated redhat": "RHSA-2015:2199"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1197730", 
+                    "title": "glibc: potential denial of service in internal_fnmatch()", 
+                    "id": "1197730", 
+                    "issue date": "2015-04-29", 
+                    "associated redhat": "RHSA-2015:2199"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1199525", 
+                    "title": "CVE-2015-1781 glibc: buffer overflow in gethostbyname_r() and related functions with misaligned buffer", 
+                    "id": "1199525", 
+                    "issue date": "2015-04-29", 
+                    "associated redhat": "RHSA-2015:2199"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1207032", 
+                    "title": "glibc deadlock when printing backtrace from memory allocator", 
+                    "id": "1207032", 
+                    "issue date": "2015-04-29", 
+                    "associated redhat": "RHSA-2015:2199"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1209105", 
+                    "title": "CVE-2015-1473 glibc: Stack-overflow in glibc swscanf", 
+                    "id": "1209105", 
+                    "issue date": "2015-04-29", 
+                    "associated redhat": "RHSA-2015:2199"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1219891", 
+                    "title": "Missing define for TCP_USER_TIMEOUT in netinet/tcp.h", 
+                    "id": "1219891", 
+                    "issue date": "2015-04-29", 
+                    "associated redhat": "RHSA-2015:2199"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1225490", 
+                    "title": "[RFE] Unconditionally enable SDT probes in glibc builds.", 
+                    "id": "1225490", 
+                    "issue date": "2015-04-29", 
+                    "associated redhat": "RHSA-2015:2199"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2519-1", 
+                "id": "USN-2519-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

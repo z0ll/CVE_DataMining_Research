@@ -1,0 +1,604 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9683", 
+                "published": "2015-03-03T06:59:02.417-05:00", 
+                "id": "CVE-2014-9683", 
+                "modified": "2015-03-26T21:59:43.203-04:00", 
+                "summary": "Off-by-one error in the ecryptfs_decode_from_filename function in fs/ecryptfs/crypto.c in the eCryptfs subsystem in the Linux kernel before 3.18.2 allows local users to cause a denial of service (buffer overflow and system crash) or possibly gain privileges via a crafted filename."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.18.1"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:14.04::~~lts~~~"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:14.10"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:12.04::~~lts~~~"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.69190", 
+                "id": 69190
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/72643", 
+                "id": 72643
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/torvalds/linux/commit/942080643bce061c3dd9d5718d3b745dcb39a8bc", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1193830", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2542-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2541-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2518-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2517-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2516-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2515-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id/1031860", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/72643", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/02/17/9", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:058", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://www.kernel.org/pub/linux/kernel/v3.x/ChangeLog-3.18.2", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2015/dsa-3170", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=942080643bce061c3dd9d5718d3b745dcb39a8bc", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "3.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-9683"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:189", 
+                "title": "DSA-3170-1 -- linux -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:189"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3170-1 (linux - security update)", 
+                "file": "deb_3170.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703170"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 6 : kernel (CESA-2015:1272)", 
+                "file": "centos_RHSA-2015-1272.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "85010"
+            }, 
+            {
+                "name": "Debian DLA-246-2 : linux-2.6 regression update", 
+                "file": "debian_DLA-246.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "84252"
+            }, 
+            {
+                "name": "Debian DSA-3170-1 : linux - security update", 
+                "file": "debian_DSA-3170.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "81449"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : kernel (MDVSA-2015:058)", 
+                "file": "mandriva_MDVSA-2015-058.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "81941"
+            }, 
+            {
+                "name": "openSUSE Security Update : Linux Kernel (openSUSE-2015-302)", 
+                "file": "openSUSE-2015-302.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "82756"
+            }, 
+            {
+                "name": "openSUSE Security Update : the Linux Kernel (openSUSE-2016-124)", 
+                "file": "openSUSE-2016-124.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88545"
+            }, 
+            {
+                "name": "Oracle Linux 6 : kernel (ELSA-2015-1272)", 
+                "file": "oraclelinux_ELSA-2015-1272.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85097"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : Unbreakable Enterprise kernel (ELSA-2015-3053)", 
+                "file": "oraclelinux_ELSA-2015-3053.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85118"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2015-3054)", 
+                "file": "oraclelinux_ELSA-2015-3054.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85175"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2015-3055)", 
+                "file": "oraclelinux_ELSA-2015-3055.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85176"
+            }, 
+            {
+                "name": "OracleVM 3.3 : kernel-uek (OVMSA-2015-0104)", 
+                "file": "oraclevm_OVMSA-2015-0104.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "85145"
+            }, 
+            {
+                "name": "OracleVM 3.2 : kernel-uek (OVMSA-2016-0037)", 
+                "file": "oraclevm_OVMSA-2016-0037.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "90019"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2015:1272)", 
+                "file": "redhat-RHSA-2015-1272.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "84936"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL6.x i386/x86_64", 
+                "file": "sl_20150722_kernel_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "85198"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : kernel (SUSE-SU-2015:1174-1)", 
+                "file": "suse_SU-2015-1174-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84545"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : kernel (SUSE-SU-2015:1478-1)", 
+                "file": "suse_SU-2015-1478-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85764"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-trusty vulnerabilities (USN-2515-1)", 
+                "file": "ubuntu_USN-2515-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "81568"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-trusty vulnerabilities (USN-2515-2)", 
+                "file": "ubuntu_USN-2515-2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "81645"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux vulnerabilities (USN-2516-1)", 
+                "file": "ubuntu_USN-2516-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "81569"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux vulnerability (USN-2516-2)", 
+                "file": "ubuntu_USN-2516-2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "81590"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux vulnerabilities (USN-2516-3)", 
+                "file": "ubuntu_USN-2516-3.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "81646"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-utopic vulnerabilities (USN-2517-1)", 
+                "file": "ubuntu_USN-2517-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "81570"
+            }, 
+            {
+                "name": "Ubuntu 14.10 : linux vulnerabilities (USN-2518-1)", 
+                "file": "ubuntu_USN-2518-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "81571"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux vulnerabilities (USN-2541-1)", 
+                "file": "ubuntu_USN-2541-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "82069"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:058", 
+                "id": "MDVSA-2015:058"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151272", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1272.html", 
+                    "id": "RHSA-2015:1272", 
+                    "title": "RHSA-2015:1272: kernel security, bug fix, and enhancement update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=734360", 
+                    "title": "\"opcontrol --deinit\" cause kernel panic inside guest os.", 
+                    "id": "734360", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=840708", 
+                    "title": "misleading (typo) print for \"max_report_luns\"", 
+                    "id": "840708", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=986761", 
+                    "title": "guest kernel will print many \"serial8250: too much work for irq3\" when using kvm with isa-serial", 
+                    "id": "986761", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1025868", 
+                    "title": "kernel panic when installing RHEL4 with Opteron G3 CPU model", 
+                    "id": "1025868", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1066702", 
+                    "title": "Hugepage allocations hang on numa nodes with insufficient memory", 
+                    "id": "1066702", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1104097", 
+                    "title": "CVE-2014-3940 Kernel: missing check during hugepage migration", 
+                    "id": "1104097", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1113406", 
+                    "title": "CVE-2014-4652 Kernel: ALSA: control: protect user controls against races & memory disclosure", 
+                    "id": "1113406", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1115545", 
+                    "title": "NFS4: remove incorrect \"Lock reclaim failed!\" warning when delegations are used", 
+                    "id": "1115545", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1116398", 
+                    "title": "RHEV-H crashes and reboots when ksmd (MOM) is enabled", 
+                    "id": "1116398", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1141391", 
+                    "title": "CVE-2014-3184 Kernel: HID: off by one error in various _report_fixup routines", 
+                    "id": "1141391", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1144128", 
+                    "title": "FUSE: Scheduling while atomic OOPSes when using inval_entry", 
+                    "id": "1144128", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1145751", 
+                    "title": "kvm_clock lacks protection against tsc going backwards", 
+                    "id": "1145751", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1150510", 
+                    "title": "kernel ignores ACPI memory devices (PNP0C80) present at boot time", 
+                    "id": "1150510", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1156661", 
+                    "title": "Kernel crash when unmounting Ext4 filesystem", 
+                    "id": "1156661", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1171317", 
+                    "title": "xfs may crash after unmount if a log write is delayed", 
+                    "id": "1171317", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1172797", 
+                    "title": "CVE-2014-8133 kernel: x86: espfix(64) bypass via set_thread_area and CLONE_SETTLS", 
+                    "id": "1172797", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1173580", 
+                    "title": "CVE-2014-8709 kernel: net: mac80211: plain text information leak", 
+                    "id": "1173580", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1183773", 
+                    "title": "clock_event_device:min_delta_ns can overflow and can never go down", 
+                    "id": "1183773", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1186448", 
+                    "title": "CVE-2015-0239  kernel: kvm: insufficient sysenter emulation when invoked from 16-bit code", 
+                    "id": "1186448", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1187940", 
+                    "title": "Regression: Loading memory mapped files does not use the optimal sized (large) I/O any more in kernel 2.6.32-504.3.3.el6.x86_64", 
+                    "id": "1187940", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1193830", 
+                    "title": "CVE-2014-9683 kernel: buffer overflow in eCryptfs", 
+                    "id": "1193830", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1196319", 
+                    "title": "Backport the dm-switch target to RHEL 6", 
+                    "id": "1196319", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1200541", 
+                    "title": "Reset socket ignored when socket state is LAST-ACK and connection state is SYN-SENT", 
+                    "id": "1200541", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1208065", 
+                    "title": "O_TRUNC ignored on NFS file with invalid cache entry", 
+                    "id": "1208065", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1214030", 
+                    "title": "CVE-2015-3339 kernel: race condition between chown() and execve()", 
+                    "id": "1214030", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2515-1", 
+                "id": "USN-2515-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2516-1", 
+                "id": "USN-2516-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2517-1", 
+                "id": "USN-2517-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2518-1", 
+                "id": "USN-2518-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2541-1", 
+                "id": "USN-2541-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2542-1", 
+                "id": "USN-2542-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3170", 
+                "id": "DSA-3170"
+            }
+        ], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,361 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6051", 
+                "published": "2014-09-30T12:55:07.010-04:00", 
+                "id": "CVE-2014-6051", 
+                "modified": "2015-03-11T21:59:57.317-04:00", 
+                "summary": "Integer overflow in the MallocFrameBuffer function in vncviewer.c in LibVNCServer 0.9.9 and earlier allows remote VNC servers to cause a denial of service (crash) and possibly execute arbitrary code via an advertisement for a large screen size, which triggers a heap-based buffer overflow."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:libvncserver:libvncserver:0.9.9"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.71695", 
+                "id": 71695
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.ocert.org/advisories/ocert-2014-007.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "https://www.kde.org/info/security/advisory-20140923-1.txt", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://github.com/newsoft/libvncserver/commit/045a044e8ae79db9244593fbce154cdf6e843273", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2014/09/25/11", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2014/dsa-3081", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://seclists.org/oss-sec/2014/q3/639", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-0113.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2014-September/139445.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2014-October/139654.html", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-6051"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28316", 
+                "title": "ELSA-2014-1826 -- libvncserver security update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28316"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28208", 
+                "title": "RHSA-2014:1826 -- libvncserver security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28208"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28422", 
+                "title": "DSA-3081-1 -- libvncserver security update", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28422"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27178", 
+                "title": "USN-2365-1 -- libvncserver vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27178"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3081-1 (libvncserver - security update)", 
+                "file": "deb_3081.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703081"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 6 / 7 : libvncserver (CESA-2014:1826)", 
+                "file": "centos_RHSA-2014-1826.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "79188"
+            }, 
+            {
+                "name": "Debian DLA-197-1 : libvncserver security update", 
+                "file": "debian_DLA-197.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "82784"
+            }, 
+            {
+                "name": "Debian DSA-3081-1 : libvncserver - security update", 
+                "file": "debian_DSA-3081.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "79629"
+            }, 
+            {
+                "name": "Fedora 19 : krfb-4.11.5-4.fc19 (2014-11464)", 
+                "file": "fedora_2014-11464.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "78095"
+            }, 
+            {
+                "name": "Fedora 20 : libvncserver-0.9.10-0.6.20140718git9453be42.fc20 (2014-11537)", 
+                "file": "fedora_2014-11537.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "77942"
+            }, 
+            {
+                "name": "Fedora 19 : libvncserver-0.9.10-0.6.20140718git9453be42.fc19 (2014-11541)", 
+                "file": "fedora_2014-11541.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "78053"
+            }, 
+            {
+                "name": "Fedora 21 : libvncserver-0.9.10-0.6.20140718git9453be42.fc21 (2014-11685)", 
+                "file": "fedora_2014-11685.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "78000"
+            }, 
+            {
+                "name": "GLSA-201507-07 : LibVNCServer: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201507-07.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "84606"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : libvncserver (MDVSA-2014:229)", 
+                "file": "mandriva_MDVSA-2014-229.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "79589"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : libvncserver (MDVSA-2015:146)", 
+                "file": "mandriva_MDVSA-2015-146.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "82399"
+            }, 
+            {
+                "name": "openSUSE Security Update : LibVNCServer (openSUSE-2015-851)", 
+                "file": "openSUSE-2015-851.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "87389"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : libvncserver (ELSA-2014-1826)", 
+                "file": "oraclelinux_ELSA-2014-1826.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "79199"
+            }, 
+            {
+                "name": "RHEL 6 / 7 : libvncserver (RHSA-2014:1826)", 
+                "file": "redhat-RHSA-2014-1826.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "79202"
+            }, 
+            {
+                "name": "RHEL 6 : libvncserver (RHSA-2015:0113)", 
+                "file": "redhat-RHSA-2015-0113.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "81143"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : libvncserver on SL6.x, SL7.x i386/x86_64", 
+                "file": "sl_20141111_libvncserver_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "79230"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : LibVNCServer (SUSE-SU-2015:2088-1)", 
+                "file": "suse_SU-2015-2088-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "87064"
+            }, 
+            {
+                "name": "SUSE SLES12 Security Update : LibVNCServer (SUSE-SU-2015:2088-2)", 
+                "file": "suse_SU-2015-2088-2.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "87721"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : LibVNCServer (SUSE-SU-2015:2110-1)", 
+                "file": "suse_SU-2015-2110-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "87105"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 14.04 : libvncserver vulnerabilities (USN-2365-1)", 
+                "file": "ubuntu_USN-2365-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "77982"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2014-11537", 
+                "id": "FEDORA-2014-11537"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2014-11685", 
+                "id": "FEDORA-2014-11685"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-0113.html", 
+                    "id": "RHSA-2015:0113", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20141826", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2014-1826.html", 
+                    "id": "RHSA-2014:1826", 
+                    "title": "RHSA-2014:1826: libvncserver security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1144287", 
+                    "title": "CVE-2014-6051 libvncserver: integer overflow flaw, leading to a heap-based buffer overflow in screen size handling", 
+                    "id": "1144287", 
+                    "issue date": "2014-11-11", 
+                    "associated redhat": "RHSA-2014:1826"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1144288", 
+                    "title": "CVE-2014-6052 libvncserver: NULL pointer dereference flaw in framebuffer setup", 
+                    "id": "1144288", 
+                    "issue date": "2014-11-11", 
+                    "associated redhat": "RHSA-2014:1826"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1144289", 
+                    "title": "CVE-2014-6053 libvncserver: server NULL pointer dereference flaw in ClientCutText message handling", 
+                    "id": "1144289", 
+                    "issue date": "2014-11-11", 
+                    "associated redhat": "RHSA-2014:1826"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1144291", 
+                    "title": "CVE-2014-6054 libvncserver: server divide-by-zero flaw in scaling factor handling", 
+                    "id": "1144291", 
+                    "issue date": "2014-11-11", 
+                    "associated redhat": "RHSA-2014:1826"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1144293", 
+                    "title": "CVE-2014-6055 libvncserver: server stacked-based buffer overflow flaws in file transfer handling", 
+                    "id": "1144293", 
+                    "issue date": "2014-11-11", 
+                    "associated redhat": "RHSA-2014:1826"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3081", 
+                "id": "DSA-3081"
+            }
+        ], 
+        "Vmware": []
+    }
+}

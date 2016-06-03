@@ -1,0 +1,256 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0805", 
+                "published": "2010-03-31T15:30:00.577-04:00", 
+                "id": "CVE-2010-0805", 
+                "modified": "2010-08-21T00:00:00.000-04:00", 
+                "summary": "The Tabular Data Control (TDC) ActiveX control in Microsoft Internet Explorer 5.01 SP4, 6 on Windows XP SP2 and SP3, and 6 SP1 allows remote attackers to execute arbitrary code via a long URL (DataURL parameter) that triggers memory corruption in the CTDCCtl::SecurityCHeckDataURL function, aka \"Memory Corruption Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:ie:5.01:sp4"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:6:sp1"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp4"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp3"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:6"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.52507", 
+                "id": 52507
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/39025", 
+                "id": 39025
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA10-089A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA10-068A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2010/0744", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/39025", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/Bulletin/MS10-018.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.zerodayinitiative.com/advisories/ZDI-10-034", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/510507/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1023773", 
+                    "vendor": "SECTRACK"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2011007", 
+                "signature": "ET ACTIVEX Microsoft Internet Explorer Tabular DataURL ActiveX Control Memory Corruption Attempt"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms10_018_ie_tabular_activex.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/browser/ms10_018_ie_tabular_activex.rb", 
+                "title": "MS10-018 Microsoft Internet Explorer Tabular Data Control ActiveX Memory Corruption"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/12032", 
+                "id": 12032, 
+                "file": "platforms/windows/dos/12032.html"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/ie_tabular_data_control_dataurl", 
+                "id": "exploit_info/ie_tabular_data_control_dataurl", 
+                "title": "Internet Explorer Tabular Data Control DataURL memory corruption"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-0805"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:8080", 
+                "title": "Memory Corruption Vulnerability (CVE-2010-0805)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:8080"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Internet Explorer Multiple Vulnerabilities (980182)", 
+                "file": "secpod_ms10-018.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "902155"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS10-018: Cumulative Security Update for Internet Explorer (980182)", 
+                "file": "smb_nt_ms10-018.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "45378"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Cumulative Security Update for Internet Explorer", 
+                "id": "Cumulative Security Update for Internet Explorer", 
+                "title": "980182"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/980182", 
+                "id": "980182", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS10-018", 
+                "id": "MS10-018", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

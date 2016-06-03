@@ -1,0 +1,516 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6927", 
+                "published": "2007-01-12T21:28:00.000-05:00", 
+                "id": "CVE-2006-6927", 
+                "modified": "2011-03-07T21:47:19.407-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in Rialto 1.6 allow remote attackers to execute arbitrary SQL commands via (1) the uname (username) and (2) pword (passwd) fields in (a) admin/default.asp; the (3) ID parameter to (b) listfull.asp or (c) printmain.asp; the (4) cat parameter to (d) listmain.asp, (e) searchoption.asp, or (f) searchmain.asp; the (5) Keyword parameter to (g) searchkey.asp; the (6) area parameter to searchmain.asp or searchoption.asp; the (7) searchin parameter to searchkey.asp; or the (8) cost1, (9) cost2, (10) acreage1, or (11) squarefeet1 parameters to searchoption.asp.  NOTE: some of these details are obtained from third party information."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:grandora:rialto:1.6"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34375", 
+                "id": 34375
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21191", 
+                "id": 21191
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30424", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4630", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21191", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/452112/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23049", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2143", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005687", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- listfull.asp ID SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005688", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- listfull.asp ID UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005689", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- listfull.asp ID INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005690", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- listfull.asp ID DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005691", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- listfull.asp ID ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005692", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- listfull.asp ID UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005693", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- printmain.asp ID SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005694", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- printmain.asp ID UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005695", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- printmain.asp ID INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005696", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- printmain.asp ID DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005697", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- printmain.asp ID ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005698", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- printmain.asp ID UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005699", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- listmain.asp cat SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005700", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- listmain.asp cat UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005701", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- listmain.asp cat INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005702", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- listmain.asp cat DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005703", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- listmain.asp cat ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005704", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- listmain.asp cat UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005705", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp cat SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005706", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp cat UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005707", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp cat INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005708", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp cat DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005709", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp cat ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005710", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp cat UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005711", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchmain.asp cat SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005712", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchmain.asp cat UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005713", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchmain.asp cat INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005714", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchmain.asp cat DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005715", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchmain.asp cat ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005716", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchmain.asp cat UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005717", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchkey.asp Keyword SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005718", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchkey.asp Keyword UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005719", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchkey.asp Keyword INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005720", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchkey.asp Keyword DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005721", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchkey.asp Keyword ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005722", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchkey.asp Keyword UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005723", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchmain.asp area SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005724", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchmain.asp area UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005725", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchmain.asp area INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005726", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchmain.asp area DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005727", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchmain.asp area ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005728", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchmain.asp area UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005729", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp area SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005730", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp area UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005731", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp area INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005732", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp area DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005733", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp area ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005734", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp area UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005735", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchkey.asp searchin SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005736", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchkey.asp searchin UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005738", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchkey.asp searchin INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005739", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchkey.asp searchin DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005740", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchkey.asp searchin ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005741", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchkey.asp searchin UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005742", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp cost1 SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005743", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp cost1 UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005744", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp cost1 INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005745", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp cost1 DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005746", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp cost1 ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005747", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp cost1 UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005748", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp cost2 SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005749", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp cost2 UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005750", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp cost2 INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005751", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp cost2 DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005752", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp cost2 ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005753", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp cost2 UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005754", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp acreage1 SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005755", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp acreage1 UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005756", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp acreage1 INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005757", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp acreage1 DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005758", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp acreage1 ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005759", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp acreage1 UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005760", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp squarefeet1 SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005761", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp squarefeet1 UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005762", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp squarefeet1 INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005763", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp squarefeet1 DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005764", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp squarefeet1 ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005765", 
+                "signature": "ET WEB_SPECIFIC_APPS Rialto SQL Injection Attempt -- searchoption.asp squarefeet1 UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6927"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

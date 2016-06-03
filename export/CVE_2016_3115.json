@@ -1,0 +1,277 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-3115", 
+                "published": "2016-03-22T06:59:02.917-04:00", 
+                "id": "CVE-2016-3115", 
+                "modified": "2016-03-22T13:55:10.917-04:00", 
+                "summary": "Multiple CRLF injection vulnerabilities in session.c in sshd in OpenSSH before 7.2p2 allow remote authenticated users to bypass intended shell-command restrictions via crafted X11 forwarding data, related to the (1) do_authenticated1 and (2) session_x11_req functions."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:openbsd:openssh:7.2:p1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.81320", 
+                "id": 81320
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.openssh.com/txt/x11fwd.adv", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.bin/ssh/session.c.diff?r1=1.281&r2=1.282&f=h", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.bin/ssh/session.c", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "5.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/39569", 
+                "id": 39569, 
+                "file": "platforms/multiple/remote/39569.py"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2016-3115"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Oracle Linux Local Check: ELSA-2016-3531", 
+                "file": "ELSA-2016-3531.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "80056"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : openssh (ALAS-2016-668)", 
+                "file": "ala_ALAS-2016-668.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "89965"
+            }, 
+            {
+                "name": "CentOS 7 : openssh (CESA-2016:0465)", 
+                "file": "centos_RHSA-2016-0465.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "90068"
+            }, 
+            {
+                "name": "CentOS 6 : openssh (CESA-2016:0466)", 
+                "file": "centos_RHSA-2016-0466.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "90069"
+            }, 
+            {
+                "name": "Fedora 24 : openssh-7.2p2-1.fc24 (2016-0bcab055a7)", 
+                "file": "fedora_2016-0bcab055a7.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "90209"
+            }, 
+            {
+                "name": "Fedora 23 : openssh-7.2p2-1.fc23 (2016-bb59db3c86)", 
+                "file": "fedora_2016-bb59db3c86.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "89887"
+            }, 
+            {
+                "name": "Fedora 22 : openssh-6.9p1-11.fc22 (2016-d339d610c1)", 
+                "file": "fedora_2016-d339d610c1.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "90285"
+            }, 
+            {
+                "name": "FreeBSD : openssh -- command injection when X11Forwarding is enabled (e4644df8-e7da-11e5-829d-c80aa9043978)", 
+                "file": "freebsd_pkg_e4644df8e7da11e5829dc80aa9043978.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "89897"
+            }, 
+            {
+                "name": "OpenSSH < 7.2p2 X11Forwarding xauth Command Injection", 
+                "file": "openssh_72p2.nasl", 
+                "family": "Misc.", 
+                "id": "90023"
+            }, 
+            {
+                "name": "Oracle Linux 7 : openssh (ELSA-2016-0465)", 
+                "file": "oraclelinux_ELSA-2016-0465.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "90074"
+            }, 
+            {
+                "name": "Oracle Linux 6 : openssh (ELSA-2016-0466)", 
+                "file": "oraclelinux_ELSA-2016-0466.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "90075"
+            }, 
+            {
+                "name": "Oracle Linux 5 : openssh (ELSA-2016-3531)", 
+                "file": "oraclelinux_ELSA-2016-3531.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "90342"
+            }, 
+            {
+                "name": "OracleVM 3.3 / 3.4 : openssh (OVMSA-2016-0038)", 
+                "file": "oraclevm_OVMSA-2016-0038.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "90076"
+            }, 
+            {
+                "name": "RHEL 7 : openssh (RHSA-2016:0465)", 
+                "file": "redhat-RHSA-2016-0465.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "90078"
+            }, 
+            {
+                "name": "RHEL 6 : openssh (RHSA-2016:0466)", 
+                "file": "redhat-RHSA-2016-0466.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "90079"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : openssh on SL6.x i386/x86_64", 
+                "file": "sl_20160321_openssh_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "90080"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : openssh on SL7.x x86_64", 
+                "file": "sl_20160321_openssh_on_SL7_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "90081"
+            }, 
+            {
+                "name": "Slackware 13.0 / 13.1 / 13.37 / 14.0 / 14.1 / current : openssh (SSA:2016-070-01)", 
+                "file": "Slackware_SSA_2016-070-01.nasl", 
+                "family": "Slackware Local Security Checks", 
+                "id": "89836"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20160465", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2016-0465.html", 
+                    "id": "RHSA-2016:0465", 
+                    "title": "RHSA-2016:0465: openssh security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298741", 
+                    "title": "CVE-2016-1908 openssh: possible fallback from untrusted to trusted X11 forwarding", 
+                    "id": "1298741", 
+                    "issue date": "2016-03-21", 
+                    "associated redhat": "RHSA-2016:0465"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1316829", 
+                    "title": "CVE-2016-3115 openssh: missing sanitisation of input for X11 forwarding", 
+                    "id": "1316829", 
+                    "issue date": "2016-03-21", 
+                    "associated redhat": "RHSA-2016:0465"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20160466", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2016-0466.html", 
+                    "id": "RHSA-2016:0466", 
+                    "title": "RHSA-2016:0466: openssh security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245969", 
+                    "title": "CVE-2015-5600 openssh: MaxAuthTries limit bypass via duplicates in KbdInteractiveDevices", 
+                    "id": "1245969", 
+                    "issue date": "2016-03-21", 
+                    "associated redhat": "RHSA-2016:0466"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1316829", 
+                    "title": "CVE-2016-3115 openssh: missing sanitisation of input for X11 forwarding", 
+                    "id": "1316829", 
+                    "issue date": "2016-03-21", 
+                    "associated redhat": "RHSA-2016:0466"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

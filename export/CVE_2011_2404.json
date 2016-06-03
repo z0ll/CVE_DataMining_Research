@@ -1,0 +1,192 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2404", 
+                "published": "2011-08-11T18:55:01.037-04:00", 
+                "id": "CVE-2011-2404", 
+                "modified": "2012-01-13T22:54:40.430-05:00", 
+                "summary": "A certain ActiveX control in HPTicketMgr.dll in HP Easy Printer Care Software 2.5 and earlier allows remote attackers to download an arbitrary program onto a client machine, and execute this program, via unspecified vectors, a different vulnerability than CVE-2011-4786 and CVE-2011-4787."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:hp:easy_printer_care_software:2.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.58265", 
+                "id": 58265
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://securityreason.com/securityalert/8348", 
+                    "vendor": "SREASON"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/8332", 
+                    "vendor": "SREASON"
+                }, 
+                {
+                    "url": "http://marc.info/?l=bugtraq&m=131291471508119&w=2", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://marc.info/?l=bugtraq&m=131291471508119&w=2", 
+                    "vendor": "HP"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "hp_easy_printer_care_xmlsimpleaccessor.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/browser/hp_easy_printer_care_xmlsimpleaccessor.rb", 
+                "title": "HP Easy Printer Care XMLSimpleAccessor Class ActiveX Control Remote Code Execution"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/hp_easy_printer_care_hpticketmgr", 
+                "id": "exploit_info/hp_easy_printer_care_hpticketmgr", 
+                "title": "HP Easy Printer Care Software HPTicketMgr.dll ActiveX Control Remote Code Execution"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-2404"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "HP Easy Printer Care Software ActiveX Control Remote Code Execution Vulnerabilities", 
+                "file": "hpticketmgr_activex.nasl", 
+                "family": "Windows", 
+                "id": "55832"
+            }, 
+            {
+                "name": "MS11-090: Cumulative Security Update of ActiveX Kill Bits (2618451)", 
+                "file": "smb_nt_ms11-090.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "57276"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [
+            {
+                "url": "http://marc.info/?l=bugtraq&m=131291471508119&w=2", 
+                "id": "HPSBPI02698"
+            }, 
+            {
+                "url": "http://marc.info/?l=bugtraq&m=131291471508119&w=2", 
+                "id": "SSRT100404"
+            }
+        ], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

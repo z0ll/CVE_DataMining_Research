@@ -1,0 +1,170 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0812", 
+                "published": "2007-02-07T06:28:00.000-05:00", 
+                "id": "CVE-2007-0812", 
+                "modified": "2011-03-07T21:50:46.347-05:00", 
+                "summary": "SQL injection vulnerability in pms.php in Woltlab Burning Board (wBB) Lite 1.0.2pl3e and earlier allows remote authenticated users to execute arbitrary SQL commands via the pmid[0] parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:woltlab:burning_board_lite:1.0.1e"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board_lite:1.0.2_pl3e"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board_lite:1.0.0"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board_lite:1.0.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34876", 
+                "id": 34876
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/22415", 
+                "id": 22415
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/32034", 
+                "id": 32034
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/0491", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://osvdb.org/32034", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/32172", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/22415", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/24027", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/3262", 
+                    "vendor": "MILW0RM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004997", 
+                "signature": "ET WEB_SPECIFIC_APPS Woltlab Burning Board (wBB) Lite SQL Injection Attempt -- pms.php pmid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004998", 
+                "signature": "ET WEB_SPECIFIC_APPS Woltlab Burning Board (wBB) Lite SQL Injection Attempt -- pms.php pmid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004999", 
+                "signature": "ET WEB_SPECIFIC_APPS Woltlab Burning Board (wBB) Lite SQL Injection Attempt -- pms.php pmid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005000", 
+                "signature": "ET WEB_SPECIFIC_APPS Woltlab Burning Board (wBB) Lite SQL Injection Attempt -- pms.php pmid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005001", 
+                "signature": "ET WEB_SPECIFIC_APPS Woltlab Burning Board (wBB) Lite SQL Injection Attempt -- pms.php pmid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005002", 
+                "signature": "ET WEB_SPECIFIC_APPS Woltlab Burning Board (wBB) Lite SQL Injection Attempt -- pms.php pmid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-0812"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

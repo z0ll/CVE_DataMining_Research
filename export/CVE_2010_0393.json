@@ -1,0 +1,312 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0393", 
+                "published": "2010-03-05T14:30:00.470-05:00", 
+                "id": "CVE-2010-0393", 
+                "modified": "2013-05-14T23:06:12.197-04:00", 
+                "summary": "The _cupsGetlang function, as used by lppasswd.c in lppasswd in CUPS 1.2.2, 1.3.7, 1.3.9, and 1.4.1, relies on an environment variable to determine the file that provides localized message strings, which allows local users to gain privileges via a file that contains crafted localization data with format string specifiers."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:apple:cups:1.4.1"
+            }, 
+            {
+                "id": "cpe:/a:apple:cups:1.3.7"
+            }, 
+            {
+                "id": "cpe:/a:apple:cups:1.3.9"
+            }, 
+            {
+                "id": "cpe:/a:apple:cups:1.2.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.52078", 
+                "id": 52078
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/38524", 
+                "id": 38524
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=558460", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-906-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/38524", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:073", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:072", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://www.cups.org/str.php?L3482", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://support.apple.com/kb/HT4077", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://security.gentoo.org/glsa/glsa-201207-10.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://lists.apple.com/archives/security-announce/2010//Mar/msg00001.html", 
+                    "vendor": "APPLE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "6.9", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-0393"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:7234", 
+                "title": "DSA-2007 cups -- format string vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:7234"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13070", 
+                "title": "DSA-2007-1 cups -- format string vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13070"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13273", 
+                "title": "USN-906-1 -- cups, cupsys vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13273"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2007-1 (cups)", 
+                "file": "deb_2007_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "67031"
+            }, 
+            {
+                "name": "CUPS lppasswd Tool Localized Message String Security Bypass Vulnerability", 
+                "file": "gb_cups_lppasswd_sec_bypass_vuln.nasl", 
+                "family": "General", 
+                "id": "800488"
+            }, 
+            {
+                "name": "Mandriva Update for mandriva-doc MDVA-2010:072 (mandriva-doc)", 
+                "file": "gb_mandriva_MDVA_2010_072.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "830894"
+            }, 
+            {
+                "name": "Mandriva Update for dhcp MDVA-2010:073 (dhcp)", 
+                "file": "gb_mandriva_MDVA_2010_073.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "830891"
+            }, 
+            {
+                "name": "Mandriva Update for cups MDVSA-2010:073 (cups)", 
+                "file": "gb_mandriva_MDVSA_2010_073.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "830978"
+            }, 
+            {
+                "name": "Mandriva Update for cups MDVSA-2010:073-1 (cups)", 
+                "file": "gb_mandriva_MDVSA_2010_073_1.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "830973"
+            }, 
+            {
+                "name": "Ubuntu Update for cups, cupsys vulnerabilities USN-906-1", 
+                "file": "gb_ubuntu_USN_906_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840396"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 201207-10 (cups)", 
+                "file": "glsa_201207_10.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "71590"
+            }, 
+            {
+                "name": "get_kb_item(ssh/login/osx_name", 
+                "file": "macosx_upd_10_6_3_secupd_2010-002.nasl", 
+                "family": "Mac OS X Local Security Checks", 
+                "id": "102039"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CUPS < 1.4.3 Multiple Vulnerabilities", 
+                "file": "cups_1_4_3.nasl", 
+                "family": "Misc.", 
+                "id": "45554"
+            }, 
+            {
+                "name": "Debian DSA-2007-1 : cups - format string vulnerability", 
+                "file": "debian_DSA-2007.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "44988"
+            }, 
+            {
+                "name": "GLSA-201207-10 : CUPS: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201207-10.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "59902"
+            }, 
+            {
+                "name": "Mac OS X < 10.6.3 Multiple Vulnerabilities", 
+                "file": "macosx_10_6_3.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "45372"
+            }, 
+            {
+                "name": "Mac OS X Multiple Vulnerabilities (Security Update 2010-002)", 
+                "file": "macosx_SecUpd2010-002.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "45373"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : cups (MDVSA-2010:073-1)", 
+                "file": "mandriva_MDVSA-2010-073.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "45530"
+            }, 
+            {
+                "name": "openSUSE Security Update : cups (cups-2102)", 
+                "file": "suse_11_0_cups-100210.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "45096"
+            }, 
+            {
+                "name": "openSUSE Security Update : cups (cups-2102)", 
+                "file": "suse_11_1_cups-100210.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "45099"
+            }, 
+            {
+                "name": "openSUSE Security Update : cups (cups-2102)", 
+                "file": "suse_11_2_cups-100305.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "45102"
+            }, 
+            {
+                "name": "SuSE 11 Security Update : CUPS (SAT Patch Number 2108)", 
+                "file": "suse_11_cups-100210.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "45105"
+            }, 
+            {
+                "name": "Ubuntu 6.06 LTS / 8.04 LTS / 8.10 / 9.04 / 9.10 : cups, cupsys vulnerabilities (USN-906-1)", 
+                "file": "ubuntu_USN-906-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "44985"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:072", 
+                "id": "MDVSA-2010:072"
+            }, 
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:073", 
+                "id": "MDVSA-2010:073"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/201207-10", 
+                "id": "GLSA-201207-10"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-906-1", 
+                "id": "USN-906-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

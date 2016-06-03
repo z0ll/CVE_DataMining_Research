@@ -1,0 +1,167 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0039", 
+                "published": "1997-05-06T00:00:00.000-04:00", 
+                "id": "CVE-1999-0039", 
+                "modified": "2008-09-09T08:33:36.367-04:00", 
+                "summary": "webdist CGI program (webdist.cgi) in SGI IRIX allows remote attackers to execute arbitrary commands via shell metacharacters in the distloc parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:sgi:irix:5.0"
+            }, 
+            {
+                "id": "cpe:/o:sgi:irix:6.3"
+            }, 
+            {
+                "id": "cpe:/o:sgi:irix:5.1"
+            }, 
+            {
+                "id": "cpe:/o:sgi:irix:6.2"
+            }, 
+            {
+                "id": "cpe:/o:sgi:irix:5.2"
+            }, 
+            {
+                "id": "cpe:/o:sgi:irix:6.1"
+            }, 
+            {
+                "id": "cpe:/o:sgi:irix:5.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.13885", 
+                "id": 13885
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/374", 
+                "id": 374
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/235", 
+                "id": 235
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.cert.org/advisories/CA-1997-12.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/333", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/374", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/235", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "ftp://patches.sgi.com/support/free/security/advisories/19970501-02-PX", 
+                    "vendor": "SGI"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1147", 
+                "signature": "SERVER-WEBAPP cat_ access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1163", 
+                "signature": "SERVER-WEBAPP webdist.cgi access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1865", 
+                "signature": "SERVER-WEBAPP webdist.cgi arbitrary command attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0039"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "IRIX webdist.cgi Arbitrary Command Execution", 
+                "file": "webdist.nasl", 
+                "family": "CGI abuses", 
+                "id": "10299"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

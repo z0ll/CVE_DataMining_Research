@@ -1,0 +1,244 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/693.html", 
+                "id": "CWE-693", 
+                "title": "Protection Mechanism Failure"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/664.html", 
+                "id": "CWE-664", 
+                "title": "Improper Control of a Resource Through its Lifetime"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/632.html", 
+                "id": "CWE-632", 
+                "title": "Weaknesses that Affect Files or Directories"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/723.html", 
+                "id": "CWE-723", 
+                "title": "OWASP Top Ten 2004 Category A2 - Broken Access Control"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/944.html", 
+                "id": "CWE-944", 
+                "title": "SFP Secondary Cluster: Access Management"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/19.html", 
+                "id": 19
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/474.html", 
+                "id": 474
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1304", 
+                "published": "2015-10-11T21:59:17.003-04:00", 
+                "id": "CVE-2015-1304", 
+                "modified": "2015-10-13T12:33:13.610-04:00", 
+                "summary": "object-observe.js in Google V8, as used in Google Chrome before 45.0.2454.101, does not properly restrict method calls on access-checked objects, which allows remote attackers to bypass the Same Origin Policy via a (1) observe or (2) getNotifier call."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/284.html", 
+                "id": "CWE-284", 
+                "title": "Improper Access Control"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:google:chrome:45.0.2454.93"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.78085", 
+                "id": 78085
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://code.google.com/p/chromium/issues/detail?id=531891", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://chromium.googlesource.com/v8/v8/+/9b0fb52b57021473aa813f3fb99ad7384a8b86f1", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://googlechromereleases.blogspot.com/2015/09/stable-channel-update_24.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-1304"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:298", 
+                "title": "DSA-3376-1 chromium-browser -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:298"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3376-1 (chromium-browser - security update)", 
+                "file": "deb_3376.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703376"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-3376-1 : chromium-browser - security update", 
+                "file": "debian_DSA-3376.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "86486"
+            }, 
+            {
+                "name": "FreeBSD : chromium -- multiple vulnerabilities (0e425bb7-64f2-11e5-b2fd-00262d5ed8ee)", 
+                "file": "freebsd_pkg_0e425bb764f211e5b2fd00262d5ed8ee.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "86177"
+            }, 
+            {
+                "name": "GLSA-201603-09 : Chromium: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201603-09.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "89902"
+            }, 
+            {
+                "name": "Google Chrome < 45.0.2454.101 Multiple Vulnerabilities", 
+                "file": "google_chrome_45_0_2454_101.nasl", 
+                "family": "Windows", 
+                "id": "86209"
+            }, 
+            {
+                "name": "Google Chrome < 45.0.2454.101 Multiple Vulnerabilities (Mac OS X)", 
+                "file": "macosx_google_chrome_45_0_2454_101.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "86210"
+            }, 
+            {
+                "name": "openSUSE Security Update : Chromium (openSUSE-2015-649)", 
+                "file": "openSUSE-2015-649.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "86338"
+            }, 
+            {
+                "name": "RHEL 6 : chromium-browser (RHSA-2015:1841)", 
+                "file": "redhat-RHSA-2015-1841.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "86201"
+            }, 
+            {
+                "name": "Ubuntu 14.04 / 15.04 : oxide-qt vulnerabilities (USN-2757-1)", 
+                "file": "ubuntu_USN-2757-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "86294"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151841", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1841.html", 
+                    "id": "RHSA-2015:1841", 
+                    "title": "RHSA-2015:1841: chromium-browser security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1266409", 
+                    "title": "CVE-2015-1303 chromium-browser: Cross-origin bypass in DOM", 
+                    "id": "1266409", 
+                    "issue date": "2015-09-29", 
+                    "associated redhat": "RHSA-2015:1841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1266410", 
+                    "title": "CVE-2015-1304 chromium-browser: Cross-origin bypass in V8", 
+                    "id": "1266410", 
+                    "issue date": "2015-09-29", 
+                    "associated redhat": "RHSA-2015:1841"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

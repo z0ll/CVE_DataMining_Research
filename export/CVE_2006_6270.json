@@ -1,0 +1,324 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6270", 
+                "published": "2006-12-04T06:28:00.000-05:00", 
+                "id": "CVE-2006-6270", 
+                "modified": "2008-09-05T17:14:20.597-04:00", 
+                "summary": "Multiple SQL injection vulnerabilities in ASPMForum allow remote attackers to execute arbitrary SQL commands via (1) the soruid parameter in forum2.asp, (2) the ak parameter in kullanicilistesi.asp, (3) the kelimeler parameter in aramayap.asp, and (4) the kullaniciadi parameter in giris.asp; and allow remote authenticated users to execute arbitrary SQL commands via (5) the mesajno parameter in mesajkutum.asp.  NOTE: the harf parameter in kullanicilistesi.asp and the baslik parameter in forum.asp are already covered by CVE-2005-4141."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:kervancilar:aspmforum"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33607", 
+                "id": 33607
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21113", 
+                "id": 21113
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/451958/100/200/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21113", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/1963", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006819", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- forum2.asp soruid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006820", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- forum2.asp soruid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006821", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- forum2.asp soruid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006822", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- forum2.asp soruid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006823", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- forum2.asp soruid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006824", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- forum2.asp soruid UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006825", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- kullanicilistesi.asp ak SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006826", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- kullanicilistesi.asp ak UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006827", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- kullanicilistesi.asp ak INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006828", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- kullanicilistesi.asp ak DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006829", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- kullanicilistesi.asp ak ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006830", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- kullanicilistesi.asp ak UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006831", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- aramayap.asp kelimeler SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006832", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- aramayap.asp kelimeler UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006833", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- aramayap.asp kelimeler INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006834", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- aramayap.asp kelimeler DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006835", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- aramayap.asp kelimeler ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006836", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- aramayap.asp kelimeler UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006837", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- giris.asp kullaniciadi SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006838", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- giris.asp kullaniciadi UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006839", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- giris.asp kullaniciadi INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006840", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- giris.asp kullaniciadi DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006841", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- giris.asp kullaniciadi ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006842", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- giris.asp kullaniciadi UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006843", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- mesajkutum.asp mesajno SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006844", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- mesajkutum.asp mesajno UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006845", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- mesajkutum.asp mesajno INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006846", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- mesajkutum.asp mesajno DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006847", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- mesajkutum.asp mesajno ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006848", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- mesajkutum.asp mesajno UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006849", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- kullanicilistesi.asp harf SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006850", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- kullanicilistesi.asp harf UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006851", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- kullanicilistesi.asp harf INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006852", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- kullanicilistesi.asp harf DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006853", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- kullanicilistesi.asp harf ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006854", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- kullanicilistesi.asp harf UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006855", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- forum.asp baslik SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006856", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- forum.asp baslik UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006857", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- forum.asp baslik INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006858", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- forum.asp baslik DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006859", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- forum.asp baslik ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006860", 
+                "signature": "ET WEB_SPECIFIC_APPS ASPMForum SQL Injection Attempt -- forum.asp baslik UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6270"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

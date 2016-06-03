@@ -1,0 +1,292 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0812", 
+                "published": "2003-12-15T00:00:00.000-05:00", 
+                "id": "CVE-2003-0812", 
+                "modified": "2008-09-10T15:20:30.930-04:00", 
+                "summary": "Stack-based buffer overflow in a logging function for Windows Workstation Service (WKSSVC.DLL) allows remote attackers to execute arbitrary code via RPC calls that cause long entries to be written to a debug log file (\"NetSetup.LOG\"), as demonstrated using the NetAddAlternateComputerName API."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp1:64-bit"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp2:datacenter_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp1:advanced_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp2:advanced_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp3:datacenter_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp3:advanced_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp4:datacenter_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp:::media_center"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp1:datacenter_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp4:advanced_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000:::professional"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::gold:professional"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp2:server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp4:server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp1:server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp3:server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000:::server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp2:professional"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp1:home"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp4:professional"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp1:professional"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp3:professional"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp:::home"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp:::64-bit"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000:::advanced_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000:::datacenter_server"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.383", 
+                "id": 383
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/9011", 
+                "id": 9011
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/11461", 
+                "id": 11461
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/567620", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.cert.org/advisories/CA-2003-28.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/9011", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/MS03-049.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=106859247713009&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.cisco.com/warp/public/707/cisco-sa-20040129-ms03-049.shtml", 
+                    "vendor": "CISCO"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=106865197102041&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/567620", 
+                "id": "VU#567620"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2102315", 
+                "signature": "GPL NETBIOS DCERPC Workstation Service direct service bind attempt"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2102309", 
+                "signature": "GPL NETBIOS SMB DCERPC Workstation Service bind attempt"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2102308", 
+                "signature": "GPL NETBIOS SMB DCERPC Workstation Service unicode bind attempt"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2102311", 
+                "signature": "GPL NETBIOS SMB-DS DCERPC Workstation Service bind attempt"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2102310", 
+                "signature": "GPL NETBIOS SMB-DS DCERPC Workstation Service unicode bind attempt"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2102316", 
+                "signature": "GPL NETBIOS DCERPC Workstation Service direct service access attempt"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms03_049_netapi.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/smb/ms03_049_netapi.rb", 
+                "title": "MS03-049 Microsoft Workstation Service NetAddAlternateComputerName Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2003-0812"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:331", 
+                "title": "Windows XP Workstation Service Logging Function Buffer Overflow", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:331"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:575", 
+                "title": "Windows 2000 Workstation Service Logging Function Buffer Overflow", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:575"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS03-049: Buffer Overflow in the Workstation Service (828749)", 
+                "file": "smb_nt_ms03-049.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "11921"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Buffer Overrun in the Workstation Service Could Allow Code Execution", 
+                "id": "Buffer Overrun in the Workstation Service Could Allow Code Execution", 
+                "title": "828035"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/828749", 
+                "id": "828749", 
+                "title": "Buffer Overrun in the Workstation Service Could Allow Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [
+            {
+                "id": "cisco-sa-20040129"
+            }
+        ], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS03-049", 
+                "id": "MS03-049", 
+                "title": "Buffer Overrun in the Workstation Service Could Allow Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

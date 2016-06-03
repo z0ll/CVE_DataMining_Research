@@ -1,0 +1,186 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4335", 
+                "published": "2015-06-09T10:59:07.850-04:00", 
+                "id": "CVE-2015-4335", 
+                "modified": "2015-06-16T23:00:40.957-04:00", 
+                "summary": "Redis before 2.8.1 and 3.x before 3.0.2 allows remote attackers to execute arbitrary Lua bytecode via the eval command."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/17.html", 
+                "id": "CWE-17", 
+                "title": "Code"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:pivotal_software:redis:3.0.0"
+            }, 
+            {
+                "id": "cpe:/a:pivotal_software:redis:3.0.1"
+            }, 
+            {
+                "id": "cpe:/a:pivotal_software:redis:2.8.20"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.75816", 
+                "id": 75816
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://groups.google.com/forum/#%21msg/redis-db/4Y6OqK8gEyk/Dg-5cejl-eUJ", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://github.com/antirez/redis/commit/fdf9d455098f54f7666c702ae464e6ea21e25411", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/06/05/3", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/06/04/8", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/06/04/12", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2015/dsa-3279", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://benmmurphy.github.io/blog/2015/06/04/redis-eval-lua-sandbox-escape/", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-4335"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:206", 
+                "title": "DSA-3279-1 -- redis -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:206"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3279-1 (redis - security update)", 
+                "file": "deb_3279.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703279"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-3279-1 : redis - security update", 
+                "file": "debian_DSA-3279.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "84024"
+            }, 
+            {
+                "name": "Fedora 21 : redis-2.8.21-1.fc21 (2015-9488)", 
+                "file": "fedora_2015-9488.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "84858"
+            }, 
+            {
+                "name": "Fedora 22 : redis-2.8.21-1.fc22 (2015-9498)", 
+                "file": "fedora_2015-9498.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "84859"
+            }, 
+            {
+                "name": "FreeBSD : redis -- EVAL Lua Sandbox Escape (838fa84a-0e25-11e5-90e4-d050996490d0)", 
+                "file": "freebsd_pkg_838fa84a0e2511e590e4d050996490d0.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "84043"
+            }, 
+            {
+                "name": "openSUSE Security Update : redis (openSUSE-2015-634)", 
+                "file": "openSUSE-2015-634.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "86284"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3279", 
+                "id": "DSA-3279"
+            }
+        ], 
+        "Vmware": []
+    }
+}

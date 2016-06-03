@@ -1,0 +1,269 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4326", 
+                "published": "2013-10-03T17:55:04.427-04:00", 
+                "id": "CVE-2013-4326", 
+                "modified": "2013-12-08T01:00:28.197-05:00", 
+                "summary": "RealtimeKit (aka rtkit) 0.5 does not properly use D-Bus for communication with a polkit authority, which allows local users to bypass intended access restrictions by leveraging a PolkitUnixProcess PolkitSubject race condition via a (1) setuid process or (2) pkexec process, a related issue to CVE-2013-4288."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:6"
+            }, 
+            {
+                "id": "cpe:/a:lennart_poettering:rkit:0.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.65191", 
+                "id": 65191
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1006677", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2013/09/18/6", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2013-1282.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2013-10/msg00051.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2013-10/msg00022.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-4326"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21125", 
+                "title": "RHSA-2013:1282: rtkit security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21125"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26840", 
+                "title": "DEPRECATED: ELSA-2013-1282 -- rtkit security update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26840"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23490", 
+                "title": "ELSA-2013:1282: rtkit security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23490"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19317", 
+                "title": "USN-1959-1 -- rtkit vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:19317"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CentOS Update for rtkit CESA-2013:1282 centos6", 
+                "file": "gb_CESA-2013_1282_rtkit_centos6.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881798"
+            }, 
+            {
+                "name": "Fedora Update for rtkit FEDORA-2013-17529", 
+                "file": "gb_fedora_2013_17529_rtkit_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866951"
+            }, 
+            {
+                "name": "Fedora Update for rtkit FEDORA-2013-17583", 
+                "file": "gb_fedora_2013_17583_rtkit_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866963"
+            }, 
+            {
+                "name": "RedHat Update for rtkit RHSA-2013:1282-01", 
+                "file": "gb_RHSA-2013_1282-01_rtkit.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "871046"
+            }, 
+            {
+                "name": "Ubuntu Update for rtkit USN-1959-1", 
+                "file": "gb_ubuntu_USN_1959_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841568"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 6 : rtkit (CESA-2013:1282)", 
+                "file": "centos_RHSA-2013-1282.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "70104"
+            }, 
+            {
+                "name": "Fedora 19 : rtkit-0.11-7.fc19 (2013-17529)", 
+                "file": "fedora_2013-17529.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "70159"
+            }, 
+            {
+                "name": "Fedora 18 : rtkit-0.11-7.fc18 (2013-17583)", 
+                "file": "fedora_2013-17583.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "70358"
+            }, 
+            {
+                "name": "Fedora 20 : rtkit-0.11-7.fc20 (2013-18442)", 
+                "file": "fedora_2013-18442.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "70407"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : polkit (MDVSA-2013:243)", 
+                "file": "mandriva_MDVSA-2013-243.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "70185"
+            }, 
+            {
+                "name": "openSUSE Security Update : rtkit (openSUSE-SU-2013:1548-1)", 
+                "file": "openSUSE-2013-755.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75164"
+            }, 
+            {
+                "name": "Oracle Linux 6 : rtkit (ELSA-2013-1282)", 
+                "file": "oraclelinux_ELSA-2013-1282.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "70113"
+            }, 
+            {
+                "name": "RHEL 6 : rtkit (RHSA-2013:1282)", 
+                "file": "redhat-RHSA-2013-1282.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "70114"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : rtkit on SL6.x i386/x86_64", 
+                "file": "sl_20130924_rtkit_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "70115"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 12.10 / 13.04 : rtkit vulnerability (USN-1959-1)", 
+                "file": "ubuntu_USN-1959-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "69977"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2013-4326.html", 
+                "id": "openSUSE-SU-2013:1548"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2013-4326.html", 
+                "id": "openSUSE-SU-2013:1597"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20131282", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2013-1282.html", 
+                    "id": "RHSA-2013:1282", 
+                    "title": "RHSA-2013:1282: rtkit security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1006677", 
+                    "title": "CVE-2013-4326 rtkit: insecure calling of polkit", 
+                    "id": "1006677", 
+                    "issue date": "2013-09-24", 
+                    "associated redhat": "RHSA-2013:1282"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

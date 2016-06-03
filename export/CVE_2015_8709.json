@@ -1,0 +1,171 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8709", 
+                "published": "2016-02-07T22:59:05.887-05:00", 
+                "id": "CVE-2015-8709", 
+                "modified": "2016-02-25T11:22:58.513-05:00", 
+                "summary": "** DISPUTED ** kernel/ptrace.c in the Linux kernel through 4.4.1 mishandles uid and gid mappings, which allows local users to gain privileges by establishing a user namespace, waiting for a root process to enter that namespace with an unsafe uid or gid, and then using the ptrace system call.  NOTE: the vendor states \"there is no kernel bug here.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:4.4.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.80802", 
+                "id": 80802
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://lkml.org/lkml/2015/12/25/71", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1295287", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/12/31/5", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/12/17/12", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://marc.info/?l=linux-kernel&m=145204641422813&w=2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://marc.info/?l=linux-kernel&m=145204362722256&w=2", 
+                    "vendor": "MLIST"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "6.9", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-8709"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:368", 
+                "title": "DSA-3434-1 -- linux -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:368"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3434-1 (linux - security update)", 
+                "file": "deb_3434.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703434"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : kernel (ALAS-2016-648)", 
+                "file": "ala_ALAS-2016-648.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "88660"
+            }, 
+            {
+                "name": "Debian DSA-3434-1 : linux - security update", 
+                "file": "debian_DSA-3434.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "87741"
+            }, 
+            {
+                "name": "Fedora 22 : kernel-4.3.4-200.fc22 (2016-5d43766e33)", 
+                "file": "fedora_2016-5d43766e33.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "89554"
+            }, 
+            {
+                "name": "Fedora 23 : kernel-4.3.3-300.fc23 (2016-6ce812a1e0)", 
+                "file": "fedora_2016-6ce812a1e0.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "89563"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : kernel (SUSE-SU-2016:0785-1)", 
+                "file": "suse_SU-2016-0785-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "89993"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,290 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0252", 
+                "published": "2003-08-18T00:00:00.000-04:00", 
+                "id": "CVE-2003-0252", 
+                "modified": "2010-05-25T00:18:26.860-04:00", 
+                "summary": "Off-by-one error in the xlog function of mountd in the Linux NFS utils package (nfs-utils) before 1.0.4 allows remote attackers to cause a denial of service and possibly execute arbitrary code via certain RPC requests to mountd that do not contain newlines."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:nfs:nfs-utils:1.0.1"
+            }, 
+            {
+                "id": "cpe:/a:nfs:nfs-utils:1.0.3"
+            }, 
+            {
+                "id": "cpe:/a:nfs:nfs-utils:0.2.1"
+            }, 
+            {
+                "id": "cpe:/a:nfs:nfs-utils:1.0"
+            }, 
+            {
+                "id": "cpe:/a:nfs:nfs-utils:0.2"
+            }, 
+            {
+                "id": "cpe:/a:nfs:nfs-utils:0.3.1"
+            }, 
+            {
+                "id": "cpe:/a:nfs:nfs-utils:0.3.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.20675", 
+                "id": 20675
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/8179", 
+                "id": 8179
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/258564", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=105830921519513&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/12600", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.turbolinux.com/security/TLSA-2003-44.txt", 
+                    "vendor": "TURBO"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/8179", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2003-207.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2003-206.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.novell.com/linux/security/advisories/2003_031_nfs_utils.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2003/dsa-349", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-77-1001262.1-1", 
+                    "vendor": "SUNALERT"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1007187", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/9259", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=105839032403325&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=105820223707191&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://isec.pl/vulnerabilities/isec-0010-linux-nfs-utils.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/vulnwatch/2003-q3/0024.html", 
+                    "vendor": "VULNWATCH"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/vulnwatch/2003-q3/0023.html", 
+                    "vendor": "VULNWATCH"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2003:076", 
+                    "vendor": "MANDRAKE"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/258564", 
+                "id": "VU#258564"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2102184", 
+                "signature": "GPL RPC mountd TCP mount path overflow attempt"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2102185", 
+                "signature": "GPL RPC mountd UDP mount path overflow attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "misc-attack", 
+                "id": "sid:2185", 
+                "signature": "PROTOCOL-RPC mountd UDP mount path overflow attempt"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:2184", 
+                "signature": "PROTOCOL-RPC mountd TCP mount path overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2003-0252"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:443", 
+                "title": "mountd xlog Function Off-by-One Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:443"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 349-1 (nfs-utils)", 
+                "file": "deb_349_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "53638"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-349-1 : nfs-utils - buffer overflow", 
+                "file": "debian_DSA-349.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "15186"
+            }, 
+            {
+                "name": "Mandrake Linux Security Advisory : nfs-utils (MDKSA-2003:076)", 
+                "file": "mandrake_MDKSA-2003-076.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "14059"
+            }, 
+            {
+                "name": "Linux NFS utils package (nfs-utils) mountd xlog Function Off-by-one Remote Overflow", 
+                "file": "nfs_xlog_overflow.nasl", 
+                "family": "RPC", 
+                "id": "11800"
+            }, 
+            {
+                "name": "RHEL 2.1 : nfs-utils (RHSA-2003:207)", 
+                "file": "redhat-RHSA-2003-207.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "12405"
+            }, 
+            {
+                "name": "SUSE-SA:2003:031: nfs-utils", 
+                "file": "suse_SA_2003_031.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "13800"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2003-0252.html", 
+                "id": "SuSE-SA:2003:031"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2003-206.html", 
+                    "id": "RHSA-2003:206", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2003-207.html", 
+                    "id": "RHSA-2003:207", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-349", 
+                "id": "DSA-349"
+            }
+        ], 
+        "Vmware": []
+    }
+}

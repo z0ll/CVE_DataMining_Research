@@ -1,0 +1,407 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1270", 
+                "published": "2015-07-22T20:59:00.070-04:00", 
+                "id": "CVE-2015-1270", 
+                "modified": "2015-08-25T22:00:06.703-04:00", 
+                "summary": "The ucnv_io_getConverterName function in common/ucnv_io.cpp in International Components for Unicode (ICU), as used in Google Chrome before 44.0.2403.89, mishandles converter names with initial x- substrings, which allows remote attackers to cause a denial of service (read of uninitialized memory) or possibly have unspecified other impact via a crafted file."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/19.html", 
+                "id": "CWE-19", 
+                "title": "Data Handling"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:google:chrome:43.0.2357.134"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.76771", 
+                "id": 76771
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://googlechromereleases.blogspot.com/2015/07/stable-channel-update_21.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://codereview.chromium.org/1157143002/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://code.google.com/p/chromium/issues/detail?id=444573", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://chromium.googlesource.com/chromium/deps/icu/+/f1ad7f9ba957571dc692ea3e187612c685615e19", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2015/dsa-3315", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-1499.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-07/msg00038.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-1270"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:57", 
+                "title": "DSA-3315-1 -- chromium-browser -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:57"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:115", 
+                "title": "DSA-3360-1 -- icu -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:115"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3315-1 (chromium-browser - security update)", 
+                "file": "deb_3315.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703315"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 3360-1 (icu - security update)", 
+                "file": "deb_3360.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703360"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-3315-1 : chromium-browser - security update", 
+                "file": "debian_DSA-3315.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "84992"
+            }, 
+            {
+                "name": "Debian DSA-3360-1 : icu - security update", 
+                "file": "debian_DSA-3360.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "85944"
+            }, 
+            {
+                "name": "FreeBSD : chromium -- multiple vulnerabilities (9d732078-32c7-11e5-b263-00262d5ed8ee)", 
+                "file": "freebsd_pkg_9d73207832c711e5b26300262d5ed8ee.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "84994"
+            }, 
+            {
+                "name": "GLSA-201603-09 : Chromium: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201603-09.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "89902"
+            }, 
+            {
+                "name": "Google Chrome < 44.0.2403.89 Multiple Vulnerabilities", 
+                "file": "google_chrome_44_0_2403_89.nasl", 
+                "family": "Windows", 
+                "id": "84921"
+            }, 
+            {
+                "name": "Google Chrome < 44.0.2403.89 Multiple Vulnerabilities (Mac OS X)", 
+                "file": "macosx_google_chrome_44_0_2403_89.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "84922"
+            }, 
+            {
+                "name": "openSUSE Security Update : Chromium (openSUSE-2015-513)", 
+                "file": "openSUSE-2015-513.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85003"
+            }, 
+            {
+                "name": "RHEL 6 : chromium-browser (RHSA-2015:1499)", 
+                "file": "redhat-RHSA-2015-1499.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "85039"
+            }, 
+            {
+                "name": "Ubuntu 14.04 / 15.04 : oxide-qt vulnerabilities (USN-2677-1)", 
+                "file": "ubuntu_USN-2677-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85240"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 14.04 / 15.04 : icu vulnerabilities (USN-2740-1)", 
+                "file": "ubuntu_USN-2740-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85982"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2015-1270.html", 
+                "id": "openSUSE-SU-2015:1287"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151499", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1499.html", 
+                    "id": "RHSA-2015:1499", 
+                    "title": "RHSA-2015:1499: chromium-browser security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245436", 
+                    "title": "CVE-2015-1271 chromium-browser: Heap-buffer-overflow in pdfium", 
+                    "id": "1245436", 
+                    "issue date": "2015-07-27", 
+                    "associated redhat": "RHSA-2015:1499"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245574", 
+                    "title": "CVE-2015-1270 ICU: Uninitialized memory read fixed in Chrome 44.0.2403.89", 
+                    "id": "1245574", 
+                    "issue date": "2015-07-27", 
+                    "associated redhat": "RHSA-2015:1499"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245575", 
+                    "title": "CVE-2015-1272 chromium-browser: Use-after-free related to unexpected GPU process termination in unspecified", 
+                    "id": "1245575", 
+                    "issue date": "2015-07-27", 
+                    "associated redhat": "RHSA-2015:1499"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245576", 
+                    "title": "CVE-2015-1273 chromium-browser: Heap-buffer-overflow in pdfium.", 
+                    "id": "1245576", 
+                    "issue date": "2015-07-27", 
+                    "associated redhat": "RHSA-2015:1499"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245577", 
+                    "title": "CVE-2015-1274 chromium-browser: Settings allowed executable files to run immediately after download in unsepcified", 
+                    "id": "1245577", 
+                    "issue date": "2015-07-27", 
+                    "associated redhat": "RHSA-2015:1499"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245580", 
+                    "title": "CVE-2015-1276 chromium-browser: Use-after-free in IndexedDB.", 
+                    "id": "1245580", 
+                    "issue date": "2015-07-27", 
+                    "associated redhat": "RHSA-2015:1499"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245581", 
+                    "title": "CVE-2015-1277 chromium-browser: Use-after-free in accessibility.", 
+                    "id": "1245581", 
+                    "issue date": "2015-07-27", 
+                    "associated redhat": "RHSA-2015:1499"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245582", 
+                    "title": "CVE-2015-1278 chromium-browser: URL spoofing using pdf files in unspecified", 
+                    "id": "1245582", 
+                    "issue date": "2015-07-27", 
+                    "associated redhat": "RHSA-2015:1499"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245583", 
+                    "title": "CVE-2015-1279 chromium-browser: Heap-buffer-overflow in pdfium.", 
+                    "id": "1245583", 
+                    "issue date": "2015-07-27", 
+                    "associated redhat": "RHSA-2015:1499"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245585", 
+                    "title": "CVE-2015-1281 chromium-browser: CSP bypass in unspecified component", 
+                    "id": "1245585", 
+                    "issue date": "2015-07-27", 
+                    "associated redhat": "RHSA-2015:1499"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245586", 
+                    "title": "CVE-2015-1282 chromium-browser: Use-after-free in pdfium.", 
+                    "id": "1245586", 
+                    "issue date": "2015-07-27", 
+                    "associated redhat": "RHSA-2015:1499"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245587", 
+                    "title": "CVE-2015-1283 chromium-browser: Heap-buffer-overflow in expat.", 
+                    "id": "1245587", 
+                    "issue date": "2015-07-27", 
+                    "associated redhat": "RHSA-2015:1499"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245588", 
+                    "title": "CVE-2015-1284 chromium-browser: Use-after-free in blink.", 
+                    "id": "1245588", 
+                    "issue date": "2015-07-27", 
+                    "associated redhat": "RHSA-2015:1499"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245589", 
+                    "title": "CVE-2015-1285 chromium-browser: Information leak in XSS auditor.", 
+                    "id": "1245589", 
+                    "issue date": "2015-07-27", 
+                    "associated redhat": "RHSA-2015:1499"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245590", 
+                    "title": "CVE-2015-1286 chromium-browser: UXSS in blink.", 
+                    "id": "1245590", 
+                    "issue date": "2015-07-27", 
+                    "associated redhat": "RHSA-2015:1499"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245591", 
+                    "title": "CVE-2015-1287 chromium-browser: SOP bypass with CSS in unspecified", 
+                    "id": "1245591", 
+                    "issue date": "2015-07-27", 
+                    "associated redhat": "RHSA-2015:1499"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245592", 
+                    "title": "CVE-2015-1288 chromium-browser: Spell checking dictionaries fetched over HTTP in unspecified", 
+                    "id": "1245592", 
+                    "issue date": "2015-07-27", 
+                    "associated redhat": "RHSA-2015:1499"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245593", 
+                    "title": "CVE-2015-1289 chromium-browser: Various fixes from internal audits, fuzzing and other initiatives", 
+                    "id": "1245593", 
+                    "issue date": "2015-07-27", 
+                    "associated redhat": "RHSA-2015:1499"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245955", 
+                    "title": "CVE-2015-5605 chromium-browser: v8 denial of service", 
+                    "id": "1245955", 
+                    "issue date": "2015-07-27", 
+                    "associated redhat": "RHSA-2015:1499"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3315", 
+                "id": "DSA-3315"
+            }
+        ], 
+        "Vmware": []
+    }
+}

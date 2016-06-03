@@ -1,0 +1,157 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-0540", 
+                "published": "2001-10-30T00:00:00.000-05:00", 
+                "id": "CVE-2001-0540", 
+                "modified": "2008-09-05T16:24:21.163-04:00", 
+                "summary": "Memory leak in Terminal servers in Windows NT and Windows 2000 allows remote attackers to cause a denial of service (memory exhaustion) via a large number of malformed Remote Desktop Protocol (RDP) requests to port 3389."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:terminal_server"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.17567", 
+                "id": 17567
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/3099", 
+                "id": 3099
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms01-040.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/static/6912.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/3099", 
+                    "vendor": "BID"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2101447", 
+                "signature": "GPL POLICY MS Remote Desktop Request RDP"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2101448", 
+                "signature": "GPL DELETED MS Terminal server request"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2012710", 
+                "signature": "ET POLICY MS Terminal Server Root login"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2012711", 
+                "signature": "ET POLICY MS Remote Desktop POS User Login Request"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "protocol-command", 
+                "id": "sid:1447", 
+                "signature": "POLICY-OTHER Microsoft Windows Terminal server RDP attempt"
+            }, 
+            {
+                "category": "protocol-command", 
+                "id": "sid:1448", 
+                "signature": "POLICY-OTHER Microsoft Windows Terminal server request attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-0540"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/292435", 
+                "id": "292435", 
+                "title": "Invalid RDP Data Can Cause Memory Leak in Terminal Services"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS01-040", 
+                "id": "MS01-040", 
+                "title": "Invalid RDP Data Can Cause Memory Leak in Terminal Services"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

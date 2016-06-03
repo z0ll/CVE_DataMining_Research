@@ -1,0 +1,192 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/668.html", 
+                "id": "CWE-668", 
+                "title": "Exposure of Resource to Wrong Sphere"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/199.html", 
+                "id": "CWE-199", 
+                "title": "Information Management Errors"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/717.html", 
+                "id": "CWE-717", 
+                "title": "OWASP Top Ten 2007 Category A6 - Information Leakage and Improper Error Handling"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/840.html", 
+                "id": "CWE-840", 
+                "title": "Business Logic Errors"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/963.html", 
+                "id": "CWE-963", 
+                "title": "SFP Secondary Cluster: Exposed Data"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/13.html", 
+                "id": 13
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/169.html", 
+                "id": 169
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/22.html", 
+                "id": 22
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/472.html", 
+                "id": 472
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/59.html", 
+                "id": 59
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/60.html", 
+                "id": 60
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/79.html", 
+                "id": 79
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9225", 
+                "published": "2015-01-21T10:17:06.777-05:00", 
+                "id": "CVE-2014-9225", 
+                "modified": "2015-01-22T10:20:33.430-05:00", 
+                "summary": "The ajaxswing webui in the management server in Symantec Critical System Protection (SCSP) 5.2.9 through MP6 and Symantec Data Center Security: Server Advanced (SDCS:SA) 6.0.x through 6.0 MP1 allows remote authenticated users to obtain sensitive server information via unspecified vectors."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/200.html", 
+                "id": "CWE-200", 
+                "title": "Information Exposure"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:symantec:critical_system_protection:5.2.9"
+            }, 
+            {
+                "id": "cpe:/a:symantec:data_center_security:6.0.0::~~server_advanced~~~"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.73717", 
+                "id": 73717
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/72094", 
+                "id": 72094
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.symantec.com/security_response/securityupdates/detail.jsp?fid=security_advisory&pvid=security_advisory&year=&suid=20150119_00", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/72094", 
+                    "vendor": "BID"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "4.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/35915", 
+                "id": 35915, 
+                "file": "platforms/multiple/webapps/35915.txt"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-9225"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Symantec Critical System Protection Multiple Security Issues in Management Server (SYM15-001)", 
+                "file": "symantec_critical_system_protection_sym15-001.nasl", 
+                "family": "Windows", 
+                "id": "80911"
+            }, 
+            {
+                "name": "Symantec Data Center Security Server environment.jsp Information Disclosure (SYM15-001)", 
+                "file": "symantec_dcs_cve_2014_9225.nasl", 
+                "family": "CGI abuses", 
+                "id": "81551"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

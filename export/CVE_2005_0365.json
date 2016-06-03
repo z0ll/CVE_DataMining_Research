@@ -1,0 +1,242 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-0365", 
+                "published": "2005-05-02T00:00:00.000-04:00", 
+                "id": "CVE-2005-0365", 
+                "modified": "2010-08-21T00:25:55.263-04:00", 
+                "summary": "The dcopidlng script in KDE 3.2.x and 3.3.x creates temporary files with predictable filenames, which allows local users to overwrite arbitrary files via a symlink attack."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:kde:kde:3.2.x"
+            }, 
+            {
+                "id": "cpe:/o:kde:kde:3.3.x"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.1219", 
+                "id": 1219
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kde.org/info/security/advisory-20050316-2.txt", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://security.gentoo.org/glsa/glsa-200503-14.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110814653804757&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://bugs.kde.org/show_bug.cgi?id=97608", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2005-325.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:058", 
+                    "vendor": "MANDRAKE"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:045", 
+                    "vendor": "MANDRAKE"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1013525", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/14254", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://fedoranews.org/updates/FEDORA-2005-245.shtml", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "2.1", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-0365"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:10676", 
+                "title": "The updatePosition function in lib/xmltok_impl.c in libexpat in Expat 2.0.1, as used in Python, PyXML, w3c-libwww, and other software, allows context-dependent attackers to cause a denial of service (application crash) via an XML document with crafted UTF-8 sequences that trigger a buffer over-read, a different vulnerability than CVE-2009-2625.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:10676"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: kdelibs, ja-kdelibs", 
+                "file": "freebsd_kdelibs0.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52180"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 200503-14 (dcopidlng)", 
+                "file": "glsa_200503_14.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "54879"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora Core 3 : kdelibs-3.3.1-2.9.FC3 (2005-245)", 
+                "file": "fedora_2005-245.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "19631"
+            }, 
+            {
+                "name": "FreeBSD : kdelibs -- insecure temporary file creation (29dd0065-81fa-11d9-a9e7-0001020eed82)", 
+                "file": "freebsd_pkg_29dd006581fa11d9a9e70001020eed82.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "18881"
+            }, 
+            {
+                "name": "GLSA-200503-14 : KDE dcopidlng: Insecure temporary file creation", 
+                "file": "gentoo_GLSA-200503-14.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "17288"
+            }, 
+            {
+                "name": "Mandrake Linux Security Advisory : kdelibs (MDKSA-2005:045)", 
+                "file": "mandrake_MDKSA-2005-045.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "17140"
+            }, 
+            {
+                "name": "Mandrake Linux Security Advisory : kdelibs (MDKSA-2005:058)", 
+                "file": "mandrake_MDKSA-2005-058.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "17346"
+            }, 
+            {
+                "name": "RHEL 4 : kdelibs (RHSA-2005:325)", 
+                "file": "redhat-RHSA-2005-325.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "17625"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2005-245", 
+                "id": "FEDORA-2005-245"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20050325", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2005-325.html", 
+                    "id": "RHSA-2005:325", 
+                    "title": "RHSA-2005:325: kdelibs security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=147405", 
+                    "title": "CAN-2005-0237 homograph spoofing", 
+                    "id": "147405", 
+                    "issue date": "2005-03-23", 
+                    "associated redhat": "RHSA-2005:325"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=148822", 
+                    "title": "CAN-2005-0365 dcopidlng insecure temporary file usage", 
+                    "id": "148822", 
+                    "issue date": "2005-03-23", 
+                    "associated redhat": "RHSA-2005:325"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=150090", 
+                    "title": "CAN-2005-0396 kdelibs DCOP DoS", 
+                    "id": "150090", 
+                    "issue date": "2005-03-23", 
+                    "associated redhat": "RHSA-2005:325"
+                }
+            }
+        ], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200503-14", 
+                "id": "GLSA-200503-14"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,208 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0413", 
+                "published": "2004-08-06T00:00:00.000-04:00", 
+                "id": "CVE-2004-0413", 
+                "modified": "2008-09-05T16:38:22.287-04:00", 
+                "summary": "libsvn_ra_svn in Subversion 1.0.4 trusts the length field of (1) svn://, (2) svn+ssh://, and (3) other svn protocol URL strings, which allows remote attackers to cause a denial of service (memory consumption) and possibly execute arbitrary code via an integer overflow that leads to a heap-based buffer overflow."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:subversion:subversion:1.0.3"
+            }, 
+            {
+                "id": "cpe:/a:openpkg:openpkg:2.0"
+            }, 
+            {
+                "id": "cpe:/a:subversion:subversion:1.0.4"
+            }, 
+            {
+                "id": "cpe:/a:subversion:subversion:1.0"
+            }, 
+            {
+                "id": "cpe:/a:subversion:subversion:1.0.1"
+            }, 
+            {
+                "id": "cpe:/a:subversion:subversion:1.0.2"
+            }, 
+            {
+                "id": "cpe:/a:openpkg:openpkg"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.22016", 
+                "id": 22016
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/10519", 
+                "id": 10519
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/16396", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/10519", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "https://bugzilla.fedora.us/show_bug.cgi?id=1748", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/advisories/6847", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://www.novell.com/linux/security/advisories/2004_18_subversion.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://www.gentoo.org/security/en/glsa/glsa-200406-07.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://subversion.tigris.org/security/CAN-2004-0413-advisory.txt", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/365836", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0413"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Gentoo Security Advisory GLSA 200406-07 (dev-util/subversion)", 
+                "file": "glsa_200406_07.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "54592"
+            }, 
+            {
+                "name": "Subversion SVN Protocol Parser Remote Integer Overflow", 
+                "file": "subversion_1_0_5.nasl", 
+                "family": "Remote file access", 
+                "id": "12284"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora Core 1 : subversion-0.32.1-5 (2004-165)", 
+                "file": "fedora_2004-165.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "13719"
+            }, 
+            {
+                "name": "GLSA-200406-07 : Subversion: Remote heap overflow", 
+                "file": "gentoo_GLSA-200406-07.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "14518"
+            }, 
+            {
+                "name": "Subversion < 1.0.5 svnserver svn:// Protocol Handler Remote Overflow", 
+                "file": "subversion_1_0_5.nasl", 
+                "family": "Misc.", 
+                "id": "12284"
+            }, 
+            {
+                "name": "SuSE-SA:2004:018: subversion", 
+                "file": "suse_SA_2004_018.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "13834"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2004-165", 
+                "id": "FEDORA-2004-165"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FLSA:1748", 
+                "id": "FLSA:1748"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2004-0413.html", 
+                "id": "SuSE-SA:2004:018"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200406-07", 
+                "id": "GLSA-200406-07"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

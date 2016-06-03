@@ -1,0 +1,164 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0865", 
+                "published": "2007-02-08T20:28:00.000-05:00", 
+                "id": "CVE-2007-0865", 
+                "modified": "2011-03-07T21:50:51.907-05:00", 
+                "summary": "SQL injection vulnerability in comments.php in LushiNews 1.01 and earlier allows remote authenticated users to inject arbitrary SQL commands via the id parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:lushinews:lushinews:1.01"
+            }, 
+            {
+                "id": "cpe:/a:lushinews:lushinews:1.00"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34944", 
+                "id": 34944
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/22469", 
+                "id": 22469
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/33134", 
+                "id": 33134
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/0539", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/22469", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://osvdb.org/33134", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/32360", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/24081", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/3287", 
+                    "vendor": "MILW0RM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004961", 
+                "signature": "ET WEB_SPECIFIC_APPS LushiNews SQL Injection Attempt -- comments.php id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004962", 
+                "signature": "ET WEB_SPECIFIC_APPS LushiNews SQL Injection Attempt -- comments.php id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004963", 
+                "signature": "ET WEB_SPECIFIC_APPS LushiNews SQL Injection Attempt -- comments.php id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004964", 
+                "signature": "ET WEB_SPECIFIC_APPS LushiNews SQL Injection Attempt -- comments.php id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004965", 
+                "signature": "ET WEB_SPECIFIC_APPS LushiNews SQL Injection Attempt -- comments.php id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004966", 
+                "signature": "ET WEB_SPECIFIC_APPS LushiNews SQL Injection Attempt -- comments.php id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-0865"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

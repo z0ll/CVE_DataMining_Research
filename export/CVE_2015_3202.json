@@ -1,0 +1,282 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3202", 
+                "published": "2015-07-02T17:59:03.143-04:00", 
+                "id": "CVE-2015-3202", 
+                "modified": "2015-07-07T17:39:27.787-04:00", 
+                "summary": "fusermount in FUSE before 2.9.3-15 does not properly clear the environment before invoking (1) mount or (2) umount as root, which allows local users to write to arbitrary files via a crafted LIBMOUNT_MTAB environment variable that is used by mount s debugging feature."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:fuse_project:fuse:2.9.2"
+            }, 
+            {
+                "id": "cpe:/o:debian:debian_linux:8.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.76257", 
+                "id": 76257
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/74765", 
+                "id": 74765
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://twitter.com/taviso/status/601370527437967360", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "https://gist.github.com/taviso/ecb70eb12d461dd85cba", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/74765", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/05/21/9", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2015/dsa-3266", 
+                    "vendor": "DEBIAN"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "3.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/37089", 
+                "id": 37089, 
+                "file": "platforms/linux/local/37089.txt"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-3202"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:142", 
+                "title": "DSA-3266-1 -- fuse -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:142"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:41", 
+                "title": "DSA-3268-1 -- ntfs-3g -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:41"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3266-1 (fuse - security update)", 
+                "file": "deb_3266.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703266"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 3268-1 (ntfs-3g - security update)", 
+                "file": "deb_3268.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703268"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : fuse (ALAS-2015-558)", 
+                "file": "ala_ALAS-2015-558.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "84594"
+            }, 
+            {
+                "name": "Debian DLA-226-2 : ntfs-3g regression update", 
+                "file": "debian_DLA-226.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "83819"
+            }, 
+            {
+                "name": "Debian DLA-238-1 : fuse security update", 
+                "file": "debian_DLA-238.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "84023"
+            }, 
+            {
+                "name": "Debian DSA-3266-1 : fuse - security update", 
+                "file": "debian_DSA-3266.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "83775"
+            }, 
+            {
+                "name": "Debian DSA-3268-1 : ntfs-3g - security update", 
+                "file": "debian_DSA-3268.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "83785"
+            }, 
+            {
+                "name": "Fedora 21 : fuse-2.9.4-1.fc21 (2015-8751)", 
+                "file": "fedora_2015-8751.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "84064"
+            }, 
+            {
+                "name": "Fedora 22 : fuse-2.9.4-1.fc22 (2015-8756)", 
+                "file": "fedora_2015-8756.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "84035"
+            }, 
+            {
+                "name": "Fedora 21 : ntfs-3g-2015.3.14-2.fc21 (2015-8771)", 
+                "file": "fedora_2015-8771.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "84036"
+            }, 
+            {
+                "name": "Fedora 22 : ntfs-3g-2015.3.14-2.fc22 (2015-8773)", 
+                "file": "fedora_2015-8773.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "83935"
+            }, 
+            {
+                "name": "Fedora 20 : ntfs-3g-2015.3.14-2.fc20 (2015-8777)", 
+                "file": "fedora_2015-8777.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "84172"
+            }, 
+            {
+                "name": "Fedora 20 : fuse-2.9.4-1.fc20 (2015-8782)", 
+                "file": "fedora_2015-8782.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "84173"
+            }, 
+            {
+                "name": "GLSA-201603-04 : FUSE: incorrect filtering of environment variables leading to privilege escalation", 
+                "file": "gentoo_GLSA-201603-04.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "89810"
+            }, 
+            {
+                "name": "openSUSE Security Update : fuse (openSUSE-2015-394)", 
+                "file": "openSUSE-2015-394.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83982"
+            }, 
+            {
+                "name": "openSUSE Security Update : fuse (openSUSE-2015-401)", 
+                "file": "openSUSE-2015-401.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84014"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : FUSE (SUSE-SU-2015:1024-1)", 
+                "file": "suse_SU-2015-1024-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84115"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : fuse (SUSE-SU-2015:1053-1)", 
+                "file": "suse_SU-2015-1053-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84192"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 14.04 / 14.10 / 15.04 : fuse vulnerability (USN-2617-1)", 
+                "file": "ubuntu_USN-2617-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83779"
+            }, 
+            {
+                "name": "Ubuntu 15.04 : ntfs-3g vulnerability (USN-2617-2)", 
+                "file": "ubuntu_USN-2617-2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83809"
+            }, 
+            {
+                "name": "Ubuntu 15.04 : ntfs-3g vulnerability (USN-2617-3)", 
+                "file": "ubuntu_USN-2617-3.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83861"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3266", 
+                "id": "DSA-3266"
+            }
+        ], 
+        "Vmware": []
+    }
+}

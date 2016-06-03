@@ -1,0 +1,139 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6955", 
+                "published": "2014-01-09T13:07:04.033-05:00", 
+                "id": "CVE-2013-6955", 
+                "modified": "2014-01-10T08:54:24.450-05:00", 
+                "summary": "webman/imageSelector.cgi in Synology DiskStation Manager (DSM) 4.0 before 4.0-2259, 4.2 before 4.2-3243, and 4.3 before 4.3-3810 Update 1 allows remote attackers to append data to arbitrary files, and consequently execute arbitrary code, via a pathname in the SLICEUPLOAD X-TMP-FILE HTTP header."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:synology:diskstation_manager:4.3-3810"
+            }, 
+            {
+                "id": "cpe:/a:synology:diskstation_manager:4.0"
+            }, 
+            {
+                "id": "cpe:/a:synology:diskstation_manager:4.2"
+            }, 
+            {
+                "id": "cpe:/a:synology:diskstation_manager:4.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.11561", 
+                "id": 11561
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/615910", 
+                    "vendor": "CERT-VN"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/615910", 
+                "id": "VU#615910"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "synology_dsm_sliceupload_exec_noauth.rb", 
+                "file": "metasploit-framework/modules/exploits/linux/http/synology_dsm_sliceupload_exec_noauth.rb", 
+                "title": "Synology DiskStation Manager SLICEUPLOAD Remote Command Execution"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-6955"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Synology DiskStation Manager 4.0-x < 4.0-2259 / 4.1-x / 4.2-x < 4.2-3243 SLICEUPLOAD Function Remote Code Execution", 
+                "file": "synology_dsm_4_2_3243.nasl", 
+                "family": "CGI abuses", 
+                "id": "72342"
+            }, 
+            {
+                "name": "Synology DiskStation Manager 4.3-x < 4.3-3810 Update 1 Multiple Vulnerabilities", 
+                "file": "synology_dsm_4_3_3810_1.nasl", 
+                "family": "CGI abuses", 
+                "id": "72345"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

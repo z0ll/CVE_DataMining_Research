@@ -1,0 +1,237 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-0144", 
+                "published": "2001-03-12T00:00:00.000-05:00", 
+                "id": "CVE-2001-0144", 
+                "modified": "2008-09-05T16:23:23.197-04:00", 
+                "summary": "CORE SDI SSH1 CRC-32 compensation attack detector allows remote attackers to execute arbitrary commands on an SSH server or client via an integer overflow."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:openbsd:openssh:1.2.3"
+            }, 
+            {
+                "id": "cpe:/a:openbsd:openssh:2.2"
+            }, 
+            {
+                "id": "cpe:/a:ssh:ssh:1.2.24"
+            }, 
+            {
+                "id": "cpe:/a:openbsd:openssh:2.1"
+            }, 
+            {
+                "id": "cpe:/a:openbsd:openssh:1.2.2"
+            }, 
+            {
+                "id": "cpe:/a:ssh:ssh:1.2.26"
+            }, 
+            {
+                "id": "cpe:/a:ssh:ssh:1.2.27"
+            }, 
+            {
+                "id": "cpe:/a:ssh:ssh:1.2.28"
+            }, 
+            {
+                "id": "cpe:/a:openbsd:openssh:2.1.1"
+            }, 
+            {
+                "id": "cpe:/a:ssh:ssh:1.2.29"
+            }, 
+            {
+                "id": "cpe:/a:ssh:ssh:1.2.25"
+            }, 
+            {
+                "id": "cpe:/a:ssh:ssh:1.2.31"
+            }, 
+            {
+                "id": "cpe:/a:ssh:ssh:1.2.30"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.16547", 
+                "id": 16547
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/2347", 
+                "id": 2347
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/503", 
+                "id": 503
+            }, 
+            {
+                "url": "http://www.osvdb.org/795", 
+                "id": 795
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.cert.org/advisories/CA-2001-35.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/2347", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://razor.bindview.com/publish/advisories/adv_ssh1crc.html", 
+                    "vendor": "BINDVIEW"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=98168366406903&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/static/6083.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/795", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/503", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "shellcode-detect", 
+                "id": "sid:2101324", 
+                "signature": "GPL SHELLCODE ssh CRC32 overflow /bin/sh"
+            }, 
+            {
+                "classtype": "shellcode-detect", 
+                "id": "sid:2101326", 
+                "signature": "GPL SHELLCODE ssh CRC32 overflow NOOP"
+            }, 
+            {
+                "classtype": "shellcode-detect", 
+                "id": "sid:2101327", 
+                "signature": "GPL EXPLOIT ssh CRC32 overflow"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "shellcode-detect", 
+                "id": "sid:1324", 
+                "signature": "INDICATOR-SHELLCODE ssh CRC32 overflow /bin/sh"
+            }, 
+            {
+                "category": "shellcode-detect", 
+                "id": "sid:1325", 
+                "signature": "INDICATOR-SHELLCODE ssh CRC32 overflow filler"
+            }, 
+            {
+                "category": "shellcode-detect", 
+                "id": "sid:1326", 
+                "signature": "INDICATOR-SHELLCODE ssh CRC32 overflow NOOP"
+            }, 
+            {
+                "category": "shellcode-detect", 
+                "id": "sid:1327", 
+                "signature": "INDICATOR-SHELLCODE ssh CRC32 overflow"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-0144"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:5397", 
+                "title": "Multiple Vendor SSH Buffer Overflow Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:5397"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-027-1 : OpenSSH - remote exploit", 
+                "file": "debian_DSA-027.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "14864"
+            }, 
+            {
+                "name": "Debian DSA-086-1 : ssh-nonfree - remote root exploit", 
+                "file": "debian_DSA-086.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "14923"
+            }, 
+            {
+                "name": "SSH CRC-32 Compensation Attack Remote Overflow", 
+                "file": "ssh_crc32.nasl", 
+                "family": "Misc.", 
+                "id": "10607"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

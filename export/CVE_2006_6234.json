@@ -1,0 +1,173 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6234", 
+                "published": "2006-12-02T06:28:00.000-05:00", 
+                "id": "CVE-2006-6234", 
+                "modified": "2008-09-05T17:14:15.100-04:00", 
+                "summary": "Multiple SQL injection vulnerabilities in the Content module in PHP-Nuke 6.0, and possibly other versions, allow remote attackers to execute arbitrary SQL commands via (1) the cid parameter in a list_pages_categories action or (2) the pid parameter in a showpage action."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:francisco_burzi:php-nuke:6.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33571", 
+                "id": 33571
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/27501", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/437835/100/200/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.attrition.org/pipermail/vim/2006-December/001157.html", 
+                    "vendor": "VIM"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/1953", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006927", 
+                "signature": "ET WEB_SPECIFIC_APPS PHP-Nuke SQL Injection Attempt -- modules.php cid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006928", 
+                "signature": "ET WEB_SPECIFIC_APPS PHP-Nuke SQL Injection Attempt -- modules.php cid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006929", 
+                "signature": "ET WEB_SPECIFIC_APPS PHP-Nuke SQL Injection Attempt -- modules.php cid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006930", 
+                "signature": "ET WEB_SPECIFIC_APPS PHP-Nuke SQL Injection Attempt -- modules.php cid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006931", 
+                "signature": "ET WEB_SPECIFIC_APPS PHP-Nuke SQL Injection Attempt -- modules.php cid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006932", 
+                "signature": "ET WEB_SPECIFIC_APPS PHP-Nuke SQL Injection Attempt -- modules.php cid UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006933", 
+                "signature": "ET WEB_SPECIFIC_APPS PHP-Nuke SQL Injection Attempt -- modules.php pid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006934", 
+                "signature": "ET WEB_SPECIFIC_APPS PHP-Nuke SQL Injection Attempt -- modules.php pid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006935", 
+                "signature": "ET WEB_SPECIFIC_APPS PHP-Nuke SQL Injection Attempt -- modules.php pid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006936", 
+                "signature": "ET WEB_SPECIFIC_APPS PHP-Nuke SQL Injection Attempt -- modules.php pid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006937", 
+                "signature": "ET WEB_SPECIFIC_APPS PHP-Nuke SQL Injection Attempt -- modules.php pid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006938", 
+                "signature": "ET WEB_SPECIFIC_APPS PHP-Nuke SQL Injection Attempt -- modules.php pid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6234"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

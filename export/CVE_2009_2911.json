@@ -1,0 +1,190 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-2911", 
+                "published": "2009-10-22T12:30:00.217-04:00", 
+                "id": "CVE-2009-2911", 
+                "modified": "2009-10-31T02:22:05.547-04:00", 
+                "summary": "SystemTap 1.0, when the --unprivileged option is used, does not properly restrict certain data sizes, which allows local users to (1) cause a denial of service or gain privileges via a print operation with a large number of arguments that trigger a kernel stack overflow, (2) cause a denial of service via crafted DWARF expressions that trigger a kernel stack frame overflow, or (3) cause a denial of service (infinite loop) via vectors that trigger creation of large unwind tables, related to Common Information Entry (CIE) and Call Frame Instruction (CFI) records."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:systemtap:systemtap:1.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.50529", 
+                "id": 50529
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/36778", 
+                "id": 36778
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2009/10/21/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "https://www.redhat.com/archives/fedora-package-announce/2009-October/msg00793.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "https://www.redhat.com/archives/fedora-package-announce/2009-October/msg00627.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=529175", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2009/2989", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/36778", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://sources.redhat.com/bugzilla/show_bug.cgi?id=10750", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/37167", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://gcc.gnu.org/bugzilla/show_bug.cgi?id=41633", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "1.9", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-2911"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Core 11 FEDORA-2009-10719 (systemtap)", 
+                "file": "fcore_2009_10719.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "66128"
+            }, 
+            {
+                "name": "Fedora Core 10 FEDORA-2009-10849 (systemtap)", 
+                "file": "fcore_2009_10849.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "66142"
+            }, 
+            {
+                "name": "SystemTap Unprivileged Mode Multiple Denial Of Service Vulnerabilities", 
+                "file": "secpod_systemtap_mult_dos_vuln.nasl", 
+                "family": "Denial of Service", 
+                "id": "901043"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 11 : systemtap-1.0-2.fc11 (2009-10719)", 
+                "file": "fedora_2009-10719.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "42273"
+            }, 
+            {
+                "name": "Fedora 10 : systemtap-1.0-2.fc10 (2009-10849)", 
+                "file": "fedora_2009-10849.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "42281"
+            }, 
+            {
+                "name": "openSUSE Security Update : systemtap (openSUSE-SU-2010:0166-1)", 
+                "file": "suse_11_2_systemtap-100301.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "46012"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2009-10719", 
+                "id": "FEDORA-2009-10719"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2009-10849", 
+                "id": "FEDORA-2009-10849"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

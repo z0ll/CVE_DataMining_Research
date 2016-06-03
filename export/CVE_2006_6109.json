@@ -1,0 +1,186 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6109", 
+                "published": "2006-11-26T17:07:00.000-05:00", 
+                "id": "CVE-2006-6109", 
+                "modified": "2011-03-07T21:45:12.610-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in CandyPress Store 3.5.2.14 allow remote attackers to execute arbitrary SQL commands via the (1) policy parameter in openPolicy.asp or the (2) brand parameter in prodList.asp."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:candypress:candypress_store:3.5.2.14"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33438", 
+                "id": 33438
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21090", 
+                "id": 21090
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30346", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4577", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21090/info", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/22954", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://s-a-p.ca/index.php?page=OurAdvisories&id=25", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=116372253323469&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007464", 
+                "signature": "ET WEB_SPECIFIC_APPS CandyPress Store SQL Injection Attempt -- openPolicy.asp policy SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007465", 
+                "signature": "ET WEB_SPECIFIC_APPS CandyPress Store SQL Injection Attempt -- openPolicy.asp policy UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007466", 
+                "signature": "ET WEB_SPECIFIC_APPS CandyPress Store SQL Injection Attempt -- openPolicy.asp policy INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007467", 
+                "signature": "ET WEB_SPECIFIC_APPS CandyPress Store SQL Injection Attempt -- openPolicy.asp policy DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007468", 
+                "signature": "ET WEB_SPECIFIC_APPS CandyPress Store SQL Injection Attempt -- openPolicy.asp policy ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007469", 
+                "signature": "ET WEB_SPECIFIC_APPS CandyPress Store SQL Injection Attempt -- openPolicy.asp policy UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007470", 
+                "signature": "ET WEB_SPECIFIC_APPS CandyPress Store SQL Injection Attempt -- prodList.asp brand SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007471", 
+                "signature": "ET WEB_SPECIFIC_APPS CandyPress Store SQL Injection Attempt -- prodList.asp brand UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007472", 
+                "signature": "ET WEB_SPECIFIC_APPS CandyPress Store SQL Injection Attempt -- prodList.asp brand INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007473", 
+                "signature": "ET WEB_SPECIFIC_APPS CandyPress Store SQL Injection Attempt -- prodList.asp brand DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007474", 
+                "signature": "ET WEB_SPECIFIC_APPS CandyPress Store SQL Injection Attempt -- prodList.asp brand ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007475", 
+                "signature": "ET WEB_SPECIFIC_APPS CandyPress Store SQL Injection Attempt -- prodList.asp brand UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6109"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,133 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2847", 
+                "published": "2007-05-24T14:30:00.000-04:00", 
+                "id": "CVE-2007-2847", 
+                "modified": "2012-11-05T22:40:14.200-05:00", 
+                "summary": "Multiple cross-site scripting (XSS) vulnerabilities in hlstats.php in HLstats 1.35, and possibly earlier, allow remote attackers to inject arbitrary web script or HTML via the (1) authusername or (2) authpassword parameter, different vectors than CVE-2007-0840 and CVE-2007-2812."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:hlstats:hlstats:1.35"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.36959", 
+                "id": 36959
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/24102", 
+                "id": 24102
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/36215", 
+                "id": 36215
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/24102", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/469291/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://osvdb.org/36215", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34450", 
+                    "vendor": "XF"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004554", 
+                "signature": "ET WEB_SPECIFIC_APPS HLstats XSS Attempt -- hlstats.php authusername"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004555", 
+                "signature": "ET WEB_SPECIFIC_APPS HLstats XSS Attempt -- hlstats.php authpassword"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2847"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,150 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0042", 
+                "published": "1997-04-07T00:00:00.000-04:00", 
+                "id": "CVE-1999-0042", 
+                "modified": "2008-09-09T08:33:36.570-04:00", 
+                "summary": "Buffer overflow in University of Washington s implementation of IMAP and POP servers."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:bsdi:bsd_os:3.0"
+            }, 
+            {
+                "id": "cpe:/o:caldera:openlinux:1.0"
+            }, 
+            {
+                "id": "cpe:/a:university_of_washington:imap:4"
+            }, 
+            {
+                "id": "cpe:/o:redhat:linux:4.0"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:4.2.1"
+            }, 
+            {
+                "id": "cpe:/o:redhat:linux:2.0"
+            }, 
+            {
+                "id": "cpe:/o:bsdi:bsd_os:2.1"
+            }, 
+            {
+                "id": "cpe:/a:university_of_washington:pop:3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.13874", 
+                "id": 13874
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/11731", 
+                "id": 11731
+            }
+        ], 
+        "Other": {
+            "References": []
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2102105", 
+                "signature": "GPL IMAP authenticate literal overflow attempt"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2101844", 
+                "signature": "GPL IMAP authenticate overflow attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "misc-attack", 
+                "id": "sid:1844", 
+                "signature": "PROTOCOL-IMAP authenticate overflow attempt"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:2105", 
+                "signature": "PROTOCOL-IMAP authenticate literal overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0042"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "UoW IMAP/POP server_login() Function Remote Overflow", 
+                "file": "imap_overflow.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "10125"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

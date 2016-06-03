@@ -1,0 +1,188 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1465", 
+                "published": "2015-04-05T17:59:01.233-04:00", 
+                "id": "CVE-2015-1465", 
+                "modified": "2015-04-09T22:00:22.997-04:00", 
+                "summary": "The IPv4 implementation in the Linux kernel before 3.18.8 does not properly consider the length of the Read-Copy Update (RCU) grace period for redirecting lookups in the absence of caching, which allows remote attackers to cause a denial of service (memory consumption or system crash) via a flood of packets."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/17.html", 
+                "id": "CWE-17", 
+                "title": "Code"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.18.7"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.69036", 
+                "id": 69036
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/torvalds/linux/commit/df4d92549f23e1c037e83323aff58a21b3de7fe0", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1183744", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2546-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2545-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/02/03/13", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.kernel.org/pub/linux/kernel/v3.x/ChangeLog-3.18.8", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=df4d92549f23e1c037e83323aff58a21b3de7fe0", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.8", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-1465"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Fedora 21 : kernel-3.18.5-201.fc21 (2015-1657)", 
+                "file": "fedora_2015-1657.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "81192"
+            }, 
+            {
+                "name": "Fedora 20 : kernel-3.18.5-101.fc20 (2015-1672)", 
+                "file": "fedora_2015-1672.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "81219"
+            }, 
+            {
+                "name": "openSUSE Security Update : the Linux Kernel (openSUSE-2015-543)", 
+                "file": "openSUSE-2015-543.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85432"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : kernel (SUSE-SU-2015:1071-1)", 
+                "file": "suse_SU-2015-1071-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84227"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-utopic vulnerabilities (USN-2545-1)", 
+                "file": "ubuntu_USN-2545-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "82072"
+            }, 
+            {
+                "name": "Ubuntu 14.10 : linux vulnerabilities (USN-2546-1)", 
+                "file": "ubuntu_USN-2546-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "82073"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-trusty vulnerabilities (USN-2562-1)", 
+                "file": "ubuntu_USN-2562-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "82661"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux vulnerabilities (USN-2563-1)", 
+                "file": "ubuntu_USN-2563-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "82662"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2545-1", 
+                "id": "USN-2545-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2546-1", 
+                "id": "USN-2546-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

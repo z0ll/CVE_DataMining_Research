@@ -1,0 +1,208 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6324", 
+                "published": "2014-11-18T18:59:02.503-05:00", 
+                "id": "CVE-2014-6324", 
+                "modified": "2015-03-11T22:00:09.083-04:00", 
+                "summary": "The Kerberos Key Distribution Center (KDC) in Microsoft Windows Server 2003 SP2, Windows Vista SP2, Windows Server 2008 SP2 and R2 SP1, Windows 7 SP1, Windows 8, Windows 8.1, and Windows Server 2012 Gold and R2 allows remote authenticated domain users to obtain domain administrator privileges via a forged signature in a ticket, as exploited in the wild in November 2014, aka \"Kerberos Checksum Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_vista:-:sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2012:-:gold"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008::sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_7:-:sp1:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_7:-:sp1:x86"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2012:r2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_8:-::~~~~x64~"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_8:-::~~~~x86~"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_8.1:-:-:~-~-~-~x64~"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_8.1:-:-:~-~-~-~x86~"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:r2:sp1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.68239", 
+                "id": 68239
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/ncas/alerts/TA14-323A", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS14-068", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id/1031237", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://marc.info/?l=bugtraq&m=142350249315918&w=2", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://blogs.technet.com/b/srd/archive/2014/11/18/additional-information-about-cve-2014-6324.aspx", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "9.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2019897", 
+                "signature": "ET EXPLOIT Possible PYKEK Priv Esc in-use"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2019922", 
+                "signature": "ET EXPLOIT Possible GoldenPac Priv Esc in-use"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms14_068_kerberos_checksum.rb", 
+                "file": "metasploit-framework/modules/auxiliary/admin/kerberos/ms14_068_kerberos_checksum.rb", 
+                "title": "ZyXEL GS1510-16 Password Extractor"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-6324"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28191", 
+                "title": "Kerberos checksum vulnerability - CVE-2014-6324 (MS14-068)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:28191"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS14-068: Vulnerability in Kerberos Could Allow Elevation of Privilege (3011780)", 
+                "file": "smb_nt_ms14-068.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "79311"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [
+            {
+                "url": "http://marc.info/?l=bugtraq&m=142350249315918&w=2", 
+                "id": "SSRT101864"
+            }
+        ], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in Kerberos Could Allow Elevation of Privilege", 
+                "id": "Vulnerability in Kerberos Could Allow Elevation of Privilege", 
+                "title": "3011780"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/3011780", 
+                "id": "3011780", 
+                "title": "Vulnerability in Kerberos Could Allow Elevation of Privilege"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS14-068", 
+                "id": "MS14-068", 
+                "title": "Vulnerability in Kerberos Could Allow Elevation of Privilege"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

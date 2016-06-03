@@ -1,0 +1,271 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3009", 
+                "published": "2011-08-05T18:55:01.547-04:00", 
+                "id": "CVE-2011-3009", 
+                "modified": "2012-11-06T00:00:03.330-05:00", 
+                "summary": "Ruby before 1.8.6-p114 does not reset the random seed upon forking, which makes it easier for context-dependent attackers to predict the values of random numbers by leveraging knowledge of the number sequence obtained in a different child process, a related issue to CVE-2003-0900."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/310.html", 
+                "id": "CWE-310", 
+                "title": "Cryptographic Issues"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.8.6:p36"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.8.6:p110"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.8.6:p111"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.58201", 
+                "id": 58201
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/49126", 
+                "id": 49126
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2011/07/20/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/69157", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/49126", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2011-1581.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2012-0070.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://redmine.ruby-lang.org/issues/show/4338", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-3009"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23425", 
+                "title": "ELSA-2012:0070: ruby security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23425"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21332", 
+                "title": "RHSA-2012:0070: ruby security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21332"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27928", 
+                "title": "ELSA-2011-1581 -- ruby security, bug fix, and enhancement update (low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27928"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26914", 
+                "title": "RHSA-2011:1581 -- ruby security, bug fix, and enhancement update (Low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26914"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CentOS Update for irb CESA-2012:0070 centos4", 
+                "file": "gb_CESA-2012_0070_irb_centos4.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881191"
+            }, 
+            {
+                "name": "CentOS Update for ruby CESA-2012:0070 centos5", 
+                "file": "gb_CESA-2012_0070_ruby_centos5.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881137"
+            }, 
+            {
+                "name": "RedHat Update for ruby RHSA-2011:1581-03", 
+                "file": "gb_RHSA-2011_1581-03_ruby.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870640"
+            }, 
+            {
+                "name": "RedHat Update for ruby RHSA-2012:0070-01", 
+                "file": "gb_RHSA-2012_0070-01_ruby.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870534"
+            }, 
+            {
+                "name": "Ruby Random Number Values Information Disclosure Vulnerability", 
+                "file": "secpod_ruby_random_number_values_info_disc_vuln.nasl", 
+                "family": "General", 
+                "id": "902559"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 4 / 5 : ruby (CESA-2012:0070)", 
+                "file": "centos_RHSA-2012-0070.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "57734"
+            }, 
+            {
+                "name": "Oracle Linux 4 / 5 : ruby (ELSA-2012-0070)", 
+                "file": "oraclelinux_ELSA-2012-0070.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68441"
+            }, 
+            {
+                "name": "RHEL 6 : ruby (RHSA-2011:1581)", 
+                "file": "redhat-RHSA-2011-1581.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "57017"
+            }, 
+            {
+                "name": "RHEL 4 / 5 : ruby (RHSA-2012:0070)", 
+                "file": "redhat-RHSA-2012-0070.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "57747"
+            }, 
+            {
+                "name": "openSUSE Security Update : ruby (openSUSE-SU-2012:0228-1)", 
+                "file": "suse_11_4_ruby-120117.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "76015"
+            }, 
+            {
+                "name": "SuSE 11.1 Security Update : ruby (SAT Patch Number 5716)", 
+                "file": "suse_11_ruby-187p357-120126.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "57840"
+            }, 
+            {
+                "name": "SuSE 11.1 Security Update : ruby (SAT Patch Number 5716)", 
+                "file": "suse_11_ruby-187p357-120127.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "57841"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2011-1581.html", 
+                    "id": "RHSA-2011:1581", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20120070", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2012-0070.html", 
+                    "id": "RHSA-2012:0070", 
+                    "title": "RHSA-2012:0070: ruby security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=722415", 
+                    "title": "CVE-2011-2686 CVE-2011-2705 CVE-2011-3009 ruby: Properly initialize the random number generator when forking new process", 
+                    "id": "722415", 
+                    "issue date": "2012-01-30", 
+                    "associated redhat": "RHSA-2012:0070"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=750564", 
+                    "title": "CVE-2011-4815 ruby: hash table collisions CPU usage DoS (oCERT-2011-003)", 
+                    "id": "750564", 
+                    "issue date": "2012-01-30", 
+                    "associated redhat": "RHSA-2012:0070"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

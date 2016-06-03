@@ -1,0 +1,255 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4971", 
+                "published": "2013-12-12T13:55:03.897-05:00", 
+                "id": "CVE-2011-4971", 
+                "modified": "2014-01-23T23:23:02.663-05:00", 
+                "summary": "Multiple integer signedness errors in the (1) process_bin_sasl_auth, (2) process_bin_complete_sasl_auth, (3) process_bin_update, and (4) process_bin_append_prepend functions in Memcached 1.4.5 and earlier allow remote attackers to cause a denial of service (crash) via a large body length value in a packet."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:memcached:memcached:1.4.2"
+            }, 
+            {
+                "id": "cpe:/a:memcached:memcached:1.4.3"
+            }, 
+            {
+                "id": "cpe:/a:memcached:memcached:1.4.4"
+            }, 
+            {
+                "id": "cpe:/a:memcached:memcached:1.2.8"
+            }, 
+            {
+                "id": "cpe:/a:memcached:memcached:1.4.5"
+            }, 
+            {
+                "id": "cpe:/a:memcached:memcached:1.2.7"
+            }, 
+            {
+                "id": "cpe:/a:memcached:memcached:1.4.0"
+            }, 
+            {
+                "id": "cpe:/a:memcached:memcached:1.4.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.65726", 
+                "id": 65726
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://code.google.com/p/memcached/issues/detail?id=192", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2080-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2013:280", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2014/dsa-2832", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/56183", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://insecurety.net/?p=872", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "memcached.rb", 
+                "file": "metasploit-framework/modules/auxiliary/dos/misc/memcached.rb", 
+                "title": "Memcached Remote Denial of Service"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-4971"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22079", 
+                "title": "USN-2080-1 -- memcached vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22079"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21020", 
+                "title": "DSA-2832-1 memcached - several", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21020"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2832-1 (memcached - several vulnerabilities)", 
+                "file": "deb_2832.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "702832"
+            }, 
+            {
+                "name": "Fedora Update for memcached FEDORA-2014-0926", 
+                "file": "gb_fedora_2014_0926_memcached_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867388"
+            }, 
+            {
+                "name": "Fedora Update for memcached FEDORA-2014-0934", 
+                "file": "gb_fedora_2014_0934_memcached_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867258"
+            }, 
+            {
+                "name": "Ubuntu Update for memcached USN-2080-1", 
+                "file": "gb_ubuntu_USN_2080_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841686"
+            }, 
+            {
+                "name": "Memcached Remote Denial of Service Vulnerability", 
+                "file": "secpod_memcached_remote_dos_vuln.nasl", 
+                "family": "Denial of Service", 
+                "id": "900914"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-2832-1 : memcached - several vulnerabilities", 
+                "file": "debian_DSA-2832.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "71780"
+            }, 
+            {
+                "name": "Fedora 20 : memcached-1.4.17-1.fc20 (2014-0926)", 
+                "file": "fedora_2014-0926.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "72249"
+            }, 
+            {
+                "name": "Fedora 19 : memcached-1.4.17-1.fc19 (2014-0934)", 
+                "file": "fedora_2014-0934.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "72250"
+            }, 
+            {
+                "name": "GLSA-201406-13 : memcached: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201406-13.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "76064"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : memcached (MDVSA-2013:280)", 
+                "file": "mandriva_MDVSA-2013-280.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "71075"
+            }, 
+            {
+                "name": "openSUSE Security Update : memcached (openSUSE-SU-2014:0867-1)", 
+                "file": "openSUSE-2014-454.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "76365"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 12.10 / 13.04 / 13.10 : memcached vulnerabilities (USN-2080-1)", 
+                "file": "ubuntu_USN-2080-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "71938"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2013:280", 
+                "id": "MDVSA-2013:280"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2080-1", 
+                "id": "USN-2080-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2832", 
+                "id": "DSA-2832"
+            }
+        ], 
+        "Vmware": []
+    }
+}

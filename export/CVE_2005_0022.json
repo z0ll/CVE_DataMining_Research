@@ -1,0 +1,221 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-0022", 
+                "published": "2005-05-02T00:00:00.000-04:00", 
+                "id": "CVE-2005-0022", 
+                "modified": "2010-08-21T00:25:22.797-04:00", 
+                "summary": "Buffer overflow in the spa_base64_to_bits function in Exim before 4.43, as originally obtained from Samba code, and as called by the auth_spa_client function, may allow attackers to execute arbitrary code during SPA authentication."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:university_of_cambridge:exim:4.40"
+            }, 
+            {
+                "id": "cpe:/a:university_of_cambridge:exim:4.41"
+            }, 
+            {
+                "id": "cpe:/a:university_of_cambridge:exim:4.42"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.1093", 
+                "id": 1093
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/12188", 
+                "id": 12188
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2005-025.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.exim.org/mail-archives/exim-users/Week-of-Mon-20050103/msg00028.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.idefense.com/application/poi/display?id=178&type=vulnerabilities", 
+                    "vendor": "IDEFENSE"
+                }, 
+                {
+                    "url": "http://security.gentoo.org/glsa/glsa-200501-23.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110824870908614&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://ftp6.us.freebsd.org/pub/mail/exim/ChangeLogs/ChangeLog-4.44", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/12188", 
+                    "vendor": "BID"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-0022"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:11293", 
+                "title": "Perl-Compatible Regular Expression (PCRE) library before 7.3 allows context-dependent attackers to cause a denial of service (crash) and possibly execute arbitrary code via regex patterns containing unmatched \"\\Q\\E\" sequences with orphan \"\\E\" codes.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:11293"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "exim -- two buffer overflow vulnerabilities", 
+                "file": "freebsd_exim.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52252"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 200501-23 (exim)", 
+                "file": "glsa_200501_23.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "54809"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Exim < 4.44 Multiple Overflows", 
+                "file": "exim_spa_ipv6_overflow.nasl", 
+                "family": "SMTP problems", 
+                "id": "16111"
+            }, 
+            {
+                "name": "Fedora Core 2 : exim-4.43-1.FC2.1 (2005-001)", 
+                "file": "fedora_2005-001.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "16113"
+            }, 
+            {
+                "name": "Fedora Core 3 : exim-4.43-1.FC3.1 (2005-002)", 
+                "file": "fedora_2005-002.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "62248"
+            }, 
+            {
+                "name": "FreeBSD : exim -- two buffer overflow vulnerabilities (ca9ce879-5ebb-11d9-a01c-0050569f0001)", 
+                "file": "freebsd_pkg_ca9ce8795ebb11d9a01c0050569f0001.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "19118"
+            }, 
+            {
+                "name": "GLSA-200501-23 : Exim: Two buffer overflows", 
+                "file": "gentoo_GLSA-200501-23.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "16414"
+            }, 
+            {
+                "name": "RHEL 4 : exim (RHSA-2005:025)", 
+                "file": "redhat-RHSA-2005-025.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "17165"
+            }, 
+            {
+                "name": "Ubuntu 4.10 : exim4 vulnerabilities (USN-56-1)", 
+                "file": "ubuntu_USN-56-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "20674"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20050025", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2005-025.html", 
+                    "id": "RHSA-2005:025", 
+                    "title": "RHSA-2005:025: exim security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=144099", 
+                    "title": "CAN-2005-0021 exim security issues (CAN-2005-0022)", 
+                    "id": "144099", 
+                    "issue date": "2005-02-15", 
+                    "associated redhat": "RHSA-2005:025"
+                }
+            }
+        ], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200501-23", 
+                "id": "GLSA-200501-23"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,214 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1518", 
+                "published": "2007-03-20T16:19:00.000-04:00", 
+                "id": "CVE-2007-1518", 
+                "modified": "2008-09-05T17:20:42.560-04:00", 
+                "summary": "SQL injection vulnerability in usergroups.php in Woltlab Burning Board (wBB) 2.x allows remote attackers to execute arbitrary SQL commands via the array index of the applicationids array."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.3.3"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.3.4"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.3.5"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.3.6"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.3.0"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.3.1"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.0_beta_4"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.3.2"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.0"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.0_beta_5"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.7"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.6"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.5"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.0.3"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.4"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.0_beta_3"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.1.6"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.1.5"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.2.3"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.0_rc1"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.2.2"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.0_rc2"
+            }, 
+            {
+                "id": "cpe:/a:woltlab:burning_board:2.2.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35691", 
+                "id": 35691
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/22970", 
+                "id": 22970
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/22970", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/462860/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/463002/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2455", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004247", 
+                "signature": "ET WEB_SPECIFIC_APPS Woltlab Burning Board SQL Injection Attempt -- usergroups.php SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004248", 
+                "signature": "ET WEB_SPECIFIC_APPS Woltlab Burning Board SQL Injection Attempt -- usergroups.php UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004249", 
+                "signature": "ET WEB_SPECIFIC_APPS Woltlab Burning Board SQL Injection Attempt -- usergroups.php INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004250", 
+                "signature": "ET WEB_SPECIFIC_APPS Woltlab Burning Board SQL Injection Attempt -- usergroups.php DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004251", 
+                "signature": "ET WEB_SPECIFIC_APPS Woltlab Burning Board SQL Injection Attempt -- usergroups.php ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004252", 
+                "signature": "ET WEB_SPECIFIC_APPS Woltlab Burning Board SQL Injection Attempt -- usergroups.php UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1518"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

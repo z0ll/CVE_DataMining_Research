@@ -1,0 +1,140 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-2179", 
+                "published": "2013-12-26T20:55:05.283-05:00", 
+                "id": "CVE-2013-2179", 
+                "modified": "2013-12-27T11:00:52.893-05:00", 
+                "summary": "X.Org xdm 1.1.10, 1.1.11, and possibly other versions, when performing authentication using certain implementations of the crypt API function that can return NULL, allows remote attackers to cause a denial of service (NULL pointer dereference and crash) by attempting to log into an account whose password field contains invalid characters, as demonstrated using the crypt function from glibc 2.17 and later with (1) the \"!\" character in the salt portion of a password field or (2) a password that has been encrypted using DES or MD5 in FIPS-140 mode."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/310.html", 
+                "id": "CWE-310", 
+                "title": "Cryptographic Issues"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:x:x_display_manager:1.1.10"
+            }, 
+            {
+                "id": "cpe:/a:x:x_display_manager:1.1.11"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.9152", 
+                "id": 9152
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://cgit.freedesktop.org/xorg/app/xdm/commit/?id=8d1eb5c74413e4c9a21f689fc106949b121c0117", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugs.mageia.org/show_bug.cgi?id=10682", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2013/06/13/8", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2013-07/msg00002.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "4.3", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-2179"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:16888", 
+                "title": "NULL pointer crash", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:16888"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "openSUSE Security Update : xdm (openSUSE-SU-2013:1117-1)", 
+                "file": "openSUSE-2013-547.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75068"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2013-2179.html", 
+                "id": "openSUSE-SU-2013:1117"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

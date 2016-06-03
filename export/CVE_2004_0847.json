@@ -1,0 +1,190 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0847", 
+                "published": "2004-11-03T00:00:00.000-05:00", 
+                "id": "CVE-2004-0847", 
+                "modified": "2008-09-10T15:28:02.867-04:00", 
+                "summary": "The Microsoft .NET forms authentication capability for ASP.NET allows remote attackers to bypass authentication for .aspx files in restricted directories via a request containing a (1) \"\\\" (backslash) or (2) \"%5C\" (encoded backslash), aka \"Path Validation Vulnerability.\""
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:asp.net"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.22371", 
+                "id": 22371
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/11342", 
+                "id": 11342
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA05-039A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/283646", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/17644", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms05-004.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/ntbugtraq/2004-q3/0221.html", 
+                    "vendor": "NTBUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/11342", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://sourceforge.net/mailarchive/forum.php?thread_id=5671607&forum_id=24754", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/283646", 
+                "id": "VU#283646"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2001342", 
+                "signature": "ET WEB_SERVER IIS ASP.net Auth Bypass / Canonicalization"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0847"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:4987", 
+                "title": "Microsoft .NET Framework v1.0 Security Bypass", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:4987"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:3556", 
+                "title": "Microsoft .NET Framework v1.1 Security Bypass", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:3556"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Security Bulletin MS05-004", 
+                "file": "remote-MS05-004.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "101010"
+            }, 
+            {
+                "name": "Microsoft Security Bulletin MS05-004", 
+                "file": "remote-MS05-004.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "101011"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS05-004: ASP.NET Path Validation Vulnerability (887219)", 
+                "file": "smb_nt_ms05-004.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "16333"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/ASP.NET Path Validation Vulnerability", 
+                "id": "ASP.NET Path Validation Vulnerability", 
+                "title": "886904"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/887219", 
+                "id": "887219", 
+                "title": "ASP.NET Path Validation Vulnerability"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS05-004", 
+                "id": "MS05-004", 
+                "title": "ASP.NET Path Validation Vulnerability"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,215 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3005", 
+                "published": "2013-07-06T09:57:36.933-04:00", 
+                "id": "CVE-2013-3005", 
+                "modified": "2013-12-05T00:26:54.143-05:00", 
+                "summary": "The TFTP client in IBM AIX 6.1 and 7.1, and VIOS 2.2.2.2-FP-26 SP-02, when RBAC is enabled, allows remote authenticated users to bypass intended file-ownership restrictions, and read or overwrite arbitrary files, via unspecified vectors."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:ibm:aix:6.1"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:7.1"
+            }, 
+            {
+                "id": "cpe:/o:ibm:vios:2.2.2.2:fp-26_sp-02"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.9339", 
+                "id": 9339
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0040107", 
+                "id": "2013-B-0092", 
+                "title": "Multiple Vulnerabilities in IBM AIX"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/85366", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IV42935", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IV42934", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IV42933", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IV42932", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IV42700", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IV40221", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://aix.software.ibm.com/aix/efixes/security/tftp_advisory.asc", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "single_instance", 
+                    "exploit": "6.8", 
+                    "base": "8.5", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-3005"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19519", 
+                "title": "tftp Security Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:19519"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "AIX 6.1 TL 6 : tftp (IV40221)", 
+                "file": "aix_IV40221.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "67177"
+            }, 
+            {
+                "name": "AIX 7.1 TL 1 : tftp (IV42700)", 
+                "file": "aix_IV42700.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "67178"
+            }, 
+            {
+                "name": "AIX 6.1 TL 7 : tftp (IV42932)", 
+                "file": "aix_IV42932.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "67179"
+            }, 
+            {
+                "name": "AIX 6.1 TL 8 : tftp (IV42933)", 
+                "file": "aix_IV42933.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "67180"
+            }, 
+            {
+                "name": "AIX 7.1 TL 0 : tftp (IV42934)", 
+                "file": "aix_IV42934.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "67181"
+            }, 
+            {
+                "name": "AIX 7.1 TL 2 : tftp (IV42935)", 
+                "file": "aix_IV42935.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "67182"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IV40221", 
+                "id": "IV40221"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IV42700", 
+                "id": "IV42700"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IV42932", 
+                "id": "IV42932"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IV42933", 
+                "id": "IV42933"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IV42934", 
+                "id": "IV42934"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IV42935", 
+                "id": "IV42935"
+            }
+        ], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

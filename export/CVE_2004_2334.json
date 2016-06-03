@@ -1,0 +1,164 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-2334", 
+                "published": "2004-12-31T00:00:00.000-05:00", 
+                "id": "CVE-2004-2334", 
+                "modified": "2008-09-05T16:43:50.813-04:00", 
+                "summary": "Multiple cross-site scripting (XSS) vulnerabilities in EMU Webmail 5.2.7 allow remote attackers to inject arbitrary web script or HTML via (1) a hex-encoded value to the variable parameter in emumail.fcgi, (2) the folder parameter in emumail.fcgi, or Javascript in the (3) username or (4) password field in the login page."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:emumail:emu_webmail:5.2.7"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.23229", 
+                "id": 23229
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/9861", 
+                "id": 9861
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/4204", 
+                "id": 4204
+            }, 
+            {
+                "url": "http://www.osvdb.org/4972", 
+                "id": 4972
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/15452", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/15451", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.zone-h.com/advisories/read/id=4141", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/9861", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/4972", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/4204", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1009397", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/11110", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://members.lycos.co.uk/r34ct/main/emu/emu.txt", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "4.3", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:2567", 
+                "signature": "SERVER-WEBAPP Emumail init.emu access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:2568", 
+                "signature": "SERVER-WEBAPP Emumail emumail.fcgi access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-2334"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Emumail WebMail Multiple Remote Vulnerabilities (XSS, Disc)", 
+                "file": "emumail_multiple_vulns.nasl", 
+                "family": "CGI abuses", 
+                "id": "12095"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

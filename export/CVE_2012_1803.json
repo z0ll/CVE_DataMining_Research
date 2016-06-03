@@ -1,0 +1,186 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1803", 
+                "published": "2012-04-27T20:55:01.203-04:00", 
+                "id": "CVE-2012-1803", 
+                "modified": "2013-05-20T23:16:18.110-04:00", 
+                "summary": "RuggedCom Rugged Operating System (ROS) 3.10.x and earlier has a factory account with a password derived from the MAC Address field in the banner, which makes it easier for remote attackers to obtain access by performing a calculation on this address value, and then establishing a (1) TELNET, (2) remote shell (aka rsh), or (3) serial-console session."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/310.html", 
+                "id": "CWE-310", 
+                "title": "Cryptographic Issues"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:ruggedcom:ros:3.3"
+            }, 
+            {
+                "id": "cpe:/o:ruggedcom:ros:3.2"
+            }, 
+            {
+                "id": "cpe:/o:ruggedcom:ros:3.10"
+            }, 
+            {
+                "id": "cpe:/o:ruggedcom:ros:3.9"
+            }, 
+            {
+                "id": "cpe:/o:ruggedcom:ros:3.7"
+            }, 
+            {
+                "id": "cpe:/o:ruggedcom:ros:3.8"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.60650", 
+                "id": 60650
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/53215", 
+                "id": 53215
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/control_systems/pdf/ICS-ALERT-12-116-01A.pdf", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/MAPG-8RCPEN", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/889195", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.wired.com/threatlevel/2012/04/ruggedcom-backdoor/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/53215", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.ruggedcom.com/productbulletin/ros-security-page/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://seclists.org/fulldisclosure/2012/Apr/277", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://ics-cert.us-cert.gov/advisories/ICSA-12-146-01A", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://arstechnica.com/business/news/2012/04/backdoor-in-mission-critical-hardware-threatens-power-traffic-control-systems.ars", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2012-04/0186.html", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/889195", 
+                "id": "VU#889195"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "single_instance", 
+                    "exploit": "6.8", 
+                    "base": "8.5", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "telnet_ruggedcom.rb", 
+                "file": "metasploit-framework/modules/auxiliary/scanner/telnet/telnet_ruggedcom.rb", 
+                "title": "RuggedCom Telnet Password Generator"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/18779", 
+                "id": 18779, 
+                "file": "platforms/hardware/remote/18779.txt"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-1803"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Rugged Operating System Backdoor Unauthorized Access Vulnerability", 
+                "file": "gb_rugged_operating_system_53215.nasl", 
+                "family": "Default Accounts", 
+                "id": "801760"
+            }
+        ], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

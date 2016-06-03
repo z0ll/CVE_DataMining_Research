@@ -1,0 +1,304 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2684", 
+                "published": "2007-05-21T16:30:00.000-04:00", 
+                "id": "CVE-2007-2684", 
+                "modified": "2008-11-15T01:49:33.640-05:00", 
+                "summary": "Jetbox CMS 2.1 allows remote attackers to obtain sensitive information via (1) a direct request to (a) main_page.php, (b) open_tree.php, and (c) outputs.php; (2) a malformed view parameter to index.php, as demonstrated with an SQL injection manipulation; or (3) the id[] parameter to admin/cms/opentree.php, which reveals the installation path in the resulting error message."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:jetbox:jetbox_cms:2.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.36893", 
+                "id": 36893
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/34783", 
+                "id": 34783
+            }, 
+            {
+                "url": "http://www.osvdb.org/34787", 
+                "id": 34787
+            }, 
+            {
+                "url": "http://www.osvdb.org/34788", 
+                "id": 34788
+            }, 
+            {
+                "url": "http://www.osvdb.org/34789", 
+                "id": 34789
+            }, 
+            {
+                "url": "http://www.osvdb.org/34790", 
+                "id": 34790
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.osvdb.org/34783", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.netvigilance.com/advisory0027", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://osvdb.org/34790", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/34789", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/34788", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/34787", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://marc.info/?l=full-disclosure&m=117974375029054&w=2", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34385", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/469222/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003939", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- main_page.php SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003940", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- main_page.php UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003941", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- main_page.php INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003942", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- main_page.php DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003943", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- main_page.php ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003944", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- main_page.php UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003945", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- open_tree.php SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003946", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- open_tree.php UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003947", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- open_tree.php INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003948", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- open_tree.php DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003949", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- open_tree.php ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003950", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- open_tree.php UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003951", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- outputs.php SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003952", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- outputs.php UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003953", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- outputs.php INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003954", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- outputs.php DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003955", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- outputs.php ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003956", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- outputs.php UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003957", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- index.php view SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003958", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- index.php view UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003959", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- index.php view INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003960", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- index.php view DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003961", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- index.php view ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003962", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- index.php view UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003963", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- opentree.php id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003964", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- opentree.php id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003965", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- opentree.php id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003966", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- opentree.php id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003967", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- opentree.php id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003968", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- opentree.php id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2684"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

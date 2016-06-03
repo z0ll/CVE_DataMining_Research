@@ -1,0 +1,162 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0363", 
+                "published": "2004-04-15T00:00:00.000-04:00", 
+                "id": "CVE-2004-0363", 
+                "modified": "2008-09-05T16:38:14.520-04:00", 
+                "summary": "Stack-based buffer overflow in the SymSpamHelper ActiveX component (symspam.dll) in Norton AntiSpam 2004, as used in Norton Internet Security 2004, allows remote attackers to execute arbitrary code via a long parameter to the LaunchCustomRuleWizard method."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:symantec:norton_antispam:2004"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.21770", 
+                "id": 21770
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/9916", 
+                "id": 9916
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/344718", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.nextgenss.com/advisories/antispam.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/15536", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/9916", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.sarc.com/avcenter/security/Content/2004.03.19.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/11169", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=107970870606638&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=107980262324362&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/344718", 
+                "id": "VU#344718"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102485", 
+                "signature": "GPL ACTIVEX Norton antivirus sysmspam.dll load attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-user", 
+                "id": "sid:2485", 
+                "signature": "BROWSER-PLUGINS Symantec Norton Internet Security 2004 ActiveX clsid access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "nis2004_antispam.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/browser/nis2004_antispam.rb", 
+                "title": "Norton AntiSpam 2004 SymSpamHelper ActiveX Control Buffer Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/norton_antispam_symspam_rulewizard", 
+                "id": "exploit_info/norton_antispam_symspam_rulewizard", 
+                "title": "Norton AntiSpam 2004 SymSpamHelper ActiveX control buffer overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0363"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

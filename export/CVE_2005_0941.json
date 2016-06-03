@@ -1,0 +1,238 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-0941", 
+                "published": "2005-05-02T00:00:00.000-04:00", 
+                "id": "CVE-2005-0941", 
+                "modified": "2010-08-21T00:27:17.607-04:00", 
+                "summary": "The StgCompObjStream::Load function in OpenOffice.org OpenOffice 1.1.4 and earlier allocates memory based on 16 bit length values, but process memory using 32 bit values, which allows remote attackers to cause a denial of service and possibly execute arbitrary code via a DOC document with certain length values, which leads to a heap-based buffer overflow."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:openoffice:openoffice:1.1.2"
+            }, 
+            {
+                "id": "cpe:/a:openoffice:openoffice:1.0.1"
+            }, 
+            {
+                "id": "cpe:/a:openoffice:openoffice:1.0.2"
+            }, 
+            {
+                "id": "cpe:/a:openoffice:openoffice:1.1.0"
+            }, 
+            {
+                "id": "cpe:/a:openoffice:openoffice:1.1.1"
+            }, 
+            {
+                "id": "cpe:/a:openoffice:openoffice:1.1.4"
+            }, 
+            {
+                "id": "cpe:/a:openoffice:openoffice:1.1.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.1362", 
+                "id": 1362
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/13092", 
+                "id": 13092
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/13092", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/395516", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2005-375.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.openoffice.org/issues/show_bug.cgi?id=46388", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.gentoo.org/security/en/glsa/glsa-200504-13.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://www.novell.com/linux/security/advisories/2005_21_sr.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/17027", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "4.9", 
+                    "base": "5.1", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-0941"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:9106", 
+                "title": "The StgCompObjStream::Load function in OpenOffice.org OpenOffice 1.1.4 and earlier allocates memory based on 16 bit length values, but process memory using 32 bit values, which allows remote attackers to cause a denial of service and possibly execute arbitrary code via a DOC document with certain length values, which leads to a heap-based buffer overflow.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:9106"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "openoffice -- DOC document heap overflow vulnerability", 
+                "file": "freebsd_openoffice.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52138"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 200504-13 (OpenOffice)", 
+                "file": "glsa_200504_13.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "54915"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 3 / 4 : OpenOffice.org (CESA-2005:375)", 
+                "file": "centos_RHSA-2005-375.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "21813"
+            }, 
+            {
+                "name": "FreeBSD : openoffice -- DOC document heap overflow vulnerability (b206dd82-ac67-11d9-a788-0001020eed82)", 
+                "file": "freebsd_pkg_b206dd82ac6711d9a7880001020eed82.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "19084"
+            }, 
+            {
+                "name": "GLSA-200504-13 : OpenOffice.Org: DOC document Heap Overflow", 
+                "file": "gentoo_GLSA-200504-13.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "18060"
+            }, 
+            {
+                "name": "Mandrake Linux Security Advisory : OpenOffice.org (MDKSA-2005:082)", 
+                "file": "mandrake_MDKSA-2005-082.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "18236"
+            }, 
+            {
+                "name": "RHEL 3 / 4 : openoffice.org (RHSA-2005:375)", 
+                "file": "redhat-RHSA-2005-375.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "18129"
+            }, 
+            {
+                "name": "SUSE-SA:2005:025: OpenOffice_org", 
+                "file": "suse_SA_2005_025.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "18096"
+            }, 
+            {
+                "name": "Ubuntu 4.10 / 5.04 : openoffice.org vulnerability (USN-121-1)", 
+                "file": "ubuntu_USN-121-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "20510"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2005-0941.html", 
+                "id": "SUSE-SR:2005:021"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20050375", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2005-375.html", 
+                    "id": "RHSA-2005:375", 
+                    "title": "RHSA-2005:375: openoffice.org security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=154540", 
+                    "title": "CAN-2005-0941 openoffice.org heap overflow", 
+                    "id": "154540", 
+                    "issue date": "2005-04-25", 
+                    "associated redhat": "RHSA-2005:375"
+                }
+            }
+        ], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200504-13", 
+                "id": "GLSA-200504-13"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,219 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2821", 
+                "published": "2007-05-22T17:30:00.000-04:00", 
+                "id": "CVE-2007-2821", 
+                "modified": "2012-11-05T22:40:10.170-05:00", 
+                "summary": "SQL injection vulnerability in wp-admin/admin-ajax.php in WordPress before 2.2 allows remote attackers to execute arbitrary SQL commands via the cookie parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:wordpress:wordpress:2.1.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.3092", 
+                "id": 3092
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/24076", 
+                "id": 24076
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/36311", 
+                "id": 36311
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/24076", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25345", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34399", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.waraxe.us/advisory-50.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1889", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/3960", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/3960", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://osvdb.org/36311", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/469258/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2008/dsa-1502", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/29014", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004011", 
+                "signature": "ET WEB_SPECIFIC_APPS WordPress SQL Injection Attempt -- admin-ajax.php cookie SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004012", 
+                "signature": "ET WEB_SPECIFIC_APPS WordPress SQL Injection Attempt -- admin-ajax.php cookie UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004013", 
+                "signature": "ET WEB_SPECIFIC_APPS WordPress SQL Injection Attempt -- admin-ajax.php cookie INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004014", 
+                "signature": "ET WEB_SPECIFIC_APPS WordPress SQL Injection Attempt -- admin-ajax.php cookie DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004015", 
+                "signature": "ET WEB_SPECIFIC_APPS WordPress SQL Injection Attempt -- admin-ajax.php cookie ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004016", 
+                "signature": "ET WEB_SPECIFIC_APPS WordPress SQL Injection Attempt -- admin-ajax.php cookie UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/3960", 
+                "id": 3960, 
+                "file": "http://www.exploit-db.com/download/3960"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2821"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:8110", 
+                "title": "DSA-1502 wordpress -- several vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:8110"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20097", 
+                "title": "DSA-1502-1 wordpress - multiple vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20097"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 1502-1 (wordpress)", 
+                "file": "deb_1502_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "60436"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "WordPress check_ajax_referer() Function SQL Injection", 
+                "file": "wordpress_ajax_referer_sql_injection.nasl", 
+                "family": "CGI abuses", 
+                "id": "25291"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-1502", 
+                "id": "DSA-1502"
+            }
+        ], 
+        "Vmware": []
+    }
+}

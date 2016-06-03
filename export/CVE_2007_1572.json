@@ -1,0 +1,131 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1572", 
+                "published": "2007-03-21T17:19:00.000-04:00", 
+                "id": "CVE-2007-1572", 
+                "modified": "2011-03-07T21:52:23.127-05:00", 
+                "summary": "SQL injection vulnerability in search.asp in JGBBS 3.0 Beta 1 and earlier allows remote attackers to execute arbitrary SQL commands via the title parameter, a different vector than CVE-2007-1440.  NOTE: the provenance of this information is unknown; the details are obtained solely from third party information."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:sourceforge:jgbbs:3.0:beta_1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35750", 
+                "id": 35750
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/0940", 
+                    "vendor": "VUPEN"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004152", 
+                "signature": "ET WEB_SPECIFIC_APPS JGBBS SQL Injection Attempt -- search.asp title SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004153", 
+                "signature": "ET WEB_SPECIFIC_APPS JGBBS SQL Injection Attempt -- search.asp title UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004154", 
+                "signature": "ET WEB_SPECIFIC_APPS JGBBS SQL Injection Attempt -- search.asp title INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004155", 
+                "signature": "ET WEB_SPECIFIC_APPS JGBBS SQL Injection Attempt -- search.asp title DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004156", 
+                "signature": "ET WEB_SPECIFIC_APPS JGBBS SQL Injection Attempt -- search.asp title ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004157", 
+                "signature": "ET WEB_SPECIFIC_APPS JGBBS SQL Injection Attempt -- search.asp title UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1572"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

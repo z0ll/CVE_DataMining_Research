@@ -1,0 +1,149 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0278", 
+                "published": "1998-06-01T00:00:00.000-04:00", 
+                "id": "CVE-1999-0278", 
+                "modified": "2008-09-09T08:34:10.103-04:00", 
+                "summary": "In IIS, remote attackers can obtain source code for ASP files by appending \"::$DATA\" to the URL."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:4.0"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_nt:4.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:3.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14140", 
+                "id": 14140
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms98-003.mspx", 
+                    "vendor": "MS"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2001365", 
+                "signature": "ET WEB_SERVER Alternate Data Stream source view attempt"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2100975", 
+                "signature": "GPL EXPLOIT Alternate Data streams ASP file access attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:975", 
+                "signature": "SERVER-IIS Alternate Data streams ASP file access attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0278"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:913", 
+                "title": "IIS ASP Source Code Access Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:913"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Microsoft IIS ASP::$DATA ASP Source Disclosure", 
+                "file": "asp_source_data.nasl", 
+                "family": "Web Servers", 
+                "id": "10362"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/188806", 
+                "id": "188806", 
+                "title": "File Access Issue with Windows NT Internet Information Server (IIS)"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS98-003", 
+                "id": "MS98-003", 
+                "title": "File Access Issue with Windows NT Internet Information Server (IIS)"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

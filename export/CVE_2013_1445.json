@@ -1,0 +1,221 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1445", 
+                "published": "2013-10-26T13:55:03.027-04:00", 
+                "id": "CVE-2013-1445", 
+                "modified": "2013-10-28T11:14:11.150-04:00", 
+                "summary": "The Crypto.Random.atfork function in PyCrypto before 2.6.1 does not properly reseed the pseudo-random number generator (PRNG) before allowing a child process to access it, which makes it easier for context-dependent attackers to obtain sensitive information by leveraging a race condition in which a child process is created and accesses the PRNG within the same rate-limit period as another process."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/310.html", 
+                "id": "CWE-310", 
+                "title": "Cryptographic Issues"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:dlitz:pycrypto:2.1.0"
+            }, 
+            {
+                "id": "cpe:/a:dlitz:pycrypto:2.0"
+            }, 
+            {
+                "id": "cpe:/a:dlitz:pycrypto:2.3"
+            }, 
+            {
+                "id": "cpe:/a:dlitz:pycrypto:2.2"
+            }, 
+            {
+                "id": "cpe:/a:dlitz:pycrypto:1.0.0"
+            }, 
+            {
+                "id": "cpe:/a:dlitz:pycrypto:2.6"
+            }, 
+            {
+                "id": "cpe:/a:dlitz:pycrypto:1.0.1"
+            }, 
+            {
+                "id": "cpe:/a:dlitz:pycrypto:2.5"
+            }, 
+            {
+                "id": "cpe:/a:dlitz:pycrypto:1.0.2"
+            }, 
+            {
+                "id": "cpe:/a:dlitz:pycrypto:2.4"
+            }, 
+            {
+                "id": "cpe:/a:dlitz:pycrypto:2.0.1"
+            }, 
+            {
+                "id": "cpe:/a:dlitz:pycrypto:2.4.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.65361", 
+                "id": 65361
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2013/10/17/3", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "https://github.com/dlitz/pycrypto/commit/19dcf7b15d61b7dc1a125a367151de40df6ef175", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2013/dsa-2781", 
+                    "vendor": "DEBIAN"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "4.3", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-1445"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19624", 
+                "title": "DSA-2781-1 python-crypto - PRNG not correctly reseeded in some situations", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:19624"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2781-1 (python-crypto - PRNG not correctly reseeded in some situations)", 
+                "file": "deb_2781.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "892781"
+            }, 
+            {
+                "name": "Fedora Update for python-crypto FEDORA-2013-19441", 
+                "file": "gb_fedora_2013_19441_python-crypto_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867024"
+            }, 
+            {
+                "name": "Fedora Update for python-crypto FEDORA-2013-19472", 
+                "file": "gb_fedora_2013_19472_python-crypto_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867011"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : python-crypto (ALAS-2013-243)", 
+                "file": "ala_ALAS-2013-243.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "70905"
+            }, 
+            {
+                "name": "Debian DSA-2781-1 : python-crypto - PRNG not correctly reseeded in some situations", 
+                "file": "debian_DSA-2781.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "70503"
+            }, 
+            {
+                "name": "Fedora 20 : python-crypto-2.6.1-1.fc20 (2013-19390)", 
+                "file": "fedora_2013-19390.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "70818"
+            }, 
+            {
+                "name": "Fedora 19 : python-crypto-2.6.1-1.fc19 (2013-19441)", 
+                "file": "fedora_2013-19441.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "70641"
+            }, 
+            {
+                "name": "Fedora 18 : python-crypto-2.6.1-1.fc18 (2013-19472)", 
+                "file": "fedora_2013-19472.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "70643"
+            }, 
+            {
+                "name": "FreeBSD : pycrypto -- PRNG reseed race condition (c0f122e2-3897-11e3-a084-3c970e169bc2)", 
+                "file": "freebsd_pkg_c0f122e2389711e3a0843c970e169bc2.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "70517"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : python-pycrypto (MDVSA-2013:262)", 
+                "file": "mandriva_MDVSA-2013-262.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "70681"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2781", 
+                "id": "DSA-2781"
+            }
+        ], 
+        "Vmware": []
+    }
+}

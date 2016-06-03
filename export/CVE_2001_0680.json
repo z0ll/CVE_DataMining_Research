@@ -1,0 +1,159 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-0680", 
+                "published": "2001-09-20T00:00:00.000-04:00", 
+                "id": "CVE-2001-0680", 
+                "modified": "2008-09-05T16:24:40.363-04:00", 
+                "summary": "Directory traversal vulnerability in ftpd in QPC QVT/Net 4.0 and AVT/Term 5.0 allows a remote attacker to traverse directories on the web server via a \"dot dot\" attack in a LIST (ls) command."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:qpc_software:qvt_net:5.0"
+            }, 
+            {
+                "id": "cpe:/a:qpc_software:qvt_net:4.0"
+            }, 
+            {
+                "id": "cpe:/a:qpc_software:avt_term:5.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.17396", 
+                "id": 17396
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/2618", 
+                "id": 2618
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/1794", 
+                "id": 1794
+            }, 
+            {
+                "url": "http://www.osvdb.org/4050", 
+                "id": 4050
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/static/6375.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/176712", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/2618", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/4050", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/1794", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://online.securityfocus.com/archive/1/216555", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2101992", 
+                "signature": "GPL FTP LIST directory traversal attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "protocol-command", 
+                "id": "sid:1992", 
+                "signature": "PROTOCOL-FTP LIST directory traversal attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-0680"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "FTP Server Traversal Arbitrary File Access", 
+                "file": "ftp_traversal.nasl", 
+                "family": "FTP", 
+                "id": "11112"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

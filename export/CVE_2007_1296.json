@@ -1,0 +1,157 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1296", 
+                "published": "2007-03-06T19:19:00.000-05:00", 
+                "id": "CVE-2007-1296", 
+                "modified": "2011-03-07T21:51:41.563-05:00", 
+                "summary": "SQL injection vulnerability in postingdetails.php in AJ Classifieds 1.0 allows remote attackers to execute arbitrary SQL commands via the postingid parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:aj_square:aj_classifieds:1.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35459", 
+                "id": 35459
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/22808", 
+                "id": 22808
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/35452", 
+                "id": 35452
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/0833", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/22808", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/3410", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://osvdb.org/35452", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/32786", 
+                    "vendor": "XF"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004541", 
+                "signature": "ET WEB_SPECIFIC_APPS AJ Classifieds SQL Injection Attempt -- postingdetails.php postingid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004542", 
+                "signature": "ET WEB_SPECIFIC_APPS AJ Classifieds SQL Injection Attempt -- postingdetails.php postingid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004543", 
+                "signature": "ET WEB_SPECIFIC_APPS AJ Classifieds SQL Injection Attempt -- postingdetails.php postingid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004544", 
+                "signature": "ET WEB_SPECIFIC_APPS AJ Classifieds SQL Injection Attempt -- postingdetails.php postingid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004545", 
+                "signature": "ET WEB_SPECIFIC_APPS AJ Classifieds SQL Injection Attempt -- postingdetails.php postingid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004546", 
+                "signature": "ET WEB_SPECIFIC_APPS AJ Classifieds SQL Injection Attempt -- postingdetails.php postingid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1296"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

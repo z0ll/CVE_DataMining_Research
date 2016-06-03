@@ -1,0 +1,150 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0096", 
+                "published": "1996-12-10T00:00:00.000-05:00", 
+                "id": "CVE-1999-0096", 
+                "modified": "2008-09-09T08:33:41.883-04:00", 
+                "summary": "Sendmail decode alias can be used to overwrite sensitive files."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:freebsd:freebsd:2.1.6"
+            }, 
+            {
+                "id": "cpe:/o:bsdi:bsd_os"
+            }, 
+            {
+                "id": "cpe:/o:sco:internet_faststart:1.1"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:2.1.6.1"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:2.1.5"
+            }, 
+            {
+                "id": "cpe:/o:sco:openserver:5.0.2"
+            }, 
+            {
+                "id": "cpe:/o:sco:openserver:5.0"
+            }, 
+            {
+                "id": "cpe:/o:sco:internet_faststart:1.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.13785", 
+                "id": 13785
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doctype=coll&doc=secbull/122&type=0&nav=sec.sba", 
+                    "vendor": "SUN"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-recon", 
+                "id": "sid:2100659", 
+                "signature": "GPL SMTP expn decode"
+            }, 
+            {
+                "classtype": "attempted-recon", 
+                "id": "sid:2100672", 
+                "signature": "GPL SMTP vrfy decode"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-recon", 
+                "id": "sid:659", 
+                "signature": "SERVER-MAIL Sendmail expn decode"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:672", 
+                "signature": "SERVER-MAIL vrfy decode"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0096"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Sendmail decode Alias Arbitrary File Overwrite", 
+                "file": "sendmail_decode.nasl", 
+                "family": "SMTP problems", 
+                "id": "10248"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

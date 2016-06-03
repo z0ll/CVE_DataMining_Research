@@ -1,0 +1,344 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3215", 
+                "published": "2014-05-08T06:55:05.107-04:00", 
+                "id": "CVE-2014-3215", 
+                "modified": "2015-04-14T22:00:28.060-04:00", 
+                "summary": "seunshare in policycoreutils 2.2.5 is owned by root with 4755 permissions, and executes programs in a way that changes the relationship between the setuid system call and the getresuid saved set-user-ID value, which makes it easier for local users to gain privileges by leveraging a program that mistakenly expected that it could permanently drop privileges."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:redhat:policycoreutils:2.2.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.69605", 
+                "id": 69605
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/67341", 
+                "id": 67341
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/67341", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:156", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2014/05/08/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2014/04/30/4", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2014/04/29/7", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://advisories.mageia.org/MGASA-2014-0251.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "6.9", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-3215"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : libcap-ng (ALAS-2015-543)", 
+                "file": "ala_ALAS-2015-543.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "84244"
+            }, 
+            {
+                "name": "Amazon Linux AMI : kernel (ALAS-2015-544)", 
+                "file": "ala_ALAS-2015-544.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "84245"
+            }, 
+            {
+                "name": "CentOS 6 : kernel (CESA-2015:0864)", 
+                "file": "centos_RHSA-2015-0864.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "82999"
+            }, 
+            {
+                "name": "GLSA-201412-44 : policycoreutils: Privilege escalation", 
+                "file": "gentoo_GLSA-201412-44.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "80265"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : libcap-ng (MDVSA-2014:117)", 
+                "file": "mandriva_MDVSA-2014-117.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "74450"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : libcap-ng (MDVSA-2015:156)", 
+                "file": "mandriva_MDVSA-2015-156.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "82409"
+            }, 
+            {
+                "name": "openSUSE Security Update : libcap-ng (openSUSE-SU-2014:0736-1)", 
+                "file": "openSUSE-2014-401.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75379"
+            }, 
+            {
+                "name": "Oracle Linux 6 : kernel (ELSA-2015-0864)", 
+                "file": "oraclelinux_ELSA-2015-0864.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "82981"
+            }, 
+            {
+                "name": "Oracle Linux 6 : kernel (ELSA-2015-1272)", 
+                "file": "oraclelinux_ELSA-2015-1272.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85097"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : Unbreakable Enterprise kernel (ELSA-2015-3032)", 
+                "file": "oraclelinux_ELSA-2015-3032.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "83045"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2015-3033)", 
+                "file": "oraclelinux_ELSA-2015-3033.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "83046"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2015-3034)", 
+                "file": "oraclelinux_ELSA-2015-3034.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "83047"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : Unbreakable Enterprise kernel (ELSA-2015-3035)", 
+                "file": "oraclelinux_ELSA-2015-3035.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "83448"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2015-3036)", 
+                "file": "oraclelinux_ELSA-2015-3036.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "83449"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : Unbreakable Enterprise kernel (ELSA-2015-3064)", 
+                "file": "oraclelinux_ELSA-2015-3064.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85177"
+            }, 
+            {
+                "name": "OracleVM 3.3 : kernel-uek (OVMSA-2015-0056)", 
+                "file": "oraclevm_OVMSA-2015-0056.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "83108"
+            }, 
+            {
+                "name": "OracleVM 3.3 : kernel-uek (OVMSA-2015-0060)", 
+                "file": "oraclevm_OVMSA-2015-0060.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "83485"
+            }, 
+            {
+                "name": "OracleVM 3.3 : kernel-uek (OVMSA-2015-0109)", 
+                "file": "oraclevm_OVMSA-2015-0109.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "85188"
+            }, 
+            {
+                "name": "OracleVM 3.2 : kernel-uek (OVMSA-2016-0037)", 
+                "file": "oraclevm_OVMSA-2016-0037.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "90019"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2015:0864)", 
+                "file": "redhat-RHSA-2015-0864.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "82985"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL6.x i386/x86_64", 
+                "file": "sl_20150421_kernel_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "82988"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:156", 
+                "id": "MDVSA-2015:156"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20150864", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-0864.html", 
+                    "id": "RHSA-2015:0864", 
+                    "title": "RHSA-2015:0864: kernel security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1095855", 
+                    "title": "CVE-2014-3215 policycoreutils: local privilege escalation via seunshare", 
+                    "id": "1095855", 
+                    "issue date": "2015-04-21", 
+                    "associated redhat": "RHSA-2015:0864"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1153322", 
+                    "title": "CVE-2014-3690 kernel: kvm: vmx: invalid host cr4 handling across vm entries", 
+                    "id": "1153322", 
+                    "issue date": "2015-04-21", 
+                    "associated redhat": "RHSA-2015:0864"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1161565", 
+                    "title": "CVE-2014-7825 CVE-2014-7826 kernel: insufficient syscall number validation in perf and ftrace subsystems", 
+                    "id": "1161565", 
+                    "issue date": "2015-04-21", 
+                    "associated redhat": "RHSA-2015:0864"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1164266", 
+                    "title": "CVE-2014-8884 kernel: usb: buffer overflow in ttusb-dec", 
+                    "id": "1164266", 
+                    "issue date": "2015-04-21", 
+                    "associated redhat": "RHSA-2015:0864"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1179813", 
+                    "title": "CVE-2014-9529 kernel: memory corruption or panic during key garbage collection", 
+                    "id": "1179813", 
+                    "issue date": "2015-04-21", 
+                    "associated redhat": "RHSA-2015:0864"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1180119", 
+                    "title": "CVE-2014-9584 kernel: isofs: unchecked printing of ER records", 
+                    "id": "1180119", 
+                    "issue date": "2015-04-21", 
+                    "associated redhat": "RHSA-2015:0864"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1196581", 
+                    "title": "CVE-2015-1421 kernel: net: slab corruption from use after free on INIT collisions", 
+                    "id": "1196581", 
+                    "issue date": "2015-04-21", 
+                    "associated redhat": "RHSA-2015:0864"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1198109", 
+                    "title": "CVE-2014-8171 kernel: memcg: OOM handling DoS", 
+                    "id": "1198109", 
+                    "issue date": "2015-04-21", 
+                    "associated redhat": "RHSA-2015:0864"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

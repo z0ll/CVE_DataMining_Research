@@ -1,0 +1,157 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0920", 
+                "published": "2007-02-14T06:28:00.000-05:00", 
+                "id": "CVE-2007-0920", 
+                "modified": "2011-03-07T21:50:57.783-05:00", 
+                "summary": "SQL injection vulnerability in philboard_forum.asp in Philboard 1.14 and earlier allows remote attackers to execute arbitrary SQL commands via the forumid parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:philboard:philboard:1.14"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35015", 
+                "id": 35015
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/22532", 
+                "id": 22532
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/35678", 
+                "id": 35678
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/32442", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/0600", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/22532", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://osvdb.org/35678", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/3295", 
+                    "vendor": "MILW0RM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004924", 
+                "signature": "ET WEB_SPECIFIC_APPS Philboard SQL Injection Attempt -- philboard_forum.asp forumid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004925", 
+                "signature": "ET WEB_SPECIFIC_APPS Philboard SQL Injection Attempt -- philboard_forum.asp forumid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004926", 
+                "signature": "ET WEB_SPECIFIC_APPS Philboard SQL Injection Attempt -- philboard_forum.asp forumid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004927", 
+                "signature": "ET WEB_SPECIFIC_APPS Philboard SQL Injection Attempt -- philboard_forum.asp forumid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004928", 
+                "signature": "ET WEB_SPECIFIC_APPS Philboard SQL Injection Attempt -- philboard_forum.asp forumid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004929", 
+                "signature": "ET WEB_SPECIFIC_APPS Philboard SQL Injection Attempt -- philboard_forum.asp forumid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-0920"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

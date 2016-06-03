@@ -1,0 +1,212 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3190", 
+                "published": "2007-06-12T19:30:00.000-04:00", 
+                "id": "CVE-2007-3190", 
+                "modified": "2008-09-05T17:25:04.373-04:00", 
+                "summary": "Multiple SQL injection vulnerabilities in auth.php in Just For Fun Network Management System (JFFNMS) 0.8.3, when magic_quotes_gpc is disabled, allow remote attackers to execute arbitrary SQL commands via the (1) user and (2) pass parameters."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:jffnms:just_for_fun_network_management_system:0.8.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.37260", 
+                "id": 37260
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/24414", 
+                "id": 24414
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://secunia.com/advisories/25587", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://marc.info/?l=full-disclosure&m=118151087109711&w=2", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/24414", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/471039/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2007/dsa-1374", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/26769", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005360", 
+                "signature": "ET WEB_SPECIFIC_APPS Just For Fun Network Management System (JFFNMS) SQL Injection Attempt -- auth.php user SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005361", 
+                "signature": "ET WEB_SPECIFIC_APPS Just For Fun Network Management System (JFFNMS) SQL Injection Attempt -- auth.php user UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005362", 
+                "signature": "ET WEB_SPECIFIC_APPS Just For Fun Network Management System (JFFNMS) SQL Injection Attempt -- auth.php user INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005363", 
+                "signature": "ET WEB_SPECIFIC_APPS Just For Fun Network Management System (JFFNMS) SQL Injection Attempt -- auth.php user DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005364", 
+                "signature": "ET WEB_SPECIFIC_APPS Just For Fun Network Management System (JFFNMS) SQL Injection Attempt -- auth.php user ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005365", 
+                "signature": "ET WEB_SPECIFIC_APPS Just For Fun Network Management System (JFFNMS) SQL Injection Attempt -- auth.php user UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005366", 
+                "signature": "ET DELETED Just For Fun Network Management System (JFFNMS) SQL Injection Attempt -- auth.php pass SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005367", 
+                "signature": "ET DELETED Just For Fun Network Management System (JFFNMS) SQL Injection Attempt -- auth.php pass UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005368", 
+                "signature": "ET DELETED Just For Fun Network Management System (JFFNMS) SQL Injection Attempt -- auth.php pass INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005369", 
+                "signature": "ET DELETED Just For Fun Network Management System (JFFNMS) SQL Injection Attempt -- auth.php pass DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005370", 
+                "signature": "ET DELETED Just For Fun Network Management System (JFFNMS) SQL Injection Attempt -- auth.php pass ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005371", 
+                "signature": "ET DELETED Just For Fun Network Management System (JFFNMS) SQL Injection Attempt -- auth.php pass UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-3190"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18756", 
+                "title": "DSA-1374-1 jffnms - several vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18756"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 1374-1 (jffnms)", 
+                "file": "deb_1374_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "58595"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "JFFNMS auth.php Multiple Parameter SQL Injection", 
+                "file": "jffnms_user_sql_injection.nasl", 
+                "family": "CGI abuses", 
+                "id": "25461"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-1374", 
+                "id": "DSA-1374"
+            }
+        ], 
+        "Vmware": []
+    }
+}

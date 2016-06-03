@@ -1,0 +1,175 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0642", 
+                "published": "2002-07-23T00:00:00.000-04:00", 
+                "id": "CVE-2002-0642", 
+                "modified": "2008-09-05T16:28:33.490-04:00", 
+                "summary": "The registry key containing the SQL Server service account information in Microsoft SQL Server 2000, including Microsoft SQL Server Desktop Engine (MSDE) 2000, has insecure permissions, which allows local users to gain privileges, aka \"Incorrect Permission on SQL Server Service Account Registry Key.\""
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:sql_server:2000"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:msde:2000"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.18412", 
+                "id": 18412
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/5205", 
+                "id": 5205
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/796313", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.cert.org/advisories/CA-2002-22.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms02-034.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/5205", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/static/9523.php", 
+                    "vendor": "XF"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/796313", 
+                "id": "VU#796313"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2100689", 
+                "signature": "GPL NETBIOS xp_reg* registry access"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2100686", 
+                "signature": "GPL NETBIOS xp_reg* - registry access"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-user", 
+                "id": "sid:686", 
+                "signature": "SERVER-MSSQL xp_reg* - registry access"
+            }, 
+            {
+                "category": "attempted-user", 
+                "id": "sid:689", 
+                "signature": "SERVER-MSSQL xp_reg* registry access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-0642"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:1025", 
+                "title": "Incorrect Permission on SQL Server Service Account Registry Key", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:1025"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Cumulative Patch for SQL Server", 
+                "id": "Cumulative Patch for SQL Server", 
+                "title": "316333"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/316333", 
+                "id": "316333", 
+                "title": "Cumulative Patch for SQL Server"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS02-034", 
+                "id": "MS02-034", 
+                "title": "Cumulative Patch for SQL Server"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,191 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4602", 
+                "published": "2006-09-06T20:04:00.000-04:00", 
+                "id": "CVE-2006-4602", 
+                "modified": "2012-10-24T00:00:00.000-04:00", 
+                "summary": "Unrestricted file upload vulnerability in jhot.php in TikiWiki 1.9.4 Sirius and earlier allows remote attackers to execute arbitrary PHP code via a filepath parameter that contains a filename with a .php extension, which is uploaded to the img/wiki/ directory."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:tiki:tikiwiki_cms%2fgroupware:1.9.4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.32129", 
+                "id": 32129
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/19819", 
+                "id": 19819
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/28456", 
+                "id": 28456
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/3450", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/19819", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/28456", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://tikiwiki.org/tiki-read_article.php?articleId=136", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://security.gentoo.org/glsa/glsa-200609-16.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/22100", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/21733", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/2288", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://isc.sans.org/diary.php?storyid=1672", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "tikiwiki_jhot_exec.rb", 
+                "file": "metasploit-framework/modules/exploits/unix/webapp/tikiwiki_jhot_exec.rb", 
+                "title": "TikiWiki jhot Remote Command Execution"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/tikiwiki_jhot_upload", 
+                "id": "exploit_info/tikiwiki_jhot_upload", 
+                "title": "TikiWiki file upload vulnerability (jhot.php)"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-4602"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: tikiwiki", 
+                "file": "freebsd_tikiwiki.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "57473"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 200609-16 (tikiwiki)", 
+                "file": "glsa_200609_16.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "57894"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "FreeBSD : tikiwiki -- multiple vulnerabilities (e4c62abd-5065-11db-a5ae-00508d6a62df)", 
+                "file": "freebsd_pkg_e4c62abd506511dba5ae00508d6a62df.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "22490"
+            }, 
+            {
+                "name": "GLSA-200609-16 : Tikiwiki: Arbitrary command execution", 
+                "file": "gentoo_GLSA-200609-16.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "22460"
+            }, 
+            {
+                "name": "TikiWiki jhot.php Arbitrary File Upload", 
+                "file": "tikiwiki_jhot_arbitrary_uploads.nasl", 
+                "family": "CGI abuses", 
+                "id": "22303"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200609-16", 
+                "id": "GLSA-200609-16"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

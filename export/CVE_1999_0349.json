@@ -1,0 +1,154 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0349", 
+                "published": "1999-01-27T00:00:00.000-05:00", 
+                "id": "CVE-1999-0349", 
+                "modified": "2008-09-09T08:34:19.493-04:00", 
+                "summary": "A buffer overflow in the FTP list (ls) command in IIS allows remote attackers to conduct a denial of service and, in some cases, execute arbitrary commands."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:4.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:3.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14467", 
+                "id": 14467
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.eeye.com/html/Research/Advisories/IIS%20Remote%20FTP%20Exploit/DoS%20Attack.html", 
+                    "vendor": "EEYE"
+                }, 
+                {
+                    "url": "http://support.microsoft.com/default.aspx?scid=kb;%5BLN%5D;Q188348", 
+                    "vendor": "MSKB"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms99-003.mspx", 
+                    "vendor": "MS"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2102338", 
+                "signature": "GPL FTP LIST buffer overflow attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "misc-attack", 
+                "id": "sid:2338", 
+                "signature": "PROTOCOL-FTP LIST buffer overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0349"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft IIS FTP Server Malformed FTP List Request DOS Vulnerability", 
+                "file": "gb_ms99-33_remote.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "802074"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Microsoft IIS FTP Server NLST Command Overflow DoS", 
+                "file": "iis_ftp_crash.nasl", 
+                "family": "FTP", 
+                "id": "10118"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Q188348", 
+                "id": "Q188348", 
+                "title": ""
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/188348", 
+                "id": "188348", 
+                "title": "Patch Available for IIS \"Malformed FTP List Request\" Vulnerability"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS99-003", 
+                "id": "MS99-003", 
+                "title": "Patch Available for IIS \"Malformed FTP List Request\" Vulnerability"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

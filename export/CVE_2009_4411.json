@@ -1,0 +1,210 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-4411", 
+                "published": "2009-12-24T11:30:00.343-05:00", 
+                "id": "CVE-2009-4411", 
+                "modified": "2010-03-04T01:41:12.350-05:00", 
+                "summary": "The (1) setfacl and (2) getfacl commands in XFS acl 2.2.47, when running in recursive (-R) mode, follow symbolic links even when the --physical (aka -P) or -L option is specified, which might allow local users to modify the ACL for arbitrary files or directories via a symlink attack."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:xfs:acl:2.2.47"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.51293", 
+                "id": 51293
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/37455", 
+                "id": 37455
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/61302", 
+                "id": 61302
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/37455", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/55004", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2009/12/23/2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:345", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/38420", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/37907", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/61302", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://oss.sgi.com/bugzilla/show_bug.cgi?id=790", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2010-02/msg00000.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://git.savannah.gnu.org/cgit/acl.git/commit/?id=63451a0", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=499076", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "1.9", 
+                    "base": "3.7", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-4411"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Slackware Advisory SSA:2011-108-01 acl", 
+                "file": "esoft_slk_ssa_2011_108_01.nasl", 
+                "family": "Slackware Local Security Checks", 
+                "id": "69578"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "GLSA-201412-08 : Multiple packages, Multiple vulnerabilities fixed in 2010", 
+                "file": "gentoo_GLSA-201412-08.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "79961"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : acl (MDVSA-2009:345)", 
+                "file": "mandriva_MDVSA-2009-345.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "43610"
+            }, 
+            {
+                "name": "Slackware 11.0 / 12.0 / 12.1 / 12.2 / 13.0 / 13.1 / current : acl (SSA:2011-108-01)", 
+                "file": "Slackware_SSA_2011-108-01.nasl", 
+                "family": "Slackware Local Security Checks", 
+                "id": "53476"
+            }, 
+            {
+                "name": "openSUSE Security Update : acl (acl-1803)", 
+                "file": "suse_11_0_acl-100115.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "44360"
+            }, 
+            {
+                "name": "openSUSE Security Update : acl (acl-1803)", 
+                "file": "suse_11_1_acl-100115.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "44366"
+            }, 
+            {
+                "name": "SuSE 11 Security Update : acl and libacl (SAT Patch Number 1804)", 
+                "file": "suse_11_acl-100115.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "44376"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:345", 
+                "id": "MDVSA-2009:345"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2009-4411.html", 
+                "id": "SUSE-SR:2010:002"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

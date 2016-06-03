@@ -1,0 +1,158 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-1462", 
+                "published": "1999-12-31T00:00:00.000-05:00", 
+                "id": "CVE-1999-1462", 
+                "modified": "2008-09-05T16:19:34.913-04:00", 
+                "summary": "Vulnerability in bb-hist.sh CGI History module in Big Brother 1.09b and 1.09c allows remote attacker to read portions of arbitrary files."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:sean_macguire:big_brother:1.09b"
+            }, 
+            {
+                "id": "cpe:/a:sean_macguire:big_brother:1.09c"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.15190", 
+                "id": 15190
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/142", 
+                "id": 142
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/static/3755.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/142", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/13440", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://bb4.com/README.CHANGES", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-recon", 
+                "id": "sid:894", 
+                "signature": "SERVER-WEBAPP bb-hist.sh access"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1459", 
+                "signature": "SERVER-WEBAPP bb-histlog.sh access"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1460", 
+                "signature": "SERVER-WEBAPP bb-histsvc.sh access"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1461", 
+                "signature": "SERVER-WEBAPP bb-rep.sh access"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1462", 
+                "signature": "SERVER-WEBAPP bb-replog.sh access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1531", 
+                "signature": "SERVER-WEBAPP bb-hist.sh attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-1462"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Big Brother bb-hist.sh History Module Directory Traversal", 
+                "file": "bb-hist.nasl", 
+                "family": "CGI abuses", 
+                "id": "10025"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

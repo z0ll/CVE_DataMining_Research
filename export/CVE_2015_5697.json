@@ -1,0 +1,312 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/668.html", 
+                "id": "CWE-668", 
+                "title": "Exposure of Resource to Wrong Sphere"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/199.html", 
+                "id": "CWE-199", 
+                "title": "Information Management Errors"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/717.html", 
+                "id": "CWE-717", 
+                "title": "OWASP Top Ten 2007 Category A6 - Information Leakage and Improper Error Handling"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/840.html", 
+                "id": "CWE-840", 
+                "title": "Business Logic Errors"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/963.html", 
+                "id": "CWE-963", 
+                "title": "SFP Secondary Cluster: Exposed Data"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/13.html", 
+                "id": 13
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/169.html", 
+                "id": 169
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/22.html", 
+                "id": 22
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/472.html", 
+                "id": 472
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/59.html", 
+                "id": 59
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/60.html", 
+                "id": 60
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/79.html", 
+                "id": 79
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5697", 
+                "published": "2015-08-31T06:59:14.847-04:00", 
+                "id": "CVE-2015-5697", 
+                "modified": "2015-08-31T14:34:24.337-04:00", 
+                "summary": "The get_bitmap_file function in drivers/md/md.c in the Linux kernel before 4.1.6 does not initialize a certain bitmap data structure, which allows local users to obtain sensitive information from kernel memory via a GET_BITMAP_FILE ioctl call."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/200.html", 
+                "id": "CWE-200", 
+                "title": "Information Exposure"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:4.1.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.76848", 
+                "id": 76848
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/torvalds/linux/commit/b6878d9e03043695dbf3fa1caa6dfc09db225b16", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1249011", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/07/28/2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.1.6", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=b6878d9e03043695dbf3fa1caa6dfc09db225b16", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "2.1", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-5697"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:208", 
+                "title": "DSA-3329-1 -- linux -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:208"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3329-1 (linux - security update)", 
+                "file": "deb_3329.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703329"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DLA-310-1 : linux-2.6 security update", 
+                "file": "debian_DLA-310.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "86049"
+            }, 
+            {
+                "name": "Debian DSA-3329-1 : linux - security update", 
+                "file": "debian_DSA-3329.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "85281"
+            }, 
+            {
+                "name": "Fedora 22 : kernel-4.1.4-200.fc22 (2015-12908)", 
+                "file": "fedora_2015-12908.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "85363"
+            }, 
+            {
+                "name": "Fedora 21 : kernel-4.1.4-100.fc21 (2015-12917)", 
+                "file": "fedora_2015-12917.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "85364"
+            }, 
+            {
+                "name": "Fedora 21 : kernel-4.1.5-100.fc21 (2015-13391)", 
+                "file": "fedora_2015-13391.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "85555"
+            }, 
+            {
+                "name": "Fedora 22 : kernel-4.1.5-200.fc22 (2015-13396)", 
+                "file": "fedora_2015-13396.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "85556"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : Unbreakable Enterprise kernel (ELSA-2015-3066)", 
+                "file": "oraclelinux_ELSA-2015-3066.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85261"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2015-3067)", 
+                "file": "oraclelinux_ELSA-2015-3067.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85262"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2015-3068)", 
+                "file": "oraclelinux_ELSA-2015-3068.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85263"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : Unbreakable Enterprise kernel (ELSA-2015-3098)", 
+                "file": "oraclelinux_ELSA-2015-3098.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "86881"
+            }, 
+            {
+                "name": "OracleVM 3.3 : kernel-uek (OVMSA-2015-0113)", 
+                "file": "oraclevm_OVMSA-2015-0113.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "85340"
+            }, 
+            {
+                "name": "OracleVM 3.3 : kernel-uek (OVMSA-2015-0147)", 
+                "file": "oraclevm_OVMSA-2015-0147.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "86882"
+            }, 
+            {
+                "name": "OracleVM 3.2 : kernel-uek (OVMSA-2016-0037)", 
+                "file": "oraclevm_OVMSA-2016-0037.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "90019"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : kernel-source (SUSE-SU-2015:1727-1)", 
+                "file": "suse_SU-2015-1727-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "86378"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux vulnerability (USN-2731-1)", 
+                "file": "ubuntu_USN-2731-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85799"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux vulnerabilities (USN-2748-1)", 
+                "file": "ubuntu_USN-2748-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "86190"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-trusty vulnerabilities (USN-2749-1)", 
+                "file": "ubuntu_USN-2749-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "86204"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-vivid vulnerabilities (USN-2751-1)", 
+                "file": "ubuntu_USN-2751-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "86206"
+            }, 
+            {
+                "name": "Ubuntu 15.04 : linux vulnerabilities (USN-2752-1)", 
+                "file": "ubuntu_USN-2752-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "86207"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-utopic vulnerabilities (USN-2777-1)", 
+                "file": "ubuntu_USN-2777-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "86468"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

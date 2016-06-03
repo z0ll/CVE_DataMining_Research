@@ -1,0 +1,387 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2938", 
+                "published": "2010-10-08T17:00:02.190-04:00", 
+                "id": "CVE-2010-2938", 
+                "modified": "2012-03-19T00:00:00.000-04:00", 
+                "summary": "arch/x86/hvm/vmx/vmcs.c in the virtual-machine control structure (VMCS) implementation in the Linux kernel 2.6.18 on Red Hat Enterprise Linux (RHEL) 5, when an Intel platform without Extended Page Tables (EPT) functionality is used, accesses VMCS fields without verifying hardware support for these fields, which allows local users to cause a denial of service (host OS crash) by requesting a VMCS dump for a fully virtualized Xen guest."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:2.6.18"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.54954", 
+                "id": 54954
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0030545", 
+                "id": "2011-A-0147", 
+                "title": "Multiple Vulnerabilities in VMware ESX and ESXi"
+            }
+        ], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/43578", 
+                "id": 43578
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=620490", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xenbits.xensource.com/xen-unstable.hg?rev/15911", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.vmware.com/security/advisories/VMSA-2011-0012.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/43578", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/520102/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2010-0723.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://support.avaya.com/css/P8/documents/100113326", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/46397", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.9", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-2938"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23145", 
+                "title": "ELSA-2010:0723: kernel security and bug fix update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23145"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22277", 
+                "title": "RHSA-2010:0723: kernel security and bug fix update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22277"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27874", 
+                "title": "DEPRECATED: ELSA-2010-0723 -- kernel security and bug fix update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27874"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20124", 
+                "title": "VMware ESX third party updates for Service Console packages glibc and dhcp", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:20124"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CentOS Update for kernel CESA-2010:0723 centos5 i386", 
+                "file": "gb_CESA-2010_0723_kernel_centos5_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880648"
+            }, 
+            {
+                "name": "RedHat Update for kernel RHSA-2010:0723-01", 
+                "file": "gb_RHSA-2010_0723-01_kernel.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870328"
+            }, 
+            {
+                "name": "VMSA-2011-0012.3 VMware ESXi and ESX updates to third party libraries and ESX Service Console", 
+                "file": "gb_VMSA-2011-0012.nasl", 
+                "family": "VMware Local Security Checks", 
+                "id": "103455"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : kernel (CESA-2010:0723)", 
+                "file": "centos_RHSA-2010-0723.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "67080"
+            }, 
+            {
+                "name": "Oracle Linux 5 : kernel (ELSA-2010-0723)", 
+                "file": "oraclelinux_ELSA-2010-0723.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68106"
+            }, 
+            {
+                "name": "RHEL 5 : kernel (RHSA-2010:0723)", 
+                "file": "redhat-RHSA-2010-0723.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "49746"
+            }, 
+            {
+                "name": "VMSA-2011-0012 : VMware ESXi and ESX updates to third-party libraries and ESX Service Console", 
+                "file": "vmware_VMSA-2011-0012.nasl", 
+                "family": "VMware ESX Local Security Checks", 
+                "id": "56508"
+            }, 
+            {
+                "name": "VMware ESX / ESXi Third-Party Libraries Multiple Vulnerabilities (VMSA-2011-0012) (remote check)", 
+                "file": "vmware_VMSA-2011-0012_remote.nasl", 
+                "family": "Misc.", 
+                "id": "89680"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20100723", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0723.html", 
+                    "id": "RHSA-2010:0723", 
+                    "title": "RHSA-2010:0723: kernel security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=566624", 
+                    "title": "CVE-2010-1083 kernel: information leak via userspace USB interface", 
+                    "id": "566624", 
+                    "issue date": "2010-09-29", 
+                    "associated redhat": "RHSA-2010:0723"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=611385", 
+                    "title": "CVE-2010-2492 kernel: ecryptfs_uid_hash() buffer overflow", 
+                    "id": "611385", 
+                    "issue date": "2010-09-29", 
+                    "associated redhat": "RHSA-2010:0723"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=620300", 
+                    "title": "CVE-2010-2798 kernel: gfs2: rename causes kernel panic", 
+                    "id": "620300", 
+                    "issue date": "2010-09-29", 
+                    "associated redhat": "RHSA-2010:0723"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=620490", 
+                    "title": "CVE-2010-2938 kernel: guest crashes on non-EPT machines may crash the host as well", 
+                    "id": "620490", 
+                    "issue date": "2010-09-29", 
+                    "associated redhat": "RHSA-2010:0723"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=620661", 
+                    "title": "ips driver sleeps while holding spin_lock [rhel-5.5.z]", 
+                    "id": "620661", 
+                    "issue date": "2010-09-29", 
+                    "associated redhat": "RHSA-2010:0723"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=621940", 
+                    "title": "Significant MSI performance issue due to redundant interrupt masking [rhel-5.5.z]", 
+                    "id": "621940", 
+                    "issue date": "2010-09-29", 
+                    "associated redhat": "RHSA-2010:0723"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=623141", 
+                    "title": "High CPU overhead from mapping/unmapping the zero page [rhel-5.5.z]", 
+                    "id": "623141", 
+                    "issue date": "2010-09-29", 
+                    "associated redhat": "RHSA-2010:0723"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=623143", 
+                    "title": "[5u6] Bonding in ALB mode sends ARP in loop [rhel-5.5.z]", 
+                    "id": "623143", 
+                    "issue date": "2010-09-29", 
+                    "associated redhat": "RHSA-2010:0723"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=624327", 
+                    "title": "CVE-2010-3015 kernel: integer overflow in ext4_ext_get_blocks()", 
+                    "id": "624327", 
+                    "issue date": "2010-09-29", 
+                    "associated redhat": "RHSA-2010:0723"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=624365", 
+                    "title": "cpu flags missing from /proc/cpuinfo [rhel-5.5.z]", 
+                    "id": "624365", 
+                    "issue date": "2010-09-29", 
+                    "associated redhat": "RHSA-2010:0723"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=624369", 
+                    "title": "need to backport 2e3219b5c8a2e44e0b83ae6e04f52f20a82ac0f2 [rhel-5.5.z]", 
+                    "id": "624369", 
+                    "issue date": "2010-09-29", 
+                    "associated redhat": "RHSA-2010:0723"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=624903", 
+                    "title": "CVE-2010-2942 kernel: net sched: fix some kernel memory leaks", 
+                    "id": "624903", 
+                    "issue date": "2010-09-29", 
+                    "associated redhat": "RHSA-2010:0723"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=624923", 
+                    "title": "CVE-2010-2943 kernel: xfs: validate inode numbers in file handles correctly", 
+                    "id": "624923", 
+                    "issue date": "2010-09-29", 
+                    "associated redhat": "RHSA-2010:0723"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=627194", 
+                    "title": "dasd: force online does not work. [rhel-5.5.z]", 
+                    "id": "627194", 
+                    "issue date": "2010-09-29", 
+                    "associated redhat": "RHSA-2010:0723"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=627195", 
+                    "title": "dasd: allocate fallback cqr for reserve/release [rhel-5.5.z]", 
+                    "id": "627195", 
+                    "issue date": "2010-09-29", 
+                    "associated redhat": "RHSA-2010:0723"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=629219", 
+                    "title": "[rhel5.6] XFS incorrectly validates inodes [rhel-5.5.z]", 
+                    "id": "629219", 
+                    "issue date": "2010-09-29", 
+                    "associated redhat": "RHSA-2010:0723"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=630978", 
+                    "title": "Detect and recover from cxgb3 adapter parity errors [rhel-5.5.z]", 
+                    "id": "630978", 
+                    "issue date": "2010-09-29", 
+                    "associated redhat": "RHSA-2010:0723"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": [
+            {
+                "url": "https://www.vmware.com/security/advisories/VMSA-2011-0012.html", 
+                "id": "VMSA-2011-0012"
+            }
+        ]
+    }
+}

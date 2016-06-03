@@ -1,0 +1,270 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-5351", 
+                "published": "2014-10-09T21:55:11.307-04:00", 
+                "id": "CVE-2014-5351", 
+                "modified": "2015-03-11T21:59:52.973-04:00", 
+                "summary": "The kadm5_randkey_principal_3 function in lib/kadm5/srv/svr_principal.c in kadmind in MIT Kerberos 5 (aka krb5) before 1.13 sends old keys in a response to a -randkey -keepold request, which allows remote authenticated users to forge tickets by leveraging administrative access."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/255.html", 
+                "id": "CWE-255", 
+                "title": "Credentials Management"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:mit:kerberos:5-1.12.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.67788", 
+                "id": 67788
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/70380", 
+                "id": 70380
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/krb5/krb5/commit/af0ed4df4dfae762ab5fb605f5a0c8f59cb4f6ca", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1145425", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/97028", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2498-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id/1031003", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/70380", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2014:224", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://security.gentoo.org/glsa/glsa-201412-53.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2015-02/msg00044.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-02/msg00016.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-March/151103.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2014-October/140132.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://krbdev.mit.edu/rt/Ticket/Display.html?id=8018", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://advisories.mageia.org/MGASA-2014-0477.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "single_instance", 
+                    "exploit": "3.9", 
+                    "base": "2.1", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-5351"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28128", 
+                "title": "Return only new keys in randkey", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:28128"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27784", 
+                "title": "SUSE-SU-2014:1410-1 -- Security update for krb5 (low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27784"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "AIX NAS Advisory : nas_advisory2.asc", 
+                "file": "aix_nas_advisory2.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "81022"
+            }, 
+            {
+                "name": "Fedora 21 : krb5-1.12.2-9.fc21 (2014-11940)", 
+                "file": "fedora_2014-11940.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "78100"
+            }, 
+            {
+                "name": "Fedora 20 : krb5-1.11.5-18.fc20 (2015-2382)", 
+                "file": "fedora_2015-2382.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "81705"
+            }, 
+            {
+                "name": "GLSA-201412-53 : MIT Kerberos 5: User-assisted execution of arbitrary code", 
+                "file": "gentoo_GLSA-201412-53.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "80328"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : krb5 (MDVSA-2014:224)", 
+                "file": "mandriva_MDVSA-2014-224.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "79411"
+            }, 
+            {
+                "name": "openSUSE Security Update : krb5 (openSUSE-2015-128)", 
+                "file": "openSUSE-2015-128.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "81304"
+            }, 
+            {
+                "name": "SuSE 11.3 Security Update : krb5 (SAT Patch Number 9827)", 
+                "file": "suse_11_krb5-201410-141002.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "79232"
+            }, 
+            {
+                "name": "SUSE SLES12 Security Update : krb5 (SUSE-SU-2015:0290-1)", 
+                "file": "suse_SU-2015-0290-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83682"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : krb5 (SUSE-SU-2015:0290-2)", 
+                "file": "suse_SU-2015-0290-2.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83683"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS / 12.04 LTS / 14.04 / 14.10 : krb5 vulnerabilities (USN-2498-1)", 
+                "file": "ubuntu_USN-2498-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "81297"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2014-11940", 
+                "id": "FEDORA-2014-11940"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2015-2382", 
+                "id": "FEDORA-2015-2382"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2014:224", 
+                "id": "MDVSA-2014:224"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-5351.html", 
+                "id": "SUSE-SU-2015:0290"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-5351.html", 
+                "id": "openSUSE-SU-2015:0255"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/201412-53", 
+                "id": "GLSA-201412-53"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2498-1", 
+                "id": "USN-2498-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

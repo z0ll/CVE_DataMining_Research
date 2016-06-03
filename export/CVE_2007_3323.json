@@ -1,0 +1,157 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3323", 
+                "published": "2007-06-21T14:30:00.000-04:00", 
+                "id": "CVE-2007-3323", 
+                "modified": "2012-10-30T22:38:18.280-04:00", 
+                "summary": "SQL injection vulnerability in comersus_optReviewReadExec.asp in Comersus Shop Cart 7.07 allows remote attackers to execute arbitrary SQL commands via the idProduct parameter.  NOTE: this might be the same as CVE-2005-2190.2."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:comersus_open_technologies:comersus_cart:7.07"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.37389", 
+                "id": 37389
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/24562", 
+                "id": 24562
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/36152", 
+                "id": 36152
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/24562", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/471837/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://osvdb.org/36152", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34953", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2819", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006504", 
+                "signature": "ET WEB_SPECIFIC_APPS Comersus Shop Cart SQL Injection Attempt -- comersus_optReviewReadExec.asp idProduct SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006505", 
+                "signature": "ET WEB_SPECIFIC_APPS Comersus Shop Cart SQL Injection Attempt -- comersus_optReviewReadExec.asp idProduct UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006506", 
+                "signature": "ET WEB_SPECIFIC_APPS Comersus Shop Cart SQL Injection Attempt -- comersus_optReviewReadExec.asp idProduct INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006507", 
+                "signature": "ET WEB_SPECIFIC_APPS Comersus Shop Cart SQL Injection Attempt -- comersus_optReviewReadExec.asp idProduct DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006508", 
+                "signature": "ET WEB_SPECIFIC_APPS Comersus Shop Cart SQL Injection Attempt -- comersus_optReviewReadExec.asp idProduct ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006509", 
+                "signature": "ET WEB_SPECIFIC_APPS Comersus Shop Cart SQL Injection Attempt -- comersus_optReviewReadExec.asp idProduct UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-3323"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

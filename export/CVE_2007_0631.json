@@ -1,0 +1,161 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0631", 
+                "published": "2007-01-31T13:28:00.000-05:00", 
+                "id": "CVE-2007-0631", 
+                "modified": "2011-03-07T21:50:25.907-05:00", 
+                "summary": "SQL injection vulnerability in index.php in Eclectic Designs CascadianFAQ 4.1 and earlier allows remote attackers to execute arbitrary SQL commands via the catid parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:eclectic_designs:cascadianfaq:4.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34755", 
+                "id": 34755
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/22314", 
+                "id": 22314
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/31675", 
+                "id": 31675
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/0424", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/22314", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/31968", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/31675", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23965", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/3227", 
+                    "vendor": "MILW0RM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005111", 
+                "signature": "ET WEB_SPECIFIC_APPS Eclectic Designs CascadianFAQ SQL Injection Attempt -- index.php catid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005112", 
+                "signature": "ET WEB_SPECIFIC_APPS Eclectic Designs CascadianFAQ SQL Injection Attempt -- index.php catid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005113", 
+                "signature": "ET WEB_SPECIFIC_APPS Eclectic Designs CascadianFAQ SQL Injection Attempt -- index.php catid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005114", 
+                "signature": "ET WEB_SPECIFIC_APPS Eclectic Designs CascadianFAQ SQL Injection Attempt -- index.php catid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005115", 
+                "signature": "ET WEB_SPECIFIC_APPS Eclectic Designs CascadianFAQ SQL Injection Attempt -- index.php catid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005116", 
+                "signature": "ET WEB_SPECIFIC_APPS Eclectic Designs CascadianFAQ SQL Injection Attempt -- index.php catid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-0631"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

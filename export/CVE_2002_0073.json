@@ -1,0 +1,228 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0073", 
+                "published": "2002-04-22T00:00:00.000-04:00", 
+                "id": "CVE-2002-0073", 
+                "modified": "2008-09-10T15:11:15.633-04:00", 
+                "summary": "The FTP service in Internet Information Server (IIS) 4.0, 5.0 and 5.1 allows attackers who have established an FTP session to cause a denial of service via a specially crafted status request containing glob characters."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:4.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:5.1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:5.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.18069", 
+                "id": 18069
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/4482", 
+                "id": 4482
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/3328", 
+                "id": 3328
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/412203", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.cert.org/advisories/CA-2002-09.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms02-018.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.digitaloffense.net/msftpd/advisory.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/4482", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/3328", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/static/8801.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.cisco.com/warp/public/707/Microsoft-IIS-vulnerabilities-MS02-018.shtml", 
+                    "vendor": "CISCO"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=101901273810598&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/vulnwatch/2002-q2/0023.html", 
+                    "vendor": "VULNWATCH"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/412203", 
+                "id": "VU#412203"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-dos", 
+                "id": "sid:2101777", 
+                "signature": "GPL FTP STAT * dos attempt"
+            }, 
+            {
+                "classtype": "attempted-dos", 
+                "id": "sid:2101778", 
+                "signature": "GPL FTP STAT ? dos attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-dos", 
+                "id": "sid:1777", 
+                "signature": "PROTOCOL-FTP EXPLOIT STAT asterisk dos attempt"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:1778", 
+                "signature": "PROTOCOL-FTP EXPLOIT STAT ? dos attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-0073"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24", 
+                "title": "DEPRECATED: Windows NT IIS FTP Connection Status Request Denial of Service", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:24"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:12490", 
+                "title": "Denial of service via FTP status request", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:12490"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:35", 
+                "title": "DEPRECATED: Windows 2000 IIS FTP Connection Status Request Denial of Service", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:35"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft IIS FTP Connection Status Request Denial of Service Vulnerability", 
+                "file": "gb_ms02-018_remote.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "800950"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS02-018: Microsoft IIS FTP Status Request DoS (uncredentialed check)", 
+                "file": "msftp_dos.nasl", 
+                "family": "FTP", 
+                "id": "10934"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/319733", 
+                "id": "319733", 
+                "title": "Cumulative Patch for Internet Information Services"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [
+            {
+                "id": "cisco-sa-20020415"
+            }
+        ], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS02-018", 
+                "id": "MS02-018", 
+                "title": "Cumulative Patch for Internet Information Services"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

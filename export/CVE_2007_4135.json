@@ -1,0 +1,226 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-4135", 
+                "published": "2007-09-04T21:17:00.000-04:00", 
+                "id": "CVE-2007-4135", 
+                "modified": "2010-10-18T00:00:00.000-04:00", 
+                "summary": "The NFSv4 ID mapper (nfsidmap) before 0.17 does not properly handle return values from the getpwnam_r function when performing a username lookup, which can cause it to report a file as being owned by \"root\" instead of \"nobody\" if the file exists on the server but not on the client."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:nfsv4:nfsidmap:0.16.22"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.38640", 
+                "id": 38640
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/26767", 
+                "id": 26767
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/45825", 
+                "id": 45825
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://secunia.com/advisories/26674", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/36396", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/26767", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2007-0951.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.novell.com/linux/security/advisories/2007_18_sr.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:240", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/27043", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/45825", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "1.9", 
+                    "base": "6.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-4135"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22280", 
+                "title": "ELSA-2007:0951: nfs-utils-lib security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22280"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:9864", 
+                "title": "The NFSv4 ID mapper (nfsidmap) before 0.17 does not properly handle return values from the getpwnam_r function when performing a username lookup, which can cause it to report a file as being owned by \"root\" instead of \"nobody\" if the file exists on the server but not on the client.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:9864"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "ManageEngine SupportCenter Plus Remote Detection", 
+                "file": "gb_mandriva_MDKSA_2007_240.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "830039"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : nfs-utils-lib (CESA-2007:0951)", 
+                "file": "centos_RHSA-2007-0951.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "43655"
+            }, 
+            {
+                "name": "Mandrake Linux Security Advisory : libnfsidmap (MDKSA-2007:240)", 
+                "file": "mandrake_MDKSA-2007-240.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "29298"
+            }, 
+            {
+                "name": "Oracle Linux 5 : nfs-utils-lib (ELSA-2007-0951)", 
+                "file": "oraclelinux_ELSA-2007-0951.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "67582"
+            }, 
+            {
+                "name": "RHEL 5 : nfs-utils-lib (RHSA-2007:0951)", 
+                "file": "redhat-RHSA-2007-0951.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "26907"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : nfs-utils-lib on SL5.x i386/x86_64", 
+                "file": "sl_20071004_nfs_utils_lib_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "60260"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:240", 
+                "id": "MDKSA-2007:240"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2007-4135.html", 
+                "id": "SUSE-SR:2007:018"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20070951", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2007-0951.html", 
+                    "id": "RHSA-2007:0951", 
+                    "title": "RHSA-2007:0951: nfs-utils-lib security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=250973", 
+                    "title": "CVE-2007-3999 krb5 RPC library buffer overflow", 
+                    "id": "250973", 
+                    "issue date": "2007-10-02", 
+                    "associated redhat": "RHSA-2007:0951"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=254040", 
+                    "title": "CVE-2007-4135 nfs-utils-lib NFSv4 user id mapping flaw", 
+                    "id": "254040", 
+                    "issue date": "2007-10-02", 
+                    "associated redhat": "RHSA-2007:0951"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

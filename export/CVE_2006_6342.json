@@ -1,0 +1,208 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6342", 
+                "published": "2006-12-06T20:28:00.000-05:00", 
+                "id": "CVE-2006-6342", 
+                "modified": "2008-09-05T17:14:30.097-04:00", 
+                "summary": "Multiple SQL injection vulnerabilities in KLF-DESIGN (aka Kim L. Fraser) KLF-REALTY allow remote attackers to execute arbitrary SQL commands via the (1) category and (2) agent parameters in (a) search_listing.asp, and the (3) property_id parameter in (b) detail.asp."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:klf-design:klf-realty"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33654", 
+                "id": 33654
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21199", 
+                "id": 21199
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30435", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/452115/100/200/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21199", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/1976", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006760", 
+                "signature": "ET WEB_SPECIFIC_APPS KLF-DESIGN (aka Kim L. Fraser) KLF-REALTY SQL Injection Attempt -- search_listing.asp category SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006761", 
+                "signature": "ET WEB_SPECIFIC_APPS KLF-DESIGN (aka Kim L. Fraser) KLF-REALTY SQL Injection Attempt -- search_listing.asp category UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006762", 
+                "signature": "ET WEB_SPECIFIC_APPS KLF-DESIGN (aka Kim L. Fraser) KLF-REALTY SQL Injection Attempt -- search_listing.asp category INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006763", 
+                "signature": "ET WEB_SPECIFIC_APPS KLF-DESIGN (aka Kim L. Fraser) KLF-REALTY SQL Injection Attempt -- search_listing.asp category DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006764", 
+                "signature": "ET WEB_SPECIFIC_APPS KLF-DESIGN (aka Kim L. Fraser) KLF-REALTY SQL Injection Attempt -- search_listing.asp category ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006765", 
+                "signature": "ET WEB_SPECIFIC_APPS KLF-DESIGN (aka Kim L. Fraser) KLF-REALTY SQL Injection Attempt -- search_listing.asp category UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006766", 
+                "signature": "ET WEB_SPECIFIC_APPS KLF-DESIGN (aka Kim L. Fraser) KLF-REALTY SQL Injection Attempt -- search_listing.asp agent SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006767", 
+                "signature": "ET WEB_SPECIFIC_APPS KLF-DESIGN (aka Kim L. Fraser) KLF-REALTY SQL Injection Attempt -- search_listing.asp agent UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006768", 
+                "signature": "ET WEB_SPECIFIC_APPS KLF-DESIGN (aka Kim L. Fraser) KLF-REALTY SQL Injection Attempt -- search_listing.asp agent INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006769", 
+                "signature": "ET WEB_SPECIFIC_APPS KLF-DESIGN (aka Kim L. Fraser) KLF-REALTY SQL Injection Attempt -- search_listing.asp agent DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006770", 
+                "signature": "ET WEB_SPECIFIC_APPS KLF-DESIGN (aka Kim L. Fraser) KLF-REALTY SQL Injection Attempt -- search_listing.asp agent ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006771", 
+                "signature": "ET WEB_SPECIFIC_APPS KLF-DESIGN (aka Kim L. Fraser) KLF-REALTY SQL Injection Attempt -- search_listing.asp agent UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006772", 
+                "signature": "ET WEB_SPECIFIC_APPS KLF-DESIGN (aka Kim L. Fraser) KLF-REALTY SQL Injection Attempt -- detail.asp property_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006773", 
+                "signature": "ET WEB_SPECIFIC_APPS KLF-DESIGN (aka Kim L. Fraser) KLF-REALTY SQL Injection Attempt -- detail.asp property_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006774", 
+                "signature": "ET WEB_SPECIFIC_APPS KLF-DESIGN (aka Kim L. Fraser) KLF-REALTY SQL Injection Attempt -- detail.asp property_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006775", 
+                "signature": "ET WEB_SPECIFIC_APPS KLF-DESIGN (aka Kim L. Fraser) KLF-REALTY SQL Injection Attempt -- detail.asp property_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006776", 
+                "signature": "ET WEB_SPECIFIC_APPS KLF-DESIGN (aka Kim L. Fraser) KLF-REALTY SQL Injection Attempt -- detail.asp property_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006777", 
+                "signature": "ET WEB_SPECIFIC_APPS KLF-DESIGN (aka Kim L. Fraser) KLF-REALTY SQL Injection Attempt -- detail.asp property_id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6342"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

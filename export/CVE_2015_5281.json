@@ -1,0 +1,223 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5281", 
+                "published": "2015-11-24T15:59:04.247-05:00", 
+                "id": "CVE-2015-5281", 
+                "modified": "2015-11-25T12:44:08.307-05:00", 
+                "summary": "The grub2 package before 2.02-0.29 in Red Hat Enterprise Linux (RHEL) 7, when used on UEFI systems, allows local users to bypass intended Secure Boot restrictions and execute non-verified code via a crafted (1) multiboot or (2) multiboot2 module in the configuration file or physically proximate attackers to bypass intended Secure Boot restrictions and execute non-verified code via the (3) boot menu."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:7.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.79297", 
+                "id": 79297
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1264103", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id/1034198", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-2401.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "1.9", 
+                    "base": "2.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-5281"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "CentOS 7 : grub2 (CESA-2015:2401)", 
+                "file": "centos_RHSA-2015-2401.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "87157"
+            }, 
+            {
+                "name": "Fedora 22 : grub2-2.02-0.17.fc22 (2015-2c155d7632)", 
+                "file": "fedora_2015-2c155d7632.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "89190"
+            }, 
+            {
+                "name": "Fedora 23 : grub2-2.02-0.24.fc23 (2015-c3b4fef3af)", 
+                "file": "fedora_2015-c3b4fef3af.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "89396"
+            }, 
+            {
+                "name": "Oracle Linux 7 : grub2 (ELSA-2015-2401)", 
+                "file": "oraclelinux_ELSA-2015-2401.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "87039"
+            }, 
+            {
+                "name": "RHEL 7 : grub2 (RHSA-2015:2401)", 
+                "file": "redhat-RHSA-2015-2401.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "86989"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : grub2 on SL7.x x86_64", 
+                "file": "sl_20151119_grub2_on_SL7_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "87558"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20152401", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-2401.html", 
+                    "id": "RHSA-2015:2401", 
+                    "title": "RHSA-2015:2401: grub2 security, bug fix, and enhancement update (Low)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1001279", 
+                    "title": "grub2 can't boot new xfs CRC-capable disk format", 
+                    "id": "1001279", 
+                    "issue date": "2015-07-02", 
+                    "associated redhat": "RHSA-2015:2401"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1124074", 
+                    "title": "grub2-mkconfig wrong sorting", 
+                    "id": "1124074", 
+                    "issue date": "2015-07-02", 
+                    "associated redhat": "RHSA-2015:2401"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1125404", 
+                    "title": "[RHEL 7] grub2 improperly escapes spaces in kernel parameters", 
+                    "id": "1125404", 
+                    "issue date": "2015-07-02", 
+                    "associated redhat": "RHSA-2015:2401"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1148650", 
+                    "title": "no docs explaining what config path GRUB expects when netbooting", 
+                    "id": "1148650", 
+                    "issue date": "2015-07-02", 
+                    "associated redhat": "RHSA-2015:2401"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1177003", 
+                    "title": "yum reinstall kernel causes duplicate entry in grub menu", 
+                    "id": "1177003", 
+                    "issue date": "2015-07-02", 
+                    "associated redhat": "RHSA-2015:2401"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1211101", 
+                    "title": "grub2 fw_path variable is incorrect for x86 EFI network boot: too many path components stripped", 
+                    "id": "1211101", 
+                    "issue date": "2015-07-02", 
+                    "associated redhat": "RHSA-2015:2401"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1264103", 
+                    "title": "CVE-2015-5281 grub2: modules built in on EFI builds that allow loading arbitrary code, circumventing secure boot", 
+                    "id": "1264103", 
+                    "issue date": "2015-07-02", 
+                    "associated redhat": "RHSA-2015:2401"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

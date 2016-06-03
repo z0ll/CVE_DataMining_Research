@@ -1,0 +1,147 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-5735", 
+                "published": "2006-11-06T13:07:00.000-05:00", 
+                "id": "CVE-2006-5735", 
+                "modified": "2011-03-07T21:43:45.000-05:00", 
+                "summary": "Directory traversal vulnerability in include/common.php in PunBB before 1.2.14 allows remote authenticated users to include and execute arbitrary local files via a .. (dot dot) in the language parameter, related to register.php storing a language value in the users table."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:punbb:punbb:1.2.13"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33128", 
+                "id": 33128
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/30132", 
+                "id": 30132
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.wargan.org/index.php/2006/10/29/4-punbb-1213-multiple-vulnerabilities", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4256", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/450055/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.punbb.org/changelogs/1.2.13_to_1.2.14.txt", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1017131", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/22622", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/30132", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/1824", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-5735"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "rand_str(charset:abcdefghijklmnopqrstuvwxyz0123456789_, length:10", 
+                "file": "punbb_register_lfi.nasl", 
+                "family": "Web application abuses", 
+                "id": "80080"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "PunBB include/common.php language Parameter Local File Inclusion", 
+                "file": "punbb_register_lfi.nasl", 
+                "family": "CGI abuses", 
+                "id": "22932"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,174 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3881", 
+                "published": "2013-10-09T10:53:24.793-04:00", 
+                "id": "CVE-2013-3881", 
+                "modified": "2013-12-19T23:36:02.750-05:00", 
+                "summary": "win32k.sys in the kernel-mode drivers in Microsoft Windows 7 SP1 and Windows Server 2008 R2 SP1 allows local users to gain privileges via a crafted application, aka \"Win32k NULL Page Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:r2:sp1:itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_7::sp1:x86"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:r2:sp1:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_7::sp1:x64"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.10636", 
+                "id": 10636
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0040763", 
+                "id": "2013-A-0190", 
+                "title": "Multiple Vulnerabilities in Microsoft Windows Kernel-Mode Drivers"
+            }, 
+            {
+                "Disa key": "V0042582", 
+                "id": "2013-A-0232", 
+                "title": "Multiple Vulnerabilities in Microsoft Windows Kernel-Mode Drivers"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/ncas/alerts/TA13-288A", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS13-081", 
+                    "vendor": "MS"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms13_081_track_popup_menu.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/local/ms13_081_track_popup_menu.rb", 
+                "title": "Windows TrackPopupMenuEx Win32k NULL Page"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-3881"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18614", 
+                "title": "Win32k NULL Page Vulnerability (CVE-2013-3881) - MS13-081", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:18614"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "MS Windows Kernel-Mode Drivers Remote Code Execution Vulnerabilities (2870008)", 
+                "file": "secpod_ms13-081.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "903500"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS13-081: Vulnerabilities in Windows Kernel-Mode Drivers Could Allow Remote Code Execution (2870008)", 
+                "file": "smb_nt_ms13-081.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "70333"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerabilities in Windows Kernel-Mode Drivers Could Allow Remote Code Execution", 
+                "id": "Vulnerabilities in Windows Kernel-Mode Drivers Could Allow Remote Code Execution", 
+                "title": "2847311"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2870008", 
+                "id": "2870008", 
+                "title": "Vulnerabilities in Windows Kernel-Mode Drivers Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS13-081", 
+                "id": "MS13-081", 
+                "title": "Vulnerabilities in Windows Kernel-Mode Drivers Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

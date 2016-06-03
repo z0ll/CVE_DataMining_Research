@@ -1,0 +1,160 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0207", 
+                "published": "2000-03-01T00:00:00.000-05:00", 
+                "id": "CVE-2000-0207", 
+                "modified": "2008-09-10T15:03:18.633-04:00", 
+                "summary": "SGI InfoSearch CGI program infosrch.cgi allows remote attackers to execute commands via shell metacharacters."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:sgi:irix:6.5.6"
+            }, 
+            {
+                "id": "cpe:/o:sgi:irix:6.5.2m"
+            }, 
+            {
+                "id": "cpe:/a:sgi:infosearch:1.0"
+            }, 
+            {
+                "id": "cpe:/o:sgi:irix:6.5.7"
+            }, 
+            {
+                "id": "cpe:/o:sgi:irix:6.5"
+            }, 
+            {
+                "id": "cpe:/o:sgi:irix:6.5.3f"
+            }, 
+            {
+                "id": "cpe:/o:sgi:irix:6.5.3m"
+            }, 
+            {
+                "id": "cpe:/o:sgi:irix:6.5.1"
+            }, 
+            {
+                "id": "cpe:/o:sgi:irix:6.5.4"
+            }, 
+            {
+                "id": "cpe:/o:sgi:irix:6.5.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.15367", 
+                "id": 15367
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/1031", 
+                "id": 1031
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/1031", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "ftp://patches.sgi.com/support/free/security/advisories/20000501-01-P", 
+                    "vendor": "SGI"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2101727", 
+                "signature": "GPL DELETED SGI InfoSearch fname access"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1196", 
+                "signature": "SERVER-WEBAPP SGI InfoSearch fname attempt"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1727", 
+                "signature": "SERVER-WEBAPP SGI InfoSearch fname access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2000-0207"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "SGI InfoSearch infosrch.cgi fname Parameter Arbitrary Command Execution", 
+                "file": "infosrch.nasl", 
+                "family": "CGI abuses", 
+                "id": "10128"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

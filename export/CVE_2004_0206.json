@@ -1,0 +1,403 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0206", 
+                "published": "2004-11-03T00:00:00.000-05:00", 
+                "id": "CVE-2004-0206", 
+                "modified": "2008-09-10T15:25:30.397-04:00", 
+                "summary": "Network Dynamic Data Exchange (NetDDE) services for Microsoft Windows 98, Windows NT 4.0, Windows 2000, Windows XP, and Windows Server 2003 allows attackers to remotely execute arbitrary code or locally gain privileges via a malicious message or application that involves an \"unchecked buffer,\" possibly a buffer overflow."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_nt:4.0"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2003_server:r2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::gold"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_98::gold"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.891", 
+                "id": 891
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/11372", 
+                "id": 11372
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/10689", 
+                "id": 10689
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/640488", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/17657", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/16556", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms04-031.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/12803/", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/11372", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=109786703930674&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/640488", 
+                "id": "VU#640488"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102964", 
+                "signature": "GPL NETBIOS SMB NDdeSetTrustedShareW andx overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102965", 
+                "signature": "GPL NETBIOS SMB NDdeSetTrustedShareW little endian andx overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102946", 
+                "signature": "GPL NETBIOS SMB NDdeSetTrustedShareW little endian overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102936", 
+                "signature": "GPL NETBIOS SMB NDdeSetTrustedShareW overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102966", 
+                "signature": "GPL NETBIOS SMB NDdeSetTrustedShareW unicode andx overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102967", 
+                "signature": "GPL NETBIOS SMB NDdeSetTrustedShareW unicode little endian andx overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102947", 
+                "signature": "GPL NETBIOS SMB NDdeSetTrustedShareW unicode little endian overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102937", 
+                "signature": "GPL NETBIOS SMB NDdeSetTrustedShareW unicode overflow attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102960", 
+                "signature": "GPL NETBIOS SMB nddeapi andx bind attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102956", 
+                "signature": "GPL NETBIOS SMB nddeapi andx create tree attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102932", 
+                "signature": "GPL NETBIOS SMB nddeapi bind attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102928", 
+                "signature": "GPL NETBIOS SMB nddeapi create tree attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102961", 
+                "signature": "GPL NETBIOS SMB nddeapi unicode andx bind attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102957", 
+                "signature": "GPL NETBIOS SMB nddeapi unicode andx create tree attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102933", 
+                "signature": "GPL NETBIOS SMB nddeapi unicode bind attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102929", 
+                "signature": "GPL NETBIOS SMB nddeapi unicode create tree attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102968", 
+                "signature": "GPL NETBIOS SMB-DS NDdeSetTrustedShareW andx overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102969", 
+                "signature": "GPL NETBIOS SMB-DS NDdeSetTrustedShareW little endian andx overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102948", 
+                "signature": "GPL NETBIOS SMB-DS NDdeSetTrustedShareW little endian overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102938", 
+                "signature": "GPL NETBIOS SMB-DS NDdeSetTrustedShareW overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102970", 
+                "signature": "GPL NETBIOS SMB-DS NDdeSetTrustedShareW unicode andx overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102971", 
+                "signature": "GPL NETBIOS SMB-DS NDdeSetTrustedShareW unicode little endian andx overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102949", 
+                "signature": "GPL NETBIOS SMB-DS NDdeSetTrustedShareW unicode little endian overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102939", 
+                "signature": "GPL NETBIOS SMB-DS NDdeSetTrustedShareW unicode overflow attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102962", 
+                "signature": "GPL NETBIOS SMB-DS nddeapi andx bind attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102958", 
+                "signature": "GPL NETBIOS SMB-DS nddeapi andx create tree attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102934", 
+                "signature": "GPL NETBIOS SMB-DS nddeapi bind attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102930", 
+                "signature": "GPL NETBIOS SMB-DS nddeapi create tree attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102963", 
+                "signature": "GPL NETBIOS SMB-DS nddeapi unicode andx bind attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102959", 
+                "signature": "GPL NETBIOS SMB-DS nddeapi unicode andx create tree attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102935", 
+                "signature": "GPL NETBIOS SMB-DS nddeapi unicode bind attempt"
+            }, 
+            {
+                "classtype": "protocol-command", 
+                "id": "sid:2102931", 
+                "signature": "GPL NETBIOS SMB-DS nddeapi unicode create tree attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2936", 
+                "signature": "OS-WINDOWS DCERPC NCACN-IP-TCP nddeapi NDdeSetTrustedShareW overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms04_031_netdde.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/smb/ms04_031_netdde.rb", 
+                "title": "MS04-031 Microsoft NetDDE Service Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/netdde_bo", 
+                "id": "exploit_info/netdde_bo", 
+                "title": "Windows NetDDE buffer overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0206"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:3242", 
+                "title": "Windows XP (64-Bit) Unchecked Buffer in NetDDE", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:3242"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:2394", 
+                "title": "Windows NT Unchecked Buffer in NetDDE", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:2394"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:5074", 
+                "title": "Windows XP (32-Bit) Unchecked Buffer in NetDDE", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:5074"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:3120", 
+                "title": "Windows 2000 Unchecked Buffer in NetDDE (Test 1)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:3120"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:6788", 
+                "title": "Windows Server 2003 (64-Bit) Unchecked Buffer in NetDDE", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:6788"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:4592", 
+                "title": "Windows Server 2003 (32-Bit) Unchecked Buffer in NetDDE", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:4592"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:1852", 
+                "title": "Windows NT Terminal Server Unchecked Buffer in NetDDE", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:1852"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS04-031: Vulnerability NetDDE Could Allow Code Execution (841533) (uncredentialed check)", 
+                "file": "netdde.nasl", 
+                "family": "Windows", 
+                "id": "15572"
+            }, 
+            {
+                "name": "MS04-031: Vulnerability in NetDDE Could Allow Code Execution (841533)", 
+                "file": "smb_nt_ms04-031.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "15456"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in NetDDE Could Allow Remote Code Execution", 
+                "id": "Vulnerability in NetDDE Could Allow Remote Code Execution", 
+                "title": "841533"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/841533", 
+                "id": "841533", 
+                "title": "Vulnerability in NetDDE Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS04-031", 
+                "id": "MS04-031", 
+                "title": "Vulnerability in NetDDE Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

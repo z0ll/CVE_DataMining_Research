@@ -1,0 +1,159 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0380", 
+                "published": "2003-07-02T00:00:00.000-04:00", 
+                "id": "CVE-2003-0380", 
+                "modified": "2008-09-05T16:34:11.113-04:00", 
+                "summary": "Buffer overflow in atftp daemon (atftpd) 0.6.1 and earlier, and possibly later versions, allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via a long filename."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:atftpd:atftpd:0.6.1.1"
+            }, 
+            {
+                "id": "cpe:/a:atftpd:atftpd:0.6.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.20587", 
+                "id": 20587
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/4343", 
+                "id": 4343
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.debian.org/security/2003/dsa-314", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2003-06/0056.html", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/82/323886/2003-06-02/2003-06-08/0", 
+                    "vendor": "VULN-DEV"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102337", 
+                "signature": "GPL TFTP PUT filename overflow attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2337", 
+                "signature": "PROTOCOL-TFTP PUT filename overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2003-0380"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 314-1 (atftp)", 
+                "file": "deb_314_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "53603"
+            }, 
+            {
+                "name": "get_kb_item(tftp/+port+/filename/+i", 
+                "file": "tftpd_overflow.nasl", 
+                "family": "Service detection", 
+                "id": "18264"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-314-1 : atftp - buffer overflow", 
+                "file": "debian_DSA-314.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "15151"
+            }, 
+            {
+                "name": "TFTPD Server Filename Handling Remote Overflow", 
+                "file": "tftpd_overflow.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "18264"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-314", 
+                "id": "DSA-314"
+            }
+        ], 
+        "Vmware": []
+    }
+}

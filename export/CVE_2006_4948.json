@@ -1,0 +1,150 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4948", 
+                "published": "2006-09-22T21:07:00.000-04:00", 
+                "id": "CVE-2006-4948", 
+                "modified": "2011-03-07T21:42:18.783-05:00", 
+                "summary": "Stack-based buffer overflow in tftpd.exe in ProSysInfo TFTP Server TFTPDWIN 0.4.2 and earlier allows remote attackers to execute arbitrary code or cause a denial of service via a long file name. NOTE: the provenance of this information is unknown; the details are obtained from third party information."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:prosysinfo:tftp_server_tftpdwin:0.4.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.32420", 
+                "id": 32420
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/20131", 
+                "id": 20131
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/29032", 
+                "id": 29032
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/3731", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/21854", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/29075", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/20131", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/29032", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:1941", 
+                "signature": "PROTOCOL-TFTP GET filename overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2337", 
+                "signature": "PROTOCOL-TFTP PUT filename overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "tftpdwin_long_filename.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/tftp/tftpdwin_long_filename.rb", 
+                "title": "TFTPDWIN v0.4.2 Long Filename Buffer Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-4948"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "ProSysInfo TFTPDWIN Remote Buffer Overflow Vulnerability", 
+                "file": "ProSysInfo_tftpdwin_20131.nasl", 
+                "family": "Denial of Service", 
+                "id": "100265"
+            }
+        ], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,355 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0373", 
+                "published": "2007-01-19T18:28:00.000-05:00", 
+                "id": "CVE-2007-0373", 
+                "modified": "2008-11-15T01:40:10.170-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in Joomla! 1.5.0 Beta allow remote attackers to execute arbitrary SQL commands via (1) the searchword parameter in certain files; the where parameter in (2) plugins/search/content.php or (3) plugins/search/weblinks.php; the text parameter in (4) plugins/search/contacts.php, (5) plugins/search/categories.php, or (6) plugins/search/sections.php; or (7) the email parameter in database/table/user.php, which is not properly handled by the check function."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:joomla:joomla:1.5.0_beta"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34522", 
+                "id": 34522
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/22122", 
+                "id": 22122
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/32527", 
+                "id": 32527
+            }, 
+            {
+                "url": "http://www.osvdb.org/32528", 
+                "id": 32528
+            }, 
+            {
+                "url": "http://www.osvdb.org/32529", 
+                "id": 32529
+            }, 
+            {
+                "url": "http://www.osvdb.org/32530", 
+                "id": 32530
+            }, 
+            {
+                "url": "http://www.osvdb.org/32531", 
+                "id": 32531
+            }, 
+            {
+                "url": "http://www.osvdb.org/32532", 
+                "id": 32532
+            }, 
+            {
+                "url": "http://www.osvdb.org/32533", 
+                "id": 32533
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/22122", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.hackers.ir/advisories/festival.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://osvdb.org/32533", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/32532", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/32531", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/32530", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/32529", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/32528", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/32527", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/fulldisclosure/2007-01/0355.html", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/459203/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005420", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- content.php where SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005421", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- content.php where UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005422", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- content.php where INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005423", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- content.php where DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005424", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- content.php where ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005425", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- content.php where UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005426", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- weblinks.php where SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005427", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- weblinks.php where UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005428", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- weblinks.php where INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005429", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- weblinks.php where DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005430", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- weblinks.php where ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005431", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- weblinks.php where UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005432", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- contacts.php text SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005433", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- contacts.php text UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005434", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- contacts.php text INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005435", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- contacts.php text DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005436", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- contacts.php text ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005437", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- contacts.php text UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005438", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- categories.php text SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005439", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- categories.php text UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005440", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- categories.php text INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005441", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- categories.php text DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005442", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- categories.php text ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005443", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- categories.php text UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005444", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- sections.php text SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005445", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- sections.php text UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005446", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- sections.php text INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005447", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- sections.php text DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005448", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- sections.php text ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005449", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- sections.php text UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005450", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- user.php email SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005451", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- user.php email UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005452", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- user.php email INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005453", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- user.php email DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005454", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- user.php email ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005455", 
+                "signature": "ET WEB_SPECIFIC_APPS Joomla! SQL Injection Attempt -- user.php email UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-0373"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

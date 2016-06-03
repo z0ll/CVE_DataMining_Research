@@ -1,0 +1,198 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2592", 
+                "published": "2007-05-11T00:20:00.000-04:00", 
+                "id": "CVE-2007-2592", 
+                "modified": "2012-10-30T22:35:02.483-04:00", 
+                "summary": "Multiple cross-site scripting (XSS) vulnerabilities in Nokia Intellisync Mobile Suite 6.4.31.2, 6.6.0.107, and 6.6.2.2, possibly involving Novell Groupwise Mobile Server and Nokia Intellisync Wireless Email Express, allow remote attackers to inject arbitrary web script or HTML via the (1) username parameter to de/pda/dev_logon.asp and (2) multiple unspecified vectors in (a) usrmgr/registerAccount.asp, (b) de/create_account.asp, and other files."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:nokia:intellisync_mobile_suite:6.6.0.107"
+            }, 
+            {
+                "id": "cpe:/a:nokia:intellisync_mobile_suite:6.4.31.2"
+            }, 
+            {
+                "id": "cpe:/a:nokia:intellisync_wireless_email_express"
+            }, 
+            {
+                "id": "cpe:/a:nokia:intellisync_mobile_suite:6.6.2.2"
+            }, 
+            {
+                "id": "cpe:/a:nokia:groupwise_mobile_server"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.36710", 
+                "id": 36710
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/23889", 
+                "id": 23889
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/34515", 
+                "id": 34515
+            }, 
+            {
+                "url": "http://www.osvdb.org/34516", 
+                "id": 34516
+            }, 
+            {
+                "url": "http://www.osvdb.org/34517", 
+                "id": 34517
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://secunia.com/advisories/25212", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/2657", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1727", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/468048/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.sec-consult.com/289.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://osvdb.org/34517", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/34516", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/34515", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34187", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1018454", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/23889", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://support.novell.com/docs/Readmes/InfoDocument/patchbuilder/readme_5005120.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2689", 
+                    "vendor": "SREASON"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/26199", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "4.3", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003894", 
+                "signature": "ET WEB_SPECIFIC_APPS Nokia Intellisync Mobile Suite XSS Attempt -- dev_logon.asp username"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003895", 
+                "signature": "ET WEB_SPECIFIC_APPS Nokia Intellisync Mobile Suite XSS Attempt -- registerAccount.asp"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003896", 
+                "signature": "ET WEB_SPECIFIC_APPS Nokia Intellisync Mobile Suite XSS Attempt -- create_account.asp"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2592"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

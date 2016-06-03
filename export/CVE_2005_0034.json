@@ -1,0 +1,186 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-0034", 
+                "published": "2005-05-02T00:00:00.000-04:00", 
+                "id": "CVE-2005-0034", 
+                "modified": "2008-09-05T00:00:00.000-04:00", 
+                "summary": "An \"incorrect assumption\" in the authvalidated validator function in BIND 9.3.0, when DNSSEC is enabled, allows remote attackers to cause a denial of service (named server exit) via crafted DNS packets that cause an internal consistency test (self-check) to fail."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:isc:bind:9.3.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.1158", 
+                "id": 1158
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/12365", 
+                "id": 12365
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/938617", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/19062", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.uniras.gov.uk/niscc/docs/al-20050125-00060.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.isc.org/index.pl?/sw/bind/bind-security.php", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.trustix.org/errata/2005/0003/", 
+                    "vendor": "TRUSTIX"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/12365", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.isc.org/index.pl?/sw/bind/bind9.php", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1012995", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/14008", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/938617", 
+                "id": "VU#938617"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "4.3", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-0034"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: bind9", 
+                "file": "freebsd_bind9.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "55220"
+            }, 
+            {
+                "name": "FreeBSD Security Advisory (FreeBSD-SA-05:12.bind.asc)", 
+                "file": "freebsdsa_bind1.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "53973"
+            }, 
+            {
+                "name": "FreeBSD Security Advisory (FreeBSD-SA-05:12.bind9.asc)", 
+                "file": "freebsdsa_bind9.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "53017"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "ISC BIND < 9.3.1 Validator Self Checking Remote DoS", 
+                "file": "bind_validator_dos.nasl", 
+                "family": "DNS", 
+                "id": "16261"
+            }, 
+            {
+                "name": "F5 Networks BIG-IP : BIND 9.3.0 denial of service vulnerability (SOL4351)", 
+                "file": "f5_bigip_SOL4351.nasl", 
+                "family": "F5 Networks Local Security Checks", 
+                "id": "78201"
+            }, 
+            {
+                "name": "FreeBSD : bind9 -- denial of service (30e4ed7b-1ca6-11da-bc01-000e0c2e438a)", 
+                "file": "freebsd_pkg_30e4ed7b1ca611dabc01000e0c2e438a.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "21410"
+            }, 
+            {
+                "name": "Mandrake Linux Security Advisory : bind (MDKSA-2005:023)", 
+                "file": "mandrake_MDKSA-2005-023.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "16269"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

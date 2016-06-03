@@ -1,0 +1,164 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4469", 
+                "published": "2013-11-02T14:55:03.237-04:00", 
+                "id": "CVE-2013-4469", 
+                "modified": "2014-06-21T00:32:54.467-04:00", 
+                "summary": "OpenStack Compute (Nova) Folsom, Grizzly, and Havana, when use_cow_images is set to False, does not verify the virtual size of a QCOW2 image, which allows local users to cause a denial of service (host file system disk consumption) by transferring an image with a large virtual size that does not contain a large amount of data from Glance.  NOTE: this issue is due to an incomplete fix for CVE-2013-2096."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:openstack:folsom:-"
+            }, 
+            {
+                "id": "cpe:/a:openstack:havana:-"
+            }, 
+            {
+                "id": "cpe:/a:openstack:grizzly:-"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.65400", 
+                "id": 65400
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2013/10/31/3", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "https://bugs.launchpad.net/nova/+bug/1206081", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2247-1", 
+                    "vendor": "UBUNTU"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "1.9", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-4469"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24438", 
+                "title": "USN-2247-1 -- nova vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24438"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for openstack-nova FEDORA-2013-22667", 
+                "file": "gb_fedora_2013_22667_openstack-nova_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867345"
+            }, 
+            {
+                "name": "Fedora Update for openstack-nova FEDORA-2013-22693", 
+                "file": "gb_fedora_2013_22693_openstack-nova_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867110"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 20 : openstack-nova-2013.2-4.fc20 (2013-22667)", 
+                "file": "fedora_2013-22667.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "71418"
+            }, 
+            {
+                "name": "Fedora 19 : openstack-nova-2013.1.4-3.fc19 (2013-22693)", 
+                "file": "fedora_2013-22693.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "71363"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 13.10 / 14.04 : nova vulnerabilities (USN-2247-1)", 
+                "file": "ubuntu_USN-2247-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "76109"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2247-1", 
+                "id": "USN-2247-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

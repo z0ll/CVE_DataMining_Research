@@ -1,0 +1,179 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1292", 
+                "published": "2007-03-06T19:19:00.000-05:00", 
+                "id": "CVE-2007-1292", 
+                "modified": "2008-11-15T01:44:10.343-05:00", 
+                "summary": "SQL injection vulnerability in inlinemod.php in Jelsoft vBulletin before 3.5.8, and before 3.6.5 in the 3.6.x series, might allow remote authenticated users to execute arbitrary SQL commands via the postids parameter.  NOTE: the vendor states that the attack is feasible only in circumstances \"almost impossible to achieve.\""
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:jelsoft:vbulletin:3.6.5"
+            }, 
+            {
+                "id": "cpe:/a:jelsoft:vbulletin:3.6.4"
+            }, 
+            {
+                "id": "cpe:/a:jelsoft:vbulletin:3.6.3"
+            }, 
+            {
+                "id": "cpe:/a:jelsoft:vbulletin:3.6.2"
+            }, 
+            {
+                "id": "cpe:/a:jelsoft:vbulletin:3.6.1"
+            }, 
+            {
+                "id": "cpe:/a:jelsoft:vbulletin:3.6.0"
+            }, 
+            {
+                "id": "cpe:/a:jelsoft:vbulletin:3.5.8"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35455", 
+                "id": 35455
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/22780", 
+                "id": 22780
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/33835", 
+                "id": 33835
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vbulletin.com/forum/showthread.php?postid=1314422", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/32746", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/22780", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/3387", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/24341", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/33835", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004666", 
+                "signature": "ET WEB_SPECIFIC_APPS Jelsoft vBulletin SQL Injection Attempt -- inlinemod.php postids SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004667", 
+                "signature": "ET WEB_SPECIFIC_APPS Jelsoft vBulletin SQL Injection Attempt -- inlinemod.php postids UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004668", 
+                "signature": "ET WEB_SPECIFIC_APPS Jelsoft vBulletin SQL Injection Attempt -- inlinemod.php postids INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004669", 
+                "signature": "ET WEB_SPECIFIC_APPS Jelsoft vBulletin SQL Injection Attempt -- inlinemod.php postids DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004670", 
+                "signature": "ET WEB_SPECIFIC_APPS Jelsoft vBulletin SQL Injection Attempt -- inlinemod.php postids ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004671", 
+                "signature": "ET WEB_SPECIFIC_APPS Jelsoft vBulletin SQL Injection Attempt -- inlinemod.php postids UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1292"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,292 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-6657", 
+                "published": "2014-09-28T06:55:10.033-04:00", 
+                "id": "CVE-2012-6657", 
+                "modified": "2014-09-29T16:08:19.920-04:00", 
+                "summary": "The sock_setsockopt function in net/core/sock.c in the Linux kernel before 3.5.7 does not ensure that a keepalive action is associated with a stream socket, which allows local users to cause a denial of service (system crash) by leveraging the ability to create a raw socket."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.5.5"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.5.6"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.5.3"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.5.2"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.5.1"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.5.4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.67542", 
+                "id": 67542
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/torvalds/linux/commit/3e10986d1d698140747fcfc2761ec9cb64c1d582", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1141742", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2014/09/15/8", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.kernel.org/pub/linux/kernel/v3.x/ChangeLog-3.5.7", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=3e10986d1d698140747fcfc2761ec9cb64c1d582", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.9", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-6657"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28612", 
+                "title": "ELSA-2014-1997 -- kernel security and bug fix update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28612"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27703", 
+                "title": "RHSA-2014:1997 -- kernel security and bug fix update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27703"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28647", 
+                "title": "ELSA-2014-3108 -- Unbreakable Enterprise kernel security update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28647"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "CentOS 6 : kernel (CESA-2014:1997)", 
+                "file": "centos_RHSA-2014-1997.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "80088"
+            }, 
+            {
+                "name": "Debian DLA-103-1 : linux-2.6 security update", 
+                "file": "debian_DLA-103.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "82087"
+            }, 
+            {
+                "name": "Oracle Linux 6 : kernel (ELSA-2014-1997)", 
+                "file": "oraclelinux_ELSA-2014-1997.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "80070"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2014-3108)", 
+                "file": "oraclelinux_ELSA-2014-3108.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "80158"
+            }, 
+            {
+                "name": "Oracle Linux 6 : kernel (ELSA-2015-1272)", 
+                "file": "oraclelinux_ELSA-2015-1272.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85097"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2014:1997)", 
+                "file": "redhat-RHSA-2014-1997.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "80072"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL6.x i386/x86_64", 
+                "file": "sl_20141216_kernel_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "80099"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : kernel (SUSE-SU-2015:0652-1)", 
+                "file": "suse_SU-2015-0652-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83708"
+            }, 
+            {
+                "name": "SUSE SLES10 Security Update : kernel (SUSE-SU-2015:0812-1)", 
+                "file": "suse_SU-2015-0812-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83723"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2012-6657.html", 
+                "id": "SUSE-SU-2015:0652"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2012-6657.html", 
+                "id": "SUSE-SU-2015:0812"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20141997", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2014-1997.html", 
+                    "id": "RHSA-2014:1997", 
+                    "title": "RHSA-2014:1997: kernel security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1134099", 
+                    "title": "CVE-2014-5471 CVE-2014-5472 kernel: isofs: unbound recursion when processing relocated directories", 
+                    "id": "1134099", 
+                    "issue date": "2014-12-16", 
+                    "associated redhat": "RHSA-2014:1997"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1141742", 
+                    "title": "CVE-2012-6657 Kernel: net: guard tcp_set_keepalive against crash", 
+                    "id": "1141742", 
+                    "issue date": "2014-12-16", 
+                    "associated redhat": "RHSA-2014:1997"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1141809", 
+                    "title": "CVE-2014-6410 kernel: udf: Avoid infinite loop when processing indirect ICBs", 
+                    "id": "1141809", 
+                    "issue date": "2014-12-16", 
+                    "associated redhat": "RHSA-2014:1997"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1147850", 
+                    "title": "CVE-2014-3673 kernel: sctp: skb_over_panic when receiving malformed ASCONF chunks", 
+                    "id": "1147850", 
+                    "issue date": "2014-12-16", 
+                    "associated redhat": "RHSA-2014:1997"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1155731", 
+                    "title": "CVE-2014-3687 kernel: net: sctp: fix panic on duplicate ASCONF chunks", 
+                    "id": "1155731", 
+                    "issue date": "2014-12-16", 
+                    "associated redhat": "RHSA-2014:1997"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1155745", 
+                    "title": "CVE-2014-3688 kernel: net: sctp: remote memory pressure from excessive queueing", 
+                    "id": "1155745", 
+                    "issue date": "2014-12-16", 
+                    "associated redhat": "RHSA-2014:1997"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1172806", 
+                    "title": "CVE-2014-9322 kernel: x86: local privesc due to bad_iret and paranoid entry incompatibility", 
+                    "id": "1172806", 
+                    "issue date": "2014-12-16", 
+                    "associated redhat": "RHSA-2014:1997"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

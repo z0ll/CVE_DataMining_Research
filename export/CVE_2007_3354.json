@@ -1,0 +1,166 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3354", 
+                "published": "2007-06-22T14:30:00.000-04:00", 
+                "id": "CVE-2007-3354", 
+                "modified": "2008-11-15T01:52:18.703-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in NetClassifieds Premium Edition allow remote attackers to execute arbitrary SQL commands via the s_user_id parameter to ViewCat.php and other unspecified vectors. NOTE: the CatID/ViewCat.php, CatID/gallery.php, and ItemNum/ViewItem.php vectors are already covered by CVE-2005-3978."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:scriptdevelopers.net:netclassifieds:1.5.1::professional"
+            }, 
+            {
+                "id": "cpe:/a:scriptdevelopers.net:netclassifieds:1.9.6.3::standard"
+            }, 
+            {
+                "id": "cpe:/a:scriptdevelopers.net:netclassifieds:1.0.1::premium"
+            }, 
+            {
+                "id": "cpe:/a:scriptdevelopers.net:netclassifieds:1.0.1::free"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.37421", 
+                "id": 37421
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/24584", 
+                "id": 24584
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/36330", 
+                "id": 36330
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/24584", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/471944/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://osvdb.org/36330", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34994", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2824", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006547", 
+                "signature": "ET WEB_SPECIFIC_APPS NetClassifieds Premium Edition SQL Injection Attempt -- ViewCat.php s_user_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006548", 
+                "signature": "ET WEB_SPECIFIC_APPS NetClassifieds Premium Edition SQL Injection Attempt -- ViewCat.php s_user_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006549", 
+                "signature": "ET WEB_SPECIFIC_APPS NetClassifieds Premium Edition SQL Injection Attempt -- ViewCat.php s_user_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006550", 
+                "signature": "ET WEB_SPECIFIC_APPS NetClassifieds Premium Edition SQL Injection Attempt -- ViewCat.php s_user_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006551", 
+                "signature": "ET WEB_SPECIFIC_APPS NetClassifieds Premium Edition SQL Injection Attempt -- ViewCat.php s_user_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006552", 
+                "signature": "ET WEB_SPECIFIC_APPS NetClassifieds Premium Edition SQL Injection Attempt -- ViewCat.php s_user_id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-3354"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

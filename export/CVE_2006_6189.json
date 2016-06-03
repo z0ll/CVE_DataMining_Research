@@ -1,0 +1,152 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6189", 
+                "published": "2006-11-30T19:28:00.000-05:00", 
+                "id": "CVE-2006-6189", 
+                "modified": "2008-09-05T17:14:08.257-04:00", 
+                "summary": "SQL injection vulnerability in displayCalendar.asp in ClickTech Click Blog allows remote attackers to execute arbitrary SQL commands via the date parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:clicktech:clickblog"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33527", 
+                "id": 33527
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21310", 
+                "id": 21310
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/21310", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/452730/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.aria-security.com/forum/showthread.php?t=50", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30537", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/1934", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007223", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Blog SQL Injection Attempt -- displayCalendar.asp date SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007224", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Blog SQL Injection Attempt -- displayCalendar.asp date UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007225", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Blog SQL Injection Attempt -- displayCalendar.asp date INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007226", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Blog SQL Injection Attempt -- displayCalendar.asp date DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007227", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Blog SQL Injection Attempt -- displayCalendar.asp date ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007228", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech Click Blog SQL Injection Attempt -- displayCalendar.asp date UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6189"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

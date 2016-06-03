@@ -1,0 +1,577 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1421", 
+                "published": "2015-03-16T06:59:06.880-04:00", 
+                "id": "CVE-2015-1421", 
+                "modified": "2015-05-13T22:03:19.340-04:00", 
+                "summary": "Use-after-free vulnerability in the sctp_assoc_update function in net/sctp/associola.c in the Linux kernel before 3.18.8 allows remote attackers to cause a denial of service (slab corruption and panic) or possibly have unspecified other impact by triggering an INIT collision that leads to improper handling of shared-key data."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.18.7"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.69034", 
+                "id": 69034
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/torvalds/linux/commit/600ddd6825543962fb807884169e57b580dba208", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1196581", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2546-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2545-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2542-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2541-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id/1032172", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/01/29/15", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.kernel.org/pub/linux/kernel/v3.x/ChangeLog-3.18.8", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2015/dsa-3170", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-0782.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-0751.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-0726.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-05/msg00001.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=600ddd6825543962fb807884169e57b580dba208", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-1421"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:189", 
+                "title": "DSA-3170-1 -- linux -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:189"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3170-1 (linux - security update)", 
+                "file": "deb_3170.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703170"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 7 : kernel (CESA-2015:0726)", 
+                "file": "centos_RHSA-2015-0726.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "82474"
+            }, 
+            {
+                "name": "CentOS 6 : kernel (CESA-2015:0864)", 
+                "file": "centos_RHSA-2015-0864.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "82999"
+            }, 
+            {
+                "name": "Debian DLA-155-1 : linux-2.6 security update", 
+                "file": "debian_DLA-155.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "82138"
+            }, 
+            {
+                "name": "Debian DSA-3170-1 : linux - security update", 
+                "file": "debian_DSA-3170.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "81449"
+            }, 
+            {
+                "name": "F5 Networks BIG-IP : Linux kernel SCTP vulnerability (SOL17242)", 
+                "file": "f5_bigip_SOL17242.nasl", 
+                "family": "F5 Networks Local Security Checks", 
+                "id": "85889"
+            }, 
+            {
+                "name": "Fedora 21 : kernel-3.18.8-201.fc21 (2015-3011)", 
+                "file": "fedora_2015-3011.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "81717"
+            }, 
+            {
+                "name": "Fedora 20 : kernel-3.18.9-100.fc20 (2015-3594)", 
+                "file": "fedora_2015-3594.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "81863"
+            }, 
+            {
+                "name": "openSUSE Security Update : Linux Kernel (openSUSE-2015-302)", 
+                "file": "openSUSE-2015-302.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "82756"
+            }, 
+            {
+                "name": "openSUSE Security Update : the Linux Kernel (openSUSE-2016-124)", 
+                "file": "openSUSE-2016-124.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88545"
+            }, 
+            {
+                "name": "Oracle Linux 7 : kernel (ELSA-2015-0726)", 
+                "file": "oraclelinux_ELSA-2015-0726.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "82287"
+            }, 
+            {
+                "name": "Oracle Linux 6 : kernel (ELSA-2015-0864)", 
+                "file": "oraclelinux_ELSA-2015-0864.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "82981"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : Unbreakable Enterprise kernel (ELSA-2015-3019)", 
+                "file": "oraclelinux_ELSA-2015-3019.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "82518"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2015-3020)", 
+                "file": "oraclelinux_ELSA-2015-3020.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "82490"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2015-3021)", 
+                "file": "oraclelinux_ELSA-2015-3021.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "82491"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2015-3036)", 
+                "file": "oraclelinux_ELSA-2015-3036.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "83449"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : Unbreakable Enterprise kernel (ELSA-2015-3064)", 
+                "file": "oraclelinux_ELSA-2015-3064.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85177"
+            }, 
+            {
+                "name": "OracleVM 3.3 : kernel-uek (OVMSA-2015-0040)", 
+                "file": "oraclevm_OVMSA-2015-0040.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "82691"
+            }, 
+            {
+                "name": "OracleVM 3.3 : kernel-uek (OVMSA-2015-0109)", 
+                "file": "oraclevm_OVMSA-2015-0109.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "85188"
+            }, 
+            {
+                "name": "OracleVM 3.2 : kernel-uek (OVMSA-2016-0037)", 
+                "file": "oraclevm_OVMSA-2016-0037.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "90019"
+            }, 
+            {
+                "name": "RHEL 7 : kernel (RHSA-2015:0726)", 
+                "file": "redhat-RHSA-2015-0726.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "82290"
+            }, 
+            {
+                "name": "RHEL 7 : kernel-rt (RHSA-2015:0727)", 
+                "file": "redhat-RHSA-2015-0727.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "82493"
+            }, 
+            {
+                "name": "RHEL 6 : kernel-rt (RHSA-2015:0751)", 
+                "file": "redhat-RHSA-2015-0751.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "82467"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2015:0782)", 
+                "file": "redhat-RHSA-2015-0782.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "82636"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2015:0864)", 
+                "file": "redhat-RHSA-2015-0864.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "82985"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2015:1030)", 
+                "file": "redhat-RHSA-2015-1030.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "83843"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2015:1082)", 
+                "file": "redhat-RHSA-2015-1082.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "84076"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL6.x i386/x86_64", 
+                "file": "sl_20150421_kernel_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "82988"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : kernel (SUSE-SU-2015:1174-1)", 
+                "file": "suse_SU-2015-1174-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84545"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : kernel (SUSE-SU-2015:1478-1)", 
+                "file": "suse_SU-2015-1478-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85764"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux vulnerabilities (USN-2541-1)", 
+                "file": "ubuntu_USN-2541-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "82069"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-utopic vulnerabilities (USN-2545-1)", 
+                "file": "ubuntu_USN-2545-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "82072"
+            }, 
+            {
+                "name": "Ubuntu 14.10 : linux vulnerabilities (USN-2546-1)", 
+                "file": "ubuntu_USN-2546-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "82073"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-trusty vulnerabilities (USN-2562-1)", 
+                "file": "ubuntu_USN-2562-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "82661"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux vulnerabilities (USN-2563-1)", 
+                "file": "ubuntu_USN-2563-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "82662"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2015-1421.html", 
+                "id": "SUSE-SU-2015:0832"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-0782.html", 
+                    "id": "RHSA-2015:0782", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-0751.html", 
+                    "id": "RHSA-2015:0751", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20150726", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-0726.html", 
+                    "id": "RHSA-2015:0726", 
+                    "title": "RHSA-2015:0726: kernel security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1181166", 
+                    "title": "CVE-2014-8159 kernel: infiniband: uverbs: unprotected physical memory access", 
+                    "id": "1181166", 
+                    "issue date": "2015-03-26", 
+                    "associated redhat": "RHSA-2015:0726"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1196581", 
+                    "title": "CVE-2015-1421 kernel: net: slab corruption from use after free on INIT collisions", 
+                    "id": "1196581", 
+                    "issue date": "2015-03-26", 
+                    "associated redhat": "RHSA-2015:0726"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20150727", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-0727.html", 
+                    "id": "RHSA-2015:0727", 
+                    "title": "RHSA-2015:0727: kernel-rt security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1181166", 
+                    "title": "CVE-2014-8159 kernel: infiniband: uverbs: unprotected physical memory access", 
+                    "id": "1181166", 
+                    "issue date": "2015-03-26", 
+                    "associated redhat": "RHSA-2015:0727"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1196581", 
+                    "title": "CVE-2015-1421 kernel: net: slab corruption from use after free on INIT collisions", 
+                    "id": "1196581", 
+                    "issue date": "2015-03-26", 
+                    "associated redhat": "RHSA-2015:0727"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1203359", 
+                    "title": "kernel-rt: rebase tree to match RHEL7.1.z source tree", 
+                    "id": "1203359", 
+                    "issue date": "2015-03-26", 
+                    "associated redhat": "RHSA-2015:0727"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20150864", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-0864.html", 
+                    "id": "RHSA-2015:0864", 
+                    "title": "RHSA-2015:0864: kernel security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1095855", 
+                    "title": "CVE-2014-3215 policycoreutils: local privilege escalation via seunshare", 
+                    "id": "1095855", 
+                    "issue date": "2015-04-21", 
+                    "associated redhat": "RHSA-2015:0864"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1153322", 
+                    "title": "CVE-2014-3690 kernel: kvm: vmx: invalid host cr4 handling across vm entries", 
+                    "id": "1153322", 
+                    "issue date": "2015-04-21", 
+                    "associated redhat": "RHSA-2015:0864"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1161565", 
+                    "title": "CVE-2014-7825 CVE-2014-7826 kernel: insufficient syscall number validation in perf and ftrace subsystems", 
+                    "id": "1161565", 
+                    "issue date": "2015-04-21", 
+                    "associated redhat": "RHSA-2015:0864"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1164266", 
+                    "title": "CVE-2014-8884 kernel: usb: buffer overflow in ttusb-dec", 
+                    "id": "1164266", 
+                    "issue date": "2015-04-21", 
+                    "associated redhat": "RHSA-2015:0864"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1179813", 
+                    "title": "CVE-2014-9529 kernel: memory corruption or panic during key garbage collection", 
+                    "id": "1179813", 
+                    "issue date": "2015-04-21", 
+                    "associated redhat": "RHSA-2015:0864"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1180119", 
+                    "title": "CVE-2014-9584 kernel: isofs: unchecked printing of ER records", 
+                    "id": "1180119", 
+                    "issue date": "2015-04-21", 
+                    "associated redhat": "RHSA-2015:0864"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1196581", 
+                    "title": "CVE-2015-1421 kernel: net: slab corruption from use after free on INIT collisions", 
+                    "id": "1196581", 
+                    "issue date": "2015-04-21", 
+                    "associated redhat": "RHSA-2015:0864"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1198109", 
+                    "title": "CVE-2014-8171 kernel: memcg: OOM handling DoS", 
+                    "id": "1198109", 
+                    "issue date": "2015-04-21", 
+                    "associated redhat": "RHSA-2015:0864"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151030", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1030.html", 
+                    "id": "RHSA-2015:1030", 
+                    "title": "RHSA-2015:1030: kernel security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1196581", 
+                    "title": "CVE-2015-1421 kernel: net: slab corruption from use after free on INIT collisions", 
+                    "id": "1196581", 
+                    "issue date": "2015-05-27", 
+                    "associated redhat": "RHSA-2015:1030"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2541-1", 
+                "id": "USN-2541-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2542-1", 
+                "id": "USN-2542-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2545-1", 
+                "id": "USN-2545-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2546-1", 
+                "id": "USN-2546-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3170", 
+                "id": "DSA-3170"
+            }
+        ], 
+        "Vmware": []
+    }
+}

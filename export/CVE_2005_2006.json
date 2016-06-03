@@ -1,0 +1,203 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2006", 
+                "published": "2005-06-17T00:00:00.000-04:00", 
+                "id": "CVE-2005-2006", 
+                "modified": "2011-03-07T21:23:14.110-05:00", 
+                "summary": "JBOSS 3.2.2 through 3.2.7 and 4.0.2 allows remote attackers to obtain sensitive information via a GET request (1) with a \"%.\" (percent dot), which reveals the installation path or (2) with a % (percent) before a filename, which reveals the contents of the file."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:jboss:jboss:3.2.2"
+            }, 
+            {
+                "id": "cpe:/a:jboss:jboss:3.2.7"
+            }, 
+            {
+                "id": "cpe:/a:jboss:jboss:4.0.2"
+            }, 
+            {
+                "id": "cpe:/a:jboss:jboss:3.2.4"
+            }, 
+            {
+                "id": "cpe:/a:jboss:jboss:3.2.5"
+            }, 
+            {
+                "id": "cpe:/a:jboss:jboss:3.2.3"
+            }, 
+            {
+                "id": "cpe:/a:jboss:jboss:3.2.6"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.25561", 
+                "id": 25561
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/13985", 
+                "id": 13985
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www1.itrc.hp.com/service/cki/docDisplay.do?docId=c00597967", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/0497", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2005/0815", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/15746", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=111911095424496&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www1.itrc.hp.com/service/cki/docDisplay.do?docId=c00597967", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/13985", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/440641/100/100/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1015605", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/439", 
+                    "vendor": "SREASON"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/18789", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/17559", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/fulldisclosure/2006-07/0424.html", 
+                    "vendor": "FULLDISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-recon", 
+                "id": "sid:100000149", 
+                "signature": "GPL DELETED WEB-MISC Jboss % attempt"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [
+            {
+                "url": "http://www.d2sec.com/exploits/redhat_jboss_file_disclosure.html", 
+                "title": "RedHat JBoss File Disclosure"
+            }
+        ], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-2006"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "JBoss org.jboss.web.WebServer Class Multiple Vulnerabilities (Source Disc, ID)", 
+                "file": "jboss_config_disclosure.nasl", 
+                "family": "CGI abuses", 
+                "id": "18526"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [
+            {
+                "url": "http://www1.itrc.hp.com/service/cki/docDisplay.do?docId=c00597967", 
+                "id": "SSRT061108"
+            }, 
+            {
+                "url": "http://www1.itrc.hp.com/service/cki/docDisplay.do?docId=c00597967", 
+                "id": "HPSBMA02096"
+            }
+        ], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2005-2006.html", 
+                "id": "SUSE-SR:2005:026"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,378 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2244", 
+                "published": "2010-07-08T08:54:47.083-04:00", 
+                "id": "CVE-2010-2244", 
+                "modified": "2011-03-07T00:00:00.000-05:00", 
+                "summary": "The AvahiDnsPacket function in avahi-core/socket.c in avahi-daemon in Avahi 0.6.16 and 0.6.25 allows remote attackers to cause a denial of service (assertion failure and daemon exit) via a DNS packet with an invalid checksum followed by a DNS packet with a valid checksum, a different vulnerability than CVE-2008-5081."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:avahi:avahi:0.6.16"
+            }, 
+            {
+                "id": "cpe:/a:avahi:avahi:0.6.25"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.53948", 
+                "id": 53948
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=607293", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1024200", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2010/06/23/4", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:204", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2010/dsa-2086", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://marc.info/?l=oss-security&m=127748459505200&w=2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2010-July/043820.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2010-July/043800.html", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "4.3", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-2244"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22345", 
+                "title": "RHSA-2010:0528: avahi security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22345"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22789", 
+                "title": "ELSA-2010:0528: avahi security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22789"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28248", 
+                "title": "DEPRECATED: ELSA-2010-0528 -- avahi security update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28248"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:12699", 
+                "title": "DSA-2086-1 avahi -- several", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:12699"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13324", 
+                "title": "USN-992-1 -- avahi vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13324"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2086-1 (avahi)", 
+                "file": "deb_2086_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "67842"
+            }, 
+            {
+                "name": "avahi -- denial of service", 
+                "file": "freebsd_avahi.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "69366"
+            }, 
+            {
+                "name": "CentOS Update for avahi CESA-2010:0528 centos5 i386", 
+                "file": "gb_CESA-2010_0528_avahi_centos5_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880614"
+            }, 
+            {
+                "name": "CentOS Update for avahi CESA-2011:0436 centos5 i386", 
+                "file": "gb_CESA-2011_0436_avahi_centos5_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880557"
+            }, 
+            {
+                "name": "CentOS Update for avahi CESA-2011:0436 centos5 x86_64", 
+                "file": "gb_CESA-2011_0436_avahi_centos5_x86_64.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881325"
+            }, 
+            {
+                "name": "Fedora Update for avahi FEDORA-2010-10581", 
+                "file": "gb_fedora_2010_10581_avahi_fc13.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "862233"
+            }, 
+            {
+                "name": "Fedora Update for avahi FEDORA-2010-10584", 
+                "file": "gb_fedora_2010_10584_avahi_fc12.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "862236"
+            }, 
+            {
+                "name": "Fedora Update for avahi FEDORA-2011-11588", 
+                "file": "gb_fedora_2011_11588_avahi_fc14.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863496"
+            }, 
+            {
+                "name": "Mandriva Update for avahi MDVSA-2010:204 (avahi)", 
+                "file": "gb_mandriva_MDVSA_2010_204.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "831210"
+            }, 
+            {
+                "name": "Mandriva Update for avahi MDVSA-2011:037 (avahi)", 
+                "file": "gb_mandriva_MDVSA_2011_037.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "831336"
+            }, 
+            {
+                "name": "RedHat Update for avahi RHSA-2010:0528-01", 
+                "file": "gb_RHSA-2010_0528-01_avahi.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870289"
+            }, 
+            {
+                "name": "RedHat Update for avahi RHSA-2011:0436-01", 
+                "file": "gb_RHSA-2011_0436-01_avahi.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870422"
+            }, 
+            {
+                "name": "RedHat Update for avahi RHSA-2011:0779-01", 
+                "file": "gb_RHSA-2011_0779-01_avahi.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870743"
+            }, 
+            {
+                "name": "Ubuntu Update for avahi vulnerabilities USN-992-1", 
+                "file": "gb_ubuntu_USN_992_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840511"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 201110-17 (avahi)", 
+                "file": "glsa_201110_17.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "70780"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : avahi (CESA-2010:0528)", 
+                "file": "centos_RHSA-2010-0528.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "47739"
+            }, 
+            {
+                "name": "Debian DSA-2086-1 : avahi - several vulnerabilities", 
+                "file": "debian_DSA-2086.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "48248"
+            }, 
+            {
+                "name": "Fedora 13 : avahi-0.6.25-7.fc13 (2010-10581)", 
+                "file": "fedora_2010-10581.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "47609"
+            }, 
+            {
+                "name": "Fedora 12 : avahi-0.6.25-7.fc12 (2010-10584)", 
+                "file": "fedora_2010-10584.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "47610"
+            }, 
+            {
+                "name": "Fedora 14 : avahi-0.6.27-8.fc14 (2011-11588)", 
+                "file": "fedora_2011-11588.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "56151"
+            }, 
+            {
+                "name": "Fedora 15 : avahi-0.6.29-1.fc15 (2011-3033)", 
+                "file": "fedora_2011-3033.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "52664"
+            }, 
+            {
+                "name": "FreeBSD : avahi -- denial of service (8b986a05-4dbe-11e0-8b9a-02e0184b8d35)", 
+                "file": "freebsd_pkg_8b986a054dbe11e08b9a02e0184b8d35.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52666"
+            }, 
+            {
+                "name": "GLSA-201110-17 : Avahi: Denial of Service", 
+                "file": "gentoo_GLSA-201110-17.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "56592"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : avahi (MDVSA-2010:204)", 
+                "file": "mandriva_MDVSA-2010-204.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "49989"
+            }, 
+            {
+                "name": "Oracle Linux 5 : avahi (ELSA-2010-0528)", 
+                "file": "oraclelinux_ELSA-2010-0528.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68061"
+            }, 
+            {
+                "name": "RHEL 5 : avahi (RHSA-2010:0528)", 
+                "file": "redhat-RHSA-2010-0528.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "47874"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : avahi on SL5.x i386/x86_64", 
+                "file": "sl_20100713_avahi_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "60814"
+            }, 
+            {
+                "name": "Ubuntu 8.04 LTS / 9.04 / 9.10 / 10.04 LTS : avahi vulnerabilities (USN-992-1)", 
+                "file": "ubuntu_USN-992-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "49761"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2010-10581", 
+                "id": "FEDORA-2010-10581"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2010-10584", 
+                "id": "FEDORA-2010-10584"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:204", 
+                "id": "MDVSA-2010:204"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20100528", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0528.html", 
+                    "id": "RHSA-2010:0528", 
+                    "title": "RHSA-2010:0528: avahi security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=488314", 
+                    "title": "CVE-2009-0758 avahi: remote DoS via legacy unicast mDNS queries", 
+                    "id": "488314", 
+                    "issue date": "2010-07-13", 
+                    "associated redhat": "RHSA-2010:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=607293", 
+                    "title": "CVE-2010-2244 avahi: assertion failure after receiving a packet with corrupted checksum", 
+                    "id": "607293", 
+                    "issue date": "2010-07-13", 
+                    "associated redhat": "RHSA-2010:0528"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2086", 
+                "id": "DSA-2086"
+            }
+        ], 
+        "Vmware": []
+    }
+}

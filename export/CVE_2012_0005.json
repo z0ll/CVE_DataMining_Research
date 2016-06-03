@@ -1,0 +1,192 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0005", 
+                "published": "2012-01-10T16:55:03.837-05:00", 
+                "id": "CVE-2012-0005", 
+                "modified": "2013-03-06T23:50:20.583-05:00", 
+                "summary": "The Client/Server Run-time Subsystem (aka CSRSS) in the Win32 subsystem in Microsoft Windows XP SP2 and SP3, Server 2003 SP2, Vista SP2, and Server 2008 SP2, when a Chinese, Japanese, or Korean system locale is used, can access uninitialized memory during the processing of Unicode characters, which allows local users to gain privileges via a crafted application, aka \"CSRSS Elevation of Privilege Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_vista::sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp2:professional_x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2:itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp3"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008::sp2:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008::sp2:x32"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_vista::sp2:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:-:sp2:itanium"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.4531", 
+                "id": 4531
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/51270", 
+                "id": 51270
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA12-010A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1026495", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/51270", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS12-003", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/47479", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "6.9", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-0005"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:14879", 
+                "title": "CSRSS Elevation of Privilege Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:14879"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "get_kb_item(SMB/login", 
+                "file": "secpod_ms12-003.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "902499"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS12-003: Vulnerability in Windows Client/Server Run-time Subsystem Could Allow Elevation of Privilege (2646524)", 
+                "file": "smb_nt_ms12-003.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "57471"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in Windows Client/Server Run-time Subsystem Could Allow Elevation of Privilege", 
+                "id": "Vulnerability in Windows Client/Server Run-time Subsystem Could Allow Elevation of Privilege", 
+                "title": "2646524"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2646524", 
+                "id": "2646524", 
+                "title": "Vulnerability in Windows Client/Server Run-time Subsystem Could Allow Elevation of Privilege"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS12-003", 
+                "id": "MS12-003", 
+                "title": "Vulnerability in Windows Client/Server Run-time Subsystem Could Allow Elevation of Privilege"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

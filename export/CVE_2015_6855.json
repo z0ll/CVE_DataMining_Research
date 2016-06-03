@@ -1,0 +1,351 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-6855", 
+                "published": "2015-11-06T16:59:07.780-05:00", 
+                "id": "CVE-2015-6855", 
+                "modified": "2015-11-09T15:24:04.353-05:00", 
+                "summary": "hw/ide/core.c in QEMU does not properly restrict the commands accepted by an ATAPI device, which allows guest users to cause a denial of service or possibly have unspecified other impact via certain IDE commands, as demonstrated by a WIN_READ_NATIVE_MAX command to an empty drive, which triggers a divide-by-zero error and instance crash."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:qemu:qemu:-"
+            }, 
+            {
+                "id": "cpe:/o:novell:suse_linux_enterprise_desktop:12.0"
+            }, 
+            {
+                "id": "cpe:/o:fedoraproject:fedora:23"
+            }, 
+            {
+                "id": "cpe:/o:fedoraproject:fedora:22"
+            }, 
+            {
+                "id": "cpe:/o:debian:debian_linux:7.0"
+            }, 
+            {
+                "id": "cpe:/o:debian:debian_linux:8.0"
+            }, 
+            {
+                "id": "cpe:/o:novell:suse_linux_enterprise_server:12.0"
+            }, 
+            {
+                "id": "cpe:/o:fedoraproject:fedora:21"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.77689", 
+                "id": 77689
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/76691", 
+                "id": 76691
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://lists.gnu.org/archive/html/qemu-devel/2015-09/msg02479.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2745-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/76691", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/09/10/2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/09/10/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2015/dsa-3362", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2015/dsa-3361", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-10/msg00019.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-September/167369.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-October/169341.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-October/169327.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-October/169039.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-October/169036.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-October/168602.html", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-6855"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:50", 
+                "title": "DSA-3362-1 -- qemu-kvm -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:50"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:16", 
+                "title": "DSA-3361-1 -- qemu -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:16"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3361-1 (qemu - security update)", 
+                "file": "deb_3361.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703361"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 3362-1 (qemu-kvm - security update)", 
+                "file": "deb_3362.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703362"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-3361-1 : qemu - security update", 
+                "file": "debian_DSA-3361.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "86023"
+            }, 
+            {
+                "name": "Debian DSA-3362-1 : qemu-kvm - security update", 
+                "file": "debian_DSA-3362.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "86024"
+            }, 
+            {
+                "name": "F5 Networks BIG-IP : QEMU vulnerability (SOL51841514)", 
+                "file": "f5_bigip_SOL51841514.nasl", 
+                "family": "F5 Networks Local Security Checks", 
+                "id": "87433"
+            }, 
+            {
+                "name": "Fedora 21 : qemu-2.1.3-11.fc21 (2015-16368)", 
+                "file": "fedora_2015-16368.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "86332"
+            }, 
+            {
+                "name": "Fedora 22 : qemu-2.3.1-5.fc22 (2015-16369)", 
+                "file": "fedora_2015-16369.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "86333"
+            }, 
+            {
+                "name": "Fedora 23 : qemu-2.4.0-4.fc23 (2015-16370)", 
+                "file": "fedora_2015-16370.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "86112"
+            }, 
+            {
+                "name": "Fedora 22 : xen-4.5.1-10.fc22 (2015-4896530727)", 
+                "file": "fedora_2015-4896530727.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "86408"
+            }, 
+            {
+                "name": "Fedora 23 : xen-4.5.1-10.fc23 (2015-8dc71ade88)", 
+                "file": "fedora_2015-8dc71ade88.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "89321"
+            }, 
+            {
+                "name": "Fedora 21 : xen-4.4.3-5.fc21 (2015-d6ea74993a)", 
+                "file": "fedora_2015-d6ea74993a.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "89425"
+            }, 
+            {
+                "name": "FreeBSD : qemu -- denial of service vulnerability in IDE disk/CD/DVD-ROM emulation (bbc97005-b14e-11e5-9728-002590263bf5)", 
+                "file": "freebsd_pkg_bbc97005b14e11e59728002590263bf5.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "87705"
+            }, 
+            {
+                "name": "GLSA-201602-01 : QEMU: Multiple vulnerabilities (Venom)", 
+                "file": "gentoo_GLSA-201602-01.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "88587"
+            }, 
+            {
+                "name": "openSUSE Security Update : xen (openSUSE-2016-413)", 
+                "file": "openSUSE-2016-413.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "90260"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : qemu (SUSE-SU-2015:1782-1)", 
+                "file": "suse_SU-2015-1782-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "86490"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : xen (SUSE-SU-2016:0873-1)", 
+                "file": "suse_SU-2016-0873-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "90186"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : xen (SUSE-SU-2016:0955-1)", 
+                "file": "suse_SU-2016-0955-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "90396"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 14.04 / 15.04 : qemu, qemu-kvm vulnerabilities (USN-2745-1)", 
+                "file": "ubuntu_USN-2745-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "86146"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2015-16368", 
+                "id": "FEDORA-2015-16368"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2015-16369", 
+                "id": "FEDORA-2015-16369"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2015-16370", 
+                "id": "FEDORA-2015-16370"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2015-4896530727", 
+                "id": "FEDORA-2015-4896530727"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2015-8dc71ade88", 
+                "id": "FEDORA-2015-8dc71ade88"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2015-d6ea74993a", 
+                "id": "FEDORA-2015-d6ea74993a"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2015-6855.html", 
+                "id": "SUSE-SU-2015:1782"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2745-1", 
+                "id": "USN-2745-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3361", 
+                "id": "DSA-3361"
+            }, 
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3362", 
+                "id": "DSA-3362"
+            }
+        ], 
+        "Vmware": []
+    }
+}

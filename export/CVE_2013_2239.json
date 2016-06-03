@@ -1,0 +1,148 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-2239", 
+                "published": "2013-11-12T09:35:11.353-05:00", 
+                "id": "CVE-2013-2239", 
+                "modified": "2014-02-06T23:46:52.763-05:00", 
+                "summary": "vzkernel before 042stab080.2 in the OpenVZ modification for the Linux kernel 2.6.32 does not initialize certain length variables, which allows local users to obtain sensitive information from kernel stack memory via (1) a crafted ploop driver ioctl call, related to the ploop_getdevice_ioc function in drivers/block/ploop/dev.c, or (2) a crafted quotactl system call, related to the compat_quotactl function in fs/quota/quota.c."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:openvz:vzkernel:2.6.32"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.65458", 
+                "id": 65458
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://security-tracker.debian.org/tracker/CVE-2013-2239", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugs.gentoo.org/show_bug.cgi?id=475762", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2013/dsa-2766", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://wiki.openvz.org/Download/kernel/rhel6-testing/042stab080.2", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2013/07/04/9", 
+                    "vendor": "MLIST"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "4.7", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-2239"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19806", 
+                "title": "DSA-2766-1 linux-2.6 - several", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:19806"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2766-1 (linux-2.6 - privilege escalation/denial of service/information leak)", 
+                "file": "deb_2766.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "892766"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-2766-1 : linux-2.6 - privilege escalation/denial of service/information leak", 
+                "file": "debian_DSA-2766.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "70200"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2766", 
+                "id": "DSA-2766"
+            }
+        ], 
+        "Vmware": []
+    }
+}

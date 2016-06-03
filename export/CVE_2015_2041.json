@@ -1,0 +1,229 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2041", 
+                "published": "2015-04-21T06:59:01.120-04:00", 
+                "id": "CVE-2015-2041", 
+                "modified": "2015-06-03T22:03:43.673-04:00", 
+                "summary": "net/llc/sysctl_net_llc.c in the Linux kernel before 3.19 uses an incorrect data type in a sysctl table, which allows local users to obtain potentially sensitive information from kernel memory or possibly have unspecified other impact by accessing a sysctl entry."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/17.html", 
+                "id": "CWE-17", 
+                "title": "Code"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.18.7"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.69206", 
+                "id": 69206
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/torvalds/linux/commit/6b8d9117ccb4f81b1244aafa7bc70ef8fa45fc49", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1195350", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/02/20/19", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2015/dsa-3237", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-04/msg00020.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=6b8d9117ccb4f81b1244aafa7bc70ef8fa45fc49", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-2041"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:72", 
+                "title": "DSA-3237-1 -- linux -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:72"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3237-1 (linux - security update)", 
+                "file": "deb_3237.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703237"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DLA-246-2 : linux-2.6 regression update", 
+                "file": "debian_DLA-246.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "84252"
+            }, 
+            {
+                "name": "Debian DSA-3237-1 : linux - security update", 
+                "file": "debian_DSA-3237.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "83065"
+            }, 
+            {
+                "name": "openSUSE Security Update : the Linux Kernel (openSUSE-2015-543)", 
+                "file": "openSUSE-2015-543.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85432"
+            }, 
+            {
+                "name": "openSUSE Security Update : the Linux Kernel (openSUSE-2016-124)", 
+                "file": "openSUSE-2016-124.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88545"
+            }, 
+            {
+                "name": "SUSE SLES10 Security Update : kernel (SUSE-SU-2015:0812-1)", 
+                "file": "suse_SU-2015-0812-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83723"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : kernel (SUSE-SU-2015:1071-1)", 
+                "file": "suse_SU-2015-1071-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84227"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : kernel (SUSE-SU-2015:1174-1)", 
+                "file": "suse_SU-2015-1174-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84545"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : kernel (SUSE-SU-2015:1478-1)", 
+                "file": "suse_SU-2015-1478-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85764"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux vulnerabilities (USN-2560-1)", 
+                "file": "ubuntu_USN-2560-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "82660"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-trusty vulnerabilities (USN-2562-1)", 
+                "file": "ubuntu_USN-2562-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "82661"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux vulnerabilities (USN-2563-1)", 
+                "file": "ubuntu_USN-2563-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "82662"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-utopic vulnerabilities (USN-2564-1)", 
+                "file": "ubuntu_USN-2564-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "82695"
+            }, 
+            {
+                "name": "Ubuntu 14.10 : linux vulnerabilities (USN-2565-1)", 
+                "file": "ubuntu_USN-2565-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "82696"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2015-2041.html", 
+                "id": "SUSE-SU-2015:0812"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3237", 
+                "id": "DSA-3237"
+            }
+        ], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,175 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5309", 
+                "published": "2015-12-07T15:59:08.060-05:00", 
+                "id": "CVE-2015-5309", 
+                "modified": "2015-12-08T15:45:35.640-05:00", 
+                "summary": "Integer overflow in the terminal emulator in PuTTY before 0.66 allows remote attackers to cause a denial of service (memory corruption) or possibly execute arbitrary code via an ECH (erase characters) escape sequence with a large parameter value, which triggers a buffer underflow."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:simon_tatham:putty:0.65"
+            }, 
+            {
+                "id": "cpe:/o:novell:opensuse:13.2"
+            }, 
+            {
+                "id": "cpe:/o:novell:opensuse:13.1"
+            }, 
+            {
+                "id": "cpe:/o:novell:leap:42.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.79437", 
+                "id": 79437
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/vuln-ech-overflow.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2015-11/msg00099.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "4.3", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-5309"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:357", 
+                "title": "DSA-3409-1 -- putty -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:357"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3409-1 (putty - security update)", 
+                "file": "deb_3409.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703409"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DLA-347-1 : putty security update", 
+                "file": "debian_DLA-347.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "87068"
+            }, 
+            {
+                "name": "Debian DSA-3409-1 : putty - security update", 
+                "file": "debian_DSA-3409.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "87163"
+            }, 
+            {
+                "name": "Fedora 23 : putty-0.66-1.fc23 (2015-3d17682c15)", 
+                "file": "fedora_2015-3d17682c15.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "89220"
+            }, 
+            {
+                "name": "Fedora 22 : putty-0.66-1.fc22 (2015-5ad4a1f151)", 
+                "file": "fedora_2015-5ad4a1f151.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "89247"
+            }, 
+            {
+                "name": "FreeBSD : PuTTY -- memory corruption in terminal emulators erase character handling (0cb0afd9-86b8-11e5-bf60-080027ef73ec)", 
+                "file": "freebsd_pkg_0cb0afd986b811e5bf60080027ef73ec.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "86805"
+            }, 
+            {
+                "name": "openSUSE Security Update : putty (openSUSE-2015-766)", 
+                "file": "openSUSE-2015-766.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "86924"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2015-5309.html", 
+                "id": "openSUSE-SU-2015:2023"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,275 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0015", 
+                "published": "2010-01-14T13:30:00.577-05:00", 
+                "id": "CVE-2010-0015", 
+                "modified": "2010-06-17T01:37:14.547-04:00", 
+                "summary": "nis/nss_nis/nis-pwd.c in the GNU C Library (aka glibc or libc6) 2.7 and Embedded GLIBC (EGLIBC) 2.10.2 adds information from the passwd.adjunct.byname map to entries in the passwd map, which allows remote attackers to obtain the encrypted passwords of NIS accounts by calling the getpwnam function."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/255.html", 
+                "id": "CWE-255", 
+                "title": "Credentials Management"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:gnu:glibc:2.10.2"
+            }, 
+            {
+                "id": "cpe:/a:gnu:glibc:2.7"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.51550", 
+                "id": 51550
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2010/01/11/6", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2010/01/08/2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2010/01/08/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2010/01/07/3", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:112", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:111", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://svn.debian.org/viewsvn/pkg-glibc/glibc-package/trunk/debian/patches/any/submitted-nis-shadow.diff?revision=4062&view=markup", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://sourceware.org/bugzilla/show_bug.cgi?id=11134", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://marc.info/?l=oss-security&m=126320570505651&w=2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://marc.info/?l=oss-security&m=126320356003425&w=2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=560333", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-0015"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13320", 
+                "title": "DSA-1973-1 glibc, eglibc -- information disclosure", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13320"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:6752", 
+                "title": "DSA-1973 glibc, eglibc -- information disclosure", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:6752"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:15237", 
+                "title": "USN-1396-1 -- GNU C Library vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:15237"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 1973-1 (glibc, eglibc)", 
+                "file": "deb_1973_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "66770"
+            }, 
+            {
+                "name": "Mandriva Update for initscripts MDVA-2010:111 (initscripts)", 
+                "file": "gb_mandriva_MDVA_2010_111.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "830966"
+            }, 
+            {
+                "name": "Mandriva Update for kdebase4-workspace MDVA-2010:112 (kdebase4-workspace)", 
+                "file": "gb_mandriva_MDVA_2010_112.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "830967"
+            }, 
+            {
+                "name": "Mandriva Update for glibc MDVSA-2010:111 (glibc)", 
+                "file": "gb_mandriva_MDVSA_2010_111.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "831073"
+            }, 
+            {
+                "name": "Mandriva Update for glibc MDVSA-2010:112 (glibc)", 
+                "file": "gb_mandriva_MDVSA_2010_112.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "831068"
+            }, 
+            {
+                "name": "SuSE Update for glibc SUSE-SA:2010:052", 
+                "file": "gb_suse_2010_052.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "850148"
+            }, 
+            {
+                "name": "Ubuntu Update for eglibc USN-1396-1", 
+                "file": "gb_ubuntu_USN_1396_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840929"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-1973-1 : glibc, eglibc - information disclosure", 
+                "file": "debian_DSA-1973.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "44838"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : glibc (MDVSA-2010:111)", 
+                "file": "mandriva_MDVSA-2010-111.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "46849"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : glibc (MDVSA-2010:112)", 
+                "file": "mandriva_MDVSA-2010-112.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "48185"
+            }, 
+            {
+                "name": "openSUSE Security Update : glibc (openSUSE-SU-2010:0914-1)", 
+                "file": "suse_11_1_glibc-101026.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "50367"
+            }, 
+            {
+                "name": "SuSE 11 / 11.1 Security Update : glibc (SAT Patch Numbers 3392 / 3393)", 
+                "file": "suse_11_glibc-101025.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "50912"
+            }, 
+            {
+                "name": "SuSE 11.1 Security Update : glibc (SAT Patch Number 4572)", 
+                "file": "suse_11_glibc-110516.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "55441"
+            }, 
+            {
+                "name": "SuSE 11.1 Security Update : glibc (SAT Patch Number 4572)", 
+                "file": "suse_11_glibc-110517.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "57106"
+            }, 
+            {
+                "name": "SuSE 10 Security Update : glibc (ZYPP Patch Number 7201)", 
+                "file": "suse_glibc-7201.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "50377"
+            }, 
+            {
+                "name": "Ubuntu 8.04 LTS / 10.04 LTS / 10.10 / 11.04 / 11.10 : eglibc, glibc vulnerabilities (USN-1396-1)", 
+                "file": "ubuntu_USN-1396-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "58318"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:111", 
+                "id": "MDVSA-2010:111"
+            }, 
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:112", 
+                "id": "MDVSA-2010:112"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,209 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-5356", 
+                "published": "2014-08-25T10:55:07.160-04:00", 
+                "id": "CVE-2014-5356", 
+                "modified": "2014-11-05T03:26:36.180-05:00", 
+                "summary": "OpenStack Image Registry and Delivery Service (Glance) before 2013.2.4, 2014.x before 2014.1.3, and Juno before Juno-3, when using the V2 API, does not properly enforce the image_size_cap configuration option, which allows remote authenticated users to cause a denial of service (disk consumption) by uploading a large image."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:openstack:image_registry_and_delivery_service_%28glance%29:2013.2.2"
+            }, 
+            {
+                "id": "cpe:/a:openstack:image_registry_and_delivery_service_%28glance%29:2013.2.3"
+            }, 
+            {
+                "id": "cpe:/a:openstack:image_registry_and_delivery_service_%28glance%29:2014.1.2"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:14.04::~~lts~~~"
+            }, 
+            {
+                "id": "cpe:/a:openstack:image_registry_and_delivery_service_%28glance%29:2014.1.1"
+            }, 
+            {
+                "id": "cpe:/a:openstack:image_registry_and_delivery_service_%28glance%29:juno-2"
+            }, 
+            {
+                "id": "cpe:/a:openstack:image_registry_and_delivery_service_%28glance%29:2013.2.1"
+            }, 
+            {
+                "id": "cpe:/a:openstack:image_registry_and_delivery_service_%28glance%29:juno-1"
+            }, 
+            {
+                "id": "cpe:/a:openstack:image_registry_and_delivery_service_%28glance%29:2013.2"
+            }, 
+            {
+                "id": "cpe:/a:openstack:image_registry_and_delivery_service_%28glance%29:2014.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.70727", 
+                "id": 70727
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugs.launchpad.net/glance/+bug/1315321", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2322-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2014/08/21/6", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2014-1685.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2014-1338.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2014-1337.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "4.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-5356"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26460", 
+                "title": "USN-2322-1 -- glance vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26460"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Fedora 20 : openstack-glance-2013.2.4-1.fc20 (2014-11697)", 
+                "file": "fedora_2014-11697.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "78564"
+            }, 
+            {
+                "name": "Oracle Solaris Third-Party Patch Update : glance (cve_2014_5356_permissions_privileges)", 
+                "file": "solaris11_glance_20140915.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "80624"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : glance vulnerability (USN-2322-1)", 
+                "file": "ubuntu_USN-2322-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "77322"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2014-1685.html", 
+                    "id": "RHSA-2014:1685", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2014-1338.html", 
+                    "id": "RHSA-2014:1338", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2014-1337.html", 
+                    "id": "RHSA-2014:1337", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2322-1", 
+                "id": "USN-2322-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

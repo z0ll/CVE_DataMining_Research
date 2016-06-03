@@ -1,0 +1,188 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5470", 
+                "published": "2015-11-02T14:59:09.530-05:00", 
+                "id": "CVE-2015-5470", 
+                "modified": "2015-11-03T21:44:07.177-05:00", 
+                "summary": "The label decompression functionality in PowerDNS Recursor before 3.6.4 and 3.7.x before 3.7.3 and Authoritative (Auth) Server before 3.3.3 and 3.4.x before 3.4.5 allows remote attackers to cause a denial of service (CPU consumption or crash) via a request with a long name that refers to itself.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2015-1868."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:powerdns:authoritative:3.3.2"
+            }, 
+            {
+                "id": "cpe:/a:powerdns:recursor:3.7.1"
+            }, 
+            {
+                "id": "cpe:/a:powerdns:authoritative:3.4.3"
+            }, 
+            {
+                "id": "cpe:/a:powerdns:authoritative:3.4.4"
+            }, 
+            {
+                "id": "cpe:/a:powerdns:authoritative:3.4.1"
+            }, 
+            {
+                "id": "cpe:/a:powerdns:authoritative:3.4.2"
+            }, 
+            {
+                "id": "cpe:/a:powerdns:recursor:3.6.3"
+            }, 
+            {
+                "id": "cpe:/a:powerdns:recursor:3.7.2"
+            }, 
+            {
+                "id": "cpe:/a:powerdns:authoritative:3.4.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.78992", 
+                "id": 78992
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://doc.powerdns.com/md/security/powerdns-advisory-2015-01/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/07/10/8", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/07/07/6", 
+                    "vendor": "MLIST"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.8", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-5470"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3306-1 (pdns - security update)", 
+                "file": "deb_3306.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703306"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 3307-1 (pdns-recursor - security update)", 
+                "file": "deb_3307.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703307"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-3306-1 : pdns - security update", 
+                "file": "debian_DSA-3306.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "84649"
+            }, 
+            {
+                "name": "Debian DSA-3307-1 : pdns-recursor - security update", 
+                "file": "debian_DSA-3307.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "84650"
+            }, 
+            {
+                "name": "FreeBSD : powerdns -- Label decompression bug can cause crashes or CPU spikes (64e6006e-f009-11e4-98c6-000c292ee6b8)", 
+                "file": "freebsd_pkg_64e6006ef00911e498c6000c292ee6b8.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "83229"
+            }, 
+            {
+                "name": "openSUSE Security Update : pdns / pdns-recursor (openSUSE-2015-505)", 
+                "file": "openSUSE-2015-505.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84996"
+            }, 
+            {
+                "name": "PowerDNS Authoritative Server 3.x < 3.4.5 Label Decompression Self-Referential Name Handling DoS", 
+                "file": "powerdns_authoritative_3_4_5.nasl", 
+                "family": "DNS", 
+                "id": "87946"
+            }, 
+            {
+                "name": "PowerDNS Recursor 3.x < 3.7.3 Label Decompression DoS", 
+                "file": "powerdns_recursor_3_7_3.nasl", 
+                "family": "DNS", 
+                "id": "87952"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

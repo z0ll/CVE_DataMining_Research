@@ -1,0 +1,178 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3250", 
+                "published": "2007-06-18T06:30:00.000-04:00", 
+                "id": "CVE-2007-3250", 
+                "modified": "2012-10-30T22:38:04.310-04:00", 
+                "summary": "SQL injection vulnerability in mod_banners.php in Elxis CMS before 2006.4 20070613 allows remote attackers to execute arbitrary SQL commands via the mb_tracker cookie.  NOTE: the product was patched without updating the version number; later downloads of 2006.4 are not affected."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:elxis:elxis_cms:2006.1"
+            }, 
+            {
+                "id": "cpe:/a:elxis:elxis_cms:2006.2"
+            }, 
+            {
+                "id": "cpe:/a:elxis:elxis_cms:2006.4"
+            }, 
+            {
+                "id": "cpe:/a:elxis:elxis_cms:2006.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.37325", 
+                "id": 37325
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/24478", 
+                "id": 24478
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/36305", 
+                "id": 36305
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/24478", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.elxis.org/index.php?option=com_mtree&task=viewlink&link_id=98&Itemid=140", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34873", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/2218", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/471399/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://osvdb.org/36305", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2806", 
+                    "vendor": "SREASON"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25684", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006449", 
+                "signature": "ET WEB_SPECIFIC_APPS Elxis CMS SQL Injection Attempt -- mod_banners.php SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006450", 
+                "signature": "ET WEB_SPECIFIC_APPS Elxis CMS SQL Injection Attempt -- mod_banners.php UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006451", 
+                "signature": "ET WEB_SPECIFIC_APPS Elxis CMS SQL Injection Attempt -- mod_banners.php INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006452", 
+                "signature": "ET WEB_SPECIFIC_APPS Elxis CMS SQL Injection Attempt -- mod_banners.php DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006453", 
+                "signature": "ET WEB_SPECIFIC_APPS Elxis CMS SQL Injection Attempt -- mod_banners.php ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006454", 
+                "signature": "ET WEB_SPECIFIC_APPS Elxis CMS SQL Injection Attempt -- mod_banners.php UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-3250"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

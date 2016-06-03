@@ -1,0 +1,181 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-1097", 
+                "published": "2003-12-31T00:00:00.000-05:00", 
+                "id": "CVE-2003-1097", 
+                "modified": "2009-03-04T00:19:41.797-05:00", 
+                "summary": "Buffer overflow in rexec on HP-UX B.10.20, B.11.00, and B.11.04, when setuid root, may allow local users to gain privileges via a long -l option."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:hp:hp-ux:10.34"
+            }, 
+            {
+                "id": "cpe:/o:hp:hp-ux:10.24"
+            }, 
+            {
+                "id": "cpe:/o:hp:hp-ux:11.04"
+            }, 
+            {
+                "id": "cpe:/o:hp:hp-ux:10.26"
+            }, 
+            {
+                "id": "cpe:/o:hp:hp-ux:10.10"
+            }, 
+            {
+                "id": "cpe:/o:hp:hp-ux:11.00"
+            }, 
+            {
+                "id": "cpe:/o:hp:hp-ux:11.22"
+            }, 
+            {
+                "id": "cpe:/o:hp:hp-ux:10.16"
+            }, 
+            {
+                "id": "cpe:/o:hp:hp-ux:11.20"
+            }, 
+            {
+                "id": "cpe:/o:hp:hp-ux:11.11"
+            }, 
+            {
+                "id": "cpe:/o:hp:hp-ux:10.30"
+            }, 
+            {
+                "id": "cpe:/o:hp:hp-ux:10.20"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.21086", 
+                "id": 21086
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/7459", 
+                "id": 7459
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/CRDY-5MJKM4", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/322540", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/7459", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/n-088.shtml", 
+                    "vendor": "CIAC"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/11890", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2003-04/0374.html", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/322540", 
+                "id": "VU#322540"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "unsuccessful-user", 
+                "id": "sid:2104", 
+                "signature": "INDICATOR-COMPROMISE rexec username too long response"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2003-1097"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:5611", 
+                "title": "Potential buffer overflow in rexec(1)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:5611"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/CRDY-5MJKM4", 
+                "id": "HPSBUX0304-257"
+            }
+        ], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,324 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/284.html", 
+                "id": "CWE-284", 
+                "title": "Improper Access Control"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/254.html", 
+                "id": "CWE-254", 
+                "title": "Security Features"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/718.html", 
+                "id": "CWE-718", 
+                "title": "OWASP Top Ten 2007 Category A7 - Broken Authentication and Session Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/724.html", 
+                "id": "CWE-724", 
+                "title": "OWASP Top Ten 2004 Category A3 - Broken Authentication and Session Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/812.html", 
+                "id": "CWE-812", 
+                "title": "OWASP Top Ten 2010 Category A3 - Broken Authentication and Session Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/947.html", 
+                "id": "CWE-947", 
+                "title": "SFP Secondary Cluster: Authentication Bypass"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/930.html", 
+                "id": "CWE-930", 
+                "title": "OWASP Top Ten 2013 Category A2 - Broken Authentication and Session Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/935.html", 
+                "id": "CWE-935", 
+                "title": "OWASP Top Ten 2013 Category A7 - Missing Function Level Access Control"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/114.html", 
+                "id": 114
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/22.html", 
+                "id": 22
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/57.html", 
+                "id": 57
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/94.html", 
+                "id": 94
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-0125", 
+                "published": "2009-01-15T12:30:00.547-05:00", 
+                "id": "CVE-2009-0125", 
+                "modified": "2009-02-10T00:00:00.000-05:00", 
+                "summary": "** DISPUTED **  NOTE: this issue has been disputed by the upstream vendor. nasl/nasl_crypto2.c in the Nessus Attack Scripting Language library (aka libnasl) 2.2.11 does not properly check the return value from the OpenSSL DSA_do_verify function, which allows remote attackers to bypass validation of the certificate chain via a malformed SSL/TLS signature, a similar vulnerability to CVE-2008-5077.  NOTE: the upstream vendor has disputed this issue, stating \"while we do misuse this function (this is a bug), it has absolutely no security ramification.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/287.html", 
+                "id": "CWE-287", 
+                "title": "Improper Authentication"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:finkproject:libnasl:2.2.11"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.45922", 
+                "id": 45922
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=479655", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.attrition.org/pipermail/vim/2009-January/002133.html", 
+                    "vendor": "VIM"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2009/01/12/4", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2009-02/msg00000.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://cvs.fedoraproject.org/viewvc/rpms/libnasl/F-10/libnasl.spec?r1=1.16&r2=1.17", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=511517", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": [
+                {
+                    "id": "CWE-930", 
+                    "title": "OWASP Top Ten 2013 Category A2 - Broken Authentication and Session Management"
+                }, 
+                {
+                    "id": "CWE-935", 
+                    "title": "OWASP Top Ten 2013 Category A7 - Missing Function Level Access Control"
+                }, 
+                {
+                    "id": "CWE-812", 
+                    "title": "OWASP Top Ten 2010 Category A3 - Broken Authentication and Session Management"
+                }
+            ], 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-0125"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Mandrake Security Advisory MDVSA-2009:271 (libnasl)", 
+                "file": "mdksa_2009_271.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "66027"
+            }, 
+            {
+                "name": "SuSE Security Summary SUSE-SR:2009:003", 
+                "file": "suse_sr_2009_003.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "63304"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 3 / 4 / 5 : openssl (CESA-2009:0004)", 
+                "file": "centos_RHSA-2009-0004.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "35310"
+            }, 
+            {
+                "name": "CentOS 3 / 4 / 5 : bind (CESA-2009:0020)", 
+                "file": "centos_RHSA-2009-0020.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "35589"
+            }, 
+            {
+                "name": "CentOS 4 / 5 : ntp (CESA-2009:0046)", 
+                "file": "centos_RHSA-2009-0046.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "43728"
+            }, 
+            {
+                "name": "Debian DSA-1701-1 : openssl, openssl097 - interpretation conflict", 
+                "file": "debian_DSA-1701.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "35364"
+            }, 
+            {
+                "name": "Debian DSA-1702-1 : ntp - interpretation conflict", 
+                "file": "debian_DSA-1702.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "35365"
+            }, 
+            {
+                "name": "Oracle Linux 3 / 4 / 5 : openssl (ELSA-2009-0004)", 
+                "file": "oraclelinux_ELSA-2009-0004.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "67783"
+            }, 
+            {
+                "name": "Oracle Linux 3 / 4 / 5 : bind (ELSA-2009-0020)", 
+                "file": "oraclelinux_ELSA-2009-0020.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "67792"
+            }, 
+            {
+                "name": "Oracle Linux 4 / 5 : ntp (ELSA-2009-0046)", 
+                "file": "oraclelinux_ELSA-2009-0046.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "67793"
+            }, 
+            {
+                "name": "RHEL 2.1 / 3 / 4 / 5 : openssl (RHSA-2009:0004)", 
+                "file": "redhat-RHSA-2009-0004.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "35316"
+            }, 
+            {
+                "name": "RHEL 2.1 / 3 / 4 / 5 : bind (RHSA-2009:0020)", 
+                "file": "redhat-RHSA-2009-0020.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "35324"
+            }, 
+            {
+                "name": "RHEL 4 / 5 : ntp (RHSA-2009:0046)", 
+                "file": "redhat-RHSA-2009-0046.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "35551"
+            }, 
+            {
+                "name": "Solaris 10 (sparc) : 139500-04", 
+                "file": "solaris10_139500.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "38118"
+            }, 
+            {
+                "name": "Solaris 10 (x86) : 139501-02", 
+                "file": "solaris10_x86_139501.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "36555"
+            }, 
+            {
+                "name": "openSUSE Security Update : libnasl (libnasl-451)", 
+                "file": "suse_11_0_libnasl-090120.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "40027"
+            }, 
+            {
+                "name": "openSUSE 10 Security Update : libnasl (libnasl-5943)", 
+                "file": "suse_libnasl-5943.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "35447"
+            }, 
+            {
+                "name": "Ubuntu 6.06 LTS / 7.10 / 8.04 LTS / 8.10 : ntp vulnerability (USN-705-1)", 
+                "file": "ubuntu_USN-705-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "37876"
+            }, 
+            {
+                "name": "Ubuntu 6.06 LTS / 7.10 / 8.04 LTS / 8.10 : bind9 vulnerability (USN-706-1)", 
+                "file": "ubuntu_USN-706-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "36220"
+            }, 
+            {
+                "name": "VMSA-2009-0004 : ESX Service Console updates for openssl, bind, and vim", 
+                "file": "vmware_VMSA-2009-0004.nasl", 
+                "family": "VMware ESX Local Security Checks", 
+                "id": "40389"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2009-0125.html", 
+                "id": "SUSE-SR:2009:003"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

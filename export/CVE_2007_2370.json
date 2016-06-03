@@ -1,0 +1,142 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2370", 
+                "published": "2007-04-30T19:19:00.000-04:00", 
+                "id": "CVE-2007-2370", 
+                "modified": "2008-09-05T17:22:54.007-04:00", 
+                "summary": "SQL injection vulnerability in index.php in the John Mordo Jobs 2.4 and earlier module for XOOPS allows remote attackers to execute arbitrary SQL commands via the cid parameter in a jobsview action. NOTE: the module name was originally reported as Job Listings."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:xoops:john_mordo_jobs_module:2.4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.36511", 
+                "id": 36511
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.milw0rm.com/exploits/3672", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://www.attrition.org/pipermail/vim/2007-April/001494.html", 
+                    "vendor": "VIM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003758", 
+                "signature": "ET WEB_SPECIFIC_APPS John Mordo Jobs SQL Injection Attempt -- index.php cid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003759", 
+                "signature": "ET WEB_SPECIFIC_APPS John Mordo Jobs SQL Injection Attempt -- index.php cid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003760", 
+                "signature": "ET WEB_SPECIFIC_APPS John Mordo Jobs SQL Injection Attempt -- index.php cid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003761", 
+                "signature": "ET WEB_SPECIFIC_APPS John Mordo Jobs SQL Injection Attempt -- index.php cid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003762", 
+                "signature": "ET WEB_SPECIFIC_APPS John Mordo Jobs SQL Injection Attempt -- index.php cid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003763", 
+                "signature": "ET WEB_SPECIFIC_APPS John Mordo Jobs SQL Injection Attempt -- index.php cid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2370"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "XOOPS Jobs Module index.php cid Parameter SQL Injection", 
+                "file": "xoops_jobs_cid_sql_injection.nasl", 
+                "family": "CGI abuses", 
+                "id": "24999"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

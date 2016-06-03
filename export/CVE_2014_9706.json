@@ -1,0 +1,186 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9706", 
+                "published": "2015-03-31T10:59:04.860-04:00", 
+                "id": "CVE-2014-9706", 
+                "modified": "2015-04-14T22:02:05.720-04:00", 
+                "summary": "The build_index_from_tree function in index.py in Dulwich before 0.9.9 allows remote attackers to execute arbitrary code via a commit with a directory path starting with .git/, which is not properly handled when checking out a working tree."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/19.html", 
+                "id": "CWE-19", 
+                "title": "Data Handling"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:dulwich_project:dulwich:0.9.8"
+            }, 
+            {
+                "id": "cpe:/o:debian:debian_linux:7.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.74525", 
+                "id": 74525
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://lists.launchpad.net/dulwich-users/msg00827.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "https://git.samba.org/?p=jelmer/dulwich.git;a=commitdiff;h=091638be3c89f46f42c3b1d57dc1504af5729176", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/03/22/26", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/03/21/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2015/dsa-3206", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-April/154551.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-April/154523.html", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-9706"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:258", 
+                "title": "DSA-3206-1 -- dulwich -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:258"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3206-1 (dulwich - security update)", 
+                "file": "deb_3206.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703206"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-3206-1 : dulwich - security update", 
+                "file": "debian_DSA-3206.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "82303"
+            }, 
+            {
+                "name": "Fedora 20 : python-dulwich-0.10.0-1.fc20 (2015-4534)", 
+                "file": "fedora_2015-4534.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "82726"
+            }, 
+            {
+                "name": "Fedora 21 : python-dulwich-0.10.0-1.fc21 (2015-4575)", 
+                "file": "fedora_2015-4575.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "82727"
+            }, 
+            {
+                "name": "Fedora 22 : python-dulwich-0.10.0-1.fc22 (2015-4639)", 
+                "file": "fedora_2015-4639.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "82940"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2015-4534", 
+                "id": "FEDORA-2015-4534"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2015-4575", 
+                "id": "FEDORA-2015-4575"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3206", 
+                "id": "DSA-3206"
+            }
+        ], 
+        "Vmware": []
+    }
+}

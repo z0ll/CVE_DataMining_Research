@@ -1,0 +1,185 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5014", 
+                "published": "2014-02-14T08:10:27.043-05:00", 
+                "id": "CVE-2013-5014", 
+                "modified": "2014-03-26T00:51:25.290-04:00", 
+                "summary": "The management console in Symantec Endpoint Protection Manager (SEPM) 11.0 before 11.0.7405.1424 and 12.1 before 12.1.4023.4080, and Symantec Protection Center Small Business Edition 12.x before 12.1.4023.4080, allows remote attackers to read arbitrary files via XML data containing an external entity declaration in conjunction with an entity reference, related to an XML External Entity (XXE) issue."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:symantec:endpoint_protection_manager:12.1.1"
+            }, 
+            {
+                "id": "cpe:/a:symantec:endpoint_protection_manager:12.1.0"
+            }, 
+            {
+                "id": "cpe:/a:symantec:endpoint_protection_manager:11.0"
+            }, 
+            {
+                "id": "cpe:/a:symantec:protection_center:12.0::~~small_business~~~"
+            }, 
+            {
+                "id": "cpe:/a:symantec:endpoint_protection_manager:12.1.3"
+            }, 
+            {
+                "id": "cpe:/a:symantec:endpoint_protection_manager:12.1.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.12321", 
+                "id": 12321
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0044088", 
+                "id": "2014-A-0028", 
+                "title": "Multiple Vulnerabilities in Symantec Endpoint Protection Products"
+            }
+        ], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/65466", 
+                "id": 65466
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://www.sec-consult.com/fxdata/seccons/prod/temedia/advisories_txt/20140218-0_Symantec_Endpoint_Protection_Multiple_critical_vulnerabilities_wo_poc_v10.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.symantec.com/security_response/securityupdates/detail.jsp?fid=security_advisory&pvid=security_advisory&year=&suid=20140213_00", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/65466", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/31917", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/31853", 
+                    "vendor": "EXPLOIT-DB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2018176", 
+                "signature": "ET WEB_SPECIFIC_APPS Symantec Endpoint Manager XXE RCE Attempt"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "symantec_endpoint_manager_rce.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/antivirus/symantec_endpoint_manager_rce.rb", 
+                "title": "Symantec Endpoint Protection Manager /servlet/ConsoleServlet Remote Command Execution"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/31917", 
+                "id": 31917, 
+                "file": "http://www.exploit-db.com/download/31917"
+            }, 
+            {
+                "url": "http://www.exploit-db.com/exploits/31853", 
+                "id": 31853, 
+                "file": "platforms/windows/remote/31853.py"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/symantec_epm_xxe_sql_inj", 
+                "id": "exploit_info/symantec_epm_xxe_sql_inj", 
+                "title": "Symantec Endpoint Protection Manager XXE and SQL Injection Vulnerabilities"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-5014"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Symantec Endpoint Protection Manager XXE and SQL Injection Vulnerabilities", 
+                "file": "gb_symantec_epm_xxe_n_sql_inj_vuln.nasl", 
+                "family": "Web application abuses", 
+                "id": "803883"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Symantec Endpoint Protection Manager < 11.0 RU7-MP4a / 12.1 RU4a Multiple Vulnerabilities (SYM14-004)", 
+                "file": "symantec_endpoint_prot_mgr_sym14-004.nasl", 
+                "family": "Windows", 
+                "id": "72542"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

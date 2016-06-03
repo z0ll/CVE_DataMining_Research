@@ -1,0 +1,191 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3676", 
+                "published": "2009-11-13T10:30:00.733-05:00", 
+                "id": "CVE-2009-3676", 
+                "modified": "2010-08-21T00:00:00.000-04:00", 
+                "summary": "The SMB client in the kernel in Microsoft Windows Server 2008 R2 and Windows 7 allows remote SMB servers and man-in-the-middle attackers to cause a denial of service (infinite loop and system hang) via a (1) SMBv1 or (2) SMBv2 response packet that contains (a) an incorrect length value in a NetBIOS header or (b) an additional length field at the end of this response packet, aka \"SMB Client Incomplete Response Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_7"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:-:r2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.50811", 
+                "id": 50811
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA10-103A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/Bulletin/MS10-020.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/advisory/977544.mspx", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2009/3216", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1023179", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/blog/66/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/37347", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://seclists.org/fulldisclosure/2009/Nov/134", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://praetorianprefect.com/archives/2009/11/how-to-crash-windows-7-and-server-2008/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://news.cnet.com/8301-27080_3-10395891-245.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://g-laurent.blogspot.com/2009/11/windows-7-server-2008r2-remote-kernel.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://blogs.technet.com/msrc/archive/2009/11/13/microsoft-security-advisory-977544-released.aspx", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "7.1", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-3676"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:7186", 
+                "title": "SMB Client Incomplete Response Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:7186"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft SMB Client Remote Code Execution Vulnerabilities (980232)", 
+                "file": "secpod_ms10-020.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "902156"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS10-020: Vulnerabilities in SMB Client Could Allow Remote Code Execution (980232)", 
+                "file": "smb_nt_ms10-020.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "45507"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerabilities in SMB Client Could Allow Remote Code Execution", 
+                "id": "Vulnerabilities in SMB Client Could Allow Remote Code Execution", 
+                "title": "980232"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/980232", 
+                "id": "980232", 
+                "title": "Vulnerabilities in SMB Client Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS10-020", 
+                "id": "MS10-020", 
+                "title": "Vulnerabilities in SMB Client Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

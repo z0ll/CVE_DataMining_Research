@@ -1,0 +1,191 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1086", 
+                "published": "2009-03-25T14:30:00.547-04:00", 
+                "id": "CVE-2009-1086", 
+                "modified": "2009-05-15T01:28:39.217-04:00", 
+                "summary": "Heap-based buffer overflow in the ldns_rr_new_frm_str_internal function in ldns 1.4.x allows remote attackers to cause a denial of service (memory corruption) and possibly execute arbitrary code via a DNS resource record (RR) with a long (1) class field (clas variable) and possibly (2) TTL field."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:nlnetlabs:ldns:1.4.0"
+            }, 
+            {
+                "id": "cpe:/a:nlnetlabs:ldns:1.4.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.47306", 
+                "id": 47306
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/34233", 
+                "id": 34233
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/34233", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2009/03/24/4", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.nlnetlabs.nl/svn/ldns/tags/release-1.5.0/Changelog", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.nlnetlabs.nl/bugs/show_bug.cgi?id=232", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2009/dsa-1795", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/35065", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/35013", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2009-05/msg00000.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "6.4", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-1086"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20245", 
+                "title": "DSA-1795-1 ldns - arbitrary code execution", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20245"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:7542", 
+                "title": "DSA-1795 ldns -- buffer overflow", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:7542"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 1795-1 (ldns)", 
+                "file": "deb_1795_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "63960"
+            }, 
+            {
+                "name": "SuSE Security Summary SUSE-SR:2009:010", 
+                "file": "suse_sr_2009_010.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "63996"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-1795-1 : ldns - buffer overflow", 
+                "file": "debian_DSA-1795.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "38723"
+            }, 
+            {
+                "name": "openSUSE Security Update : unbound (unbound-840)", 
+                "file": "suse_11_1_unbound-090429.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "40317"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2009-1086.html", 
+                "id": "SUSE-SR:2009:010"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-1795", 
+                "id": "DSA-1795"
+            }
+        ], 
+        "Vmware": []
+    }
+}

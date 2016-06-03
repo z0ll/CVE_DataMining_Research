@@ -1,0 +1,214 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0284", 
+                "published": "2000-04-16T00:00:00.000-04:00", 
+                "id": "CVE-2000-0284", 
+                "modified": "2008-09-10T15:04:00.163-04:00", 
+                "summary": "Buffer overflow in University of Washington imapd version 4.7 allows users with a valid account to execute commands via LIST or other commands."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:university_of_washington:imap:12.264"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.15457", 
+                "id": 15457
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/1110", 
+                "id": 1110
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/12037", 
+                "id": 12037
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/1110", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2000-04/0085.html", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2000-04/0074.html", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2101904", 
+                "signature": "GPL IMAP find overflow attempt"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2101845", 
+                "signature": "GPL IMAP list literal overflow attempt"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2102118", 
+                "signature": "GPL IMAP list overflow attempt"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2101902", 
+                "signature": "GPL IMAP lsub literal overflow attempt"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2102106", 
+                "signature": "GPL IMAP lsub overflow attempt"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2102119", 
+                "signature": "GPL IMAP rename literal overflow attempt"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2101903", 
+                "signature": "GPL IMAP rename overflow attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "misc-attack", 
+                "id": "sid:1845", 
+                "signature": "PROTOCOL-IMAP list literal overflow attempt"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:1902", 
+                "signature": "PROTOCOL-IMAP lsub literal overflow attempt"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:1903", 
+                "signature": "PROTOCOL-IMAP rename overflow attempt"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:1904", 
+                "signature": "PROTOCOL-IMAP find overflow attempt"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:2106", 
+                "signature": "PROTOCOL-IMAP lsub overflow attempt"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:2118", 
+                "signature": "PROTOCOL-IMAP list overflow attempt"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:2119", 
+                "signature": "PROTOCOL-IMAP rename literal overflow attempt"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:3058", 
+                "signature": "PROTOCOL-IMAP copy literal overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "imap_uw_lsub.rb", 
+                "file": "metasploit-framework/modules/exploits/linux/imap/imap_uw_lsub.rb", 
+                "title": "UoW IMAP Server LSUB Buffer Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2000-0284"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "UoW imapd (UW-IMAP) Multiple Command Remote Overflows", 
+                "file": "imap4_rev1_overflow.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "10625"
+            }, 
+            {
+                "name": "UoW imapd (UW-IMAP) Multiple Command Remote Overflows (2)", 
+                "file": "uw_imap_overflow_two.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "10374"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

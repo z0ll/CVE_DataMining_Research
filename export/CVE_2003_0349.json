@@ -1,0 +1,185 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0349", 
+                "published": "2003-07-24T00:00:00.000-04:00", 
+                "id": "CVE-2003-0349", 
+                "modified": "2008-09-10T15:18:41.540-04:00", 
+                "summary": "Buffer overflow in the streaming media component for logging multicast requests in the ISAPI for the logging capability of Microsoft Windows Media Services (nsiislog.dll), as installed in IIS 5.0, allows remote attackers to execute arbitrary code via a large POST request to nsiislog.dll."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_2000"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.124", 
+                "id": 124
+            }, 
+            {
+                "url": "http://www.scip.ch/?vuldb.82", 
+                "id": 82
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/113716", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.ntbugtraq.com/default.asp?pid=36&sid=1&A2=ind0306&L=NTBUGTRAQ&P=R4563", 
+                    "vendor": "NTBUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms03-022.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=105665030925504&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1007059", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/9115", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/113716", 
+                "id": "VU#113716"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:2129", 
+                "signature": "SERVER-IIS nsiislog.dll access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms03_022_nsiislog_post.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/isapi/ms03_022_nsiislog_post.rb", 
+                "title": "MS03-022 Microsoft IIS ISAPI nsiislog.dll ISAPI POST Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2003-0349"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:938", 
+                "title": "IIS5.0 Windows Media Services Large POST Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:938"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Windows Media Services ISAPI Extension Code Execution Vulnerabilities", 
+                "file": "gb_ms_win_media_service_isapi_code_exec_vuln.nasl", 
+                "family": "Web Servers", 
+                "id": "802888"
+            }, 
+            {
+                "name": "Microsoft MS03-022 security check", 
+                "file": "remote-MS03-022.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "101016"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Microsoft Media Services ISAPI nsiislog.dll Multiple Overflows", 
+                "file": "nsiislog_dll.nasl", 
+                "family": "Web Servers", 
+                "id": "11664"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in ISAPI Extension for Windows Media Services Could Cause Code Execution", 
+                "id": "Vulnerability in ISAPI Extension for Windows Media Services Could Cause Code Execution", 
+                "title": "822343"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/822343", 
+                "id": "822343", 
+                "title": "Vulnerability in ISAPI Extension for Windows Media Services Could Cause Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS03-022", 
+                "id": "MS03-022", 
+                "title": "Vulnerability in ISAPI Extension for Windows Media Services Could Cause Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

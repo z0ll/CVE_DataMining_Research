@@ -1,0 +1,172 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-3125", 
+                "published": "2016-04-05T16:59:00.120-04:00", 
+                "id": "CVE-2016-3125", 
+                "modified": "2016-04-07T15:24:56.147-04:00", 
+                "summary": "The mod_tls module in ProFTPD before 1.3.5b and 1.3.6 before 1.3.6rc2 does not properly handle the TLSDHParamFile directive, which might cause a weaker than intended Diffie-Hellman (DH) key to be used and consequently allow attackers to have unspecified impact via unknown vectors."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/254.html", 
+                "id": "CWE-254", 
+                "title": "Security Features"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/310.html", 
+                "id": "CWE-310", 
+                "title": "Cryptographic Issues"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:fedoraproject:fedora:23"
+            }, 
+            {
+                "id": "cpe:/a:proftpd:proftpd:1.3.6:rc1"
+            }, 
+            {
+                "id": "cpe:/o:fedoraproject:fedora:22"
+            }, 
+            {
+                "id": "cpe:/a:proftpd:proftpd:1.3.5:a"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.81624", 
+                "id": 81624
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2016/03/11/3", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2016/03/11/14", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://proftpd.org/docs/NEWS-1.3.6rc2", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://proftpd.org/docs/NEWS-1.3.5b", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2016-March/179143.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2016-March/179109.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://bugs.proftpd.org/show_bug.cgi?id=4230", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2016-3125"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Fedora 23 : proftpd-1.3.5b-1.fc23 (2016-977d57cf2d)", 
+                "file": "fedora_2016-977d57cf2d.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "90042"
+            }, 
+            {
+                "name": "Fedora 24 : proftpd-1.3.5b-1.fc24 (2016-ac3587be9a)", 
+                "file": "fedora_2016-ac3587be9a.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "90222"
+            }, 
+            {
+                "name": "Fedora 22 : proftpd-1.3.5b-1.fc22 (2016-f95d8ea3ad)", 
+                "file": "fedora_2016-f95d8ea3ad.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "90046"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2016-977d57cf2d", 
+                "id": "FEDORA-2016-977d57cf2d"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2016-f95d8ea3ad", 
+                "id": "FEDORA-2016-f95d8ea3ad"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

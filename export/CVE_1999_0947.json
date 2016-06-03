@@ -1,0 +1,157 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0947", 
+                "published": "1999-11-02T00:00:00.000-05:00", 
+                "id": "CVE-1999-0947", 
+                "modified": "2008-09-09T08:36:14.163-04:00", 
+                "summary": "AN-HTTPd provides example CGI scripts test.bat, input.bat, input2.bat, and envout.bat, which allow remote attackers to execute commands via shell metacharacters."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:an:an-httpd:1.2b"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14937", 
+                "id": 14937
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/762", 
+                "id": 762
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/762", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=94157187815629&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1510", 
+                "signature": "SERVER-WEBAPP test.bat arbitrary command execution attempt"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1511", 
+                "signature": "SERVER-WEBAPP test.bat access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1512", 
+                "signature": "SERVER-WEBAPP input.bat arbitrary command execution attempt"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1513", 
+                "signature": "SERVER-WEBAPP input.bat access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1514", 
+                "signature": "SERVER-WEBAPP input2.bat arbitrary command execution attempt"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1515", 
+                "signature": "SERVER-WEBAPP input2.bat access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1516", 
+                "signature": "SERVER-WEBAPP envout.bat arbitrary command execution attempt"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1517", 
+                "signature": "SERVER-WEBAPP envout.bat access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0947"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "AN-HTTPd Multiple Test CGIs Arbitrary Command Execution", 
+                "file": "an_httpd_cgis.nasl", 
+                "family": "CGI abuses", 
+                "id": "10016"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

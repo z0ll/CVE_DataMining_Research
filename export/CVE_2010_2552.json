@@ -1,0 +1,205 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2552", 
+                "published": "2010-08-11T14:47:50.780-04:00", 
+                "id": "CVE-2010-2552", 
+                "modified": "2010-09-17T01:48:18.727-04:00", 
+                "summary": "Stack consumption vulnerability in the SMB Server in Microsoft Windows Vista SP1 and SP2, Windows Server 2008 Gold, SP2, and R2, and Windows 7 allows remote attackers to cause a denial of service (system hang) via a malformed SMBv2 compounded request, aka \"SMB Stack Exhaustion Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_7"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_vista::sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_vista::sp1"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_vista::sp1:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_7:-:-:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_vista:-:sp1"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:::x32"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:::x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_7:-:-:x32"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_vista::sp2:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008::sp2:x32"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:-:sp2:itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008::r2:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008::r2:itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:::itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008::sp2:x64"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.54333", 
+                "id": 54333
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA10-222A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/Bulletin/MS10-054.mspx", 
+                    "vendor": "MS"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.8", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-2552"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:12072", 
+                "title": "SMB Stack Exhaustion Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:12072"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Windows SMB Code Execution and DoS Vulnerabilities (982214)", 
+                "file": "secpod_ms10-054.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "901140"
+            }, 
+            {
+                "name": "MicroSoft SMB Server Trans2 Request Remote Code Execution Vulnerability", 
+                "file": "secpod_ms10-054_remote.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "902662"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS10-054: Vulnerabilities in SMB Server Could Allow Remote Code Execution (982214)", 
+                "file": "smb_nt_ms10-054.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "48291"
+            }, 
+            {
+                "name": "MS10-054: Vulnerabilities in SMB Server Could Allow Remote Code Execution (982214) (remote check)", 
+                "file": "smb_pool_overflow.nasl", 
+                "family": "Windows", 
+                "id": "48405"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerabilities in SMB Server Could Allow Remote Code Execution", 
+                "id": "Vulnerabilities in SMB Server Could Allow Remote Code Execution", 
+                "title": "982214"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/982214", 
+                "id": "982214", 
+                "title": "Vulnerabilities in SMB Server Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS10-054", 
+                "id": "MS10-054", 
+                "title": "Vulnerabilities in SMB Server Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

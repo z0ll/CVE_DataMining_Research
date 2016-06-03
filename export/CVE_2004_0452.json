@@ -1,0 +1,344 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0452", 
+                "published": "2004-12-21T00:00:00.000-05:00", 
+                "id": "CVE-2004-0452", 
+                "modified": "2013-10-23T21:34:35.163-04:00", 
+                "summary": "Race condition in the rmtree function in the File::Path module in Perl 5.6.1 and 5.8.4 sets read/write permissions for the world, which allows local users to delete arbitrary files and directories, and possibly read files and directories, via a symlink attack."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:larry_wall:perl:5.6.1"
+            }, 
+            {
+                "id": "cpe:/a:larry_wall:perl:5.8.4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.1089", 
+                "id": 1089
+            }, 
+            {
+                "url": "http://www.scip.ch/?vuldb.955", 
+                "id": 955
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/12072", 
+                "id": 12072
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2005-103.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.gentoo.org/security/en/glsa/glsa-200501-38.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2004/dsa-620", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110547693019788&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/18650", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/55314", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://marc.free.net.ph/message/20041221.102713.5d5e603a.html", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/12072", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2005-105.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/18517", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/12991", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://fedoranews.org/updates/FEDORA--.shtml", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "ftp://patches.sgi.com/support/free/security/advisories/20060101-01-U", 
+                    "vendor": "SGI"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "1.9", 
+                    "base": "2.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0452"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:7799", 
+                "title": "DSA-1678 perl -- design flaws", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:7799"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18549", 
+                "title": "DSA-1678-1 perl - privilege escalation", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18549"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:9938", 
+                "title": "Race condition in the rmtree function in the File::Path module in Perl 5.6.1 and 5.8.4 sets read/write permissions for the world, which allows local users to delete arbitrary files and directories, and possibly read files and directories, via a symlink attack.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:9938"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 1678-1 (perl)", 
+                "file": "deb_1678_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "62840"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 620-1 (perl)", 
+                "file": "deb_620_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "53457"
+            }, 
+            {
+                "name": "FreeBSD Ports: perl", 
+                "file": "freebsd_perl0.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52215"
+            }, 
+            {
+                "name": "CentOS Update for perl CESA-2010:0458 centos5 i386", 
+                "file": "gb_CESA-2010_0458_perl_centos5_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880631"
+            }, 
+            {
+                "name": "RedHat Update for perl RHSA-2010:0458-02", 
+                "file": "gb_RHSA-2010_0458-02_perl.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870276"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 200501-38 (Perl)", 
+                "file": "glsa_200501_38.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "54824"
+            }, 
+            {
+                "name": "SLES9: Security update for Perl", 
+                "file": "sles9p5013510.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "65342"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-620-1 : perl - insecure temporary files / directories", 
+                "file": "debian_DSA-620.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "16073"
+            }, 
+            {
+                "name": "FreeBSD : perl -- File::Path insecure file/directory permissions (c418d472-6bd1-11d9-93ca-000a95bc6fae)", 
+                "file": "freebsd_pkg_c418d4726bd111d993ca000a95bc6fae.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "19112"
+            }, 
+            {
+                "name": "GLSA-200501-38 : Perl: rmtree and DBI tmpfile vulnerabilities", 
+                "file": "gentoo_GLSA-200501-38.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "16429"
+            }, 
+            {
+                "name": "Mandrake Linux Security Advisory : perl (MDKSA-2005:031)", 
+                "file": "mandrake_MDKSA-2005-031.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "16360"
+            }, 
+            {
+                "name": "RHEL 4 : perl (RHSA-2005:103)", 
+                "file": "redhat-RHSA-2005-103.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "17187"
+            }, 
+            {
+                "name": "RHEL 3 : perl (RHSA-2005:105)", 
+                "file": "redhat-RHSA-2005-105.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "16361"
+            }, 
+            {
+                "name": "Oracle Solaris Third-Party Patch Update : perl-58 (cve_2012_5526_configuration_vulnerability1)", 
+                "file": "solaris11_perl-58_20131015.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "80731"
+            }, 
+            {
+                "name": "Ubuntu 4.10 : perl vulnerabilities (USN-44-1)", 
+                "file": "ubuntu_USN-44-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "20661"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FLSA-2006:152845", 
+                "id": "FLSA-2006:152845"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20050103", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2005-103.html", 
+                    "id": "RHSA-2005:103", 
+                    "title": "RHSA-2005:103: perl security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=146739", 
+                    "title": "CAN-2005-0155 multiple setuid perl issues (CAN-2005-0156 )", 
+                    "id": "146739", 
+                    "issue date": "2005-02-15", 
+                    "associated redhat": "RHSA-2005:103"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=146774", 
+                    "title": "CAN-2004-0452 File::Path::rmtree() issue", 
+                    "id": "146774", 
+                    "issue date": "2005-02-15", 
+                    "associated redhat": "RHSA-2005:103"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20050105", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2005-105.html", 
+                    "id": "RHSA-2005:105", 
+                    "title": "RHSA-2005:105: perl security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=140227", 
+                    "title": "Potential insecurity in CGI.pm", 
+                    "id": "140227", 
+                    "issue date": "2005-02-07", 
+                    "associated redhat": "RHSA-2005:105"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=146737", 
+                    "title": "CAN-2005-0155 multiple setuid perl issues (CAN-2005-0156)", 
+                    "id": "146737", 
+                    "issue date": "2005-02-07", 
+                    "associated redhat": "RHSA-2005:105"
+                }
+            }
+        ], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200501-38", 
+                "id": "GLSA-200501-38"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-44-1", 
+                "id": "USN-44-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-620", 
+                "id": "DSA-620"
+            }
+        ], 
+        "Vmware": []
+    }
+}

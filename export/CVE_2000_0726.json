@@ -1,0 +1,138 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0726", 
+                "published": "2000-10-20T00:00:00.000-04:00", 
+                "id": "CVE-2000-0726", 
+                "modified": "2008-09-05T16:21:44.267-04:00", 
+                "summary": "CGIMail.exe CGI program in Stalkerlab Mailers 1.1.2 allows remote attackers to read arbitrary files by specifying the file in the $Attach$ hidden form variable."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:stalkerlab:mailers:1.1.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.15868", 
+                "id": 15868
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/1623", 
+                "id": 1623
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/templates/archive.pike?list=1&msg=20000829194618.H7744@thathost.com", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/1623", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/5165", 
+                    "vendor": "XF"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "4.9", 
+                    "base": "2.6", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:980", 
+                "signature": "SERVER-IIS CGImail.exe access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1542", 
+                "signature": "SERVER-WEBAPP cgimail access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2000-0726"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CgiMail.exe vulnerability", 
+                "file": "cgimail.nasl", 
+                "family": "Web application abuses", 
+                "id": "11721"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Stalkerlab Mailers CGIMail.exe Arbitrary File Retrieval", 
+                "file": "cgimail.nasl", 
+                "family": "CGI abuses", 
+                "id": "11721"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

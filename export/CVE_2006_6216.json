@@ -1,0 +1,144 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6216", 
+                "published": "2006-11-30T20:28:00.000-05:00", 
+                "id": "CVE-2006-6216", 
+                "modified": "2011-03-07T21:45:37.597-05:00", 
+                "summary": "SQL injection vulnerability in admin_hacks_list.php in the Nivisec Hacks List 1.21 and earlier phpBB module allows remote attackers to execute arbitrary SQL commands via the hack_id parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:nivisec:hacks_list:1.21"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33554", 
+                "id": 33554
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21290", 
+                "id": 21290
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30533", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21290", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/2851", 
+                    "vendor": "MILW0RM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006969", 
+                "signature": "ET WEB_SPECIFIC_APPS phpBB SQL Injection Attempt -- admin_hacks_list.php hack_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006970", 
+                "signature": "ET WEB_SPECIFIC_APPS phpBB SQL Injection Attempt -- admin_hacks_list.php hack_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006971", 
+                "signature": "ET WEB_SPECIFIC_APPS phpBB SQL Injection Attempt -- admin_hacks_list.php hack_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006972", 
+                "signature": "ET WEB_SPECIFIC_APPS phpBB SQL Injection Attempt -- admin_hacks_list.php hack_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006973", 
+                "signature": "ET WEB_SPECIFIC_APPS phpBB SQL Injection Attempt -- admin_hacks_list.php hack_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006974", 
+                "signature": "ET WEB_SPECIFIC_APPS phpBB SQL Injection Attempt -- admin_hacks_list.php hack_id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6216"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

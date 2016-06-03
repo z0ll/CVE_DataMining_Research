@@ -1,0 +1,207 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0316", 
+                "published": "2007-01-17T19:28:00.000-05:00", 
+                "id": "CVE-2007-0316", 
+                "modified": "2011-03-07T21:49:14.893-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in All In One Control Panel (AIOCP) 1.3.010 and earlier, when magic_quotes_gpc is disabled, allow remote attackers to execute arbitrary SQL commands via the (1) xuser_name parameter to shared/code/cp_authorization.php, and the (2) did parameter to public/code/cp_downloads.php, different vectors than CVE-2007-0223."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:all_in_one_control_panel:all_in_one_control_panel:1.3.010"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34471", 
+                "id": 34471
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/22032", 
+                "id": 22032
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/32809", 
+                "id": 32809
+            }, 
+            {
+                "url": "http://www.osvdb.org/32810", 
+                "id": 32810
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/31485", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/0190", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/22032", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/456742", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/456741", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23740", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/32810", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/32809", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2166", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005573", 
+                "signature": "ET WEB_SPECIFIC_APPS All In One Control Panel (AIOCP) SQL Injection Attempt -- cp_authorization.php xuser_name SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005574", 
+                "signature": "ET WEB_SPECIFIC_APPS All In One Control Panel (AIOCP) SQL Injection Attempt -- cp_authorization.php xuser_name UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005575", 
+                "signature": "ET WEB_SPECIFIC_APPS All In One Control Panel (AIOCP) SQL Injection Attempt -- cp_authorization.php xuser_name INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005576", 
+                "signature": "ET WEB_SPECIFIC_APPS All In One Control Panel (AIOCP) SQL Injection Attempt -- cp_authorization.php xuser_name DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005577", 
+                "signature": "ET WEB_SPECIFIC_APPS All In One Control Panel (AIOCP) SQL Injection Attempt -- cp_authorization.php xuser_name ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005578", 
+                "signature": "ET WEB_SPECIFIC_APPS All In One Control Panel (AIOCP) SQL Injection Attempt -- cp_authorization.php xuser_name UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005579", 
+                "signature": "ET WEB_SPECIFIC_APPS All In One Control Panel (AIOCP) SQL Injection Attempt -- cp_downloads.php did SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005580", 
+                "signature": "ET WEB_SPECIFIC_APPS All In One Control Panel (AIOCP) SQL Injection Attempt -- cp_downloads.php did UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005581", 
+                "signature": "ET WEB_SPECIFIC_APPS All In One Control Panel (AIOCP) SQL Injection Attempt -- cp_downloads.php did INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005582", 
+                "signature": "ET WEB_SPECIFIC_APPS All In One Control Panel (AIOCP) SQL Injection Attempt -- cp_downloads.php did DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005583", 
+                "signature": "ET WEB_SPECIFIC_APPS All In One Control Panel (AIOCP) SQL Injection Attempt -- cp_downloads.php did ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005584", 
+                "signature": "ET WEB_SPECIFIC_APPS All In One Control Panel (AIOCP) SQL Injection Attempt -- cp_downloads.php did UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-0316"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

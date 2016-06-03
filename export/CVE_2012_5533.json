@@ -1,0 +1,263 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-5533", 
+                "published": "2012-11-24T15:55:04.307-05:00", 
+                "id": "CVE-2012-5533", 
+                "modified": "2014-02-06T23:43:30.837-05:00", 
+                "summary": "The http_request_split_value function in request.c in lighttpd before 1.4.32 allows remote attackers to cause a denial of service (infinite loop) via a request with a header containing an empty token, as demonstrated using the \"Connection: TE,,Keep-Alive\" header."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:lighttpd:lighttpd:1.4.32"
+            }, 
+            {
+                "id": "cpe:/a:lighttpd:lighttpd:1.4.31"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.7013", 
+                "id": 7013
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/56619", 
+                "id": 56619
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/87623", 
+                "id": 87623
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://download.lighttpd.net/lighttpd/security/lighttpd-1.4.31_fix_connection_header_dos.patch", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "https://wiki.mageia.org/en/Support/Advisories/MGASA-2012-0345", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/80213", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1027802", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/56619", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/11/21/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2013:100", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/22902", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/51298", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/51268", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://packetstormsecurity.org/files/118282/Simple-Lighttpd-1.4.31-Denial-Of-Service.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://osvdb.org/87623", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2014-01/msg00051.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2012-11/msg00044.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://download.lighttpd.net/lighttpd/security/lighttpd_sa_2012_01.txt", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/22902", 
+                "id": 22902, 
+                "file": "platforms/linux/dos/22902.sh"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-5533"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: lighttpd", 
+                "file": "freebsd_lighttpd8.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "72598"
+            }, 
+            {
+                "name": "Fedora Update for lighttpd FEDORA-2013-15344", 
+                "file": "gb_fedora_2013_15344_lighttpd_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866871"
+            }, 
+            {
+                "name": "Fedora Update for lighttpd FEDORA-2013-15345", 
+                "file": "gb_fedora_2013_15345_lighttpd_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866877"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : lighttpd (ALAS-2013-179)", 
+                "file": "ala_ALAS-2013-179.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "69738"
+            }, 
+            {
+                "name": "Fedora 18 : lighttpd-1.4.32-1.fc18 (2013-15344)", 
+                "file": "fedora_2013-15344.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "69774"
+            }, 
+            {
+                "name": "Fedora 19 : lighttpd-1.4.32-1.fc19 (2013-15345)", 
+                "file": "fedora_2013-15345.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "69775"
+            }, 
+            {
+                "name": "FreeBSD : lighttpd -- remote DoS in header parsing (1cd3ca42-33e6-11e2-a255-5404a67eef98)", 
+                "file": "freebsd_pkg_1cd3ca4233e611e2a2555404a67eef98.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "63016"
+            }, 
+            {
+                "name": "GLSA-201406-10 : lighttpd: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201406-10.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "76062"
+            }, 
+            {
+                "name": "lighttpd 1.4.31 http_request_split_value Function Header Handling DoS", 
+                "file": "lighttpd_1_4_32.nasl", 
+                "family": "Web Servers", 
+                "id": "63094"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : lighttpd (MDVSA-2013:100)", 
+                "file": "mandriva_MDVSA-2013-100.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "66112"
+            }, 
+            {
+                "name": "openSUSE Security Update : lighttpd (openSUSE-SU-2012:1532-1)", 
+                "file": "openSUSE-2012-801.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74819"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2013:100", 
+                "id": "MDVSA-2013:100"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2012-5533.html", 
+                "id": "openSUSE-SU-2012:1532"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2012-5533.html", 
+                "id": "openSUSE-SU-2014:0074"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

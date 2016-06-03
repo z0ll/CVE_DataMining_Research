@@ -1,0 +1,257 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6094", 
+                "published": "2006-11-24T13:07:00.000-05:00", 
+                "id": "CVE-2006-6094", 
+                "modified": "2011-03-07T21:45:10.610-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in ActiveNews Manager allow remote attackers to execute arbitrary SQL commands via the (1) catID parameter to activeNews_categories.asp, the (2) articleID parameter to activeNews_comments.asp, or the (3) query parameter to activenews_search.asp."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:dotnetindex:active_news_manager"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33433", 
+                "id": 33433
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21167", 
+                "id": 21167
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/30518", 
+                "id": 30518
+            }, 
+            {
+                "url": "http://www.osvdb.org/30519", 
+                "id": 30519
+            }, 
+            {
+                "url": "http://www.osvdb.org/30520", 
+                "id": 30520
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30352", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4600", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21167", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/451884/100/100/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/452015", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.aria-security.com/forum/showthread.php?t=33", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/22981", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://s-a-p.ca/index.php?page=OurAdvisories&id=31", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=116388432326444&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/30520", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/30519", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/30518", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/1910", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007487", 
+                "signature": "ET WEB_SPECIFIC_APPS ActiveNews Manager SQL Injection Attempt -- activeNews_categories.asp catID SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007488", 
+                "signature": "ET WEB_SPECIFIC_APPS ActiveNews Manager SQL Injection Attempt -- activeNews_categories.asp catID UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007489", 
+                "signature": "ET WEB_SPECIFIC_APPS ActiveNews Manager SQL Injection Attempt -- activeNews_categories.asp catID INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007490", 
+                "signature": "ET WEB_SPECIFIC_APPS ActiveNews Manager SQL Injection Attempt -- activeNews_categories.asp catID DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007491", 
+                "signature": "ET WEB_SPECIFIC_APPS ActiveNews Manager SQL Injection Attempt -- activeNews_categories.asp catID ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007492", 
+                "signature": "ET WEB_SPECIFIC_APPS ActiveNews Manager SQL Injection Attempt -- activeNews_categories.asp catID UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007493", 
+                "signature": "ET WEB_SPECIFIC_APPS ActiveNews Manager SQL Injection Attempt -- activeNews_comments.asp articleID SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007494", 
+                "signature": "ET WEB_SPECIFIC_APPS ActiveNews Manager SQL Injection Attempt -- activeNews_comments.asp articleID UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007495", 
+                "signature": "ET WEB_SPECIFIC_APPS ActiveNews Manager SQL Injection Attempt -- activeNews_comments.asp articleID INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007496", 
+                "signature": "ET WEB_SPECIFIC_APPS ActiveNews Manager SQL Injection Attempt -- activeNews_comments.asp articleID DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007497", 
+                "signature": "ET WEB_SPECIFIC_APPS ActiveNews Manager SQL Injection Attempt -- activeNews_comments.asp articleID ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007498", 
+                "signature": "ET WEB_SPECIFIC_APPS ActiveNews Manager SQL Injection Attempt -- activeNews_comments.asp articleID UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007499", 
+                "signature": "ET WEB_SPECIFIC_APPS ActiveNews Manager SQL Injection Attempt -- activenews_search.asp query SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007500", 
+                "signature": "ET WEB_SPECIFIC_APPS ActiveNews Manager SQL Injection Attempt -- activenews_search.asp query UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007501", 
+                "signature": "ET WEB_SPECIFIC_APPS ActiveNews Manager SQL Injection Attempt -- activenews_search.asp query INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007502", 
+                "signature": "ET WEB_SPECIFIC_APPS ActiveNews Manager SQL Injection Attempt -- activenews_search.asp query DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007503", 
+                "signature": "ET WEB_SPECIFIC_APPS ActiveNews Manager SQL Injection Attempt -- activenews_search.asp query ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007565", 
+                "signature": "ET WEB_SPECIFIC_APPS ActiveNews Manager SQL Injection Attempt -- activenews_search.asp query UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6094"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,165 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2473", 
+                "published": "2007-05-02T19:19:00.000-04:00", 
+                "id": "CVE-2007-2473", 
+                "modified": "2012-11-05T22:38:22.013-05:00", 
+                "summary": "SQL injection vulnerability in stylesheet.php in CMS Made Simple 1.0.5 and earlier allows remote attackers to execute arbitrary SQL commands via the templateid parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:cmsmadesimple:cms_made_simple:1.0.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.36583", 
+                "id": 36583
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/23753", 
+                "id": 23753
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/35744", 
+                "id": 35744
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://blog.cmsmadesimple.org/2007/04/24/cms-made-simple-106-released/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1628", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/23753", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.scanit.be/advisory-2007-05-02.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25082", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/35744", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34044", 
+                    "vendor": "XF"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003794", 
+                "signature": "ET WEB_SPECIFIC_APPS CMS Made Simple SQL Injection Attempt -- stylesheet.php templateid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003795", 
+                "signature": "ET WEB_SPECIFIC_APPS CMS Made Simple SQL Injection Attempt -- stylesheet.php templateid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003796", 
+                "signature": "ET WEB_SPECIFIC_APPS CMS Made Simple SQL Injection Attempt -- stylesheet.php templateid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003865", 
+                "signature": "ET WEB_SPECIFIC_APPS CMS Made Simple SQL Injection Attempt -- stylesheet.php templateid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003797", 
+                "signature": "ET WEB_SPECIFIC_APPS CMS Made Simple SQL Injection Attempt -- stylesheet.php templateid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003798", 
+                "signature": "ET WEB_SPECIFIC_APPS CMS Made Simple SQL Injection Attempt -- stylesheet.php templateid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2473"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,182 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3175", 
+                "published": "2007-06-11T18:30:00.000-04:00", 
+                "id": "CVE-2007-3175", 
+                "modified": "2008-11-15T01:51:40.577-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in W2B Online Banking allow remote attackers to execute arbitrary SQL commands via (1) the draft parameter to mailer.w2b or (2) the listDocPay parameter to DocPay.w2b."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:w2b:online_banking"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.37238", 
+                "id": 37238
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/37466", 
+                "id": 37466
+            }, 
+            {
+                "url": "http://www.osvdb.org/37467", 
+                "id": 37467
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34593", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://pridels-team.blogspot.com/2007/05/w2b-online-banking-vuln.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://osvdb.org/37467", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/37466", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005304", 
+                "signature": "ET WEB_SPECIFIC_APPS W2B Online Banking SQL Injection Attempt -- mailer.w2b draft SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005305", 
+                "signature": "ET WEB_SPECIFIC_APPS W2B Online Banking SQL Injection Attempt -- mailer.w2b draft UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005306", 
+                "signature": "ET WEB_SPECIFIC_APPS W2B Online Banking SQL Injection Attempt -- mailer.w2b draft INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005307", 
+                "signature": "ET WEB_SPECIFIC_APPS W2B Online Banking SQL Injection Attempt -- mailer.w2b draft DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005308", 
+                "signature": "ET WEB_SPECIFIC_APPS W2B Online Banking SQL Injection Attempt -- mailer.w2b draft ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005309", 
+                "signature": "ET WEB_SPECIFIC_APPS W2B Online Banking SQL Injection Attempt -- mailer.w2b draft UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005310", 
+                "signature": "ET WEB_SPECIFIC_APPS W2B Online Banking SQL Injection Attempt -- DocPay.w2b listDocPay SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005187", 
+                "signature": "ET WEB_SPECIFIC_APPS W2B Online Banking SQL Injection Attempt -- DocPay.w2b listDocPay UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005188", 
+                "signature": "ET WEB_SPECIFIC_APPS W2B Online Banking SQL Injection Attempt -- DocPay.w2b listDocPay INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005189", 
+                "signature": "ET WEB_SPECIFIC_APPS W2B Online Banking SQL Injection Attempt -- DocPay.w2b listDocPay DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005190", 
+                "signature": "ET WEB_SPECIFIC_APPS W2B Online Banking SQL Injection Attempt -- DocPay.w2b listDocPay ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005191", 
+                "signature": "ET WEB_SPECIFIC_APPS W2B Online Banking SQL Injection Attempt -- DocPay.w2b listDocPay UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-3175"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

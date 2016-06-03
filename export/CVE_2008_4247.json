@@ -1,0 +1,194 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4247", 
+                "published": "2008-09-25T15:25:18.817-04:00", 
+                "id": "CVE-2008-4247", 
+                "modified": "2012-10-22T22:53:50.647-04:00", 
+                "summary": "ftpd in OpenBSD 4.3, FreeBSD 7.0, NetBSD 4.0, Solaris, and possibly other operating systems interprets long commands from an FTP client as multiple commands, which allows remote attackers to conduct cross-site request forgery (CSRF) attacks and execute arbitrary FTP commands via a long ftp:// URI that leverages an existing session from the FTP client implementation in a web browser."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/352.html", 
+                "id": "CWE-352", 
+                "title": "Cross-Site Request Forgery (CSRF)"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:openbsd:openbsd:4.3"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:7.0"
+            }, 
+            {
+                "id": "cpe:/o:netbsd:netbsd:4.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.3837", 
+                "id": 3837
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securitytracker.com/id?1021112", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1020946", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.oracle.com/technetwork/topics/security/cpuoct2010-175626.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openbsd.org/cgi-bin/cvsweb/src/libexec/ftpd/ftpd.c.diff?r1=1.183&r2=1.184&f=h", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openbsd.org/cgi-bin/cvsweb/src/libexec/ftpd/ftpd.c", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openbsd.org/cgi-bin/cvsweb/src/libexec/ftpd/ftpcmd.y.diff?r1=1.51&r2=1.52&f=h", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openbsd.org/cgi-bin/cvsweb/src/libexec/ftpd/ftpcmd.y", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/4313", 
+                    "vendor": "SREASON"
+                }, 
+                {
+                    "url": "http://securityreason.com/achievement_securityalert/56", 
+                    "vendor": "SREASONRES"
+                }, 
+                {
+                    "url": "http://security.FreeBSD.org/advisories/FreeBSD-SA-08:12.ftpd.asc", 
+                    "vendor": "FREEBSD"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/33341", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/32070", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/32068", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://bugs.proftpd.org/show_bug.cgi?id=3115", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2008-014.txt.asc", 
+                    "vendor": "NETBSD"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2008-4247"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: proftpd, proftpd-mysql", 
+                "file": "freebsd_proftpd4.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "61656"
+            }, 
+            {
+                "name": "FreeBSD Security Advisory (FreeBSD-SA-08:12.ftpd.asc)", 
+                "file": "freebsdsa_ftpd.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "63078"
+            }, 
+            {
+                "name": "FreeBSD Security Advisory (FreeBSD-SA-09:01.lukemftpd.asc)", 
+                "file": "freebsdsa_lukemftpd.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "63175"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "FreeBSD : proftpd -- Long Command Processing Vulnerability (0f51f2c9-8956-11dd-a6fe-0030843d3802)", 
+                "file": "freebsd_pkg_0f51f2c9895611dda6fe0030843d3802.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "34256"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

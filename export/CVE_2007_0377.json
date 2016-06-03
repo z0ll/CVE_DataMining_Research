@@ -1,0 +1,195 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0377", 
+                "published": "2007-01-19T18:28:00.000-05:00", 
+                "id": "CVE-2007-0377", 
+                "modified": "2008-11-15T01:40:10.750-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in Xoops 2.0.16 allow remote attackers to execute arbitrary SQL commands via (1) the id parameter in kernel/group.php in core, (2) the lid parameter in class/table_broken.php in the Weblinks module, and other unspecified vectors."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:xoops:xoops:2.0.16"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.2897", 
+                "id": 2897
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/22399", 
+                "id": 22399
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/33684", 
+                "id": 33684
+            }, 
+            {
+                "url": "http://www.osvdb.org/33685", 
+                "id": 33685
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.hackers.ir/advisories/festival.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://osvdb.org/33685", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/33684", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/fulldisclosure/2007-01/0355.html", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/22399", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/459150/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005378", 
+                "signature": "ET WEB_SPECIFIC_APPS Xoops SQL Injection Attempt -- group.php id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005379", 
+                "signature": "ET WEB_SPECIFIC_APPS Xoops SQL Injection Attempt -- group.php id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005380", 
+                "signature": "ET WEB_SPECIFIC_APPS Xoops SQL Injection Attempt -- group.php id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005381", 
+                "signature": "ET WEB_SPECIFIC_APPS Xoops SQL Injection Attempt -- group.php id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005382", 
+                "signature": "ET WEB_SPECIFIC_APPS Xoops SQL Injection Attempt -- group.php id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005383", 
+                "signature": "ET WEB_SPECIFIC_APPS Xoops SQL Injection Attempt -- group.php id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005384", 
+                "signature": "ET WEB_SPECIFIC_APPS Xoops SQL Injection Attempt -- table_broken.php lid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005385", 
+                "signature": "ET WEB_SPECIFIC_APPS Xoops SQL Injection Attempt -- table_broken.php lid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005386", 
+                "signature": "ET WEB_SPECIFIC_APPS Xoops SQL Injection Attempt -- table_broken.php lid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005387", 
+                "signature": "ET WEB_SPECIFIC_APPS Xoops SQL Injection Attempt -- table_broken.php lid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005388", 
+                "signature": "ET WEB_SPECIFIC_APPS Xoops SQL Injection Attempt -- table_broken.php lid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005389", 
+                "signature": "ET WEB_SPECIFIC_APPS Xoops SQL Injection Attempt -- table_broken.php lid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-0377"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

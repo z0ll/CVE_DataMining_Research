@@ -1,0 +1,148 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6794", 
+                "published": "2006-12-27T19:28:00.000-05:00", 
+                "id": "CVE-2006-6794", 
+                "modified": "2011-03-07T21:46:59.597-05:00", 
+                "summary": "SQL injection vulnerability in default.asp in Efkan Forum 1.0 allows remote attackers to execute arbitrary SQL commands via the grup parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:efkan_forum:efkan_forum:1.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34079", 
+                "id": 34079
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21726", 
+                "id": 21726
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/5150", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/455205/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21726", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2066", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006159", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- default.asp grup SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006160", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- default.asp grup UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006161", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- default.asp grup INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006162", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- default.asp grup DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006163", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- default.asp grup ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006164", 
+                "signature": "ET WEB_SPECIFIC_APPS Efkan Forum SQL Injection Attempt -- default.asp grup UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6794"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

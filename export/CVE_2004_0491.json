@@ -1,0 +1,228 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0491", 
+                "published": "2004-12-31T00:00:00.000-05:00", 
+                "id": "CVE-2004-0491", 
+                "modified": "2010-08-21T00:20:38.253-04:00", 
+                "summary": "The linux-2.4.21-mlock.patch in Red Hat Enterprise Linux 3 does not properly maintain the mlock page count when one process unlocks pages that belong to another process, which allows local users to mlock more memory than specified by the rlimit."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:3.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.22621", 
+                "id": 22621
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/13769", 
+                "id": 13769
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=linux-kernel&m=108087017610947&w=2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/13769", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2005-472.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/19607", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "ftp://patches.sgi.com/support/free/security/advisories/20060402-01-U", 
+                    "vendor": "SGI"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "2.1", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0491"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:1117", 
+                "title": "mlock Memory Page Tracking Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:1117"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:10672", 
+                "title": "The linux-2.4.21-mlock.patch in Red Hat Enterprise Linux 3 does not properly maintain the mlock page count when one process unlocks pages that belong to another process, which allows local users to mlock more memory than specified by the rlimit.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:10672"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "CentOS 3 : kernel (CESA-2005:472)", 
+                "file": "centos_RHSA-2005-472.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "21828"
+            }, 
+            {
+                "name": "RHEL 3 : kernel (RHSA-2005:472)", 
+                "file": "redhat-RHSA-2005-472.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "18389"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20050472", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2005-472.html", 
+                    "id": "RHSA-2005:472", 
+                    "title": "RHSA-2005:472: kernel security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=126411", 
+                    "title": "CVE-2004-0491 mlock accounting issue", 
+                    "id": "126411", 
+                    "issue date": "2005-05-25", 
+                    "associated redhat": "RHSA-2005:472"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=141394", 
+                    "title": "Memory corruption with kernel 2.4.21-27.EL", 
+                    "id": "141394", 
+                    "issue date": "2005-05-25", 
+                    "associated redhat": "RHSA-2005:472"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=141905", 
+                    "title": "kernel 2.4.21-25.ELsmp panic (kscand)", 
+                    "id": "141905", 
+                    "issue date": "2005-05-25", 
+                    "associated redhat": "RHSA-2005:472"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=142802", 
+                    "title": "CVE-2005-0176 unlock someone elses ipc memory", 
+                    "id": "142802", 
+                    "issue date": "2005-05-25", 
+                    "associated redhat": "RHSA-2005:472"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=149087", 
+                    "title": "Kernel panic regression in 2.4.21-27.0.2.ELsmp", 
+                    "id": "149087", 
+                    "issue date": "2005-05-25", 
+                    "associated redhat": "RHSA-2005:472"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=151865", 
+                    "title": "Page corruption in U5 Beta", 
+                    "id": "151865", 
+                    "issue date": "2005-05-25", 
+                    "associated redhat": "RHSA-2005:472"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=156023", 
+                    "title": "Memory corruption", 
+                    "id": "156023", 
+                    "issue date": "2005-05-25", 
+                    "associated redhat": "RHSA-2005:472"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=157451", 
+                    "title": "CVE-2005-1263 Linux kernel ELF core dump crash vulnerability", 
+                    "id": "157451", 
+                    "issue date": "2005-05-25", 
+                    "associated redhat": "RHSA-2005:472"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

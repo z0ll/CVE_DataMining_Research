@@ -1,0 +1,220 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2120", 
+                "published": "2005-10-13T06:02:00.000-04:00", 
+                "id": "CVE-2005-2120", 
+                "modified": "2008-09-10T15:41:06.413-04:00", 
+                "summary": "Stack-based buffer overflow in the Plug and Play (PnP) service (UMPNPMGR.DLL) in Microsoft Windows 2000 SP4, and XP SP1 and SP2, allows remote or local authenticated attackers to execute arbitrary code via a large number of \"\\\" (backslash) characters in a registry key name, which triggers the overflow in a wsprintfW function call."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp4::fr"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp1:tablet_pc"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp2:tablet_pc"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.1789", 
+                "id": 1789
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/15065", 
+                "id": 15065
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/18830", 
+                "id": 18830
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA05-284A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/214572", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/15065", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms05-047.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.eeye.com/html/research/advisories/AD20051011c.html", 
+                    "vendor": "EEYE"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1015042", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/17166", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/18830", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://support.avaya.com/elmodocs2/security/ASA-2005-214.pdf", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/71", 
+                    "vendor": "SREASON"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/17223", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/17172", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/214572", 
+                "id": "VU#214572"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "6.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms05_047_pnp.rb", 
+                "file": "metasploit-framework/modules/auxiliary/dos/windows/smb/ms05_047_pnp.rb", 
+                "title": "Microsoft Plug and Play Service Registry Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-2120"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:1519", 
+                "title": "Plug and Play User Data Validation Vulnerability (WinXP,SP2)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:1519"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:1244", 
+                "title": "Plug and Play User Data Validation Vulnerability (Windows 2000)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:1244"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:1328", 
+                "title": "Plug and Play User Data Validation Vulnerability (WinXP,SP1)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:1328"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS05-047: Plug and Play Remote Code Execution and Local Privilege Elevation (905749) (uncredentialed check)", 
+                "file": "smb_kb905749.nasl", 
+                "family": "Windows", 
+                "id": "21193"
+            }, 
+            {
+                "name": "MS05-047: Vulnerability in Plug and Play Could Allow Remote Code Execution and Local Elevation of Privilege (905749)", 
+                "file": "smb_nt_ms05-047.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "20000"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in Plug and Play Could Allow Remote Code Execution and Local Elevation of Privilege", 
+                "id": "Vulnerability in Plug and Play Could Allow Remote Code Execution and Local Elevation of Privilege", 
+                "title": "905749"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/905749", 
+                "id": "905749", 
+                "title": "Vulnerability in Plug and Play Could Allow Remote Code Execution and Local Elevation of Privilege"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS05-047", 
+                "id": "MS05-047", 
+                "title": "Vulnerability in Plug and Play Could Allow Remote Code Execution and Local Elevation of Privilege"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

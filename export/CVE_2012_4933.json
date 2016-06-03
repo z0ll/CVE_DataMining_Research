@@ -1,0 +1,154 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-4933", 
+                "published": "2012-10-20T14:55:01.303-04:00", 
+                "id": "CVE-2012-4933", 
+                "modified": "2013-02-13T23:57:19.977-05:00", 
+                "summary": "The rtrlet web application in the Web Console in Novell ZENworks Asset Management (ZAM) 7.5 uses a hard-coded username of Ivanhoe and a hard-coded password of Scott for the (1) GetFile_Password and (2) GetConfigInfo_Password operations, which allows remote attackers to obtain sensitive information via a crafted rtrlet/rtr request for the HandleMaintenanceCalls function."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/255.html", 
+                "id": "CWE-255", 
+                "title": "Credentials Management"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:novell:zenworks_asset_management:7.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.6800", 
+                "id": 6800
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/332412", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "https://community.rapid7.com/community/metasploit/blog/2012/10/15/cve-2012-4933-novell-zenworks", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/79252", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1027682", 
+                    "vendor": "SECTRACK"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/332412", 
+                "id": "VU#332412"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.8", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "zenworks_assetmanagement_fileaccess.rb", 
+                "file": "metasploit-framework/modules/auxiliary/scanner/http/zenworks_assetmanagement_fileaccess.rb", 
+                "title": "Novell ZENworks Asset Management 7.5 Remote File Access"
+            }, 
+            {
+                "id": "zenworks_assetmanagement_getconfig.rb", 
+                "file": "metasploit-framework/modules/auxiliary/scanner/http/zenworks_assetmanagement_getconfig.rb", 
+                "title": "Novell ZENworks Asset Management 7.5 Configuration Access"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-4933"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Novell ZENWorks Asset Management Information Disclosure Vulnerabilities", 
+                "file": "secpod_novell_zenworks_asset_mangment_info_disc_vuln.nasl", 
+                "family": "Web application abuses", 
+                "id": "902928"
+            }, 
+            {
+                "name": "Novell ZENWorks Asset Management Information Disclosure Vulnerabilities", 
+                "file": "secpod_novell_zenworks_asset_mangment_info_disc_vuln.nasl", 
+                "family": "Web application abuses", 
+                "id": "900598"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Novell ZENworks Asset Management rtrlet Component GetFile_Password Method Hardcoded Credentials Information Disclosure", 
+                "file": "novell_zenworks_asset_management_arbitrary_information_disclosure.nasl", 
+                "family": "CGI abuses", 
+                "id": "62704"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,150 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2632", 
+                "published": "2007-05-13T19:19:00.000-04:00", 
+                "id": "CVE-2007-2632", 
+                "modified": "2012-11-05T22:38:54.170-05:00", 
+                "summary": "Multiple cross-site scripting (XSS) vulnerabilities in PHP Multi User Randomizer (phpMUR) 2006.09.13 allow remote attackers to inject arbitrary web script or HTML via (1) the edit_plugin parameter to configure_plugin.tpl.php, or (2) certain array parameters to web/phpinfo.php, as demonstrated by 1[] or a[]."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:php_multi_user_randomizer:php_multi_user_randomizer:2006.09.13"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.36752", 
+                "id": 36752
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/23917", 
+                "id": 23917
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/36212", 
+                "id": 36212
+            }, 
+            {
+                "url": "http://www.osvdb.org/36213", 
+                "id": 36213
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1796", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/23917", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://osvdb.org/36213", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/36212", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://marc.info/?l=bugtraq&m=117883301207293&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34228", 
+                    "vendor": "XF"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003882", 
+                "signature": "ET WEB_SPECIFIC_APPS PHP Multi User Randomizer (phpMUR) XSS Attempt -- configure_plugin.tpl.php edit_plugin"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003883", 
+                "signature": "ET WEB_SPECIFIC_APPS PHP Multi User Randomizer (phpMUR) XSS Attempt -- phpinfo.php 1"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003884", 
+                "signature": "ET WEB_SPECIFIC_APPS PHP Multi User Randomizer (phpMUR) XSS Attempt -- phpinfo.php a"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2632"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

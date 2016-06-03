@@ -1,0 +1,299 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0122", 
+                "published": "2007-01-08T21:28:00.000-05:00", 
+                "id": "CVE-2007-0122", 
+                "modified": "2008-11-15T01:38:52.017-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in Coppermine Photo Gallery 1.4.10 and earlier allow remote authenticated administrators to execute arbitrary SQL commands via (1) the cat parameter to albmgr.php, and possibly (2) the gid parameter to usermgr.php; (3) the start parameter to db_ecard.php; and the albumid parameter to unspecified files, related to the (4) filename_to_title and (5) del_titles functions."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:coppermine:coppermine_photo_gallery:1.3"
+            }, 
+            {
+                "id": "cpe:/a:coppermine:coppermine_photo_gallery:1.4.9"
+            }, 
+            {
+                "id": "cpe:/a:coppermine:coppermine_photo_gallery:1.2"
+            }, 
+            {
+                "id": "cpe:/a:coppermine:coppermine_photo_gallery:1.1"
+            }, 
+            {
+                "id": "cpe:/a:coppermine:coppermine_photo_gallery:1.4.4"
+            }, 
+            {
+                "id": "cpe:/a:coppermine:coppermine_photo_gallery:1.0_rc3"
+            }, 
+            {
+                "id": "cpe:/a:coppermine:coppermine_photo_gallery:1.2.1"
+            }, 
+            {
+                "id": "cpe:/a:coppermine:coppermine_photo_gallery:1.3.4"
+            }, 
+            {
+                "id": "cpe:/a:coppermine:coppermine_photo_gallery:1.4.10"
+            }, 
+            {
+                "id": "cpe:/a:coppermine:coppermine_photo_gallery:1.2.2_b-nuke"
+            }, 
+            {
+                "id": "cpe:/a:coppermine:coppermine_photo_gallery:1.3.2"
+            }, 
+            {
+                "id": "cpe:/a:coppermine:coppermine_photo_gallery:1.1_beta_2"
+            }, 
+            {
+                "id": "cpe:/a:coppermine:coppermine_photo_gallery:1.3.3"
+            }, 
+            {
+                "id": "cpe:/a:coppermine:coppermine_photo_gallery:1.2.2_b"
+            }, 
+            {
+                "id": "cpe:/a:coppermine:coppermine_photo_gallery:1.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.3157", 
+                "id": 3157
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21894", 
+                "id": 21894
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/35852", 
+                "id": 35852
+            }, 
+            {
+                "url": "http://www.osvdb.org/35853", 
+                "id": 35853
+            }, 
+            {
+                "url": "http://www.osvdb.org/35854", 
+                "id": 35854
+            }, 
+            {
+                "url": "http://www.osvdb.org/35855", 
+                "id": 35855
+            }, 
+            {
+                "url": "http://www.osvdb.org/35856", 
+                "id": 35856
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/21894", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/456051/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://osvdb.org/35856", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/35855", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/35854", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/35853", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/35852", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://acid-root.new.fr/poc/19070104.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2123", 
+                    "vendor": "SREASON"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25846", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/3085", 
+                    "vendor": "MILW0RM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "6.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005841", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery SQL Injection Attempt -- albmgr.php cat SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005842", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery SQL Injection Attempt -- albmgr.php cat UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005843", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery SQL Injection Attempt -- albmgr.php cat INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005844", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery SQL Injection Attempt -- albmgr.php cat DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005845", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery SQL Injection Attempt -- albmgr.php cat ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005846", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery SQL Injection Attempt -- albmgr.php cat UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005847", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery SQL Injection Attempt -- usermgr.php gid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005848", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery SQL Injection Attempt -- usermgr.php gid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005849", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery SQL Injection Attempt -- usermgr.php gid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005850", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery SQL Injection Attempt -- usermgr.php gid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005851", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery SQL Injection Attempt -- usermgr.php gid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005852", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery SQL Injection Attempt -- usermgr.php gid UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005853", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery SQL Injection Attempt -- db_ecard.php start SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005854", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery SQL Injection Attempt -- db_ecard.php start UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005855", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery SQL Injection Attempt -- db_ecard.php start INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005856", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery SQL Injection Attempt -- db_ecard.php start DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005857", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery SQL Injection Attempt -- db_ecard.php start ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005858", 
+                "signature": "ET WEB_SPECIFIC_APPS Coppermine Photo Gallery SQL Injection Attempt -- db_ecard.php start UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-0122"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

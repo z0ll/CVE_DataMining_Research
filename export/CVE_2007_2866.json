@@ -1,0 +1,144 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2866", 
+                "published": "2007-05-25T14:30:00.000-04:00", 
+                "id": "CVE-2007-2866", 
+                "modified": "2011-03-07T21:55:13.407-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in modules/admin/modules/gallery.php in PHPEcho CMS 2.0-rc1 and earlier allow remote attackers to execute arbitrary SQL commands via the id parameter and possibly other parameters.  NOTE: some of these details are obtained from third party information."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:phpecho_cms:phpecho_cms:2.0_rc1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.36983", 
+                "id": 36983
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/38053", 
+                "id": 38053
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://sourceforge.net/project/shownotes.php?release_id=495821&group_id=186100", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1937", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://osvdb.org/38053", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004041", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPEcho CMS SQL Injection Attempt -- gallery.php id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004042", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPEcho CMS SQL Injection Attempt -- gallery.php id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004043", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPEcho CMS SQL Injection Attempt -- gallery.php id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004044", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPEcho CMS SQL Injection Attempt -- gallery.php id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004045", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPEcho CMS SQL Injection Attempt -- gallery.php id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004046", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPEcho CMS SQL Injection Attempt -- gallery.php id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2866"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

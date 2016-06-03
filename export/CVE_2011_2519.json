@@ -1,0 +1,304 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2519", 
+                "published": "2013-12-26T20:55:05.190-05:00", 
+                "id": "CVE-2011-2519", 
+                "modified": "2013-12-27T10:35:28.950-05:00", 
+                "summary": "Xen in the Linux kernel, when running a guest on a host without hardware assisted paging (HAP), allows guest users to cause a denial of service (invalid pointer dereference and hypervisor crash) via the SAHF instruction."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel"
+            }, 
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.65892", 
+                "id": 65892
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0031252", 
+                "id": "2012-A-0020", 
+                "title": "Multiple Vulnerabilities in VMware ESX 4.1 and ESXi 4.1"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xenbits.xen.org/hg/xen-3.1-testing.hg/rev/15644", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=718882", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2011/08/30/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2011-1212.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "single_instance", 
+                    "exploit": "4.4", 
+                    "base": "5.2", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "adjacent_network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-2519"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21200", 
+                "title": "RHSA-2011:1212: kernel security and bug fix update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21200"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23293", 
+                "title": "ELSA-2011:1212: kernel security and bug fix update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23293"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27781", 
+                "title": "DEPRECATED: ELSA-2011-1212 -- kernel security and bug fix update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27781"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20423", 
+                "title": "VMware ESXi and ESX updates to third party library and ESX Service Console", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:20423"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CentOS Update for kernel CESA-2011:1212 centos5 i386", 
+                "file": "gb_CESA-2011_1212_kernel_centos5_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880995"
+            }, 
+            {
+                "name": "CentOS Update for kernel CESA-2011:1212 centos5 x86_64", 
+                "file": "gb_CESA-2011_1212_kernel_centos5_x86_64.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881451"
+            }, 
+            {
+                "name": "RedHat Update for kernel RHSA-2011:1212-01", 
+                "file": "gb_RHSA-2011_1212-01_kernel.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870482"
+            }, 
+            {
+                "name": "VMSA-2012-0001 VMware ESXi and ESX updates to third party library and ESX Service Console", 
+                "file": "gb_VMSA-2012-0001.nasl", 
+                "family": "VMware Local Security Checks", 
+                "id": "103448"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : kernel (CESA-2011:1212)", 
+                "file": "centos_RHSA-2011-1212.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "56271"
+            }, 
+            {
+                "name": "Oracle Linux 5 : kernel (ELSA-2011-1212)", 
+                "file": "oraclelinux_ELSA-2011-1212.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68334"
+            }, 
+            {
+                "name": "RHEL 5 : kernel (RHSA-2011:1212)", 
+                "file": "redhat-RHSA-2011-1212.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "56110"
+            }, 
+            {
+                "name": "RHEL 5 : kernel (RHSA-2011:1813)", 
+                "file": "redhat-RHSA-2011-1813.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "64015"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL5.x i386/x86_64", 
+                "file": "sl_20110906_kernel_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "61132"
+            }, 
+            {
+                "name": "VMSA-2012-0001 : VMware ESXi and ESX updates to third-party library and ESX Service Console", 
+                "file": "vmware_VMSA-2012-0001.nasl", 
+                "family": "VMware ESX Local Security Checks", 
+                "id": "57749"
+            }, 
+            {
+                "name": "VMware ESX / ESXi Service Console and Third-Party Libraries Multiple Vulnerabilities (VMSA-2012-0001) (remote check)", 
+                "file": "vmware_VMSA-2012-0001_remote.nasl", 
+                "family": "Misc.", 
+                "id": "89105"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20111212", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2011-1212.html", 
+                    "id": "RHSA-2011:1212", 
+                    "title": "RHSA-2011:1212: kernel security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=709393", 
+                    "title": "CVE-2011-2491 kernel: rpc task leak after flock()ing  NFS share", 
+                    "id": "709393", 
+                    "issue date": "2011-09-06", 
+                    "associated redhat": "RHSA-2011:1212"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=712885", 
+                    "title": "RHEL6.1 32bit xen hvm guest crash randomly", 
+                    "id": "712885", 
+                    "issue date": "2011-09-06", 
+                    "associated redhat": "RHSA-2011:1212"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=714867", 
+                    "title": "CVE-2011-2482 kernel: sctp dos", 
+                    "id": "714867", 
+                    "issue date": "2011-09-06", 
+                    "associated redhat": "RHSA-2011:1212"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=716825", 
+                    "title": "CVE-2011-2495 kernel: /proc/PID/io infoleak", 
+                    "id": "716825", 
+                    "issue date": "2011-09-06", 
+                    "associated redhat": "RHSA-2011:1212"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=718152", 
+                    "title": "CVE-2011-2517 kernel: nl80211: missing check for valid SSID size in scan operations", 
+                    "id": "718152", 
+                    "issue date": "2011-09-06", 
+                    "associated redhat": "RHSA-2011:1212"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=718882", 
+                    "title": "CVE-2011-2519 kernel: xen: x86_emulate: fix SAHF emulation", 
+                    "id": "718882", 
+                    "issue date": "2011-09-06", 
+                    "associated redhat": "RHSA-2011:1212"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=727590", 
+                    "title": "[xfs] mis-sized O_DIRECT I/O results in hung task timeouts [rhel-5.7.z]", 
+                    "id": "727590", 
+                    "issue date": "2011-09-06", 
+                    "associated redhat": "RHSA-2011:1212"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=727835", 
+                    "title": "xfs_error_report() oops when passed-in mp is NULL [rhel-5.7.z]", 
+                    "id": "727835", 
+                    "issue date": "2011-09-06", 
+                    "associated redhat": "RHSA-2011:1212"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=728042", 
+                    "title": "CVE-2011-2901 kernel: xen: off-by-one shift in x86_64 __addr_ok()", 
+                    "id": "728042", 
+                    "issue date": "2011-09-06", 
+                    "associated redhat": "RHSA-2011:1212"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

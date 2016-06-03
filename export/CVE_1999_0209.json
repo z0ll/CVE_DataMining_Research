@@ -1,0 +1,140 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0209", 
+                "published": "1990-08-14T00:00:00.000-04:00", 
+                "id": "CVE-1999-0209", 
+                "modified": "2008-09-09T08:34:01.117-04:00", 
+                "summary": "The SunView (SunTools) selection_svc facility allows remote users to read files."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:sun:sunos:4.0.2"
+            }, 
+            {
+                "id": "cpe:/o:sun:sunos:4.0.1"
+            }, 
+            {
+                "id": "cpe:/o:sun:sunos:4.1.1"
+            }, 
+            {
+                "id": "cpe:/o:sun:sunos:4.1"
+            }, 
+            {
+                "id": "cpe:/o:sun:sunos:4.0.3"
+            }, 
+            {
+                "id": "cpe:/o:sun:sunos:3.5"
+            }, 
+            {
+                "id": "cpe:/o:sun:sunos:4.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.13619", 
+                "id": 13619
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/8", 
+                "id": 8
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/8", 
+                    "vendor": "BID"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:586", 
+                "signature": "PROTOCOL-RPC portmap selection_svc request UDP"
+            }, 
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:1273", 
+                "signature": "PROTOCOL-RPC portmap selection_svc request TCP"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ypupdated_exec.rb", 
+                "file": "metasploit-framework/modules/exploits/solaris/sunrpc/ypupdated_exec.rb", 
+                "title": "Solaris ypupdated Command Execution"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0209"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

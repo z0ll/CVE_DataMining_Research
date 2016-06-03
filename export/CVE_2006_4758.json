@@ -1,0 +1,195 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4758", 
+                "published": "2006-09-13T19:07:00.000-04:00", 
+                "id": "CVE-2006-4758", 
+                "modified": "2008-09-05T17:10:30.660-04:00", 
+                "summary": "phpBB 2.0.21 does not properly handle pathnames ending in %00, which allows remote authenticated administrative users to upload arbitrary files, as demonstrated by a query to admin/admin_board.php with an avatar_path parameter ending in .php%00."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:phpbb_group:phpbb:2.0.21"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.32260", 
+                "id": 32260
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21806", 
+                "id": 21806
+            }, 
+            {
+                "url": "http://www.securityfocus.com/bid/20347", 
+                "id": 20347
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/28884", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21806", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/20347", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/445788/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.security.nnov.ru/Odocument221.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.phpbb.com/phpBB/viewtopic.php?f=14&t=489624", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/22188", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2008/dsa-1488", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/28871", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=388120", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "single_instance", 
+                    "exploit": "3.9", 
+                    "base": "4.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-4758"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20353", 
+                "title": "DSA-1488-1 phpbb2 - several vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20353"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:8028", 
+                "title": "DSA-1488 phpbb2 -- several vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:8028"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 1488-1 (phpbb2)", 
+                "file": "deb_1488_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "60361"
+            }, 
+            {
+                "name": "FreeBSD Ports: phpbb, zh-phpbb-tw", 
+                "file": "freebsd_phpbb10.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "57463"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-1488-1 : phpbb2 - several vulnerabilities", 
+                "file": "debian_DSA-1488.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "30227"
+            }, 
+            {
+                "name": "FreeBSD : phpbb -- NULL byte injection vulnerability (86526ba4-53c8-11db-8f1a-000a48049292)", 
+                "file": "freebsd_pkg_86526ba453c811db8f1a000a48049292.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "22502"
+            }, 
+            {
+                "name": "phpBB < 2.0.22 Multiple Vulnerabilities", 
+                "file": "phpbb_2022.nasl", 
+                "family": "CGI abuses", 
+                "id": "23968"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-1488", 
+                "id": "DSA-1488"
+            }
+        ], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,213 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3397", 
+                "published": "2011-12-13T19:55:01.417-05:00", 
+                "id": "CVE-2011-3397", 
+                "modified": "2013-01-29T23:42:31.633-05:00", 
+                "summary": "The Microsoft Time component in DATIME.DLL in Microsoft Windows XP SP2 and SP3 and Server 2003 SP2 allows remote attackers to execute arbitrary code via a crafted web site that leverages an unspecified \"binary behavior\" in Internet Explorer, aka \"Microsoft Time Remote Code Execution Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2:itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp3"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp:-:sp2:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.4476", 
+                "id": 4476
+            }, 
+            {
+                "url": "http://www.scip.ch/?vuldb.4447", 
+                "id": 4447
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0030830", 
+                "id": "2011-A-0167", 
+                "title": "Microsoft Cumulative Security Update of ActiveX Kill Bits"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA11-347A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS11-090", 
+                    "vendor": "MS"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-3397"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:14735", 
+                "title": "Microsoft Time Remote Code Execution Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:14735"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Windows Time Component Remote Code Execution Vulnerability (2618451)", 
+                "file": "secpod_ms11-090.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "902598"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS11-090: Cumulative Security Update of ActiveX Kill Bits (2618451)", 
+                "file": "smb_nt_ms11-090.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "57276"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Cumulative Security Update of ActiveX Kill Bits", 
+                "id": "Cumulative Security Update of ActiveX Kill Bits", 
+                "title": "2618451"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2618451", 
+                "id": "2618451", 
+                "title": "Cumulative Security Update of ActiveX Kill Bits"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS11-090", 
+                "id": "MS11-090", 
+                "title": "Cumulative Security Update of ActiveX Kill Bits"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

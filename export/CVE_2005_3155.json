@@ -1,0 +1,160 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3155", 
+                "published": "2005-10-05T19:02:00.000-04:00", 
+                "id": "CVE-2005-3155", 
+                "modified": "2008-09-05T16:53:36.437-04:00", 
+                "summary": "Buffer overflow in the W3C logging for MailEnable Enterprise 1.1 and Professional 1.6 allows remote attackers to execute arbitrary code."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:mailenable:mailenable_professional:1.6"
+            }, 
+            {
+                "id": "cpe:/a:mailenable:mailenable_enterprise:1.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.26503", 
+                "id": 26503
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/15006", 
+                "id": 15006
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/19842", 
+                "id": 19842
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.mailenable.com/hotfix/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/17010", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/15006", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1014999", 
+                    "vendor": "SECTRACK"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "misc-attack", 
+                "id": "sid:2106", 
+                "signature": "PROTOCOL-IMAP lsub overflow attempt"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:2118", 
+                "signature": "PROTOCOL-IMAP list overflow attempt"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:3007", 
+                "signature": "PROTOCOL-IMAP command overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "mailenable_w3c_select.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/imap/mailenable_w3c_select.rb", 
+                "title": "MailEnable IMAPD W3C Logging Buffer Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/mailenable_imap_w3c_logging", 
+                "id": "exploit_info/mailenable_imap_w3c_logging", 
+                "title": "MailEnable IMAP W3C Logging Buffer Overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-3155"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MailEnable IMAP Server W3C Logging Overflow", 
+                "file": "mailenable_imap_logging_overflow.nasl", 
+                "family": "Windows", 
+                "id": "19783"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,177 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1297", 
+                "published": "2007-03-06T19:19:00.000-05:00", 
+                "id": "CVE-2007-1297", 
+                "modified": "2011-03-07T21:51:41.643-05:00", 
+                "summary": "SQL injection vulnerability in view_profile.php in AJDating 1.0 allows remote attackers to execute arbitrary SQL commands via the user_id parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:aj_square:ajdating:1.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35460", 
+                "id": 35460
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/22808", 
+                "id": 22808
+            }, 
+            {
+                "url": "http://www.securityfocus.com/bid/29154", 
+                "id": 29154
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/33828", 
+                "id": 33828
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/0821", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/22808", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/5593", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/3409", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://osvdb.org/33828", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/42326", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/32788", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/29154", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/24376", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004535", 
+                "signature": "ET WEB_SPECIFIC_APPS AJDating SQL Injection Attempt -- view_profile.php user_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004536", 
+                "signature": "ET WEB_SPECIFIC_APPS AJDating SQL Injection Attempt -- view_profile.php user_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004537", 
+                "signature": "ET WEB_SPECIFIC_APPS AJDating SQL Injection Attempt -- view_profile.php user_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004538", 
+                "signature": "ET WEB_SPECIFIC_APPS AJDating SQL Injection Attempt -- view_profile.php user_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004539", 
+                "signature": "ET WEB_SPECIFIC_APPS AJDating SQL Injection Attempt -- view_profile.php user_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004540", 
+                "signature": "ET WEB_SPECIFIC_APPS AJDating SQL Injection Attempt -- view_profile.php user_id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1297"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

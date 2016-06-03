@@ -1,0 +1,208 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4692", 
+                "published": "2015-07-27T06:59:00.063-04:00", 
+                "id": "CVE-2015-4692", 
+                "modified": "2015-08-17T22:02:02.650-04:00", 
+                "summary": "The kvm_apic_has_events function in arch/x86/kvm/lapic.h in the Linux kernel through 4.1.3 allows local users to cause a denial of service (NULL pointer dereference and system crash) or possibly have unspecified other impact by leveraging /dev/kvm access for an ioctl call."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:4.1.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.76352", 
+                "id": 76352
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/75142", 
+                "id": 75142
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/torvalds/linux/commit/ce40cd3fc7fa40a6119e5fe6c0f2bc0eb4541009", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1230770", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/75142", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/06/21/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=ce40cd3fc7fa40a6119e5fe6c0f2bc0eb4541009", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.9", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-4692"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:208", 
+                "title": "DSA-3329-1 -- linux -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:208"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3329-1 (linux - security update)", 
+                "file": "deb_3329.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703329"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-3329-1 : linux - security update", 
+                "file": "debian_DSA-3329.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "85281"
+            }, 
+            {
+                "name": "Fedora 22 : kernel-4.0.6-300.fc22 (2015-10677)", 
+                "file": "fedora_2015-10677.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "84437"
+            }, 
+            {
+                "name": "Fedora 21 : kernel-4.0.6-200.fc21 (2015-10678)", 
+                "file": "fedora_2015-10678.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "84480"
+            }, 
+            {
+                "name": "openSUSE Security Update : the Linux Kernel (openSUSE-2015-543)", 
+                "file": "openSUSE-2015-543.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85432"
+            }, 
+            {
+                "name": "openSUSE Security Update : the Linux Kernel (openSUSE-2016-124)", 
+                "file": "openSUSE-2016-124.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88545"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : SUSE Linux Enterprise 12 kernel (SUSE-SU-2015:1324-1)", 
+                "file": "suse_SU-2015-1324-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85180"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-trusty vulnerabilities (USN-2680-1)", 
+                "file": "ubuntu_USN-2680-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "84981"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux vulnerabilities (USN-2681-1)", 
+                "file": "ubuntu_USN-2681-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "84982"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-utopic vulnerabilities (USN-2682-1)", 
+                "file": "ubuntu_USN-2682-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "84983"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-vivid vulnerabilities (USN-2683-1)", 
+                "file": "ubuntu_USN-2683-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "84984"
+            }, 
+            {
+                "name": "Ubuntu 15.04 : linux vulnerabilities (USN-2684-1)", 
+                "file": "ubuntu_USN-2684-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "84985"
+            }, 
+            {
+                "name": "Ubuntu 14.10 : linux vulnerabilities (USN-2685-1)", 
+                "file": "ubuntu_USN-2685-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "84986"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

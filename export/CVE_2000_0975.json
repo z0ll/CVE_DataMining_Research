@@ -1,0 +1,133 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0975", 
+                "published": "2000-12-19T00:00:00.000-05:00", 
+                "id": "CVE-2000-0975", 
+                "modified": "2008-09-05T16:22:20.170-04:00", 
+                "summary": "Directory traversal vulnerability in apexec.pl in Anaconda Foundation Directory allows remote attackers to read arbitrary files via a .. (dot dot) attack."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:anaconda_partners:foundation_directory"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.16186", 
+                "id": 16186
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/435", 
+                "id": 435
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2000-10/0210.html", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/static/5750.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/435", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:820", 
+                "signature": "SERVER-WEBAPP anaconda directory traversal attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2000-0975"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Anaconda Double NULL Encoded Remote File Retrieval", 
+                "file": "anaconda_doublenull.nasl", 
+                "family": "Remote file access", 
+                "id": "15749"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Anaconda Foundation Directory apexec.pl template Parameter Traversal Arbitrary File Retrieval", 
+                "file": "anaconda.nasl", 
+                "family": "CGI abuses", 
+                "id": "10536"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

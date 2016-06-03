@@ -1,0 +1,219 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6332", 
+                "published": "2006-12-10T06:28:00.000-05:00", 
+                "id": "CVE-2006-6332", 
+                "modified": "2011-03-07T21:45:46.703-05:00", 
+                "summary": "Stack-based buffer overflow in net80211/ieee80211_wireless.c in MadWifi before 0.9.2.1 allows remote attackers to execute arbitrary code via unspecified vectors, related to the encode_ie and giwscan_cb functions."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:madwifi:madwifi:0.9.2.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33723", 
+                "id": 33723
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21486", 
+                "id": 21486
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/925529", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21486", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://madwifi.org/changeset/1842", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4901", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23277", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://madwifi.org/wiki/news/20061207/release-0-9-2-1-fixes-critical-security-issue", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30800", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/usn-404-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.novell.com/linux/security/advisories/2006_74_madwifi.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://www.novell.com/linux/security/advisories/2006_28_sr.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://security.gentoo.org/glsa/glsa-200612-09.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23694", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23335", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lists.immunitysec.com/pipermail/dailydave/2006-December/003888.html", 
+                    "vendor": "MLIST"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/925529", 
+                "id": "VU#925529"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "madwifi_giwscan_cb.rb", 
+                "file": "metasploit-framework/modules/exploits/linux/madwifi/madwifi_giwscan_cb.rb", 
+                "title": "Madwifi SIOCGIWSCAN Buffer Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6332"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Ubuntu Update for quagga USN-2941-1", 
+                "file": "gb_ubuntu_USN_404_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840166"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 200612-09 (madwifi-ng)", 
+                "file": "glsa_200612_09.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "57948"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "GLSA-200612-09 : MadWifi: Kernel driver buffer overflow", 
+                "file": "gentoo_GLSA-200612-09.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "23861"
+            }, 
+            {
+                "name": "SuSE 10 Security Update : madwifi (ZYPP Patch Number 2370)", 
+                "file": "suse_madwifi-2370.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "29516"
+            }, 
+            {
+                "name": "Ubuntu 6.10 : linux-restricted-modules-2.6.17 vulnerability (USN-404-1)", 
+                "file": "ubuntu_USN-404-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "27992"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2006-6332.html", 
+                "id": "SUSE-SA:2006:074"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2006-6332.html", 
+                "id": "SUSE-SR:2006:028"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200612-09", 
+                "id": "GLSA-200612-09"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-404-1", 
+                "id": "USN-404-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

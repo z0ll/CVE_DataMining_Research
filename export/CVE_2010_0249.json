@@ -1,0 +1,245 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0249", 
+                "published": "2010-01-15T12:30:00.533-05:00", 
+                "id": "CVE-2010-0249", 
+                "modified": "2013-07-13T02:41:57.613-04:00", 
+                "summary": "Use-after-free vulnerability in Microsoft Internet Explorer 6, 6 SP1, 7, and 8 on Windows 2000 SP4; Windows XP SP2 and SP3; Windows Server 2003 SP2; Windows Vista Gold, SP1, and SP2; Windows Server 2008 Gold, SP2, and R2; and Windows 7 allows remote attackers to execute arbitrary code by accessing a pointer associated with a deleted object, related to incorrectly initialized memory and improper handling of objects in memory, as exploited in the wild in December 2009 and January 2010 during Operation Aurora, aka \"HTML Object Memory Corruption Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:6:sp1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:7"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:6"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:8"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.4079", 
+                "id": 4079
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/37815", 
+                "id": 37815
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/61697", 
+                "id": 61697
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA10-055A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/492515", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/55642", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2010/0135", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/37815", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/Bulletin/MS10-002.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/advisory/979352.mspx", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/11167", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://support.microsoft.com/kb/979352", 
+                    "vendor": "MSKB"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1023462", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://osvdb.org/61697", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://news.cnet.com/8301-27080_3-10435232-245.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://blogs.technet.com/msrc/archive/2010/01/14/security-advisory-979352.aspx", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/492515", 
+                "id": "VU#492515"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2010799", 
+                "signature": "ET WEB_CLIENT Possible Internet Explorer srcElement Memory Corruption Attempt"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms10_002_aurora.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/browser/ms10_002_aurora.rb", 
+                "title": "MS10-002 Microsoft Internet Explorer Aurora Memory Corruption"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/11167", 
+                "id": 11167, 
+                "file": "platforms/windows/remote/11167.py"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/ie_eventparam_useafterfree", 
+                "id": "exploit_info/ie_eventparam_useafterfree", 
+                "title": "Internet Explorer Eventparam use-after-free vulnerability"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-0249"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:6835", 
+                "title": "HTML Object Memory Corruption Vulnerability (CVE-2010-0249)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:6835"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Internet Explorer Multiple Vulnerabilities (978207)", 
+                "file": "secpod_ms10-002.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "901097"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS10-002: Cumulative Security Update for Internet Explorer (978207)", 
+                "file": "smb_nt_ms10-002.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "44110"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/979352", 
+                "id": "979352", 
+                "title": ""
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Cumulative Security Update for Internet Explorer", 
+                "id": "Cumulative Security Update for Internet Explorer", 
+                "title": "978207"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/978207", 
+                "id": "978207", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS10-002", 
+                "id": "MS10-002", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

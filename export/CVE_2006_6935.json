@@ -1,0 +1,208 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6935", 
+                "published": "2007-01-16T18:28:00.000-05:00", 
+                "id": "CVE-2006-6935", 
+                "modified": "2008-09-05T17:15:59.953-04:00", 
+                "summary": "SQL injection vulnerability in the login component in Portix-PHP 0.4.2 allows remote attackers to execute arbitrary SQL commands via the username and passwd (password) fields."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:portix-php:portix-php:0.4.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34399", 
+                "id": 34399
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/20974", 
+                "id": 20974
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30123", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/20974", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/450935/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2150", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005621", 
+                "signature": "ET WEB_SPECIFIC_APPS Portix-PHP SQL Injection Attempt -- archive.php blogid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005622", 
+                "signature": "ET WEB_SPECIFIC_APPS Portix-PHP SQL Injection Attempt -- archive.php blogid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005623", 
+                "signature": "ET WEB_SPECIFIC_APPS Portix-PHP SQL Injection Attempt -- archive.php blogid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005624", 
+                "signature": "ET WEB_SPECIFIC_APPS Portix-PHP SQL Injection Attempt -- archive.php blogid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005625", 
+                "signature": "ET WEB_SPECIFIC_APPS Portix-PHP SQL Injection Attempt -- archive.php blogid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005626", 
+                "signature": "ET WEB_SPECIFIC_APPS Portix-PHP SQL Injection Attempt -- archive.php blogid UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005627", 
+                "signature": "ET WEB_SPECIFIC_APPS Portix-PHP SQL Injection Attempt -- archive.php pid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005628", 
+                "signature": "ET WEB_SPECIFIC_APPS Portix-PHP SQL Injection Attempt -- archive.php pid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005629", 
+                "signature": "ET WEB_SPECIFIC_APPS Portix-PHP SQL Injection Attempt -- archive.php pid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005630", 
+                "signature": "ET WEB_SPECIFIC_APPS Portix-PHP SQL Injection Attempt -- archive.php pid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005631", 
+                "signature": "ET WEB_SPECIFIC_APPS Portix-PHP SQL Injection Attempt -- archive.php pid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005632", 
+                "signature": "ET WEB_SPECIFIC_APPS Portix-PHP SQL Injection Attempt -- archive.php pid UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005633", 
+                "signature": "ET WEB_SPECIFIC_APPS Portix-PHP SQL Injection Attempt -- index.php blogid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005634", 
+                "signature": "ET WEB_SPECIFIC_APPS Portix-PHP SQL Injection Attempt -- index.php blogid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005635", 
+                "signature": "ET WEB_SPECIFIC_APPS Portix-PHP SQL Injection Attempt -- index.php blogid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005636", 
+                "signature": "ET WEB_SPECIFIC_APPS Portix-PHP SQL Injection Attempt -- index.php blogid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005637", 
+                "signature": "ET WEB_SPECIFIC_APPS Portix-PHP SQL Injection Attempt -- index.php blogid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005638", 
+                "signature": "ET WEB_SPECIFIC_APPS Portix-PHP SQL Injection Attempt -- index.php blogid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6935"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

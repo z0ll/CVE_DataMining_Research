@@ -1,0 +1,333 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6285", 
+                "published": "2007-12-20T17:46:00.000-05:00", 
+                "id": "CVE-2007-6285", 
+                "modified": "2010-11-16T00:00:00.000-05:00", 
+                "summary": "The default configuration for autofs 5 (autofs5) in some Linux distributions, such as Red Hat Enterprise Linux (RHEL) 4 and 5, does not specify the nodev mount option for the -hosts map, which allows local users to access \"important devices\" by operating a remote NFS server and creating special device files on that server, as demonstrated by the /dev/mem device."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/16.html", 
+                "id": "CWE-16", 
+                "title": "Configuration"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:5.0"
+            }, 
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:4.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.40207", 
+                "id": 40207
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/26970", 
+                "id": 26970
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/40442", 
+                "id": 40442
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://www.redhat.com/archives/fedora-package-announce/2007-December/msg00732.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "https://www.redhat.com/archives/fedora-package-announce/2007-December/msg00726.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=426218", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/39188", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/26970", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2008:009", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1019137", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/28456", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/28168", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/28156", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2007-1177.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2007-1176.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://osvdb.org/40442", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "1.9", 
+                    "base": "6.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-6285"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:11457", 
+                "title": "The default configuration for autofs 5 (autofs5) in some Linux distributions, such as Red Hat Enterprise Linux (RHEL) 4 and 5, does not specify the nodev mount option for the -hosts map, which allows local users to access \"important devices\" by operating a remote NFS server and creating special device files on that server, as demonstrated by the /dev/mem device.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:11457"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21775", 
+                "title": "ELSA-2007:1176: autofs security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21775"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Centreon Remote Code Execution", 
+                "file": "gb_CESA-2007_1177_autofs5_centos4_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880334"
+            }, 
+            {
+                "name": "Centreon Remote Code Execution", 
+                "file": "gb_CESA-2007_1177_autofs5_centos4_x86_64.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880335"
+            }, 
+            {
+                "name": "Family Connections argv[1] Parameter Remote Arbitrary Command Execution Vulnerability", 
+                "file": "gb_fedora_2007_4707_autofs_fc8.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "861286"
+            }, 
+            {
+                "name": "Family Connections argv[1] Parameter Remote Arbitrary Command Execution Vulnerability", 
+                "file": "gb_fedora_2007_4709_autofs_fc7.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "861308"
+            }, 
+            {
+                "name": "Mandriva Update for mysql MDVA-2012:049 (mysql)", 
+                "file": "gb_mandriva_MDVSA_2008_009.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "830542"
+            }, 
+            {
+                "name": "Mandriva Update for mysql MDVA-2012:049 (mysql)", 
+                "file": "gb_mandriva_MDVSA_2008_009_1.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "830445"
+            }, 
+            {
+                "name": "Rhino Software Serv-U SITE SET Command Denial Of Service vulnerability", 
+                "file": "gb_RHSA-2007_1176-01_autofs.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870192"
+            }, 
+            {
+                "name": "Rhino Software Serv-U SITE SET Command Denial Of Service vulnerability", 
+                "file": "gb_RHSA-2007_1177-01_autofs5.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870183"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : autofs (CESA-2007:1176)", 
+                "file": "centos_RHSA-2007-1176.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "43665"
+            }, 
+            {
+                "name": "CentOS 4 : autofs5 (CESA-2007:1177)", 
+                "file": "centos_RHSA-2007-1177.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "29754"
+            }, 
+            {
+                "name": "Fedora 8 : autofs-5.0.2-24 (2007-4707)", 
+                "file": "fedora_2007-4707.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "29767"
+            }, 
+            {
+                "name": "Fedora 7 : autofs-5.0.1-31 (2007-4709)", 
+                "file": "fedora_2007-4709.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "29768"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : autofs (MDVSA-2008:009-1)", 
+                "file": "mandriva_MDVSA-2008-009.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "37526"
+            }, 
+            {
+                "name": "Oracle Linux 5 : autofs (ELSA-2007-1176)", 
+                "file": "oraclelinux_ELSA-2007-1176.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "67627"
+            }, 
+            {
+                "name": "Oracle Linux 4 : autofs5 (ELSA-2007-1177)", 
+                "file": "oraclelinux_ELSA-2007-1177.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "67628"
+            }, 
+            {
+                "name": "RHEL 5 : autofs (RHSA-2007:1176)", 
+                "file": "redhat-RHSA-2007-1176.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "29777"
+            }, 
+            {
+                "name": "RHEL 4 : autofs5 (RHSA-2007:1177)", 
+                "file": "redhat-RHSA-2007-1177.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "29778"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2007-4707", 
+                "id": "FEDORA-2007-4707"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2007-4709", 
+                "id": "FEDORA-2007-4709"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2008:009", 
+                "id": "MDVSA-2008:009"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20071176", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2007-1176.html", 
+                    "id": "RHSA-2007:1176", 
+                    "title": "RHSA-2007:1176: autofs security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=426218", 
+                    "title": "CVE-2007-6285 autofs default doesn't set nodev in /net", 
+                    "id": "426218", 
+                    "issue date": "2007-12-20", 
+                    "associated redhat": "RHSA-2007:1176"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20071177", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2007-1177.html", 
+                    "id": "RHSA-2007:1177", 
+                    "title": "RHSA-2007:1177: autofs5 security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=426218", 
+                    "title": "CVE-2007-6285 autofs default doesn't set nodev in /net", 
+                    "id": "426218", 
+                    "issue date": "2007-12-20", 
+                    "associated redhat": "RHSA-2007:1177"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

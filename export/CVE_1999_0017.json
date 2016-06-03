@@ -1,0 +1,214 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0017", 
+                "published": "1997-12-10T00:00:00.000-05:00", 
+                "id": "CVE-1999-0017", 
+                "modified": "2008-09-09T08:33:32.320-04:00", 
+                "summary": "FTP servers can allow an attacker to connect to arbitrary ports on machines other than the FTP client, aka FTP bounce."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:gnu:inet:6.02"
+            }, 
+            {
+                "id": "cpe:/o:sun:sunos:5.4::x86"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:2.0"
+            }, 
+            {
+                "id": "cpe:/a:gnu:inet:6.01"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:4.2"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:4.3"
+            }, 
+            {
+                "id": "cpe:/o:sun:sunos:5.5::x86"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:4.1"
+            }, 
+            {
+                "id": "cpe:/o:sun:sunos:5.5"
+            }, 
+            {
+                "id": "cpe:/o:sco:open_desktop:3.0"
+            }, 
+            {
+                "id": "cpe:/o:sun:sunos:5.5.1"
+            }, 
+            {
+                "id": "cpe:/o:sun:sunos:4.1.4"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:1.1"
+            }, 
+            {
+                "id": "cpe:/o:sun:sunos:5.4"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:3.2"
+            }, 
+            {
+                "id": "cpe:/o:netbsd:netbsd:1.1"
+            }, 
+            {
+                "id": "cpe:/o:sun:sunos:5.3"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:1.2"
+            }, 
+            {
+                "id": "cpe:/o:netbsd:netbsd:1.2"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:1.0"
+            }, 
+            {
+                "id": "cpe:/o:caldera:openlinux:1.2"
+            }, 
+            {
+                "id": "cpe:/o:siemens:reliant_unix"
+            }, 
+            {
+                "id": "cpe:/o:netbsd:netbsd:1.0"
+            }, 
+            {
+                "id": "cpe:/o:sun:sunos:5.5.1::x86"
+            }, 
+            {
+                "id": "cpe:/o:netbsd:netbsd:1.2.1"
+            }, 
+            {
+                "id": "cpe:/o:sun:sunos:4.1.3u1"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:2.1.7"
+            }, 
+            {
+                "id": "cpe:/a:gnu:inet:5.01"
+            }, 
+            {
+                "id": "cpe:/o:sco:openserver:5.0.4"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:2.1.0"
+            }, 
+            {
+                "id": "cpe:/a:washington_university:wu-ftpd:2.4"
+            }, 
+            {
+                "id": "cpe:/o:sco:unixware:2.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14036", 
+                "id": 14036
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": []
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "misc-attack", 
+                "id": "sid:3441", 
+                "signature": "PROTOCOL-FTP PORT bounce attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0017"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "WS FTP server FTP bounce attack and PASV connection hijacking flaw", 
+                "file": "wsftp_classic_flaws.nasl", 
+                "family": "FTP", 
+                "id": "14599"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "FTP Privileged Port Bounce Scan", 
+                "file": "ftp_bounce.nasl", 
+                "family": "FTP", 
+                "id": "10081"
+            }, 
+            {
+                "name": "WS_FTP Server Multiple Vulnerabilities (Bounce, PASV Hijacking)", 
+                "file": "wsftp_classic_flaws.nasl", 
+                "family": "FTP", 
+                "id": "14599"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

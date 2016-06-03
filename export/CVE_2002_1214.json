@@ -1,0 +1,226 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-1214", 
+                "published": "2002-10-28T00:00:00.000-05:00", 
+                "id": "CVE-2002-1214", 
+                "modified": "2008-09-10T15:14:03.710-04:00", 
+                "summary": "Buffer overflow in Microsoft PPTP Service on Windows XP and Windows 2000 allows remote attackers to cause a denial of service (hang) and possibly execute arbitrary code via a certain PPTP packet with malformed control data."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_2000_terminal_services::sp1"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000_terminal_services::sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000:::server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp2:professional"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp1:home"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp2:datacenter_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp1:professional"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp3:professional"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp1:advanced_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp3:datacenter_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp2:advanced_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp3:advanced_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp1:datacenter_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp:::home"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::gold:professional"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000:::professional"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp2:server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000_terminal_services"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000:::advanced_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp1:server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000_terminal_services::sp3"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp3:server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000:::datacenter_server"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.19105", 
+                "id": 19105
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/5807", 
+                "id": 5807
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://online.securityfocus.com/archive/1/293146", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/5807", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms02-063.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/static/10199.php", 
+                    "vendor": "XF"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2126", 
+                "signature": "OS-WINDOWS Microsoft Windows PPTP Start Control Request buffer overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms02_063_pptp_dos.rb", 
+                "file": "metasploit-framework/modules/auxiliary/dos/pptp/ms02_063_pptp_dos.rb", 
+                "title": "NTP.org ntpd Reserved Mode Denial of Service"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-1214"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Unchecked Buffer in PPTP Implementation Could Enable DOS Attacks (Q329834)", 
+                "file": "smb_nt_ms02-063.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "11178"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS02-063: Unchecked Buffer in PPTP Implementation Could Enable DOS Attacks (329834)", 
+                "file": "smb_nt_ms02-063.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "11178"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Unchecked Buffer in PPTP Implementation Could Enable Denial of Service Attacks", 
+                "id": "Unchecked Buffer in PPTP Implementation Could Enable Denial of Service Attacks", 
+                "title": "329834"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/329834", 
+                "id": "329834", 
+                "title": "Unchecked Buffer in PPTP Implementation Could Enable Denial of Service Attacks"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS02-063", 
+                "id": "MS02-063", 
+                "title": "Unchecked Buffer in PPTP Implementation Could Enable Denial of Service Attacks"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

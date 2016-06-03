@@ -1,0 +1,238 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-4969", 
+                "published": "2012-09-18T06:39:14.147-04:00", 
+                "id": "CVE-2012-4969", 
+                "modified": "2013-11-02T23:27:42.000-04:00", 
+                "summary": "Use-after-free vulnerability in the CMshtmlEd::Exec function in mshtml.dll in Microsoft Internet Explorer 6 through 9 allows remote attackers to execute arbitrary code via a crafted web site, as exploited in the wild in September 2012."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:7"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:6"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:8"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:9"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.6299", 
+                "id": 6299
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA12-265A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA12-262A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA12-255A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/480095", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.securityweek.com/new-internet-explorer-zero-day-being-exploited-wild", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1027538", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/advisory/2757760", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://eromang.zataz.com/2012/09/16/zero-day-season-is-really-not-over-yet/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://dev.metasploit.com/redmine/projects/framework/repository/entry/modules/exploits/windows/browser/ie_execcommand_uaf.rb", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://blog.vulnhunt.com/index.php/2012/09/17/ie-execcommand-fuction-use-after-free-vulnerability-0day_en/", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/480095", 
+                "id": "VU#480095"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2015711", 
+                "signature": "ET WEB_CLIENT Internet Explorer execCommand function Use after free Vulnerability 0day"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2015712", 
+                "signature": "ET WEB_CLIENT Internet Explorer execCommand function Use after free Vulnerability 0day Metasploit"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2020099", 
+                "signature": "ET WEB_CLIENT Internet Explorer execCommand function Use after free Vulnerability 0day Metasploit 2"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "trojan-activity", 
+                "id": "sid:27040", 
+                "signature": "EXPLOIT-KIT Styx exploit kit plugin detection connection jorg"
+            }, 
+            {
+                "category": "trojan-activity", 
+                "id": "sid:27041", 
+                "signature": "EXPLOIT-KIT Styx exploit kit plugin detection connection jlnp"
+            }, 
+            {
+                "category": "trojan-activity", 
+                "id": "sid:27042", 
+                "signature": "EXPLOIT-KIT Styx exploit kit plugin detection connection jovf"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ie_execcommand_uaf.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/browser/ie_execcommand_uaf.rb", 
+                "title": "MS12-063 Microsoft Internet Explorer execCommand Use-After-Free Vulnerability"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/ie_cmshtmled_exec_uaf", 
+                "id": "exploit_info/ie_cmshtmled_exec_uaf", 
+                "title": "Internet Explorer CMshtmlEd execCommand Use After Free"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-4969"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:15729", 
+                "title": "execCommand Use After Free Vulnerability - MS12-063", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:15729"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Internet Explorer Remote Code Execution Vulnerability (2757760)", 
+                "file": "gb_ms_ie_code_exec_vuln_vuln.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "803028"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS KB2757760: Vulnerability in Internet Explorer Could Allow Remote Code Execution (deprecated)", 
+                "file": "smb_kb2757760.nasl", 
+                "family": "Windows", 
+                "id": "62201"
+            }, 
+            {
+                "name": "MS12-063: Cumulative Security Update for Internet Explorer (2744842)", 
+                "file": "smb_nt_ms12-063.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "62223"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Cumulative Security Update for Internet Explorer", 
+                "id": "Cumulative Security Update for Internet Explorer", 
+                "title": "2744842"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2744842", 
+                "id": "2744842", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS12-063", 
+                "id": "MS12-063", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

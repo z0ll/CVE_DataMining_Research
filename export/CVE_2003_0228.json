@@ -1,0 +1,180 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0228", 
+                "published": "2003-05-27T00:00:00.000-04:00", 
+                "id": "CVE-2003-0228", 
+                "modified": "2008-09-10T15:18:19.460-04:00", 
+                "summary": "Directory traversal vulnerability in Microsoft Windows Media Player 7.1 and Windows Media Player for Windows XP allows remote attackers to execute arbitrary code via a skins file with a URL containing hex-encoded backslash characters (%5C) that causes an executable to be placed in an arbitrary location."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:windows_media_player:xp"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:windows_media_player:7.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.61", 
+                "id": 61
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/7517", 
+                "id": 7517
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/384932", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/7517", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms03-017.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=105232913516488&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/11953", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=ntbugtraq&m=105233960728901&w=2", 
+                    "vendor": "NTBUGTRAQ"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=105240528419389&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/384932", 
+                "id": "VU#384932"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2103192", 
+                "signature": "GPL WEB_CLIENT Windows Media Player directory traversal via Content-Disposition attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-user", 
+                "id": "sid:3192", 
+                "signature": "OS-WINDOWS Microsoft Windows Media Player directory traversal via Content-Disposition attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2003-0228"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:321", 
+                "title": "Windows Media Player Directory Traversal", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:321"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS03-017: Windows Media Player Skin Download Overflow (817787)", 
+                "file": "smb_nt_ms03-017.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "11595"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Flaw in Windows Media Player Skins Downloading could allow Code Execution", 
+                "id": "Flaw in Windows Media Player Skins Downloading could allow Code Execution", 
+                "title": "817787"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/817787", 
+                "id": "817787", 
+                "title": "Flaw in Windows Media Player Skins Downloading could allow Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS03-017", 
+                "id": "MS03-017", 
+                "title": "Flaw in Windows Media Player Skins Downloading could allow Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

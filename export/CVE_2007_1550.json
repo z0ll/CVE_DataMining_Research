@@ -1,0 +1,437 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1550", 
+                "published": "2007-03-20T18:19:00.000-04:00", 
+                "id": "CVE-2007-1550", 
+                "modified": "2011-03-07T21:52:20.063-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in phpx 3.5.15 allow remote attackers to execute arbitrary SQL commands via the (1) image_id or (2) cat_id parameter to (a) gallery.php; the (3) news_id parameter to (b) news.php or (c) print.php; (4) the news_cat_id parameter to news.php; the (5) cat_id, (6) topic_id, or (7) post_id parameter to (d) forums.php; or (8) the user_id parameter to (e) users.php."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:phpx:phpx:3.5.15"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35725", 
+                "id": 35725
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/23033", 
+                "id": 23033
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/34414", 
+                "id": 34414
+            }, 
+            {
+                "url": "http://www.osvdb.org/34415", 
+                "id": 34415
+            }, 
+            {
+                "url": "http://www.osvdb.org/34416", 
+                "id": 34416
+            }, 
+            {
+                "url": "http://www.osvdb.org/34417", 
+                "id": 34417
+            }, 
+            {
+                "url": "http://www.osvdb.org/34418", 
+                "id": 34418
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1087", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/23033", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/463192/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://osvdb.org/34418", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/34417", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/34416", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/34415", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/34414", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/33155", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2457", 
+                    "vendor": "SREASON"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/24565", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004170", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- gallery.php image_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004171", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- gallery.php image_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004172", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- gallery.php image_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004173", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- gallery.php image_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004174", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- gallery.php image_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004175", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- gallery.php image_id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004176", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- gallery.php cat_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004177", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- gallery.php cat_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004178", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- gallery.php cat_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004179", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- gallery.php cat_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004180", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- gallery.php cat_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004181", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- gallery.php cat_id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004182", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- news.php news_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004183", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- news.php news_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004184", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- news.php news_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004185", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- news.php news_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004186", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- news.php news_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004187", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- news.php news_id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004188", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- print.php news_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004189", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- print.php news_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004190", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- print.php news_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004191", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- print.php news_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004192", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- print.php news_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004193", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- print.php news_id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004194", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- news.php news_cat_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004195", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- news.php news_cat_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004196", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- news.php news_cat_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004197", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- news.php news_cat_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004198", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- news.php news_cat_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004199", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- news.php news_cat_id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004200", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- forums.php cat_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004201", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- forums.php cat_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004202", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- forums.php cat_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004203", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- forums.php cat_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004204", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- forums.php cat_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004205", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- forums.php cat_id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004206", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- forums.php topic_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004207", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- forums.php topic_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004208", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- forums.php topic_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004209", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- forums.php topic_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004210", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- forums.php topic_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004211", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- forums.php topic_id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004212", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- forums.php post_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004213", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- forums.php post_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004214", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- forums.php post_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004215", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- forums.php post_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004216", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- forums.php post_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004217", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- forums.php post_id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004218", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- users.php user_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004219", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- users.php user_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004220", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- users.php user_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004221", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- users.php user_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004222", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- users.php user_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004223", 
+                "signature": "ET WEB_SPECIFIC_APPS phpx SQL Injection Attempt -- users.php user_id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1550"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

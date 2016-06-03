@@ -1,0 +1,315 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1530", 
+                "published": "2011-12-08T15:55:00.827-05:00", 
+                "id": "CVE-2011-1530", 
+                "modified": "2012-01-18T22:56:50.523-05:00", 
+                "summary": "The process_tgs_req function in do_tgs_req.c in the Key Distribution Center (KDC) in MIT Kerberos 5 (aka krb5) 1.9 through 1.9.2 allows remote authenticated users to cause a denial of service (NULL pointer dereference and daemon crash) via a crafted TGS request that triggers an error other than the KRB5_KDB_NOENTRY error."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:mit:mit_kerberos:5.1.9.1"
+            }, 
+            {
+                "id": "cpe:/a:mit:mit_kerberos:5.1.9"
+            }, 
+            {
+                "id": "cpe:/a:mit:mit_kerberos:5.1.9.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.59643", 
+                "id": 59643
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/50929", 
+                "id": 50929
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/520756/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2011-007.txt", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/71655", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/50929", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2011-1790.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2011:184", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1026374", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/47124", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "6.8", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-1530"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23672", 
+                "title": "ELSA-2011:1790: krb5 security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23672"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27169", 
+                "title": "DEPRECATED: ELSA-2011-1790 -- krb5 security update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27169"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22167", 
+                "title": "RHSA-2011:1790: krb5 security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22167"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:15363", 
+                "title": "USN-1290-1 -- Kerberos vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:15363"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: krb5", 
+                "file": "freebsd_krb514.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "70591"
+            }, 
+            {
+                "name": "CentOS Update for krb5-devel CESA-2011:1790 centos6", 
+                "file": "gb_CESA-2011_1790_krb5-devel_centos6.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881348"
+            }, 
+            {
+                "name": "Fedora Update for krb5 FEDORA-2011-16284", 
+                "file": "gb_fedora_2011_16284_krb5_fc15.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863707"
+            }, 
+            {
+                "name": "Fedora Update for krb5 FEDORA-2011-16296", 
+                "file": "gb_fedora_2011_16296_krb5_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864084"
+            }, 
+            {
+                "name": "Fedora Update for krb5 FEDORA-2012-11370", 
+                "file": "gb_fedora_2012_11370_krb5_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864604"
+            }, 
+            {
+                "name": "Fedora Update for krb5 FEDORA-2012-8803", 
+                "file": "gb_fedora_2012_8803_krb5_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864450"
+            }, 
+            {
+                "name": "Fedora Update for krb5 FEDORA-2012-8805", 
+                "file": "gb_fedora_2012_8805_krb5_fc15.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864443"
+            }, 
+            {
+                "name": "RedHat Update for krb5 RHSA-2011:1790-01", 
+                "file": "gb_RHSA-2011_1790-01_krb5.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870701"
+            }, 
+            {
+                "name": "Ubuntu Update for krb5 USN-1290-1", 
+                "file": "gb_ubuntu_USN_1290_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840942"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 201201-13 (mit-krb5)", 
+                "file": "glsa_201201_13.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "70814"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : krb5 (ALAS-2011-28)", 
+                "file": "ala_ALAS-2011-28.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "69587"
+            }, 
+            {
+                "name": "CentOS 6 : krb5 (CESA-2011:1790)", 
+                "file": "centos_RHSA-2011-1790.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "57375"
+            }, 
+            {
+                "name": "FreeBSD : krb5 -- KDC NULL pointer dereference in TGS handling (6c7d9a35-2608-11e1-89b4-001ec9578670)", 
+                "file": "freebsd_pkg_6c7d9a35260811e189b4001ec9578670.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "57293"
+            }, 
+            {
+                "name": "GLSA-201201-13 : MIT Kerberos 5: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201201-13.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "57655"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : krb5 (MDVSA-2011:184)", 
+                "file": "mandriva_MDVSA-2011-184.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "61939"
+            }, 
+            {
+                "name": "openSUSE Security Update : krb5 (openSUSE-2011-58)", 
+                "file": "openSUSE-2011-58.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74531"
+            }, 
+            {
+                "name": "Oracle Linux 6 : krb5 (ELSA-2011-1790)", 
+                "file": "oraclelinux_ELSA-2011-1790.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68400"
+            }, 
+            {
+                "name": "RHEL 6 : krb5 (RHSA-2011:1790)", 
+                "file": "redhat-RHSA-2011-1790.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "57036"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : krb5 on SL6.x i386/x86_64", 
+                "file": "sl_20111206_krb5_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "61190"
+            }, 
+            {
+                "name": "Ubuntu 11.10 : krb5 vulnerability (USN-1290-1)", 
+                "file": "ubuntu_USN-1290-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "57048"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2011:184", 
+                "id": "MDVSA-2011:184"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20111790", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2011-1790.html", 
+                    "id": "RHSA-2011:1790", 
+                    "title": "RHSA-2011:1790: krb5 security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=753748", 
+                    "title": "CVE-2011-1530 krb5 (krb5kdc): NULL pointer dereference in the TGS handling (MITKRB5-SA-2011-007)", 
+                    "id": "753748", 
+                    "issue date": "2011-12-06", 
+                    "associated redhat": "RHSA-2011:1790"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,142 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0158", 
+                "published": "1998-08-31T00:00:00.000-04:00", 
+                "id": "CVE-1999-0158", 
+                "modified": "2008-09-09T08:33:53.070-04:00", 
+                "summary": "Cisco PIX firewall manager (PFM) on Windows NT allows attackers to connect to port 8080 on the PFM server and retrieve any file whose name and location is known."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:cisco:pix_firewall:4.2%281%29"
+            }, 
+            {
+                "id": "cpe:/o:cisco:pix_firewall:4.1%286%29"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14212", 
+                "id": 14212
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/685", 
+                "id": 685
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.cisco.com/warp/public/770/pixmgrfile-pub.shtml", 
+                    "vendor": "CISCO"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/685", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2101858", 
+                "signature": "GPL DELETED CISCO PIX Firewall Manager directory traversal attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "misc-attack", 
+                "id": "sid:1858", 
+                "signature": "SERVER-WEBAPP CISCO PIX Firewall Manager directory traversal attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0158"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "PIX Firewall Manager Directory Traversal", 
+                "file": "DDI_PIX_Firewall_Manager.nasl", 
+                "family": "Web application abuses", 
+                "id": "10819"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Cisco PIX Firewall Manager (PFM) on Windows Arbitrary File Access", 
+                "file": "DDI_PIX_Firewall_Manager.nasl", 
+                "family": "CGI abuses", 
+                "id": "10819"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [
+            {
+                "id": "cisco-sa-20010913"
+            }
+        ], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

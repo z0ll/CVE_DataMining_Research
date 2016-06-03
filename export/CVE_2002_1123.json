@@ -1,0 +1,187 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-1123", 
+                "published": "2002-09-24T00:00:00.000-04:00", 
+                "id": "CVE-2002-1123", 
+                "modified": "2008-09-10T15:13:55.147-04:00", 
+                "summary": "Buffer overflow in the authentication function for Microsoft SQL Server 2000 and Microsoft Desktop Engine (MSDE) 2000 allows remote attackers to execute arbitrary code via a long request to TCP port 1433, aka the \"Hello\" overflow."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:data_engine:2000"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:sql_server:2000"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:sql_server:2000:sp1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:sql_server:2000:sp2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.18800", 
+                "id": 18800
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/5411", 
+                "id": 5411
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.iss.net/security_center/static/9788.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=102873609025020&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/5411", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms02-056.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/n-003.shtml", 
+                    "vendor": "CIAC"
+                }, 
+                {
+                    "url": "http://online.securityfocus.com/archive/1/286220", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2002845", 
+                "signature": "ET EXPLOIT MSSQL Hello Overflow Attempt"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms02_056_hello.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/mssql/ms02_056_hello.rb", 
+                "title": "MS02-056 Microsoft SQL Server Hello Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/ms_sql_server_hello", 
+                "id": "exploit_info/ms_sql_server_hello", 
+                "title": "Microsoft SQL Server Hello buffer overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-1123"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsofts SQL Hello Overflow", 
+                "file": "mssql_hello_overflow.nasl", 
+                "family": "Windows", 
+                "id": "11067"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Microsoft SQL Server Authentication Function Remote Overflow", 
+                "file": "mssql_hello_overflow.nasl", 
+                "family": "Databases", 
+                "id": "11067"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Cumulative Patch for SQL Server", 
+                "id": "Cumulative Patch for SQL Server", 
+                "title": "316333"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/316333", 
+                "id": "316333", 
+                "title": "Cumulative Patch for SQL Server"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [
+            {
+                "id": "cisco-sa-Microsoft"
+            }
+        ], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS02-056", 
+                "id": "MS02-056", 
+                "title": "Cumulative Patch for SQL Server"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

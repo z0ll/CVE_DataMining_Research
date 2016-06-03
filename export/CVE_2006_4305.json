@@ -1,0 +1,177 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4305", 
+                "published": "2006-08-29T21:04:00.000-04:00", 
+                "id": "CVE-2006-4305", 
+                "modified": "2011-03-07T21:40:43.203-05:00", 
+                "summary": "Buffer overflow in SAP DB and MaxDB before 7.6.00.30 allows remote attackers to execute arbitrary code via a long database name when connecting via a WebDBM client."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:sap-db:sap-db"
+            }, 
+            {
+                "id": "cpe:/a:mysql:maxdb:7.6.00.22"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.32008", 
+                "id": 32008
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/19660", 
+                "id": 19660
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/19660", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/444601/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2006/dsa-1190", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/28636", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/3410", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1016766", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/22518", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/21677", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://dev.mysql.com/doc/maxdb/changes/changes_7.6.00.32.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "maxdb_webdbm_database.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/http/maxdb_webdbm_database.rb", 
+                "title": "MaxDB WebDBM Database Parameter Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/maxdb_webdbm_database_name", 
+                "id": "exploit_info/maxdb_webdbm_database_name", 
+                "title": "MySQL MaxDB WebDBM database name buffer overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-4305"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 1190-1 (maxdb-7.5.00)", 
+                "file": "deb_1190_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "57484"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-1190-1 : maxdb-7.5.00 - buffer overflow", 
+                "file": "debian_DSA-1190.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "22904"
+            }, 
+            {
+                "name": "SAP DB / MaxDB WebDBM Client Database Name Remote Overflow", 
+                "file": "webdbm_database_overflow.nasl", 
+                "family": "CGI abuses", 
+                "id": "22309"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-1190", 
+                "id": "DSA-1190"
+            }
+        ], 
+        "Vmware": []
+    }
+}

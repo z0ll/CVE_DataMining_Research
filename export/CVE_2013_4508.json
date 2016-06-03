@@ -1,0 +1,241 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4508", 
+                "published": "2013-11-07T23:47:22.900-05:00", 
+                "id": "CVE-2013-4508", 
+                "modified": "2014-01-23T23:35:42.367-05:00", 
+                "summary": "lighttpd before 1.4.34, when SNI is enabled, configures weak SSL ciphers, which makes it easier for remote attackers to hijack sessions by inserting packets into the client-server data stream or obtain sensitive information by sniffing the network."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/310.html", 
+                "id": "CWE-310", 
+                "title": "Cryptographic Issues"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:lighttpd:lighttpd:1.4.26"
+            }, 
+            {
+                "id": "cpe:/a:lighttpd:lighttpd:1.4.29"
+            }, 
+            {
+                "id": "cpe:/a:lighttpd:lighttpd:1.4.24"
+            }, 
+            {
+                "id": "cpe:/a:lighttpd:lighttpd:1.4.27"
+            }, 
+            {
+                "id": "cpe:/a:lighttpd:lighttpd:1.4.28"
+            }, 
+            {
+                "id": "cpe:/a:lighttpd:lighttpd:1.4.32"
+            }, 
+            {
+                "id": "cpe:/a:lighttpd:lighttpd:1.4.31"
+            }, 
+            {
+                "id": "cpe:/a:lighttpd:lighttpd:1.4.30"
+            }, 
+            {
+                "id": "cpe:/a:lighttpd:lighttpd:1.4.25"
+            }, 
+            {
+                "id": "cpe:/a:lighttpd:lighttpd:1.4.33"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.11097", 
+                "id": 11097
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://redmine.lighttpd.net/projects/lighttpd/repository/revisions/2913/diff/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://redmine.lighttpd.net/issues/2525", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2013/11/04/19", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2014-01/msg00049.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://download.lighttpd.net/lighttpd/security/lighttpd_sa_2013_01.txt", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "5.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-4508"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20141", 
+                "title": "DSA-2795-1 lighttpd - several", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20141"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28476", 
+                "title": "DSA-2795-2 -- lighttpd -- several vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28476"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2795-2 (lighttpd - several vulnerabilities)", 
+                "file": "deb_2795.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "892795"
+            }, 
+            {
+                "name": "Fedora Update for lighttpd FEDORA-2014-2495", 
+                "file": "gb_fedora_2014_2495_lighttpd_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867539"
+            }, 
+            {
+                "name": "Fedora Update for lighttpd FEDORA-2014-2506", 
+                "file": "gb_fedora_2014_2506_lighttpd_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867540"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : lighttpd (ALAS-2014-299)", 
+                "file": "ala_ALAS-2014-299.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "72947"
+            }, 
+            {
+                "name": "Debian DSA-2795-2 : lighttpd - several vulnerabilities", 
+                "file": "debian_DSA-2795.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "70982"
+            }, 
+            {
+                "name": "Fedora 20 : lighttpd-1.4.34-3.fc20 (2014-2495)", 
+                "file": "fedora_2014-2495.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "72651"
+            }, 
+            {
+                "name": "Fedora 19 : lighttpd-1.4.34-3.fc19 (2014-2506)", 
+                "file": "fedora_2014-2506.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "72652"
+            }, 
+            {
+                "name": "FreeBSD : lighttpd -- multiple vulnerabilities (90b27045-9530-11e3-9d09-000c2980a9f3)", 
+                "file": "freebsd_pkg_90b27045953011e39d09000c2980a9f3.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "72494"
+            }, 
+            {
+                "name": "GLSA-201406-10 : lighttpd: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201406-10.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "76062"
+            }, 
+            {
+                "name": "lighttpd < 1.4.34 Multiple Vulnerabilities", 
+                "file": "lighttpd_1_4_34.nasl", 
+                "family": "Web Servers", 
+                "id": "72815"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : lighttpd (MDVSA-2013:277)", 
+                "file": "mandriva_MDVSA-2013-277.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "71031"
+            }, 
+            {
+                "name": "openSUSE Security Update : lighttpd (openSUSE-SU-2014:0072-1)", 
+                "file": "openSUSE-2014-43.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75389"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2013-4508.html", 
+                "id": "openSUSE-SU-2014:0072"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

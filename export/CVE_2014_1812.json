@@ -1,0 +1,205 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1812", 
+                "published": "2014-05-14T07:13:06.630-04:00", 
+                "id": "CVE-2014-1812", 
+                "modified": "2014-06-30T14:25:12.113-04:00", 
+                "summary": "The Group Policy implementation in Microsoft Windows Vista SP2, Windows Server 2008 SP2 and R2 SP1, Windows 7 SP1, Windows 8, Windows 8.1, and Windows Server 2012 Gold and R2 does not properly handle distribution of passwords, which allows remote authenticated users to obtain sensitive credential information and consequently gain privileges by leveraging access to the SYSVOL share, as exploited in the wild in May 2014, aka \"Group Policy Preferences Password Elevation of Privilege Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/255.html", 
+                "id": "CWE-255", 
+                "title": "Credentials Management"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_vista::sp2:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2012:r2:-:~-~essentials~~~"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:r2:sp1:itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:r2:sp1:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_7::sp1:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_7::sp1:x86"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2012:r2:-:~-~datacenter~~~"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_8:-:-:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_8:-:-:x86"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:r2:sp1"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008::sp2:x86"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008::sp2:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008::sp2:itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_8.1:-:-:~-~-~-~x64~"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_8.1:-:-:~-~-~-~x86~"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2012:-"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2012:r2:-:~-~standard~~~"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_vista::sp2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.13231", 
+                "id": 13231
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0050453", 
+                "id": "2014-A-0071", 
+                "title": "Microsoft Group Policy Elevation of Privilege Vulnerability"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS14-025", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://blogs.technet.com/b/srd/archive/2014/05/13/ms14-025-an-update-for-group-policy-preferences.aspx", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "6.8", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-1812"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24328", 
+                "title": "Group Policy Preferences Password Elevation of Privilege Vulnerability - CVE-2014-1812 (MS14-025)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:24328"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Group Policy Preferences Privilege Elevation Vulnerability (2962486)", 
+                "file": "gb_ms14-025.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "802073"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS14-025: Vulnerability in Group Policy Preferences Could Allow Elevation of Privilege (2962486)", 
+                "file": "smb_nt_ms14-025.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "73984"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in Group Policy Preferences Could Allow Elevation of Privilege", 
+                "id": "Vulnerability in Group Policy Preferences Could Allow Elevation of Privilege", 
+                "title": "2961899"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2962486", 
+                "id": "2962486", 
+                "title": "Vulnerability in Group Policy Preferences Could Allow Elevation of Privilege"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS14-025", 
+                "id": "MS14-025", 
+                "title": "Vulnerability in Group Policy Preferences Could Allow Elevation of Privilege"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

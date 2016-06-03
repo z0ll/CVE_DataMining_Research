@@ -1,0 +1,169 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0354", 
+                "published": "2007-01-18T20:28:00.000-05:00", 
+                "id": "CVE-2007-0354", 
+                "modified": "2011-03-07T21:49:21.533-05:00", 
+                "summary": "SQL injection vulnerability in email.php in MGB OpenSource Guestbook 0.5.4.5 and earlier allows remote attackers to execute arbitrary SQL commands via the id parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:mgb:opensource_guestbook:0.5.4.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34500", 
+                "id": 34500
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/22094", 
+                "id": 22094
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/31612", 
+                "id": 31612
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/0232", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.tv-kritik.net/mgb/index.php", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/22094", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.attrition.org/pipermail/vim/2007-January/001246.html", 
+                    "vendor": "VIM"
+                }, 
+                {
+                    "url": "http://osvdb.org/31612", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/31551", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23825", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/3141", 
+                    "vendor": "MILW0RM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005511", 
+                "signature": "ET WEB_SPECIFIC_APPS MGB OpenSource Guestbook SQL Injection Attempt -- email.php id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005512", 
+                "signature": "ET WEB_SPECIFIC_APPS MGB OpenSource Guestbook SQL Injection Attempt -- email.php id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005514", 
+                "signature": "ET WEB_SPECIFIC_APPS MGB OpenSource Guestbook SQL Injection Attempt -- email.php id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005515", 
+                "signature": "ET WEB_SPECIFIC_APPS MGB OpenSource Guestbook SQL Injection Attempt -- email.php id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005516", 
+                "signature": "ET WEB_SPECIFIC_APPS MGB OpenSource Guestbook SQL Injection Attempt -- email.php id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005517", 
+                "signature": "ET WEB_SPECIFIC_APPS MGB OpenSource Guestbook SQL Injection Attempt -- email.php id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-0354"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

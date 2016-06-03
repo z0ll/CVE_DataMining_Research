@@ -1,0 +1,236 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4113", 
+                "published": "2014-10-15T06:55:07.473-04:00", 
+                "id": "CVE-2014-4113", 
+                "modified": "2014-11-18T22:01:40.487-05:00", 
+                "summary": "win32k.sys in the kernel-mode drivers in Microsoft Windows Server 2003 SP2, Windows Vista SP2, Windows Server 2008 SP2 and R2 SP1, Windows 7 SP1, Windows 8, Windows 8.1, Windows Server 2012 Gold and R2, and Windows RT Gold and 8.1 allows local users to gain privileges via a crafted application, as exploited in the wild in October 2014, aka \"Win32k.sys Elevation of Privilege Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_server_2012:-:gold"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008::sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_8:-"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_rt_8.1:-"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2012:r2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_8.1:-"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_7:-:sp1"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:r2:sp1"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_vista::sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_rt:-:gold"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.67826", 
+                "id": 67826
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0055431", 
+                "id": "2014-A-0149", 
+                "title": "Multiple Vulnerabilities in Microsoft Windows Kernel-Mode Driver"
+            }
+        ], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/70364", 
+                "id": 70364
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/113167", 
+                "id": 113167
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/70364", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/35101", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS14-058", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://osvdb.org/show/osvdb/113167", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://blogs.technet.com/b/srd/archive/2014/10/14/accessing-risk-for-the-october-2014-security-updates.aspx", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://blog.trendmicro.com/trendlabs-security-intelligence/an-analysis-of-a-windows-kernel-mode-vulnerability-cve-2014-4113/", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2019420", 
+                "signature": "ET WEB_CLIENT Possible CVE-2014-4113 Exploit Download"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2019421", 
+                "signature": "ET WEB_CLIENT Possible CVE-2014-4113 Exploit Download with Hurricane Panda IOC"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms14_058_track_popup_menu.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/local/ms14_058_track_popup_menu.rb", 
+                "title": "Windows TrackPopupMenu Win32k NULL Pointer Dereference"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/35101", 
+                "id": 35101, 
+                "file": "platforms/windows/local/35101.rb"
+            }, 
+            {
+                "url": "http://www.exploit-db.com/exploits/37064", 
+                "id": 37064, 
+                "file": "platforms/win64/local/37064.py"
+            }, 
+            {
+                "url": "http://www.exploit-db.com/exploits/39666", 
+                "id": 39666, 
+                "file": "platforms/windows/local/39666.txt"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-4113"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27076", 
+                "title": "Win32k.sys elevation of privilege vulnerability - CVE-2014-4113 (MS14-058)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:27076"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS14-058: Vulnerabilities in Kernel-Mode Driver Could Allow Remote Code Execution (3000061)", 
+                "file": "smb_nt_ms14-058.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "78433"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerabilities in Kernel-Mode Driver Could Allow Remote Code Execution", 
+                "id": "Vulnerabilities in Kernel-Mode Driver Could Allow Remote Code Execution", 
+                "title": "3000061"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/3000061", 
+                "id": "3000061", 
+                "title": "Vulnerabilities in Kernel-Mode Driver Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS14-058", 
+                "id": "MS14-058", 
+                "title": "Vulnerabilities in Kernel-Mode Driver Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

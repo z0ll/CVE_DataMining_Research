@@ -1,0 +1,161 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3051", 
+                "published": "2007-06-05T21:30:00.000-04:00", 
+                "id": "CVE-2007-3051", 
+                "modified": "2012-10-30T22:37:08.530-04:00", 
+                "summary": "SQL injection vulnerability in inc/class_users.php in RevokeSoft RevokeBB 1.0 RC4 and earlier allows remote attackers to execute arbitrary SQL commands via the revokebb_user cookie."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:revokesoft:revokebb:1.0_rc4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.37116", 
+                "id": 37116
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/24272", 
+                "id": 24272
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/38366", 
+                "id": 38366
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34666", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/2041", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/24272", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/470276/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/4020", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://osvdb.org/38366", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004600", 
+                "signature": "ET WEB_SPECIFIC_APPS RevokeSoft RevokeBB SQL Injection Attempt -- class_users.php SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004601", 
+                "signature": "ET WEB_SPECIFIC_APPS RevokeSoft RevokeBB SQL Injection Attempt -- class_users.php UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004602", 
+                "signature": "ET WEB_SPECIFIC_APPS RevokeSoft RevokeBB SQL Injection Attempt -- class_users.php INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004603", 
+                "signature": "ET WEB_SPECIFIC_APPS RevokeSoft RevokeBB SQL Injection Attempt -- class_users.php DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004604", 
+                "signature": "ET WEB_SPECIFIC_APPS RevokeSoft RevokeBB SQL Injection Attempt -- class_users.php ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004605", 
+                "signature": "ET WEB_SPECIFIC_APPS RevokeSoft RevokeBB SQL Injection Attempt -- class_users.php UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-3051"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

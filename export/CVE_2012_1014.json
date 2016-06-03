@@ -1,0 +1,205 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1014", 
+                "published": "2012-08-06T12:55:01.273-04:00", 
+                "id": "CVE-2012-1014", 
+                "modified": "2012-11-06T00:08:01.720-05:00", 
+                "summary": "The process_as_req function in the Key Distribution Center (KDC) in MIT Kerberos 5 (aka krb5) 1.10.x before 1.10.3 does not initialize a certain structure member, which allows remote attackers to cause a denial of service (uninitialized pointer dereference and daemon crash) or possibly execute arbitrary code via a malformed AS-REQ request."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:mit:kerberos:5-1.10"
+            }, 
+            {
+                "id": "cpe:/a:mit:kerberos:5-1.10.2"
+            }, 
+            {
+                "id": "cpe:/a:mit:kerberos:5-1.10.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.5902", 
+                "id": 5902
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2012-001.txt", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2012/dsa-2518", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2012-08/msg00016.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "8.5", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "9.0", 
+                    "integrity impact": "partial", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-1014"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20176", 
+                "title": "DSA-2518-1 krb5 - denial of service", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20176"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17877", 
+                "title": "USN-1520-1 -- krb5 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17877"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2518-1 (krb5)", 
+                "file": "deb_2518_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "71495"
+            }, 
+            {
+                "name": "Fedora Update for krb5 FEDORA-2012-11388", 
+                "file": "gb_fedora_2012_11388_krb5_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864588"
+            }, 
+            {
+                "name": "Fedora Update for krb5 FEDORA-2013-3116", 
+                "file": "gb_fedora_2013_3116_krb5_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865472"
+            }, 
+            {
+                "name": "Fedora Update for krb5 FEDORA-2013-5286", 
+                "file": "gb_fedora_2013_5286_krb5_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865563"
+            }, 
+            {
+                "name": "Fedora Update for krb5 FEDORA-2013-8219", 
+                "file": "gb_fedora_2013_8219_krb5_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865642"
+            }, 
+            {
+                "name": "Ubuntu Update for krb5 USN-1520-1", 
+                "file": "gb_ubuntu_USN_1520_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841097"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-2518-1 : krb5 - denial of service and remote code execution", 
+                "file": "debian_DSA-2518.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "61374"
+            }, 
+            {
+                "name": "Fedora 17 : krb5-1.10.2-6.fc17 (2012-11388)", 
+                "file": "fedora_2012-11388.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "61425"
+            }, 
+            {
+                "name": "GLSA-201312-12 : MIT Kerberos 5: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201312-12.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "71487"
+            }, 
+            {
+                "name": "openSUSE Security Update : krb5 (openSUSE-SU-2012:0967-1)", 
+                "file": "openSUSE-2012-497.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74706"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS / 11.04 / 11.10 / 12.04 LTS : krb5 vulnerabilities (USN-1520-1)", 
+                "file": "ubuntu_USN-1520-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "61379"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2012-1014.html", 
+                "id": "openSUSE-SU-2012:0967"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2518", 
+                "id": "DSA-2518"
+            }
+        ], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,307 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0013", 
+                "published": "2002-02-13T00:00:00.000-05:00", 
+                "id": "CVE-2002-0013", 
+                "modified": "2008-09-10T15:11:03.430-04:00", 
+                "summary": "Vulnerabilities in the SNMPv1 request handling of a large number of SNMP implementations allow remote attackers to cause a denial of service or gain privileges via (1) GetRequest, (2) GetNextRequest, and (3) SetRequest messages, as demonstrated by the PROTOS c06-SNMPv1 test suite.  NOTE: It is highly likely that this candidate will be SPLIT into multiple candidates, one or more for each vendor.  This and other SNMP-related candidates will be updated when more accurate information is available."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:snmp:snmp"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.422", 
+                "id": 422
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/854306", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.cert.org/advisories/CA-2002-03.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/MS02-006.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-57404-1", 
+                    "vendor": "SUNALERT"
+                }, 
+                {
+                    "url": "ftp://patches.sgi.com/support/free/security/advisories/20020201-01-A", 
+                    "vendor": "SGI"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2001-163.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/alerts/advise110.php", 
+                    "vendor": "ISS"
+                }, 
+                {
+                    "url": "http://www.ee.oulu.fi/research/ouspg/protos/testing/c06/snmpv1/index.html", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/854306", 
+                "id": "VU#854306"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-recon", 
+                "id": "sid:2101414", 
+                "signature": "GPL SNMP private access tcp"
+            }, 
+            {
+                "classtype": "attempted-recon", 
+                "id": "sid:2101412", 
+                "signature": "GPL SNMP public access tcp"
+            }, 
+            {
+                "classtype": "attempted-recon", 
+                "id": "sid:2101418", 
+                "signature": "GPL SNMP request tcp"
+            }, 
+            {
+                "classtype": "attempted-recon", 
+                "id": "sid:2101420", 
+                "signature": "GPL SNMP trap tcp"
+            }, 
+            {
+                "classtype": "attempted-recon", 
+                "id": "sid:2101413", 
+                "signature": "GPL SNMP private access udp"
+            }, 
+            {
+                "classtype": "attempted-recon", 
+                "id": "sid:2101411", 
+                "signature": "GPL SNMP public access udp"
+            }, 
+            {
+                "classtype": "attempted-recon", 
+                "id": "sid:2101417", 
+                "signature": "GPL SNMP request udp"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2101422", 
+                "signature": "GPL SNMP community string buffer overflow attempt with evasion"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2101409", 
+                "signature": "GPL SNMP SNMP community string buffer overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-recon", 
+                "id": "sid:2101419", 
+                "signature": "GPL SNMP trap udp"
+            }, 
+            {
+                "classtype": "attempted-recon", 
+                "id": "sid:2101415", 
+                "signature": "GPL SNMP Broadcast request"
+            }, 
+            {
+                "classtype": "attempted-recon", 
+                "id": "sid:2101416", 
+                "signature": "GPL SNMP broadcast trap"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "misc-attack", 
+                "id": "sid:1409", 
+                "signature": "PROTOCOL-SNMP community string buffer overflow attempt"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1411", 
+                "signature": "PROTOCOL-SNMP public access udp"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1412", 
+                "signature": "PROTOCOL-SNMP public access tcp"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1413", 
+                "signature": "PROTOCOL-SNMP private access udp"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1414", 
+                "signature": "PROTOCOL-SNMP private access tcp"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1415", 
+                "signature": "PROTOCOL-SNMP Broadcast request"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1416", 
+                "signature": "PROTOCOL-SNMP broadcast trap"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1417", 
+                "signature": "PROTOCOL-SNMP request udp"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1418", 
+                "signature": "PROTOCOL-SNMP request tcp"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1419", 
+                "signature": "PROTOCOL-SNMP trap udp"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1420", 
+                "signature": "PROTOCOL-SNMP trap tcp"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1421", 
+                "signature": "PROTOCOL-SNMP AgentX/tcp request"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:1422", 
+                "signature": "PROTOCOL-SNMP community string buffer overflow attempt with evasion"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-0013"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:87", 
+                "title": "SNMPv1 Request Handling DoS and Privilege Escalation", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:87"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:298", 
+                "title": "Windows 2000 SNMPv1 Trap Handling DoS and Privilege Escalation (Test 2)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:298"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Cisco Malformed SNMP Message Handling DoS (CSCdw67458)", 
+                "file": "CSCdw67458.nasl", 
+                "family": "CISCO", 
+                "id": "10987"
+            }, 
+            {
+                "name": "Multiple Vendor Malformed SNMP Message-Handling DoS", 
+                "file": "snmp_oversized_length_field_dos.nasl", 
+                "family": "SNMP", 
+                "id": "10857"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2001-163.html", 
+                    "id": "RHSA-2001:163", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS02-006", 
+                "id": "MS02-006", 
+                "title": ""
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

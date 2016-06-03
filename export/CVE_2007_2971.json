@@ -1,0 +1,185 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2971", 
+                "published": "2007-05-31T21:30:00.000-04:00", 
+                "id": "CVE-2007-2971", 
+                "modified": "2011-03-07T21:55:26.830-05:00", 
+                "summary": "SQL injection vulnerability in getnewsitem.php in gCards 1.46 and earlier allows remote attackers to execute arbitrary SQL commands via the newsid parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:greg_neustaetter:gcards:1.46"
+            }, 
+            {
+                "id": "cpe:/a:greg_neustaetter:gcards:1.13"
+            }, 
+            {
+                "id": "cpe:/a:greg_neustaetter:gcards:1.44"
+            }, 
+            {
+                "id": "cpe:/a:greg_neustaetter:gcards:1.45"
+            }, 
+            {
+                "id": "cpe:/a:greg_neustaetter:gcards:1.43"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.37064", 
+                "id": 37064
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/24175", 
+                "id": 24175
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/36317", 
+                "id": 36317
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1961", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/24175", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25452", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/36317", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/3988", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/41927", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34529", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://marc.info/?l=bugtraq&m=120881500629066&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://marc.info/?l=bugtraq&m=120880332905213&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004108", 
+                "signature": "ET WEB_SPECIFIC_APPS gCards SQL Injection Attempt -- getnewsitem.php newsid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004109", 
+                "signature": "ET WEB_SPECIFIC_APPS gCards SQL Injection Attempt -- getnewsitem.php newsid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004110", 
+                "signature": "ET WEB_SPECIFIC_APPS gCards SQL Injection Attempt -- getnewsitem.php newsid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004111", 
+                "signature": "ET WEB_SPECIFIC_APPS gCards SQL Injection Attempt -- getnewsitem.php newsid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004112", 
+                "signature": "ET WEB_SPECIFIC_APPS gCards SQL Injection Attempt -- getnewsitem.php newsid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004113", 
+                "signature": "ET WEB_SPECIFIC_APPS gCards SQL Injection Attempt -- getnewsitem.php newsid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2971"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

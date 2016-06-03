@@ -1,0 +1,211 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2549", 
+                "published": "2010-07-02T15:00:01.003-04:00", 
+                "id": "CVE-2010-2549", 
+                "modified": "2011-10-04T22:46:44.377-04:00", 
+                "summary": "Use-after-free vulnerability in the kernel-mode drivers in Microsoft Windows Vista SP1 and SP2 and Server 2008 Gold and SP2 allows local users to gain privileges or cause a denial of service (system crash) by using a large number of calls to the NtUserCheckAccessForIntegrityLevel function to trigger a failure in the LockProcessByClientId function, leading to deletion of an in-use process object, aka \"Win32k Reference Count Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_vista::sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_vista::sp1:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_vista::sp1"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:::x32"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:::itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:::x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008::sp2:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008::sp2:x32"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_vista::sp2:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:-:sp2:itanium"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.4151", 
+                "id": 4151
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/41280", 
+                "id": 41280
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/66003", 
+                "id": 66003
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA10-285A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/60120", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/41280", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/14156", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/40421", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://seclists.org/fulldisclosure/2010/Jul/3", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://osvdb.org/66003", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/14156", 
+                "id": 14156, 
+                "file": "http://www.exploit-db.com/download/14156"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-2549"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:12215", 
+                "title": "Win32k Reference Count Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:12215"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Windows Kernel-Mode Drivers Privilege Elevation Vulnerabilities (981957)", 
+                "file": "secpod_ms10-073.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "902323"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS10-073: Vulnerabilities in Windows Kernel-Mode Drivers Could Allow Elevation of Privilege (981957)", 
+                "file": "smb_nt_ms10-073.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "49950"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerabilities in Windows Kernel-Mode Drivers Could Allow Elevation of Privilege", 
+                "id": "Vulnerabilities in Windows Kernel-Mode Drivers Could Allow Elevation of Privilege", 
+                "title": "981957"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/981957", 
+                "id": "981957", 
+                "title": "Vulnerabilities in Windows Kernel-Mode Drivers Could Allow Elevation of Privilege"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS10-073", 
+                "id": "MS10-073", 
+                "title": "Vulnerabilities in Windows Kernel-Mode Drivers Could Allow Elevation of Privilege"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

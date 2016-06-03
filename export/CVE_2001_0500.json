@@ -1,0 +1,187 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-0500", 
+                "published": "2001-07-21T00:00:00.000-04:00", 
+                "id": "CVE-2001-0500", 
+                "modified": "2008-09-05T16:24:16.083-04:00", 
+                "summary": "Buffer overflow in ISAPI extension (idq.dll) in Index Server 2.0 and Indexing Service 2000 in IIS 6.0 beta and earlier allows remote attackers to execute arbitrary commands via a long argument to Internet Data Administration (.ida) and Internet Data Query (.idq) files such as default.ida, as commonly exploited by Code Red."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:6.0:beta"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:index_server:2.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:indexing_service:::windows_2000"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.17065", 
+                "id": 17065
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/2880", 
+                "id": 2880
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.cert.org/advisories/CA-2001-13.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/MS01-033.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/2880", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/191873", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/static/6705.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/l-098.shtml", 
+                    "vendor": "CIAC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1243", 
+                "signature": "SERVER-IIS ISAPI .ida attempt"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1244", 
+                "signature": "SERVER-IIS ISAPI .idq attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms01_033_idq.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/iis/ms01_033_idq.rb", 
+                "title": "MS01-033 Microsoft IIS 5.0 IDQ Path Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-0500"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:197", 
+                "title": "IIS ISAPI Extension Indexing Service Buffer Overflow (Code Red)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:197"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CodeRed version X detection", 
+                "file": "codered_x.nasl", 
+                "family": "Malware", 
+                "id": "10713"
+            }, 
+            {
+                "name": "IIS .IDA ISAPI filter applied", 
+                "file": "iis_ida_isapi.nasl", 
+                "family": "Web Servers", 
+                "id": "10695"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Microsoft IIS ISAPI Filter Multiple Vulnerabilities (MS01-044)", 
+                "file": "iis_isapi_overflow.nasl", 
+                "family": "Web Servers", 
+                "id": "10685"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/300972", 
+                "id": "300972", 
+                "title": "Unchecked Buffer in Index Server ISAPI Extension Could Enable Web Server Compromise"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS01-033", 
+                "id": "MS01-033", 
+                "title": "Unchecked Buffer in Index Server ISAPI Extension Could Enable Web Server Compromise"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

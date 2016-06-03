@@ -1,0 +1,150 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0183", 
+                "published": "1997-09-01T00:00:00.000-04:00", 
+                "id": "CVE-1999-0183", 
+                "modified": "2008-09-09T08:33:54.947-04:00", 
+                "summary": "Linux implementations of TFTP would allow access to files outside the restricted directory."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:2.6.20.1"
+            }, 
+            {
+                "id": "cpe:/a:tftp:tftp"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.13973", 
+                "id": 13973
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": []
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "6.4", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "bad-unknown", 
+                "id": "sid:2100518", 
+                "signature": "GPL TFTP Put"
+            }, 
+            {
+                "classtype": "bad-unknown", 
+                "id": "sid:2100519", 
+                "signature": "GPL TFTP parent directory"
+            }, 
+            {
+                "classtype": "bad-unknown", 
+                "id": "sid:2100520", 
+                "signature": "GPL TFTP root directory"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "bad-unknown", 
+                "id": "sid:518", 
+                "signature": "PROTOCOL-TFTP Put"
+            }, 
+            {
+                "category": "bad-unknown", 
+                "id": "sid:519", 
+                "signature": "PROTOCOL-TFTP parent directory"
+            }, 
+            {
+                "category": "bad-unknown", 
+                "id": "sid:520", 
+                "signature": "PROTOCOL-TFTP root directory"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0183"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "get_kb_item(tftp/+port+/filename/+i", 
+                "file": "tftpd_dir_trav.nasl", 
+                "family": "Service detection", 
+                "id": "18262"
+            }, 
+            {
+                "name": "get_kb_item(tftp/+port+/filename/+i", 
+                "file": "tftpd_dir_trav.nasl", 
+                "family": "Service detection", 
+                "id": "80100"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "TFTP Traversal Arbitrary File Access", 
+                "file": "tftpd_dir_trav.nasl", 
+                "family": "Misc.", 
+                "id": "18262"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

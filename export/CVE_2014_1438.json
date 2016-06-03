@@ -1,0 +1,548 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1438", 
+                "published": "2014-01-18T17:55:03.210-05:00", 
+                "id": "CVE-2014-1438", 
+                "modified": "2014-03-16T00:45:12.443-04:00", 
+                "summary": "The restore_fpu_checking function in arch/x86/include/asm/fpu-internal.h in the Linux kernel before 3.12.8 on the AMD K7 and K8 platforms does not clear pending exceptions before proceeding to an EMMS instruction, which allows local users to cause a denial of service (task kill) or possibly gain privileges via a crafted application."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.12.6"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.12.7"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.12.2"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.12.3"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.12"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.12.4"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.12.5"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.12.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.66114", 
+                "id": 66114
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/64781", 
+                "id": 64781
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=26bef1318adc1b3a530ecc807ef99346db2aa8b0", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://lkml.org/lkml/2014/1/9/637", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "https://github.com/torvalds/linux/commit/26bef1318adc1b3a530ecc807ef99346db2aa8b0", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1052914", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2141-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2139-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2138-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2136-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2135-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2134-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2133-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2117-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2113-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id/1029592", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/64781", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2014/01/14/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2014:038", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://www.kernel.org/pub/linux/kernel/v3.x/ChangeLog-3.12.8", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.halfdog.net/Security/2013/Vm86SyscallTaskSwitchKernelPanic/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2014-January/126874.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2014-January/126858.html", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "4.7", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-1438"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24404", 
+                "title": "USN-2141-1 -- linux-ti-omap4 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24404"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24220", 
+                "title": "USN-2113-1 -- linux-lts-saucy vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24220"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24568", 
+                "title": "USN-2234-1 -- linux-ec2 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24568"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24316", 
+                "title": "USN-2138-1 -- linux vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24316"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24233", 
+                "title": "USN-2136-1 -- linux-lts-raring vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24233"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24852", 
+                "title": "USN-2233-1 -- linux vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24852"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24102", 
+                "title": "USN-2134-1 -- linux-ti-omap4 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24102"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24074", 
+                "title": "USN-2135-1 -- linux-lts-quantal vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24074"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24395", 
+                "title": "USN-2133-1 -- linux vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24395"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24394", 
+                "title": "USN-2139-1 -- linux-ti-omap4 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24394"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23441", 
+                "title": "USN-2117-1 -- linux vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23441"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for kernel FEDORA-2014-2576", 
+                "file": "gb_fedora_2014_2576_kernel_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867522"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2014-2606", 
+                "file": "gb_fedora_2014_2606_kernel_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867520"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2014-2887", 
+                "file": "gb_fedora_2014_2887_kernel_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867546"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2014-3094", 
+                "file": "gb_fedora_2014_3094_kernel_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867553"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2014-3442", 
+                "file": "gb_fedora_2014_3442_kernel_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867583"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2014-3448", 
+                "file": "gb_fedora_2014_3448_kernel_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867580"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2014-4317", 
+                "file": "gb_fedora_2014_4317_kernel_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867638"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2014-4360", 
+                "file": "gb_fedora_2014_4360_kernel_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867651"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2014-4675", 
+                "file": "gb_fedora_2014_4675_kernel_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867663"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2014-4844", 
+                "file": "gb_fedora_2014_4844_kernel_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867680"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2014-4849", 
+                "file": "gb_fedora_2014_4849_kernel_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867682"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2014-5235", 
+                "file": "gb_fedora_2014_5235_kernel_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "804551"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2014-5609", 
+                "file": "gb_fedora_2014_5609_kernel_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867774"
+            }, 
+            {
+                "name": "Ubuntu Update for linux-lts-saucy USN-2113-1", 
+                "file": "gb_ubuntu_USN_2113_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841725"
+            }, 
+            {
+                "name": "Ubuntu Update for linux USN-2117-1", 
+                "file": "gb_ubuntu_USN_2117_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841715"
+            }, 
+            {
+                "name": "Ubuntu Update for linux USN-2133-1", 
+                "file": "gb_ubuntu_USN_2133_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841734"
+            }, 
+            {
+                "name": "Ubuntu Update for linux-ti-omap4 USN-2134-1", 
+                "file": "gb_ubuntu_USN_2134_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841738"
+            }, 
+            {
+                "name": "Ubuntu Update for linux-lts-quantal USN-2135-1", 
+                "file": "gb_ubuntu_USN_2135_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841743"
+            }, 
+            {
+                "name": "Ubuntu Update for linux-lts-raring USN-2136-1", 
+                "file": "gb_ubuntu_USN_2136_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841744"
+            }, 
+            {
+                "name": "Ubuntu Update for linux USN-2138-1", 
+                "file": "gb_ubuntu_USN_2138_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841739"
+            }, 
+            {
+                "name": "Ubuntu Update for linux-ti-omap4 USN-2139-1", 
+                "file": "gb_ubuntu_USN_2139_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841740"
+            }, 
+            {
+                "name": "Ubuntu Update for linux-ti-omap4 USN-2141-1", 
+                "file": "gb_ubuntu_USN_2141_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841749"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 20 : kernel-3.12.8-300.fc20 (2014-1062)", 
+                "file": "fedora_2014-1062.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "72030"
+            }, 
+            {
+                "name": "Fedora 19 : kernel-3.12.8-200.fc19 (2014-1072)", 
+                "file": "fedora_2014-1072.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "72031"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : kernel (MDVSA-2014:038)", 
+                "file": "mandriva_MDVSA-2014-038.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "72553"
+            }, 
+            {
+                "name": "openSUSE Security Update : kernel (openSUSE-SU-2014:0678-1)", 
+                "file": "openSUSE-2014-375.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75363"
+            }, 
+            {
+                "name": "openSUSE Security Update : kernel (openSUSE-SU-2014:0677-1)", 
+                "file": "openSUSE-2014-376.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75364"
+            }, 
+            {
+                "name": "RHEL 6 : MRG (RHSA-2014:0439)", 
+                "file": "redhat-RHSA-2014-0439.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "76674"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-saucy vulnerabilities (USN-2113-1)", 
+                "file": "ubuntu_USN-2113-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "72576"
+            }, 
+            {
+                "name": "Ubuntu 13.10 : linux vulnerabilities (USN-2117-1)", 
+                "file": "ubuntu_USN-2117-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "72578"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux vulnerabilities (USN-2133-1)", 
+                "file": "ubuntu_USN-2133-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "72897"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-quantal vulnerabilities (USN-2135-1)", 
+                "file": "ubuntu_USN-2135-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "72898"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-raring vulnerabilities (USN-2136-1)", 
+                "file": "ubuntu_USN-2136-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "72899"
+            }, 
+            {
+                "name": "Ubuntu 12.10 : linux vulnerabilities (USN-2138-1)", 
+                "file": "ubuntu_USN-2138-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "72901"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS : linux vulnerabilities (USN-2233-1)", 
+                "file": "ubuntu_USN-2233-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "74354"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS : linux-ec2 vulnerabilities (USN-2234-1)", 
+                "file": "ubuntu_USN-2234-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "74355"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2014-1062", 
+                "id": "FEDORA-2014-1062"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2014-1072", 
+                "id": "FEDORA-2014-1072"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2014:038", 
+                "id": "MDVSA-2014:038"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2113-1", 
+                "id": "USN-2113-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2117-1", 
+                "id": "USN-2117-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2133-1", 
+                "id": "USN-2133-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2134-1", 
+                "id": "USN-2134-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2135-1", 
+                "id": "USN-2135-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2136-1", 
+                "id": "USN-2136-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2138-1", 
+                "id": "USN-2138-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2139-1", 
+                "id": "USN-2139-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2141-1", 
+                "id": "USN-2141-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

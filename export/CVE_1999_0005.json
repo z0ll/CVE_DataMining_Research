@@ -1,0 +1,151 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0005", 
+                "published": "1998-07-20T00:00:00.000-04:00", 
+                "id": "CVE-1999-0005", 
+                "modified": "2008-09-09T08:33:31.117-04:00", 
+                "summary": "Arbitrary command execution via IMAP buffer overflow in authenticate command."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:netscape:messaging_server:3.55"
+            }, 
+            {
+                "id": "cpe:/a:university_of_washington:imap:10.234"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14186", 
+                "id": 14186
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/130", 
+                "id": 130
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/130", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doctype=coll&doc=secbull/177", 
+                    "vendor": "SUN"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2101930", 
+                "signature": "GPL DELETED auth literal overflow attempt"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2101844", 
+                "signature": "GPL IMAP authenticate overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2101842", 
+                "signature": "GPL IMAP login buffer overflow attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-user", 
+                "id": "sid:1842", 
+                "signature": "PROTOCOL-IMAP login buffer overflow attempt"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:1844", 
+                "signature": "PROTOCOL-IMAP authenticate overflow attempt"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:1930", 
+                "signature": "PROTOCOL-IMAP auth literal overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0005"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "UoW imapd AUTHENTICATE Command Remote Overflow", 
+                "file": "uw_imap_overflow.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "10292"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

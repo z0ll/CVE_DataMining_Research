@@ -1,0 +1,254 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8483", 
+                "published": "2014-11-06T10:55:09.523-05:00", 
+                "id": "CVE-2014-8483", 
+                "modified": "2015-03-26T21:59:38.313-04:00", 
+                "summary": "The blowfishECB function in core/cipher.cpp in Quassel IRC 0.10.0 allows remote attackers to cause a denial of service (out-of-bounds read) via a malformed string."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:quassel-irc:quassel_irc:0.10.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.72821", 
+                "id": 72821
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/quassel/quassel/commit/8b5ecd226f9208af3074b33d3b7cf5e14f55b138", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2401-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2014/dsa-3068", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2014/dsa-3063", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2015-03/msg00068.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2014-11/msg00046.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2014-11/msg00028.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://bugs.quassel-irc.org/issues/1314", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-8483"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27742", 
+                "title": "DSA-3068-1 -- konversation security update", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27742"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28136", 
+                "title": "USN-2401-1 -- Konversation vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28136"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28022", 
+                "title": "DSA-3063-1 -- quassel security update", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28022"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3063-1 (quassel - security update)", 
+                "file": "deb_3063.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703063"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 3068-1 (konversation - security update)", 
+                "file": "deb_3068.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703068"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DLA-168-1 : konversation security update", 
+                "file": "debian_DLA-168.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "82152"
+            }, 
+            {
+                "name": "Debian DSA-3063-1 : quassel - security update", 
+                "file": "debian_DSA-3063.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "78834"
+            }, 
+            {
+                "name": "Debian DSA-3068-1 : konversation - security update", 
+                "file": "debian_DSA-3068.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "79064"
+            }, 
+            {
+                "name": "Fedora 19 : konversation-1.5.1-1.fc19 (2014-13702)", 
+                "file": "fedora_2014-13702.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "79256"
+            }, 
+            {
+                "name": "Fedora 20 : konversation-1.5.1-1.fc20 (2014-13791)", 
+                "file": "fedora_2014-13791.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "79257"
+            }, 
+            {
+                "name": "Fedora 21 : konversation-1.5.1-1.fc21 (2014-13837)", 
+                "file": "fedora_2014-13837.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "79193"
+            }, 
+            {
+                "name": "FreeBSD : Konversation -- out-of-bounds read on a heap-allocated array (0167f5ad-64ea-11e4-98c1-00269ee29e57)", 
+                "file": "freebsd_pkg_0167f5ad64ea11e498c100269ee29e57.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "78878"
+            }, 
+            {
+                "name": "openSUSE Security Update : quassel (openSUSE-SU-2014:1382-1)", 
+                "file": "openSUSE-2014-638.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "79104"
+            }, 
+            {
+                "name": "openSUSE Security Update : konversation (openSUSE-SU-2014:1406-1)", 
+                "file": "openSUSE-2014-659.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "79226"
+            }, 
+            {
+                "name": "openSUSE Security Update : kdebase4-runtime / kdelibs4 / konversation / etc (openSUSE-2015-251)", 
+                "file": "openSUSE-2015-251.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "82014"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : konversation vulnerability (USN-2401-1)", 
+                "file": "ubuntu_USN-2401-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "79121"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-8483.html", 
+                "id": "openSUSE-SU-2014:1382"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-8483.html", 
+                "id": "openSUSE-SU-2014:1406"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-8483.html", 
+                "id": "openSUSE-SU-2015:0573"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2401-1", 
+                "id": "USN-2401-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3063", 
+                "id": "DSA-3063"
+            }, 
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3068", 
+                "id": "DSA-3068"
+            }
+        ], 
+        "Vmware": []
+    }
+}

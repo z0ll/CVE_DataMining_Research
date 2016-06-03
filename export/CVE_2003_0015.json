@@ -1,0 +1,299 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0015", 
+                "published": "2003-02-07T00:00:00.000-05:00", 
+                "id": "CVE-2003-0015", 
+                "modified": "2008-09-10T20:05:22.960-04:00", 
+                "summary": "Double-free vulnerability in CVS 1.11.4 and earlier allows remote attackers to cause a denial of service and possibly execute arbitrary code via a malformed Directory request, as demonstrated by bypassing write checks to execute Update-prog and Checkin-prog commands."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:cvs:cvs:1.11.4"
+            }, 
+            {
+                "id": "cpe:/a:cvs:cvs:1.11"
+            }, 
+            {
+                "id": "cpe:/a:cvs:cvs:1.11.3"
+            }, 
+            {
+                "id": "cpe:/a:cvs:cvs:1.11.2"
+            }, 
+            {
+                "id": "cpe:/a:cvs:cvs:1.11.1"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:4.4"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:5.0"
+            }, 
+            {
+                "id": "cpe:/a:cvs:cvs:1.11.1p1"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:4.5"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:4.7"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:4.6"
+            }, 
+            {
+                "id": "cpe:/a:cvs:cvs:1.10.7"
+            }, 
+            {
+                "id": "cpe:/a:cvs:cvs:1.10.8"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.458", 
+                "id": 458
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/6650", 
+                "id": 6650
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/650937", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.cert.org/advisories/CA-2003-02.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://security.e-matters.de/advisories/012003.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2003-013.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/11108", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/6650", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2003-012.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2003:009", 
+                    "vendor": "MANDRAKE"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2003/dsa-233", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/n-032.shtml", 
+                    "vendor": "CIAC"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=104438807203491&w=2", 
+                    "vendor": "FREEBSD"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=104428571204468&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=104342550612736&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=104333092200589&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://ccvs.cvshome.org/servlets/NewsItemView?newsID=51&JServSessionIdservlets=5of2iuhr14", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/vulnwatch/2003-q1/0028.html", 
+                    "vendor": "VULNWATCH"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/650937", 
+                "id": "VU#650937"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2102010", 
+                "signature": "GPL MISC CVS double free exploit attempt response"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2102011", 
+                "signature": "GPL MISC CVS invalid directory response"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "misc-attack", 
+                "id": "sid:2010", 
+                "signature": "INDICATOR-COMPROMISE CVS double free exploit attempt response"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:2011", 
+                "signature": "INDICATOR-COMPROMISE CVS invalid directory response"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2003-0015"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 233-1 (cvs)", 
+                "file": "deb_233_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "53313"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CVS Malformed Directory Request Double-free Privilege Escalation", 
+                "file": "cvs_double_free.nasl", 
+                "family": "Misc.", 
+                "id": "11385"
+            }, 
+            {
+                "name": "Debian DSA-233-1 : cvs - doubly freed memory", 
+                "file": "debian_DSA-233.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "15070"
+            }, 
+            {
+                "name": "Mandrake Linux Security Advisory : cvs (MDKSA-2003:009)", 
+                "file": "mandrake_MDKSA-2003-009.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "13994"
+            }, 
+            {
+                "name": "RHEL 2.1 : cvs (RHSA-2003:013)", 
+                "file": "redhat-RHSA-2003-013.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "12351"
+            }, 
+            {
+                "name": "SSA-18708 New CVS packages available", 
+                "file": "Slackware_18708.nasl", 
+                "family": "Slackware Local Security Checks", 
+                "id": "18708"
+            }, 
+            {
+                "name": "SUSE-SA:2003:0007: cvs", 
+                "file": "suse_SA_2003_0007.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "13772"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2003-0015.html", 
+                "id": "SuSE-SA:2003:0007"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2003-012.html", 
+                    "id": "RHSA-2003:012", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2003-013.html", 
+                    "id": "RHSA-2003:013", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-233", 
+                "id": "DSA-233"
+            }
+        ], 
+        "Vmware": []
+    }
+}

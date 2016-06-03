@@ -1,0 +1,2267 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2590", 
+                "published": "2015-07-16T06:59:17.050-04:00", 
+                "id": "CVE-2015-2590", 
+                "modified": "2015-07-16T12:50:45.077-04:00", 
+                "summary": "Unspecified vulnerability in Oracle Java SE 6u95, 7u80, and 8u45, and Java SE Embedded 7u75 and 8u33 allows remote attackers to affect confidentiality, integrity, and availability via unknown vectors related to Libraries, a different vulnerability than CVE-2015-4732."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:oracle:jre:1.8.0:update_45"
+            }, 
+            {
+                "id": "cpe:/a:oracle:jre:1.7.0:update_75"
+            }, 
+            {
+                "id": "cpe:/a:oracle:jre:1.8.0:update_33"
+            }, 
+            {
+                "id": "cpe:/a:oracle:jre:1.6.0:update_95"
+            }, 
+            {
+                "id": "cpe:/a:oracle:jdk:1.7.0:update_80"
+            }, 
+            {
+                "id": "cpe:/a:oracle:jre:1.7.0:update_80"
+            }, 
+            {
+                "id": "cpe:/a:oracle:jdk:1.8.0:update_45"
+            }, 
+            {
+                "id": "cpe:/a:oracle:jdk:1.7.0:update_75"
+            }, 
+            {
+                "id": "cpe:/a:oracle:jdk:1.8.0:update_33"
+            }, 
+            {
+                "id": "cpe:/a:oracle:jdk:1.6.0:update_95"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.76579", 
+                "id": 76579
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.oracle.com/technetwork/topics/security/cpujul2015-2367936.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "trojan-activity", 
+                "id": "sid:2021557", 
+                "signature": "ET TROJAN Possible Java/Downloader Observed in Pawn Storm CVE-2015-2590 1"
+            }, 
+            {
+                "classtype": "trojan-activity", 
+                "id": "sid:2021558", 
+                "signature": "ET TROJAN Possible Java/Downloader Observed in Pawn Storm CVE-2015-2590 2"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-2590"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:29505", 
+                "title": "Vulnerability in IBM SDK Java JSSE affects AIX", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:29505"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:192", 
+                "title": "DSA-3339-1 -- openjdk-6 -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:192"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:130", 
+                "title": "DSA-3316-1 -- openjdk-7 -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:130"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3316-1 (openjdk-7 - security update)", 
+                "file": "deb_3316.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703316"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 3339-1 (openjdk-6 - security update)", 
+                "file": "deb_3339.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703339"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "AIX Java Advisory : java_july2015_advisory.asc (Logjam)", 
+                "file": "aix_java_july2015_advisory.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "85447"
+            }, 
+            {
+                "name": "Amazon Linux AMI : java-1.7.0-openjdk (ALAS-2015-570) (Bar Mitzvah) (Logjam)", 
+                "file": "ala_ALAS-2015-570.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "84930"
+            }, 
+            {
+                "name": "Amazon Linux AMI : java-1.8.0-openjdk (ALAS-2015-571) (Bar Mitzvah) (Logjam)", 
+                "file": "ala_ALAS-2015-571.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "84931"
+            }, 
+            {
+                "name": "Amazon Linux AMI : java-1.6.0-openjdk (ALAS-2015-586) (Bar Mitzvah) (Logjam)", 
+                "file": "ala_ALAS-2015-586.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "85631"
+            }, 
+            {
+                "name": "CentOS 6 / 7 : java-1.8.0-openjdk (CESA-2015:1228) (Bar Mitzvah) (Logjam)", 
+                "file": "centos_RHSA-2015-1228.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "84770"
+            }, 
+            {
+                "name": "CentOS 6 / 7 : java-1.7.0-openjdk (CESA-2015:1229) (Bar Mitzvah) (Logjam)", 
+                "file": "centos_RHSA-2015-1229.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "84771"
+            }, 
+            {
+                "name": "CentOS 5 : java-1.7.0-openjdk (CESA-2015:1230) (Bar Mitzvah) (Logjam)", 
+                "file": "centos_RHSA-2015-1230.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "84772"
+            }, 
+            {
+                "name": "CentOS 5 / 6 / 7 : java-1.6.0-openjdk (CESA-2015:1526) (Bar Mitzvah) (Logjam)", 
+                "file": "centos_RHSA-2015-1526.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "85127"
+            }, 
+            {
+                "name": "Debian DLA-303-1 : openjdk-6 security update (Bar Mitzvah) (Logjam)", 
+                "file": "debian_DLA-303.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "85695"
+            }, 
+            {
+                "name": "Debian DSA-3316-1 : openjdk-7 - security update (Bar Mitzvah) (Logjam)", 
+                "file": "debian_DSA-3316.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "85031"
+            }, 
+            {
+                "name": "Debian DSA-3339-1 : openjdk-6 - security update (Bar Mitzvah) (Logjam)", 
+                "file": "debian_DSA-3339.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "85588"
+            }, 
+            {
+                "name": "GLSA-201603-11 : Oracle JRE/JDK: Multiple vulnerabilities (Logjam)", 
+                "file": "gentoo_GLSA-201603-11.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "89904"
+            }, 
+            {
+                "name": "GLSA-201603-14 : IcedTea: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201603-14.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "89907"
+            }, 
+            {
+                "name": "openSUSE Security Update : java-1_7_0-openjdk (openSUSE-2015-511) (Bar Mitzvah) (Logjam)", 
+                "file": "openSUSE-2015-511.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85001"
+            }, 
+            {
+                "name": "openSUSE Security Update : java-1_8_0-openjdk (openSUSE-2015-512) (Bar Mitzvah) (Logjam)", 
+                "file": "openSUSE-2015-512.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85002"
+            }, 
+            {
+                "name": "Oracle Java SE Multiple Vulnerabilities (July 2015 CPU) (Bar Mitzvah)", 
+                "file": "oracle_java_cpu_jul_2015.nasl", 
+                "family": "Windows", 
+                "id": "84824"
+            }, 
+            {
+                "name": "Oracle Java SE Multiple Vulnerabilities (July 2015 CPU) (Unix) (Bar Mitzvah)", 
+                "file": "oracle_java_cpu_jul_2015_unix.nasl", 
+                "family": "Misc.", 
+                "id": "84825"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : java-1.8.0-openjdk (ELSA-2015-1228) (Bar Mitzvah) (Logjam)", 
+                "file": "oraclelinux_ELSA-2015-1228.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "84784"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : java-1.7.0-openjdk (ELSA-2015-1229) (Bar Mitzvah) (Logjam)", 
+                "file": "oraclelinux_ELSA-2015-1229.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "84785"
+            }, 
+            {
+                "name": "Oracle Linux 5 : java-1.7.0-openjdk (ELSA-2015-1230) (Bar Mitzvah) (Logjam)", 
+                "file": "oraclelinux_ELSA-2015-1230.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "84817"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 / 7 : java-1.6.0-openjdk (ELSA-2015-1526) (Bar Mitzvah) (Logjam)", 
+                "file": "oraclelinux_ELSA-2015-1526.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85137"
+            }, 
+            {
+                "name": "RHEL 6 / 7 : java-1.8.0-openjdk (RHSA-2015:1228) (Bar Mitzvah) (Logjam)", 
+                "file": "redhat-RHSA-2015-1228.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "84787"
+            }, 
+            {
+                "name": "RHEL 6 / 7 : java-1.7.0-openjdk (RHSA-2015:1229) (Bar Mitzvah) (Logjam)", 
+                "file": "redhat-RHSA-2015-1229.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "84788"
+            }, 
+            {
+                "name": "RHEL 5 : java-1.7.0-openjdk (RHSA-2015:1230) (Bar Mitzvah) (Logjam)", 
+                "file": "redhat-RHSA-2015-1230.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "84789"
+            }, 
+            {
+                "name": "RHEL 6 / 7 : java-1.8.0-oracle (RHSA-2015:1241) (Bar Mitzvah) (Logjam)", 
+                "file": "redhat-RHSA-2015-1241.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "84871"
+            }, 
+            {
+                "name": "RHEL 5 / 6 / 7 : java-1.7.0-oracle (RHSA-2015:1242) (Bar Mitzvah) (Logjam)", 
+                "file": "redhat-RHSA-2015-1242.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "84872"
+            }, 
+            {
+                "name": "RHEL 5 / 6 / 7 : java-1.6.0-sun (RHSA-2015:1243) (Bar Mitzvah) (Logjam)", 
+                "file": "redhat-RHSA-2015-1243.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "84873"
+            }, 
+            {
+                "name": "RHEL 6 / 7 : java-1.7.1-ibm (RHSA-2015:1485) (Logjam)", 
+                "file": "redhat-RHSA-2015-1485.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "84955"
+            }, 
+            {
+                "name": "RHEL 5 / 6 : java-1.6.0-ibm (RHSA-2015:1486) (Logjam)", 
+                "file": "redhat-RHSA-2015-1486.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "84956"
+            }, 
+            {
+                "name": "RHEL 5 : java-1.7.0-ibm (RHSA-2015:1488) (Logjam)", 
+                "file": "redhat-RHSA-2015-1488.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "84978"
+            }, 
+            {
+                "name": "RHEL 5 / 6 / 7 : java-1.6.0-openjdk (RHSA-2015:1526) (Bar Mitzvah) (Logjam)", 
+                "file": "redhat-RHSA-2015-1526.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "85149"
+            }, 
+            {
+                "name": "RHEL 5 / 6 : java-1.5.0-ibm (RHSA-2015:1544) (Logjam)", 
+                "file": "redhat-RHSA-2015-1544.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "85238"
+            }, 
+            {
+                "name": "RHEL 5 / 6 : Red Hat Satellite IBM Java Runtime (RHSA-2015:1604) (Logjam)", 
+                "file": "redhat-RHSA-2015-1604.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "85373"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : java-1.7.0-openjdk on SL5.x i386/x86_64 (Bar Mitzvah) (Logjam)", 
+                "file": "sl_20150715_java_1_7_0_openjdk_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "84791"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : java-1.7.0-openjdk on SL6.x, SL7.x i386/x86_64 (Bar Mitzvah) (Logjam)", 
+                "file": "sl_20150715_java_1_7_0_openjdk_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "84792"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : java-1.8.0-openjdk on SL6.x, SL7.x i386/x86_64 (Bar Mitzvah) (Logjam)", 
+                "file": "sl_20150715_java_1_8_0_openjdk_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "84793"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : java-1.6.0-openjdk on SL5.x, SL6.x, SL7.x i386/x86_64 (Bar Mitzvah) (Logjam)", 
+                "file": "sl_20150730_java_1_6_0_openjdk_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "85212"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : java-1_7_0-openjdk (SUSE-SU-2015:1319-1) (Bar Mitzvah) (Logjam)", 
+                "file": "suse_SU-2015-1319-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85152"
+            }, 
+            {
+                "name": "SUSE SLED11 Security Update : java-1_7_0-openjdk (SUSE-SU-2015:1320-1) (Bar Mitzvah) (Logjam)", 
+                "file": "suse_SU-2015-1320-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85153"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : java-1_7_1-ibm (SUSE-SU-2015:1329-1) (Bar Mitzvah) (Logjam)", 
+                "file": "suse_SU-2015-1329-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85213"
+            }, 
+            {
+                "name": "SUSE SLES12 Security Update : java-1_7_1-ibm (SUSE-SU-2015:1331-1) (Bar Mitzvah) (Logjam)", 
+                "file": "suse_SU-2015-1331-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85214"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : java-1_7_0-ibm (SUSE-SU-2015:1375-1) (Bar Mitzvah) (Logjam)", 
+                "file": "suse_SU-2015-1375-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85379"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : java-1_6_0-ibm (SUSE-SU-2015:1509-1) (Bar Mitzvah) (Logjam)", 
+                "file": "suse_SU-2015-1509-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85869"
+            }, 
+            {
+                "name": "Ubuntu 14.04 / 15.04 : openjdk-7 vulnerabilities (USN-2696-1) (Bar Mitzvah) (Logjam)", 
+                "file": "ubuntu_USN-2696-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85154"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : openjdk-6 vulnerabilities (USN-2706-1) (Bar Mitzvah) (Logjam)", 
+                "file": "ubuntu_USN-2706-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85265"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151228", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1228.html", 
+                    "id": "RHSA-2015:1228", 
+                    "title": "RHSA-2015:1228: java-1.8.0-openjdk security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1207101", 
+                    "title": "CVE-2015-2808 SSL/TLS: \"Invariance Weakness\" vulnerability in RC4 stream cipher", 
+                    "id": "1207101", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1228"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1213365", 
+                    "title": "CVE-2015-3149 OpenJDK8: insecure hsperfdata temporary file handling, CVE-2015-0383 regression (Hotspot)", 
+                    "id": "1213365", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1228"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1223211", 
+                    "title": "CVE-2015-4000 LOGJAM: TLS connections which support export grade DHE key-exchange are vulnerable to MITM attacks", 
+                    "id": "1223211", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1228"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1241965", 
+                    "title": "CVE-2015-2625 OpenJDK: name for reverse DNS lookup used in certificate identity check (JSSE, 8067694)", 
+                    "id": "1241965", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1228"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242019", 
+                    "title": "CVE-2015-2601 OpenJDK: non-constant time comparisons in crypto code (JCE, 8074865)", 
+                    "id": "1242019", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1228"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242144", 
+                    "title": "CVE-2015-2659 OpenJDK: GCM cipher issue causing JVM crash (Security, 8067648)", 
+                    "id": "1242144", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1228"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242232", 
+                    "title": "CVE-2015-2628 OpenJDK: IIOPInputStream type confusion vulnerability (CORBA, 8076376)", 
+                    "id": "1242232", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1228"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242234", 
+                    "title": "CVE-2015-4731 OpenJDK: improper permission checks in MBeanServerInvocationHandler (JMX, 8076397)", 
+                    "id": "1242234", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1228"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242240", 
+                    "title": "CVE-2015-4732 OpenJDK: insufficient context checks during object deserialization (Libraries, 8076405)", 
+                    "id": "1242240", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1228"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242275", 
+                    "title": "CVE-2015-4733 OpenJDK: RemoteObjectInvocationHandler allows calling finalize() (RMI, 8076409)", 
+                    "id": "1242275", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1228"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242281", 
+                    "title": "CVE-2015-4748 OpenJDK: incorrect OCSP nextUpdate checking (Libraries, 8075374)", 
+                    "id": "1242281", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1228"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242372", 
+                    "title": "CVE-2015-2621 OpenJDK: incorrect code permission checks in RMIConnectionImpl (JMX, 8075853)", 
+                    "id": "1242372", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1228"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242379", 
+                    "title": "CVE-2015-4749 OpenJDK: DnsClient fails to release request information after error (JNDI, 8075378)", 
+                    "id": "1242379", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1228"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242394", 
+                    "title": "CVE-2015-2632 ICU: integer overflow in LETableReference verifyLength() (OpenJDK 2D, 8077520)", 
+                    "id": "1242394", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1228"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242447", 
+                    "title": "CVE-2015-4760 ICU: missing boundary checks in layout engine (OpenJDK 2D, 8071715)", 
+                    "id": "1242447", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1228"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243139", 
+                    "title": "CVE-2015-2590 OpenJDK: deserialization issue in ObjectInputStream.readSerialData() (Libraries, 8076401)", 
+                    "id": "1243139", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1228"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151229", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1229.html", 
+                    "id": "RHSA-2015:1229", 
+                    "title": "RHSA-2015:1229: java-1.7.0-openjdk security update (Critical)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1207101", 
+                    "title": "CVE-2015-2808 SSL/TLS: \"Invariance Weakness\" vulnerability in RC4 stream cipher", 
+                    "id": "1207101", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1229"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1223211", 
+                    "title": "CVE-2015-4000 LOGJAM: TLS connections which support export grade DHE key-exchange are vulnerable to MITM attacks", 
+                    "id": "1223211", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1229"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1241965", 
+                    "title": "CVE-2015-2625 OpenJDK: name for reverse DNS lookup used in certificate identity check (JSSE, 8067694)", 
+                    "id": "1241965", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1229"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242019", 
+                    "title": "CVE-2015-2601 OpenJDK: non-constant time comparisons in crypto code (JCE, 8074865)", 
+                    "id": "1242019", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1229"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242232", 
+                    "title": "CVE-2015-2628 OpenJDK: IIOPInputStream type confusion vulnerability (CORBA, 8076376)", 
+                    "id": "1242232", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1229"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242234", 
+                    "title": "CVE-2015-4731 OpenJDK: improper permission checks in MBeanServerInvocationHandler (JMX, 8076397)", 
+                    "id": "1242234", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1229"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242240", 
+                    "title": "CVE-2015-4732 OpenJDK: insufficient context checks during object deserialization (Libraries, 8076405)", 
+                    "id": "1242240", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1229"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242275", 
+                    "title": "CVE-2015-4733 OpenJDK: RemoteObjectInvocationHandler allows calling finalize() (RMI, 8076409)", 
+                    "id": "1242275", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1229"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242281", 
+                    "title": "CVE-2015-4748 OpenJDK: incorrect OCSP nextUpdate checking (Libraries, 8075374)", 
+                    "id": "1242281", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1229"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242372", 
+                    "title": "CVE-2015-2621 OpenJDK: incorrect code permission checks in RMIConnectionImpl (JMX, 8075853)", 
+                    "id": "1242372", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1229"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242379", 
+                    "title": "CVE-2015-4749 OpenJDK: DnsClient fails to release request information after error (JNDI, 8075378)", 
+                    "id": "1242379", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1229"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242394", 
+                    "title": "CVE-2015-2632 ICU: integer overflow in LETableReference verifyLength() (OpenJDK 2D, 8077520)", 
+                    "id": "1242394", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1229"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242447", 
+                    "title": "CVE-2015-4760 ICU: missing boundary checks in layout engine (OpenJDK 2D, 8071715)", 
+                    "id": "1242447", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1229"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243139", 
+                    "title": "CVE-2015-2590 OpenJDK: deserialization issue in ObjectInputStream.readSerialData() (Libraries, 8076401)", 
+                    "id": "1243139", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1229"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151230", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1230.html", 
+                    "id": "RHSA-2015:1230", 
+                    "title": "RHSA-2015:1230: java-1.7.0-openjdk security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1207101", 
+                    "title": "CVE-2015-2808 SSL/TLS: \"Invariance Weakness\" vulnerability in RC4 stream cipher", 
+                    "id": "1207101", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1230"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1223211", 
+                    "title": "CVE-2015-4000 LOGJAM: TLS connections which support export grade DHE key-exchange are vulnerable to MITM attacks", 
+                    "id": "1223211", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1230"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1241965", 
+                    "title": "CVE-2015-2625 OpenJDK: name for reverse DNS lookup used in certificate identity check (JSSE, 8067694)", 
+                    "id": "1241965", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1230"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242019", 
+                    "title": "CVE-2015-2601 OpenJDK: non-constant time comparisons in crypto code (JCE, 8074865)", 
+                    "id": "1242019", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1230"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242232", 
+                    "title": "CVE-2015-2628 OpenJDK: IIOPInputStream type confusion vulnerability (CORBA, 8076376)", 
+                    "id": "1242232", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1230"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242234", 
+                    "title": "CVE-2015-4731 OpenJDK: improper permission checks in MBeanServerInvocationHandler (JMX, 8076397)", 
+                    "id": "1242234", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1230"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242240", 
+                    "title": "CVE-2015-4732 OpenJDK: insufficient context checks during object deserialization (Libraries, 8076405)", 
+                    "id": "1242240", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1230"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242275", 
+                    "title": "CVE-2015-4733 OpenJDK: RemoteObjectInvocationHandler allows calling finalize() (RMI, 8076409)", 
+                    "id": "1242275", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1230"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242281", 
+                    "title": "CVE-2015-4748 OpenJDK: incorrect OCSP nextUpdate checking (Libraries, 8075374)", 
+                    "id": "1242281", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1230"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242372", 
+                    "title": "CVE-2015-2621 OpenJDK: incorrect code permission checks in RMIConnectionImpl (JMX, 8075853)", 
+                    "id": "1242372", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1230"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242379", 
+                    "title": "CVE-2015-4749 OpenJDK: DnsClient fails to release request information after error (JNDI, 8075378)", 
+                    "id": "1242379", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1230"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242394", 
+                    "title": "CVE-2015-2632 ICU: integer overflow in LETableReference verifyLength() (OpenJDK 2D, 8077520)", 
+                    "id": "1242394", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1230"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242447", 
+                    "title": "CVE-2015-4760 ICU: missing boundary checks in layout engine (OpenJDK 2D, 8071715)", 
+                    "id": "1242447", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1230"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243139", 
+                    "title": "CVE-2015-2590 OpenJDK: deserialization issue in ObjectInputStream.readSerialData() (Libraries, 8076401)", 
+                    "id": "1243139", 
+                    "issue date": "2015-07-15", 
+                    "associated redhat": "RHSA-2015:1230"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151241", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1241.html", 
+                    "id": "RHSA-2015:1241", 
+                    "title": "RHSA-2015:1241: java-1.8.0-oracle security update (Critical)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1207101", 
+                    "title": "CVE-2015-2808 SSL/TLS: \"Invariance Weakness\" vulnerability in RC4 stream cipher", 
+                    "id": "1207101", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1223211", 
+                    "title": "CVE-2015-4000 LOGJAM: TLS connections which support export grade DHE key-exchange are vulnerable to MITM attacks", 
+                    "id": "1223211", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1241965", 
+                    "title": "CVE-2015-2625 OpenJDK: name for reverse DNS lookup used in certificate identity check (JSSE, 8067694)", 
+                    "id": "1241965", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242019", 
+                    "title": "CVE-2015-2601 OpenJDK: non-constant time comparisons in crypto code (JCE, 8074865)", 
+                    "id": "1242019", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242144", 
+                    "title": "CVE-2015-2659 OpenJDK: GCM cipher issue causing JVM crash (Security, 8067648)", 
+                    "id": "1242144", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242232", 
+                    "title": "CVE-2015-2628 OpenJDK: IIOPInputStream type confusion vulnerability (CORBA, 8076376)", 
+                    "id": "1242232", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242234", 
+                    "title": "CVE-2015-4731 OpenJDK: improper permission checks in MBeanServerInvocationHandler (JMX, 8076397)", 
+                    "id": "1242234", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242240", 
+                    "title": "CVE-2015-4732 OpenJDK: insufficient context checks during object deserialization (Libraries, 8076405)", 
+                    "id": "1242240", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242275", 
+                    "title": "CVE-2015-4733 OpenJDK: RemoteObjectInvocationHandler allows calling finalize() (RMI, 8076409)", 
+                    "id": "1242275", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242281", 
+                    "title": "CVE-2015-4748 OpenJDK: incorrect OCSP nextUpdate checking (Libraries, 8075374)", 
+                    "id": "1242281", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242372", 
+                    "title": "CVE-2015-2621 OpenJDK: incorrect code permission checks in RMIConnectionImpl (JMX, 8075853)", 
+                    "id": "1242372", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242379", 
+                    "title": "CVE-2015-4749 OpenJDK: DnsClient fails to release request information after error (JNDI, 8075378)", 
+                    "id": "1242379", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242394", 
+                    "title": "CVE-2015-2632 ICU: integer overflow in LETableReference verifyLength() (OpenJDK 2D, 8077520)", 
+                    "id": "1242394", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242447", 
+                    "title": "CVE-2015-4760 ICU: missing boundary checks in layout engine (OpenJDK 2D, 8071715)", 
+                    "id": "1242447", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242456", 
+                    "title": "CVE-2015-2613 NSS / JCE: missing EC parameter validation in ECDH_Derive() (OpenJDK JCE, 8075833)", 
+                    "id": "1242456", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243139", 
+                    "title": "CVE-2015-2590 OpenJDK: deserialization issue in ObjectInputStream.readSerialData() (Libraries, 8076401)", 
+                    "id": "1243139", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243283", 
+                    "title": "CVE-2015-2638 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (2D)", 
+                    "id": "1243283", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243284", 
+                    "title": "CVE-2015-4736 Oracle JDK: unspecified vulnerability fixed in 7u85 and 8u51 (Deployment)", 
+                    "id": "1243284", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243286", 
+                    "title": "CVE-2015-2619 Oracle JDK: unspecified vulnerability fixed in 7u85 and 8u51 (2D)", 
+                    "id": "1243286", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243287", 
+                    "title": "CVE-2015-2637 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (2D)", 
+                    "id": "1243287", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243290", 
+                    "title": "CVE-2015-4729 Oracle JDK: unspecified vulnerability fixed in 7u85 and 8u51 (Deployment)", 
+                    "id": "1243290", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243291", 
+                    "title": "CVE-2015-2627 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (Install)", 
+                    "id": "1243291", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243300", 
+                    "title": "CVE-2015-2664 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (Deployment)", 
+                    "id": "1243300", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1241"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151242", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1242.html", 
+                    "id": "RHSA-2015:1242", 
+                    "title": "RHSA-2015:1242: java-1.7.0-oracle security update (Critical)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1207101", 
+                    "title": "CVE-2015-2808 SSL/TLS: \"Invariance Weakness\" vulnerability in RC4 stream cipher", 
+                    "id": "1207101", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1223211", 
+                    "title": "CVE-2015-4000 LOGJAM: TLS connections which support export grade DHE key-exchange are vulnerable to MITM attacks", 
+                    "id": "1223211", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1241965", 
+                    "title": "CVE-2015-2625 OpenJDK: name for reverse DNS lookup used in certificate identity check (JSSE, 8067694)", 
+                    "id": "1241965", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242019", 
+                    "title": "CVE-2015-2601 OpenJDK: non-constant time comparisons in crypto code (JCE, 8074865)", 
+                    "id": "1242019", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242232", 
+                    "title": "CVE-2015-2628 OpenJDK: IIOPInputStream type confusion vulnerability (CORBA, 8076376)", 
+                    "id": "1242232", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242234", 
+                    "title": "CVE-2015-4731 OpenJDK: improper permission checks in MBeanServerInvocationHandler (JMX, 8076397)", 
+                    "id": "1242234", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242240", 
+                    "title": "CVE-2015-4732 OpenJDK: insufficient context checks during object deserialization (Libraries, 8076405)", 
+                    "id": "1242240", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242275", 
+                    "title": "CVE-2015-4733 OpenJDK: RemoteObjectInvocationHandler allows calling finalize() (RMI, 8076409)", 
+                    "id": "1242275", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242281", 
+                    "title": "CVE-2015-4748 OpenJDK: incorrect OCSP nextUpdate checking (Libraries, 8075374)", 
+                    "id": "1242281", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242372", 
+                    "title": "CVE-2015-2621 OpenJDK: incorrect code permission checks in RMIConnectionImpl (JMX, 8075853)", 
+                    "id": "1242372", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242379", 
+                    "title": "CVE-2015-4749 OpenJDK: DnsClient fails to release request information after error (JNDI, 8075378)", 
+                    "id": "1242379", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242394", 
+                    "title": "CVE-2015-2632 ICU: integer overflow in LETableReference verifyLength() (OpenJDK 2D, 8077520)", 
+                    "id": "1242394", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242447", 
+                    "title": "CVE-2015-4760 ICU: missing boundary checks in layout engine (OpenJDK 2D, 8071715)", 
+                    "id": "1242447", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242456", 
+                    "title": "CVE-2015-2613 NSS / JCE: missing EC parameter validation in ECDH_Derive() (OpenJDK JCE, 8075833)", 
+                    "id": "1242456", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243139", 
+                    "title": "CVE-2015-2590 OpenJDK: deserialization issue in ObjectInputStream.readSerialData() (Libraries, 8076401)", 
+                    "id": "1243139", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243283", 
+                    "title": "CVE-2015-2638 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (2D)", 
+                    "id": "1243283", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243284", 
+                    "title": "CVE-2015-4736 Oracle JDK: unspecified vulnerability fixed in 7u85 and 8u51 (Deployment)", 
+                    "id": "1243284", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243286", 
+                    "title": "CVE-2015-2619 Oracle JDK: unspecified vulnerability fixed in 7u85 and 8u51 (2D)", 
+                    "id": "1243286", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243287", 
+                    "title": "CVE-2015-2637 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (2D)", 
+                    "id": "1243287", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243288", 
+                    "title": "CVE-2015-2596 Oracle JDK: unspecified vulnerability fixed in 7u85 (Hotspot)", 
+                    "id": "1243288", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243290", 
+                    "title": "CVE-2015-4729 Oracle JDK: unspecified vulnerability fixed in 7u85 and 8u51 (Deployment)", 
+                    "id": "1243290", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243291", 
+                    "title": "CVE-2015-2627 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (Install)", 
+                    "id": "1243291", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243300", 
+                    "title": "CVE-2015-2664 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (Deployment)", 
+                    "id": "1243300", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1242"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151243", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1243.html", 
+                    "id": "RHSA-2015:1243", 
+                    "title": "RHSA-2015:1243: java-1.6.0-sun security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1207101", 
+                    "title": "CVE-2015-2808 SSL/TLS: \"Invariance Weakness\" vulnerability in RC4 stream cipher", 
+                    "id": "1207101", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1243"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1223211", 
+                    "title": "CVE-2015-4000 LOGJAM: TLS connections which support export grade DHE key-exchange are vulnerable to MITM attacks", 
+                    "id": "1223211", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1243"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1241965", 
+                    "title": "CVE-2015-2625 OpenJDK: name for reverse DNS lookup used in certificate identity check (JSSE, 8067694)", 
+                    "id": "1241965", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1243"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242019", 
+                    "title": "CVE-2015-2601 OpenJDK: non-constant time comparisons in crypto code (JCE, 8074865)", 
+                    "id": "1242019", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1243"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242232", 
+                    "title": "CVE-2015-2628 OpenJDK: IIOPInputStream type confusion vulnerability (CORBA, 8076376)", 
+                    "id": "1242232", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1243"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242234", 
+                    "title": "CVE-2015-4731 OpenJDK: improper permission checks in MBeanServerInvocationHandler (JMX, 8076397)", 
+                    "id": "1242234", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1243"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242240", 
+                    "title": "CVE-2015-4732 OpenJDK: insufficient context checks during object deserialization (Libraries, 8076405)", 
+                    "id": "1242240", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1243"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242275", 
+                    "title": "CVE-2015-4733 OpenJDK: RemoteObjectInvocationHandler allows calling finalize() (RMI, 8076409)", 
+                    "id": "1242275", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1243"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242281", 
+                    "title": "CVE-2015-4748 OpenJDK: incorrect OCSP nextUpdate checking (Libraries, 8075374)", 
+                    "id": "1242281", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1243"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242372", 
+                    "title": "CVE-2015-2621 OpenJDK: incorrect code permission checks in RMIConnectionImpl (JMX, 8075853)", 
+                    "id": "1242372", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1243"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242379", 
+                    "title": "CVE-2015-4749 OpenJDK: DnsClient fails to release request information after error (JNDI, 8075378)", 
+                    "id": "1242379", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1243"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242394", 
+                    "title": "CVE-2015-2632 ICU: integer overflow in LETableReference verifyLength() (OpenJDK 2D, 8077520)", 
+                    "id": "1242394", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1243"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242447", 
+                    "title": "CVE-2015-4760 ICU: missing boundary checks in layout engine (OpenJDK 2D, 8071715)", 
+                    "id": "1242447", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1243"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243139", 
+                    "title": "CVE-2015-2590 OpenJDK: deserialization issue in ObjectInputStream.readSerialData() (Libraries, 8076401)", 
+                    "id": "1243139", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1243"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243283", 
+                    "title": "CVE-2015-2638 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (2D)", 
+                    "id": "1243283", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1243"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243287", 
+                    "title": "CVE-2015-2637 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (2D)", 
+                    "id": "1243287", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1243"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243291", 
+                    "title": "CVE-2015-2627 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (Install)", 
+                    "id": "1243291", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1243"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243300", 
+                    "title": "CVE-2015-2664 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (Deployment)", 
+                    "id": "1243300", 
+                    "issue date": "2015-07-17", 
+                    "associated redhat": "RHSA-2015:1243"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151485", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1485.html", 
+                    "id": "RHSA-2015:1485", 
+                    "title": "RHSA-2015:1485: java-1.7.1-ibm security update (Critical)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1223211", 
+                    "title": "CVE-2015-4000 LOGJAM: TLS connections which support export grade DHE key-exchange are vulnerable to MITM attacks", 
+                    "id": "1223211", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1485"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1241965", 
+                    "title": "CVE-2015-2625 OpenJDK: name for reverse DNS lookup used in certificate identity check (JSSE, 8067694)", 
+                    "id": "1241965", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1485"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242019", 
+                    "title": "CVE-2015-2601 OpenJDK: non-constant time comparisons in crypto code (JCE, 8074865)", 
+                    "id": "1242019", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1485"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242234", 
+                    "title": "CVE-2015-4731 OpenJDK: improper permission checks in MBeanServerInvocationHandler (JMX, 8076397)", 
+                    "id": "1242234", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1485"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242240", 
+                    "title": "CVE-2015-4732 OpenJDK: insufficient context checks during object deserialization (Libraries, 8076405)", 
+                    "id": "1242240", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1485"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242275", 
+                    "title": "CVE-2015-4733 OpenJDK: RemoteObjectInvocationHandler allows calling finalize() (RMI, 8076409)", 
+                    "id": "1242275", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1485"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242281", 
+                    "title": "CVE-2015-4748 OpenJDK: incorrect OCSP nextUpdate checking (Libraries, 8075374)", 
+                    "id": "1242281", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1485"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242372", 
+                    "title": "CVE-2015-2621 OpenJDK: incorrect code permission checks in RMIConnectionImpl (JMX, 8075853)", 
+                    "id": "1242372", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1485"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242379", 
+                    "title": "CVE-2015-4749 OpenJDK: DnsClient fails to release request information after error (JNDI, 8075378)", 
+                    "id": "1242379", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1485"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242394", 
+                    "title": "CVE-2015-2632 ICU: integer overflow in LETableReference verifyLength() (OpenJDK 2D, 8077520)", 
+                    "id": "1242394", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1485"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242447", 
+                    "title": "CVE-2015-4760 ICU: missing boundary checks in layout engine (OpenJDK 2D, 8071715)", 
+                    "id": "1242447", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1485"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242456", 
+                    "title": "CVE-2015-2613 NSS / JCE: missing EC parameter validation in ECDH_Derive() (OpenJDK JCE, 8075833)", 
+                    "id": "1242456", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1485"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243139", 
+                    "title": "CVE-2015-2590 OpenJDK: deserialization issue in ObjectInputStream.readSerialData() (Libraries, 8076401)", 
+                    "id": "1243139", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1485"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243283", 
+                    "title": "CVE-2015-2638 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (2D)", 
+                    "id": "1243283", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1485"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243284", 
+                    "title": "CVE-2015-4736 Oracle JDK: unspecified vulnerability fixed in 7u85 and 8u51 (Deployment)", 
+                    "id": "1243284", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1485"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243286", 
+                    "title": "CVE-2015-2619 Oracle JDK: unspecified vulnerability fixed in 7u85 and 8u51 (2D)", 
+                    "id": "1243286", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1485"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243287", 
+                    "title": "CVE-2015-2637 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (2D)", 
+                    "id": "1243287", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1485"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243290", 
+                    "title": "CVE-2015-4729 Oracle JDK: unspecified vulnerability fixed in 7u85 and 8u51 (Deployment)", 
+                    "id": "1243290", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1485"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243300", 
+                    "title": "CVE-2015-2664 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (Deployment)", 
+                    "id": "1243300", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1485"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1244828", 
+                    "title": "CVE-2015-1931 IBM JDK: plain text data stored in memory dumps", 
+                    "id": "1244828", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1485"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151486", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1486.html", 
+                    "id": "RHSA-2015:1486", 
+                    "title": "RHSA-2015:1486: java-1.6.0-ibm security update (Critical)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1223211", 
+                    "title": "CVE-2015-4000 LOGJAM: TLS connections which support export grade DHE key-exchange are vulnerable to MITM attacks", 
+                    "id": "1223211", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1486"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1241965", 
+                    "title": "CVE-2015-2625 OpenJDK: name for reverse DNS lookup used in certificate identity check (JSSE, 8067694)", 
+                    "id": "1241965", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1486"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242019", 
+                    "title": "CVE-2015-2601 OpenJDK: non-constant time comparisons in crypto code (JCE, 8074865)", 
+                    "id": "1242019", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1486"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242234", 
+                    "title": "CVE-2015-4731 OpenJDK: improper permission checks in MBeanServerInvocationHandler (JMX, 8076397)", 
+                    "id": "1242234", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1486"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242240", 
+                    "title": "CVE-2015-4732 OpenJDK: insufficient context checks during object deserialization (Libraries, 8076405)", 
+                    "id": "1242240", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1486"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242275", 
+                    "title": "CVE-2015-4733 OpenJDK: RemoteObjectInvocationHandler allows calling finalize() (RMI, 8076409)", 
+                    "id": "1242275", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1486"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242281", 
+                    "title": "CVE-2015-4748 OpenJDK: incorrect OCSP nextUpdate checking (Libraries, 8075374)", 
+                    "id": "1242281", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1486"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242372", 
+                    "title": "CVE-2015-2621 OpenJDK: incorrect code permission checks in RMIConnectionImpl (JMX, 8075853)", 
+                    "id": "1242372", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1486"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242379", 
+                    "title": "CVE-2015-4749 OpenJDK: DnsClient fails to release request information after error (JNDI, 8075378)", 
+                    "id": "1242379", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1486"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242394", 
+                    "title": "CVE-2015-2632 ICU: integer overflow in LETableReference verifyLength() (OpenJDK 2D, 8077520)", 
+                    "id": "1242394", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1486"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242447", 
+                    "title": "CVE-2015-4760 ICU: missing boundary checks in layout engine (OpenJDK 2D, 8071715)", 
+                    "id": "1242447", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1486"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243139", 
+                    "title": "CVE-2015-2590 OpenJDK: deserialization issue in ObjectInputStream.readSerialData() (Libraries, 8076401)", 
+                    "id": "1243139", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1486"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243283", 
+                    "title": "CVE-2015-2638 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (2D)", 
+                    "id": "1243283", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1486"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243287", 
+                    "title": "CVE-2015-2637 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (2D)", 
+                    "id": "1243287", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1486"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243300", 
+                    "title": "CVE-2015-2664 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (Deployment)", 
+                    "id": "1243300", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1486"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1244828", 
+                    "title": "CVE-2015-1931 IBM JDK: plain text data stored in memory dumps", 
+                    "id": "1244828", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1486"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151488", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1488.html", 
+                    "id": "RHSA-2015:1488", 
+                    "title": "RHSA-2015:1488: java-1.7.0-ibm security update (Critical)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1223211", 
+                    "title": "CVE-2015-4000 LOGJAM: TLS connections which support export grade DHE key-exchange are vulnerable to MITM attacks", 
+                    "id": "1223211", 
+                    "issue date": "2015-07-23", 
+                    "associated redhat": "RHSA-2015:1488"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1241965", 
+                    "title": "CVE-2015-2625 OpenJDK: name for reverse DNS lookup used in certificate identity check (JSSE, 8067694)", 
+                    "id": "1241965", 
+                    "issue date": "2015-07-23", 
+                    "associated redhat": "RHSA-2015:1488"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242019", 
+                    "title": "CVE-2015-2601 OpenJDK: non-constant time comparisons in crypto code (JCE, 8074865)", 
+                    "id": "1242019", 
+                    "issue date": "2015-07-23", 
+                    "associated redhat": "RHSA-2015:1488"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242234", 
+                    "title": "CVE-2015-4731 OpenJDK: improper permission checks in MBeanServerInvocationHandler (JMX, 8076397)", 
+                    "id": "1242234", 
+                    "issue date": "2015-07-23", 
+                    "associated redhat": "RHSA-2015:1488"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242240", 
+                    "title": "CVE-2015-4732 OpenJDK: insufficient context checks during object deserialization (Libraries, 8076405)", 
+                    "id": "1242240", 
+                    "issue date": "2015-07-23", 
+                    "associated redhat": "RHSA-2015:1488"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242275", 
+                    "title": "CVE-2015-4733 OpenJDK: RemoteObjectInvocationHandler allows calling finalize() (RMI, 8076409)", 
+                    "id": "1242275", 
+                    "issue date": "2015-07-23", 
+                    "associated redhat": "RHSA-2015:1488"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242281", 
+                    "title": "CVE-2015-4748 OpenJDK: incorrect OCSP nextUpdate checking (Libraries, 8075374)", 
+                    "id": "1242281", 
+                    "issue date": "2015-07-23", 
+                    "associated redhat": "RHSA-2015:1488"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242372", 
+                    "title": "CVE-2015-2621 OpenJDK: incorrect code permission checks in RMIConnectionImpl (JMX, 8075853)", 
+                    "id": "1242372", 
+                    "issue date": "2015-07-23", 
+                    "associated redhat": "RHSA-2015:1488"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242379", 
+                    "title": "CVE-2015-4749 OpenJDK: DnsClient fails to release request information after error (JNDI, 8075378)", 
+                    "id": "1242379", 
+                    "issue date": "2015-07-23", 
+                    "associated redhat": "RHSA-2015:1488"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242394", 
+                    "title": "CVE-2015-2632 ICU: integer overflow in LETableReference verifyLength() (OpenJDK 2D, 8077520)", 
+                    "id": "1242394", 
+                    "issue date": "2015-07-23", 
+                    "associated redhat": "RHSA-2015:1488"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242447", 
+                    "title": "CVE-2015-4760 ICU: missing boundary checks in layout engine (OpenJDK 2D, 8071715)", 
+                    "id": "1242447", 
+                    "issue date": "2015-07-23", 
+                    "associated redhat": "RHSA-2015:1488"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242456", 
+                    "title": "CVE-2015-2613 NSS / JCE: missing EC parameter validation in ECDH_Derive() (OpenJDK JCE, 8075833)", 
+                    "id": "1242456", 
+                    "issue date": "2015-07-23", 
+                    "associated redhat": "RHSA-2015:1488"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243139", 
+                    "title": "CVE-2015-2590 OpenJDK: deserialization issue in ObjectInputStream.readSerialData() (Libraries, 8076401)", 
+                    "id": "1243139", 
+                    "issue date": "2015-07-23", 
+                    "associated redhat": "RHSA-2015:1488"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243283", 
+                    "title": "CVE-2015-2638 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (2D)", 
+                    "id": "1243283", 
+                    "issue date": "2015-07-23", 
+                    "associated redhat": "RHSA-2015:1488"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243284", 
+                    "title": "CVE-2015-4736 Oracle JDK: unspecified vulnerability fixed in 7u85 and 8u51 (Deployment)", 
+                    "id": "1243284", 
+                    "issue date": "2015-07-23", 
+                    "associated redhat": "RHSA-2015:1488"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243286", 
+                    "title": "CVE-2015-2619 Oracle JDK: unspecified vulnerability fixed in 7u85 and 8u51 (2D)", 
+                    "id": "1243286", 
+                    "issue date": "2015-07-23", 
+                    "associated redhat": "RHSA-2015:1488"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243287", 
+                    "title": "CVE-2015-2637 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (2D)", 
+                    "id": "1243287", 
+                    "issue date": "2015-07-23", 
+                    "associated redhat": "RHSA-2015:1488"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243290", 
+                    "title": "CVE-2015-4729 Oracle JDK: unspecified vulnerability fixed in 7u85 and 8u51 (Deployment)", 
+                    "id": "1243290", 
+                    "issue date": "2015-07-23", 
+                    "associated redhat": "RHSA-2015:1488"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243300", 
+                    "title": "CVE-2015-2664 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (Deployment)", 
+                    "id": "1243300", 
+                    "issue date": "2015-07-23", 
+                    "associated redhat": "RHSA-2015:1488"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1244828", 
+                    "title": "CVE-2015-1931 IBM JDK: plain text data stored in memory dumps", 
+                    "id": "1244828", 
+                    "issue date": "2015-07-23", 
+                    "associated redhat": "RHSA-2015:1488"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151526", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1526.html", 
+                    "id": "RHSA-2015:1526", 
+                    "title": "RHSA-2015:1526: java-1.6.0-openjdk security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1207101", 
+                    "title": "CVE-2015-2808 SSL/TLS: \"Invariance Weakness\" vulnerability in RC4 stream cipher", 
+                    "id": "1207101", 
+                    "issue date": "2015-07-30", 
+                    "associated redhat": "RHSA-2015:1526"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1223211", 
+                    "title": "CVE-2015-4000 LOGJAM: TLS connections which support export grade DHE key-exchange are vulnerable to MITM attacks", 
+                    "id": "1223211", 
+                    "issue date": "2015-07-30", 
+                    "associated redhat": "RHSA-2015:1526"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1241965", 
+                    "title": "CVE-2015-2625 OpenJDK: name for reverse DNS lookup used in certificate identity check (JSSE, 8067694)", 
+                    "id": "1241965", 
+                    "issue date": "2015-07-30", 
+                    "associated redhat": "RHSA-2015:1526"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242019", 
+                    "title": "CVE-2015-2601 OpenJDK: non-constant time comparisons in crypto code (JCE, 8074865)", 
+                    "id": "1242019", 
+                    "issue date": "2015-07-30", 
+                    "associated redhat": "RHSA-2015:1526"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242232", 
+                    "title": "CVE-2015-2628 OpenJDK: IIOPInputStream type confusion vulnerability (CORBA, 8076376)", 
+                    "id": "1242232", 
+                    "issue date": "2015-07-30", 
+                    "associated redhat": "RHSA-2015:1526"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242234", 
+                    "title": "CVE-2015-4731 OpenJDK: improper permission checks in MBeanServerInvocationHandler (JMX, 8076397)", 
+                    "id": "1242234", 
+                    "issue date": "2015-07-30", 
+                    "associated redhat": "RHSA-2015:1526"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242240", 
+                    "title": "CVE-2015-4732 OpenJDK: insufficient context checks during object deserialization (Libraries, 8076405)", 
+                    "id": "1242240", 
+                    "issue date": "2015-07-30", 
+                    "associated redhat": "RHSA-2015:1526"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242275", 
+                    "title": "CVE-2015-4733 OpenJDK: RemoteObjectInvocationHandler allows calling finalize() (RMI, 8076409)", 
+                    "id": "1242275", 
+                    "issue date": "2015-07-30", 
+                    "associated redhat": "RHSA-2015:1526"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242281", 
+                    "title": "CVE-2015-4748 OpenJDK: incorrect OCSP nextUpdate checking (Libraries, 8075374)", 
+                    "id": "1242281", 
+                    "issue date": "2015-07-30", 
+                    "associated redhat": "RHSA-2015:1526"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242372", 
+                    "title": "CVE-2015-2621 OpenJDK: incorrect code permission checks in RMIConnectionImpl (JMX, 8075853)", 
+                    "id": "1242372", 
+                    "issue date": "2015-07-30", 
+                    "associated redhat": "RHSA-2015:1526"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242379", 
+                    "title": "CVE-2015-4749 OpenJDK: DnsClient fails to release request information after error (JNDI, 8075378)", 
+                    "id": "1242379", 
+                    "issue date": "2015-07-30", 
+                    "associated redhat": "RHSA-2015:1526"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242394", 
+                    "title": "CVE-2015-2632 ICU: integer overflow in LETableReference verifyLength() (OpenJDK 2D, 8077520)", 
+                    "id": "1242394", 
+                    "issue date": "2015-07-30", 
+                    "associated redhat": "RHSA-2015:1526"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242447", 
+                    "title": "CVE-2015-4760 ICU: missing boundary checks in layout engine (OpenJDK 2D, 8071715)", 
+                    "id": "1242447", 
+                    "issue date": "2015-07-30", 
+                    "associated redhat": "RHSA-2015:1526"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243139", 
+                    "title": "CVE-2015-2590 OpenJDK: deserialization issue in ObjectInputStream.readSerialData() (Libraries, 8076401)", 
+                    "id": "1243139", 
+                    "issue date": "2015-07-30", 
+                    "associated redhat": "RHSA-2015:1526"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151544", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1544.html", 
+                    "id": "RHSA-2015:1544", 
+                    "title": "RHSA-2015:1544: java-1.5.0-ibm security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1223211", 
+                    "title": "CVE-2015-4000 LOGJAM: TLS connections which support export grade DHE key-exchange are vulnerable to MITM attacks", 
+                    "id": "1223211", 
+                    "issue date": "2015-08-04", 
+                    "associated redhat": "RHSA-2015:1544"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242019", 
+                    "title": "CVE-2015-2601 OpenJDK: non-constant time comparisons in crypto code (JCE, 8074865)", 
+                    "id": "1242019", 
+                    "issue date": "2015-08-04", 
+                    "associated redhat": "RHSA-2015:1544"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242234", 
+                    "title": "CVE-2015-4731 OpenJDK: improper permission checks in MBeanServerInvocationHandler (JMX, 8076397)", 
+                    "id": "1242234", 
+                    "issue date": "2015-08-04", 
+                    "associated redhat": "RHSA-2015:1544"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242240", 
+                    "title": "CVE-2015-4732 OpenJDK: insufficient context checks during object deserialization (Libraries, 8076405)", 
+                    "id": "1242240", 
+                    "issue date": "2015-08-04", 
+                    "associated redhat": "RHSA-2015:1544"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242275", 
+                    "title": "CVE-2015-4733 OpenJDK: RemoteObjectInvocationHandler allows calling finalize() (RMI, 8076409)", 
+                    "id": "1242275", 
+                    "issue date": "2015-08-04", 
+                    "associated redhat": "RHSA-2015:1544"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242281", 
+                    "title": "CVE-2015-4748 OpenJDK: incorrect OCSP nextUpdate checking (Libraries, 8075374)", 
+                    "id": "1242281", 
+                    "issue date": "2015-08-04", 
+                    "associated redhat": "RHSA-2015:1544"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242372", 
+                    "title": "CVE-2015-2621 OpenJDK: incorrect code permission checks in RMIConnectionImpl (JMX, 8075853)", 
+                    "id": "1242372", 
+                    "issue date": "2015-08-04", 
+                    "associated redhat": "RHSA-2015:1544"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242379", 
+                    "title": "CVE-2015-4749 OpenJDK: DnsClient fails to release request information after error (JNDI, 8075378)", 
+                    "id": "1242379", 
+                    "issue date": "2015-08-04", 
+                    "associated redhat": "RHSA-2015:1544"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242394", 
+                    "title": "CVE-2015-2632 ICU: integer overflow in LETableReference verifyLength() (OpenJDK 2D, 8077520)", 
+                    "id": "1242394", 
+                    "issue date": "2015-08-04", 
+                    "associated redhat": "RHSA-2015:1544"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1242447", 
+                    "title": "CVE-2015-4760 ICU: missing boundary checks in layout engine (OpenJDK 2D, 8071715)", 
+                    "id": "1242447", 
+                    "issue date": "2015-08-04", 
+                    "associated redhat": "RHSA-2015:1544"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243139", 
+                    "title": "CVE-2015-2590 OpenJDK: deserialization issue in ObjectInputStream.readSerialData() (Libraries, 8076401)", 
+                    "id": "1243139", 
+                    "issue date": "2015-08-04", 
+                    "associated redhat": "RHSA-2015:1544"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243283", 
+                    "title": "CVE-2015-2638 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (2D)", 
+                    "id": "1243283", 
+                    "issue date": "2015-08-04", 
+                    "associated redhat": "RHSA-2015:1544"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243287", 
+                    "title": "CVE-2015-2637 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (2D)", 
+                    "id": "1243287", 
+                    "issue date": "2015-08-04", 
+                    "associated redhat": "RHSA-2015:1544"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243300", 
+                    "title": "CVE-2015-2664 Oracle JDK: unspecified vulnerability fixed in 6u101, 7u85 and 8u51 (Deployment)", 
+                    "id": "1243300", 
+                    "issue date": "2015-08-04", 
+                    "associated redhat": "RHSA-2015:1544"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1244828", 
+                    "title": "CVE-2015-1931 IBM JDK: plain text data stored in memory dumps", 
+                    "id": "1244828", 
+                    "issue date": "2015-08-04", 
+                    "associated redhat": "RHSA-2015:1544"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

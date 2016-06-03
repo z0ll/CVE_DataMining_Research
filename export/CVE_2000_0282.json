@@ -1,0 +1,131 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0282", 
+                "published": "2000-04-12T00:00:00.000-04:00", 
+                "id": "CVE-2000-0282", 
+                "modified": "2008-09-10T15:03:59.993-04:00", 
+                "summary": "TalentSoft webpsvr daemon in the Web+ shopping cart application allows remote attackers to read arbitrary files via a .. (dot dot) attack on the webplus CGI program."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:talentsoft:web%2b:4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.15448", 
+                "id": 15448
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/1102", 
+                "id": 1102
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/1102", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2000-04/0050.html", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "ftp://ftp.talentsoft.com/Download/Webplus/Unix/Patches/Webplus46p%20Read%20me.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-recon", 
+                "id": "sid:812", 
+                "signature": "SERVER-WEBAPP webplus version access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:813", 
+                "signature": "SERVER-WEBAPP webplus directory traversal"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2000-0282"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "TalentSoft Web+ webplus CGI Traversal Arbitrary File Access", 
+                "file": "webplus.nasl", 
+                "family": "CGI abuses", 
+                "id": "10367"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

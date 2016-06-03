@@ -1,0 +1,248 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3962", 
+                "published": "2010-11-05T13:00:02.890-04:00", 
+                "id": "CVE-2010-3962", 
+                "modified": "2013-08-19T02:16:26.157-04:00", 
+                "summary": "Use-after-free vulnerability in Microsoft Internet Explorer 6, 7, and 8 allows remote attackers to execute arbitrary code via vectors related to Cascading Style Sheets (CSS) token sequences and the clip attribute, aka an \"invalid flag reference\" issue or \"Uninitialized Memory Corruption Vulnerability,\" as exploited in the wild in November 2010."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:ie:7"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:8"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:6"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.4212", 
+                "id": 4212
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/44536", 
+                "id": 44536
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/68987", 
+                "id": 68987
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA10-348A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/899748", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/62962", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2010/2880", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.symantec.com/connect/blogs/new-ie-0-day-used-targeted-attacks", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1024676", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/44536", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/Bulletin/MS10-090.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/advisory/2458511.mspx", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/15421", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/15418", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/42091", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://blogs.technet.com/b/msrc/archive/2010/11/02/microsoft-releases-security-advisory-2458511.aspx", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/899748", 
+                "id": "VU#899748"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2011891", 
+                "signature": "ET WEB_CLIENT Possible Microsoft Internet Explorer CSS Tags Remote Code Execution Attempt"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms10_090_ie_css_clip.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/browser/ms10_090_ie_css_clip.rb", 
+                "title": "MS10-090 Microsoft Internet Explorer CSS SetUserClip Memory Corruption"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/15418", 
+                "id": 15418, 
+                "file": "http://www.exploit-db.com/download/15418"
+            }, 
+            {
+                "url": "http://www.exploit-db.com/exploits/15421", 
+                "id": 15421, 
+                "file": "platforms/windows/remote/15421.html"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/ie_css_clip", 
+                "id": "exploit_info/ie_css_clip", 
+                "title": "Internet Explorer CSS clip attribute memory corruption"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-3962"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:12279", 
+                "title": "Uninitialized Memory Corruption Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:12279"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:11574", 
+                "title": "DEPRECATED: Microsoft Internet Explorer CSS Tags Remote Code Execution Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:11574"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Internet Explorer Multiple Vulnerabilities (2416400)", 
+                "file": "secpod_ms10-090.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "900262"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS10-090: Cumulative Security Update for Internet Explorer (2416400)", 
+                "file": "smb_nt_ms10-090.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "51162"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Cumulative Security Update for Internet Explorer", 
+                "id": "Cumulative Security Update for Internet Explorer", 
+                "title": "2416400"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2416400", 
+                "id": "2416400", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS10-090", 
+                "id": "MS10-090", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

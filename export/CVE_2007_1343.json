@@ -1,0 +1,190 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1343", 
+                "published": "2007-03-08T17:19:00.000-05:00", 
+                "id": "CVE-2007-1343", 
+                "modified": "2011-03-07T21:51:57.970-05:00", 
+                "summary": "includes/functions.php in Craig Knudsen WebCalendar before 1.0.5 does not protect the noSet variable from external modification, which allows remote attackers to set arbitrary global variables via a URL with modified values in the noSet parameter, which leads to resultant vulnerabilities that probably include remote file inclusion and other issues."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:webcalendar:webcalendar:1.0.1"
+            }, 
+            {
+                "id": "cpe:/a:webcalendar:webcalendar:1.0.0"
+            }, 
+            {
+                "id": "cpe:/a:webcalendar:webcalendar:1.0.2"
+            }, 
+            {
+                "id": "cpe:/a:webcalendar:webcalendar:1.0.4"
+            }, 
+            {
+                "id": "cpe:/a:webcalendar:webcalendar:1.0.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35511", 
+                "id": 35511
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/22834", 
+                "id": 22834
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/22834", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://webcalendar.cvs.sourceforge.net/webcalendar/webcalendar/includes/functions.php?view=log", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://webcalendar.cvs.sourceforge.net/webcalendar/webcalendar/includes/functions.php?r1=1.211.2.7&r2=1.211.2.8", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://sourceforge.net/project/shownotes.php?group_id=3870&release_id=491130", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/24403", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/0851", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/32832", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2007/dsa-1267", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://sourceforge.net/mailarchive/forum.php?thread_id=31840112&forum_id=46247", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/24519", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1343"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 1267-1 (webcalendar)", 
+                "file": "deb_1267_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "58319"
+            }, 
+            {
+                "name": "FreeBSD Ports: WebCalendar", 
+                "file": "freebsd_WebCalendar1.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "58866"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-1267-1 : webcalendar - missing input sanitising", 
+                "file": "debian_DSA-1267.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "24834"
+            }, 
+            {
+                "name": "FreeBSD : WebCalendar -- noSet variable overwrite vulnerability (72999d57-d6f6-11db-961b-005056847b26)", 
+                "file": "freebsd_pkg_72999d57d6f611db961b005056847b26.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "25016"
+            }, 
+            {
+                "name": "WebCalendar includes/functions.php noSet Variable Overwrite", 
+                "file": "webcalendar_noset_overwrite.nasl", 
+                "family": "CGI abuses", 
+                "id": "24780"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-1267", 
+                "id": "DSA-1267"
+            }
+        ], 
+        "Vmware": []
+    }
+}

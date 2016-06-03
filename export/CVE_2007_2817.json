@@ -1,0 +1,157 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2817", 
+                "published": "2007-05-22T17:30:00.000-04:00", 
+                "id": "CVE-2007-2817", 
+                "modified": "2012-10-30T22:36:17.843-04:00", 
+                "summary": "SQL injection vulnerability in read/index.php in ol bookmarks 0.7.4 allows remote attackers to execute arbitrary SQL commands via the id parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:ol_bookmarks:ol_bookmarks:0.7.4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.36938", 
+                "id": 36938
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/24085", 
+                "id": 24085
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/36492", 
+                "id": 36492
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/24085", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/3964", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://osvdb.org/36492", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34414", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25356", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004005", 
+                "signature": "ET WEB_SPECIFIC_APPS ol bookmarks SQL Injection Attempt -- index.php id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004006", 
+                "signature": "ET WEB_SPECIFIC_APPS ol bookmarks SQL Injection Attempt -- index.php id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004007", 
+                "signature": "ET WEB_SPECIFIC_APPS ol bookmarks SQL Injection Attempt -- index.php id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004008", 
+                "signature": "ET WEB_SPECIFIC_APPS ol bookmarks SQL Injection Attempt -- index.php id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004009", 
+                "signature": "ET WEB_SPECIFIC_APPS ol bookmarks SQL Injection Attempt -- index.php id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004010", 
+                "signature": "ET WEB_SPECIFIC_APPS ol bookmarks SQL Injection Attempt -- index.php id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2817"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

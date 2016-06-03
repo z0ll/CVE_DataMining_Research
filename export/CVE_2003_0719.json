@@ -1,0 +1,208 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0719", 
+                "published": "2004-06-01T00:00:00.000-04:00", 
+                "id": "CVE-2003-0719", 
+                "modified": "2008-09-10T15:20:14.697-04:00", 
+                "summary": "Buffer overflow in the Private Communications Transport (PCT) protocol implementation in the Microsoft SSL library, as used in Microsoft Windows NT 4.0 SP6a, 2000 SP2 through SP4, XP SP1, Server 2003, NetMeeting, Windows 98, and Windows ME, allows remote attackers to execute arbitrary code via PCT 1.0 handshake packets."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_me"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp4::fr"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_nt:4.0:sp6a"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2003_server:r2"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:netmeeting"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp1:tablet_pc"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_98::gold"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.21873", 
+                "id": 21873
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/5250", 
+                "id": 5250
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/586540", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA04-104A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/alerts/id/168", 
+                    "vendor": "ISS"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/361836", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms04-011.mspx", 
+                    "vendor": "MS"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/586540", 
+                "id": "VU#586540"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms04_011_pct.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/ssl/ms04_011_pct.rb", 
+                "title": "MS04-011 Microsoft Private Communications Transport Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/microsoft_ssl_pct", 
+                "id": "exploit_info/microsoft_ssl_pct", 
+                "title": "Microsoft SSL library PCT buffer overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2003-0719"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:903", 
+                "title": "Windows NT SSL PCT Handshake Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:903"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:889", 
+                "title": "Windows XP SSL PCT Handshake Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:889"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:951", 
+                "title": "Windows 2000 SSL PCT Handshake Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:951"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:1093", 
+                "title": "Windows Server 2003 SSL PCT Handshake Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:1093"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS04-011: Microsoft Hotfix (credentialed check) (835732)", 
+                "file": "smb_nt_ms04-011.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "12205"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Security Update for Microsoft Windows", 
+                "id": "Security Update for Microsoft Windows", 
+                "title": "835732"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/835732", 
+                "id": "835732", 
+                "title": "Security Update for Microsoft Windows"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS04-011", 
+                "id": "MS04-011", 
+                "title": "Security Update for Microsoft Windows"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

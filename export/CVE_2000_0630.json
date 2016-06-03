@@ -1,0 +1,158 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0630", 
+                "published": "2000-07-17T00:00:00.000-04:00", 
+                "id": "CVE-2000-0630", 
+                "modified": "2008-09-10T15:05:28.867-04:00", 
+                "summary": "IIS 4.0 and 5.0 allows remote attackers to obtain fragments of source code by appending a +.htr to the URL, a variant of the \"File Fragment Reading via .HTR\" vulnerability."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:4.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:5.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.15770", 
+                "id": 15770
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/1488", 
+                "id": 1488
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms00-044.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/static/5104.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/1488", 
+                    "vendor": "BID"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2100987", 
+                "signature": "GPL EXPLOIT .htr access"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "misc-activity", 
+                "id": "sid:987", 
+                "signature": "FILE-IDENTIFY .htr access file download request"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:995", 
+                "signature": "SERVER-IIS ism.dll access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1725", 
+                "signature": "SERVER-IIS +.htr code fragment attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2000-0630"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Test Microsoft IIS Source Fragment Disclosure", 
+                "file": "iis_frag_disclosure.nasl", 
+                "family": "Remote file access", 
+                "id": "10680"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Microsoft IIS Source Fragment Disclosure", 
+                "file": "iis_frag_disclosure.nasl", 
+                "family": "Web Servers", 
+                "id": "10680"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS00-044", 
+                "id": "MS00-044", 
+                "title": ""
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,148 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0386", 
+                "published": "1999-03-01T00:00:00.000-05:00", 
+                "id": "CVE-1999-0386", 
+                "modified": "2008-09-09T08:34:26.663-04:00", 
+                "summary": "Microsoft Personal Web Server and FrontPage Personal Web Server in some Windows systems allows a remote attacker to read files on the server by using a nonstandard URL."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:frontpage"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:personal_web_server:4.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14536", 
+                "id": 14536
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/111", 
+                "id": 111
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.osvdb.org/111", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms99-010.mspx", 
+                    "vendor": "MS"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2100951", 
+                "signature": "GPL WEB_SERVER authors.pwd access"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:951", 
+                "signature": "SERVER-OTHER Microsoft Frontpage authors.pwd access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:966", 
+                "signature": "SERVER-OTHER Microsoft Frontpage .... request"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0386"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Microsoft Personal Web Server Multiple Dot Request Arbitrary File Access", 
+                "file": "mspws_dotdotdot.nasl", 
+                "family": "CGI abuses", 
+                "id": "10142"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/217763", 
+                "id": "217763", 
+                "title": "Patch Available for File Access Vulnerability in Personal Web Server"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS99-010", 
+                "id": "MS99-010", 
+                "title": "Patch Available for File Access Vulnerability in Personal Web Server"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

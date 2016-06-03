@@ -1,0 +1,144 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0698", 
+                "published": "2007-02-03T17:28:00.000-05:00", 
+                "id": "CVE-2007-0698", 
+                "modified": "2011-03-07T21:50:33.893-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in ACGVannu 1.3 and earlier allow remote attackers to execute arbitrary SQL commands via the id_mod parameter to templates/modif.html, and other unspecified vectors.  NOTE: The provenance of this information is unknown; the details are obtained solely from third party information."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:mentiss_acgv:acgvannu:1.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34811", 
+                "id": 34811
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/34666", 
+                "id": 34666
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/32257", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/0388", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/34666", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005057", 
+                "signature": "ET WEB_SPECIFIC_APPS ACGVannu SQL Injection Attempt -- modif.html id_mod SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005058", 
+                "signature": "ET WEB_SPECIFIC_APPS ACGVannu SQL Injection Attempt -- modif.html id_mod UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005059", 
+                "signature": "ET WEB_SPECIFIC_APPS ACGVannu SQL Injection Attempt -- modif.html id_mod INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005060", 
+                "signature": "ET WEB_SPECIFIC_APPS ACGVannu SQL Injection Attempt -- modif.html id_mod DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005061", 
+                "signature": "ET WEB_SPECIFIC_APPS ACGVannu SQL Injection Attempt -- modif.html id_mod ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005062", 
+                "signature": "ET WEB_SPECIFIC_APPS ACGVannu SQL Injection Attempt -- modif.html id_mod UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-0698"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

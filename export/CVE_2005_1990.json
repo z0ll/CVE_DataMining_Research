@@ -1,0 +1,217 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-1990", 
+                "published": "2005-08-10T00:00:00.000-04:00", 
+                "id": "CVE-2005-1990", 
+                "modified": "2013-08-01T00:46:11.617-04:00", 
+                "summary": "Internet Explorer 5.0, 5.5, and 6.0 allows remote attackers to cause a denial of service (application crash) and possibly execute arbitrary code via a web page with embedded CLSIDs that reference certain COM objects that are not ActiveX controls, including (1) devenum.dll, (2) diactfrm.dll, (3) wmm2filt.dll, (4) fsusd.dll, (5) dmdskmgr.dll, (6) browsewm.dll, (7) browseui.dll, (8) shell32.dll, (9) mshtml.dll, (10) inetcfg.dll, (11) infosoft.dll, (12) query.dll, (13) syncui.dll, (14) clbcatex.dll, (15) clbcatq.dll, (16) comsvcs.dll, and (17) msconf.dll, which causes memory corruption, aka \"COM Object Instantiation Memory Corruption Vulnerability,\" a different vulnerability than CVE-2005-2087."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:ie:6:windows_server_2003_sp1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:5.01"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:5.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.1695", 
+                "id": 1695
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/14511", 
+                "id": 14511
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA05-221A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/959049", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/16373/", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2005/1353", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/Security/bulletin/ms05-038.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/14511", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1014643", 
+                    "vendor": "SECTRACK"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/959049", 
+                "id": "VU#959049"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "4.9", 
+                    "base": "5.1", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2002171", 
+                "signature": "ET DELETED COM Object Instantiation Memory Corruption Vulnerability (group 1)"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2002172", 
+                "signature": "ET DELETED COM Object Instantiation Memory Corruption Vulnerability (group 2)"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2002173", 
+                "signature": "ET DELETED COM Object Instantiation Memory Corruption Vulnerability (group 3)"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/ie_com_instantiation", 
+                "id": "exploit_info/ie_com_instantiation", 
+                "title": "Internet Explorer COM object instantiation vulnerability"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-1990"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:1061", 
+                "title": "IE6:XP,SP2 COM Object Instantiation Memory Corruption Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:1061"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:1337", 
+                "title": "IE5.01,SP4 COM Object Instantiation Memory Corruption Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:1337"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:100082", 
+                "title": "Test Consolidated to OVAL1221", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:100082"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:1235", 
+                "title": "IE6,SP1 COM Object Instantiation Memory Corruption Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:1235"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:1221", 
+                "title": "IE6:S03 COM Object Instantiation Memory Corruption Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:1221"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS05-038: Cumulative Security Update for Internet Explorer (896727)", 
+                "file": "smb_nt_ms05-038.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "19401"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Cumulative Security Update for Internet Explorer", 
+                "id": "Cumulative Security Update for Internet Explorer", 
+                "title": "896727"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/896727", 
+                "id": "896727", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS05-038", 
+                "id": "MS05-038", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

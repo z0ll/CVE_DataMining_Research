@@ -1,0 +1,203 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-2006", 
+                "published": "2002-12-31T00:00:00.000-05:00", 
+                "id": "CVE-2002-2006", 
+                "modified": "2011-03-07T21:11:09.703-05:00", 
+                "summary": "The default installation of Apache Tomcat 4.0 through 4.1 and 3.0 through 3.3.1 allows remote attackers to obtain the installation path and other sensitive system information via the (1) SnoopServlet or (2) TroubleShooter example servlets."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:apache:tomcat:3.1.1"
+            }, 
+            {
+                "id": "cpe:/a:apache:tomcat:3.2.4"
+            }, 
+            {
+                "id": "cpe:/a:apache:tomcat:3.3"
+            }, 
+            {
+                "id": "cpe:/a:apache:tomcat:3.2.3"
+            }, 
+            {
+                "id": "cpe:/a:apache:tomcat:4.0.1"
+            }, 
+            {
+                "id": "cpe:/a:apache:tomcat:4.0.2"
+            }, 
+            {
+                "id": "cpe:/a:apache:tomcat:4.0.0"
+            }, 
+            {
+                "id": "cpe:/a:apache:tomcat:4.0.3"
+            }, 
+            {
+                "id": "cpe:/a:apache:tomcat:3.3.1"
+            }, 
+            {
+                "id": "cpe:/a:apache:tomcat:3.1"
+            }, 
+            {
+                "id": "cpe:/a:apache:tomcat:3.0"
+            }, 
+            {
+                "id": "cpe:/a:apache:tomcat:3.2"
+            }, 
+            {
+                "id": "cpe:/a:apache:tomcat:4.1.0"
+            }, 
+            {
+                "id": "cpe:/a:apache:tomcat:3.2.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.19648", 
+                "id": 19648
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/4575", 
+                "id": 4575
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2008/1979/references", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/4575", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/static/8932.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2002-04/0311.html", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://tomcat.apache.org/security-4.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-239312-1", 
+                    "vendor": "SUNALERT"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/30908", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/30899", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1829", 
+                "signature": "SERVER-APACHE Apache Tomcat TroubleShooter servlet access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1830", 
+                "signature": "SERVER-APACHE Apache Tomcat SnoopServlet servlet access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-2006"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Apache Tomcat TroubleShooter Servlet Installed", 
+                "file": "apache_Tomcat_TroubleShooter.nasl", 
+                "family": "Web application abuses", 
+                "id": "11046"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Apache Tomcat TroubleShooter Servlet Information Disclosure", 
+                "file": "apache_Tomcat_TroubleShooter.nasl", 
+                "family": "CGI abuses", 
+                "id": "11046"
+            }, 
+            {
+                "name": "Apache Tomcat 4.x < 4.1.0 Multiple Vulnerabilities", 
+                "file": "tomcat_4_1_0.nasl", 
+                "family": "Web Servers", 
+                "id": "50475"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,236 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0045", 
+                "published": "2004-02-03T00:00:00.000-05:00", 
+                "id": "CVE-2004-0045", 
+                "modified": "2008-09-05T16:37:21.553-04:00", 
+                "summary": "Buffer overflow in the ARTpost function in art.c in the control message handling code for INN 2.4.0 may allow remote attackers to execute arbitrary code."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:isc:inn:2.4.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.471", 
+                "id": 471
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/9382", 
+                "id": 9382
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/759020", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/9382", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2004-01/0064.html", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2004-01/0063.html", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/14190", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.slackware.org/security/viewer.php?l=slackware-security&y=2004&m=slackware-security.365791", 
+                    "vendor": "SLACKWARE"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/10578", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/759020", 
+                "id": "VU#759020"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102427", 
+                "signature": "GPL MISC NNTP checkgroups overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102428", 
+                "signature": "GPL MISC NNTP ihave overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102430", 
+                "signature": "GPL MISC NNTP newgroup overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102431", 
+                "signature": "GPL MISC Nntp rmgroup overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102429", 
+                "signature": "GPL MISC NNTP sendme overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102424", 
+                "signature": "GPL MISC NNTP sendsys overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102425", 
+                "signature": "GPL MISC NNTP senduuname overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102426", 
+                "signature": "GPL MISC NNTP version overflow attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2424", 
+                "signature": "PROTOCOL-NNTP sendsys overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2425", 
+                "signature": "PROTOCOL-NNTP senduuname overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2426", 
+                "signature": "PROTOCOL-NNTP version overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2427", 
+                "signature": "PROTOCOL-NNTP checkgroups overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2428", 
+                "signature": "PROTOCOL-NNTP ihave overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2429", 
+                "signature": "PROTOCOL-NNTP sendme overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2430", 
+                "signature": "PROTOCOL-NNTP newgroup overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2431", 
+                "signature": "PROTOCOL-NNTP rmgroup overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0045"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: inn", 
+                "file": "freebsd_inn.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52531"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "INN < 2.4.1 Control Message Handling Code Overflow", 
+                "file": "inn_control_message_overflow.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "11984"
+            }, 
+            {
+                "name": "Slackware 9.0 / 9.1 / current : INN security update (SSA:2004-014-02)", 
+                "file": "Slackware_SSA_2004-014-02.nasl", 
+                "family": "Slackware Local Security Checks", 
+                "id": "18755"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

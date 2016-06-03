@@ -1,0 +1,169 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0208", 
+                "published": "1995-12-12T00:00:00.000-05:00", 
+                "id": "CVE-1999-0208", 
+                "modified": "2008-09-09T08:34:01.057-04:00", 
+                "summary": "rpc.ypupdated (NIS) allows remote users to execute arbitrary commands."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:sgi:irix:5.0"
+            }, 
+            {
+                "id": "cpe:/o:nec:ews-ux_v"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:3.2"
+            }, 
+            {
+                "id": "cpe:/o:sgi:irix:5.1"
+            }, 
+            {
+                "id": "cpe:/o:nec:up-ux_v"
+            }, 
+            {
+                "id": "cpe:/o:sgi:irix:5.2"
+            }, 
+            {
+                "id": "cpe:/o:sgi:irix:3"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:4.1"
+            }, 
+            {
+                "id": "cpe:/o:sgi:irix:4"
+            }, 
+            {
+                "id": "cpe:/o:nec:asl_ux_4800"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.13719", 
+                "id": 13719
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": []
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:591", 
+                "signature": "PROTOCOL-RPC portmap ypupdated request TCP"
+            }, 
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:1277", 
+                "signature": "PROTOCOL-RPC portmap ypupdated request UDP"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:2088", 
+                "signature": "PROTOCOL-RPC ypupdated arbitrary command attempt UDP"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:2089", 
+                "signature": "PROTOCOL-RPC ypupdated arbitrary command attempt TCP"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/ypupdated", 
+                "id": "exploit_info/ypupdated", 
+                "title": "rpc.ypupdated command injection vulnerability"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0208"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "strcat(|sleep , sleep,  true > /dev/null", 
+                "file": "ypupdated_remote_exec.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "80036"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "ypupdated service", 
+                "file": "rpc_ypupated.nasl", 
+                "family": "RPC", 
+                "id": "10243"
+            }, 
+            {
+                "name": "Multiple Vendor NIS rpc.ypupdated YP Map Update Arbitrary Remote Command Execution", 
+                "file": "ypupdated_remote_exec.nasl", 
+                "family": "RPC", 
+                "id": "31683"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

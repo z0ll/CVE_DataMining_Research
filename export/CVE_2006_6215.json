@@ -1,0 +1,191 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6215", 
+                "published": "2006-11-30T20:28:00.000-05:00", 
+                "id": "CVE-2006-6215", 
+                "modified": "2011-03-07T21:45:37.500-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in Wallpaper Website (Wallpaper Complete Website) 1.0.09 and earlier allow remote attackers to execute arbitrary SQL commands via the (1) login or (2) password parameter to (a) process.php, or the (3) wallpaperid parameter to (b) dlwallpaper.php."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:wallpaper:wallpaper_complete_website:1.0.09"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33553", 
+                "id": 33553
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4687", 
+                    "vendor": "VUPEN"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006975", 
+                "signature": "ET WEB_SPECIFIC_APPS Wallpaper Complete Website SQL Injection Attempt -- process.php login SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006976", 
+                "signature": "ET WEB_SPECIFIC_APPS Wallpaper Complete Website SQL Injection Attempt -- process.php login UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006977", 
+                "signature": "ET WEB_SPECIFIC_APPS Wallpaper Complete Website SQL Injection Attempt -- process.php login INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006978", 
+                "signature": "ET WEB_SPECIFIC_APPS Wallpaper Complete Website SQL Injection Attempt -- process.php login DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006979", 
+                "signature": "ET WEB_SPECIFIC_APPS Wallpaper Complete Website SQL Injection Attempt -- process.php login ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006980", 
+                "signature": "ET WEB_SPECIFIC_APPS Wallpaper Complete Website SQL Injection Attempt -- process.php login UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006981", 
+                "signature": "ET WEB_SPECIFIC_APPS Wallpaper Complete Website SQL Injection Attempt -- process.php password SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006982", 
+                "signature": "ET WEB_SPECIFIC_APPS Wallpaper Complete Website SQL Injection Attempt -- process.php password UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006983", 
+                "signature": "ET WEB_SPECIFIC_APPS Wallpaper Complete Website SQL Injection Attempt -- process.php password INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006984", 
+                "signature": "ET WEB_SPECIFIC_APPS Wallpaper Complete Website SQL Injection Attempt -- process.php password DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006985", 
+                "signature": "ET WEB_SPECIFIC_APPS Wallpaper Complete Website SQL Injection Attempt -- process.php password ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006986", 
+                "signature": "ET WEB_SPECIFIC_APPS Wallpaper Complete Website SQL Injection Attempt -- process.php password UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006987", 
+                "signature": "ET WEB_SPECIFIC_APPS Wallpaper Complete Website SQL Injection Attempt -- dlwallpaper.php wallpaperid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006988", 
+                "signature": "ET WEB_SPECIFIC_APPS Wallpaper Complete Website SQL Injection Attempt -- dlwallpaper.php wallpaperid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006989", 
+                "signature": "ET WEB_SPECIFIC_APPS Wallpaper Complete Website SQL Injection Attempt -- dlwallpaper.php wallpaperid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006990", 
+                "signature": "ET WEB_SPECIFIC_APPS Wallpaper Complete Website SQL Injection Attempt -- dlwallpaper.php wallpaperid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006991", 
+                "signature": "ET WEB_SPECIFIC_APPS Wallpaper Complete Website SQL Injection Attempt -- dlwallpaper.php wallpaperid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006992", 
+                "signature": "ET WEB_SPECIFIC_APPS Wallpaper Complete Website SQL Injection Attempt -- dlwallpaper.php wallpaperid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6215"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

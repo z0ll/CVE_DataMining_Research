@@ -1,0 +1,193 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1618", 
+                "published": "2013-02-08T14:55:01.093-05:00", 
+                "id": "CVE-2013-1618", 
+                "modified": "2013-03-07T23:12:04.257-05:00", 
+                "summary": "The TLS implementation in Opera before 12.13 does not properly consider timing side-channel attacks on a MAC check operation during the processing of malformed CBC padding, which allows remote attackers to conduct distinguishing attacks and plaintext-recovery attacks via statistical analysis of timing data for crafted packets, a related issue to CVE-2013-0169."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/310.html", 
+                "id": "CWE-310", 
+                "title": "Cryptographic Issues"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:opera:opera_browser:12.00"
+            }, 
+            {
+                "id": "cpe:/a:opera:opera_browser:12.01"
+            }, 
+            {
+                "id": "cpe:/a:opera:opera_browser:12.02"
+            }, 
+            {
+                "id": "cpe:/a:opera:opera_browser:12.12"
+            }, 
+            {
+                "id": "cpe:/a:opera:opera_browser:12.00:beta"
+            }, 
+            {
+                "id": "cpe:/a:opera:opera_browser:12.10:beta"
+            }, 
+            {
+                "id": "cpe:/a:opera:opera_browser:12.11"
+            }, 
+            {
+                "id": "cpe:/a:opera:opera_browser:12.10"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.63527", 
+                "id": 63527
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.opera.com/support/kb/view/1044/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.opera.com/docs/changelogs/unified/1213/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.isg.rhul.ac.uk/tls/TLStiming.pdf", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2013/02/05/24", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2013-02/msg00038.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "4.9", 
+                    "base": "4.0", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-1618"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19458", 
+                "title": "Vulnerability which allows remote attackers to conduct distinguishing attacks and plaintext-recovery attacks in Opera before 12.13", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:19458"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Opera Multiple Vulnerabilities -01 Feb 13 (Linux)", 
+                "file": "gb_opera_mult_vuln01_feb13_lin.nasl", 
+                "family": "General", 
+                "id": "803310"
+            }, 
+            {
+                "name": "Opera Multiple Vulnerabilities -01 Feb 13 (Mac OS X)", 
+                "file": "gb_opera_mult_vuln01_feb13_macosx.nasl", 
+                "family": "General", 
+                "id": "803311"
+            }, 
+            {
+                "name": "Opera Multiple Vulnerabilities -01 Feb 13 (Windows)", 
+                "file": "gb_opera_mult_vuln01_feb13_win.nasl", 
+                "family": "General", 
+                "id": "803309"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "GLSA-201406-14 : Opera: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201406-14.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "76065"
+            }, 
+            {
+                "name": "openSUSE Security Update : Opera (openSUSE-SU-2013:0289-2)", 
+                "file": "openSUSE-2013-113.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74888"
+            }, 
+            {
+                "name": "Opera < 12.13 Multiple Vulnerabilities", 
+                "file": "opera_1213.nasl", 
+                "family": "Windows", 
+                "id": "64363"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2013-1618.html", 
+                "id": "openSUSE-SU-2013:0289"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

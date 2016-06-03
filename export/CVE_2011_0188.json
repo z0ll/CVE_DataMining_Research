@@ -1,0 +1,584 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0188", 
+                "published": "2011-03-22T22:00:06.110-04:00", 
+                "id": "CVE-2011-0188", 
+                "modified": "2011-08-23T23:15:07.243-04:00", 
+                "summary": "The VpMemAlloc function in bigdecimal.c in the BigDecimal class in Ruby 1.9.2-p136 and earlier, as used on Apple Mac OS X before 10.6.7 and other platforms, does not properly allocate memory, which allows context-dependent attackers to execute arbitrary code or cause a denial of service (application crash) via vectors involving creation of a large BigDecimal value within a 64-bit process, related to an \"integer truncation issue.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9.2"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9.1:-p129"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9.0-20060415"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9.2:dev"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9:r18423"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9.1:-rc2"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9.1:-rc1"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9.0-0"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9.1:-p429"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9.0-2"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9.0-1"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9.0-20070709"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9.2-p136"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9.0:r18423"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9.0"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9.1:-p376"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9.1:-p0"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9.1:-p243"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9.1"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9.1:-preview_2"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9.1:-preview_1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.56925", 
+                "id": 56925
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=682332", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://svn.ruby-lang.org/cgi-bin/viewvc.cgi/trunk/ext/bigdecimal/bigdecimal.c?r1=29364&r2=30993", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://support.apple.com/kb/HT4581", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://lists.apple.com/archives/security-announce/2011/Mar/msg00006.html", 
+                    "vendor": "APPLE"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1025236", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2011-0910.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2011-0909.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2011-0908.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2011:098", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2011:097", 
+                    "vendor": "MANDRIVA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-0188"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21881", 
+                "title": "RHSA-2011:0910: ruby security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21881"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21638", 
+                "title": "RHSA-2011:0909: ruby security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21638"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23508", 
+                "title": "ELSA-2011:0910: ruby security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23508"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23159", 
+                "title": "ELSA-2011:0909: ruby security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23159"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28124", 
+                "title": "DEPRECATED: ELSA-2011-0909 -- ruby security update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28124"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27961", 
+                "title": "DEPRECATED: ELSA-2011-0910 -- ruby security update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27961"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:15163", 
+                "title": "USN-1377-1 -- Ruby vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:15163"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CentOS Update for irb CESA-2011:0908 centos4 i386", 
+                "file": "gb_CESA-2011_0908_irb_centos4_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880953"
+            }, 
+            {
+                "name": "CentOS Update for irb CESA-2011:0908 centos4 x86_64", 
+                "file": "gb_CESA-2011_0908_irb_centos4_x86_64.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881337"
+            }, 
+            {
+                "name": "CentOS Update for ruby CESA-2011:0909 centos5 i386", 
+                "file": "gb_CESA-2011_0909_ruby_centos5_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880549"
+            }, 
+            {
+                "name": "CentOS Update for ruby CESA-2011:0909 centos5 x86_64", 
+                "file": "gb_CESA-2011_0909_ruby_centos5_x86_64.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881272"
+            }, 
+            {
+                "name": "Mandriva Update for ruby MDVSA-2011:097 (ruby)", 
+                "file": "gb_mandriva_MDVSA_2011_097.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "831408"
+            }, 
+            {
+                "name": "RedHat Update for ruby RHSA-2011:0908-01", 
+                "file": "gb_RHSA-2011_0908-01_ruby.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870449"
+            }, 
+            {
+                "name": "RedHat Update for ruby RHSA-2011:0909-01", 
+                "file": "gb_RHSA-2011_0909-01_ruby.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870450"
+            }, 
+            {
+                "name": "RedHat Update for ruby RHSA-2011:0910-01", 
+                "file": "gb_RHSA-2011_0910-01_ruby.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870672"
+            }, 
+            {
+                "name": "Ubuntu Update for ruby1.8 USN-1377-1", 
+                "file": "gb_ubuntu_USN_1377_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840923"
+            }, 
+            {
+                "name": "Mac OS X v10.6.6 Multiple Vulnerabilities (2011-001)", 
+                "file": "secpod_macosx_su11-001.nasl", 
+                "family": "Mac OS X Local Security Checks", 
+                "id": "902470"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 4 : ruby (CESA-2011:0908)", 
+                "file": "centos_RHSA-2011-0908.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "55837"
+            }, 
+            {
+                "name": "CentOS 5 : ruby (CESA-2011:0909)", 
+                "file": "centos_RHSA-2011-0909.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "67085"
+            }, 
+            {
+                "name": "Debian DLA-235-1 : ruby1.9.1 security update", 
+                "file": "debian_DLA-235.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "83907"
+            }, 
+            {
+                "name": "Debian DLA-88-1 : ruby1.8 security update", 
+                "file": "debian_DLA-88.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "82233"
+            }, 
+            {
+                "name": "GLSA-201412-27 : Ruby: Denial of Service", 
+                "file": "gentoo_GLSA-201412-27.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "79980"
+            }, 
+            {
+                "name": "Mac OS X 10.6 < 10.6.7", 
+                "file": "macosx_10_6_7.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "52754"
+            }, 
+            {
+                "name": "Mac OS X Multiple Vulnerabilities (Security Update 2011-001)", 
+                "file": "macosx_SecUpd2011-001.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "52753"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : ruby (MDVSA-2011:097)", 
+                "file": "mandriva_MDVSA-2011-097.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "54626"
+            }, 
+            {
+                "name": "Oracle Linux 4 : ruby (ELSA-2011-0908)", 
+                "file": "oraclelinux_ELSA-2011-0908.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68297"
+            }, 
+            {
+                "name": "Oracle Linux 5 : ruby (ELSA-2011-0909)", 
+                "file": "oraclelinux_ELSA-2011-0909.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68298"
+            }, 
+            {
+                "name": "Oracle Linux 6 : ruby (ELSA-2011-0910)", 
+                "file": "oraclelinux_ELSA-2011-0910.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68299"
+            }, 
+            {
+                "name": "RHEL 4 : ruby (RHSA-2011:0908)", 
+                "file": "redhat-RHSA-2011-0908.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "55450"
+            }, 
+            {
+                "name": "RHEL 5 : ruby (RHSA-2011:0909)", 
+                "file": "redhat-RHSA-2011-0909.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "55451"
+            }, 
+            {
+                "name": "RHEL 6 : ruby (RHSA-2011:0910)", 
+                "file": "redhat-RHSA-2011-0910.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "55452"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : ruby on SL4.x i386/x86_64", 
+                "file": "sl_20110628_ruby_on_SL4_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "61075"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : ruby on SL5.x i386/x86_64", 
+                "file": "sl_20110628_ruby_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "61076"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : ruby on SL6.x i386/x86_64", 
+                "file": "sl_20110628_ruby_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "61077"
+            }, 
+            {
+                "name": "openSUSE Security Update : ruby (openSUSE-SU-2011:0561-1)", 
+                "file": "suse_11_3_ruby-110517.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75729"
+            }, 
+            {
+                "name": "openSUSE Security Update : ruby (openSUSE-SU-2011:0556-1)", 
+                "file": "suse_11_4_ruby-110517.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "76014"
+            }, 
+            {
+                "name": "SuSE 11.1 Security Update : ruby (SAT Patch Number 4585)", 
+                "file": "suse_11_ruby-110517.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "54921"
+            }, 
+            {
+                "name": "SuSE 10 Security Update : ruby (ZYPP Patch Number 7528)", 
+                "file": "suse_ruby-7528.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "57253"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS / 10.10 / 11.04 / 11.10 : ruby1.8 vulnerabilities (USN-1377-1)", 
+                "file": "ubuntu_USN-1377-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "58146"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2011:097", 
+                "id": "MDVSA-2011:097"
+            }, 
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2011:098", 
+                "id": "MDVSA-2011:098"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20110908", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2011-0908.html", 
+                    "id": "RHSA-2011:0908", 
+                    "title": "RHSA-2011:0908: ruby security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=554485", 
+                    "title": "CVE-2009-4492 ruby WEBrick log escape sequence", 
+                    "id": "554485", 
+                    "issue date": "2011-06-28", 
+                    "associated redhat": "RHSA-2011:0908"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=587731", 
+                    "title": "CVE-2010-0541 Ruby WEBrick javascript injection flaw", 
+                    "id": "587731", 
+                    "issue date": "2011-06-28", 
+                    "associated redhat": "RHSA-2011:0908"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=678920", 
+                    "title": "CVE-2011-1005 Ruby: Untrusted codes able to modify arbitrary strings", 
+                    "id": "678920", 
+                    "issue date": "2011-06-28", 
+                    "associated redhat": "RHSA-2011:0908"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=682332", 
+                    "title": "CVE-2011-0188 ruby: memory corruption in BigDecimal on 64bit platforms", 
+                    "id": "682332", 
+                    "issue date": "2011-06-28", 
+                    "associated redhat": "RHSA-2011:0908"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20110909", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2011-0909.html", 
+                    "id": "RHSA-2011:0909", 
+                    "title": "RHSA-2011:0909: ruby security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=554485", 
+                    "title": "CVE-2009-4492 ruby WEBrick log escape sequence", 
+                    "id": "554485", 
+                    "issue date": "2011-06-28", 
+                    "associated redhat": "RHSA-2011:0909"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=587731", 
+                    "title": "CVE-2010-0541 Ruby WEBrick javascript injection flaw", 
+                    "id": "587731", 
+                    "issue date": "2011-06-28", 
+                    "associated redhat": "RHSA-2011:0909"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=678913", 
+                    "title": "CVE-2011-1004 Ruby: Symlink race condition by removing directory trees in fileutils module", 
+                    "id": "678913", 
+                    "issue date": "2011-06-28", 
+                    "associated redhat": "RHSA-2011:0909"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=678920", 
+                    "title": "CVE-2011-1005 Ruby: Untrusted codes able to modify arbitrary strings", 
+                    "id": "678920", 
+                    "issue date": "2011-06-28", 
+                    "associated redhat": "RHSA-2011:0909"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=682332", 
+                    "title": "CVE-2011-0188 ruby: memory corruption in BigDecimal on 64bit platforms", 
+                    "id": "682332", 
+                    "issue date": "2011-06-28", 
+                    "associated redhat": "RHSA-2011:0909"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20110910", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2011-0910.html", 
+                    "id": "RHSA-2011:0910", 
+                    "title": "RHSA-2011:0910: ruby security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=678913", 
+                    "title": "CVE-2011-1004 Ruby: Symlink race condition by removing directory trees in fileutils module", 
+                    "id": "678913", 
+                    "issue date": "2011-06-28", 
+                    "associated redhat": "RHSA-2011:0910"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=678920", 
+                    "title": "CVE-2011-1005 Ruby: Untrusted codes able to modify arbitrary strings", 
+                    "id": "678920", 
+                    "issue date": "2011-06-28", 
+                    "associated redhat": "RHSA-2011:0910"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=682332", 
+                    "title": "CVE-2011-0188 ruby: memory corruption in BigDecimal on 64bit platforms", 
+                    "id": "682332", 
+                    "issue date": "2011-06-28", 
+                    "associated redhat": "RHSA-2011:0910"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

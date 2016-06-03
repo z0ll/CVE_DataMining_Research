@@ -1,0 +1,214 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/20.html", 
+                "id": "CWE-20", 
+                "title": "Improper Input Validation"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/713.html", 
+                "id": "CWE-713", 
+                "title": "OWASP Top Ten 2007 Category A2 - Injection Flaws"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/727.html", 
+                "id": "CWE-727", 
+                "title": "OWASP Top Ten 2004 Category A6 - Injection Flaws"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/722.html", 
+                "id": "CWE-722", 
+                "title": "OWASP Top Ten 2004 Category A1 - Unvalidated Input"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/990.html", 
+                "id": "CWE-990", 
+                "title": "SFP Secondary Cluster: Tainted Input to Command"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/929.html", 
+                "id": "CWE-929", 
+                "title": "OWASP Top Ten 2013 Category A1 - Injection"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/11.html", 
+                "id": 11
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/136.html", 
+                "id": 136
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/15.html", 
+                "id": 15
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/23.html", 
+                "id": 23
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/43.html", 
+                "id": 43
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/6.html", 
+                "id": 6
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/75.html", 
+                "id": 75
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/76.html", 
+                "id": 76
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5082", 
+                "published": "2015-09-28T11:59:00.097-04:00", 
+                "id": "CVE-2015-5082", 
+                "modified": "2015-09-28T20:48:05.827-04:00", 
+                "summary": "Endian Firewall before 3.0 allows remote attackers to execute arbitrary commands via shell metacharacters in the (1) NEW_PASSWORD_1 or (2) NEW_PASSWORD_2 parameter to cgi-bin/chpasswd.cgi."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/77.html", 
+                "id": "CWE-77", 
+                "title": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:endian_firewall:endian_firewall:2.5.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.78126", 
+                "id": 78126
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://www.exploit-db.com/exploits/38096/", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "https://www.exploit-db.com/exploits/37428/", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "https://www.exploit-db.com/exploits/37426/", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://packetstormsecurity.com/files/133469/Endian-Firewall-Proxy-Password-Change-Command-Injection.html", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-929", 
+                    "title": "OWASP Top Ten 2013 Category A1 - Injection"
+                }
+            ], 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "efw_chpasswd_exec.rb", 
+                "file": "metasploit-framework/modules/exploits/linux/http/efw_chpasswd_exec.rb", 
+                "title": "OpenPLI Webif Arbitrary Command Execution"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/37428", 
+                "id": 37428, 
+                "file": ""
+            }, 
+            {
+                "url": "http://www.exploit-db.com/exploits/37426", 
+                "id": 37426, 
+                "file": ""
+            }, 
+            {
+                "url": "http://www.exploit-db.com/exploits/38096", 
+                "id": 38096, 
+                "file": "platforms/linux/remote/38096.rb"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-5082"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

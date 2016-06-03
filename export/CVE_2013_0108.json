@@ -1,0 +1,186 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0108", 
+                "published": "2013-02-24T06:48:21.407-05:00", 
+                "id": "CVE-2013-0108", 
+                "modified": "2013-02-25T00:00:00.000-05:00", 
+                "summary": "An ActiveX control in HscRemoteDeploy.dll in Honeywell Enterprise Buildings Integrator (EBI) R310, R400.2, R410.1, and R410.2; SymmetrE R310, R410.1, and R410.2; ComfortPoint Open Manager (aka CPO-M) Station R100; and HMIWeb Browser client packages allows remote attackers to execute arbitrary code via a crafted HTML document."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:honeywell:symmetre:r310"
+            }, 
+            {
+                "id": "cpe:/a:honeywell:enterprise_buildings_integrator:r310"
+            }, 
+            {
+                "id": "cpe:/a:honeywell:symmetre:r400.2"
+            }, 
+            {
+                "id": "cpe:/a:honeywell:symmetre:r410.1"
+            }, 
+            {
+                "id": "cpe:/a:honeywell:enterprise_buildings_integrator:r400.2"
+            }, 
+            {
+                "id": "cpe:/a:honeywell:comfortpoint_open_manager_station:r100"
+            }, 
+            {
+                "id": "cpe:/a:honeywell:enterprise_buildings_integrator:r410.1"
+            }, 
+            {
+                "id": "cpe:/a:honeywell:enterprise_buildings_integrator:r410.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.63624", 
+                "id": 63624
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://ics-cert.us-cert.gov/pdf/ICSA-13-053-02.pdf", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "honeywell_hscremotedeploy_exec.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/browser/honeywell_hscremotedeploy_exec.rb", 
+                "title": "Honeywell HSC Remote Deployer ActiveX Remote Code Execution"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/honeywell_hscremotedeploy", 
+                "id": "exploit_info/honeywell_hscremotedeploy", 
+                "title": "Honeywell HscRemoteDeploy.dll ActiveX Control vulnerability"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-0108"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS KB2820197: Update Rollup for ActiveX Kill Bits", 
+                "file": "smb_kb_2820197.nasl", 
+                "family": "Windows", 
+                "id": "66423"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

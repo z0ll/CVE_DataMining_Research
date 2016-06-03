@@ -1,0 +1,228 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3523", 
+                "published": "2012-11-11T08:00:46.727-05:00", 
+                "id": "CVE-2012-3523", 
+                "modified": "2013-02-21T23:39:11.723-05:00", 
+                "summary": "The STARTTLS implementation in nnrpd in INN before 2.5.3 does not properly restrict I/O buffering, which allows man-in-the-middle attackers to insert commands into encrypted sessions by sending a cleartext command that is processed after TLS is in place, related to a \"plaintext command injection\" attack, a similar issue to CVE-2011-0411."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:isc:inn:1.4"
+            }, 
+            {
+                "id": "cpe:/a:isc:inn:2.5.2"
+            }, 
+            {
+                "id": "cpe:/a:isc:inn:1.7"
+            }, 
+            {
+                "id": "cpe:/a:isc:inn:1.5"
+            }, 
+            {
+                "id": "cpe:/a:isc:inn:1.4sec"
+            }, 
+            {
+                "id": "cpe:/a:isc:inn:1.4unoff4"
+            }, 
+            {
+                "id": "cpe:/a:isc:inn:1.7.2"
+            }, 
+            {
+                "id": "cpe:/a:isc:inn:2.2.3"
+            }, 
+            {
+                "id": "cpe:/a:isc:inn:1.4unoff3"
+            }, 
+            {
+                "id": "cpe:/a:isc:inn:2.2.1"
+            }, 
+            {
+                "id": "cpe:/a:isc:inn:2.2.2"
+            }, 
+            {
+                "id": "cpe:/a:isc:inn:1.5.1"
+            }, 
+            {
+                "id": "cpe:/a:isc:inn:2.2"
+            }, 
+            {
+                "id": "cpe:/a:isc:inn:2.1"
+            }, 
+            {
+                "id": "cpe:/a:isc:inn:2.0"
+            }, 
+            {
+                "id": "cpe:/a:isc:inn:2.4.0"
+            }, 
+            {
+                "id": "cpe:/a:isc:inn:1.4sec2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.62893", 
+                "id": 62893
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2012:156", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/50661", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2012-09/msg00058.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-3523"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: inn", 
+                "file": "freebsd_inn0.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "71837"
+            }, 
+            {
+                "name": "Mandriva Update for inn MDVSA-2012:156 (inn)", 
+                "file": "gb_mandriva_MDVSA_2012_156.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "831735"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "FreeBSD : inn -- plaintext command injection into encrypted channel (a7975581-ee26-11e1-8bd8-0022156e8794)", 
+                "file": "freebsd_pkg_a7975581ee2611e18bd80022156e8794.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "61676"
+            }, 
+            {
+                "name": "GLSA-201401-24 : INN: Man-in-the-middle attack", 
+                "file": "gentoo_GLSA-201401-24.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "72079"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : inn (MDVSA-2012:156)", 
+                "file": "mandriva_MDVSA-2012-156.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "62404"
+            }, 
+            {
+                "name": "NNTP Service STARTTLS Plaintext Command Injection", 
+                "file": "nntp_starttls_plaintext_injection.nasl", 
+                "family": "Misc.", 
+                "id": "53848"
+            }, 
+            {
+                "name": "openSUSE Security Update : inn (openSUSE-SU-2012:1171-1)", 
+                "file": "openSUSE-2012-600.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74753"
+            }, 
+            {
+                "name": "SuSE 11.2 Security Update : inn (SAT Patch Number 6774)", 
+                "file": "suse_11_inn-120905.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "64159"
+            }, 
+            {
+                "name": "SuSE 10 Security Update : inn (ZYPP Patch Number 8276)", 
+                "file": "suse_inn-8276.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "62061"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2012:156", 
+                "id": "MDVSA-2012:156"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2012-3523.html", 
+                "id": "openSUSE-SU-2012:1171"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

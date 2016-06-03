@@ -1,0 +1,373 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-0176", 
+                "published": "2005-02-15T00:00:00.000-05:00", 
+                "id": "CVE-2005-0176", 
+                "modified": "2010-08-21T00:25:36.763-04:00", 
+                "summary": "The shmctl function in Linux 2.6.9 and earlier allows local users to unlock the memory of other processes, which could cause sensitive memory to be swapped to disk, which could allow it to be read by other users once it has been released."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:2.6.9:2.6.20"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.23953", 
+                "id": 23953
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/12598", 
+                "id": 12598
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2005-092.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=full-disclosure&m=110846102231365&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://distro.conectiva.com.br/atualizacoes/index.php?id=a&anuncio=000930", 
+                    "vendor": "CONECTIVA"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/12598", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2005-472.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/19607", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "ftp://patches.sgi.com/support/free/security/advisories/20060402-01-U", 
+                    "vendor": "SGI"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-0176"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:8778", 
+                "title": "The shmctl function in Linux 2.6.9 and earlier allows local users to unlock the memory of other processes, which could cause sensitive memory to be swapped to disk, which could allow it to be read by other users once it has been released.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:8778"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:1225", 
+                "title": "Linux Kernel shmctl() Memory Swap Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:1225"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "CentOS 3 : kernel (CESA-2005:472)", 
+                "file": "centos_RHSA-2005-472.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "21828"
+            }, 
+            {
+                "name": "RHEL 4 : kernel (RHSA-2005:092)", 
+                "file": "redhat-RHSA-2005-092.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "17183"
+            }, 
+            {
+                "name": "RHEL 3 : kernel (RHSA-2005:472)", 
+                "file": "redhat-RHSA-2005-472.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "18389"
+            }, 
+            {
+                "name": "Ubuntu 4.10 : linux-source-2.6.8.1 vulnerabilities (USN-82-1)", 
+                "file": "ubuntu_USN-82-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "20706"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20050092", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2005-092.html", 
+                    "id": "RHSA-2005:092", 
+                    "title": "RHSA-2005:092: kernel security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=142670", 
+                    "title": "CAN-2004-1137 IGMP flaws", 
+                    "id": "142670", 
+                    "issue date": "2005-02-18", 
+                    "associated redhat": "RHSA-2005:092"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=144131", 
+                    "title": "CAN-2005-0090 4GB split DoS", 
+                    "id": "144131", 
+                    "issue date": "2005-02-18", 
+                    "associated redhat": "RHSA-2005:092"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=144136", 
+                    "title": "CAN-2004-1235 isec.pl do_brk() privilege escalation", 
+                    "id": "144136", 
+                    "issue date": "2005-02-18", 
+                    "associated redhat": "RHSA-2005:092"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=144391", 
+                    "title": "CAN-2004-1056 insufficient locking checks in DRM code", 
+                    "id": "144391", 
+                    "issue date": "2005-02-18", 
+                    "associated redhat": "RHSA-2005:092"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=144412", 
+                    "title": "CAN-2005-0001 page fault @ SMP privilege escalation", 
+                    "id": "144412", 
+                    "issue date": "2005-02-18", 
+                    "associated redhat": "RHSA-2005:092"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=144471", 
+                    "title": "CAN-2005-0176 unlock someone elses ipc memory", 
+                    "id": "144471", 
+                    "issue date": "2005-02-18", 
+                    "associated redhat": "RHSA-2005:092"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=144522", 
+                    "title": "CAN-2005-0180 2.6 scsi ioctl integer overflow and information leak", 
+                    "id": "144522", 
+                    "issue date": "2005-02-18", 
+                    "associated redhat": "RHSA-2005:092"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=144528", 
+                    "title": "CAN-2005-0179 RLIMIT_MEMLOCK bypass and (2.6) unprivileged user DoS", 
+                    "id": "144528", 
+                    "issue date": "2005-02-18", 
+                    "associated redhat": "RHSA-2005:092"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=144532", 
+                    "title": "random poolsize sysctl handler integer overflow", 
+                    "id": "144532", 
+                    "issue date": "2005-02-18", 
+                    "associated redhat": "RHSA-2005:092"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=144658", 
+                    "title": "CAN-2005-0091 4g4g PROT_NONE fix (CAN-2005-0092)", 
+                    "id": "144658", 
+                    "issue date": "2005-02-18", 
+                    "associated redhat": "RHSA-2005:092"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=146083", 
+                    "title": "20041212 Clear ebp on sysenter return", 
+                    "id": "146083", 
+                    "issue date": "2005-02-18", 
+                    "associated redhat": "RHSA-2005:092"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=146095", 
+                    "title": "CAN-2005-0177 nls_ascii incorrect table size", 
+                    "id": "146095", 
+                    "issue date": "2005-02-18", 
+                    "associated redhat": "RHSA-2005:092"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=146101", 
+                    "title": "CAN-2005-0178 tty/setsid race", 
+                    "id": "146101", 
+                    "issue date": "2005-02-18", 
+                    "associated redhat": "RHSA-2005:092"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20050472", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2005-472.html", 
+                    "id": "RHSA-2005:472", 
+                    "title": "RHSA-2005:472: kernel security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=126411", 
+                    "title": "CVE-2004-0491 mlock accounting issue", 
+                    "id": "126411", 
+                    "issue date": "2005-05-25", 
+                    "associated redhat": "RHSA-2005:472"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=141394", 
+                    "title": "Memory corruption with kernel 2.4.21-27.EL", 
+                    "id": "141394", 
+                    "issue date": "2005-05-25", 
+                    "associated redhat": "RHSA-2005:472"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=141905", 
+                    "title": "kernel 2.4.21-25.ELsmp panic (kscand)", 
+                    "id": "141905", 
+                    "issue date": "2005-05-25", 
+                    "associated redhat": "RHSA-2005:472"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=142802", 
+                    "title": "CVE-2005-0176 unlock someone elses ipc memory", 
+                    "id": "142802", 
+                    "issue date": "2005-05-25", 
+                    "associated redhat": "RHSA-2005:472"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=149087", 
+                    "title": "Kernel panic regression in 2.4.21-27.0.2.ELsmp", 
+                    "id": "149087", 
+                    "issue date": "2005-05-25", 
+                    "associated redhat": "RHSA-2005:472"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=151865", 
+                    "title": "Page corruption in U5 Beta", 
+                    "id": "151865", 
+                    "issue date": "2005-05-25", 
+                    "associated redhat": "RHSA-2005:472"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=156023", 
+                    "title": "Memory corruption", 
+                    "id": "156023", 
+                    "issue date": "2005-05-25", 
+                    "associated redhat": "RHSA-2005:472"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=157451", 
+                    "title": "CVE-2005-1263 Linux kernel ELF core dump crash vulnerability", 
+                    "id": "157451", 
+                    "issue date": "2005-05-25", 
+                    "associated redhat": "RHSA-2005:472"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

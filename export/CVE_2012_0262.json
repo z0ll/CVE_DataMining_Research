@@ -1,0 +1,199 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0262", 
+                "published": "2013-12-31T15:55:15.040-05:00", 
+                "id": "CVE-2012-0262", 
+                "modified": "2014-01-02T11:32:03.107-05:00", 
+                "summary": "op5config/welcome in system-op5config before 2.0.3 in op5 Monitor and op5 Appliance before 5.5.3 allows remote attackers to execute arbitrary commands via shell metacharacters in the password parameter."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:op5:monitor:5.3.5"
+            }, 
+            {
+                "id": "cpe:/a:op5:system-op5config:2.0.2"
+            }, 
+            {
+                "id": "cpe:/a:op5:monitor:5.5.0"
+            }, 
+            {
+                "id": "cpe:/a:op5:monitor:5.4.2"
+            }, 
+            {
+                "id": "cpe:/a:op5:monitor:5.4.0"
+            }, 
+            {
+                "id": "cpe:/a:op5:monitor:5.5.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.65921", 
+                "id": 65921
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/78065", 
+                "id": 78065
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugs.op5.com/view.php?id=5094", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/78065", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.op5.com/news/support-news/fixed-vulnerabilities-op5-monitor-op5-appliance/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ekelow.se/file_uploads/Advisories/ekelow-aid-2012-01.pdf", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/47417", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://seclists.org/fulldisclosure/2012/Jan/62", 
+                    "vendor": "FULLDISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "op5_welcome.rb", 
+                "file": "metasploit-framework/modules/exploits/multi/http/op5_welcome.rb", 
+                "title": "OP5 welcome Remote Command Execution"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-0262"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "op5 Config Arbitrary Command Execution", 
+                "file": "op5_config_command_execution.nasl", 
+                "family": "CGI abuses", 
+                "id": "57578"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

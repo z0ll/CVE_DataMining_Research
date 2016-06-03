@@ -1,0 +1,224 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0549", 
+                "published": "2004-08-06T00:00:00.000-04:00", 
+                "id": "CVE-2004-0549", 
+                "modified": "2008-09-10T15:26:48.493-04:00", 
+                "summary": "The WebBrowser ActiveX control, or the Internet Explorer HTML rendering engine (MSHTML), as used in Internet Explorer 6, allows remote attackers to execute arbitrary code in the Local Security context by using the showModalDialog method and modifying the location to execute code such as Javascript, as demonstrated using (1) delayed HTTP redirect operations, and an HTTP response with a Location: header containing a \"URL:\" prepended to a \"ms-its\" protocol URI, or (2) modifying the location attribute of the window, as exploited by the Download.ject (aka Scob aka Toofer) using the ADODB.Stream object."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:ie:6.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:5.01"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:5.5"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.697", 
+                "id": 697
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/8275", 
+                "id": 8275
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA04-163A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA04-212A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA04-184A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/713878", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms04-025.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://umbrella.name/originalvuln/msie/InsiderPrototype/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=108852642021426&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/fulldisclosure/2004-06/0104.html", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/fulldisclosure/2004-06/0031.html", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://62.131.86.111/analysis.htm", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/16348", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=108786396622284&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/713878", 
+                "id": "VU#713878"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2102577", 
+                "signature": "GPL WEB_CLIENT local resource redirection attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-user", 
+                "id": "sid:2577", 
+                "signature": "FILE-OTHER local resource redirection attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0549"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:207", 
+                "title": "Scob and Toofer Internet Explorer v6.0,SP1 for Server 2003 Vulnerabilities", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:207"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:241", 
+                "title": "Scob and Toofer Internet Explorer v5.5,SP2 Vulnerabilities", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:241"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:1133", 
+                "title": "Scob and Toofer Internet Explorer v6.0,SP1 Vulnerabilities", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:1133"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:519", 
+                "title": "Scob and Toofer Internet Explorer v6.0 Vulnerabilities", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:519"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "IE 5.01 5.5 6.0 Cumulative patch (890923)", 
+                "file": "smb_nt_ms02-005.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "10861"
+            }
+        ], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Cumulative Security Update for Internet Explorer", 
+                "id": "Cumulative Security Update for Internet Explorer", 
+                "title": "867801"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/867801", 
+                "id": "867801", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS04-025", 
+                "id": "MS04-025", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

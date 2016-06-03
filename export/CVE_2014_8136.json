@@ -1,0 +1,2477 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8136", 
+                "published": "2014-12-19T10:59:10.377-05:00", 
+                "id": "CVE-2014-8136", 
+                "modified": "2015-04-17T21:59:19.307-04:00", 
+                "summary": "The (1) qemuDomainMigratePerform and (2) qemuDomainMigrateFinish2 functions in qemu/qemu_driver.c in libvirt do not unlock the domain when an ACL check fails, which allow local users to cause a denial of service via unspecified vectors."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:redhat:libvirt:-"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.68558", 
+                "id": 68558
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:070", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:023", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-0323.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2015-01/msg00005.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2015-01/msg00003.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://libvirt.org/git/?p=libvirt.git;a=commit;h=2bdcd29c713dfedd813c89f56ae98f6f3898313d", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://advisories.mageia.org/MGASA-2015-0002.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "2.1", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-8136"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "CentOS 7 : libvirt (CESA-2015:0323)", 
+                "file": "centos_RHSA-2015-0323.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "81887"
+            }, 
+            {
+                "name": "Fedora 20 : libvirt-1.1.3.9-1.fc20 (2015-1883)", 
+                "file": "fedora_2015-1883.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "81392"
+            }, 
+            {
+                "name": "Fedora 21 : libvirt-1.2.9.2-1.fc21 (2015-1892)", 
+                "file": "fedora_2015-1892.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "81365"
+            }, 
+            {
+                "name": "GLSA-201412-36 : libvirt: Denial of Service", 
+                "file": "gentoo_GLSA-201412-36.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "80241"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : libvirt (MDVSA-2015:023)", 
+                "file": "mandriva_MDVSA-2015-023.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "80560"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : libvirt (MDVSA-2015:070)", 
+                "file": "mandriva_MDVSA-2015-070.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "82323"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : libvirt (MDVSA-2015:115)", 
+                "file": "mandriva_MDVSA-2015-115.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "82368"
+            }, 
+            {
+                "name": "openSUSE Security Update : libvirt (openSUSE-SU-2015:0006-1)", 
+                "file": "openSUSE-2015-2.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "80354"
+            }, 
+            {
+                "name": "openSUSE Security Update : libvirt (openSUSE-SU-2015:0008-1)", 
+                "file": "openSUSE-2015-3.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "80355"
+            }, 
+            {
+                "name": "Oracle Linux 7 : libvirt (ELSA-2015-0323)", 
+                "file": "oraclelinux_ELSA-2015-0323.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "81801"
+            }, 
+            {
+                "name": "RHEL 7 : libvirt (RHSA-2015:0323)", 
+                "file": "redhat-RHSA-2015-0323.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "81628"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : libvirt on SL7.x x86_64", 
+                "file": "sl_20150305_libvirt_on_SL7_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "82257"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 14.04 / 15.04 / 15.10 : libvirt vulnerabilities (USN-2867-1)", 
+                "file": "ubuntu_USN-2867-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "87888"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:023", 
+                "id": "MDVSA-2015:023"
+            }, 
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:070", 
+                "id": "MDVSA-2015:070"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-8136.html", 
+                "id": "openSUSE-SU-2015:0006"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-8136.html", 
+                "id": "openSUSE-SU-2015:0008"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20150323", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-0323.html", 
+                    "id": "RHSA-2015:0323", 
+                    "title": "RHSA-2015:0323: libvirt security, bug fix, and enhancement update (Low)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=706887", 
+                    "title": "[TestOnly] qemu truncates JSON numbers >= 0x8000_0000_0000_0000", 
+                    "id": "706887", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=765733", 
+                    "title": "Error reporting when qemu terminates unexpectedly is inconsistent and sometimes unhelpful", 
+                    "id": "765733", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=823535", 
+                    "title": "Libvirt is sensitive to the order in which the video devices are passed", 
+                    "id": "823535", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=872628", 
+                    "title": "List available LXC consoles using container_ttys env variable", 
+                    "id": "872628", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=874418", 
+                    "title": "clear the error message when dump a guest with pass-through device", 
+                    "id": "874418", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=876829", 
+                    "title": "create external checkpoint snapshot will change the guest pmsuspended state and guest hang forever", 
+                    "id": "876829", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=877244", 
+                    "title": "Virsh command will delay a long time if restart libvirtd with many virtual networks running", 
+                    "id": "877244", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=878394", 
+                    "title": "virsh iface-dumpxml or virt-manager reports \"bond interface misses the bond element\" for inactive bond interfaces", 
+                    "id": "878394", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=880483", 
+                    "title": "Guest can use inactive macvtap-passthrough network", 
+                    "id": "880483", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=921094", 
+                    "title": "Missing auditing for serial, parallel, channel, console and smartcard devices", 
+                    "id": "921094", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=924853", 
+                    "title": "blockcopy to cifs fails", 
+                    "id": "924853", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=956506", 
+                    "title": "virsh snapshot-delete --children-only bypasses safety check for deleting disk-only children", 
+                    "id": "956506", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=957293", 
+                    "title": "support libiscsi for SCSI passthrough devices", 
+                    "id": "957293", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=963817", 
+                    "title": "Stable SCSI host addressing", 
+                    "id": "963817", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=964177", 
+                    "title": "virConnectDomainEventRTCChangeCallback returns wrong offset", 
+                    "id": "964177", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=967493", 
+                    "title": "Lockfailure action Ignore  will lead to sanlock rem_lockspace stuck", 
+                    "id": "967493", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=967494", 
+                    "title": "Lockfailure action Restart can shutdown the guest but fail to start it", 
+                    "id": "967494", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=972964", 
+                    "title": "WWN option for Hot Attaching SCSI Disks", 
+                    "id": "972964", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=983350", 
+                    "title": "The running Guest was paused while cancel the migration on the third machine", 
+                    "id": "983350", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=985782", 
+                    "title": "Some flag values of method are missing in libvirt-python bindings", 
+                    "id": "985782", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=985980", 
+                    "title": "virsh vcpuinfo output is difficult to read with large cpu counts", 
+                    "id": "985980", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=990418", 
+                    "title": "Provide option to enable/disable 64-bit PCI hole", 
+                    "id": "990418", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=991290", 
+                    "title": "Fail to modify the name attribute of ipv6 dhcp host via virsh net-update", 
+                    "id": "991290", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=992980", 
+                    "title": "Separate limits for anonymous and authenticated users", 
+                    "id": "992980", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=994731", 
+                    "title": "Documentation for virDomainLookupBy* should mention caller's responsibility to free virDomainPtr", 
+                    "id": "994731", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=995377", 
+                    "title": "Domain without autostart can't be resumed by the libvirt-guests script after rebooting the host", 
+                    "id": "995377", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=997802", 
+                    "title": "domdisplay should show all URI if config both vnc and spice in guest", 
+                    "id": "997802", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=999926", 
+                    "title": "Policy denies libvirtd the permission to relabel unix domain sockets", 
+                    "id": "999926", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1006700", 
+                    "title": "need add \"interface\" to virt-xml-validate manual page", 
+                    "id": "1006700", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1007698", 
+                    "title": "The cpu_shares value of domain xml should be consistent with return value of schedinfo.", 
+                    "id": "1007698", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1007759", 
+                    "title": "libvirt should forbid to attach a device with boot order for the first time if the os/boot element exists", 
+                    "id": "1007759", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1021703", 
+                    "title": "[RFE] Support for qemu-kvm's \"-boot splash_time\" parameter", 
+                    "id": "1021703", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1022874", 
+                    "title": "In man page of virsh, a typo 'COMMMANDS' displays three times", 
+                    "id": "1022874", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1023366", 
+                    "title": "[virsh cmd] Error message is not clear for commands blkiotune and schedinfo", 
+                    "id": "1023366", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1025407", 
+                    "title": "autoport='yes' doesn't skip over ports in use with IPv6", 
+                    "id": "1025407", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1027076", 
+                    "title": "Fail to start lxc with disabled selinux due to the existed empty /selinux", 
+                    "id": "1027076", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1029266", 
+                    "title": "Error message is not clear for command nwfilter-define under non-root user.", 
+                    "id": "1029266", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1029732", 
+                    "title": "Libvirt can not update/modify queues value of interface element using update-device command", 
+                    "id": "1029732", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1032363", 
+                    "title": "document need to pass image name for block backed disks with --disk-only", 
+                    "id": "1032363", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1033398", 
+                    "title": "Nodedev-destroy commands both doc and error message when destroy HBA are not clear", 
+                    "id": "1033398", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1033704", 
+                    "title": "domain xml: libvirt should take defaultMode value into account when discarding <channel ... mode='MODE'/> entries", 
+                    "id": "1033704", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1035128", 
+                    "title": "Stable guest ABI doesn't check redirected usb device", 
+                    "id": "1035128", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1035966", 
+                    "title": "Start autostarted virtual networks in background", 
+                    "id": "1035966", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1041569", 
+                    "title": "[NFR] libvirt: Returning the allocation watermark for all the images opened for writing during block-commit", 
+                    "id": "1041569", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1043735", 
+                    "title": "virsh command domiftune bound parameter checking error", 
+                    "id": "1043735", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1046192", 
+                    "title": "Can't set the timer base as localtime once localtime is used in the variable attribute.", 
+                    "id": "1046192", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1047818", 
+                    "title": "VFs can not be listed by net-dumpxml directly after starting the hostdev network", 
+                    "id": "1047818", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1052114", 
+                    "title": "guest fail to start with permission denied error when with gluster volume", 
+                    "id": "1052114", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1056902", 
+                    "title": "virsh attach-interface/detach-interface mishandles inactive configuration on device hot(un)plug commands", 
+                    "id": "1056902", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1062142", 
+                    "title": "live snapshot merge (commit) of the active layer", 
+                    "id": "1062142", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1064770", 
+                    "title": "Fail to update floor attribute of QoS using updateDeviceFlags", 
+                    "id": "1064770", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1066280", 
+                    "title": "Fail to restore guest from the save file while set the static selinux lable for the guest and set the relabel='no' in the guest's xml", 
+                    "id": "1066280", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1066894", 
+                    "title": "Implement for libvirt guest's xml for security label", 
+                    "id": "1066894", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1067338", 
+                    "title": "Mem leak while start a guest with a character followed", 
+                    "id": "1067338", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1069784", 
+                    "title": "block commit/pull support for disks using libgfapi volumes", 
+                    "id": "1069784", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1070680", 
+                    "title": "cpu-stats boundary value problem", 
+                    "id": "1070680", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1071095", 
+                    "title": "Libvirt report incorrect error message when parsing invalid value of CTRL_IP_LEARNING in nwfilter", 
+                    "id": "1071095", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1072141", 
+                    "title": "\"pool-list --type gluster\" list other types pool", 
+                    "id": "1072141", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1072292", 
+                    "title": "Libvirt report incorrect message when starting domain with nwfilter whose chain priority is greater than its filter rule priority", 
+                    "id": "1072292", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1072653", 
+                    "title": "vol-upload should change the volume target format type after uploading a different format file to it", 
+                    "id": "1072653", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1072677", 
+                    "title": "Incorrect error message when hot-plugging interface with an inexistence nwfilter", 
+                    "id": "1072677", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1073368", 
+                    "title": "[libvirt] can create live snapshot of passthrough device (iSCSI LUN or block device)", 
+                    "id": "1073368", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1075290", 
+                    "title": "gluster option is not showed in virsh --version=long", 
+                    "id": "1075290", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1075299", 
+                    "title": "Failed to get the vol-name by giving volume path in gluster pool.", 
+                    "id": "1075299", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1075543", 
+                    "title": "Libvirt does not terminate when DHCP snooping is being used", 
+                    "id": "1075543", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1076098", 
+                    "title": "[RFE] allow setting video ram size (vgamem_mb) for qemu vga cards.", 
+                    "id": "1076098", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1076725", 
+                    "title": "libvirt: Multi-node NUMA policy assignment", 
+                    "id": "1076725", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1076957", 
+                    "title": "Expose huge pages information through libvirt API", 
+                    "id": "1076957", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1076959", 
+                    "title": "Expose host hardware support for I/O virtualization via libvirt API", 
+                    "id": "1076959", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1076960", 
+                    "title": "Expose interface speed and link information via API", 
+                    "id": "1076960", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1076962", 
+                    "title": "Expose PCIe BW and lane information through API", 
+                    "id": "1076962", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1076989", 
+                    "title": "Enable complex memory requirements for virtual machines", 
+                    "id": "1076989", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1077009", 
+                    "title": "It shouldn't be permitted to change the uuid of a nwfilter", 
+                    "id": "1077009", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1077572", 
+                    "title": "Python setInterfaceParameters function is broken", 
+                    "id": "1077572", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1078590", 
+                    "title": "use of tls with libvirt.so can leave zombie processes", 
+                    "id": "1078590", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1079162", 
+                    "title": "The guest will be destroyed abnormally while revert the guest's snapshot which took in \"pmsuspended\" status", 
+                    "id": "1079162", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1079173", 
+                    "title": "libvirt can not do vol-download for gluster pool volume", 
+                    "id": "1079173", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1080859", 
+                    "title": "[Snapshot Doc] In snapshot-create-as manual page, supported snapshot type should be no, internal and external", 
+                    "id": "1080859", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1081461", 
+                    "title": "Dropped guest network connection during migration (before it finished)", 
+                    "id": "1081461", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1081881", 
+                    "title": "Fail to start guest with 2 displays mixed with port allocated automatically and fixed port.", 
+                    "id": "1081881", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1081932", 
+                    "title": "the return value of API virNodeDevice.listCaps() is not correct", 
+                    "id": "1081932", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1082124", 
+                    "title": "RHEL7 libvirt vs older qemu: unable to execute QEMU command 'qom-get': The command qom-get has not been found", 
+                    "id": "1082124", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1082521", 
+                    "title": "The sg disk is not really shared within 2 guests", 
+                    "id": "1082521", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1083345", 
+                    "title": "The --memspec parameters \"snapshot=no\" doesn't work when creating internal disk snapshot", 
+                    "id": "1083345", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1084360", 
+                    "title": "[doc] Document behavior of --reuse-external (VIR_DOMAIN_SNAPSHOT_CREATE_REUSE_EXT)", 
+                    "id": "1084360", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1085706", 
+                    "title": "virsh numatune should forbid to accept int as parameter values", 
+                    "id": "1085706", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1085769", 
+                    "title": "[Stroage][vol-clone] Volume was cloned successfully when passing an non-existing pool", 
+                    "id": "1085769", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1086121", 
+                    "title": "Improve the error message when failed to restore a guest with a not availabe disk with startupPolicy='optional'", 
+                    "id": "1086121", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1086704", 
+                    "title": "Don't allow aio=native without cache=none", 
+                    "id": "1086704", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1087104", 
+                    "title": "[Storage][vol-download] virsh cmd vol-download works with option offset and length by passing a negative integer", 
+                    "id": "1087104", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1088667", 
+                    "title": "[storage] some volume related virsh commands work when the passed volume is not one volume of the passed pool", 
+                    "id": "1088667", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1088787", 
+                    "title": "Libvirt should clean up socket file on destroyed domain with UNIX character device", 
+                    "id": "1088787", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1088864", 
+                    "title": "nwfilter deadlock", 
+                    "id": "1088864", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1088901", 
+                    "title": "Fail to do external disk-only snapshot when guest use FC storage", 
+                    "id": "1088901", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1089179", 
+                    "title": "The error is inaccurate when create snapshot with memspec snapshot=external and diskspec snapshot=no", 
+                    "id": "1089179", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1091866", 
+                    "title": "volume is disappered after vol-wipe with logical type pool", 
+                    "id": "1091866", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1092253", 
+                    "title": "Improve the error message when blockpull with a wrong base path", 
+                    "id": "1092253", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1092363", 
+                    "title": "[RHEL7] Virsh cmd maxvcpus returns 255 for kvm type, but the maximum number of vcpus supported by kvm is 160.", 
+                    "id": "1092363", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1093127", 
+                    "title": "RFE: report NUMA node locality for PCI devices", 
+                    "id": "1093127", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1095035", 
+                    "title": "[RHEL7][Storage]The \"lazy_refcounts\" feature was missing in the xml printed by vol-dumpxml for a qcow3 disk in a native gluster pool", 
+                    "id": "1095035", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1095636", 
+                    "title": "SELinux prevent qemu from attaching tuntap queues", 
+                    "id": "1095636", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1097028", 
+                    "title": "Don't fail starting domain without cpu, cpuset and cpuacct cgroups controllers", 
+                    "id": "1097028", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1097503", 
+                    "title": "guest will be paused and can't resume when do external system checkpoint snapshot with wrong compression format", 
+                    "id": "1097503", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1097677", 
+                    "title": "libvirt loses track of hotplugged vcpus after daemon restart", 
+                    "id": "1097677", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1097968", 
+                    "title": "libvirt-python API baselineCPU doesn't generate exception", 
+                    "id": "1097968", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1098659", 
+                    "title": "libvirt binds only to ipv6", 
+                    "id": "1098659", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1099978", 
+                    "title": "Maintain relative path to backing file image during live merge (block-commit)", 
+                    "id": "1099978", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1100769", 
+                    "title": "blkiotune weight range should be (10, 1000)", 
+                    "id": "1100769", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1101059", 
+                    "title": "virsh vcpupin need accurate error message when --vcpu argument is negative", 
+                    "id": "1101059", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1101510", 
+                    "title": "no need to require iptables-ipv6", 
+                    "id": "1101510", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1101731", 
+                    "title": "Rebase libvirt to current upstream release", 
+                    "id": "1101731", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1101987", 
+                    "title": "Libvirt should report error when try to revert guest to external system checkpoint snapshot", 
+                    "id": "1101987", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1101999", 
+                    "title": "virt-xml-validate should pass when netfs pool xml with glusterfs backend", 
+                    "id": "1101999", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1102611", 
+                    "title": "The running guest will disappear while change the security_driver from \"none\" to \"selinux\"", 
+                    "id": "1102611", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1103245", 
+                    "title": "libvirt reset rtc interrupt backlog after guest-set-time", 
+                    "id": "1103245", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1104992", 
+                    "title": "Guest fail to start while disks use same no-exist source file even though with startupPolicy='optional'", 
+                    "id": "1104992", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1104993", 
+                    "title": "Garbage characters show in the output of pool-name with no-exist pool UUID", 
+                    "id": "1104993", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1105939", 
+                    "title": "Fail to start guest while disable the default security labeling", 
+                    "id": "1105939", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1108593", 
+                    "title": "Libvirtd will crash while start a guest which DAC's seclabel type='none' in guest's xml", 
+                    "id": "1108593", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1110198", 
+                    "title": "domblkinfo doesn't work when guest use glusterfs as source", 
+                    "id": "1110198", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1110212", 
+                    "title": "The error info is not correct when do blockcommit with --base and --top point to same source", 
+                    "id": "1110212", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1110673", 
+                    "title": "typo errors in man page VIRSH(1)", 
+                    "id": "1110673", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1111044", 
+                    "title": "capabilities mode hostdev shouldn't be added in KVM", 
+                    "id": "1111044", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1112939", 
+                    "title": "libvirt should prompt more readable error message while ide/sata bus disk do not support readonly", 
+                    "id": "1112939", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1113116", 
+                    "title": "[RFE] add API to query the stats of multiple VMs at once", 
+                    "id": "1113116", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1113332", 
+                    "title": "python bindings for graphics event have wrong value for address type", 
+                    "id": "1113332", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1113668", 
+                    "title": "libvirt failed to start a domain with unix+guestfwd channel", 
+                    "id": "1113668", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1113861", 
+                    "title": "The guest will disappear after restart the libvirtd service while set seclabel type='static' model='none'  relabel='yes'/> in guest's xml.", 
+                    "id": "1113861", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1113868", 
+                    "title": "domxml-to-native fails for spice graphics with autoport='yes' when spice_tls is disabled", 
+                    "id": "1113868", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1115898", 
+                    "title": "[RFE] Add events for cputune and iotune change", 
+                    "id": "1115898", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1118710", 
+                    "title": "The error info is not accurate when do vol-wipe with volume based on gluster pool", 
+                    "id": "1118710", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1119206", 
+                    "title": "RFE: Multiple virtio-rng devices support", 
+                    "id": "1119206", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1119215", 
+                    "title": "Generate the redundant record in guest's xml while configure the same listen address in guest's xm", 
+                    "id": "1119215", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1119387", 
+                    "title": "The default behavor of abort block job with pivot flag isn't sync", 
+                    "id": "1119387", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1119592", 
+                    "title": "libvirt will report error after use pool-build in Non-root mode(qemu:///session)", 
+                    "id": "1119592", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1119784", 
+                    "title": "QMP: extend block events with error information", 
+                    "id": "1119784", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1121837", 
+                    "title": "numatune can use nodeset 0,^0 but can't edit xml like this", 
+                    "id": "1121837", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1121955", 
+                    "title": "virsh command takes long time to finish after set \"log_level = 1\" only", 
+                    "id": "1121955", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1122255", 
+                    "title": "'virsh desc $dom blah' doesn't survive libvirtd restart", 
+                    "id": "1122255", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1122455", 
+                    "title": "libvirt should refuse to start domain with unsupported/useless min-guarantee element in qemu driver", 
+                    "id": "1122455", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1122973", 
+                    "title": "missing pci address for vga devices", 
+                    "id": "1122973", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1126329", 
+                    "title": "Libvirt should forbid using relative path to the new overaly snapshot image for external snapshots", 
+                    "id": "1126329", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1126721", 
+                    "title": "[Doc] Attribute name vlan-id should be vlanid in nwfilter xml docs", 
+                    "id": "1126721", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1126909", 
+                    "title": "Wrong block job type reported for active layer commit", 
+                    "id": "1126909", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1126991", 
+                    "title": "[libvirt] expose ivshmem", 
+                    "id": "1126991", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1128097", 
+                    "title": "Can't use domiftune  --inbound 0 or --outbound 0 to clear inbound or outbound settings for a shut off guest", 
+                    "id": "1128097", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1128751", 
+                    "title": "<driver/> isn't always formated as it should be", 
+                    "id": "1128751", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1129207", 
+                    "title": "libvirtd will crash after do managedsave the same guest in the same time", 
+                    "id": "1129207", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1129372", 
+                    "title": "Failed to start domain with specified cputune after decreasing vcpu number", 
+                    "id": "1129372", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1129998", 
+                    "title": "numatune --mode can't work well", 
+                    "id": "1129998", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1130089", 
+                    "title": "Possible deadlock when the domain is destroyed on destination during migration", 
+                    "id": "1130089", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1130379", 
+                    "title": "[Doc]no manual about metadata command in virsh manual", 
+                    "id": "1130379", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1131306", 
+                    "title": "number range should be checked for the 4 new options of blkiotune", 
+                    "id": "1131306", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1131445", 
+                    "title": "Could not show process info for migration at once.", 
+                    "id": "1131445", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1131788", 
+                    "title": "blkdeviotune should can be used in session mode", 
+                    "id": "1131788", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1131811", 
+                    "title": "The iotune element will disappear from the guest's xml while set an invalid value", 
+                    "id": "1131811", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1131819", 
+                    "title": "Libvirtd crash while set blkdeviotune with the hotplug disk and specify the --config option", 
+                    "id": "1131819", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1131876", 
+                    "title": "The range for blkdeviotune was different in guest's xml and virsh command line", 
+                    "id": "1131876", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1131897", 
+                    "title": "virDomainSetMemoryFlags doesn't process flag VIR_DOMAIN_MEM_MAXIMUM for LXC", 
+                    "id": "1131897", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1132301", 
+                    "title": "Error msg is not right for option -k and -K against virsh command", 
+                    "id": "1132301", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1132305", 
+                    "title": "option -k and -K should point out range of reasonable values against virsh command", 
+                    "id": "1132305", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1132347", 
+                    "title": "Libvirt crash after defining/editing macvtap network pool with <address> elements", 
+                    "id": "1132347", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1134154", 
+                    "title": "snapshot's race condition", 
+                    "id": "1134154", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1134454", 
+                    "title": "pkg-config --libs contains cflags", 
+                    "id": "1134454", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1135169", 
+                    "title": "blockcopy job was cancel by \"CTRL+C\" while it show there still be one block job in background", 
+                    "id": "1135169", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1135339", 
+                    "title": "active commit will be cancelled by another commit", 
+                    "id": "1135339", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1135396", 
+                    "title": "Honor hugepage settings on UMA guest", 
+                    "id": "1135396", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1135431", 
+                    "title": "libvirt should pass \"-enable-fips\" to QEMU", 
+                    "id": "1135431", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1135955", 
+                    "title": "The usage for migrate's option --auto-converge missed in virsh man page", 
+                    "id": "1135955", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1136736", 
+                    "title": "Failed to remove libvirt-daemon-1.2.8-1.el7.x86_64 package", 
+                    "id": "1136736", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1138221", 
+                    "title": "Fail to managedsave while configure <cpu mode='host-model'> in the guest's xml", 
+                    "id": "1138221", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1138231", 
+                    "title": "Report better error when backing chain detection fails", 
+                    "id": "1138231", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1138487", 
+                    "title": "one of guest will be shut off when restart libvirtd while disable the default security labeling", 
+                    "id": "1138487", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1138545", 
+                    "title": "guest NUMA cannot start when automatic NUMA placement", 
+                    "id": "1138545", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1139567", 
+                    "title": "virsh cmd will hang when remove blockcopy file", 
+                    "id": "1139567", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1140085", 
+                    "title": "guest interface which use existing bridge source bridge will disappear after libvirtd restart", 
+                    "id": "1140085", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1140981", 
+                    "title": "Libvirt should post more accurate error when do blockpull with qemu-kvm", 
+                    "id": "1140981", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1140984", 
+                    "title": "sub-element in <disk>...</disk> change after create external disk snapshot", 
+                    "id": "1140984", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1141209", 
+                    "title": "Back port selected upstream Coverity resolutions since 1.2.8", 
+                    "id": "1141209", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1141621", 
+                    "title": "libvirtd will crashed after hot-plug a virtual NIC to a guest which use qemu-attach connect to libvirtd", 
+                    "id": "1141621", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1141732", 
+                    "title": "wrong QMP argument 'id' when detaching iscsi hostdev", 
+                    "id": "1141732", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1141943", 
+                    "title": "libvirtd crash when defining scsi storage pool", 
+                    "id": "1141943", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1142294", 
+                    "title": "libvirt should report error when failed to use domtime to set a guest time", 
+                    "id": "1142294", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1142693", 
+                    "title": "[RFE] Add a qemu resume hook that is able to preprocess the domain XML", 
+                    "id": "1142693", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1142722", 
+                    "title": "libvirtd dead while destroy one guest with block disk", 
+                    "id": "1142722", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1143780", 
+                    "title": "Deadlock on nwfilter when taking same concurrent jobs", 
+                    "id": "1143780", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1143955", 
+                    "title": "libvirtd crashed after running \"virsh metadata --remove\" command", 
+                    "id": "1143955", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1144303", 
+                    "title": "memory leak when starting a domain with cpu mode='host-model'", 
+                    "id": "1144303", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1144920", 
+                    "title": "libvirtd crashed after use qemu-monitor-event --regex to a running guest", 
+                    "id": "1144920", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1144922", 
+                    "title": "wrong backingStore info after blockpull and destroy/start guest", 
+                    "id": "1144922", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1145048", 
+                    "title": "freepages argument has wrong unit and range", 
+                    "id": "1145048", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1145050", 
+                    "title": "API virNodeGetFreePages need report specific error when node out of range", 
+                    "id": "1145050", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1146511", 
+                    "title": "Updating blkdeviotune for live domain doesn't survive restarting the libvirtd", 
+                    "id": "1146511", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1146550", 
+                    "title": "USB Redirection no longer works: Permission Denied", 
+                    "id": "1146550", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1146837", 
+                    "title": "Libvirtd crash when defining scsi pool with 'scsi_host' type adapter and parentaddr attribute", 
+                    "id": "1146837", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1147331", 
+                    "title": "[migration] Tunnelled migration failed", 
+                    "id": "1147331", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1147494", 
+                    "title": "libvirtd crashes when starting a domain with 0 cpu shares", 
+                    "id": "1147494", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1147584", 
+                    "title": "save/managedsave doesn't work with host-passthrough", 
+                    "id": "1147584", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1150322", 
+                    "title": "libvirt should recognize __com.redhat_change-backing-file for relative path preservation", 
+                    "id": "1150322", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1150505", 
+                    "title": "Domain is out of control from libvirt when running some concurrent define/undefine/start/destroy jobs rapidly", 
+                    "id": "1150505", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1151718", 
+                    "title": "Permission denied when create external snapshot for guest whose source file based on nfs", 
+                    "id": "1151718", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1151885", 
+                    "title": "libvirtd loses track of a running restored guest with host-passthrough cpu", 
+                    "id": "1151885", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1152382", 
+                    "title": "[NPIV] The volume in scsi pool appears only after refreshing pool", 
+                    "id": "1152382", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1155410", 
+                    "title": "An LXC domain without console dies soon after start", 
+                    "id": "1155410", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1155441", 
+                    "title": "forbid NIC offloads change on the fly using update-device", 
+                    "id": "1155441", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1155458", 
+                    "title": "libvirt can not save mode='client' of vhostuser interface to domain xml", 
+                    "id": "1155458", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1156288", 
+                    "title": "libvirtd crashed on disk snapshot with rdma glusterfs image", 
+                    "id": "1156288", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1156367", 
+                    "title": "network using host bridge gets a MAC on libvirt update", 
+                    "id": "1156367", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1158715", 
+                    "title": "A memory error report when use domstats", 
+                    "id": "1158715", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1159227", 
+                    "title": "lxc domain startup is slow", 
+                    "id": "1159227", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1159245", 
+                    "title": "repeated migration with NBD fails", 
+                    "id": "1159245", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1160084", 
+                    "title": "domfsfreeze and domfsthaw cannot work well when guest restart", 
+                    "id": "1160084", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1160212", 
+                    "title": "libvirt doesn't stop the NBD server after migration", 
+                    "id": "1160212", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1160565", 
+                    "title": "Libvirt should check if the parent defined in xml matches the wwn of vHBA when starting pool", 
+                    "id": "1160565", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1160926", 
+                    "title": "Destroying 'fc_host' pool the HBA is NOT destroyed when not using 'parent' attribute", 
+                    "id": "1160926", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1161024", 
+                    "title": "libvirtd crashes after device hot-unplug crashes qemu", 
+                    "id": "1161024", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1161124", 
+                    "title": "small memory leak in migration", 
+                    "id": "1161124", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1161358", 
+                    "title": "[ACL] polkit: wrong attribute name 'interface_mac' for network interface in the documentation", 
+                    "id": "1161358", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1161540", 
+                    "title": "kvm_init_vcpu failed for cpu hot-plugging in NUMA", 
+                    "id": "1161540", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1162097", 
+                    "title": "crash after attempted spice channel hotplug", 
+                    "id": "1162097", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1162208", 
+                    "title": "libvirtd occasionally crashes at the end of migration", 
+                    "id": "1162208", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1162915", 
+                    "title": "net-event should not report unsuccessful event", 
+                    "id": "1162915", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1162974", 
+                    "title": "external disk snapshot with fault glusterfs snapshot xml crash libvirtd", 
+                    "id": "1162974", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1163463", 
+                    "title": "use after free in callers of virNetDevLinkDump", 
+                    "id": "1163463", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1163953", 
+                    "title": "No way to turn off rdma-pin-all once it was turned on", 
+                    "id": "1163953", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1164528", 
+                    "title": "VM with a storage volume that contains a RBD volume in the backing chain fails to start", 
+                    "id": "1164528", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1166592", 
+                    "title": "Failed to create logical volume with specified xml", 
+                    "id": "1166592", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1167145", 
+                    "title": "networkMigrateStateFiles function does not work on xfs file system due to using unsupported t_type field", 
+                    "id": "1167145", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1167883", 
+                    "title": "Report job type in virDomainGetJobInfo", 
+                    "id": "1167883", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1168866", 
+                    "title": "\"libvirtError: Unable to write to '/sys/fs/cgroup/cpuset/machine.slice/machine-qemu\\x2dinstance\\x2d00000002.scope/cpuset.mems': Device or resource busy\"", 
+                    "id": "1168866", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1169409", 
+                    "title": "Libvirt will crash with segfault if you try to set non-existing nwfilter to network interface for live guest", 
+                    "id": "1169409", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1170484", 
+                    "title": "guest can not start when setting \"  vcpu placement='auto'  \"", 
+                    "id": "1170484", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1174053", 
+                    "title": "libvirtd crash when try to cold plug a network iscsi hostdev which guest already have a iscsi hostdev", 
+                    "id": "1174053", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1174090", 
+                    "title": "extra space will be added to xml when update a network", 
+                    "id": "1174090", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1174859", 
+                    "title": "missing support for -spice disable-agent-file-xfer qemu commandline option", 
+                    "id": "1174859", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1175234", 
+                    "title": "virDomainGetSchedulerParameters() fails with Unable to read from '/sys/fs/cgroup/cpu,cpuacct/machine.slice/machine-qemu\\x2dMic2.scope/cpu.shares': No such file or directory", 
+                    "id": "1175234", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1175397", 
+                    "title": "memdev= option is not supported on rhel6 machine-types", 
+                    "id": "1175397", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1175668", 
+                    "title": "Attach a usb disk to guest failed.", 
+                    "id": "1175668", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1175709", 
+                    "title": "Unable to start guest with hugepages and strict numa pinning", 
+                    "id": "1175709", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1176176", 
+                    "title": "CVE-2014-8136 libvirt: local denial of service in qemu/qemu_driver.c", 
+                    "id": "1176176", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1177194", 
+                    "title": "Fail to Migrate with Bridged network, eth + macvtap ,with different interface name on two hosts", 
+                    "id": "1177194", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1180136", 
+                    "title": "Memory leak when parsing invalid network XML", 
+                    "id": "1180136", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1180574", 
+                    "title": "migration rhel7.1 -> rhel7.0 wont work if you set \"ram\" < 2*\"vgamem\" for QXL device", 
+                    "id": "1180574", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1181052", 
+                    "title": "update default vgamem size from 8 MiB to 16 MiB", 
+                    "id": "1181052", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1181157", 
+                    "title": "libvirtError: argument unsupported: QEMU driver does not support <metadata> element", 
+                    "id": "1181157", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1181408", 
+                    "title": "Libvirtd crash while hotplug the guest agent without target type for many times", 
+                    "id": "1181408", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1182448", 
+                    "title": "cpu features are not formatted in XML for host-model", 
+                    "id": "1182448", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1182486", 
+                    "title": "libvirtd crashed when updating a IPv6 <host> and a IPv4 <host> into a IPv4 <ip> element", 
+                    "id": "1182486", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1184431", 
+                    "title": "CVE-2015-0236 libvirt: missing ACL check for the VIR_DOMAIN_XML_SECURE flag in save images and snapshots objects", 
+                    "id": "1184431", 
+                    "issue date": "2014-08-01", 
+                    "associated redhat": "RHSA-2015:0323"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

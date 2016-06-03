@@ -1,0 +1,207 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-1964", 
+                "published": "2010-06-17T12:30:01.950-04:00", 
+                "id": "CVE-2010-1964", 
+                "modified": "2011-09-21T23:21:08.087-04:00", 
+                "summary": "Buffer overflow in ovwebsnmpsrv.exe in HP OpenView Network Node Manager (OV NNM) 7.51 and 7.53 allows remote attackers to execute arbitrary code via unspecified parameters to jovgraph.exe, aka ZDI-CAN-683."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:hp:openview_network_node_manager:7.53:-:solaris"
+            }, 
+            {
+                "id": "cpe:/a:hp:openview_network_node_manager:7.51"
+            }, 
+            {
+                "id": "cpe:/a:hp:openview_network_node_manager:7.51:-:solaris"
+            }, 
+            {
+                "id": "cpe:/a:hp:openview_network_node_manager:7.51:-:hp-ux"
+            }, 
+            {
+                "id": "cpe:/a:hp:openview_network_node_manager:7.53:-:hp-ux"
+            }, 
+            {
+                "id": "cpe:/a:hp:openview_network_node_manager:7.51:-:windows"
+            }, 
+            {
+                "id": "cpe:/a:hp:openview_network_node_manager:7.51:-:linux"
+            }, 
+            {
+                "id": "cpe:/a:hp:openview_network_node_manager:7.53:-:windows"
+            }, 
+            {
+                "id": "cpe:/a:hp:openview_network_node_manager:7.53:-:linux"
+            }, 
+            {
+                "id": "cpe:/a:hp:openview_network_node_manager:7.53"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.53700", 
+                "id": 53700
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/40873", 
+                "id": 40873
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/65552", 
+                "id": 65552
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://seclists.org/bugtraq/2010/Jun/152", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://seclists.org/bugtraq/2010/Jun/152", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://www.zerodayinitiative.com/advisories/ZDI-10-108", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/40873", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/511854/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/8155", 
+                    "vendor": "SREASON"
+                }, 
+                {
+                    "url": "http://osvdb.org/65552", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "hp_nnm_ovwebsnmpsrv_main.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/http/hp_nnm_ovwebsnmpsrv_main.rb", 
+                "title": "HP OpenView Network Node Manager ovwebsnmpsrv.exe main Buffer Overflow"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/14256", 
+                "id": 14256, 
+                "file": "platforms/windows/local/14256.txt"
+            }, 
+            {
+                "url": "http://www.exploit-db.com/exploits/17044", 
+                "id": 17044, 
+                "file": "platforms/windows/remote/17044.rb"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-1964"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "HP OpenView Network Node Manager Multiple Vulnerabilities", 
+                "file": "secpod_hp_openview_nnm_mult_vuln.nasl", 
+                "family": "Web application abuses", 
+                "id": "902076"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "HP-UX PHSS_40707 : s700_800 11.X OV NNM7.53 PA-RISC Intermediate Patch 26", 
+                "file": "hpux_PHSS_40707.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "46347"
+            }, 
+            {
+                "name": "HP-UX PHSS_40708 : s700_800 11.X OV NNM7.53 IA-64 Intermediate Patch 26", 
+                "file": "hpux_PHSS_40708.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "46348"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [
+            {
+                "url": "http://seclists.org/bugtraq/2010/Jun/152", 
+                "id": "SSRT010027"
+            }, 
+            {
+                "url": "http://seclists.org/bugtraq/2010/Jun/152", 
+                "id": "HPSBMA02537"
+            }
+        ], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

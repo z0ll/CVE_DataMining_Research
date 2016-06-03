@@ -1,0 +1,248 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-4033", 
+                "published": "2009-12-08T14:30:00.217-05:00", 
+                "id": "CVE-2009-4033", 
+                "modified": "2010-08-21T01:36:52.903-04:00", 
+                "summary": "A certain Red Hat patch for acpid 1.0.4 effectively triggers a call to the open function with insufficient arguments, which might allow local users to leverage weak permissions on /var/log/acpid, and obtain sensitive information by reading this file, cause a denial of service by overwriting this file, or gain privileges by executing this file."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:tim_hockin:acpid:1.0.4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.51060", 
+                "id": 51060
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0022104", 
+                "id": "2009-A-0135", 
+                "title": "Red Hat Local Privilege Escalation Vulnerability"
+            }
+        ], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/37249", 
+                "id": 37249
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=542926", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=515062", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/54677", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/37249", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2009-1642.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:342", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1023284", 
+                    "vendor": "SECTRACK"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "6.9", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-4033"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:29263", 
+                "title": "RHSA-2009:1642 -- acpid security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:29263"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23013", 
+                "title": "ELSA-2009:1642: acpid security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23013"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:10555", 
+                "title": "A certain Red Hat patch for acpid 1.0.4 effectively triggers a call to the open function with insufficient arguments, which might allow local users to leverage weak permissions on /var/log/acpid, and obtain sensitive information by reading this file, cause a denial of service by overwriting this file, or gain privileges by executing this file.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:10555"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CentOS Update for acpid CESA-2009:1642 centos5 i386", 
+                "file": "gb_CESA-2009_1642_acpid_centos5_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880730"
+            }, 
+            {
+                "name": "Mandriva Security Advisory MDVSA-2009:342 (acpid)", 
+                "file": "mdksa_2009_342.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "66550"
+            }, 
+            {
+                "name": "CentOS Security Advisory CESA-2009:1642 (acpid)", 
+                "file": "ovcesa2009_1642.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "66619"
+            }, 
+            {
+                "name": "RedHat Security Advisory RHSA-2009:1642", 
+                "file": "RHSA_2009_1642.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "66358"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : acpid (CESA-2009:1642)", 
+                "file": "centos_RHSA-2009-1642.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "43810"
+            }, 
+            {
+                "name": "Oracle Linux 5 : acpid (ELSA-2009-1642)", 
+                "file": "oraclelinux_ELSA-2009-1642.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "67967"
+            }, 
+            {
+                "name": "OracleVM 2.2 : acpid (OVMSA-2009-0037)", 
+                "file": "oraclevm_OVMSA-2009-0037.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "79472"
+            }, 
+            {
+                "name": "RHEL 5 : acpid (RHSA-2009:1642)", 
+                "file": "redhat-RHSA-2009-1642.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "43047"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : acpid on SL5.x i386/x86_64", 
+                "file": "sl_20091207_acpid_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "60700"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:342", 
+                "id": "MDVSA-2009:342"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20091642", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2009-1642.html", 
+                    "id": "RHSA-2009:1642", 
+                    "title": "RHSA-2009:1642: acpid security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=515062", 
+                    "title": "/var/log/acpid has improper permissions", 
+                    "id": "515062", 
+                    "issue date": "2009-12-07", 
+                    "associated redhat": "RHSA-2009:1642"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=542926", 
+                    "title": "CVE-2009-4033 acpid: log file created with random permissions", 
+                    "id": "542926", 
+                    "issue date": "2009-12-07", 
+                    "associated redhat": "RHSA-2009:1642"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

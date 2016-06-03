@@ -1,0 +1,207 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3294", 
+                "published": "2015-05-08T10:59:05.527-04:00", 
+                "id": "CVE-2015-3294", 
+                "modified": "2015-05-11T12:09:24.733-04:00", 
+                "summary": "The tcp_request function in Dnsmasq before 2.73rc4 does not properly handle the return value of the setup_reply function, which allows remote attackers to read process memory and cause a denial of service (out-of-bounds read and crash) via a malformed DNS request."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/19.html", 
+                "id": "CWE-19", 
+                "title": "Data Handling"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:thekelleys:dnsmasq:2.73:rc3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.75228", 
+                "id": 75228
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2593-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2015/dsa-3251", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://thekelleys.org.uk/gitweb/?p=dnsmasq.git;a=commitdiff;h=ad4a8ff7d9097008d7623df8543df435bfddeac8", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2015q2/009387.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2015q2/009382.html", 
+                    "vendor": "MLIST"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "6.4", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-3294"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:29242", 
+                "title": "SUSE-SU-2015:0979-1 -- Security update for dnsmasq (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:29242"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:127", 
+                "title": "DSA-3251-1 -- dnsmasq -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:127"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3251-1 (dnsmasq - security update)", 
+                "file": "deb_3251.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703251"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DLA-225-1 : dnsmasq security update", 
+                "file": "debian_DLA-225.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "83747"
+            }, 
+            {
+                "name": "Debian DSA-3251-1 : dnsmasq - security update", 
+                "file": "debian_DSA-3251.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "83253"
+            }, 
+            {
+                "name": "dnsmasq < 2.73rc4 setup_reply() Function Return Value Checking Information Disclosure", 
+                "file": "dnsmasq_dos-CVE-2015-3294.nasl", 
+                "family": "DNS", 
+                "id": "87596"
+            }, 
+            {
+                "name": "FreeBSD : dnsmasq -- data exposure and denial of service (37569eb7-0125-11e5-9d98-080027ef73ec)", 
+                "file": "freebsd_pkg_37569eb7012511e59d98080027ef73ec.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "83793"
+            }, 
+            {
+                "name": "GLSA-201512-01 : Dnsmasq: Denial of Service", 
+                "file": "gentoo_GLSA-201512-01.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "87484"
+            }, 
+            {
+                "name": "openSUSE Security Update : dnsmasq (openSUSE-2015-359)", 
+                "file": "openSUSE-2015-359.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83398"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : dnsmasq (SUSE-SU-2015:0979-1)", 
+                "file": "suse_SU-2015-0979-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83948"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : dnsmasq (SUSE-SU-2015:1015-1)", 
+                "file": "suse_SU-2015-1015-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84081"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 14.04 / 14.10 / 15.04 : dnsmasq vulnerability (USN-2593-1)", 
+                "file": "ubuntu_USN-2593-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83252"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2593-1", 
+                "id": "USN-2593-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3251", 
+                "id": "DSA-3251"
+            }
+        ], 
+        "Vmware": []
+    }
+}

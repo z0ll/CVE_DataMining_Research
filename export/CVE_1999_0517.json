@@ -1,0 +1,170 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0517", 
+                "published": "1997-01-01T00:00:00.000-05:00", 
+                "id": "CVE-1999-0517", 
+                "modified": "2008-09-09T08:34:57.743-04:00", 
+                "summary": "An SNMP community name is the default (e.g. public), null, or missing."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:sun:solaris:2.0"
+            }, 
+            {
+                "id": "cpe:/o:hp:hp-ux:11.00"
+            }, 
+            {
+                "id": "cpe:/o:hp:hp-ux:10"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.13822", 
+                "id": 13822
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": []
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-recon", 
+                "id": "sid:2101412", 
+                "signature": "GPL SNMP public access tcp"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2101893", 
+                "signature": "GPL SNMP missing community string attempt"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2101892", 
+                "signature": "GPL SNMP null community string attempt"
+            }, 
+            {
+                "classtype": "attempted-recon", 
+                "id": "sid:2101411", 
+                "signature": "GPL SNMP public access udp"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2016178", 
+                "signature": "ET SNMP missing community string attempt 1"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2016179", 
+                "signature": "ET SNMP missing community string attempt 2"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2016180", 
+                "signature": "ET SNMP missing community string attempt 3"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2016181", 
+                "signature": "ET SNMP missing community string attempt 4"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1411", 
+                "signature": "PROTOCOL-SNMP public access udp"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1412", 
+                "signature": "PROTOCOL-SNMP public access tcp"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:1892", 
+                "signature": "PROTOCOL-SNMP null community string attempt"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:1893", 
+                "signature": "PROTOCOL-SNMP missing community string attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0517"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "SNMP Agent Default Community Names", 
+                "file": "snmp_default_communities.nasl", 
+                "family": "SNMP", 
+                "id": "10264"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

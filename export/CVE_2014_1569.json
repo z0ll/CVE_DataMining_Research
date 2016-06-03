@@ -1,0 +1,343 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1569", 
+                "published": "2014-12-15T13:59:00.067-05:00", 
+                "id": "CVE-2014-1569", 
+                "modified": "2016-04-06T21:59:06.900-04:00", 
+                "summary": "The definite_length_decoder function in lib/util/quickder.c in Mozilla Network Security Services (NSS) before 3.16.2.4 and 3.17.x before 3.17.3 does not ensure that the DER encoding of an ASN.1 length is properly formed, which allows remote attackers to conduct data-smuggling attacks by using a long byte sequence for an encoding, as demonstrated by the SEC_QuickDERDecodeItem function s improper handling of an arbitrary-length encoding of 0x00."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:mozilla:network_security_services:3.16.2.3"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:network_security_services:3.17.0"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:network_security_services:3.16.2.0"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:network_security_services:3.16.2.1"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:network_security_services:3.17.1"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:network_security_services:3.17.2"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:network_security_services:3.16.2.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.78561", 
+                "id": 78561
+            }, 
+            {
+                "url": "http://www.scip.ch/?vuldb.68578", 
+                "id": 68578
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://www.reddit.com/r/netsec/comments/2hd1m8/rsa_signature_forgery_in_nss/cksnr02", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "https://www.imperialviolet.org/2014/09/26/pkcs1.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/NSS_3.17.3_release_notes", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1064670", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.oracle.com/technetwork/topics/security/cpuoct2015-2367953.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.oracle.com/technetwork/topics/security/cpujul2015-2367936.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.intelsecurity.com/resources/wp-berserk-analysis-part-1.pdf", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2015/dsa-3186", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-03/msg00000.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-01/msg00036.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-01/msg00033.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-01/msg00032.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2015-01/msg00024.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-1569"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:105", 
+                "title": "DSA-3186-1 -- nss -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:105"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3186-1 (nss - security update)", 
+                "file": "deb_3186.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703186"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DLA-154-1 : nss security update (BEAST)", 
+                "file": "debian_DLA-154.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "82137"
+            }, 
+            {
+                "name": "Debian DSA-3186-1 : nss - security update", 
+                "file": "debian_DSA-3186.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "81830"
+            }, 
+            {
+                "name": "Fedora 20 : nss-3.17.3-2.fc20 / nss-softokn-3.17.3-1.fc20 / nss-util-3.17.3-1.fc20 (2014-16530)", 
+                "file": "fedora_2014-16530.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "80402"
+            }, 
+            {
+                "name": "Fedora 21 : nss-3.17.3-2.fc21 (2014-17085)", 
+                "file": "fedora_2014-17085.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "80236"
+            }, 
+            {
+                "name": "FreeBSD : mozilla -- multiple vulnerabilities (7ae61870-9dd2-4884-a2f2-f19bb5784d09)", 
+                "file": "freebsd_pkg_7ae618709dd24884a2f2f19bb5784d09.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "79707"
+            }, 
+            {
+                "name": "Oracle GlassFish Server Multiple Vulnerabilities (July 2015 CPU)", 
+                "file": "glassfish_cpu_jul_2015.nasl", 
+                "family": "Web Servers", 
+                "id": "84810"
+            }, 
+            {
+                "name": "Oracle iPlanet Web Proxy Server 4.0.x < 4.0.26 NSS Signature Handling Remote Code Injection", 
+                "file": "iplanet_web_proxy_4_0_26.nasl", 
+                "family": "Windows", 
+                "id": "84962"
+            }, 
+            {
+                "name": "Firefox < 34.0 Multiple Vulnerabilities (Mac OS X)", 
+                "file": "macosx_firefox_34.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "79662"
+            }, 
+            {
+                "name": "Mozilla Thunderbird < 31.3 Multiple Vulnerabilities (Mac OS X)", 
+                "file": "macosx_thunderbird_31_3.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "79663"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : nss (MDVSA-2014:252)", 
+                "file": "mandriva_MDVSA-2014-252.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "80041"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : nss (MDVSA-2015:059)", 
+                "file": "mandriva_MDVSA-2015-059.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "81942"
+            }, 
+            {
+                "name": "Firefox ESR 31.x < 31.3 Multiple Vulnerabilities", 
+                "file": "mozilla_firefox_31_3_esr.nasl", 
+                "family": "Windows", 
+                "id": "79664"
+            }, 
+            {
+                "name": "Firefox < 34.0 Multiple Vulnerabilities", 
+                "file": "mozilla_firefox_34.nasl", 
+                "family": "Windows", 
+                "id": "79665"
+            }, 
+            {
+                "name": "Mozilla Thunderbird < 31.3 Multiple Vulnerabilities", 
+                "file": "mozilla_thunderbird_31_3.nasl", 
+                "family": "Windows", 
+                "id": "79666"
+            }, 
+            {
+                "name": "openSUSE Security Update : MozillaFirefox / mozilla-nss (openSUSE-2015-185)", 
+                "file": "openSUSE-2015-185.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "81589"
+            }, 
+            {
+                "name": "Oracle iPlanet Web Server 6.1.x < 6.1.21 / 7.0.x < 7.0.22 NSS Signature Handling Remote Code Injection", 
+                "file": "sun_java_web_server_7_0_22.nasl", 
+                "family": "Web Servers", 
+                "id": "84963"
+            }, 
+            {
+                "name": "SuSE 11.3 Security Update : Mozilla Firefox (SAT Patch Number 10225)", 
+                "file": "suse_11_firefox-201501-150126.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "81122"
+            }, 
+            {
+                "name": "SuSE 11.3 Security Update : Mozilla Firefox (SAT Patch Number 10225)", 
+                "file": "suse_11_firefox-201501-150127.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "81123"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : MozillaFirefox (SUSE-SU-2015:0076-1)", 
+                "file": "suse_SU-2015-0076-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83666"
+            }, 
+            {
+                "name": "SUSE SLES10 Security Update : Mozilla Firefox (SUSE-SU-2015:0171-1)", 
+                "file": "suse_SU-2015-0171-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83676"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : Mozilla Firefox (SUSE-SU-2015:0173-1)", 
+                "file": "suse_SU-2015-0173-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83677"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS / 12.04 LTS / 14.04 / 14.10 : nss vulnerability (USN-2452-1)", 
+                "file": "ubuntu_USN-2452-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "80410"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-1569.html", 
+                "id": "SUSE-SU-2015:0171"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-1569.html", 
+                "id": "SUSE-SU-2015:0173"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-1569.html", 
+                "id": "SUSE-SU-2015:0180"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-1569.html", 
+                "id": "openSUSE-SU-2015:0138"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-1569.html", 
+                "id": "openSUSE-SU-2015:0404"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3186", 
+                "id": "DSA-3186"
+            }
+        ], 
+        "Vmware": []
+    }
+}

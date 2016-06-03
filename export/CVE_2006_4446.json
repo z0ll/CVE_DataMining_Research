@@ -1,0 +1,188 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4446", 
+                "published": "2006-08-29T21:04:00.000-04:00", 
+                "id": "CVE-2006-4446", 
+                "modified": "2008-09-05T17:09:43.553-04:00", 
+                "summary": "Heap-based buffer overflow in DirectAnimation.PathControl COM object (daxctle.ocx) in Microsoft Internet Explorer 6.0 SP1 allows remote attackers to cause a denial of service and possibly execute arbitrary code via a Spline function call whose first argument specifies a large number of points."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:ie:6.0:sp1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.2542", 
+                "id": 2542
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/19738", 
+                "id": 19738
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/28841", 
+                "id": 28841
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA06-318A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/28608", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.xsec.org/index.php?module=releases&act=view&type=1&id=19", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/19738", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/444504/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1016764", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/28841", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms06-067.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/1468", 
+                    "vendor": "SREASON"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/21910", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2003102", 
+                "signature": "ET ACTIVEX Microsoft Multimedia Controls - ActiveX control's spline function call CLSID"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2003103", 
+                "signature": "ET ACTIVEX Microsoft Multimedia Controls - ActiveX control's spline function call Object"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-4446"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:437", 
+                "title": "DirectAnimation ActiveX Controls Memory Corruption Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:437"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS06-067: Cumulative Security Update for Internet Explorer (922760)", 
+                "file": "smb_nt_ms06-067.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "23644"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Cumulative Security Update for Internet Explorer", 
+                "id": "Cumulative Security Update for Internet Explorer", 
+                "title": "922760"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/922760", 
+                "id": "922760", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS06-067", 
+                "id": "MS06-067", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

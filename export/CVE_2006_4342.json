@@ -1,0 +1,223 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4342", 
+                "published": "2006-10-17T13:07:00.000-04:00", 
+                "id": "CVE-2006-4342", 
+                "modified": "2010-08-21T00:52:21.853-04:00", 
+                "summary": "The kernel in Red Hat Enterprise Linux 3, when running on SMP systems, allows local users to cause a denial of service (deadlock) by running the shmat function on an shm at the same time that shmctl is removing that shm (IPC_RMID), which prevents a spinlock from being unlocked."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:3.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.32770", 
+                "id": 32770
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/245984", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=205618", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2006-0710.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://support.avaya.com/elmodocs2/security/ASA-2006-254.htm", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23064", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/22497", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/245984", 
+                "id": "VU#245984"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "1.9", 
+                    "base": "4.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-4342"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:9649", 
+                "title": "The kernel in Red Hat Enterprise Linux 3, when running on SMP systems, allows local users to cause a denial of service (deadlock) by running the shmat function on an shm at the same time that shmctl is removing that shm (IPC_RMID), which prevents a spinlock from being unlocked.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:9649"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "CentOS 3 : kernel (CESA-2006:0710)", 
+                "file": "centos_RHSA-2006-0710.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "22879"
+            }, 
+            {
+                "name": "Oracle Linux 3 : kernel (ELSA-2006-0710)", 
+                "file": "oraclelinux_ELSA-2006-0710.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "67413"
+            }, 
+            {
+                "name": "RHEL 3 : kernel (RHSA-2006:0710)", 
+                "file": "redhat-RHSA-2006-0710.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "22918"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20060710", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2006-0710.html", 
+                    "id": "RHSA-2006:0710", 
+                    "title": "RHSA-2006:0710: kernel security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=169428", 
+                    "title": "repetitive keystroke issue on both RH3 U5 32bit and RH4 U1 32bit.", 
+                    "id": "169428", 
+                    "issue date": "2006-10-19", 
+                    "associated redhat": "RHSA-2006:0710"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=189436", 
+                    "title": "CVE-2006-1864 smbfs chroot issue", 
+                    "id": "189436", 
+                    "issue date": "2006-10-19", 
+                    "associated redhat": "RHSA-2006:0710"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=190074", 
+                    "title": "CVE-2006-2071 mprotect gives write permission to a readonly attachment", 
+                    "id": "190074", 
+                    "issue date": "2006-10-19", 
+                    "associated redhat": "RHSA-2006:0710"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=197672", 
+                    "title": "CVE-2006-2935 Possible buffer overflow in DVD handling", 
+                    "id": "197672", 
+                    "issue date": "2006-10-19", 
+                    "associated redhat": "RHSA-2006:0710"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=205618", 
+                    "title": "CVE-2006-4342 shmat hangs by simultaneous shmctl(IPC_RMID)", 
+                    "id": "205618", 
+                    "issue date": "2006-10-19", 
+                    "associated redhat": "RHSA-2006:0710"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=206270", 
+                    "title": "CVE-2006-4997 IP over ATM clip_mkip dereference freed pointer", 
+                    "id": "206270", 
+                    "issue date": "2006-10-19", 
+                    "associated redhat": "RHSA-2006:0710"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=209436", 
+                    "title": "CVE-2006-5174 copy_from_user information leak on s390", 
+                    "id": "209436", 
+                    "issue date": "2006-10-19", 
+                    "associated redhat": "RHSA-2006:0710"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

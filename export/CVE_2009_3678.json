@@ -1,0 +1,204 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3678", 
+                "published": "2010-05-14T15:30:01.203-04:00", 
+                "id": "CVE-2009-3678", 
+                "modified": "2010-12-27T00:00:00.000-05:00", 
+                "summary": "Integer overflow in cdd.dll in the Canonical Display Driver (CDD) in Microsoft Windows Server 2008 R2 and Windows 7 on 64-bit platforms, when the Windows Aero theme is installed, allows context-dependent attackers to cause a denial of service (reboot) or possibly execute arbitrary code via a crafted image file that triggers incorrect data parsing after user-mode data is copied to kernel mode, as demonstrated using \"Browse with Irfanview\" and certain actions on a folder containing a large number of thumbnail images in Resample mode, possibly related to the ATI graphics driver or win32k.sys, aka \"Canonical Display Driver Integer Overflow Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_7:-:-:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:r2::x64"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.53207", 
+                "id": 53207
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0024847", 
+                "id": "2010-B-0053", 
+                "title": "Microsoft Canonical Display Driver Remote Code Execution Vulnerability "
+            }
+        ], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/40237", 
+                "id": 40237
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/64731", 
+                "id": 64731
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA10-194A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/58622", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2010/1178", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/40237", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/Bulletin/MS10-043.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/advisory/2028859.mspx", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/39577", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://pcandmactech.blogspot.com/2009/12/irfanview-and-bsod.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://osvdb.org/64731", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://isc.sans.org/diary.html?storyid=8809", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://en.irfanview-forum.de/vb/showthread.php?5647-V4-25-bluescreen-with-Windows-7-cdd-dll-win32k-sys", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://blogs.technet.com/srd/archive/2010/05/18/cdd-dll-vulnerability-difficult-to-exploit.aspx", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://blogs.technet.com/msrc/archive/2010/05/18/security-advisory-2028859-released.aspx", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-3678"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:7195", 
+                "title": "Remote code execution vulnerability in Canonical Display Driver", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:7195"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS10-043: Vulnerability in Canonical Display Driver Could Allow Remote Code Execution (2032276)", 
+                "file": "smb_nt_ms10-043.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "47711"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in Canonical Display Driver Could Allow Remote Code Execution", 
+                "id": "Vulnerability in Canonical Display Driver Could Allow Remote Code Execution", 
+                "title": "2032276"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2032276", 
+                "id": "2032276", 
+                "title": "Vulnerability in Canonical Display Driver Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS10-043", 
+                "id": "MS10-043", 
+                "title": "Vulnerability in Canonical Display Driver Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

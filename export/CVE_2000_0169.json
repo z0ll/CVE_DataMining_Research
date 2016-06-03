@@ -1,0 +1,140 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0169", 
+                "published": "2000-03-15T00:00:00.000-05:00", 
+                "id": "CVE-2000-0169", 
+                "modified": "2008-09-10T15:03:08.633-04:00", 
+                "summary": "Batch files in the Oracle web listener ows-bin directory allow remote attackers to execute commands via a malformed URL that includes  ?& ."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:oracle:application_server:4.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.15392", 
+                "id": 15392
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/1053", 
+                "id": 1053
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/1053", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/ntbugtraq/2000-q1/0211.html", 
+                    "vendor": "NTBUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2101193", 
+                "signature": "GPL WEB_SPECIFIC_APPS oracle web arbitrary command execution attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1193", 
+                "signature": "SERVER-WEBAPP oracle web arbitrary command execution attempt"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1880", 
+                "signature": "SERVER-WEBAPP oracle web application server access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2000-0169"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "ows-bin", 
+                "file": "ows_bin_cgi.nasl", 
+                "family": "Web application abuses", 
+                "id": "10348"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Oracle Application Server Multiple Vulnerabilities", 
+                "file": "oracle_application_server_pci.nasl", 
+                "family": "Web Servers", 
+                "id": "57619"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

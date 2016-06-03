@@ -1,0 +1,179 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3068", 
+                "published": "2009-09-04T14:30:01.170-04:00", 
+                "id": "CVE-2009-3068", 
+                "modified": "2013-07-17T12:06:19.050-04:00", 
+                "summary": "Unrestricted file upload vulnerability in the RoboHelpServer Servlet (robohelp/server) in Adobe RoboHelp Server 8 allows remote attackers to execute arbitrary code by uploading a Java Archive (.jsp) file during a PUBLISH action, then accessing it via a direct request to the file in the robohelp/robo/reserved/web directory under its sessionid subdirectory, as demonstrated by the vd_adobe module in VulnDisco Pack Professional 8.7 through 8.11."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:adobe:robohelp_server:8"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.49820", 
+                "id": 49820
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/36245", 
+                "id": 36245
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.zerodayinitiative.com/advisories/ZDI-09-066", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/36245", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/506687/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.intevydis.com/blog/?p=69", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.intevydis.com/blog/?p=26", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.adobe.com/support/security/bulletins/apsb09-14.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://twitter.com/elegerov/statuses/3737725344", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://twitter.com/elegerov/statuses/3737538715", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://twitter.com/elegerov/statuses/3727947465", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/36467", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://intevydis.com/vd-list.shtml", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://blogs.adobe.com/psirt/2009/09/potential_robohelp_server_8_is.html", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "adobe_robohelper_authbypass.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/http/adobe_robohelper_authbypass.rb", 
+                "title": "Adobe RoboHelp Server 8 Arbitrary File Upload and Execute"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [
+            {
+                "url": "http://www.d2sec.com/exploits/adobe_robohelp_server_8_upload.html", 
+                "title": "Adobe Robohelp Server 8 Upload"
+            }
+        ], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-3068"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Adobe RoboHelp Server Security Bypass (APSA09-05 / intrusive check)", 
+                "file": "robohelpserver_apsb09_14.nasl", 
+                "family": "CGI abuses", 
+                "id": "41947"
+            }, 
+            {
+                "name": "Adobe RoboHelp Server Security Bypass (APSA09-05)", 
+                "file": "robohelpserver_apsb09_14_safe.nasl", 
+                "family": "CGI abuses", 
+                "id": "41946"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

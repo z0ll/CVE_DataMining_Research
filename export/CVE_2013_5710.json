@@ -1,0 +1,162 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5710", 
+                "published": "2013-09-23T16:55:07.433-04:00", 
+                "id": "CVE-2013-5710", 
+                "modified": "2013-10-23T23:48:25.690-04:00", 
+                "summary": "The nullfs implementation in sys/fs/nullfs/null_vnops.c in the kernel in FreeBSD 8.3 through 9.2 allows local users with certain permissions to bypass access restrictions via a hardlink in a nullfs instance to a file in a different instance."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:freebsd:freebsd:8.3"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:8.4"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:9.0"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:8.0"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:9.1"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:9.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.10258", 
+                "id": 10258
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securitytracker.com/id/1029015", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.freebsd.org/security/advisories/FreeBSD-SA-13:13.nullfs.asc", 
+                    "vendor": "FREEBSD"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2013/dsa-2769", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://svnweb.freebsd.org/base?view=revision&revision=255442", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/54861", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "1.9", 
+                    "base": "3.7", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-5710"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2769-1 (kfreebsd-9 - privilege escalation/denial of service)", 
+                "file": "deb_2769.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "892769"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-2769-1 : kfreebsd-9 - privilege escalation/denial of service", 
+                "file": "debian_DSA-2769.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "70353"
+            }, 
+            {
+                "name": "FreeBSD : FreeBSD -- Cross-mount links between nullfs(5) mounts (b72bad1c-20ed-11e3-be06-000c29ee3065)", 
+                "file": "freebsd_pkg_b72bad1c20ed11e3be06000c29ee3065.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "70263"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2769", 
+                "id": "DSA-2769"
+            }
+        ], 
+        "Vmware": []
+    }
+}

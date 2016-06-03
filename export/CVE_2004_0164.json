@@ -1,0 +1,226 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0164", 
+                "published": "2004-03-03T00:00:00.000-05:00", 
+                "id": "CVE-2004-0164", 
+                "modified": "2010-08-21T00:19:39.957-04:00", 
+                "summary": "KAME IKE daemon (racoon) does not properly handle hash values, which allows remote attackers to delete certificates via (1) a certain delete message that is not properly handled in isakmp.c or isakmp_inf.c, or (2) a certain INITIAL-CONTACT message that is not properly handled in isakmp_inf.c."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:kame:racoon:all_versions"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.21636", 
+                "id": 21636
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/9417", 
+                "id": 9417
+            }, 
+            {
+                "url": "http://www.securityfocus.com/bid/9416", 
+                "id": 9416
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=107411758202662&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/14118", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/14117", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/9417", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://lists.apple.com/archives/security-announce/2004/Feb/msg00000.html", 
+                    "vendor": "APPLE"
+                }, 
+                {
+                    "url": "ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2004-001.txt.asc", 
+                    "vendor": "NETBSD"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/9416", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=107403331309838&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2102413", 
+                "signature": "GPL EXPLOIT ISAKMP delete hash with empty hash attempt"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2102414", 
+                "signature": "GPL EXPLOIT ISAKMP initial contact notification without SPI attempt"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2102415", 
+                "signature": "GPL EXPLOIT ISAKMP second payload initial contact notification without SPI attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "misc-attack", 
+                "id": "sid:2413", 
+                "signature": "SERVER-OTHER ISAKMP delete hash with empty hash attempt"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:2414", 
+                "signature": "SERVER-OTHER ISAKMP initial contact notification without SPI attempt"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:2415", 
+                "signature": "SERVER-OTHER ISAKMP second payload initial contact notification without SPI attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0164"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:947", 
+                "title": "KAME IKE Daemon Improper Hash Value Handling", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:947"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:9737", 
+                "title": "KAME IKE daemon (racoon) does not properly handle hash values, which allows remote attackers to delete certificates via (1) a certain delete message that is not properly handled in isakmp.c or isakmp_inf.c, or (2) a certain INITIAL-CONTACT message that is not properly handled in isakmp_inf.c.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:9737"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: racoon", 
+                "file": "freebsd_racoon3.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52492"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "FreeBSD : racoon security association deletion vulnerability (739bb51d-7e82-11d8-9645-0020ed76ef5a)", 
+                "file": "freebsd_pkg_739bb51d7e8211d896450020ed76ef5a.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "38002"
+            }, 
+            {
+                "name": "FreeBSD : racoon security association deletion vulnerability (162)", 
+                "file": "freebsd_racoon_20040116a.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "12607"
+            }, 
+            {
+                "name": "RHEL 3 : ipsec-tools (RHSA-2004:165)", 
+                "file": "redhat-RHSA-2004-165.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "12488"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20040165", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2004-165.html", 
+                    "id": "RHSA-2004:165", 
+                    "title": "RHSA-2004:165: ipsec-tools security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=120253", 
+                    "title": "CAN-2004-0155/CAN-2004-0164/CAN-2004-0403 IPSEC vulnerabilities", 
+                    "id": "120253", 
+                    "issue date": "2004-05-11", 
+                    "associated redhat": "RHSA-2004:165"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,1531 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-4546", 
+                "published": "2013-04-02T20:55:01.233-04:00", 
+                "id": "CVE-2012-4546", 
+                "modified": "2013-04-03T00:00:00.000-04:00", 
+                "summary": "The default configuration for IPA servers in Red Hat Enterprise Linux 6, when revoking a certificate from an Identity Management replica, does not properly update another Identity Management replica, which causes inconsistent Certificate Revocation Lists (CRLs) to be used and might allow remote attackers to bypass intended access restrictions via a revoked certificate."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/16.html", 
+                "id": "CWE-16", 
+                "title": "Configuration"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:6"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.63927", 
+                "id": 63927
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2013-0528.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "4.3", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-4546"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24108", 
+                "title": "ELSA-2013:0528: ipa security, bug fix and enhancement update (Low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24108"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20737", 
+                "title": "RHSA-2013:0528: ipa security, bug fix and enhancement update (Low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20737"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27589", 
+                "title": "DEPRECATED: ELSA-2013-0528 -- ipa security, bug fix and enhancement update (low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27589"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CentOS Update for ipa-admintools CESA-2013:0528 centos6", 
+                "file": "gb_CESA-2013_0528_ipa-admintools_centos6.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881635"
+            }, 
+            {
+                "name": "Fedora Update for freeipa FEDORA-2013-1445", 
+                "file": "gb_fedora_2013_1445_freeipa_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865281"
+            }, 
+            {
+                "name": "Fedora Update for freeipa FEDORA-2013-4460", 
+                "file": "gb_fedora_2013_4460_freeipa_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865548"
+            }, 
+            {
+                "name": "RedHat Update for ipa RHSA-2013:0528-02", 
+                "file": "gb_RHSA-2013_0528-02_ipa.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870938"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 6 : ipa (CESA-2013:0528)", 
+                "file": "centos_RHSA-2013-0528.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "65157"
+            }, 
+            {
+                "name": "Fedora 18 : freeipa-3.1.2-1.fc18 (2013-1445)", 
+                "file": "fedora_2013-1445.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "64419"
+            }, 
+            {
+                "name": "Oracle Linux 6 : ipa (ELSA-2013-0528)", 
+                "file": "oraclelinux_ELSA-2013-0528.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68762"
+            }, 
+            {
+                "name": "RHEL 6 : ipa (RHSA-2013:0528)", 
+                "file": "redhat-RHSA-2013-0528.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "64773"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : ipa on SL6.x i386/x86_64", 
+                "file": "sl_20130221_ipa_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "65012"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20130528", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2013-0528.html", 
+                    "id": "RHSA-2013:0528", 
+                    "title": "RHSA-2013:0528: ipa security, bug fix and enhancement update (Low)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=748987", 
+                    "title": "If  master has leftover replica agreement from a previous failed attempt, next replica install can fail", 
+                    "id": "748987", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=766095", 
+                    "title": "[RFE] UI for SELinux user mapping", 
+                    "id": "766095", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=767723", 
+                    "title": "[RFE] Implement ipa web GUI to create trusts", 
+                    "id": "767723", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=768510", 
+                    "title": "migrate-ds : misleading error message when invalid objectclass defined", 
+                    "id": "768510", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=773490", 
+                    "title": "dns discovery domain needs to be added to sssd.conf", 
+                    "id": "773490", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=781208", 
+                    "title": "ipa user-find --manager does not find matches", 
+                    "id": "781208", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=782847", 
+                    "title": "ipa permission-mod prompts for all parameters", 
+                    "id": "782847", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=782981", 
+                    "title": "[RFE] Form based auth page needs to support password changes too", 
+                    "id": "782981", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=783274", 
+                    "title": "[RFE] Create NIS map for ethers table", 
+                    "id": "783274", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=784378", 
+                    "title": "Run CLEANRUV task when completely deleting a replica", 
+                    "id": "784378", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=784621", 
+                    "title": "[ipa webui] Reset password link is enabled for a user without permission to change it", 
+                    "id": "784621", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=785251", 
+                    "title": "ipa permisison-find --name brings back all permissions", 
+                    "id": "785251", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=785254", 
+                    "title": "ipa permission-find --subtree brings back all permissions", 
+                    "id": "785254", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=785257", 
+                    "title": "ipa permission-find --sizelimit is disregarded", 
+                    "id": "785257", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=786199", 
+                    "title": "[RFE] CLI session support (Store session cookie in ccache for cli users)", 
+                    "id": "786199", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=796390", 
+                    "title": "ipa netgroup-add with both --desc and --addattr=description returns internal error", 
+                    "id": "796390", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=798355", 
+                    "title": "Fill DNS update policy by default", 
+                    "id": "798355", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=798363", 
+                    "title": "[RFE] add in UI of \"create password policy\" measurement unit examples", 
+                    "id": "798363", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=798365", 
+                    "title": "defect: add in UI of \"policy\" -> \"kerberos ticket policy\" measurement unit examples", 
+                    "id": "798365", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=798493", 
+                    "title": "adding reverse zones in gui fails to create correct zone", 
+                    "id": "798493", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=801931", 
+                    "title": "[RFE] Expand current 'update dns entries' permission to be per-domain level?", 
+                    "id": "801931", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=804619", 
+                    "title": "DNS zone serial number is not updated", 
+                    "id": "804619", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=805203", 
+                    "title": "set ipa_hostname for sssd.conf", 
+                    "id": "805203", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=805233", 
+                    "title": "[RFE] Prevent deletion of the last admin", 
+                    "id": "805233", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=805430", 
+                    "title": "IPA dnszone-add does not accept the utmost valid serial number.", 
+                    "id": "805430", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=807018", 
+                    "title": "ipa config-mod should not be allowed to modify certificate subject base", 
+                    "id": "807018", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=809562", 
+                    "title": "Constraints for CNAME records are not enforced", 
+                    "id": "809562", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=809565", 
+                    "title": "Cannot change DNS name without recreating it", 
+                    "id": "809565", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=811207", 
+                    "title": "[ipa webui] When permission Type is updated, attributes should reflect new Type", 
+                    "id": "811207", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=811211", 
+                    "title": "[ipa webui] Refresh issue with re-adding objects with same name as deleted objects", 
+                    "id": "811211", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=811295", 
+                    "title": "Installation fails when CN is set in certificate subject base", 
+                    "id": "811295", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=813325", 
+                    "title": "ipa netgroup-mod addattr and setattr allow invalid characters for externalHost", 
+                    "id": "813325", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=813402", 
+                    "title": "[RFE] Warn users in UI when password is going to expire in n days", 
+                    "id": "813402", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=814785", 
+                    "title": "[ipa webui] Update Unsaved Changes for Netgroups", 
+                    "id": "814785", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=815364", 
+                    "title": "[ipa webui] DNS permissions not listed and are in lowercase", 
+                    "id": "815364", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=815481", 
+                    "title": "hostgroup and netgroup names with one letter not allowed", 
+                    "id": "815481", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=815494", 
+                    "title": "[ipa webui]  Netgroups page does not have members listed as links", 
+                    "id": "815494", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=815830", 
+                    "title": "[WebUI] Unsaved changes dialog appers more than once in some cases", 
+                    "id": "815830", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=815849", 
+                    "title": "ipa-server-install unhandled exception with unclear error messages (inside DNS check)", 
+                    "id": "815849", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=816574", 
+                    "title": "ipa permission-add throws internal server error when --addattr or --setattr is blank", 
+                    "id": "816574", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=816624", 
+                    "title": "ipa privilege-remove-permission with blank permission throws internal error", 
+                    "id": "816624", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=817075", 
+                    "title": "ipa-server-install: s/calculated/determined/", 
+                    "id": "817075", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=817080", 
+                    "title": "ipa-server-install --uninstall doesn't clear certmonger dirs, which leads to install failing", 
+                    "id": "817080", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=817407", 
+                    "title": "[Web UI] Password policies are not sorted properly", 
+                    "id": "817407", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=817412", 
+                    "title": "there is no permission/privilege for modifying automount keys", 
+                    "id": "817412", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=817413", 
+                    "title": "validate that domain name uses only valid characters", 
+                    "id": "817413", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=817821", 
+                    "title": "ipa config-mod --delattr misleading invalid error messages", 
+                    "id": "817821", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=817831", 
+                    "title": "ipa config-mod --delattr user and group search fields returns internal server error", 
+                    "id": "817831", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=817865", 
+                    "title": "we should not influence ip address family selection (traceback when IPv6 disabled)", 
+                    "id": "817865", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=817869", 
+                    "title": "Clean keytabs before installing new keys into them", 
+                    "id": "817869", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=817885", 
+                    "title": "Internal error : ipa config-mod addattr on user and group objectclasses", 
+                    "id": "817885", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=818665", 
+                    "title": "[ipa webui] Unprovisioning keytab does not have cancel option", 
+                    "id": "818665", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=818714", 
+                    "title": "[ipa webui] Instructions to generate cert should include specifying size of private key", 
+                    "id": "818714", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=818836", 
+                    "title": "ipa pwpolicy-find displays incorrect max and min lifetime.", 
+                    "id": "818836", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=819629", 
+                    "title": "Enable persistent search in bind-dyndb-ldap during IPA upgrade", 
+                    "id": "819629", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=819635", 
+                    "title": "Fix help string for DNS zone --forwarder option", 
+                    "id": "819635", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=820983", 
+                    "title": "Nested search facets have wrong tab name", 
+                    "id": "820983", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=821448", 
+                    "title": "RFE: Browser config javascript should check to see if sending Referer is enabled", 
+                    "id": "821448", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=822608", 
+                    "title": "Passwords cannot be migrated", 
+                    "id": "822608", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=823657", 
+                    "title": "ipa-replica-manage connect fails with GSSAPI error after delete if using previous kerberos ticket", 
+                    "id": "823657", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=824074", 
+                    "title": "Create ipaserver-upgrade.log on upgrades", 
+                    "id": "824074", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=824488", 
+                    "title": "Add 'disable_last_success' and 'disable_lockout' to the ipadb.so dblibrary", 
+                    "id": "824488", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=824490", 
+                    "title": "WinSync users who have First.Last casing creates users who can have their password set", 
+                    "id": "824490", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=824492", 
+                    "title": "Cannot re-connect replica to previously disconnected master", 
+                    "id": "824492", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=826152", 
+                    "title": "zonemgr is set to default for reverse zone even with --zonemgr", 
+                    "id": "826152", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=826677", 
+                    "title": "IPA cannot remove disconnected replica data to reconnect", 
+                    "id": "826677", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=827162", 
+                    "title": "ipa-client uninstall causes a crash after installing using --preserve-sssd", 
+                    "id": "827162", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=827321", 
+                    "title": "ipa-server-install does not fill the default value for --subject option and it crashes later.", 
+                    "id": "827321", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=827392", 
+                    "title": "Host OTP :: Random password characters should be limited.", 
+                    "id": "827392", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=827583", 
+                    "title": "[ipa webui] DNS Zones - Add - on IE does not open a Add window, and instead writes on top on existing page", 
+                    "id": "827583", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=828687", 
+                    "title": "Unable to update dns when deleting host", 
+                    "id": "828687", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=829070", 
+                    "title": "ipa-server-install --uninstall does not remove /var/lib/sss/pubconf/kdcinfo.$REALM", 
+                    "id": "829070", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=829746", 
+                    "title": "[ipa webui] IE  - Add members dialog box cannot be resized", 
+                    "id": "829746", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=829899", 
+                    "title": "[ipa webui] IE - Attribute listing when adding permission or delegation is not displayed same as FF", 
+                    "id": "829899", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=830598", 
+                    "title": "ipa-server-install --uninstall not stopping sssd and seeing ipa-replica-conncheck kinit errors", 
+                    "id": "830598", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=830817", 
+                    "title": "[ipa webui] IE - Add permission of type Subtree, has a smaller textarea for subtree than FF", 
+                    "id": "830817", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=831010", 
+                    "title": "[RFE] ipa-client-install always adds _srv_ entry to sssd.conf even when server specified.", 
+                    "id": "831010", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=831227", 
+                    "title": "[ipa webui] IE - Unable to Edit Service, and intermittently add service fails", 
+                    "id": "831227", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=831299", 
+                    "title": "[ipa webui] IE -Scrollbar jumps back when checkbox'ing an object", 
+                    "id": "831299", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=831313", 
+                    "title": "ipa-replica-install enable GSSAPI for replication list index out of range failure", 
+                    "id": "831313", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=831661", 
+                    "title": "ipa-replica-manage re-initialize update failed due to named ldap timeout", 
+                    "id": "831661", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=832243", 
+                    "title": "Sporadic JSON errors under MSIE", 
+                    "id": "832243", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=833505", 
+                    "title": "ipa-client-install crashes when --hostname is given", 
+                    "id": "833505", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=833515", 
+                    "title": "permissions of replica files should be 0600", 
+                    "id": "833515", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=833516", 
+                    "title": "Ipactl exception not handled well in ipactl", 
+                    "id": "833516", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=833517", 
+                    "title": "[RFE] [Web UI] Add support for DNS per-domain permissions", 
+                    "id": "833517", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=835642", 
+                    "title": "mail attribute not automatically populated", 
+                    "id": "835642", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=837357", 
+                    "title": "Attributelevelrights differs in permission-show and permission-mod for the same permission", 
+                    "id": "837357", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=837358", 
+                    "title": "Don't display: Logged in as: user@FREEIPA.ORG", 
+                    "id": "837358", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=837365", 
+                    "title": "CLEANALLRUV must deal with offline replicas and older replicas", 
+                    "id": "837365", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=837380", 
+                    "title": "Add group external member support to Web UI", 
+                    "id": "837380", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=839008", 
+                    "title": "Indirect roles not checked for in WebUI", 
+                    "id": "839008", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=839638", 
+                    "title": "ipa-replica-manage allows disconnect of last connection for a single replica", 
+                    "id": "839638", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=840657", 
+                    "title": "sshpubkey not accepting ssh keys in the right format for user", 
+                    "id": "840657", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=845405", 
+                    "title": "ipa-replica-install httpd restart failed", 
+                    "id": "845405", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=845691", 
+                    "title": "ipa-client-install Failed to obtain host TGT", 
+                    "id": "845691", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=846309", 
+                    "title": "Prevent disabling last admin", 
+                    "id": "846309", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=852480", 
+                    "title": "automountkey is not indexed", 
+                    "id": "852480", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=854321", 
+                    "title": "Password policies are sorted lexicographically instead of numerically", 
+                    "id": "854321", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=854325", 
+                    "title": "Time synchronization is disabled in ipa-client-install", 
+                    "id": "854325", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=855278", 
+                    "title": "I'm getting jQuery error when adding command includes \"??\" into the sudo commands field in IPA web interface.", 
+                    "id": "855278", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=856282", 
+                    "title": "[Web UI] Improve instructions to generate certificate", 
+                    "id": "856282", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=856293", 
+                    "title": "Nameserver does not have a corresponding A/AAAA record while creating new dns zone", 
+                    "id": "856293", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=856294", 
+                    "title": "Instructions to uninstall are unclear", 
+                    "id": "856294", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=859968", 
+                    "title": "IPA browser configuration won't work on Firefox >= 15", 
+                    "id": "859968", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=860683", 
+                    "title": "group-mod should not be allowed to rename or modify admins account", 
+                    "id": "860683", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=864533", 
+                    "title": "Forbidden access to IPA published CRL", 
+                    "id": "864533", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=866572", 
+                    "title": "ipa-adtrust-install checks for /usr/bin/smbpasswd, which is not required", 
+                    "id": "866572", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=866966", 
+                    "title": "httpd needs restart post ipa-adtrust-install", 
+                    "id": "866966", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=866977", 
+                    "title": "Inform user when ipa-upgradeconfig reports errors", 
+                    "id": "866977", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=866978", 
+                    "title": "ipa-server-install --setup-dns always installs reverse zone", 
+                    "id": "866978", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=867447", 
+                    "title": "ipa-adtrust-install does not reset all information when re-run", 
+                    "id": "867447", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=867676", 
+                    "title": "extdom plugin does not handle Posix UID and GID request", 
+                    "id": "867676", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=868956", 
+                    "title": "Adding dnszone using name-server and ipaddress, adds zone with incorrect data", 
+                    "id": "868956", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=869279", 
+                    "title": "Bad link to Web UI config page after session is expired", 
+                    "id": "869279", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=869616", 
+                    "title": "Issues when adding AD user as member of external group", 
+                    "id": "869616", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=869656", 
+                    "title": "Improve information on passsync user in man page, command help", 
+                    "id": "869656", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=869658", 
+                    "title": "It is not possible to disable forwarding on per-zone basics", 
+                    "id": "869658", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=869741", 
+                    "title": "Re-adding an existing entry in trust, does not throw exception.", 
+                    "id": "869741", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=870053", 
+                    "title": "Default SELinuxusermaporder needs to mapped with default selinux users list", 
+                    "id": "870053", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=870234", 
+                    "title": "CVE-2012-4546 ipa: servers do not publish correct CRLs", 
+                    "id": "870234", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=870446", 
+                    "title": "multi operations with attribute manipulation not returning error", 
+                    "id": "870446", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=872707", 
+                    "title": "ipa-server dependency on krb5-server is not adequate", 
+                    "id": "872707", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=874935", 
+                    "title": "ipa-server installation fails to find A/AAAA record for IPA hostname", 
+                    "id": "874935", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=875261", 
+                    "title": "IPA WebUI login for AD Trusted User fails", 
+                    "id": "875261", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=877324", 
+                    "title": "Missing Option to add SSH Public Key in Web UI after upgrade", 
+                    "id": "877324", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=877434", 
+                    "title": "not exact error message show up when adding an AD member to an external type group  while the time difference between ad and ipa is too great", 
+                    "id": "877434", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=878288", 
+                    "title": "IPA users are not available after ipa-server-install because sssd not running", 
+                    "id": "878288", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=878462", 
+                    "title": "Special case NFS related ticket to avoid attaching MS-PACs", 
+                    "id": "878462", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=878480", 
+                    "title": "Lookup user SIDs in external groups", 
+                    "id": "878480", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=878485", 
+                    "title": "ipa trust-add prints misleading information about required DNS setting", 
+                    "id": "878485", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=878969", 
+                    "title": "Write replacement for python-crypto", 
+                    "id": "878969", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=880655", 
+                    "title": "Regression in default value of group type in user group adder dialog", 
+                    "id": "880655", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=888124", 
+                    "title": "ipa install does not enable sssd start on boot", 
+                    "id": "888124", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=888524", 
+                    "title": "ipa delegation-find --group option returns internal error", 
+                    "id": "888524", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=888915", 
+                    "title": "cookie library does not parse nor generate expires attribute correctly when locale is not english", 
+                    "id": "888915", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=888956", 
+                    "title": "Cannot install an IPA Replica server with PKI-CA/Dogtag from a master with a large CRL", 
+                    "id": "888956", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=889583", 
+                    "title": "ipa server install failing when realm differs from domain", 
+                    "id": "889583", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=891980", 
+                    "title": "Make the root CA lifetime at least 15 years", 
+                    "id": "891980", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=893187", 
+                    "title": "Installing IPA with a single realm component sometimes fails", 
+                    "id": "893187", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=893722", 
+                    "title": "ipa-server upgrade ERROR Cannot move CRL file to new directory", 
+                    "id": "893722", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=893827", 
+                    "title": "ipa permission-find using valid targetgroup throws internal error", 
+                    "id": "893827", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=894090", 
+                    "title": "Internal Server Error during ldap Migration", 
+                    "id": "894090", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=894131", 
+                    "title": "ipa-replica-install fails to add idnssoaserial for a new zone", 
+                    "id": "894131", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=894143", 
+                    "title": "ipa-replica-prepare fails when reverse zone does not have SOA serial data", 
+                    "id": "894143", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=895298", 
+                    "title": "IPA upgrade error restarting named when dirsrv off before upgrade", 
+                    "id": "895298", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=895561", 
+                    "title": "IPA install in pure IPv6 environment fails with \"Can't contact LDAP server\" error", 
+                    "id": "895561", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=903758", 
+                    "title": "upgrading IPA from 2.2 to 3.0 sees certmonger errors", 
+                    "id": "903758", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=905594", 
+                    "title": "Unable to install ipa-server-trust-ad pkg on 32-bit platform", 
+                    "id": "905594", 
+                    "issue date": "2013-02-21", 
+                    "associated redhat": "RHSA-2013:0528"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

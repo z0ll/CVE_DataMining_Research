@@ -1,0 +1,258 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-0779", 
+                "published": "2001-10-18T00:00:00.000-04:00", 
+                "id": "CVE-2001-0779", 
+                "modified": "2008-09-05T16:24:54.800-04:00", 
+                "summary": "Buffer overflow in rpc.yppasswdd (yppasswd server) in Solaris 2.6, 7 and 8 allows remote attackers to gain root access via a long username."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:sun:solaris:2.6"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:8.0"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:8.0::x86"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:7.0::x86"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:7.0"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:2.6::x86"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.17542", 
+                "id": 17542
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/2763", 
+                "id": 2763
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/327281", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/static/6629.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/2763", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/200110041632.JAA28125@dim.ucsd.edu", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/187086", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/m-008.shtml", 
+                    "vendor": "CIAC"
+                }, 
+                {
+                    "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doctype=coll&doc=secbull/209", 
+                    "vendor": "SUN"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/327281", 
+                "id": "VU#327281"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "rpc-portmap", 
+                "id": "sid:2102030", 
+                "signature": "GPL RPC yppasswd new password overflow attempt TCP"
+            }, 
+            {
+                "classtype": "rpc-portmap", 
+                "id": "sid:2102028", 
+                "signature": "GPL RPC yppasswd old password overflow attempt TCP"
+            }, 
+            {
+                "classtype": "rpc-portmap", 
+                "id": "sid:2102032", 
+                "signature": "GPL RPC yppasswd user update TCP"
+            }, 
+            {
+                "classtype": "rpc-portmap", 
+                "id": "sid:2102026", 
+                "signature": "GPL RPC yppasswd username overflow attempt TCP"
+            }, 
+            {
+                "classtype": "rpc-portmap", 
+                "id": "sid:2102029", 
+                "signature": "GPL RPC yppasswd new password overflow attempt UDP"
+            }, 
+            {
+                "classtype": "rpc-portmap", 
+                "id": "sid:2102027", 
+                "signature": "GPL RPC yppasswd old password overflow attempt UDP"
+            }, 
+            {
+                "classtype": "rpc-portmap", 
+                "id": "sid:2102031", 
+                "signature": "GPL RPC yppasswd user update UDP"
+            }, 
+            {
+                "classtype": "rpc-portmap", 
+                "id": "sid:2102025", 
+                "signature": "GPL RPC yppasswd username overflow attempt UDP"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:2025", 
+                "signature": "PROTOCOL-RPC yppasswd username overflow attempt UDP"
+            }, 
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:2026", 
+                "signature": "PROTOCOL-RPC yppasswd username overflow attempt TCP"
+            }, 
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:2027", 
+                "signature": "PROTOCOL-RPC yppasswd old password overflow attempt UDP"
+            }, 
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:2028", 
+                "signature": "PROTOCOL-RPC yppasswd old password overflow attempt TCP"
+            }, 
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:2029", 
+                "signature": "PROTOCOL-RPC yppasswd new password overflow attempt UDP"
+            }, 
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:2030", 
+                "signature": "PROTOCOL-RPC yppasswd new password overflow attempt TCP"
+            }, 
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:2031", 
+                "signature": "PROTOCOL-RPC yppasswd user update UDP"
+            }, 
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:2032", 
+                "signature": "PROTOCOL-RPC yppasswd user update TCP"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-0779"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:102", 
+                "title": "Solaris 7 rpc.yppasswdd Buffer Overrun Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:102"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:56", 
+                "title": "Solaris 8 rpc.yppasswdd Buffer Overrun Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:56"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "yppasswdd overflow", 
+                "file": "yppasswdd.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "80035"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Solaris rpc.yppasswdd username Remote Overflow", 
+                "file": "yppasswdd.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "10684"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

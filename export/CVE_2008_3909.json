@@ -1,0 +1,218 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-3909", 
+                "published": "2008-09-04T13:41:00.000-04:00", 
+                "id": "CVE-2008-3909", 
+                "modified": "2011-03-07T22:11:37.907-05:00", 
+                "summary": "The administration application in Django 0.91, 0.95, and 0.96 stores unauthenticated HTTP POST requests and processes them after successful authentication occurs, which allows remote attackers to conduct cross-site request forgery (CSRF) attacks and delete or modify data via unspecified requests."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/352.html", 
+                "id": "CWE-352", 
+                "title": "Cross-Site Request Forgery (CSRF)"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:django_project:django:0.95"
+            }, 
+            {
+                "id": "cpe:/a:django_project:django:0.96"
+            }, 
+            {
+                "id": "cpe:/a:django_project:django:0.91"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.43906", 
+                "id": 43906
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/47906", 
+                "id": 47906
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.djangoproject.com/weblog/2008/sep/02/security/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://www.redhat.com/archives/fedora-package-announce/2008-September/msg00131.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "https://www.redhat.com/archives/fedora-package-announce/2008-September/msg00091.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=460966", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2008/2533", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2008/09/03/4", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2008/dsa-1640", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/31961", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/31837", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/47906", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "5.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2008-3909"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18143", 
+                "title": "DSA-1640-1 python-django - cross site request forgery", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18143"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:8091", 
+                "title": "DSA-1640 python-django -- several vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:8091"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 1640-1 (python-django)", 
+                "file": "deb_1640_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "61642"
+            }, 
+            {
+                "name": "Family Connections argv[1] Parameter Remote Arbitrary Command Execution Vulnerability", 
+                "file": "gb_fedora_2008_7288_Django_fc8.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "860709"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-1640-1 : python-django - several vulnerabilities", 
+                "file": "debian_DSA-1640.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "34253"
+            }, 
+            {
+                "name": "Fedora 8 : Django-0.96.3-1.fc8 (2008-7288)", 
+                "file": "fedora_2008-7288.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "34125"
+            }, 
+            {
+                "name": "Fedora 9 : Django-0.96.3-1.fc9 (2008-7672)", 
+                "file": "fedora_2008-7672.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "34142"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : python-django (MDVSA-2008:185)", 
+                "file": "mandriva_MDVSA-2008-185.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "37030"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2008-7288", 
+                "id": "FEDORA-2008-7288"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2008-7672", 
+                "id": "FEDORA-2008-7672"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-1640", 
+                "id": "DSA-1640"
+            }
+        ], 
+        "Vmware": []
+    }
+}

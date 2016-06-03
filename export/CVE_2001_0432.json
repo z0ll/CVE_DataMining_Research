@@ -1,0 +1,155 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-0432", 
+                "published": "2001-07-02T00:00:00.000-04:00", 
+                "id": "CVE-2001-0432", 
+                "modified": "2008-09-05T16:24:05.880-04:00", 
+                "summary": "Buffer overflows in various CGI programs in the remote administration service for Trend Micro Interscan VirusWall 3.01 allow remote attackers to execute arbitrary commands."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:trend_micro:interscan_viruswall:3.0.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.16944", 
+                "id": 16944
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/2579", 
+                "id": 2579
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/2579", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2001-04/0218.html", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1230", 
+                "signature": "SERVER-WEBAPP VirusWall FtpSave access"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1231", 
+                "signature": "SERVER-WEBAPP VirusWall catinfo access"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1232", 
+                "signature": "SERVER-WEBAPP VirusWall catinfo access"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1234", 
+                "signature": "SERVER-WEBAPP VirusWall FtpSaveCSP access"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1235", 
+                "signature": "SERVER-WEBAPP VirusWall FtpSaveCVP access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-0432"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "InterScan VirusWall Remote Configuration Vulnerability", 
+                "file": "interscan_vw_cgi.nasl", 
+                "family": "Service detection", 
+                "id": "10733"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Trend Micro InterScan VirusWall /interscan/cgi-bin/FtpSave.dll Unauthenticated Remote Configuration Manipulation", 
+                "file": "interscan_vw_cgi.nasl", 
+                "family": "CGI abuses", 
+                "id": "10733"
+            }, 
+            {
+                "name": "Trend Micro InterScan VirusWall catinfo CGI Overflow", 
+                "file": "vw_bof.nasl", 
+                "family": "CGI abuses", 
+                "id": "10650"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,185 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/693.html", 
+                "id": "CWE-693", 
+                "title": "Protection Mechanism Failure"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/664.html", 
+                "id": "CWE-664", 
+                "title": "Improper Control of a Resource Through its Lifetime"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/632.html", 
+                "id": "CWE-632", 
+                "title": "Weaknesses that Affect Files or Directories"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/723.html", 
+                "id": "CWE-723", 
+                "title": "OWASP Top Ten 2004 Category A2 - Broken Access Control"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/944.html", 
+                "id": "CWE-944", 
+                "title": "SFP Secondary Cluster: Access Management"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/19.html", 
+                "id": 19
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/474.html", 
+                "id": 474
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-7184", 
+                "published": "2015-10-18T06:59:03.703-04:00", 
+                "id": "CVE-2015-7184", 
+                "modified": "2015-10-19T15:02:02.143-04:00", 
+                "summary": "The fetch API implementation in Mozilla Firefox before 41.0.2 does not restrict access to the HTTP response body in certain situations where user credentials are supplied but the CORS cross-origin request algorithm is improperly followed, which allows remote attackers to bypass the Same Origin Policy via a crafted web site."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/284.html", 
+                "id": "CWE-284", 
+                "title": "Improper Access Control"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:mozilla:firefox:41.0.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.78498", 
+                "id": 78498
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1212669", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1208339", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.mozilla.org/security/announce/2015/mfsa2015-115.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-7184"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "FreeBSD : firefox -- Cross-origin restriction bypass using Fetch (79c68ef7-c8ae-4ade-91b4-4b8221b7c72a)", 
+                "file": "freebsd_pkg_79c68ef7c8ae4ade91b44b8221b7c72a.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "86432"
+            }, 
+            {
+                "name": "Firefox < 41.0.2 fetch API Cross-Origin Bypass (Mac OS X)", 
+                "file": "macosx_firefox_41_0_2.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "86417"
+            }, 
+            {
+                "name": "Firefox < 41.0.2 fetch API Cross-Origin Bypass", 
+                "file": "mozilla_firefox_41_0_2.nasl", 
+                "family": "Windows", 
+                "id": "86418"
+            }, 
+            {
+                "name": "openSUSE Security Update : MozillaFirefox (openSUSE-2015-678)", 
+                "file": "openSUSE-2015-678.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "86595"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 14.04 / 15.04 : firefox vulnerability (USN-2768-1)", 
+                "file": "ubuntu_USN-2768-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "86443"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

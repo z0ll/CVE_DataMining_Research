@@ -1,0 +1,463 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0298", 
+                "published": "2010-02-12T14:30:00.550-05:00", 
+                "id": "CVE-2010-0298", 
+                "modified": "2012-03-19T00:00:00.000-04:00", 
+                "summary": "The x86 emulator in KVM 83 does not use the Current Privilege Level (CPL) and I/O Privilege Level (IOPL) in determining the memory access available to CPL3 code, which allows guest OS users to cause a denial of service (guest OS crash) or gain privileges on the guest OS by leveraging access to a (1) IO port or (2) MMIO region, a related issue to CVE-2010-0306."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.51834", 
+                "id": 51834
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0023715", 
+                "id": "2010-A-0040", 
+                "title": "McAfee LinuxShield Vulnerability"
+            }, 
+            {
+                "Disa key": "V0023713", 
+                "id": "2010-A-0039", 
+                "title": "Multiple Vulnerabilities in Juniper NetScreen(NS) Products"
+            }, 
+            {
+                "Disa key": "V0022704", 
+                "id": "2010-A-0037", 
+                "title": "Multiple Vulnerabilities in Linux Kernel"
+            }
+        ], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/38158", 
+                "id": 38158
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0095.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0088.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=559091", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/38158", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2010/dsa-1996", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/38492", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "6.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-0298"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:7480", 
+                "title": "DSA-1996 linux-2.6 -- privilege escalation/denial of service/sensitive memory leak", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:7480"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13397", 
+                "title": "DSA-1996-1 linux-2.6 -- privilege escalation/denial of service/sensitive memory leak", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13397"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18623", 
+                "title": "DSA-2010-1 kvm - several vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18623"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22934", 
+                "title": "ELSA-2010:0088: kvm security and bug fix update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22934"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:7147", 
+                "title": "DSA-2010 kvm -- privilege escalation/denial of service", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:7147"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22169", 
+                "title": "RHSA-2010:0088: kvm security and bug fix update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22169"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27907", 
+                "title": "DEPRECATED: ELSA-2010-0088 -- kvm security and bug fix update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27907"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:11335", 
+                "title": "The x86 emulator in KVM 83 does not use the Current Privilege Level (CPL) and I/O Privilege Level (IOPL) in determining the memory access available to CPL3 code, which allows guest OS users to cause a denial of service (guest OS crash) or gain privileges on the guest OS by leveraging access to a (1) IO port or (2) MMIO region, a related issue to CVE-2010-0306.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:11335"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:12434", 
+                "title": "USN-947-1 -- linux, linux-source-2.6.15 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:12434"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13167", 
+                "title": "USN-947-2 -- linux regression", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13167"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Ubuntu Update for Linux kernel vulnerabilities USN-947-1", 
+                "file": "gb_ubuntu_USN_947_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840440"
+            }, 
+            {
+                "name": "Ubuntu Update for linux regression USN-947-2", 
+                "file": "gb_ubuntu_USN_947_2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840441"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : kvm (CESA-2010:0088)", 
+                "file": "centos_RHSA-2010-0088.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "44427"
+            }, 
+            {
+                "name": "Debian DSA-1996-1 : linux-2.6 - privilege escalation/denial of service/sensitive memory leak", 
+                "file": "debian_DSA-1996.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "44860"
+            }, 
+            {
+                "name": "Debian DSA-2010-1 : kvm - privilege escalation/denial of service", 
+                "file": "debian_DSA-2010.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "45026"
+            }, 
+            {
+                "name": "Oracle Linux 5 : kvm (ELSA-2010-0088)", 
+                "file": "oraclelinux_ELSA-2010-0088.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "67993"
+            }, 
+            {
+                "name": "RHEL 5 : kvm (RHSA-2010:0088)", 
+                "file": "redhat-RHSA-2010-0088.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "63916"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kvm on SL5.4 i386/x86_64", 
+                "file": "sl_20100209_kvm_on_SL5_4.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "60730"
+            }, 
+            {
+                "name": "Ubuntu 6.06 LTS / 8.04 LTS / 9.04 / 9.10 / 10.04 LTS : linux, linux-source-2.6.15 vulnerabilities (USN-947-1)", 
+                "file": "ubuntu_USN-947-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "46810"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS : linux regression (USN-947-2)", 
+                "file": "ubuntu_USN-947-2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "46811"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0095.html", 
+                    "id": "RHSA-2010:0095", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20100088", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0088.html", 
+                    "id": "RHSA-2010:0088", 
+                    "title": "RHSA-2010:0088: kvm security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=537028", 
+                    "title": "pvclock msr values are not preserved across remote migration", 
+                    "id": "537028", 
+                    "issue date": "2010-02-09", 
+                    "associated redhat": "RHSA-2010:0088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=545874", 
+                    "title": "Need to generate SMBIOS table 4 data for windows guests", 
+                    "id": "545874", 
+                    "issue date": "2010-02-09", 
+                    "associated redhat": "RHSA-2010:0088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=546562", 
+                    "title": "Windows XP unattended install doesn't get an IP address after rebooting, if using -net user", 
+                    "id": "546562", 
+                    "issue date": "2010-02-09", 
+                    "associated redhat": "RHSA-2010:0088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=546563", 
+                    "title": "Windows Server 2008 R2 shutdown hangs after restore from migration", 
+                    "id": "546563", 
+                    "issue date": "2010-02-09", 
+                    "associated redhat": "RHSA-2010:0088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=547293", 
+                    "title": "kvm kmod package should filter only some specific ksym dependencies", 
+                    "id": "547293", 
+                    "issue date": "2010-02-09", 
+                    "associated redhat": "RHSA-2010:0088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=547625", 
+                    "title": "time drift in win2k364 KVM guest", 
+                    "id": "547625", 
+                    "issue date": "2010-02-09", 
+                    "associated redhat": "RHSA-2010:0088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=548368", 
+                    "title": "BSOD BAD_POOL_HEADER STOP 0x19 during boot of Windows Server 2008 R2 installer", 
+                    "id": "548368", 
+                    "issue date": "2010-02-09", 
+                    "associated redhat": "RHSA-2010:0088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=552159", 
+                    "title": "qcow2: infinite recursion on grow_refcount_table() error handling", 
+                    "id": "552159", 
+                    "issue date": "2010-02-09", 
+                    "associated redhat": "RHSA-2010:0088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=552518", 
+                    "title": "Rhev-Block driver causes  'unhandled vm exit' with 32bit win2k3r2sp2 Guest VM  on restart", 
+                    "id": "552518", 
+                    "issue date": "2010-02-09", 
+                    "associated redhat": "RHSA-2010:0088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=552519", 
+                    "title": "KVM : QEMU-Audio attempting to stop unactivated audio device (snd_playback_stop: ASSERT playback_channel->base.active failed).", 
+                    "id": "552519", 
+                    "issue date": "2010-02-09", 
+                    "associated redhat": "RHSA-2010:0088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=552528", 
+                    "title": "Hypercall driver doesn't reset device on power-down", 
+                    "id": "552528", 
+                    "issue date": "2010-02-09", 
+                    "associated redhat": "RHSA-2010:0088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=552529", 
+                    "title": "kvm: migration: mechanism to make older savevm versions to be emitted on some cases", 
+                    "id": "552529", 
+                    "issue date": "2010-02-09", 
+                    "associated redhat": "RHSA-2010:0088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=552530", 
+                    "title": "Build tree for RHEL 5.X and RHEL 5.4.z contains build bugs", 
+                    "id": "552530", 
+                    "issue date": "2010-02-09", 
+                    "associated redhat": "RHSA-2010:0088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=553249", 
+                    "title": "hypercall device - Vm becomes non responsive on Sysmark benchmark (when more than 7 vm's running simultaneously)", 
+                    "id": "553249", 
+                    "issue date": "2010-02-09", 
+                    "associated redhat": "RHSA-2010:0088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=557025", 
+                    "title": "CVE-2010-0297 kvm-userspace-rhel5: usb-linux.c: fix buffer overflow", 
+                    "id": "557025", 
+                    "issue date": "2010-02-09", 
+                    "associated redhat": "RHSA-2010:0088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=559091", 
+                    "title": "CVE-2010-0298 kvm: emulator privilege escalation", 
+                    "id": "559091", 
+                    "issue date": "2010-02-09", 
+                    "associated redhat": "RHSA-2010:0088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=560654", 
+                    "title": "CVE-2010-0306 kvm: emulator privilege escalation IOPL/CPL level check", 
+                    "id": "560654", 
+                    "issue date": "2010-02-09", 
+                    "associated redhat": "RHSA-2010:0088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=560887", 
+                    "title": "CVE-2010-0309 kvm: cat /dev/port in guest cause the host hang", 
+                    "id": "560887", 
+                    "issue date": "2010-02-09", 
+                    "associated redhat": "RHSA-2010:0088"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=561022", 
+                    "title": "QEMU terminates without warning with virtio-net and SMP enabled", 
+                    "id": "561022", 
+                    "issue date": "2010-02-09", 
+                    "associated redhat": "RHSA-2010:0088"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-1996", 
+                "id": "DSA-1996"
+            }
+        ], 
+        "Vmware": []
+    }
+}

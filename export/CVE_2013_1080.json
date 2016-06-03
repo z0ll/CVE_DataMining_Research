@@ -1,0 +1,228 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/284.html", 
+                "id": "CWE-284", 
+                "title": "Improper Access Control"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/254.html", 
+                "id": "CWE-254", 
+                "title": "Security Features"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/718.html", 
+                "id": "CWE-718", 
+                "title": "OWASP Top Ten 2007 Category A7 - Broken Authentication and Session Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/724.html", 
+                "id": "CWE-724", 
+                "title": "OWASP Top Ten 2004 Category A3 - Broken Authentication and Session Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/812.html", 
+                "id": "CWE-812", 
+                "title": "OWASP Top Ten 2010 Category A3 - Broken Authentication and Session Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/947.html", 
+                "id": "CWE-947", 
+                "title": "SFP Secondary Cluster: Authentication Bypass"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/930.html", 
+                "id": "CWE-930", 
+                "title": "OWASP Top Ten 2013 Category A2 - Broken Authentication and Session Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/935.html", 
+                "id": "CWE-935", 
+                "title": "OWASP Top Ten 2013 Category A7 - Missing Function Level Access Control"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/114.html", 
+                "id": 114
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/22.html", 
+                "id": 22
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/57.html", 
+                "id": 57
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/94.html", 
+                "id": 94
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1080", 
+                "published": "2013-03-29T12:09:05.620-04:00", 
+                "id": "CVE-2013-1080", 
+                "modified": "2013-12-13T00:12:34.450-05:00", 
+                "summary": "The web server in Novell ZENworks Configuration Management (ZCM) 10.3 and 11.2 before 11.2.4 does not properly perform authentication for zenworks/jsp/index.jsp, which allows remote attackers to conduct directory traversal attacks, and consequently upload and execute arbitrary programs, via a request to TCP port 443."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/287.html", 
+                "id": "CWE-287", 
+                "title": "Improper Authentication"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:novell:zenworks_configuration_management:10.3"
+            }, 
+            {
+                "id": "cpe:/a:novell:zenworks_configuration_management:11.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.8089", 
+                "id": 8089
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.zerodayinitiative.com/advisories/ZDI-13-049/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.novell.com/support/kb/doc.php?id=7012027", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.novell.com/support/kb/doc.php?id=7011812", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/24938", 
+                    "vendor": "EXPLOIT-DB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-930", 
+                    "title": "OWASP Top Ten 2013 Category A2 - Broken Authentication and Session Management"
+                }, 
+                {
+                    "id": "CWE-935", 
+                    "title": "OWASP Top Ten 2013 Category A7 - Missing Function Level Access Control"
+                }, 
+                {
+                    "id": "CWE-812", 
+                    "title": "OWASP Top Ten 2010 Category A3 - Broken Authentication and Session Management"
+                }
+            ], 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "zenworks_control_center_upload.rb", 
+                "file": "metasploit-framework/modules/exploits/multi/http/zenworks_control_center_upload.rb", 
+                "title": "Novell ZENworks Configuration Management Remote Execution"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/24938", 
+                "id": 24938, 
+                "file": "http://www.exploit-db.com/download/24938"
+            }
+        ], 
+        "Elliot D2": [
+            {
+                "url": "http://www.d2sec.com/exploits/novell_zenworks_configuration_management_11_sp2_file_upload.html", 
+                "title": "Novell ZENworks Configuration Management 11 SP2 File Upload"
+            }
+        ], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/zenworks_control_center_upload", 
+                "id": "exploit_info/zenworks_control_center_upload", 
+                "title": "Novell ZENworks Control Center file upload vulnerability"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-1080"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Novell ZENworks Control Center File Upload Remote Code Execution", 
+                "file": "novell_zcc_rce.nasl", 
+                "family": "Windows", 
+                "id": "65722"
+            }, 
+            {
+                "name": "Novell ZENworks Control Center File Upload Remote Code Execution (intrusive check)", 
+                "file": "novell_zenworks_control_center_rce_remote.nasl", 
+                "family": "CGI abuses", 
+                "id": "66914"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,465 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6304", 
+                "published": "2006-12-14T15:28:00.000-05:00", 
+                "id": "CVE-2006-6304", 
+                "modified": "2012-03-19T00:00:00.000-04:00", 
+                "summary": "The do_coredump function in fs/exec.c in the Linux kernel 2.6.19 sets the flag variable to O_EXCL but does not use it, which allows context-dependent attackers to modify arbitrary files via a rewrite attack during a core dump."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:2.6.19"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.2766", 
+                "id": 2766
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0022631", 
+                "id": "2010-A-0015", 
+                "title": "Multiple Vulnerabilities in Red Hat Linux Kernel"
+            }
+        ], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21591", 
+                "id": 21591
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/21591", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0095.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0046.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/5002", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.trustix.org/errata/2006/0074/", 
+                    "vendor": "TRUSTIX"
+                }, 
+                {
+                    "url": "http://www.kernel.org/pub/linux/kernel/v2.6/ChangeLog-2.6.19.1", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://support.avaya.com/css/P8/documents/100073666", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23349", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6304"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21777", 
+                "title": "RHSA-2010:0046: kernel security and bug fix update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21777"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22940", 
+                "title": "ELSA-2010:0046: kernel security and bug fix update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22940"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:10797", 
+                "title": "The do_coredump function in fs/exec.c in the Linux kernel 2.6.19 sets the flag variable to O_EXCL but does not use it, which allows context-dependent attackers to modify arbitrary files via a rewrite attack during a core dump.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:10797"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27615", 
+                "title": "DEPRECATED: ELSA-2010-0046 -- kernel security and bug fix update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27615"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:7446", 
+                "title": "Linux Kernel Do_Coredump Security Bypass Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:7446"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CentOS Update for kernel CESA-2010:0046 centos5 i386", 
+                "file": "gb_CESA-2010_0046_kernel_centos5_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880643"
+            }, 
+            {
+                "name": "RedHat Update for kernel RHSA-2010:0046-01", 
+                "file": "gb_RHSA-2010_0046-01_kernel.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870210"
+            }, 
+            {
+                "name": "VMSA-2010-0009: ESXi utilities and ESX Service Console third party updates", 
+                "file": "gb_VMSA-2010-0009.nasl", 
+                "family": "VMware Local Security Checks", 
+                "id": "103468"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : kernel (CESA-2010:0046)", 
+                "file": "centos_RHSA-2010-0046.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "44096"
+            }, 
+            {
+                "name": "Oracle Linux 5 : kernel (ELSA-2010-0046)", 
+                "file": "oraclelinux_ELSA-2010-0046.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "67988"
+            }, 
+            {
+                "name": "OracleVM 2.2 : kernel (OVMSA-2013-0039)", 
+                "file": "oraclevm_OVMSA-2013-0039.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "79507"
+            }, 
+            {
+                "name": "RHEL 5 : kernel (RHSA-2010:0046)", 
+                "file": "redhat-RHSA-2010-0046.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "44062"
+            }, 
+            {
+                "name": "VMSA-2010-0009 : ESXi ntp and ESX Service Console third-party updates", 
+                "file": "vmware_VMSA-2010-0009.nasl", 
+                "family": "VMware ESX Local Security Checks", 
+                "id": "46765"
+            }, 
+            {
+                "name": "VMware ESX / ESXi Third-Party Libraries and Components (VMSA-2010-0009) (remote check)", 
+                "file": "vmware_VMSA-2010-0009_remote.nasl", 
+                "family": "VMware ESX Local Security Checks", 
+                "id": "89740"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0095.html", 
+                    "id": "RHSA-2010:0095", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20100046", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0046.html", 
+                    "id": "RHSA-2010:0046", 
+                    "title": "RHSA-2010:0046: kernel security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=526068", 
+                    "title": "CVE-2009-3889 CVE-2009-3939 kernel: megaraid_sas permissions in sysfs", 
+                    "id": "526068", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=526788", 
+                    "title": "CVE-2009-2910 kernel: x86_64 32 bit process register leak", 
+                    "id": "526788", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=537027", 
+                    "title": "Timedrift on VM with pv_clock enabled, causing system hangs and sporadic time behaviour [rhel-5.4.z]", 
+                    "id": "537027", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=537177", 
+                    "title": "CVE-2009-3556 kernel: qla2xxx NPIV vport management pseudofiles are world writable", 
+                    "id": "537177", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=537273", 
+                    "title": "CVE-2006-6304 kernel: use flag in do_coredump()", 
+                    "id": "537273", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=538734", 
+                    "title": "CVE-2009-4021 kernel: fuse: prevent fuse_put_request on invalid pointer", 
+                    "id": "538734", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=539414", 
+                    "title": "CVE-2009-3080 kernel: gdth: Prevent negative offsets in ioctl", 
+                    "id": "539414", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=539686", 
+                    "title": "bnx2: panic in bnx2_poll_work() [rhel-5.4.z]", 
+                    "id": "539686", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=540736", 
+                    "title": "CVE-2009-4020 kernel: hfs buffer overflow", 
+                    "id": "540736", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=540896", 
+                    "title": "PV clock fix throws off database application time [rhel-5.4.z]", 
+                    "id": "540896", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=542582", 
+                    "title": "kdump corefile cannot be backtraced in IA64 [rhel-5.4.z]", 
+                    "id": "542582", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=543448", 
+                    "title": "Using IPoIB, losing connectivity with 1 host, other hosts accessible [rhel-5.4.z]", 
+                    "id": "543448", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=544978", 
+                    "title": "glock_workqueue -- glock ref count via gfs2_glock_hold [rhel-5.4.z]", 
+                    "id": "544978", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=545411", 
+                    "title": "CVE-2009-4272 kernel: emergency route cache flushing leads to node deadlock", 
+                    "id": "545411", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=547236", 
+                    "title": "CVE-2009-4138 kernel: firewire: ohci: handle receive packets with a data length of zero", 
+                    "id": "547236", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=547521", 
+                    "title": "CRM#1971672, Data loss in GFS2 when multiple nodes writes to same file [rhel-5.4.z]", 
+                    "id": "547521", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=547530", 
+                    "title": "kernel: BUG: soft lockup - CPU#1 stuck for 13s! [httpd:4490] [rhel-5.4.z]", 
+                    "id": "547530", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=547906", 
+                    "title": "CVE-2009-4141 kernel: create_elf_tables can leave urandom in a bad state", 
+                    "id": "547906", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=548370", 
+                    "title": "kernel: sleeping vfs_check_frozen in called in atomic context from do_wp_page [rhel-5.4.z]", 
+                    "id": "548370", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=549905", 
+                    "title": "hvm, x86_64 guest panic on 2.6.18-164.9.1.el5 [rhel-5.4.z]", 
+                    "id": "549905", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=549906", 
+                    "title": "[NetApp 5.4.z bug] Emulex FC ports on RHEL 5.4 GA offlined during target controller faults [rhel-5.4.z]", 
+                    "id": "549906", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=549907", 
+                    "title": "Hang when echoing to /proc/sys/net/ipv4/route/secret_interval [rhel-5.4.z]", 
+                    "id": "549907", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=549908", 
+                    "title": "resize2fs online resize hangs [rhel-5.4.z]", 
+                    "id": "549908", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=550968", 
+                    "title": "RHEL5.4 guest with PV clock: inconsistent times returned by clock_gettime(CLOCK_REALTIME) and gettimeofday() [rhel-5.4.z]", 
+                    "id": "550968", 
+                    "issue date": "2010-01-19", 
+                    "associated redhat": "RHSA-2010:0046"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

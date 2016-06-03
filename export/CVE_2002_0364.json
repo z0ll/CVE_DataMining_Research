@@ -1,0 +1,190 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0364", 
+                "published": "2002-07-03T00:00:00.000-04:00", 
+                "id": "CVE-2002-0364", 
+                "modified": "2008-09-10T20:01:01.103-04:00", 
+                "summary": "Buffer overflow in the chunked encoding transfer mechanism in IIS 4.0 and 5.0 allows attackers to execute arbitrary code via the processing of HTR request sessions, aka \"Heap Overrun in HTR Chunked Encoding Could Enable Web Server Compromise.\""
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:4.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:5.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.18348", 
+                "id": 18348
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/4855", 
+                "id": 4855
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/313819", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms02-028.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=102392069305962&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/4855", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/static/9327.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://online.securityfocus.com/archive/1/276767", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=ntbugtraq&m=102392308608100&w=2", 
+                    "vendor": "NTBUGTRAQ"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/vulnwatch/2002-q2/0099.html", 
+                    "vendor": "VULNWATCH"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/313819", 
+                "id": "VU#313819"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1806", 
+                "signature": "SERVER-IIS .htr chunked Transfer-Encoding"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/iis_htr_isapi", 
+                "id": "exploit_info/iis_htr_isapi", 
+                "title": "Microsoft IIS .HTR ISAPI chunked encoding buffer overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-0364"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:182", 
+                "title": "Windows NT IIS Heap Overrun in HTR Chunked Encoding", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:182"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:29", 
+                "title": "Windows 2000 IIS Heap Overrun in HTR Chunked Encoding", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:29"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Microsoft IIS .HTR Filter Multiple Overflows (MS02-028)", 
+                "file": "iis_htr_overflow.nasl", 
+                "family": "Web Servers", 
+                "id": "11028"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Heap Overrun in HTR Chunked Encoding Could Enable Web Server Compromise", 
+                "id": "Heap Overrun in HTR Chunked Encoding Could Enable Web Server Compromise", 
+                "title": "321599"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/321599", 
+                "id": "321599", 
+                "title": "Heap Overrun in HTR Chunked Encoding Could Enable Web Server Compromise"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS02-028", 
+                "id": "MS02-028", 
+                "title": "Heap Overrun in HTR Chunked Encoding Could Enable Web Server Compromise"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

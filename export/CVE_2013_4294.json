@@ -1,0 +1,202 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4294", 
+                "published": "2013-09-23T16:55:07.323-04:00", 
+                "id": "CVE-2013-4294", 
+                "modified": "2013-10-30T23:34:54.283-04:00", 
+                "summary": "The (1) mamcache and (2) KVS token backends in OpenStack Identity (Keystone) Folsom 2012.2.x and Grizzly before 2013.1.4 do not properly compare the PKI token revocation list with PKI tokens, which allow remote attackers to bypass intended access restrictions via a revoked PKI token."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:openstack:keystone:2012.2.2"
+            }, 
+            {
+                "id": "cpe:/a:openstack:keystone:2013.1.3"
+            }, 
+            {
+                "id": "cpe:/a:openstack:keystone:2012.2.1"
+            }, 
+            {
+                "id": "cpe:/a:openstack:keystone:2013.1.1"
+            }, 
+            {
+                "id": "cpe:/a:openstack:keystone:2012.2"
+            }, 
+            {
+                "id": "cpe:/a:openstack:keystone:2012.2.3"
+            }, 
+            {
+                "id": "cpe:/a:openstack:keystone:2013.1"
+            }, 
+            {
+                "id": "cpe:/a:openstack:keystone:2013.1.2"
+            }, 
+            {
+                "id": "cpe:/a:openstack:keystone:2012.2.4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.65007", 
+                "id": 65007
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/97237", 
+                "id": 97237
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://seclists.org/oss-sec/2013/q3/586", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "https://bugs.launchpad.net/keystone/+bug/1202952", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2002-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/54706", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2013-1285.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://osvdb.org/97237", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-4294"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19297", 
+                "title": "USN-2002-1 -- keystone vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:19297"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for openstack-keystone FEDORA-2013-20373", 
+                "file": "gb_fedora_2013_20373_openstack-keystone_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867038"
+            }, 
+            {
+                "name": "Fedora Update for openstack-keystone FEDORA-2014-4210", 
+                "file": "gb_fedora_2014_4210_openstack-keystone_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867673"
+            }, 
+            {
+                "name": "Ubuntu Update for keystone USN-2002-1", 
+                "file": "gb_ubuntu_USN_2002_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841606"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Ubuntu 12.10 / 13.04 : keystone vulnerabilities (USN-2002-1)", 
+                "file": "ubuntu_USN-2002-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "70581"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2013-1285.html", 
+                    "id": "RHSA-2013:1285", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2002-1", 
+                "id": "USN-2002-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

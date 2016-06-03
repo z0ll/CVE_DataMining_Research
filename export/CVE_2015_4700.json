@@ -1,0 +1,379 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4700", 
+                "published": "2015-08-31T06:59:10.737-04:00", 
+                "id": "CVE-2015-4700", 
+                "modified": "2015-08-31T13:57:56.800-04:00", 
+                "summary": "The bpf_int_jit_compile function in arch/x86/net/bpf_jit_comp.c in the Linux kernel before 4.0.6 allows local users to cause a denial of service (system crash) by creating a packet filter and then loading crafted BPF instructions that trigger late convergence by the JIT compiler."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/17.html", 
+                "id": "CWE-17", 
+                "title": "Code"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:4.0.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.76062", 
+                "id": 76062
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/torvalds/linux/commit/3f7352bf21f8fd7ba3e2fcef9488756f188e12be", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1233615", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/06/23/2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.0.6", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=3f7352bf21f8fd7ba3e2fcef9488756f188e12be", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.9", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-4700"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:208", 
+                "title": "DSA-3329-1 -- linux -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:208"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3329-1 (linux - security update)", 
+                "file": "deb_3329.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703329"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 7 : kernel (CESA-2015:1778)", 
+                "file": "centos_RHSA-2015-1778.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "86511"
+            }, 
+            {
+                "name": "Debian DSA-3329-1 : linux - security update", 
+                "file": "debian_DSA-3329.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "85281"
+            }, 
+            {
+                "name": "openSUSE Security Update : the Linux Kernel (openSUSE-2015-543)", 
+                "file": "openSUSE-2015-543.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85432"
+            }, 
+            {
+                "name": "openSUSE Security Update : the Linux Kernel (openSUSE-2016-124)", 
+                "file": "openSUSE-2016-124.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88545"
+            }, 
+            {
+                "name": "Oracle Linux 7 : kernel (ELSA-2015-1778)", 
+                "file": "oraclelinux_ELSA-2015-1778.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85958"
+            }, 
+            {
+                "name": "RHEL 7 : kernel (RHSA-2015:1778)", 
+                "file": "redhat-RHSA-2015-1778.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "86702"
+            }, 
+            {
+                "name": "RHEL 7 : kernel-rt (RHSA-2015:1788)", 
+                "file": "redhat-RHSA-2015-1788.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "85980"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL7.x x86_64", 
+                "file": "sl_20150915_kernel_on_SL7_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "85960"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : kernel (SUSE-SU-2015:1478-1)", 
+                "file": "suse_SU-2015-1478-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85764"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : kernel (SUSE-SU-2015:1611-1)", 
+                "file": "suse_SU-2015-1611-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "86121"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : kernel-source (SUSE-SU-2015:1678-1)", 
+                "file": "suse_SU-2015-1678-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "86290"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-utopic vulnerabilities (USN-2664-1)", 
+                "file": "ubuntu_USN-2664-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "84615"
+            }, 
+            {
+                "name": "Ubuntu 14.10 : linux vulnerabilities (USN-2666-1)", 
+                "file": "ubuntu_USN-2666-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "84617"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux vulnerabilities (USN-2678-1)", 
+                "file": "ubuntu_USN-2678-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "84980"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-trusty vulnerabilities (USN-2680-1)", 
+                "file": "ubuntu_USN-2680-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "84981"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux vulnerabilities (USN-2681-1)", 
+                "file": "ubuntu_USN-2681-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "84982"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-vivid vulnerabilities (USN-2683-1)", 
+                "file": "ubuntu_USN-2683-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "84984"
+            }, 
+            {
+                "name": "Ubuntu 15.04 : linux vulnerabilities (USN-2684-1)", 
+                "file": "ubuntu_USN-2684-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "84985"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151778", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1778.html", 
+                    "id": "RHSA-2015:1778", 
+                    "title": "RHSA-2015:1778: kernel security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1181054", 
+                    "title": "CVE-2014-9585 kernel: ASLR bruteforce possible for vdso library", 
+                    "id": "1181054", 
+                    "issue date": "2015-09-15", 
+                    "associated redhat": "RHSA-2015:1778"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1193907", 
+                    "title": "CVE-2015-0275 kernel: fs: ext4: fallocate zero range page size > block size BUG()", 
+                    "id": "1193907", 
+                    "issue date": "2015-09-15", 
+                    "associated redhat": "RHSA-2015:1778"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1226442", 
+                    "title": "CVE-2015-3212 kernel: SCTP race condition allows list corruption and panic from userlevel", 
+                    "id": "1226442", 
+                    "issue date": "2015-09-15", 
+                    "associated redhat": "RHSA-2015:1778"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1233615", 
+                    "title": "CVE-2015-4700 kernel: Crafted BPF filters may crash kernel during JIT optimisation", 
+                    "id": "1233615", 
+                    "issue date": "2015-09-15", 
+                    "associated redhat": "RHSA-2015:1778"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1239029", 
+                    "title": "CVE-2015-5366 CVE-2015-5364 kernel: net: incorrect processing of checksums in UDP implementation", 
+                    "id": "1239029", 
+                    "issue date": "2015-09-15", 
+                    "associated redhat": "RHSA-2015:1778"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245658", 
+                    "title": "CVE-2015-1333 kernel: denial of service due to memory leak in add_key()", 
+                    "id": "1245658", 
+                    "issue date": "2015-09-15", 
+                    "associated redhat": "RHSA-2015:1778"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151788", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1788.html", 
+                    "id": "RHSA-2015:1788", 
+                    "title": "RHSA-2015:1788: kernel-rt security, bug fix, and enhancement update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1181054", 
+                    "title": "CVE-2014-9585 kernel: ASLR bruteforce possible for vdso library", 
+                    "id": "1181054", 
+                    "issue date": "2015-08-12", 
+                    "associated redhat": "RHSA-2015:1788"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1193907", 
+                    "title": "CVE-2015-0275 kernel: fs: ext4: fallocate zero range page size > block size BUG()", 
+                    "id": "1193907", 
+                    "issue date": "2015-08-12", 
+                    "associated redhat": "RHSA-2015:1788"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1226442", 
+                    "title": "CVE-2015-3212 kernel: SCTP race condition allows list corruption and panic from userlevel", 
+                    "id": "1226442", 
+                    "issue date": "2015-08-12", 
+                    "associated redhat": "RHSA-2015:1788"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1233615", 
+                    "title": "CVE-2015-4700 kernel: Crafted BPF filters may crash kernel during JIT optimisation", 
+                    "id": "1233615", 
+                    "issue date": "2015-08-12", 
+                    "associated redhat": "RHSA-2015:1788"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1239029", 
+                    "title": "CVE-2015-5366 CVE-2015-5364 kernel: net: incorrect processing of checksums in UDP implementation", 
+                    "id": "1239029", 
+                    "issue date": "2015-08-12", 
+                    "associated redhat": "RHSA-2015:1788"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1245658", 
+                    "title": "CVE-2015-1333 kernel: denial of service due to memory leak in add_key()", 
+                    "id": "1245658", 
+                    "issue date": "2015-08-12", 
+                    "associated redhat": "RHSA-2015:1788"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1253809", 
+                    "title": "kernel-rt: update to the RHEL7.1.z batch 5 source tree", 
+                    "id": "1253809", 
+                    "issue date": "2015-08-12", 
+                    "associated redhat": "RHSA-2015:1788"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

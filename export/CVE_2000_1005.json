@@ -1,0 +1,146 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-1005", 
+                "published": "2000-12-11T00:00:00.000-05:00", 
+                "id": "CVE-2000-1005", 
+                "modified": "2008-09-05T16:22:24.857-04:00", 
+                "summary": "Directory traversal vulnerability in html_web_store.cgi and web_store.cgi CGI programs in eXtropia WebStore allows remote attackers to read arbitrary files via a .. (dot dot) attack on the page parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:extropia:extropia_webstore:1.0"
+            }, 
+            {
+                "id": "cpe:/a:extropia:extropia_webstore:2.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.16026", 
+                "id": 16026
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/1774", 
+                "id": 1774
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/static/5347.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/1774", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/138495", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1088", 
+                "signature": "SERVER-WEBAPP eXtropia webstore directory traversal"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1159", 
+                "signature": "SERVER-WEBAPP webplus access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1611", 
+                "signature": "SERVER-WEBAPP eXtropia webstore access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2000-1005"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "eXtropia Web Store remote file retrieval", 
+                "file": "http_webstore.nasl", 
+                "family": "Remote file access", 
+                "id": "10532"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "eXtropia Web Store web_store.cgi Traversal Arbitrary File Access", 
+                "file": "http_webstore.nasl", 
+                "family": "CGI abuses", 
+                "id": "10532"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

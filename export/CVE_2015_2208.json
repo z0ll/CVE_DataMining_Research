@@ -1,0 +1,215 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/20.html", 
+                "id": "CWE-20", 
+                "title": "Improper Input Validation"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/713.html", 
+                "id": "CWE-713", 
+                "title": "OWASP Top Ten 2007 Category A2 - Injection Flaws"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/727.html", 
+                "id": "CWE-727", 
+                "title": "OWASP Top Ten 2004 Category A6 - Injection Flaws"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/722.html", 
+                "id": "CWE-722", 
+                "title": "OWASP Top Ten 2004 Category A1 - Unvalidated Input"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/990.html", 
+                "id": "CWE-990", 
+                "title": "SFP Secondary Cluster: Tainted Input to Command"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/929.html", 
+                "id": "CWE-929", 
+                "title": "OWASP Top Ten 2013 Category A1 - Injection"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/11.html", 
+                "id": 11
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/136.html", 
+                "id": 136
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/15.html", 
+                "id": 15
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/23.html", 
+                "id": 23
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/43.html", 
+                "id": 43
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/6.html", 
+                "id": 6
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/75.html", 
+                "id": 75
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/76.html", 
+                "id": 76
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2208", 
+                "published": "2015-03-12T10:59:04.883-04:00", 
+                "id": "CVE-2015-2208", 
+                "modified": "2015-03-12T12:42:18.143-04:00", 
+                "summary": "The saveObject function in moadmin.php in phpMoAdmin 1.1.2 allows remote attackers to execute arbitrary commands via shell metacharacters in the object parameter."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/77.html", 
+                "id": "CWE-77", 
+                "title": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:avinu:phpmoadmin:1.1.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.74402", 
+                "id": 74402
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/03/04/5", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/03/04/4", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/36251", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://seclists.org/fulldisclosure/2015/Mar/19", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://packetstormsecurity.com/files/130685/PHPMoAdmin-1.1.2-Remote-Code-Execution.html", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-929", 
+                    "title": "OWASP Top Ten 2013 Category A1 - Injection"
+                }
+            ], 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "phpmoadmin_exec.rb", 
+                "file": "metasploit-framework/modules/exploits/multi/http/phpmoadmin_exec.rb", 
+                "title": "PHPMoAdmin 1.1.2 Remote Code Execution"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/36251", 
+                "id": 36251, 
+                "file": ""
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-2208"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "phpMoAdmin saveObject Remote Command Execution", 
+                "file": "phpmoadmin_saveobject_rce.nasl", 
+                "family": "CGI abuses", 
+                "id": "84217"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

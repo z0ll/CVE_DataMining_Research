@@ -1,0 +1,178 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0714", 
+                "published": "2011-05-04T18:55:02.687-04:00", 
+                "id": "CVE-2011-0714", 
+                "modified": "2012-03-19T00:00:00.000-04:00", 
+                "summary": "Use-after-free vulnerability in a certain Red Hat patch for the RPC server sockets functionality in the Linux kernel 2.6.32 on Red Hat Enterprise Linux (RHEL) 6 might allow remote attackers to cause a denial of service (crash) via malformed data in a packet, related to lockd and the svc_xprt_received function."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:6"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:2.6.32"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.57342", 
+                "id": 57342
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://rhn.redhat.com/errata/RHSA-2011-0329.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=678144", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2011/03/09/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2011/03/08/17", 
+                    "vendor": "MLIST"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "5.5", 
+                    "base": "5.7", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "adjacent_network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-0714"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21559", 
+                "title": "RHSA-2011:0329: kernel security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21559"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23651", 
+                "title": "ELSA-2011:0329: kernel security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23651"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28082", 
+                "title": "DEPRECATED: ELSA-2011-0329 -- kernel security update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28082"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "RedHat Update for kernel RHSA-2011:0329-01", 
+                "file": "gb_RHSA-2011_0329-01_kernel.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870671"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Oracle Linux 6 : kernel (ELSA-2011-0329)", 
+                "file": "oraclelinux_ELSA-2011-0329.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68222"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2011:0329)", 
+                "file": "redhat-RHSA-2011-0329.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "52596"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20110329", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2011-0329.html", 
+                    "id": "RHSA-2011:0329", 
+                    "title": "RHSA-2011:0329: kernel security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=678144", 
+                    "title": "CVE-2011-0714 kernel: deficiency in handling of invalid data packets in lockd", 
+                    "id": "678144", 
+                    "issue date": "2011-03-08", 
+                    "associated redhat": "RHSA-2011:0329"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

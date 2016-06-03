@@ -1,0 +1,289 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3525", 
+                "published": "2009-10-05T15:30:00.280-04:00", 
+                "id": "CVE-2009-3525", 
+                "modified": "2010-08-21T01:35:59.123-04:00", 
+                "summary": "The pyGrub boot loader in Xen 3.0.3, 3.3.0, and Xen-3.3.1 does not support the password option in grub.conf for para-virtualized guests, which allows attackers with access to the para-virtualized guest console to boot the guest or modify the guest s kernel boot parameters without providing the expected password."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:xen:xen:3.3.1"
+            }, 
+            {
+                "id": "cpe:/a:xen:xen:3.3.0"
+            }, 
+            {
+                "id": "cpe:/a:xen:xen:3.0.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.50356", 
+                "id": 50356
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/36523", 
+                "id": 36523
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=525740#c0", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=525740", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2009/09/25/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://xenbits.xensource.com/xen-unstable.hg?rev/8f783adc0ee3", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1022950", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/36523", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2009-1472.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/36908", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2010-05/msg00002.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-3525"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:9466", 
+                "title": "The pyGrub boot loader in Xen 3.0.3, 3.3.0, and Xen-3.3.1 does not support the password option in grub.conf for para-virtualized guests, which allows attackers with access to the para-virtualized guest console to boot the guest or modify the guest's kernel boot parameters without providing the expected password.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:9466"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:29340", 
+                "title": "RHSA-2009:1472 -- xen security and bug fix update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:29340"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22812", 
+                "title": "ELSA-2009:1472: xen security and bug fix update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22812"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CentOS Update for xen CESA-2009:1472 centos5 i386", 
+                "file": "gb_CESA-2009_1472_xen_centos5_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880684"
+            }, 
+            {
+                "name": "CentOS Security Advisory CESA-2009:1472 (xen)", 
+                "file": "ovcesa2009_1472.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "66173"
+            }, 
+            {
+                "name": "RedHat Security Advisory RHSA-2009:1472", 
+                "file": "RHSA_2009_1472.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "64994"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : xen (CESA-2009:1472)", 
+                "file": "centos_RHSA-2009-1472.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "43799"
+            }, 
+            {
+                "name": "Oracle Linux 5 : xen (ELSA-2009-1472)", 
+                "file": "oraclelinux_ELSA-2009-1472.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "67935"
+            }, 
+            {
+                "name": "RHEL 5 : xen (RHSA-2009:1472)", 
+                "file": "redhat-RHSA-2009-1472.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "41963"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : xen on SL5.x i386/x86_64", 
+                "file": "sl_20091001_xen_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "60674"
+            }, 
+            {
+                "name": "openSUSE Security Update : xen-201004 (openSUSE-SU-2010:0293-1)", 
+                "file": "suse_11_1_xen-201004-100220.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "46729"
+            }, 
+            {
+                "name": "SuSE 11 Security Update : Xen (SAT Patch Number 2230)", 
+                "file": "suse_11_xen-201004-100220.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "50966"
+            }, 
+            {
+                "name": "SuSE 11 Security Update : Xen (SAT Patch Number 2230)", 
+                "file": "suse_11_xen-201004-100331.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "50967"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2009-3525.html", 
+                "id": "SUSE-SR:2010:012"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20091472", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2009-1472.html", 
+                    "id": "RHSA-2009:1472", 
+                    "title": "RHSA-2009:1472: xen security and bug fix update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=525141", 
+                    "title": "[REG][Xen][5.4] PV domains may crash after reboot", 
+                    "id": "525141", 
+                    "issue date": "2009-10-01", 
+                    "associated redhat": "RHSA-2009:1472"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=525142", 
+                    "title": "Add grub.conf password protection support to pygrub", 
+                    "id": "525142", 
+                    "issue date": "2009-10-01", 
+                    "associated redhat": "RHSA-2009:1472"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=525143", 
+                    "title": "Domain goes missing from xm list when rebooted", 
+                    "id": "525143", 
+                    "issue date": "2009-10-01", 
+                    "associated redhat": "RHSA-2009:1472"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=525149", 
+                    "title": "PCI-Paththrough with PCI-Card does not work anymore with RHEL5.4", 
+                    "id": "525149", 
+                    "issue date": "2009-10-01", 
+                    "associated redhat": "RHSA-2009:1472"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=525740", 
+                    "title": "CVE-2009-3525 Xen: PyGrub missing support for password configuration command", 
+                    "id": "525740", 
+                    "issue date": "2009-10-01", 
+                    "associated redhat": "RHSA-2009:1472"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

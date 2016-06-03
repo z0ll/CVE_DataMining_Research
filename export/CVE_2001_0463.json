@@ -1,0 +1,177 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-0463", 
+                "published": "2001-06-27T00:00:00.000-04:00", 
+                "id": "CVE-2001-0463", 
+                "modified": "2008-09-05T16:24:10.460-04:00", 
+                "summary": "Directory traversal vulnerability in cal_make.pl in PerlCal allows remote attackers to read arbitrary files via a .. (dot dot) in the p0 parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:acme_labs:perlcal:2.80"
+            }, 
+            {
+                "id": "cpe:/a:acme_labs:perlcal:2.18"
+            }, 
+            {
+                "id": "cpe:/a:acme_labs:perlcal:2.7"
+            }, 
+            {
+                "id": "cpe:/a:acme_labs:perlcal:2.5"
+            }, 
+            {
+                "id": "cpe:/a:acme_labs:perlcal:2.9e"
+            }, 
+            {
+                "id": "cpe:/a:acme_labs:perlcal:2.6"
+            }, 
+            {
+                "id": "cpe:/a:acme_labs:perlcal:2.4"
+            }, 
+            {
+                "id": "cpe:/a:acme_labs:perlcal:2.13"
+            }, 
+            {
+                "id": "cpe:/a:acme_labs:perlcal:2.9"
+            }, 
+            {
+                "id": "cpe:/a:acme_labs:perlcal:2.9d"
+            }, 
+            {
+                "id": "cpe:/a:acme_labs:perlcal:2.3"
+            }, 
+            {
+                "id": "cpe:/a:acme_labs:perlcal:2.9c"
+            }, 
+            {
+                "id": "cpe:/a:acme_labs:perlcal:2.95"
+            }, 
+            {
+                "id": "cpe:/a:acme_labs:perlcal:2.9b"
+            }, 
+            {
+                "id": "cpe:/a:acme_labs:perlcal:2.9a"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.16878", 
+                "id": 16878
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/2663", 
+                "id": 2663
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/2663", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2001-04/0506.html", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/static/6480.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.perlcal.com/calendar/docs/bugs.txt", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1474", 
+                "signature": "SERVER-WEBAPP cal_make.pl access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1704", 
+                "signature": "SERVER-WEBAPP cal_make.pl directory traversal attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-0463"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "PerlCal cal_make.pl p0 Parameter Traversal Arbitrary File Read", 
+                "file": "perl_cal.nasl", 
+                "family": "CGI abuses", 
+                "id": "10664"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

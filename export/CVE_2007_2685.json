@@ -1,0 +1,161 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2685", 
+                "published": "2007-05-21T16:30:00.000-04:00", 
+                "id": "CVE-2007-2685", 
+                "modified": "2008-09-05T17:23:44.973-04:00", 
+                "summary": "Multiple SQL injection vulnerabilities in index.php in Jetbox CMS 2.1 allow remote attackers to execute arbitrary SQL commands via the (1) view or (2) login parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:jetbox:jetbox_cms:2.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.36894", 
+                "id": 36894
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/24077", 
+                "id": 24077
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/34784", 
+                "id": 34784
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.osvdb.org/34784", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.netvigilance.com/advisory0028", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://marc.info/?l=full-disclosure&m=117974433216496&w=2", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34387", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/24077", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/469223/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003969", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- index.php login SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003970", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- index.php login UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003971", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- index.php login INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003972", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- index.php login DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003973", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- index.php login ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003974", 
+                "signature": "ET WEB_SPECIFIC_APPS Jetbox CMS SQL Injection Attempt -- index.php login UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2685"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

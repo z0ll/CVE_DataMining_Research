@@ -1,0 +1,205 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3262", 
+                "published": "2011-08-19T16:55:01.177-04:00", 
+                "id": "CVE-2011-3262", 
+                "modified": "2013-10-10T23:37:26.453-04:00", 
+                "summary": "tools/libxc/xc_dom_bzimageloader.c in Xen 3.2, 3.3, 4.0, and 4.1 allows local users to cause a denial of service (management software infinite loop and management domain resource consumption) via unspecified vectors related to \"Lack of error checking in the decompression loop.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:citrix:xen:3.2.0"
+            }, 
+            {
+                "id": "cpe:/a:citrix:xen:4.1.0"
+            }, 
+            {
+                "id": "cpe:/a:citrix:xen:3.3.0"
+            }, 
+            {
+                "id": "cpe:/a:citrix:xen:4.0.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.58338", 
+                "id": 58338
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://lists.xensource.com/archives/html/xen-devel/2011-05/msg00491.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://lists.xensource.com/archives/html/xen-devel/2011-05/msg00483.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/69381", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://security.gentoo.org/glsa/glsa-201309-24.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/55082", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "2.1", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-3262"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27717", 
+                "title": "DEPRECATED: ELSA-2011-0496 -- xen security update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27717"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:15124", 
+                "title": "DSA-2337-1 xen -- several vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:15124"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2337-1 (xen)", 
+                "file": "deb_2337_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "70551"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : xen (CESA-2011:0496)", 
+                "file": "centos_RHSA-2011-0496.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "53870"
+            }, 
+            {
+                "name": "Debian DSA-2337-1 : xen - several vulnerabilities", 
+                "file": "debian_DSA-2337.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "56716"
+            }, 
+            {
+                "name": "GLSA-201309-24 : Xen: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201309-24.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "70184"
+            }, 
+            {
+                "name": "Oracle Linux 5 : xen (ELSA-2011-0496)", 
+                "file": "oraclelinux_ELSA-2011-0496.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68272"
+            }, 
+            {
+                "name": "RHEL 5 : xen (RHSA-2011:0496)", 
+                "file": "redhat-RHSA-2011-0496.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "53853"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20110496", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2011-0496.html", 
+                    "id": "RHSA-2011:0496", 
+                    "title": "RHSA-2011:0496: xen security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=696927", 
+                    "title": "CVE-2011-1583 CVE-2011-3262 xen: insufficiencies in pv kernel image validation", 
+                    "id": "696927", 
+                    "issue date": "2011-05-09", 
+                    "associated redhat": "RHSA-2011:0496"
+                }
+            }
+        ], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/201309-24", 
+                "id": "GLSA-201309-24"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

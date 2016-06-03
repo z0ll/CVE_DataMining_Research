@@ -1,0 +1,176 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5400", 
+                "published": "2015-09-28T16:59:03.280-04:00", 
+                "id": "CVE-2015-5400", 
+                "modified": "2015-09-29T13:32:26.640-04:00", 
+                "summary": "Squid before 3.5.6 does not properly handle CONNECT method peer responses when configured with cache_peer, which allows remote attackers to bypass intended restrictions and gain access to a backend proxy via a CONNECT request."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:squid-cache:squid:3.5.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.78130", 
+                "id": 78130
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.squid-cache.org/Versions/v3/3.5/changesets/squid-3.5-13856.patch", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.squid-cache.org/Versions/v3/3.4/changesets/squid-3.4-13225.patch", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.squid-cache.org/Versions/v3/3.1/changesets/squid-3.1-10494.patch", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.squid-cache.org/Advisories/SQUID-2015_2.txt", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/07/17/14", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/07/10/2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/07/09/12", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/07/06/8", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2015/dsa-3327", 
+                    "vendor": "DEBIAN"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-5400"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:22", 
+                "title": "DSA-3327-1 -- squid3 -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:22"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3327-1 (squid3 - security update)", 
+                "file": "deb_3327.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703327"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DLA-286-1 : squid3 security update", 
+                "file": "debian_DLA-286.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "85128"
+            }, 
+            {
+                "name": "Debian DSA-3327-1 : squid3 - security update", 
+                "file": "debian_DSA-3327.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "85184"
+            }, 
+            {
+                "name": "FreeBSD : squid -- Improper Protection of Alternate Path with CONNECT requests (150d1538-23fa-11e5-a4a5-002590263bf5)", 
+                "file": "freebsd_pkg_150d153823fa11e5a4a5002590263bf5.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "84553"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3327", 
+                "id": "DSA-3327"
+            }
+        ], 
+        "Vmware": []
+    }
+}

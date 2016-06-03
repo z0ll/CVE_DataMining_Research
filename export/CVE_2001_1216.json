@@ -1,0 +1,152 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-1216", 
+                "published": "2001-12-21T00:00:00.000-05:00", 
+                "id": "CVE-2001-1216", 
+                "modified": "2008-09-05T16:25:58.877-04:00", 
+                "summary": "Buffer overflow in PL/SQL Apache module in Oracle 9i Application Server allows remote attackers to execute arbitrary code via a long request for a help page."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:oracle:application_server:1.0.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.17775", 
+                "id": 17775
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/3726", 
+                "id": 3726
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/500203", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/3726", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/static/7727.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/246663", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://otn.oracle.com/deploy/security/pdf/modplsql.pdf", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/500203", 
+                "id": "VU#500203"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1385", 
+                "signature": "SERVER-WEBAPP mod-plsql administration access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-1216"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Oracle 9iAS mod_plsql Buffer Overflow", 
+                "file": "oracle9i_mod_plsql_overflow.nasl", 
+                "family": "Web application abuses", 
+                "id": "10840"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Oracle 9iAS mod_plsql Help Page Request Remote Overflow", 
+                "file": "oracle9i_mod_plsql_overflow.nasl", 
+                "family": "Databases", 
+                "id": "10840"
+            }, 
+            {
+                "name": "Oracle Application Server Multiple Vulnerabilities", 
+                "file": "oracle_application_server_pci.nasl", 
+                "family": "Web Servers", 
+                "id": "57619"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

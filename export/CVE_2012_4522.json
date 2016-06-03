@@ -1,0 +1,320 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-4522", 
+                "published": "2012-11-24T15:55:03.150-05:00", 
+                "id": "CVE-2012-4522", 
+                "modified": "2013-05-03T23:20:45.757-04:00", 
+                "summary": "The rb_get_path_check function in file.c in Ruby 1.9.3 before patchlevel 286 and Ruby 2.0.0 before r37163 allows context-dependent attackers to create files in unexpected locations or with unexpected names via a NUL byte in a file path."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:ruby-lang:ruby:1.9.3"
+            }, 
+            {
+                "id": "cpe:/a:ruby-lang:ruby:2.0.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.63046", 
+                "id": 63046
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.ruby-lang.org/en/news/2012/10/12/poisoned-NUL-byte-vulnerability/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/10/16/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/10/13/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/10/12/6", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://svn.ruby-lang.org/cgi-bin/viewvc.cgi?view=revision&revision=37163", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2013-0129.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2012-October/090515.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2012-October/090235.html", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-4522"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20949", 
+                "title": "RHSA-2013:0129: ruby security and bug fix update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20949"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18024", 
+                "title": "USN-1614-1 -- ruby1.9.1 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18024"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27340", 
+                "title": "DEPRECATED: ELSA-2013-0129 -- ruby security and bug fix update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27340"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23147", 
+                "title": "ELSA-2013:0129: ruby security and bug fix update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23147"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: ruby", 
+                "file": "freebsd_ruby14.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "72614"
+            }, 
+            {
+                "name": "CentOS Update for ruby CESA-2013:0129 centos5", 
+                "file": "gb_CESA-2013_0129_ruby_centos5.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881561"
+            }, 
+            {
+                "name": "Fedora Update for ruby FEDORA-2012-16086", 
+                "file": "gb_fedora_2012_16086_ruby_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864803"
+            }, 
+            {
+                "name": "Fedora Update for ruby FEDORA-2012-18017", 
+                "file": "gb_fedora_2012_18017_ruby_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864870"
+            }, 
+            {
+                "name": "Fedora Update for ruby FEDORA-2013-12062", 
+                "file": "gb_fedora_2013_12062_ruby_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866056"
+            }, 
+            {
+                "name": "Fedora Update for ruby FEDORA-2013-3038", 
+                "file": "gb_fedora_2013_3038_ruby_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865435"
+            }, 
+            {
+                "name": "Fedora Update for ruby FEDORA-2013-8411", 
+                "file": "gb_fedora_2013_8411_ruby_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865654"
+            }, 
+            {
+                "name": "RedHat Update for ruby RHSA-2013:0129-01", 
+                "file": "gb_RHSA-2013_0129-01_ruby.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870876"
+            }, 
+            {
+                "name": "Ubuntu Update for ruby1.9.1 USN-1614-1", 
+                "file": "gb_ubuntu_USN_1614_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841196"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : ruby (CESA-2013:0129)", 
+                "file": "centos_RHSA-2013-0129.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "63574"
+            }, 
+            {
+                "name": "Debian DLA-235-1 : ruby1.9.1 security update", 
+                "file": "debian_DLA-235.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "83907"
+            }, 
+            {
+                "name": "Fedora 18 : ruby-1.9.3.286-19.fc18 (2012-16071)", 
+                "file": "fedora_2012-16071.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "62607"
+            }, 
+            {
+                "name": "Fedora 17 : ruby-1.9.3.286-18.fc17 (2012-16086)", 
+                "file": "fedora_2012-16086.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "62648"
+            }, 
+            {
+                "name": "FreeBSD : ruby -- Unintentional file creation caused by inserting an illegal NUL character (3decc87d-2498-11e2-b0c7-000d601460a4)", 
+                "file": "freebsd_pkg_3decc87d249811e2b0c7000d601460a4.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "62792"
+            }, 
+            {
+                "name": "openSUSE Security Update : ruby19 (openSUSE-SU-2013:0376-1)", 
+                "file": "openSUSE-2013-167.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74909"
+            }, 
+            {
+                "name": "Oracle Linux 5 : ruby (ELSA-2013-0129)", 
+                "file": "oraclelinux_ELSA-2013-0129.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68700"
+            }, 
+            {
+                "name": "RHEL 5 : ruby (RHSA-2013:0129)", 
+                "file": "redhat-RHSA-2013-0129.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "63410"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : ruby on SL5.x i386/x86_64", 
+                "file": "sl_20130108_ruby_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "63603"
+            }, 
+            {
+                "name": "SuSE 11.2 Security Update : ruby (SAT Patch Number 7386)", 
+                "file": "suse_11_ruby-130221.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "65248"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 12.10 : ruby1.9.1 vulnerabilities (USN-1614-1)", 
+                "file": "ubuntu_USN-1614-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "62661"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2012-16071", 
+                "id": "FEDORA-2012-16071"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2012-16086", 
+                "id": "FEDORA-2012-16086"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20130129", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2013-0129.html", 
+                    "id": "RHSA-2013:0129", 
+                    "title": "RHSA-2013:0129: ruby security and bug fix update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=863484", 
+                    "title": "CVE-2012-4481 ruby: Incomplete fix for CVE-2011-1005 for NameError#to_s method when used on objects", 
+                    "id": "863484", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0129"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=865940", 
+                    "title": "CVE-2012-4522 ruby: unintentional file creation caused by inserting an illegal NUL character", 
+                    "id": "865940", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0129"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

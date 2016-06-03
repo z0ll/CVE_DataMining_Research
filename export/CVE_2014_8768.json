@@ -1,0 +1,208 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8768", 
+                "published": "2014-11-20T12:50:05.863-05:00", 
+                "id": "CVE-2014-8768", 
+                "modified": "2015-03-04T12:13:49.143-05:00", 
+                "summary": "Multiple Integer underflows in the geonet_print function in tcpdump 4.5.0 through 4.6.2, when in verbose mode, allow remote attackers to cause a denial of service (segmentation fault and crash) via a crafted length value in a Geonet frame."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:redhat:tcpdump:4.6.2"
+            }, 
+            {
+                "id": "cpe:/a:redhat:tcpdump:4.5.1"
+            }, 
+            {
+                "id": "cpe:/a:redhat:tcpdump:4.6.0"
+            }, 
+            {
+                "id": "cpe:/a:redhat:tcpdump:4.5.0"
+            }, 
+            {
+                "id": "cpe:/a:redhat:tcpdump:4.5.2"
+            }, 
+            {
+                "id": "cpe:/a:redhat:tcpdump:4.6.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.68220", 
+                "id": 68220
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/71155", 
+                "id": 71155
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/98766", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2433-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/71155", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/534010/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/35359", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://seclists.org/fulldisclosure/2014/Nov/48", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://packetstormsecurity.com/files/129156/tcpdump-4.6.2-Geonet-Denial-Of-Service.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2015-02/msg00062.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/35359", 
+                "id": 35359, 
+                "file": "platforms/multiple/dos/35359.txt"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-8768"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28335", 
+                "title": "USN-2433-1 -- tcpdump vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28335"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Fedora 20 : tcpdump-4.5.1-2.fc20 (2014-15541)", 
+                "file": "fedora_2014-15541.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "79608"
+            }, 
+            {
+                "name": "Fedora 21 : tcpdump-4.6.2-2.fc21 (2014-15609)", 
+                "file": "fedora_2014-15609.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "79778"
+            }, 
+            {
+                "name": "GLSA-201502-05 : tcpdump: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201502-05.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "81228"
+            }, 
+            {
+                "name": "openSUSE Security Update : tcpdump (openSUSE-2015-146)", 
+                "file": "openSUSE-2015-146.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "81371"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS / 12.04 LTS / 14.04 / 14.10 : tcpdump vulnerabilities (USN-2433-1)", 
+                "file": "ubuntu_USN-2433-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "79741"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-8768.html", 
+                "id": "openSUSE-SU-2015:0284"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2433-1", 
+                "id": "USN-2433-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

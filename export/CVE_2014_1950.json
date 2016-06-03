@@ -1,0 +1,268 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1950", 
+                "published": "2014-02-14T10:55:06.563-05:00", 
+                "id": "CVE-2014-1950", 
+                "modified": "2014-12-11T22:01:01.063-05:00", 
+                "summary": "Use-after-free vulnerability in the xc_cpupool_getinfo function in Xen 4.1.x through 4.3.x, when using a multithreaded toolstack, does not properly handle a failure by the xc_cpumap_alloc function, which allows local users with access to management functions to cause a denial of service (heap corruption) and possibly gain privileges via unspecified vectors."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:xen:xen:4.1.6.1"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.1.1"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.2.0"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.1.2"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.2.1"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.3.0"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.1.3"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.2.2"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.3.1"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.1.4"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.2.3"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.1.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.12339", 
+                "id": 12339
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xenbits.xen.org/xsa/advisory-88.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2014/02/12/17", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2014/dsa-3006", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2014-03/msg00011.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2014-03/msg00010.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-1950"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26366", 
+                "title": "DSA-3006-1 xen - security update", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26366"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:25302", 
+                "title": "SUSE-SU-2014:0372-1 -- Security update for Xen", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:25302"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:25390", 
+                "title": "SUSE-SU-2014:0373-1 -- Security update for Xen", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:25390"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3006-1 (xen - security update)", 
+                "file": "deb_3006.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703006"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2014-2802", 
+                "file": "gb_fedora_2014_2802_xen_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867554"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2014-2862", 
+                "file": "gb_fedora_2014_2862_xen_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867548"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2014-4424", 
+                "file": "gb_fedora_2014_4424_xen_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867665"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2014-4458", 
+                "file": "gb_fedora_2014_4458_xen_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867662"
+            }, 
+            {
+                "name": "SuSE Update for Xen SUSE-SU-2014:0373-1 (Xen)", 
+                "file": "gb_suse_2014_0373_1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "850573"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-3006-1 : xen - security update", 
+                "file": "debian_DSA-3006.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "77240"
+            }, 
+            {
+                "name": "Fedora 20 : xen-4.3.2-1.fc20 (2014-2802)", 
+                "file": "fedora_2014-2802.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "72765"
+            }, 
+            {
+                "name": "Fedora 19 : xen-4.2.4-2.fc19 (2014-2862)", 
+                "file": "fedora_2014-2862.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "72766"
+            }, 
+            {
+                "name": "openSUSE Security Update : xen (openSUSE-SU-2014:0483-1)", 
+                "file": "openSUSE-2014-271.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75312"
+            }, 
+            {
+                "name": "OracleVM 3.2 : xen (OVMSA-2015-0068) (POODLE) (Venom)", 
+                "file": "oraclevm_OVMSA-2015-0068.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "84140"
+            }, 
+            {
+                "name": "SuSE 11.3 Security Update : Xen (SAT Patch Number 8973)", 
+                "file": "suse_11_xen-201402-140227.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "73015"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : Xen (SUSE-SU-2014:0372-1)", 
+                "file": "suse_SU-2014-0372-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83613"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-1950.html", 
+                "id": "SUSE-SU-2014:0372"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-1950.html", 
+                "id": "SUSE-SU-2014:0373"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3006", 
+                "id": "DSA-3006"
+            }
+        ], 
+        "Vmware": []
+    }
+}

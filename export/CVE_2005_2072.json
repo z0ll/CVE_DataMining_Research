@@ -1,0 +1,191 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2072", 
+                "published": "2005-06-29T00:00:00.000-04:00", 
+                "id": "CVE-2005-2072", 
+                "modified": "2011-10-11T00:00:00.000-04:00", 
+                "summary": "The runtime linker (ld.so) in Solaris 8, 9, and 10 trusts the LD_AUDIT environment variable in setuid or setgid programs, which allows local users to gain privileges by (1) modifying LD_AUDIT to reference malicious code and possibly (2) using a long value for LD_AUDIT."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:sun:solaris:8.0"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:9.0::x86"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:10.0::sparc"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:8.0::x86"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:9.0::sparc"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.25622", 
+                "id": 25622
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/14074", 
+                "id": 14074
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/17614", 
+                "id": 17614
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2005/0908", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/14074", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.opensolaris.org/jive/thread.jspa?messageID=3497", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-101794-1", 
+                    "vendor": "SUNALERT"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1014537", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/15841", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lists.grok.org.uk/pipermail/full-disclosure/2005-June/034738.html", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://lists.grok.org.uk/pipermail/full-disclosure/2005-June/034731.html", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://lists.grok.org.uk/pipermail/full-disclosure/2005-June/034730.html", 
+                    "vendor": "FULLDISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-2072"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Solaris 10 (sparc) : 117461-08", 
+                "file": "solaris10_117461.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "19214"
+            }, 
+            {
+                "name": "Solaris 8 (sparc) : 109147-44", 
+                "file": "solaris8_109147.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "13313"
+            }, 
+            {
+                "name": "Solaris 8 (x86) : 109148-42", 
+                "file": "solaris8_x86_109148.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "13423"
+            }, 
+            {
+                "name": "Solaris 9 (sparc) : 112963-35", 
+                "file": "solaris9_112963.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "13527"
+            }, 
+            {
+                "name": "Solaris 9 (x86) : 113986-29", 
+                "file": "solaris9_x86_113986.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "13584"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

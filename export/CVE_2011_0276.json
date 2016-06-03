@@ -1,0 +1,207 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0276", 
+                "published": "2011-02-01T20:00:06.533-05:00", 
+                "id": "CVE-2011-0276", 
+                "modified": "2011-09-21T23:27:55.977-04:00", 
+                "summary": "HP OpenView Performance Insight Server 5.2, 5.3, 5.31, 5.4, and 5.41 contains a \"hidden account\" in the com.trinagy.security.XMLUserManager Java class, which allows remote attackers to execute arbitrary code via the doPost method in the com.trinagy.servlet.HelpManagerServlet class."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:hp:openview_performance_insight:5.41"
+            }, 
+            {
+                "id": "cpe:/a:hp:openview_performance_insight:5.4"
+            }, 
+            {
+                "id": "cpe:/a:hp:openview_performance_insight:5.31"
+            }, 
+            {
+                "id": "cpe:/a:hp:openview_performance_insight:5.3"
+            }, 
+            {
+                "id": "cpe:/a:hp:openview_performance_insight:5.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.56305", 
+                "id": 56305
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/46079", 
+                "id": 46079
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/70754", 
+                "id": 70754
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/65038", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.zerodayinitiative.com/advisories/ZDI-11-034", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2011/0258", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1025014", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/46079", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/516093/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/16984", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/8136", 
+                    "vendor": "SREASON"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/43145", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/70754", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c02695453", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c02695453", 
+                    "vendor": "HP"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "hp_openview_insight_backdoor.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/http/hp_openview_insight_backdoor.rb", 
+                "title": "HP OpenView Performance Insight Server Backdoor Account Code Execution"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/16984", 
+                "id": 16984, 
+                "file": "http://www.exploit-db.com/download/16984"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/hp_ovpi_server_backdoor", 
+                "id": "exploit_info/hp_ovpi_server_backdoor", 
+                "title": "HP OpenView Performance Insight Server Backdoor Account"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-0276"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "HP OpenView Performance Insight Server doPost() Remote Arbitrary Code Execution Vulnerability", 
+                "file": "gb_hp_performance_insight_46079.nasl", 
+                "family": "Web application abuses", 
+                "id": "103060"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "HP OpenView Performance Insight Server Backdoor Account", 
+                "file": "hp_openview_perf_insight_backdoor.nasl", 
+                "family": "CGI abuses", 
+                "id": "51850"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [
+            {
+                "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c02695453", 
+                "id": "HPSBMA02627"
+            }, 
+            {
+                "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c02695453", 
+                "id": "SSRT090246"
+            }
+        ], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

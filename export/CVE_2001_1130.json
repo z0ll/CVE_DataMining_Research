@@ -1,0 +1,148 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-1130", 
+                "published": "2001-08-02T00:00:00.000-04:00", 
+                "id": "CVE-2001-1130", 
+                "modified": "2008-09-05T16:25:45.923-04:00", 
+                "summary": "Sdbsearch.cgi in SuSE Linux 6.0-7.2 could allow remote attackers to execute arbitrary commands by uploading a keylist.txt file that contains filenames with shell metacharacters, then causing the file to be searched using a .. in the HTTP referer (from the HTTP_REFERER variable) to point to the directory that contains the keylist.txt file."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:suse:suse_linux:6.4"
+            }, 
+            {
+                "id": "cpe:/o:suse:suse_linux:7.2"
+            }, 
+            {
+                "id": "cpe:/o:suse:suse_linux:7.1"
+            }, 
+            {
+                "id": "cpe:/o:suse:suse_linux:7.0"
+            }, 
+            {
+                "id": "cpe:/o:suse:suse_linux:6.3"
+            }, 
+            {
+                "id": "cpe:/o:suse:suse_linux:6.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.17128", 
+                "id": 17128
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/static/7003.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/201216", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.novell.com/linux/security/advisories/2001_027_sdb_txt.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1476", 
+                "signature": "SERVER-WEBAPP sdbsearch.cgi access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-1130"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "sdbsearch.cgi", 
+                "file": "sdbsearch.nasl", 
+                "family": "Web application abuses", 
+                "id": "80084"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "SuSE Support Data Base sbsearch.cgi Arbitrary Command Execution", 
+                "file": "sdbsearch.nasl", 
+                "family": "CGI abuses", 
+                "id": "10720"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2001-1130.html", 
+                "id": "SuSE-SA:2001:027"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

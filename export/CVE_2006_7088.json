@@ -1,0 +1,175 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-7088", 
+                "published": "2007-03-02T16:18:00.000-05:00", 
+                "id": "CVE-2006-7088", 
+                "modified": "2011-03-07T21:47:50.893-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in Simple PHP Forum before 0.4 allow remote attackers to execute arbitrary SQL commands via the username parameter to (1) logon_user.php and (2) update_profile.php."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:simple_php_forum:simple_php_forum:0.1"
+            }, 
+            {
+                "id": "cpe:/a:simple_php_forum:simple_php_forum:0.2"
+            }, 
+            {
+                "id": "cpe:/a:simple_php_forum:simple_php_forum:0.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35277", 
+                "id": 35277
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://sourceforge.net/project/shownotes.php?release_id=462654", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30252", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4496", 
+                    "vendor": "VUPEN"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004779", 
+                "signature": "ET WEB_SPECIFIC_APPS Simple PHP Forum SQL Injection Attempt -- logon_user.php username SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004780", 
+                "signature": "ET WEB_SPECIFIC_APPS Simple PHP Forum SQL Injection Attempt -- logon_user.php username UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004781", 
+                "signature": "ET WEB_SPECIFIC_APPS Simple PHP Forum SQL Injection Attempt -- logon_user.php username INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004782", 
+                "signature": "ET WEB_SPECIFIC_APPS Simple PHP Forum SQL Injection Attempt -- logon_user.php username DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004783", 
+                "signature": "ET WEB_SPECIFIC_APPS Simple PHP Forum SQL Injection Attempt -- logon_user.php username ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004784", 
+                "signature": "ET WEB_SPECIFIC_APPS Simple PHP Forum SQL Injection Attempt -- logon_user.php username UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004785", 
+                "signature": "ET WEB_SPECIFIC_APPS Simple PHP Forum SQL Injection Attempt -- update_profile.php username SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004786", 
+                "signature": "ET WEB_SPECIFIC_APPS Simple PHP Forum SQL Injection Attempt -- update_profile.php username UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004787", 
+                "signature": "ET WEB_SPECIFIC_APPS Simple PHP Forum SQL Injection Attempt -- update_profile.php username INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004788", 
+                "signature": "ET WEB_SPECIFIC_APPS Simple PHP Forum SQL Injection Attempt -- update_profile.php username DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004789", 
+                "signature": "ET WEB_SPECIFIC_APPS Simple PHP Forum SQL Injection Attempt -- update_profile.php username ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004790", 
+                "signature": "ET WEB_SPECIFIC_APPS Simple PHP Forum SQL Injection Attempt -- update_profile.php username UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-7088"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

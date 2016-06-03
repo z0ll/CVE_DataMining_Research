@@ -1,0 +1,595 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0442", 
+                "published": "2010-02-02T13:30:00.360-05:00", 
+                "id": "CVE-2010-0442", 
+                "modified": "2010-08-21T01:39:30.230-04:00", 
+                "summary": "The bitsubstr function in backend/utils/adt/varbit.c in PostgreSQL 8.0.23, 8.1.11, and 8.3.8 allows remote authenticated users to cause a denial of service (daemon crash) or have unspecified other impact via vectors involving a negative integer in the third argument, as demonstrated by a SELECT statement that contains a call to the substring function for a bit string, related to an \"overflow.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:postgresql:postgresql:8.1.11"
+            }, 
+            {
+                "id": "cpe:/a:postgresql:postgresql:8.3.8"
+            }, 
+            {
+                "id": "cpe:/a:postgresql:postgresql:8.0.23"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.51723", 
+                "id": 51723
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/37973", 
+                "id": 37973
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=559259", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=559194", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/55902", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2010/1221", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2010/1207", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2010/1197", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2010/1022", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/37973", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2010-0429.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2010-0428.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2010-0427.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2010/01/27/5", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:103", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2010/dsa-2051", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://ubuntu.com/usn/usn-933-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1023510", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/39939", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/39820", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/39566", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://intevydis.blogspot.com/2010/01/postgresql-8023-bitsubstr-overflow.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://git.postgresql.org/gitweb?p=postgresql.git;a=commit;h=b15087cb39ca9e4bde3c8920fcee3741045d2b83", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://git.postgresql.org/gitweb?p=postgresql.git;a=commit;h=75dea10196c31d98d98c0bafeeb576ae99c09b12", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=567058", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://archives.postgresql.org/pgsql-hackers/2010-01/msg00634.php", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://archives.postgresql.org/pgsql-committers/2010-01/msg00125.php", 
+                    "vendor": "MLIST"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "6.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-0442"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:11655", 
+                "title": "DSA-2051 postgresql-8.3 -- several vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:11655"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21774", 
+                "title": "RHSA-2010:0429: postgresql security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21774"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13636", 
+                "title": "DSA-2051-1 postgresql-8.3 -- several", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13636"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27970", 
+                "title": "DEPRECATED: ELSA-2010-0429 -- postgresql security update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27970"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22939", 
+                "title": "ELSA-2010:0429: postgresql security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22939"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:9720", 
+                "title": "The bitsubstr function in backend/utils/adt/varbit.c in PostgreSQL 8.0.23, 8.1.11, and 8.3.8 allows remote authenticated users to cause a denial of service (daemon crash) or have unspecified other impact via vectors involving a negative integer in the third argument, as demonstrated by a SELECT statement that contains a call to the substring function for a bit string, related to an \"overflow.\"", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:9720"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13207", 
+                "title": "USN-933-1 -- postgresql-8.1, postgresql-8.3, postgresql-8.4 vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13207"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2051-1 (postgresql-8.3)", 
+                "file": "deb_2051_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "67404"
+            }, 
+            {
+                "name": "FreeBSD Ports: postgresql-server", 
+                "file": "freebsd_postgresql-server0.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "67135"
+            }, 
+            {
+                "name": "CentOS Update for rh-postgresql CESA-2010:0427 centos3 i386", 
+                "file": "gb_CESA-2010_0427_rh-postgresql_centos3_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880398"
+            }, 
+            {
+                "name": "CentOS Update for postgresql CESA-2010:0428 centos4 i386", 
+                "file": "gb_CESA-2010_0428_postgresql_centos4_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880399"
+            }, 
+            {
+                "name": "CentOS Update for postgresql CESA-2010:0429 centos5 i386", 
+                "file": "gb_CESA-2010_0429_postgresql_centos5_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880656"
+            }, 
+            {
+                "name": "Mandriva Update for poppler MDVA-2010:103 (poppler)", 
+                "file": "gb_mandriva_MDVA_2010_103.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "830953"
+            }, 
+            {
+                "name": "Mandriva Update for postgresql MDVSA-2010:103 (postgresql)", 
+                "file": "gb_mandriva_MDVSA_2010_103.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "831057"
+            }, 
+            {
+                "name": "RedHat Update for postgresql RHSA-2010:0427-01", 
+                "file": "gb_RHSA-2010_0427-01_postgresql.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870271"
+            }, 
+            {
+                "name": "RedHat Update for postgresql RHSA-2010:0428-01", 
+                "file": "gb_RHSA-2010_0428-01_postgresql.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870267"
+            }, 
+            {
+                "name": "RedHat Update for postgresql RHSA-2010:0429-01", 
+                "file": "gb_RHSA-2010_0429-01_postgresql.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870269"
+            }, 
+            {
+                "name": "Ubuntu Update for PostgreSQL vulnerability USN-933-1", 
+                "file": "gb_ubuntu_USN_933_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840428"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 201110-22 (postgresql-server postgresql-base)", 
+                "file": "glsa_201110_22.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "70785"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 3 : postgresql (CESA-2010:0427)", 
+                "file": "centos_RHSA-2010-0427.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "46695"
+            }, 
+            {
+                "name": "CentOS 4 : postgresql (CESA-2010:0428)", 
+                "file": "centos_RHSA-2010-0428.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "46696"
+            }, 
+            {
+                "name": "CentOS 5 : postgresql (CESA-2010:0429)", 
+                "file": "centos_RHSA-2010-0429.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "46761"
+            }, 
+            {
+                "name": "Debian DSA-2051-1 : postgresql-8.3 - several vulnerabilities", 
+                "file": "debian_DSA-2051.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "46710"
+            }, 
+            {
+                "name": "FreeBSD : postgresql -- bitsubstr overflow (e050119b-3856-11df-b2b2-002170daae37)", 
+                "file": "freebsd_pkg_e050119b385611dfb2b2002170daae37.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "45348"
+            }, 
+            {
+                "name": "GLSA-201110-22 : PostgreSQL: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201110-22.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "56626"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : postgresql (MDVSA-2010:103)", 
+                "file": "mandriva_MDVSA-2010-103.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "46690"
+            }, 
+            {
+                "name": "Oracle Linux 3 : postgresql (ELSA-2010-0427)", 
+                "file": "oraclelinux_ELSA-2010-0427.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68042"
+            }, 
+            {
+                "name": "Oracle Linux 4 : postgresql (ELSA-2010-0428)", 
+                "file": "oraclelinux_ELSA-2010-0428.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68043"
+            }, 
+            {
+                "name": "Oracle Linux 5 : postgresql (ELSA-2010-0429)", 
+                "file": "oraclelinux_ELSA-2010-0429.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68044"
+            }, 
+            {
+                "name": "RHEL 3 : postgresql (RHSA-2010:0427)", 
+                "file": "redhat-RHSA-2010-0427.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "46681"
+            }, 
+            {
+                "name": "RHEL 4 : postgresql (RHSA-2010:0428)", 
+                "file": "redhat-RHSA-2010-0428.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "46682"
+            }, 
+            {
+                "name": "RHEL 5 : postgresql (RHSA-2010:0429)", 
+                "file": "redhat-RHSA-2010-0429.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "46683"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : postgresql on SL3.x, SL4.x, SL5.x i386/x86_64", 
+                "file": "sl_20100519_postgresql_on_SL3_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "60795"
+            }, 
+            {
+                "name": "Ubuntu 6.06 LTS / 8.04 LTS / 9.04 / 9.10 : postgresql-8.1, postgresql-8.3, postgresql-8.4 vulnerability (USN-933-1)", 
+                "file": "ubuntu_USN-933-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "46179"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:103", 
+                "id": "MDVSA-2010:103"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20100427", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0427.html", 
+                    "id": "RHSA-2010:0427", 
+                    "title": "RHSA-2010:0427: postgresql security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=546321", 
+                    "title": "CVE-2009-4136 postgresql: SQL privilege escalation via modifications to session-local state", 
+                    "id": "546321", 
+                    "issue date": "2010-05-19", 
+                    "associated redhat": "RHSA-2010:0427"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=546621", 
+                    "title": "CVE-2010-0733 postgresql: Integer overflow in hash table size calculation", 
+                    "id": "546621", 
+                    "issue date": "2010-05-19", 
+                    "associated redhat": "RHSA-2010:0427"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=559259", 
+                    "title": "CVE-2010-0442 postgresql: substring() negative length argument buffer overflow", 
+                    "id": "559259", 
+                    "issue date": "2010-05-19", 
+                    "associated redhat": "RHSA-2010:0427"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=582615", 
+                    "title": "CVE-2010-1169 PostgreSQL: PL/Perl Intended restriction bypass", 
+                    "id": "582615", 
+                    "issue date": "2010-05-19", 
+                    "associated redhat": "RHSA-2010:0427"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=583072", 
+                    "title": "CVE-2010-1170 PostgreSQL: PL/Tcl Intended restriction bypass", 
+                    "id": "583072", 
+                    "issue date": "2010-05-19", 
+                    "associated redhat": "RHSA-2010:0427"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20100428", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0428.html", 
+                    "id": "RHSA-2010:0428", 
+                    "title": "RHSA-2010:0428: postgresql security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=546321", 
+                    "title": "CVE-2009-4136 postgresql: SQL privilege escalation via modifications to session-local state", 
+                    "id": "546321", 
+                    "issue date": "2010-05-19", 
+                    "associated redhat": "RHSA-2010:0428"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=546621", 
+                    "title": "CVE-2010-0733 postgresql: Integer overflow in hash table size calculation", 
+                    "id": "546621", 
+                    "issue date": "2010-05-19", 
+                    "associated redhat": "RHSA-2010:0428"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=559259", 
+                    "title": "CVE-2010-0442 postgresql: substring() negative length argument buffer overflow", 
+                    "id": "559259", 
+                    "issue date": "2010-05-19", 
+                    "associated redhat": "RHSA-2010:0428"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=582615", 
+                    "title": "CVE-2010-1169 PostgreSQL: PL/Perl Intended restriction bypass", 
+                    "id": "582615", 
+                    "issue date": "2010-05-19", 
+                    "associated redhat": "RHSA-2010:0428"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=583072", 
+                    "title": "CVE-2010-1170 PostgreSQL: PL/Tcl Intended restriction bypass", 
+                    "id": "583072", 
+                    "issue date": "2010-05-19", 
+                    "associated redhat": "RHSA-2010:0428"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20100429", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2010-0429.html", 
+                    "id": "RHSA-2010:0429", 
+                    "title": "RHSA-2010:0429: postgresql security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=546321", 
+                    "title": "CVE-2009-4136 postgresql: SQL privilege escalation via modifications to session-local state", 
+                    "id": "546321", 
+                    "issue date": "2010-05-19", 
+                    "associated redhat": "RHSA-2010:0429"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=546621", 
+                    "title": "CVE-2010-0733 postgresql: Integer overflow in hash table size calculation", 
+                    "id": "546621", 
+                    "issue date": "2010-05-19", 
+                    "associated redhat": "RHSA-2010:0429"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=559259", 
+                    "title": "CVE-2010-0442 postgresql: substring() negative length argument buffer overflow", 
+                    "id": "559259", 
+                    "issue date": "2010-05-19", 
+                    "associated redhat": "RHSA-2010:0429"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=582615", 
+                    "title": "CVE-2010-1169 PostgreSQL: PL/Perl Intended restriction bypass", 
+                    "id": "582615", 
+                    "issue date": "2010-05-19", 
+                    "associated redhat": "RHSA-2010:0429"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=583072", 
+                    "title": "CVE-2010-1170 PostgreSQL: PL/Tcl Intended restriction bypass", 
+                    "id": "583072", 
+                    "issue date": "2010-05-19", 
+                    "associated redhat": "RHSA-2010:0429"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-933-1", 
+                "id": "USN-933-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2051", 
+                "id": "DSA-2051"
+            }
+        ], 
+        "Vmware": []
+    }
+}

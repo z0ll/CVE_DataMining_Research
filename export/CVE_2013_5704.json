@@ -1,0 +1,567 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5704", 
+                "published": "2014-04-15T06:55:11.150-04:00", 
+                "id": "CVE-2013-5704", 
+                "modified": "2014-07-24T00:54:45.497-04:00", 
+                "summary": "The mod_headers module in the Apache HTTP Server 2.2.22 allows remote attackers to bypass \"RequestHeader unset\" directives by placing a header in the trailer portion of data sent with chunked transfer coding.  NOTE: the vendor states \"this is not a security issue in httpd as such.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:apache:http_server:2.2.22"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.74701", 
+                "id": 74701
+            }, 
+            {
+                "url": "http://www.scip.ch/?vuldb.68668", 
+                "id": 68668
+            }, 
+            {
+                "url": "http://www.scip.ch/?vuldb.12741", 
+                "id": 12741
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://svn.apache.org/viewvc/httpd/httpd/trunk/modules/proxy/mod_proxy_http.c?r1=1610674&r2=1610814&diff_format=h", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://svn.apache.org/viewvc/httpd/httpd/trunk/modules/proxy/mod_proxy_http.c", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://martin.swende.se/blog/HTTPChunked.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://marc.info/?l=apache-httpd-dev&m=139636309822854&w=2", 
+                    "vendor": "MLIST"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-5704"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28989", 
+                "title": "HP-UX  Apache Server Suite running Apache Tomcat or PHP, Remote Denial of Service (DoS) and Other Vulnerabilities", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:28989"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28696", 
+                "title": "SUSE-SU-2015:0974-1 -- Security update for apache2 (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28696"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : httpd (ALAS-2014-414)", 
+                "file": "ala_ALAS-2014-414.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "78357"
+            }, 
+            {
+                "name": "Amazon Linux AMI : httpd24 (ALAS-2015-483)", 
+                "file": "ala_ALAS-2015-483.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "81329"
+            }, 
+            {
+                "name": "Apache 2.2.x < 2.2.28 Multiple Vulnerabilities", 
+                "file": "apache_2_2_29.nasl", 
+                "family": "Web Servers", 
+                "id": "77531"
+            }, 
+            {
+                "name": "Apache 2.4.x < 2.4.12 Multiple Vulnerabilities", 
+                "file": "apache_2_4_12.nasl", 
+                "family": "Web Servers", 
+                "id": "81126"
+            }, 
+            {
+                "name": "CentOS 7 : httpd (CESA-2015:0325)", 
+                "file": "centos_RHSA-2015-0325.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "81888"
+            }, 
+            {
+                "name": "CentOS 6 : httpd (CESA-2015:1249)", 
+                "file": "centos_RHSA-2015-1249.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "85008"
+            }, 
+            {
+                "name": "Debian DLA-71-1 : apache2 security update", 
+                "file": "debian_DLA-71.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "82216"
+            }, 
+            {
+                "name": "Fedora 20 : httpd-2.4.10-2.fc20 (2014-17153)", 
+                "file": "fedora_2014-17153.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "81581"
+            }, 
+            {
+                "name": "Fedora 21 : httpd-2.4.10-15.fc21 (2014-17195)", 
+                "file": "fedora_2014-17195.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "81837"
+            }, 
+            {
+                "name": "FreeBSD : apache24 -- several vulnerabilities (5804b9d4-a959-11e4-9363-20cf30e32f6d)", 
+                "file": "freebsd_pkg_5804b9d4a95911e4936320cf30e32f6d.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "81116"
+            }, 
+            {
+                "name": "FreeBSD : apache22 -- several vulnerabilities (f927e06c-1109-11e4-b090-20cf30e32f6d)", 
+                "file": "freebsd_pkg_f927e06c110911e4b09020cf30e32f6d.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "76780"
+            }, 
+            {
+                "name": "GLSA-201504-03 : Apache: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201504-03.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "82733"
+            }, 
+            {
+                "name": "Mac OS X < 10.10.3 Multiple Vulnerabilities (FREAK)", 
+                "file": "macosx_10_10_3.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "82699"
+            }, 
+            {
+                "name": "Mac OS X Multiple Vulnerabilities (Security Update 2015-004) (FREAK)", 
+                "file": "macosx_SecUpd2015-004.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "82700"
+            }, 
+            {
+                "name": "Mac OS X : OS X Server < 5.0.3 Multiple Vulnerabilities", 
+                "file": "macosx_server_5_0_3.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "86066"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : apache (MDVSA-2014:174)", 
+                "file": "mandriva_MDVSA-2014-174.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "77653"
+            }, 
+            {
+                "name": "openSUSE Security Update : apache2 (openSUSE-SU-2014:1726-1)", 
+                "file": "openSUSE-2014-822.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "80300"
+            }, 
+            {
+                "name": "Oracle Fusion Middleware Oracle HTTP Server Multiple Vulnerabilities (January 2015 CPU)", 
+                "file": "oracle_http_server_cpu_jan_2015.nasl", 
+                "family": "Web Servers", 
+                "id": "81002"
+            }, 
+            {
+                "name": "Oracle Linux 7 : httpd (ELSA-2015-0325)", 
+                "file": "oraclelinux_ELSA-2015-0325.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "81802"
+            }, 
+            {
+                "name": "RHEL 7 : httpd (RHSA-2015:0325)", 
+                "file": "redhat-RHSA-2015-0325.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "81629"
+            }, 
+            {
+                "name": "RHEL 6 : httpd (RHSA-2015:1249)", 
+                "file": "redhat-RHSA-2015-1249.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "84911"
+            }, 
+            {
+                "name": "RHEL 6 : JBoss Web Server (RHSA-2015:2659)", 
+                "file": "redhat-RHSA-2015-2659.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "87457"
+            }, 
+            {
+                "name": "RHEL 7 : JBoss Web Server (RHSA-2015:2660)", 
+                "file": "redhat-RHSA-2015-2660.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "87458"
+            }, 
+            {
+                "name": "RHEL 5 / 6 : httpd and httpd22 (RHSA-2016:0061)", 
+                "file": "redhat-RHSA-2016-0061.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "88077"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : httpd on SL7.x x86_64", 
+                "file": "sl_20150305_httpd_on_SL7_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "82252"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : httpd on SL6.x i386/x86_64", 
+                "file": "sl_20150722_httpd_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "85196"
+            }, 
+            {
+                "name": "Slackware 13.0 / 13.1 / 13.37 / 14.0 / 14.1 / current : httpd (SSA:2015-111-03)", 
+                "file": "Slackware_SSA_2015-111-03.nasl", 
+                "family": "Slackware Local Security Checks", 
+                "id": "82916"
+            }, 
+            {
+                "name": "SuSE 11.3 Security Update : apache2 (SAT Patch Number 10533)", 
+                "file": "suse_11_apache2-150325.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "82657"
+            }, 
+            {
+                "name": "SUSE SLES12 Security Update : apache2 (SUSE-SU-2015:0974-1)", 
+                "file": "suse_SU-2015-0974-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83945"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS / 12.04 LTS / 14.04 / 14.10 : apache2 vulnerabilities (USN-2523-1)", 
+                "file": "ubuntu_USN-2523-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "81755"
+            }, 
+            {
+                "name": "IBM WebSphere Application Server 7.0 < Fix Pack 35 Multiple Vulnerabilities", 
+                "file": "websphere_7_0_0_35.nasl", 
+                "family": "Web Servers", 
+                "id": "78604"
+            }, 
+            {
+                "name": "IBM WebSphere Application Server 8.0 < Fix Pack 10 Multiple Vulnerabilities (POODLE)", 
+                "file": "websphere_8_0_0_10.nasl", 
+                "family": "Web Servers", 
+                "id": "81401"
+            }, 
+            {
+                "name": "IBM WebSphere Application Server 8.5 < Fix Pack 8.5.5.4 Multiple Vulnerabilities (POODLE)", 
+                "file": "websphere_8_5_5_4.nasl", 
+                "family": "Web Servers", 
+                "id": "80398"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20150325", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-0325.html", 
+                    "id": "RHSA-2015:0325", 
+                    "title": "RHSA-2015:0325: httpd security, bug fix, and enhancement update (Low)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1059143", 
+                    "title": "Feature request: update httpd to 2.4.7 / backport htaccess API changes", 
+                    "id": "1059143", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0325"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1060536", 
+                    "title": "mod_rewrite doesn't expose client_addr", 
+                    "id": "1060536", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0325"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1073078", 
+                    "title": "mod_ssl uses small DHE parameters for non standard RSA keys", 
+                    "id": "1073078", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0325"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1073081", 
+                    "title": "mod_ssl selects correct DHE parameters for keys only up to 4096 bit", 
+                    "id": "1073081", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0325"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1080125", 
+                    "title": "httpd uses hardcoded curve for ECDHE suites", 
+                    "id": "1080125", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0325"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1082903", 
+                    "title": "CVE-2013-5704 httpd: bypass of mod_headers rules via chunked requests", 
+                    "id": "1082903", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0325"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1114123", 
+                    "title": "RFE: set vstring dynamically", 
+                    "id": "1114123", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0325"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1131006", 
+                    "title": "Error in `/usr/sbin/httpd': free(): invalid pointer", 
+                    "id": "1131006", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0325"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1131847", 
+                    "title": "authzprovideralias and authnprovideralias-defined provider can't be used in virtualhost .", 
+                    "id": "1131847", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0325"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1136290", 
+                    "title": "SetHandler to proxy support", 
+                    "id": "1136290", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0325"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1149709", 
+                    "title": "CVE-2014-3581 httpd: NULL pointer dereference in mod_cache if Content-Type has empty value", 
+                    "id": "1149709", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0325"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151249", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1249.html", 
+                    "id": "RHSA-2015:1249", 
+                    "title": "RHSA-2015:1249: httpd security, bug fix, and enhancement update (Low)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=922844", 
+                    "title": "rotatelogs %Z does not use correct timezone respecting DST", 
+                    "id": "922844", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1249"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=963146", 
+                    "title": "HTTPD_LANG doesn't effect when httpd starts by graceful.", 
+                    "id": "963146", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1249"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=987590", 
+                    "title": "Apache startup fails with misleading error if DocumentRoot has context type user_home_t", 
+                    "id": "987590", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1249"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1045477", 
+                    "title": "\"ab\" to https sites broken", 
+                    "id": "1045477", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1249"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1057695", 
+                    "title": "mod_deflate does not decompress files larger than 4GB", 
+                    "id": "1057695", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1249"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1069625", 
+                    "title": "httpd.conf uses icon bomb.gif for all files/dirs ending with core", 
+                    "id": "1069625", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1249"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1082903", 
+                    "title": "CVE-2013-5704 httpd: bypass of mod_headers rules via chunked requests", 
+                    "id": "1082903", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1249"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1125269", 
+                    "title": "ab fails when domain name resolved to IPv6 adress", 
+                    "id": "1125269", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1249"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1149703", 
+                    "title": "bad SSL_CLIENT_VERIFY value on resumed session with \"SSLVerifyClient optional_no_ca\"", 
+                    "id": "1149703", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1249"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1149906", 
+                    "title": "Mixed up mod_proxy_balancer jvmRoutes causing sticky session breaks", 
+                    "id": "1149906", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1249"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1161328", 
+                    "title": "[mod_ssl] Revoked Certificates are logged at the DEBUG level", 
+                    "id": "1161328", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1249"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1162268", 
+                    "title": "Misspelling in patch file causes failure to build against older OpenSSL releases", 
+                    "id": "1162268", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1249"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2523-1", 
+                "id": "USN-2523-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

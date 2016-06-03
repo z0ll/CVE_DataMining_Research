@@ -1,0 +1,325 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0138", 
+                "published": "2000-05-02T00:00:00.000-04:00", 
+                "id": "CVE-2000-0138", 
+                "modified": "2008-09-10T15:03:05.807-04:00", 
+                "summary": "A system has a distributed denial of service (DDOS) attack master, agent, or zombie installed, such as (1) Trinoo, (2) Tribe Flood Network (TFN), (3) Tribe Flood Network 2000 (TFN2K), (4) stacheldraht, (5) mstream, or (6) shaft."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": []
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.15508", 
+                "id": 15508
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/alerts/advise48.php3", 
+                    "vendor": "ISS"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=95722093124322&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=95715370208598&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2101853", 
+                "signature": "GPL DELETED win-trin00 connection attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-dos", 
+                "id": "sid:221", 
+                "signature": "PROTOCOL-ICMP TFN Probe"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:222", 
+                "signature": "PROTOCOL-ICMP tfn2k icmp possible communication"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:223", 
+                "signature": "MALWARE-OTHER Trin00 Daemon to Master PONG message detected"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:224", 
+                "signature": "PROTOCOL-ICMP Stacheldraht server spoof"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:225", 
+                "signature": "PROTOCOL-ICMP Stacheldraht gag server response"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:226", 
+                "signature": "PROTOCOL-ICMP Stacheldraht server response"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:227", 
+                "signature": "PROTOCOL-ICMP Stacheldraht client spoofworks"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:228", 
+                "signature": "PROTOCOL-ICMP TFN client command BE"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:229", 
+                "signature": "PROTOCOL-ICMP Stacheldraht client check skillz"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:230", 
+                "signature": "MALWARE-OTHER shaft client login to handler"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:231", 
+                "signature": "MALWARE-OTHER Trin00 Daemon to Master message detected"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:232", 
+                "signature": "MALWARE-OTHER Trin00 Daemon to Master *HELLO* message detected"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:233", 
+                "signature": "MALWARE-OTHER Trin00 Attacker to Master default startup password"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:234", 
+                "signature": "MALWARE-OTHER Trin00 Attacker to Master default password"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:235", 
+                "signature": "MALWARE-OTHER Trin00 Attacker to Master default mdie password"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:236", 
+                "signature": "PROTOCOL-ICMP Stacheldraht client check gag"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:237", 
+                "signature": "MALWARE-OTHER Trin00 Master to Daemon default password attempt"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:238", 
+                "signature": "PROTOCOL-ICMP TFN server response"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:239", 
+                "signature": "MALWARE-OTHER shaft handler to agent"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:240", 
+                "signature": "MALWARE-OTHER shaft agent to handler"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:243", 
+                "signature": "MALWARE-OTHER mstream agent to handler"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:244", 
+                "signature": "MALWARE-OTHER mstream handler to agent"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:245", 
+                "signature": "MALWARE-OTHER mstream handler ping to agent"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:246", 
+                "signature": "MALWARE-OTHER mstream agent pong to handler"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:247", 
+                "signature": "MALWARE-OTHER mstream client to handler"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:248", 
+                "signature": "MALWARE-OTHER mstream handler to client"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:250", 
+                "signature": "MALWARE-OTHER mstream handler to client"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:251", 
+                "signature": "PROTOCOL-ICMP - TFN client command LE"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:1843", 
+                "signature": "MALWARE-BACKDOOR trinity connection attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:1853", 
+                "signature": "MALWARE-BACKDOOR win-trin00 connection attempt"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:1854", 
+                "signature": "PROTOCOL-ICMP Stacheldraht handler->agent niggahbitch"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:1855", 
+                "signature": "PROTOCOL-ICMP Stacheldraht agent->handler skillz"
+            }, 
+            {
+                "category": "attempted-dos", 
+                "id": "sid:1856", 
+                "signature": "PROTOCOL-ICMP Stacheldraht handler->agent ficken"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2000-0138"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "mstream DDoS Agent Detection", 
+                "file": "mstream_agent.nasl", 
+                "family": "Backdoors", 
+                "id": "10390"
+            }, 
+            {
+                "name": "mstream DDoS Handler Detection", 
+                "file": "mstream_handler.nasl", 
+                "family": "Backdoors", 
+                "id": "10391"
+            }, 
+            {
+                "name": "Shaft Trojan Detection", 
+                "file": "shaft.nasl", 
+                "family": "Backdoors", 
+                "id": "10350"
+            }, 
+            {
+                "name": "Stacheldraht Trojan Detection", 
+                "file": "stacheldraht.nasl", 
+                "family": "Backdoors", 
+                "id": "10270"
+            }, 
+            {
+                "name": "TFN (Tribe Flood Network) Trojan Detection", 
+                "file": "tfn.nasl", 
+                "family": "Backdoors", 
+                "id": "10283"
+            }, 
+            {
+                "name": "Trinity v3 Trojan Detection", 
+                "file": "trinity.nasl", 
+                "family": "Backdoors", 
+                "id": "10501"
+            }, 
+            {
+                "name": "Trin00 Trojan Detection", 
+                "file": "trinoo.nasl", 
+                "family": "Backdoors", 
+                "id": "10288"
+            }, 
+            {
+                "name": "Trin00 for Windows Trojan Detection", 
+                "file": "win_trinoo.nasl", 
+                "family": "Backdoors", 
+                "id": "10307"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

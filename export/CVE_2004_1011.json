@@ -1,0 +1,261 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-1011", 
+                "published": "2005-01-10T00:00:00.000-05:00", 
+                "id": "CVE-2004-1011", 
+                "modified": "2008-09-10T15:28:37.447-04:00", 
+                "summary": "Stack-based buffer overflow in Cyrus IMAP Server 2.2.4 through 2.2.8, with the imapmagicplus option enabled, allows remote attackers to execute arbitrary code via a long (1) PROXY or (2) LOGIN command, a different vulnerability than CVE-2004-1015."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:conectiva:linux:9.0"
+            }, 
+            {
+                "id": "cpe:/a:carnegie_mellon_university:cyrus_imap_server:2.2.1_beta"
+            }, 
+            {
+                "id": "cpe:/o:redhat:fedora_core:core_2.0"
+            }, 
+            {
+                "id": "cpe:/a:carnegie_mellon_university:cyrus_imap_server:2.2.8"
+            }, 
+            {
+                "id": "cpe:/o:trustix:secure_linux:2.2"
+            }, 
+            {
+                "id": "cpe:/o:ubuntu:ubuntu_linux:4.1::ppc"
+            }, 
+            {
+                "id": "cpe:/o:conectiva:linux:10.0"
+            }, 
+            {
+                "id": "cpe:/o:ubuntu:ubuntu_linux:4.1::ia64"
+            }, 
+            {
+                "id": "cpe:/o:redhat:fedora_core:core_3.0"
+            }, 
+            {
+                "id": "cpe:/a:carnegie_mellon_university:cyrus_imap_server:2.2.3"
+            }, 
+            {
+                "id": "cpe:/o:trustix:secure_linux:2.1"
+            }, 
+            {
+                "id": "cpe:/o:trustix:secure_linux:2.0"
+            }, 
+            {
+                "id": "cpe:/a:carnegie_mellon_university:cyrus_imap_server:2.2.7"
+            }, 
+            {
+                "id": "cpe:/a:carnegie_mellon_university:cyrus_imap_server:2.2.0_alpha"
+            }, 
+            {
+                "id": "cpe:/a:carnegie_mellon_university:cyrus_imap_server:2.2.6"
+            }, 
+            {
+                "id": "cpe:/a:carnegie_mellon_university:cyrus_imap_server:2.1.7"
+            }, 
+            {
+                "id": "cpe:/a:openpkg:openpkg:current"
+            }, 
+            {
+                "id": "cpe:/a:carnegie_mellon_university:cyrus_imap_server:2.2.5"
+            }, 
+            {
+                "id": "cpe:/a:carnegie_mellon_university:cyrus_imap_server:2.2.2_beta"
+            }, 
+            {
+                "id": "cpe:/a:carnegie_mellon_university:cyrus_imap_server:2.2.4"
+            }, 
+            {
+                "id": "cpe:/a:carnegie_mellon_university:cyrus_imap_server:2.1.9"
+            }, 
+            {
+                "id": "cpe:/a:carnegie_mellon_university:cyrus_imap_server:2.1.10"
+            }, 
+            {
+                "id": "cpe:/a:carnegie_mellon_university:cyrus_imap_server:2.1.16"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.23659", 
+                "id": 23659
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/18198", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://security.gentoo.org/glsa/glsa-200411-34.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://security.e-matters.de/advisories/152004.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/13274/", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110123023521619&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://asg.web.cmu.edu/cyrus/download/imapd/changes.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2004:139", 
+                    "vendor": "MANDRAKE"
+                }, 
+                {
+                    "url": "http://asg.web.cmu.edu/archive/message.php?mailbox=archive.cyrus-announce&msg=143", 
+                    "vendor": "MLIST"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-user", 
+                "id": "sid:1842", 
+                "signature": "PROTOCOL-IMAP login buffer overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-1011"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: cyrus-imapd", 
+                "file": "freebsd_cyrus-imapd0.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52294"
+            }, 
+            {
+                "name": "FreeBSD Ports: cyrus-imapd", 
+                "file": "freebsd_cyrus-imapd3.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52297"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 200411-34 (cyrus-imapd)", 
+                "file": "glsa_200411_34.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "54755"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Cyrus IMAP Server < 2.2.10 Multiple Remote Overflows", 
+                "file": "cyrus_imap_multiple_overflow.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "15819"
+            }, 
+            {
+                "name": "FreeBSD : Cyrus IMAPd -- IMAPMAGICPLUS preauthentification overflow (816fdd8b-3d14-11d9-8818-008088034841)", 
+                "file": "freebsd_pkg_816fdd8b3d1411d98818008088034841.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "19004"
+            }, 
+            {
+                "name": "GLSA-200411-34 : Cyrus IMAP Server: Multiple remote vulnerabilities", 
+                "file": "gentoo_GLSA-200411-34.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "15833"
+            }, 
+            {
+                "name": "Mac OS X Multiple Vulnerabilities (Security Update 2005-003)", 
+                "file": "macosx_SecUpd2005-003.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "17587"
+            }, 
+            {
+                "name": "Mandrake Linux Security Advisory : cyrus-imapd (MDKSA-2004:139)", 
+                "file": "mandrake_MDKSA-2004-139.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "15836"
+            }, 
+            {
+                "name": "SUSE-SA:2004:043: cyrus-imapd", 
+                "file": "suse_SA_2004_043.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "15923"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200411-34", 
+                "id": "GLSA-200411-34"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

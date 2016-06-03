@@ -1,0 +1,203 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3313", 
+                "published": "2007-06-21T14:30:00.000-04:00", 
+                "id": "CVE-2007-3313", 
+                "modified": "2012-10-30T22:38:16.623-04:00", 
+                "summary": "Multiple SQL injection vulnerabilities in Jasmine CMS 1.0 allow remote attackers to execute arbitrary SQL commands via (1) the login_username parameter to login.php or (2) the item parameter to news.php."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:efstratios_geroulis:jasmine_cms:1.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.37379", 
+                "id": 37379
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/24546", 
+                "id": 24546
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/37068", 
+                "id": 37068
+            }, 
+            {
+                "url": "http://www.osvdb.org/37069", 
+                "id": 37069
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/2264", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/24546", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/4081", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://osvdb.org/37069", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/37068", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34937", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34936", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25737", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006492", 
+                "signature": "ET WEB_SPECIFIC_APPS Jasmine CMS SQL Injection Attempt -- login.php login_username SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006493", 
+                "signature": "ET WEB_SPECIFIC_APPS Jasmine CMS SQL Injection Attempt -- login.php login_username UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006494", 
+                "signature": "ET WEB_SPECIFIC_APPS Jasmine CMS SQL Injection Attempt -- login.php login_username INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006495", 
+                "signature": "ET WEB_SPECIFIC_APPS Jasmine CMS SQL Injection Attempt -- login.php login_username DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006496", 
+                "signature": "ET WEB_SPECIFIC_APPS Jasmine CMS SQL Injection Attempt -- login.php login_username ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006497", 
+                "signature": "ET WEB_SPECIFIC_APPS Jasmine CMS SQL Injection Attempt -- login.php login_username UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006498", 
+                "signature": "ET WEB_SPECIFIC_APPS Jasmine CMS SQL Injection Attempt -- news.php item SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006499", 
+                "signature": "ET WEB_SPECIFIC_APPS Jasmine CMS SQL Injection Attempt -- news.php item UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006500", 
+                "signature": "ET WEB_SPECIFIC_APPS Jasmine CMS SQL Injection Attempt -- news.php item INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006501", 
+                "signature": "ET WEB_SPECIFIC_APPS Jasmine CMS SQL Injection Attempt -- news.php item DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006502", 
+                "signature": "ET WEB_SPECIFIC_APPS Jasmine CMS SQL Injection Attempt -- news.php item ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006503", 
+                "signature": "ET WEB_SPECIFIC_APPS Jasmine CMS SQL Injection Attempt -- news.php item UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-3313"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

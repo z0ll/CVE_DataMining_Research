@@ -1,0 +1,172 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4094", 
+                "published": "2010-10-26T14:00:01.847-04:00", 
+                "id": "CVE-2010-4094", 
+                "modified": "2011-01-11T01:45:51.670-05:00", 
+                "summary": "The Tomcat server in IBM Rational Quality Manager and Rational Test Lab Manager has a default password for the ADMIN account, which makes it easier for remote attackers to execute arbitrary code by leveraging access to the manager role.  NOTE: this might overlap CVE-2009-3548."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/255.html", 
+                "id": "CWE-255", 
+                "title": "Credentials Management"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:ibm:rational_test_lab_manager"
+            }, 
+            {
+                "id": "cpe:/a:ibm:rational_quality_manager"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.55250", 
+                "id": 55250
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/44172", 
+                "id": 44172
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/69008", 
+                "id": 69008
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.zerodayinitiative.com/advisories/ZDI-10-214/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2010/2732", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/44172", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1024601", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/41784", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/69008", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://download4.boulder.ibm.com/sar/CMA/RAA/013m6/0/UpdateLog.txt", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "tomcat_mgr_login.rb", 
+                "file": "metasploit-framework/modules/auxiliary/scanner/http/tomcat_mgr_login.rb", 
+                "title": "Tomcat Application Manager Login Utility"
+            }, 
+            {
+                "id": "tomcat_mgr_deploy.rb", 
+                "file": "metasploit-framework/modules/exploits/multi/http/tomcat_mgr_deploy.rb", 
+                "title": "Apache Tomcat Manager Application Deployer Authenticated Code Execution"
+            }, 
+            {
+                "id": "tomcat_mgr_upload.rb", 
+                "file": "metasploit-framework/modules/exploits/multi/http/tomcat_mgr_upload.rb", 
+                "title": "Apache Tomcat Manager Authenticated Upload Code Execution"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/ibm_rational_quality_manager_default_credentials", 
+                "id": "exploit_info/ibm_rational_quality_manager_default_credentials", 
+                "title": "IBM Rational Quality Manager and Test Lab Manager Policy Bypass"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-4094"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Apache Tomcat Manager Common Administrative Credentials", 
+                "file": "tomcat_manager_common_creds.nasl", 
+                "family": "Web Servers", 
+                "id": "34970"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

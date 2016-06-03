@@ -1,0 +1,218 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6540", 
+                "published": "2006-12-13T21:28:00.000-05:00", 
+                "id": "CVE-2006-6540", 
+                "modified": "2011-03-07T21:46:25.393-05:00", 
+                "summary": "SQL injection vulnerability in bt-trackback.php in Bluetrait before 1.2.0, when trackback is enabled, allows remote attackers to execute arbitrary SQL commands via unspecified parameters.  NOTE: some of these details are obtained from third party information."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.4.3"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.4.1"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.4.2"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.4.7"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.5.3"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.4.5"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.4.6"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.4.4"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.4.10"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.5.2"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.3.9"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.5.1"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.4.8_beta1"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.3.10"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:1.0.0"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:1.1.1"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:1.1.0"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.3.8"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.3.6"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.3.7"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.4.9"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.4"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.3.2"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.3.3"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.5_beta2"
+            }, 
+            {
+                "id": "cpe:/a:bluetrait:bluetrait:0.3.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33830", 
+                "id": 33830
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.bluetrait.org/weblog/changelog.txt", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23316", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4960", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30842", 
+                    "vendor": "XF"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006333", 
+                "signature": "ET WEB_SPECIFIC_APPS Bluetrait SQL Injection Attempt -- bt-trackback.php SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006334", 
+                "signature": "ET WEB_SPECIFIC_APPS Bluetrait SQL Injection Attempt -- bt-trackback.php UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006335", 
+                "signature": "ET WEB_SPECIFIC_APPS Bluetrait SQL Injection Attempt -- bt-trackback.php INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006336", 
+                "signature": "ET WEB_SPECIFIC_APPS Bluetrait SQL Injection Attempt -- bt-trackback.php DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006337", 
+                "signature": "ET WEB_SPECIFIC_APPS Bluetrait SQL Injection Attempt -- bt-trackback.php ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006338", 
+                "signature": "ET WEB_SPECIFIC_APPS Bluetrait SQL Injection Attempt -- bt-trackback.php UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6540"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

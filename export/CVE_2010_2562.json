@@ -1,0 +1,212 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2562", 
+                "published": "2010-08-11T14:47:51.063-04:00", 
+                "id": "CVE-2010-2562", 
+                "modified": "2010-09-17T01:48:20.010-04:00", 
+                "summary": "Microsoft Office Excel 2002 SP3 and 2003 SP3, Office 2004 and 2008 for Mac, and Open XML File Format Converter for Mac do not properly parse the Excel file format, which allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via a crafted Excel file, aka \"Excel Memory Corruption Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:excel:2003:sp3"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:excel:2002:sp3"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:office:2008::mac"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:open_xml_file_format_converter:::mac"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:office:2004::mac"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.4159", 
+                "id": 4159
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA10-222A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/Bulletin/MS10-057.mspx", 
+                    "vendor": "MS"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/excel_pivottable_cache_data", 
+                "id": "exploit_info/excel_pivottable_cache_data", 
+                "title": "Microsoft Office Excel PivotTable Cache Data Record Handling Overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-2562"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:12088", 
+                "title": "Excel Memory Corruption Vulnerability (CVE-2010-2562)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:12088"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Office Excel Remote Code Execution Vulnerability (2269707)", 
+                "file": "secpod_ms10-057.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "902095"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS10-056 / MS10-057: Vulnerabilities in Microsoft Office Could Allow Remote Code Execution (2269638 / 2269707) (Mac OS X)", 
+                "file": "macosx_ms_office_aug2010.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "50067"
+            }, 
+            {
+                "name": "MS10-057: Vulnerability in Microsoft Office Excel Could Allow Remote Code Execution (2269707)", 
+                "file": "smb_nt_ms10-057.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "48294"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in Microsoft Excel Could Allow Remote Code Execution", 
+                "id": "Vulnerability in Microsoft Excel Could Allow Remote Code Execution", 
+                "title": "2284179"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2269707", 
+                "id": "2269707", 
+                "title": "Vulnerability in Microsoft Excel Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS10-057", 
+                "id": "MS10-057", 
+                "title": "Vulnerability in Microsoft Excel Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,161 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0226", 
+                "published": "2007-01-12T21:28:00.000-05:00", 
+                "id": "CVE-2007-0226", 
+                "modified": "2011-03-07T21:49:02.347-05:00", 
+                "summary": "SQL injection vulnerability in wbsearch.aspx in uniForum 4 and earlier allows remote attackers to execute arbitrary SQL commands via the \"by User\" field (aka the TXbyuser parameter)."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:uniforum:uniforum:4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34382", 
+                "id": 34382
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21966", 
+                "id": 21966
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/32927", 
+                "id": 32927
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/31362", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21966", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://osvdb.org/32927", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/458060/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23827", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/3106", 
+                    "vendor": "MILW0RM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005663", 
+                "signature": "ET WEB_SPECIFIC_APPS uniForum SQL Injection Attempt -- wbsearch.aspx SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005664", 
+                "signature": "ET WEB_SPECIFIC_APPS uniForum SQL Injection Attempt -- wbsearch.aspx UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005665", 
+                "signature": "ET WEB_SPECIFIC_APPS uniForum SQL Injection Attempt -- wbsearch.aspx INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005666", 
+                "signature": "ET WEB_SPECIFIC_APPS uniForum SQL Injection Attempt -- wbsearch.aspx DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005667", 
+                "signature": "ET WEB_SPECIFIC_APPS uniForum SQL Injection Attempt -- wbsearch.aspx ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005668", 
+                "signature": "ET WEB_SPECIFIC_APPS uniForum SQL Injection Attempt -- wbsearch.aspx UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-0226"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

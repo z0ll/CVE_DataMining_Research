@@ -1,0 +1,224 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0377", 
+                "published": "2000-06-08T00:00:00.000-04:00", 
+                "id": "CVE-2000-0377", 
+                "modified": "2008-09-10T15:04:14.647-04:00", 
+                "summary": "The Remote Registry server in Windows NT 4.0 allows local authenticated users to cause a denial of service via a malformed request, which causes the winlogon process to fail, aka the \"Remote Registry Access Authentication\" vulnerability."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_nt:4.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.15644", 
+                "id": 15644
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/1331", 
+                "id": 1331
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms00-040.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/1331", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/support/kb.asp?ID=264684", 
+                    "vendor": "MSKB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2103222", 
+                "signature": "GPL NETBIOS SMB OpenKey andx overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2103223", 
+                "signature": "GPL NETBIOS SMB OpenKey little endian andx overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2103219", 
+                "signature": "GPL NETBIOS SMB OpenKey little endian overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2103218", 
+                "signature": "GPL NETBIOS SMB OpenKey overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2103224", 
+                "signature": "GPL NETBIOS SMB OpenKey unicode andx overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2103225", 
+                "signature": "GPL NETBIOS SMB OpenKey unicode little endian andx overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2103221", 
+                "signature": "GPL NETBIOS SMB OpenKey unicode little endian overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2103220", 
+                "signature": "GPL NETBIOS SMB OpenKey unicode overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2103230", 
+                "signature": "GPL NETBIOS SMB-DS OpenKey andx overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2103231", 
+                "signature": "GPL NETBIOS SMB-DS OpenKey little endian andx overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2103227", 
+                "signature": "GPL NETBIOS SMB-DS OpenKey little endian overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2103226", 
+                "signature": "GPL NETBIOS SMB-DS OpenKey overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2103232", 
+                "signature": "GPL NETBIOS SMB-DS OpenKey unicode andx overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2103233", 
+                "signature": "GPL NETBIOS SMB-DS OpenKey unicode little endian andx overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2103229", 
+                "signature": "GPL NETBIOS SMB-DS OpenKey unicode little endian overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2103228", 
+                "signature": "GPL NETBIOS SMB-DS OpenKey unicode overflow attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:3218", 
+                "signature": "OS-WINDOWS DCERPC NCACN-IP-TCP winreg OpenKey overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2000-0377"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:1021", 
+                "title": "NT4.0 Remote Registry Access Authentication Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:1021"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Q264684", 
+                "id": "Q264684", 
+                "title": ""
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/264684", 
+                "id": "264684", 
+                "title": "Patch Available for 'Remote Registry Access Authentication' Vulnerability"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS00-040", 
+                "id": "MS00-040", 
+                "title": "Patch Available for 'Remote Registry Access Authentication' Vulnerability"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

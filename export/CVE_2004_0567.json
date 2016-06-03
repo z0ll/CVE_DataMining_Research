@@ -1,0 +1,194 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0567", 
+                "published": "2004-12-31T00:00:00.000-05:00", 
+                "id": "CVE-2004-0567", 
+                "modified": "2008-09-05T16:38:46.377-04:00", 
+                "summary": "The Windows Internet Naming Service (WINS) in Windows NT Server 4.0 SP 6a, NT Terminal Server 4.0 SP 6, Windows 2000 Server SP3 and SP4, and Windows Server 2003 does not properly validate the computer name value in a WINS packet, which allows remote attackers to execute arbitrary code or cause a denial of service (server crash), which results in an \"unchecked buffer\" and possibly triggers a buffer overflow, aka the \"Name Validation Vulnerability.\""
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_nt:4.0:sp6:terminal_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2003_server:r2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_nt:4.0:sp6a:server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2003_server:64-bit"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp4:server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp3:server"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.1041", 
+                "id": 1041
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/11922", 
+                "id": 11922
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/12370", 
+                "id": 12370
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/378160", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/18259", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/MS04-045.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/p-054.shtml", 
+                    "vendor": "CIAC"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/11922", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/12370", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1012517", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/13466", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/378160", 
+                "id": "VU#378160"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "misc-attack", 
+                "id": "sid:3017", 
+                "signature": "OS-WINDOWS Microsoft Windows WINS overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0567"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS04-045: WINS Code Execution (870763)", 
+                "file": "smb_nt_ms04-045.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "15962"
+            }, 
+            {
+                "name": "MS04-035: WINS Code Execution (870763) (uncredentialed check)", 
+                "file": "wins_replication_overflow.nasl", 
+                "family": "Windows", 
+                "id": "15970"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in WINS Could Allow Remote Code Execution", 
+                "id": "Vulnerability in WINS Could Allow Remote Code Execution", 
+                "title": "870763"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/870763", 
+                "id": "870763", 
+                "title": "Vulnerability in WINS Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS04-045", 
+                "id": "MS04-045", 
+                "title": "Vulnerability in WINS Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

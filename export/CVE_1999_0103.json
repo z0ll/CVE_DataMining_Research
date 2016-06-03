@@ -1,0 +1,135 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0103", 
+                "published": "1996-02-08T00:00:00.000-05:00", 
+                "id": "CVE-1999-0103", 
+                "modified": "2008-09-09T08:33:45.603-04:00", 
+                "summary": "Echo and chargen, or other combinations of UDP services, can be used in tandem to flood the server, a.k.a. UDP bomb or UDP packet storm."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": []
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.13723", 
+                "id": 13723
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": []
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-dos", 
+                "id": "sid:271", 
+                "signature": "SERVER-OTHER UDP echo+chargen bomb"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "chargen_probe.rb", 
+                "file": "metasploit-framework/modules/auxiliary/scanner/chargen/chargen_probe.rb", 
+                "title": "Chargen Probe Utility"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0103"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Chargen", 
+                "file": "chargen.nasl", 
+                "family": "Useless services", 
+                "id": "10043"
+            }, 
+            {
+                "name": "Quote of the day", 
+                "file": "quote.nasl", 
+                "family": "Useless services", 
+                "id": "10198"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Chargen UDP Service Remote DoS", 
+                "file": "chargen.nasl", 
+                "family": "Denial of Service", 
+                "id": "10043"
+            }, 
+            {
+                "name": "Echo Service Detection", 
+                "file": "echo.nasl", 
+                "family": "Service detection", 
+                "id": "10061"
+            }, 
+            {
+                "name": "Quote of the Day (QOTD) Service Detection", 
+                "file": "quote.nasl", 
+                "family": "Service detection", 
+                "id": "10198"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

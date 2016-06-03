@@ -1,0 +1,313 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-0403", 
+                "published": "2005-09-01T18:03:00.000-04:00", 
+                "id": "CVE-2005-0403", 
+                "modified": "2010-08-21T00:25:59.233-04:00", 
+                "summary": "init_dev in tty_io.c in the Red Hat backport of NPTL to Red Hat Enterprise Linux 3 does not properly clear controlling tty s in multi-threaded applications, which allows local users to cause a denial of service (crash) and possibly gain tty access via unknown attack vectors that trigger an access of a pointer to a freed structure."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:3.0::enterprise_server"
+            }, 
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:3.0::workstation"
+            }, 
+            {
+                "id": "cpe:/o:redhat:enterprise_linux_desktop:3.0"
+            }, 
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:3.0::advanced_servers"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.26189", 
+                "id": 26189
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2005-293.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=144059", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-0403"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:9435", 
+                "title": "init_dev in tty_io.c in the Red Hat backport of NPTL to Red Hat Enterprise Linux 3 does not properly clear controlling tty's in multi-threaded applications, which allows local users to cause a denial of service (crash) and possibly gain tty access via unknown attack vectors that trigger an access of a pointer to a freed structure.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:9435"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "CentOS 3 : kernel (CESA-2005:293)", 
+                "file": "centos_RHSA-2005-293.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "21923"
+            }, 
+            {
+                "name": "RHEL 3 : kernel (RHSA-2005:293)", 
+                "file": "redhat-RHSA-2005-293.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "18128"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20050293", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2005-293.html", 
+                    "id": "RHSA-2005:293", 
+                    "title": "RHSA-2005:293: kernel security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=121032", 
+                    "title": "CAN-2004-0177 ext3 infoleak", 
+                    "id": "121032", 
+                    "issue date": "2005-04-22", 
+                    "associated redhat": "RHSA-2005:293"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=126407", 
+                    "title": "CAN-2004-0075 Vicam USB user/kernel copying", 
+                    "id": "126407", 
+                    "issue date": "2005-04-22", 
+                    "associated redhat": "RHSA-2005:293"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=130774", 
+                    "title": "oops in drivers/char/tty_io.c:init_dev()", 
+                    "id": "130774", 
+                    "issue date": "2005-04-22", 
+                    "associated redhat": "RHSA-2005:293"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=131674", 
+                    "title": "CAN-2004-0814 potential race condition in RHEL 2.1/3 tty layer", 
+                    "id": "131674", 
+                    "issue date": "2005-04-22", 
+                    "associated redhat": "RHSA-2005:293"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=133108", 
+                    "title": "CAN-2004-0814 input/serio local DOS", 
+                    "id": "133108", 
+                    "issue date": "2005-04-22", 
+                    "associated redhat": "RHSA-2005:293"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=133113", 
+                    "title": "CAN-2004-1058 /proc/<PID>/cmdline information disclosure", 
+                    "id": "133113", 
+                    "issue date": "2005-04-22", 
+                    "associated redhat": "RHSA-2005:293"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=144059", 
+                    "title": "CAN-2005-0403 panic in tty init_dev", 
+                    "id": "144059", 
+                    "issue date": "2005-04-22", 
+                    "associated redhat": "RHSA-2005:293"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=144530", 
+                    "title": "random poolsize sysctl handler integer overflow", 
+                    "id": "144530", 
+                    "issue date": "2005-04-22", 
+                    "associated redhat": "RHSA-2005:293"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=147969", 
+                    "title": "msync(..., ..., MS_SYNC) returning before data written to disk", 
+                    "id": "147969", 
+                    "issue date": "2005-04-22", 
+                    "associated redhat": "RHSA-2005:293"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=148855", 
+                    "title": "CAN-2005-0204 OUTS instruction does not cause SIGSEGV for all ports", 
+                    "id": "148855", 
+                    "issue date": "2005-04-22", 
+                    "associated redhat": "RHSA-2005:293"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=148869", 
+                    "title": "CAN-2005-0135 ia64 local DoS", 
+                    "id": "148869", 
+                    "issue date": "2005-04-22", 
+                    "associated redhat": "RHSA-2005:293"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=150334", 
+                    "title": "Kernel panic:  Code: Bad EIP value", 
+                    "id": "150334", 
+                    "issue date": "2005-04-22", 
+                    "associated redhat": "RHSA-2005:293"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=151086", 
+                    "title": "kernel locks up tty/psuedo-tty access", 
+                    "id": "151086", 
+                    "issue date": "2005-04-22", 
+                    "associated redhat": "RHSA-2005:293"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=151241", 
+                    "title": "CAN-2005-0384 pppd remote DoS", 
+                    "id": "151241", 
+                    "issue date": "2005-04-22", 
+                    "associated redhat": "RHSA-2005:293"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=151805", 
+                    "title": "CAN-2005-0449 Possible remote Oops/firewall bypass - kABI breaker", 
+                    "id": "151805", 
+                    "issue date": "2005-04-22", 
+                    "associated redhat": "RHSA-2005:293"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=152178", 
+                    "title": "CAN-2005-0750 bluetooth security flaw", 
+                    "id": "152178", 
+                    "issue date": "2005-04-22", 
+                    "associated redhat": "RHSA-2005:293"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=152411", 
+                    "title": "CAN-2005-0749 load_elf_library possible DoS", 
+                    "id": "152411", 
+                    "issue date": "2005-04-22", 
+                    "associated redhat": "RHSA-2005:293"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=152552", 
+                    "title": "CAN-2004-1073 looks unfixed in RHEL3", 
+                    "id": "152552", 
+                    "issue date": "2005-04-22", 
+                    "associated redhat": "RHSA-2005:293"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=155234", 
+                    "title": "CAN-2005-0137 ia64 syscall_table DoS", 
+                    "id": "155234", 
+                    "issue date": "2005-04-22", 
+                    "associated redhat": "RHSA-2005:293"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

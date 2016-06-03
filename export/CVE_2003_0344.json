@@ -1,0 +1,188 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0344", 
+                "published": "2003-06-16T00:00:00.000-04:00", 
+                "id": "CVE-2003-0344", 
+                "modified": "2008-09-10T15:18:41.103-04:00", 
+                "summary": "Buffer overflow in Microsoft Internet Explorer 5.01, 5.5, and 6.0 allows remote attackers to execute arbitrary code via / (slash) characters in the Type property of an Object tag in a web page."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:ie:6.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:5.01"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:5.5"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:6.0::windows_server_2003"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.20555", 
+                "id": 20555
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/2967", 
+                "id": 2967
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/679556", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms03-020.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.eeye.com/html/Research/Advisories/AD20030604.html", 
+                    "vendor": "EEYE"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/8943", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lists.grok.org.uk/pipermail/full-disclosure/2003-July/006401.html", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=105476381609135&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/679556", 
+                "id": "VU#679556"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2103149", 
+                "signature": "GPL WEB_CLIENT object type overflow attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-user", 
+                "id": "sid:3149", 
+                "signature": "BROWSER-IE Microsoft Internet Explorer 5/6 object type overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms03_020_ie_objecttype.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/browser/ms03_020_ie_objecttype.rb", 
+                "title": "MS03-020 Microsoft Internet Explorer Object Type"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2003-0344"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:922", 
+                "title": "IE Slash Characters in Type Property Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:922"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "IE 5.01 5.5 6.0 Cumulative patch (890923)", 
+                "file": "smb_nt_ms02-005.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "10861"
+            }
+        ], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Cumulative Patch for Internet Explorer", 
+                "id": "Cumulative Patch for Internet Explorer", 
+                "title": "818529"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/818529", 
+                "id": "818529", 
+                "title": "Cumulative Patch for Internet Explorer"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS03-020", 
+                "id": "MS03-020", 
+                "title": "Cumulative Patch for Internet Explorer"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,148 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0407", 
+                "published": "1999-02-09T00:00:00.000-05:00", 
+                "id": "CVE-1999-0407", 
+                "modified": "2008-09-05T16:17:12.187-04:00", 
+                "summary": "By default, IIS 4.0 has a virtual directory /IISADMPWD which contains files that can be used as proxies for brute force password attacks, or to identify valid users on the system."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:4.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14492", 
+                "id": 14492
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=92000623021036&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=91983486431506&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2101487", 
+                "signature": "GPL EXPLOIT /iisadmpwd/aexp2.htr access"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2101018", 
+                "signature": "GPL EXPLOIT iisadmpwd attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:991", 
+                "signature": "SERVER-IIS achg.htr access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:996", 
+                "signature": "SERVER-IIS anot.htr access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1018", 
+                "signature": "SERVER-IIS iisadmpwd attempt"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1126", 
+                "signature": "SERVER-WEBAPP AuthChangeUrl access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1487", 
+                "signature": "SERVER-IIS /iisadmpwd/aexp2.htr access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0407"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Microsoft IIS /iisadmpwd/aexp2.htr Password Policy Bypass", 
+                "file": "iis_authentification_manager.nasl", 
+                "family": "Web Servers", 
+                "id": "10371"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

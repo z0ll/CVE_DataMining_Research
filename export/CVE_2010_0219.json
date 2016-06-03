@@ -1,0 +1,230 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0219", 
+                "published": "2010-10-18T13:00:03.457-04:00", 
+                "id": "CVE-2010-0219", 
+                "modified": "2013-05-09T23:14:21.447-04:00", 
+                "summary": "Apache Axis2, as used in dswsbobje.war in SAP BusinessObjects Enterprise XI 3.2, CA ARCserve D2D r15, and other products, has a default password of axis2 for the admin account, which makes it easier for remote attackers to execute arbitrary code by uploading a crafted web service."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/255.html", 
+                "id": "CWE-255", 
+                "title": "Credentials Management"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:apache:axis2:1.3"
+            }, 
+            {
+                "id": "cpe:/a:apache:axis2:1.4"
+            }, 
+            {
+                "id": "cpe:/a:sap:businessobjects:3.2::enterprise_xi"
+            }, 
+            {
+                "id": "cpe:/a:apache:axis2:1.5.2"
+            }, 
+            {
+                "id": "cpe:/a:apache:axis2:1.5.1"
+            }, 
+            {
+                "id": "cpe:/a:apache:axis2:1.6"
+            }, 
+            {
+                "id": "cpe:/a:apache:axis2:1.4.1"
+            }, 
+            {
+                "id": "cpe:/a:apache:axis2:1.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.55095", 
+                "id": 55095
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0026075", 
+                "id": "2011-B-0020", 
+                "title": "Computer Associates ARCserve Password Security Bypass Vulnerability"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/70233", 
+                "id": 70233
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/989719", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "https://service.sap.com/sap/support/notes/1432881", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "https://kb.juniper.net/KB27373", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/62523", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2010/2673", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1024929", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/514284/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.rapid7.com/security-center/advisories/R7-0037.jsp", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/70233", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/15869", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://spl0it.org/files/talks/source_barcelona10/Hacking%20SAP%20BusinessObjects.pdf", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/42763", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/41799", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://retrogod.altervista.org/9sg_ca_d2d.html", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/989719", 
+                "id": "VU#989719"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "axis_login.rb", 
+                "file": "metasploit-framework/modules/auxiliary/scanner/http/axis_login.rb", 
+                "title": "Apache Axis2 Brute Force Utility"
+            }, 
+            {
+                "id": "axis2_deployer.rb", 
+                "file": "metasploit-framework/modules/exploits/multi/http/axis2_deployer.rb", 
+                "title": "Axis2 / SAP BusinessObjects Authenticated Code Execution (via SOAP)"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/15869", 
+                "id": 15869, 
+                "file": "http://www.exploit-db.com/download/15869"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/brightstor_arcserve_d2d_axis2_pass", 
+                "id": "exploit_info/brightstor_arcserve_d2d_axis2_pass", 
+                "title": "CA ARCserve D2D Axis2 default password"
+            }, 
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/hp_ucmdb_svr_axis2_defaultcred", 
+                "id": "exploit_info/hp_ucmdb_svr_axis2_defaultcred", 
+                "title": "HP Universal CMDB Server Axis2 default password"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-0219"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Apache Axis2 Default Credentials", 
+                "file": "apache_axis2_default_creds.nasl", 
+                "family": "CGI abuses", 
+                "id": "46740"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

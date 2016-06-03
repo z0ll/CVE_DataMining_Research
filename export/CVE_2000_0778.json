@@ -1,0 +1,185 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0778", 
+                "published": "2000-10-20T00:00:00.000-04:00", 
+                "id": "CVE-2000-0778", 
+                "modified": "2013-08-03T00:14:09.870-04:00", 
+                "summary": "IIS 5.0 allows remote attackers to obtain source code for .ASP files and other scripts via an HTTP GET request with a \"Translate: f\" header, aka the \"Specialized Header\" vulnerability."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:5.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.15920", 
+                "id": 15920
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/1578", 
+                "id": 1578
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/templates/archive.pike?list=1&msg=080D5336D882D211B56B0060080F2CD696A7C9@beta.mia.cz", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/1578", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.ntbugtraq.com/default.asp?pid=36&sid=1&A2=ind0008&L=ntbugtraq&F=&S=&P=5212", 
+                    "vendor": "NTBUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/MS00-058.asp", 
+                    "vendor": "MS"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2101016", 
+                "signature": "GPL WEB_SERVER global.asa access"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1016", 
+                "signature": "SERVER-IIS global.asa access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1042", 
+                "signature": "SERVER-IIS view source via translate header"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2000-0778"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:927", 
+                "title": "IIS5.0 Specialized Header Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:927"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft MS00-058 security check", 
+                "file": "remote-MS00-058.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "101003"
+            }, 
+            {
+                "name": "Microsoft MS00-058 security check", 
+                "file": "remote-MS00-058.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "80007"
+            }, 
+            {
+                "name": "ASP/ASA source using Microsoft Translate f: bug", 
+                "file": "translate_f.nasl", 
+                "family": "Web application abuses", 
+                "id": "10491"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Microsoft IIS Translate f: ASP/ASA Source Disclosure", 
+                "file": "translate_f.nasl", 
+                "family": "CGI abuses", 
+                "id": "10491"
+            }, 
+            {
+                "name": "Microsoft IIS Translate f: ASP/ASA Source Disclosure (IIS 5.1)", 
+                "file": "translate_f_51.nasl", 
+                "family": "CGI abuses", 
+                "id": "19596"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/256888", 
+                "id": "256888", 
+                "title": "Patch Available for 'Specialized Header' Vulnerability"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS00-058", 
+                "id": "MS00-058", 
+                "title": "Patch Available for 'Specialized Header' Vulnerability"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

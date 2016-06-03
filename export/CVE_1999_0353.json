@@ -1,0 +1,161 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0353", 
+                "published": "1999-02-10T00:00:00.000-05:00", 
+                "id": "CVE-1999-0353", 
+                "modified": "2013-09-03T00:01:48.897-04:00", 
+                "summary": "rpc.pcnfsd in HP gives remote root access by changing the permissions on the main printer spool directory."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:hp:hp-ux:10.10"
+            }, 
+            {
+                "id": "cpe:/o:hp:hp-ux:11.00"
+            }, 
+            {
+                "id": "cpe:/o:hp:hp-ux:10.01"
+            }, 
+            {
+                "id": "cpe:/o:hp:hp-ux:10.20"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14493", 
+                "id": 14493
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www1.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBUX9902-091", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/j-026.shtml", 
+                    "vendor": "CIAC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:581", 
+                "signature": "PROTOCOL-RPC portmap pcnfsd request UDP"
+            }, 
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:1268", 
+                "signature": "PROTOCOL-RPC portmap pcnfsd request TCP"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0353"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:5294", 
+                "title": "rpc.pcnfsd has an error in its use of the spool directory", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:5294"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "HP-UX PHCO_14625 : s700_800 11.00 bdf(1M) patch to skip autofs file systems", 
+                "file": "hpux_PHCO_14625.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "17370"
+            }, 
+            {
+                "name": "HP-UX PHCO_16629 : s700_800 11.00 libc cumulative patch", 
+                "file": "hpux_PHCO_16629.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "17371"
+            }, 
+            {
+                "name": "HP-UX PHKL_15689 : s700_800 11.0 AutoFS support patch", 
+                "file": "hpux_PHKL_15689.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "17391"
+            }, 
+            {
+                "name": "HP-UX PHNE_16470 : s700_800 11.0 ONC cumulative patch", 
+                "file": "hpux_PHNE_16470.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "16628"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [
+            {
+                "url": "http://www1.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBUX9902-091", 
+                "id": "HPSBUX9902-091"
+            }
+        ], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

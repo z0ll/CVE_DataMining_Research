@@ -1,0 +1,286 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-4453", 
+                "published": "2012-10-09T19:55:05.313-04:00", 
+                "id": "CVE-2012-4453", 
+                "modified": "2014-01-07T23:31:54.057-05:00", 
+                "summary": "dracut.sh in dracut, as used in Red Hat Enterprise Linux 6, Fedora 16 and 17, and possibly other products, creates initramfs images with world-readable permissions, which might allow local users to obtain sensitive information."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:fedoraproject:fedora:17"
+            }, 
+            {
+                "id": "cpe:/o:fedoraproject:fedora:16"
+            }, 
+            {
+                "id": "cpe:/a:fedoraproject:dracut"
+            }, 
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:6"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.62660", 
+                "id": 62660
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/55713", 
+                "id": 55713
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://git.kernel.org/?p=boot/dracut/dracut.git;a=commit;h=e1b48995c26c4f06d1a71", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=859448", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/79258", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/55713", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/09/27/6", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/09/27/4", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/09/27/3", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2013-1674.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "2.1", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-4453"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26272", 
+                "title": "RHSA-2013:1674: dracut security, bug fix, and enhancement update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26272"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27440", 
+                "title": "ELSA-2013-1674 -- dracut security, bug fix, and enhancement update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27440"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for dracut FEDORA-2012-14953", 
+                "file": "gb_fedora_2012_14953_dracut_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864774"
+            }, 
+            {
+                "name": "Fedora Update for dracut FEDORA-2012-14959", 
+                "file": "gb_fedora_2012_14959_dracut_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864777"
+            }, 
+            {
+                "name": "RedHat Update for dracut RHSA-2013:1674-02", 
+                "file": "gb_RHSA-2013_1674-02_dracut.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "871086"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : dracut (ALAS-2013-257)", 
+                "file": "ala_ALAS-2013-257.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "71397"
+            }, 
+            {
+                "name": "Fedora 17 : dracut-018-105.git20120927.fc17 (2012-14953)", 
+                "file": "fedora_2012-14953.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "62525"
+            }, 
+            {
+                "name": "Fedora 16 : dracut-018-60.git20120927.fc16 (2012-14959)", 
+                "file": "fedora_2012-14959.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "62526"
+            }, 
+            {
+                "name": "Fedora 18 : dracut-024-5.git20121019.fc18 (2012-16448)", 
+                "file": "fedora_2012-16448.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "62698"
+            }, 
+            {
+                "name": "Oracle Linux 6 : dracut (ELSA-2013-1674)", 
+                "file": "oraclelinux_ELSA-2013-1674.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "71111"
+            }, 
+            {
+                "name": "RHEL 6 : dracut (RHSA-2013:1674)", 
+                "file": "redhat-RHSA-2013-1674.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "71016"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : dracut on SL6.x (noarch)", 
+                "file": "sl_20131121_dracut_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "71297"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20131674", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2013-1674.html", 
+                    "id": "RHSA-2013:1674", 
+                    "title": "RHSA-2013:1674: dracut security, bug fix, and enhancement update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=610462", 
+                    "title": "mkinitrd has no man page", 
+                    "id": "610462", 
+                    "issue date": "2013-11-21", 
+                    "associated redhat": "RHSA-2013:1674"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=720684", 
+                    "title": "Booting with snapshot of / requires non user-friendly config", 
+                    "id": "720684", 
+                    "issue date": "2013-11-21", 
+                    "associated redhat": "RHSA-2013:1674"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=859448", 
+                    "title": "CVE-2012-4453 dracut: Creates initramfs images with world-readable permissions (information disclosure)", 
+                    "id": "859448", 
+                    "issue date": "2013-11-21", 
+                    "associated redhat": "RHSA-2013:1674"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=912299", 
+                    "title": "kernel installation fails if GREP_OPTIONS is set", 
+                    "id": "912299", 
+                    "issue date": "2013-11-21", 
+                    "associated redhat": "RHSA-2013:1674"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1012626", 
+                    "title": "[FIPS140] dracut-fip updates needed for certification", 
+                    "id": "1012626", 
+                    "issue date": "2013-11-21", 
+                    "associated redhat": "RHSA-2013:1674"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1019104", 
+                    "title": "Interface renaming via ifname does not work for RHEL-6.5", 
+                    "id": "1019104", 
+                    "issue date": "2013-11-21", 
+                    "associated redhat": "RHSA-2013:1674"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

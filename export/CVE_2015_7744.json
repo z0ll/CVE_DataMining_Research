@@ -1,0 +1,171 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-7744", 
+                "published": "2016-01-22T10:59:04.570-05:00", 
+                "id": "CVE-2015-7744", 
+                "modified": "2016-03-23T19:30:39.960-04:00", 
+                "summary": "wolfSSL (formerly CyaSSL) before 3.6.8 does not properly handle faults associated with the Chinese Remainder Theorem (CRT) process when allowing ephemeral key exchange without low memory optimizations on a server, which makes it easier for remote attackers to obtain private RSA keys by capturing TLS handshakes, aka a Lenstra attack."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/19.html", 
+                "id": "CWE-19", 
+                "title": "Data Handling"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:wolfssl:wolfssl:3.6.6"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.80603", 
+                "id": 80603
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://wolfssl.com/wolfSSL/Blog/Entries/2015/9/17_Two_Vulnerabilities_Recently_Found%2C_An_Attack_on_RSA_using_CRT_and_DoS_Vulnerability_With_DTLS.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://securityblog.redhat.com/2015/09/02/factoring-rsa-keys-with-tls-perfect-forward-secrecy/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "https://people.redhat.com/~fweimer/rsa-crt-leaks.pdf", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.oracle.com/technetwork/topics/security/cpujan2016-2367955.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://wolfssl.com/wolfSSL/Docs-wolfssl-changelog.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "4.9", 
+                    "base": "2.6", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-7744"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : mysql56 (ALAS-2016-684)", 
+                "file": "ala_ALAS-2016-684.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "90366"
+            }, 
+            {
+                "name": "MySQL 5.5.x < 5.5.46 Multiple Vulnerabilities", 
+                "file": "mysql_5_5_46.nasl", 
+                "family": "Databases", 
+                "id": "86546"
+            }, 
+            {
+                "name": "Oracle MySQL 5.5.x < 5.5.46 Multiple Vulnerabilities (October 2015 CPU) (January 2016 CPU)", 
+                "file": "mysql_5_5_46_rpm.nasl", 
+                "family": "Databases", 
+                "id": "86658"
+            }, 
+            {
+                "name": "MySQL 5.6.x < 5.6.27 Multiple Vulnerabilities", 
+                "file": "mysql_5_6_27.nasl", 
+                "family": "Databases", 
+                "id": "86547"
+            }, 
+            {
+                "name": "Oracle MySQL 5.6.x < 5.6.27 Multiple Vulnerabilities (October 2015 CPU) (January 2016 CPU)", 
+                "file": "mysql_5_6_27_rpm.nasl", 
+                "family": "Databases", 
+                "id": "86661"
+            }, 
+            {
+                "name": "openSUSE Security Update : MySQL (openSUSE-2016-165)", 
+                "file": "openSUSE-2016-165.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88616"
+            }, 
+            {
+                "name": "openSUSE Security Update : MySQL (openSUSE-2016-169)", 
+                "file": "openSUSE-2016-169.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88633"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : mysql (SUSE-SU-2016:0348-1)", 
+                "file": "suse_SU-2016-0348-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88623"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

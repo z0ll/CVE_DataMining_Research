@@ -1,0 +1,259 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2179", 
+                "published": "2012-06-22T06:24:07.427-04:00", 
+                "id": "CVE-2012-2179", 
+                "modified": "2013-03-21T23:10:11.183-04:00", 
+                "summary": "libodm.a in IBM AIX 5.3, 6.1, and 7.1 allows local users to overwrite arbitrary files via a symlink attack on a temporary file."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:ibm:aix:5.3"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:7.1"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:6.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.61082", 
+                "id": 61082
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://aix.software.ibm.com/aix/efixes/security/libodm_advisory.asc", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/75510", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1027193", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IV22019", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IV21383", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IV21382", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IV21381", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IV21379", 
+                    "vendor": "AIXAPAR"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "6.9", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/33725", 
+                "id": 33725, 
+                "file": "platforms/aix/local/33725.txt"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-2179"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20367", 
+                "title": "Arbitary file overwrite symlink in libodm", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:20367"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "AIX 6.1 TL 6 : libodm (IV21379)", 
+                "file": "aix_IV21379.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "64305"
+            }, 
+            {
+                "name": "AIX 6.1 TL 7 : libodm (IV21381)", 
+                "file": "aix_IV21381.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "64306"
+            }, 
+            {
+                "name": "AIX 7.1 TL 0 : libodm (IV21382)", 
+                "file": "aix_IV21382.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "64307"
+            }, 
+            {
+                "name": "AIX 7.1 TL 1 : libodm (IV21383)", 
+                "file": "aix_IV21383.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "64308"
+            }, 
+            {
+                "name": "AIX 7.1 TL 1 : bos.rte.odm (U848045)", 
+                "file": "aix_U848045.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "65508"
+            }, 
+            {
+                "name": "AIX 6.1 TL 7 : bos.rte.odm (U848613)", 
+                "file": "aix_U848613.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "65510"
+            }, 
+            {
+                "name": "AIX 6.1 TL 6 : bos.rte.odm (U850143)", 
+                "file": "aix_U850143.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "65523"
+            }, 
+            {
+                "name": "AIX 7.1 : bos.rte.odm (U850723)", 
+                "file": "aix_U850723.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "65524"
+            }, 
+            {
+                "name": "AIX 7.1 TL 1 : bos.rte.odm (U860787)", 
+                "file": "aix_U860787.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "77380"
+            }, 
+            {
+                "name": "AIX 7.1 TL 3 : bos.rte.odm (U860798)", 
+                "file": "aix_U860798.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "74275"
+            }, 
+            {
+                "name": "AIX 6.1 TL 9 : bos.rte.odm (U861946)", 
+                "file": "aix_U861946.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "74276"
+            }, 
+            {
+                "name": "AIX 7.1 TL 2 : bos.rte.odm (U865302)", 
+                "file": "aix_U865302.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "77383"
+            }, 
+            {
+                "name": "AIX 6.1 TL 8 : bos.rte.odm (U865667)", 
+                "file": "aix_U865667.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "77416"
+            }, 
+            {
+                "name": "AIX 6.1 TL 7 : bos.rte.odm (U865807)", 
+                "file": "aix_U865807.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "77417"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IV21379", 
+                "id": "IV21379"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IV21381", 
+                "id": "IV21381"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IV21382", 
+                "id": "IV21382"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IV21383", 
+                "id": "IV21383"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IV22019", 
+                "id": "IV22019"
+            }
+        ], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

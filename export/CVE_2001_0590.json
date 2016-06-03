@@ -1,0 +1,141 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-0590", 
+                "published": "2001-08-02T00:00:00.000-04:00", 
+                "id": "CVE-2001-0590", 
+                "modified": "2008-09-05T16:24:28.867-04:00", 
+                "summary": "Apache Software Foundation Tomcat Servlet prior to 3.2.2 allows a remote attacker to read the source code to arbitrary  jsp  files via a malformed URL request which does not end with an HTTP protocol specification (i.e. HTTP/1.0)."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:apache:tomcat:3.2.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.17106", 
+                "id": 17106
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/5580", 
+                "id": 5580
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2001-04/0031.html", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/static/6971.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www1.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBTL0112-004", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/5580", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2101056", 
+                "signature": "GPL WEB_SERVER Tomcat view source attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1056", 
+                "signature": "SERVER-APACHE Apache Tomcat view source attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-0590"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Apache Tomcat 3.x < 3.2.2 Malformed URL JSP Source Disclosure", 
+                "file": "tomcat_numguess_jsp_source_disclosure.nasl", 
+                "family": "Web Servers", 
+                "id": "50347"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [
+            {
+                "url": "http://www1.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBTL0112-004", 
+                "id": "HPSBTL0112-004"
+            }
+        ], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

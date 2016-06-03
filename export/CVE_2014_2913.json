@@ -1,0 +1,214 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-2913", 
+                "published": "2014-05-07T06:55:06.977-04:00", 
+                "id": "CVE-2014-2913", 
+                "modified": "2014-06-05T00:31:34.750-04:00", 
+                "summary": "** DISPUTED ** Incomplete blacklist vulnerability in nrpe.c in Nagios Remote Plugin Executor (NRPE) 2.15 and earlier allows remote attackers to execute arbitrary commands via a newline character in the -a option to libexec/check_nrpe.  NOTE: this issue is disputed by multiple parties. It has been reported that the vendor allows newlines as \"expected behavior.\" Also, this issue can only occur when the administrator enables the \"dont_blame_nrpe\" option in nrpe.conf despite the \"HIGH security risk\" warning within the comments."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:novell:opensuse:11.4"
+            }, 
+            {
+                "id": "cpe:/o:novell:opensuse:12.3"
+            }, 
+            {
+                "id": "cpe:/a:nagios:remote_plugin_executor:2.15"
+            }, 
+            {
+                "id": "cpe:/o:novell:opensuse:13.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.69598", 
+                "id": 69598
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://seclists.org/oss-sec/2014/q2/155", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://seclists.org/oss-sec/2014/q2/154", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://seclists.org/fulldisclosure/2014/Apr/242", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://seclists.org/fulldisclosure/2014/Apr/240", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2014-05/msg00014.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2014-05/msg00005.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2014-05/msg00011.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/34461", 
+                "id": 34461, 
+                "file": "platforms/multiple/remote/34461.py"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-2913"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:25346", 
+                "title": "SUSE-SU-2014:0682-1 -- Security update for nagios-nrpe, nagios-nrpe-debuginfo, nagios-nrpe-debugsource, nagios-nrpe-doc, nagios-plugins-nrpe", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:25346"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : nrpe (ALAS-2014-364)", 
+                "file": "ala_ALAS-2014-364.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "78307"
+            }, 
+            {
+                "name": "Fedora 19 : nrpe-2.15-2.fc19 (2014-5896)", 
+                "file": "fedora_2014-5896.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "79793"
+            }, 
+            {
+                "name": "Fedora 20 : nrpe-2.15-2.fc20 (2014-5897)", 
+                "file": "fedora_2014-5897.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "79346"
+            }, 
+            {
+                "name": "Fedora 23 : nrpe-2.15-7.fc23 (2015-15398)", 
+                "file": "fedora_2015-15398.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "86042"
+            }, 
+            {
+                "name": "GLSA-201408-18 : NRPE: Multiple Vulnerabilities", 
+                "file": "gentoo_GLSA-201408-18.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "77462"
+            }, 
+            {
+                "name": "Nagios NRPE Command Argument Processing Enabled", 
+                "file": "nagios_nrpe_command_argument_processing.nasl", 
+                "family": "Misc.", 
+                "id": "73757"
+            }, 
+            {
+                "name": "openSUSE Security Update : nrpe (openSUSE-SU-2014:0594-1)", 
+                "file": "openSUSE-2014-335.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75345"
+            }, 
+            {
+                "name": "SuSE 11.3 Security Update : nagios-nrpe, nagios-nrpe-debuginfo, nagios-nrpe-debugsource, etc (SAT Patch Number 9204)", 
+                "file": "suse_11_nagios-nrpe-140506.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74116"
+            }, 
+            {
+                "name": "SuSE 11.3 Security Update : nagios-nrpe, nagios-nrpe-debuginfo, nagios-nrpe-debugsource, etc (SAT Patch Number 9204)", 
+                "file": "suse_11_nagios-nrpe-140507.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74117"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-2913.html", 
+                "id": "SUSE-SU-2014:0682"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-2913.html", 
+                "id": "openSUSE-SU-2014:0594"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-2913.html", 
+                "id": "openSUSE-SU-2014:0603"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

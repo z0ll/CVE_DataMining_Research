@@ -1,0 +1,156 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1195", 
+                "published": "2012-02-17T19:55:02.543-05:00", 
+                "id": "CVE-2012-1195", 
+                "modified": "2012-02-29T00:00:00.000-05:00", 
+                "summary": "Unrestricted file upload vulnerability in andesk/managementsuite/core/core.anonymous/ServerSetup.asmx in the ServerSetup web service in Lenovo ThinkManagement Console 9.0.3 allows remote attackers to execute arbitrary code by uploading a file with an executable extension via a PutUpdateFileCore command in a RunAMTCommand SOAP request, then accessing the file via a direct request to the file in the web root."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:landesk:lenovo_thinkmanagement_console:9.0.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.60252", 
+                "id": 60252
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/52023", 
+                "id": 52023
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/79276", 
+                "id": 79276
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/73207", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1026693", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/52023", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/47666", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/79276", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "landesk_thinkmanagement_upload_asp.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/http/landesk_thinkmanagement_upload_asp.rb", 
+                "title": "LANDesk Lenovo ThinkManagement Console Remote Command Execution"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [
+            {
+                "url": "http://www.d2sec.com/exploits/lenovo_thinkmanagement_console_9.0.3_file_upload.html", 
+                "title": "Lenovo ThinkManagement Console 9.0.3 File Upload"
+            }
+        ], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/landesk_thinkmanagement_serversetup_traversal", 
+                "id": "exploit_info/landesk_thinkmanagement_serversetup_traversal", 
+                "title": "LANDesk ThinkManagement Suite ServerSetup.asmx Directory Traversal"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-1195"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Lenovo ThinkManagement Console RunAMTCommand Operation -PutUpdateFileCore Command Parsing Arbitrary File Upload", 
+                "file": "lenovo_thinkmanagement_console_remote_code.nasl", 
+                "family": "CGI abuses", 
+                "id": "58654"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

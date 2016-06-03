@@ -1,0 +1,231 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3364", 
+                "published": "2011-11-04T17:55:03.863-04:00", 
+                "id": "CVE-2011-3364", 
+                "modified": "2012-01-18T22:59:28.083-05:00", 
+                "summary": "Incomplete blacklist vulnerability in the svEscape function in settings/plugins/ifcfg-rh/shvar.c in the ifcfg-rh plug-in for GNOME NetworkManager 0.9.1, 0.9.0, 0.8.1, and possibly other versions, when PolicyKit is configured to allow users to create new connections, allows local users to execute arbitrary commands via a newline character in the name for a new network connection, which is not properly handled when writing to the ifcfg file."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:gnome:ifcfg-rh_plug-in"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.59380", 
+                "id": 59380
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=737338", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://xorl.wordpress.com/2011/10/09/cve-2011-3364-gnome-networkmanager-local-privilege-escalation/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2011-1338.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2011:171", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2011-September/066828.html", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "6.9", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-3364"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21932", 
+                "title": "RHSA-2011:1338: NetworkManager security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21932"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23284", 
+                "title": "ELSA-2011:1338: NetworkManager security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23284"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27819", 
+                "title": "DEPRECATED: ELSA-2011-1338 -- NetworkManager security update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27819"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for NetworkManager FEDORA-2011-13388", 
+                "file": "gb_fedora_2011_13388_NetworkManager_fc15.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863548"
+            }, 
+            {
+                "name": "Fedora Update for NetworkManager FEDORA-2011-13401", 
+                "file": "gb_fedora_2011_13401_NetworkManager_fc14.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863569"
+            }, 
+            {
+                "name": "Fedora Update for NetworkManager FEDORA-2011-13425", 
+                "file": "gb_fedora_2011_13425_NetworkManager_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863941"
+            }, 
+            {
+                "name": "RedHat Update for NetworkManager RHSA-2011:1338-01", 
+                "file": "gb_RHSA-2011_1338-01_NetworkManager.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870686"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 15 : NetworkManager-0.9.1.90-1.git20110927.fc15 (2011-13388)", 
+                "file": "fedora_2011-13388.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "56341"
+            }, 
+            {
+                "name": "Fedora 14 : NetworkManager-0.8.5.92-1.git20110927.fc14 (2011-13401)", 
+                "file": "fedora_2011-13401.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "56419"
+            }, 
+            {
+                "name": "Fedora 16 : NetworkManager-0.9.1.90-3.git20110927.fc16 (2011-13425)", 
+                "file": "fedora_2011-13425.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "56370"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : networkmanager (MDVSA-2011:171)", 
+                "file": "mandriva_MDVSA-2011-171.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "61935"
+            }, 
+            {
+                "name": "Oracle Linux 6 : NetworkManager (ELSA-2011-1338)", 
+                "file": "oraclelinux_ELSA-2011-1338.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68358"
+            }, 
+            {
+                "name": "RHEL 6 : NetworkManager (RHSA-2011:1338)", 
+                "file": "redhat-RHSA-2011-1338.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "56304"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : NetworkManager on SL6.x i386/x86_64", 
+                "file": "sl_20110926_NetworkManager_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "61142"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2011-13425", 
+                "id": "FEDORA-2011-13425"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2011:171", 
+                "id": "MDVSA-2011:171"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20111338", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2011-1338.html", 
+                    "id": "RHSA-2011:1338", 
+                    "title": "RHSA-2011:1338: NetworkManager security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=737338", 
+                    "title": "CVE-2011-3364 NetworkManager: Console user can escalate to root via newlines in ifcfg-rh connection name", 
+                    "id": "737338", 
+                    "issue date": "2011-09-26", 
+                    "associated redhat": "RHSA-2011:1338"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

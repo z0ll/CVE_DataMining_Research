@@ -1,0 +1,194 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-1059", 
+                "published": "2006-03-30T12:06:00.000-05:00", 
+                "id": "CVE-2006-1059", 
+                "modified": "2011-03-07T21:31:53.267-05:00", 
+                "summary": "The winbindd daemon in Samba 3.0.21 to 3.0.21c writes the machine trust account password in cleartext in log files, which allows local users to obtain the password and spoof the server in the domain."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:samba:samba:3.0.21"
+            }, 
+            {
+                "id": "cpe:/a:samba:samba:3.0.21a"
+            }, 
+            {
+                "id": "cpe:/a:samba:samba:3.0.21b"
+            }, 
+            {
+                "id": "cpe:/a:samba:samba:3.0.21c"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.2122", 
+                "id": 2122
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/17314", 
+                "id": 17314
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/24263", 
+                "id": 24263
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/429370/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://us1.samba.org/samba/security/CAN-2006-1059.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/19455", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/25575", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/1179", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.trustix.org/errata/2006/0018", 
+                    "vendor": "TRUSTIX"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/17314", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/archives/fedora-announce-list/2006-March/msg00114.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/24263", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1015850", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/19539", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/19468", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "1.9", 
+                    "base": "1.2", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-1059"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: samba", 
+                "file": "freebsd_samba6.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "56522"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora Core 5 : samba-3.0.22-1.fc5 (2006-259)", 
+                "file": "fedora_2006-259.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "21169"
+            }, 
+            {
+                "name": "FreeBSD : samba -- Exposure of machine account credentials in winbind log files (92fd40eb-c458-11da-9c79-00123ffe8333)", 
+                "file": "freebsd_pkg_92fd40ebc45811da9c7900123ffe8333.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "21476"
+            }, 
+            {
+                "name": "Samba winbindd Debug Log Server Credentials Local Disclosure", 
+                "file": "samba_local_info_disclosure.nasl", 
+                "family": "Misc.", 
+                "id": "24684"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2006-259", 
+                "id": "FEDORA-2006-259"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

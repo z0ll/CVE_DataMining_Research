@@ -1,0 +1,207 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0884", 
+                "published": "2000-12-19T00:00:00.000-05:00", 
+                "id": "CVE-2000-0884", 
+                "modified": "2008-09-10T15:06:04.447-04:00", 
+                "summary": "IIS 4.0 and 5.0 allows remote attackers to read documents outside of the web root, and possibly execute arbitrary commands, via malformed URLs that contain UNICODE encoded characters, aka the \"Web Server Folder Traversal\" vulnerability."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:4.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:5.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.16106", 
+                "id": 16106
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/1806", 
+                "id": 1806
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/436", 
+                "id": 436
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms00-078.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/static/5377.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/1806", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/436", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2101945", 
+                "signature": "GPL WEB_SERVER unicode directory traversal attempt"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2100981", 
+                "signature": "GPL EXPLOIT unicode directory traversal attempt"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2100982", 
+                "signature": "GPL EXPLOIT unicode directory traversal attempt"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2100983", 
+                "signature": "GPL EXPLOIT unicode directory traversal attempt"
+            }, 
+            {
+                "classtype": "bad-unknown", 
+                "id": "sid:2100497", 
+                "signature": "GPL ATTACK_RESPONSE file copied ok"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "bad-unknown", 
+                "id": "sid:494", 
+                "signature": "INDICATOR-COMPROMISE command completed"
+            }, 
+            {
+                "category": "bad-unknown", 
+                "id": "sid:497", 
+                "signature": "INDICATOR-COMPROMISE file copied ok"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/iis_unicode_traversal", 
+                "id": "exploit_info/iis_unicode_traversal", 
+                "title": "IIS Unicode Directory Traversal"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2000-0884"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:44", 
+                "title": "IIS Web Server Folder Traversal", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:44"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "IIS directory traversal", 
+                "file": "iis_dir_traversal.nasl", 
+                "family": "Web Servers", 
+                "id": "10537"
+            }, 
+            {
+                "name": "Microsoft MS00-078 security check", 
+                "file": "remote-MS00-078.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "101014"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Microsoft IIS Unicode Remote Command Execution", 
+                "file": "iis_dir_traversal.nasl", 
+                "family": "Web Servers", 
+                "id": "10537"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/276489", 
+                "id": "276489", 
+                "title": "Patch Available for 'Web Server Folder Traversal' Vulnerability"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS00-078", 
+                "id": "MS00-078", 
+                "title": "Patch Available for 'Web Server Folder Traversal' Vulnerability"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

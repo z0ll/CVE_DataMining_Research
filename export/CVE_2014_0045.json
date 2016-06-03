@@ -1,0 +1,232 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0045", 
+                "published": "2014-02-07T19:55:06.177-05:00", 
+                "id": "CVE-2014-0045", 
+                "modified": "2014-03-05T23:50:19.173-05:00", 
+                "summary": "The needSamples method in AudioOutputSpeech.cpp in the client in Mumble 1.2.4 and the 1.2.3 pre-release snapshots, Mumble for iOS 1.1 through 1.2.2, and MumbleKit before commit fd190328a9b24d37382b269a5674b0c0c7a7e36d does not check the return value of the opus_decode_float function, which allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via a crafted Opus voice packet, which triggers an error in opus_decode_float, a conversion of a negative integer to an unsigned integer, and a heap-based buffer over-read and over-write."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:light_speed_gaming:mumble:1.1:rc1:~~~iphone_os~~"
+            }, 
+            {
+                "id": "cpe:/a:light_speed_gaming:mumblekit:-"
+            }, 
+            {
+                "id": "cpe:/a:light_speed_gaming:mumble:1.2.3:rc3"
+            }, 
+            {
+                "id": "cpe:/a:light_speed_gaming:mumble:1.2.1::~~~iphone_os~~"
+            }, 
+            {
+                "id": "cpe:/a:light_speed_gaming:mumble:1.2.2::~~~iphone_os~~"
+            }, 
+            {
+                "id": "cpe:/a:light_speed_gaming:mumble:1.2.3:rc2"
+            }, 
+            {
+                "id": "cpe:/a:light_speed_gaming:mumble:1.2.3:rc1"
+            }, 
+            {
+                "id": "cpe:/a:light_speed_gaming:mumble:1.2.4"
+            }, 
+            {
+                "id": "cpe:/a:light_speed_gaming:mumble:1.2::~~~iphone_os~~"
+            }, 
+            {
+                "id": "cpe:/a:light_speed_gaming:mumble:1.1::~~~iphone_os~~"
+            }, 
+            {
+                "id": "cpe:/a:light_speed_gaming:mumble:1.1.1::~~~iphone_os~~"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.66350", 
+                "id": 66350
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/102905", 
+                "id": 102905
+            }, 
+            {
+                "url": "http://www.osvdb.org/102958", 
+                "id": 102958
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.debian.org/security/2014/dsa-2854", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://osvdb.org/102958", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/102905", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://mumble.info/security/Mumble-SA-2014-004.txt", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://mumble.info/security/Mumble-SA-2014-002.txt", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2014-02/msg00063.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-0045"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22477", 
+                "title": "DSA-2854-1 mumble - several", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22477"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2854-1 (mumble - several vulnerabilities)", 
+                "file": "deb_2854.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "702854"
+            }, 
+            {
+                "name": "Fedora Update for mumble FEDORA-2014-5767", 
+                "file": "gb_fedora_2014_5767_mumble_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867775"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-2854-1 : mumble - several vulnerabilities", 
+                "file": "debian_DSA-2854.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "72354"
+            }, 
+            {
+                "name": "Fedora 19 : mumble-1.2.5-1.fc19 (2014-5751)", 
+                "file": "fedora_2014-5751.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "73927"
+            }, 
+            {
+                "name": "Fedora 20 : mumble-1.2.5-1.fc20 (2014-5767)", 
+                "file": "fedora_2014-5767.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "73928"
+            }, 
+            {
+                "name": "FreeBSD : mumble -- NULL pointer dereference and heap-based buffer overflow (c2c8c84b-e734-11e3-9a25-5404a6a6412c)", 
+                "file": "freebsd_pkg_c2c8c84be73411e39a255404a6a6412c.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "74240"
+            }, 
+            {
+                "name": "GLSA-201406-06 : Mumble: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201406-06.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "74371"
+            }, 
+            {
+                "name": "openSUSE Security Update : mumble (openSUSE-SU-2014:0271-1)", 
+                "file": "openSUSE-2014-152.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75264"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-0045.html", 
+                "id": "openSUSE-SU-2014:0271"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2854", 
+                "id": "DSA-2854"
+            }
+        ], 
+        "Vmware": []
+    }
+}

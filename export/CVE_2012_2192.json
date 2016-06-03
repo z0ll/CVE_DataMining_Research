@@ -1,0 +1,211 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2192", 
+                "published": "2012-06-20T06:27:28.520-04:00", 
+                "id": "CVE-2012-2192", 
+                "modified": "2013-03-21T23:10:11.987-04:00", 
+                "summary": "The socketpair function in IBM AIX 5.3, 6.1, and 7.1 and VIOS 2.2.1.4-FP-25 SP-02 allows local users to cause a denial of service (system crash) via a crafted application that leverages the presence of a socket on the free list."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:ibm:aix:5.3"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:7.1"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:6.1"
+            }, 
+            {
+                "id": "cpe:/o:ibm:vios:2.2.1.4:fp-25_sp-02"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.5488", 
+                "id": 5488
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/53567", 
+                "id": 53567
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/76032", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1027126", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/53567", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IV21235", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IV21131", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IV21128", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IV19178", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IV16603", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://aix.software.ibm.com/aix/efixes/security/socket_advisory.asc", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.9", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-2192"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20647", 
+                "title": "Vulnerability in use of socketpair", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:20647"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "AIX 6.1 TL 6 : socket (IV16603)", 
+                "file": "aix_IV16603.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "63709"
+            }, 
+            {
+                "name": "AIX 5.3 TL 12 : socket (IV19178)", 
+                "file": "aix_IV19178.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "63716"
+            }, 
+            {
+                "name": "AIX 6.1 TL 7 : socket (IV21128)", 
+                "file": "aix_IV21128.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "63717"
+            }, 
+            {
+                "name": "AIX 7.1 TL 0 : socket (IV21131)", 
+                "file": "aix_IV21131.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "63718"
+            }, 
+            {
+                "name": "AIX 7.1 TL 1 : socket (IV21235)", 
+                "file": "aix_IV21235.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "63719"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IV16603", 
+                "id": "IV16603"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IV19178", 
+                "id": "IV19178"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IV21128", 
+                "id": "IV21128"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IV21131", 
+                "id": "IV21131"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IV21235", 
+                "id": "IV21235"
+            }
+        ], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

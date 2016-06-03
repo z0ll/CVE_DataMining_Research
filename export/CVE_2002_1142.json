@@ -1,0 +1,223 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-1142", 
+                "published": "2002-11-29T00:00:00.000-05:00", 
+                "id": "CVE-2002-1142", 
+                "modified": "2008-09-10T15:13:57.040-04:00", 
+                "summary": "Heap-based buffer overflow in the Remote Data Services (RDS) component of Microsoft Data Access Components (MDAC) 2.1 through 2.6, and Internet Explorer 5.01 through 6.0, allows remote attackers to execute code via a malformed HTTP request to the Data Stub."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:ie:6.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:5.5:sp1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:6.0:sp1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:5.5:sp2"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:5.0.1:sp2"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:5.0.1:sp1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:data_access_components:2.5"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:data_access_components:2.6"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:5.5"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:5.0.1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:data_access_components:2.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.19158", 
+                "id": 19158
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/6214", 
+                "id": 6214
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.cert.org/advisories/CA-2002-33.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/542081", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms02-065.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/10659", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.foundstone.com/knowledge/randd-advisories-display.html?id=337", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/10669", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/6214", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/vulnwatch/2002-q4/0082.html", 
+                    "vendor": "VULNWATCH"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/542081", 
+                "id": "VU#542081"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1970", 
+                "signature": "SERVER-IIS MDAC Content-Type overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms02_065_msadc.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/iis/ms02_065_msadc.rb", 
+                "title": "MS02-065 Microsoft IIS MDAC msadcs.dll RDS DataStub Content-Type Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-1142"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:3573", 
+                "title": "Microsoft Data Access Components 2.1 Remote Data Services Buffer Overflow", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:3573"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:294", 
+                "title": "Microsoft Data Access Components 2.6 Remote Data Services Buffer Overflow", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:294"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:2730", 
+                "title": "Microsoft Data Access Components 2.5 Remote Data Services Buffer Overflow", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:2730"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Microsoft Data Access Components RDS Data Stub Remote Overflow", 
+                "file": "msadcs_overflow.nasl", 
+                "family": "Web Servers", 
+                "id": "11161"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Buffer Overrun in Microsoft Data Access Components Could Lead to Code Execution", 
+                "id": "Buffer Overrun in Microsoft Data Access Components Could Lead to Code Execution", 
+                "title": "329414"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/329414", 
+                "id": "329414", 
+                "title": "Buffer Overrun in Microsoft Data Access Components Could Lead to Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS02-065", 
+                "id": "MS02-065", 
+                "title": "Buffer Overrun in Microsoft Data Access Components Could Lead to Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

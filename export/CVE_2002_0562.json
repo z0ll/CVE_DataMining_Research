@@ -1,0 +1,176 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0562", 
+                "published": "2002-07-03T00:00:00.000-04:00", 
+                "id": "CVE-2002-0562", 
+                "modified": "2008-09-05T16:28:21.040-04:00", 
+                "summary": "The default configuration of Oracle 9i Application Server 1.0.2.x running Oracle JSP or SQLJSP stores globals.jsa under the web root, which allows remote attackers to gain sensitive information including usernames and passwords via a direct HTTP request to globals.jsa."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:oracle:application_server_web_cache:2.0.0.0"
+            }, 
+            {
+                "id": "cpe:/a:oracle:oracle9i:9.0.1"
+            }, 
+            {
+                "id": "cpe:/a:oracle:application_server_web_cache:2.0.0.2"
+            }, 
+            {
+                "id": "cpe:/a:oracle:application_server_web_cache:2.0.0.1"
+            }, 
+            {
+                "id": "cpe:/a:oracle:application_server_web_cache:2.0.0.3"
+            }, 
+            {
+                "id": "cpe:/a:oracle:application_server:1.0.2"
+            }, 
+            {
+                "id": "cpe:/a:oracle:oracle9i:9.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.18382", 
+                "id": 18382
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/4034", 
+                "id": 4034
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.cert.org/advisories/CA-2002-08.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/698467", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/4034", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://otn.oracle.com/deploy/security/pdf/ias_modplsql_alert.pdf", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=101301440005580&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/698467", 
+                "id": "VU#698467"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1873", 
+                "signature": "SERVER-WEBAPP globals.jsa access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-0562"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Oracle 9iAS Globals.jsa access", 
+                "file": "oracle9i_globals_dot_jsa.nasl", 
+                "family": "Web application abuses", 
+                "id": "10850"
+            }, 
+            {
+                "name": "Oracle 9iAS Jsp Source File Reading", 
+                "file": "oracle9i_jsp_source.nasl", 
+                "family": "Web application abuses", 
+                "id": "10852"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Oracle 9iAS globals.jsa Database Credential Remote Disclosure", 
+                "file": "oracle9i_globals_dot_jsa.nasl", 
+                "family": "Databases", 
+                "id": "10850"
+            }, 
+            {
+                "name": "Oracle Application Server Multiple Vulnerabilities", 
+                "file": "oracle_application_server_pci.nasl", 
+                "family": "Web Servers", 
+                "id": "57619"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

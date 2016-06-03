@@ -1,0 +1,167 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0676", 
+                "published": "2007-02-02T20:28:00.000-05:00", 
+                "id": "CVE-2007-0676", 
+                "modified": "2011-03-07T21:50:31.347-05:00", 
+                "summary": "SQL injection vulnerability in faq.php in ExoPHPDesk 1.2.1 and earlier allows remote attackers to execute arbitrary SQL commands via the id parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:exo:exophpdesk:1.2"
+            }, 
+            {
+                "id": "cpe:/a:exo:exophpdesk:1.2.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34795", 
+                "id": 34795
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/22338", 
+                "id": 22338
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/36027", 
+                "id": 36027
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/31998", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/0452", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/22338", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://osvdb.org/36027", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/3234", 
+                    "vendor": "MILW0RM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005081", 
+                "signature": "ET WEB_SPECIFIC_APPS ExoPHPDesk SQL Injection Attempt -- faq.php id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005082", 
+                "signature": "ET WEB_SPECIFIC_APPS ExoPHPDesk SQL Injection Attempt -- faq.php id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005083", 
+                "signature": "ET WEB_SPECIFIC_APPS ExoPHPDesk SQL Injection Attempt -- faq.php id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005084", 
+                "signature": "ET WEB_SPECIFIC_APPS ExoPHPDesk SQL Injection Attempt -- faq.php id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005085", 
+                "signature": "ET WEB_SPECIFIC_APPS ExoPHPDesk SQL Injection Attempt -- faq.php id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005086", 
+                "signature": "ET WEB_SPECIFIC_APPS ExoPHPDesk SQL Injection Attempt -- faq.php id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-0676"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "ExoPHPDesk faq.php id Parameter SQL Injection", 
+                "file": "exophpdesk_id_sql_injection.nasl", 
+                "family": "CGI abuses", 
+                "id": "24267"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

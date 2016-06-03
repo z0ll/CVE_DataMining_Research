@@ -1,0 +1,179 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2677", 
+                "published": "2007-05-14T19:19:00.000-04:00", 
+                "id": "CVE-2007-2677", 
+                "modified": "2011-03-07T21:54:44.237-05:00", 
+                "summary": "Multiple PHP remote file inclusion vulnerabilities in phpChess Community Edition 2.0 allow remote attackers to execute arbitrary PHP code via a URL in (1) the config parameter to includes/language.php, or the Root_Path parameter to (2) layout_admin_cfg.php, (3) layout_cfg.php, or (4) layout_t_top.php in skins/phpchess/.  NOTE: vector 1 has been disputed by CVE, since the code is defined within a function that is not called from within includes/language.php."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:phpchess:phpchess:2.0::community"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.36803", 
+                "id": 36803
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/23797", 
+                "id": 23797
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/35592", 
+                "id": 35592
+            }, 
+            {
+                "url": "http://www.osvdb.org/35593", 
+                "id": 35593
+            }, 
+            {
+                "url": "http://www.osvdb.org/35594", 
+                "id": 35594
+            }, 
+            {
+                "url": "http://www.osvdb.org/35595", 
+                "id": 35595
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1649", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/23797", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/3837", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://osvdb.org/35595", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/35594", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/35593", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/35592", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://attrition.org/pipermail/vim/2007-May/001586.html", 
+                    "vendor": "VIM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34056", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25147", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003742", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPChess Remote Inclusion Attempt -- language.php config"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003743", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPChess Remote Inclusion Attempt -- layout_admin_cfg.php Root_Path"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003744", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPChess Remote Inclusion Attempt -- layout_cfg.php Root_Path"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003745", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPChess Remote Inclusion Attempt -- layout_t_top.php Root_Path"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2677"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,143 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0826", 
+                "published": "2002-08-12T00:00:00.000-04:00", 
+                "id": "CVE-2002-0826", 
+                "modified": "2008-09-10T15:12:58.180-04:00", 
+                "summary": "Buffer overflow in WS_FTP FTP Server 3.1.1 allows remote authenticated users to execute arbitrary code via a long SITE CPWD command."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:ipswitch:ws_ftp_server:3.1.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.18712", 
+                "id": 18712
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/5427", 
+                "id": 5427
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.ipswitch.com/Support/WS_FTP-Server/patch-upgrades.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.atstake.com/research/advisories/2002/a080802-1.txt", 
+                    "vendor": "ATSTAKE"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/5427", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/static/9794.php", 
+                    "vendor": "XF"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2101888", 
+                "signature": "GPL FTP SITE CPWD overflow attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "misc-attack", 
+                "id": "sid:1888", 
+                "signature": "PROTOCOL-FTP SITE CPWD overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-0826"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "WS_FTP SITE CPWD Buffer Overflow", 
+                "file": "DDI_ws_ftp-server-cpwd-bo.nasl", 
+                "family": "FTP", 
+                "id": "11098"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "WS_FTP Server SITE CPWD Command Remote Overflow", 
+                "file": "DDI_ws_ftp-server-cpwd-bo.nasl", 
+                "family": "FTP", 
+                "id": "11098"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

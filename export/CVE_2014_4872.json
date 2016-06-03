@@ -1,0 +1,130 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4872", 
+                "published": "2014-10-10T06:55:07.523-04:00", 
+                "id": "CVE-2014-4872", 
+                "modified": "2015-05-11T22:01:31.907-04:00", 
+                "summary": "BMC Track-It! 11.3.0.355 does not require authentication on TCP port 9010, which allows remote attackers to upload arbitrary files, execute arbitrary code, or obtain sensitive credential and configuration information via a .NET Remoting request to (1) FileStorageService or (2) ConfigurationService."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:bmc:bmc_track-it%21:11.3.0.355"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.71916", 
+                "id": 71916
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/121036", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "https://raw.githubusercontent.com/pedrib/PoC/master/generic/bmc-track-it-11.3.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://packetstormsecurity.com/files/128594/BMC-Track-it-Remote-Code-Execution-SQL-Injection.html", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/121036", 
+                "id": "VU#121036"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "trackit_sql_domain_creds.rb", 
+                "file": "metasploit-framework/modules/auxiliary/gather/trackit_sql_domain_creds.rb", 
+                "title": "SSL Labs API Client"
+            }, 
+            {
+                "id": "trackit_file_upload.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/http/trackit_file_upload.rb", 
+                "title": "Numara / BMC Track-It! FileStorageService Arbitrary File Upload"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/34924", 
+                "id": 34924, 
+                "file": "platforms/windows/webapps/34924.txt"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-4872"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

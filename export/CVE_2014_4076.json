@@ -1,0 +1,173 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4076", 
+                "published": "2014-11-11T17:55:04.530-05:00", 
+                "id": "CVE-2014-4076", 
+                "modified": "2015-03-02T21:59:43.387-05:00", 
+                "summary": "Microsoft Windows Server 2003 SP2 allows local users to gain privileges via a crafted IOCTL call to (1) tcpip.sys or (2) tcpip6.sys, aka \"TCP/IP Elevation of Privilege Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2:~~~~itanium~"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2:~~~~x64~"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2:~~~~x86~"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.68189", 
+                "id": 68189
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/114532", 
+                "id": 114532
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS14-070", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/114532", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/35936", 
+                    "vendor": "EXPLOIT-DB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms14_070_tcpip_ioctl.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/local/ms14_070_tcpip_ioctl.rb", 
+                "title": "MS14-070 Windows tcpip!SetAddrOptions NULL Pointer Dereference"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/35936", 
+                "id": 35936, 
+                "file": "platforms/windows/local/35936.py"
+            }, 
+            {
+                "url": "http://www.exploit-db.com/exploits/37755", 
+                "id": 37755, 
+                "file": "platforms/windows/local/37755.c"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-4076"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27620", 
+                "title": "TCP/IP Elevation of privilege vulnerability - CVE-2014-4076 (MS14-070)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:27620"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS14-070: Vulnerability in TCP/IP Could Allow Elevation of Privilege (2989935)", 
+                "file": "smb_nt_ms14-070.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "79130"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in TCP/IP Could Allow Elevation of Privilege", 
+                "id": "Vulnerability in TCP/IP Could Allow Elevation of Privilege", 
+                "title": "2989935"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2989935", 
+                "id": "2989935", 
+                "title": "Vulnerability in TCP/IP Could Allow Elevation of Privilege"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS14-070", 
+                "id": "MS14-070", 
+                "title": "Vulnerability in TCP/IP Could Allow Elevation of Privilege"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

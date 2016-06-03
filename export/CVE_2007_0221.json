@@ -1,0 +1,213 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0221", 
+                "published": "2007-05-08T19:19:00.000-04:00", 
+                "id": "CVE-2007-0221", 
+                "modified": "2011-10-17T00:00:00.000-04:00", 
+                "summary": "Integer overflow in the IMAP (IMAP4) support in Microsoft Exchange Server 2000 SP3 allows remote attackers to cause a denial of service (service hang) via crafted literals in an IMAP command, aka the \"IMAP Literal Processing Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:exchange_server:2000:sp3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.36621", 
+                "id": 36621
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0014220", 
+                "id": "2007-A-0031", 
+                "title": "Multiple Vulnerabilities in Microsoft Exchange"
+            }
+        ], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/23810", 
+                "id": 23810
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/34392", 
+                "id": 34392
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA07-128A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1018015", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms07-026.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25183", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=526", 
+                    "vendor": "IDEFENSE"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/33890", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1711", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/23810", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/468871/100/200/threaded", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/468871/100/200/threaded", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/34392", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.8", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "misc-attack", 
+                "id": "sid:1993", 
+                "signature": "PROTOCOL-IMAP login literal buffer overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2665", 
+                "signature": "PROTOCOL-IMAP login literal format string attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-0221"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:2054", 
+                "title": "IMAP Literal Processing Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:2054"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS07-026: Vulnerability in Microsoft Exchange Could Allow Remote Code Execution (931832)", 
+                "file": "smb_nt_ms07-026.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "25165"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [
+            {
+                "url": "http://www.securityfocus.com/archive/1/archive/1/468871/100/200/threaded", 
+                "id": "SSRT071422"
+            }, 
+            {
+                "url": "http://www.securityfocus.com/archive/1/archive/1/468871/100/200/threaded", 
+                "id": "HPSBST02214"
+            }
+        ], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerabilities in Microsoft Exchange Could Allow Remote Code Execution", 
+                "id": "Vulnerabilities in Microsoft Exchange Could Allow Remote Code Execution", 
+                "title": "935490"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/931832", 
+                "id": "931832", 
+                "title": "Vulnerabilities in Microsoft Exchange Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS07-026", 
+                "id": "MS07-026", 
+                "title": "Vulnerabilities in Microsoft Exchange Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

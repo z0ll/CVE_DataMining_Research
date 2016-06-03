@@ -1,0 +1,246 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-0361", 
+                "published": "2001-06-27T00:00:00.000-04:00", 
+                "id": "CVE-2001-0361", 
+                "modified": "2008-09-10T15:07:49.147-04:00", 
+                "summary": "Implementations of SSH version 1.5, including (1) OpenSSH up to version 2.3.0, (2) AppGate, and (3) ssh-1 up to version 1.2.31, in certain configurations, allow a remote attacker to decrypt and/or alter traffic via a \"Bleichenbacher attack\" on PKCS#1 version 1.5."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/310.html", 
+                "id": "CWE-310", 
+                "title": "Cryptographic Issues"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:openbsd:openssh:1.2.3"
+            }, 
+            {
+                "id": "cpe:/a:openbsd:openssh:2.1"
+            }, 
+            {
+                "id": "cpe:/a:openbsd:openssh:2.1.1"
+            }, 
+            {
+                "id": "cpe:/a:ssh:ssh:1.2.31"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.16846", 
+                "id": 16846
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/2344", 
+                "id": 2344
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/2116", 
+                "id": 2116
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/2344", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/static/6082.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/2116", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.novell.com/linux/security/advisories/adv004_ssh.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2001/dsa-086", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2001/dsa-027", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2001/dsa-023", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/l-047.shtml", 
+                    "vendor": "CIAC"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=98158450021686&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-01:24.ssh.asc", 
+                    "vendor": "FREEBSD"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "4.9", 
+                    "base": "4.0", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-0361"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:5729", 
+                "title": "Multiple Vendor SSH 1.5 Session Key Recovery Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:5729"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 023-1 (inn2)", 
+                "file": "deb_023_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "53786"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 086-1 (ssh-nonfree, ssh-socks)", 
+                "file": "deb_086_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "53766"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Cisco Devices Multiple SSH Information Disclosure Vulnerabilities", 
+                "file": "cisco_ssh_multiple_vulns.nasl", 
+                "family": "CISCO", 
+                "id": "10972"
+            }, 
+            {
+                "name": "Debian DSA-023-1 : inn2 - local tempfile vulnerabilities", 
+                "file": "debian_DSA-023.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "14860"
+            }, 
+            {
+                "name": "Debian DSA-027-1 : OpenSSH - remote exploit", 
+                "file": "debian_DSA-027.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "14864"
+            }, 
+            {
+                "name": "Debian DSA-086-1 : ssh-nonfree - remote root exploit", 
+                "file": "debian_DSA-086.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "14923"
+            }, 
+            {
+                "name": "OpenSSH < 2.5.2 / 2.5.2p2 Multiple Information Disclosure Vulnerabilities", 
+                "file": "openssh_252.nasl", 
+                "family": "Misc.", 
+                "id": "44068"
+            }, 
+            {
+                "name": "SSH Protocol Version 1 Session Key Retrieval", 
+                "file": "ssh1_proto_enabled.nasl", 
+                "family": "General", 
+                "id": "10882"
+            }, 
+            {
+                "name": "SunSSH < 1.1.1 / 1.3 CBC Plaintext Disclosure", 
+                "file": "sunssh_plaintext_recovery.nasl", 
+                "family": "Misc.", 
+                "id": "55992"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [
+            {
+                "id": "cisco-sa-20010627"
+            }
+        ], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2001-0361.html", 
+                "id": "SuSE-SA:2001:04"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-023", 
+                "id": "DSA-023"
+            }, 
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-027", 
+                "id": "DSA-027"
+            }, 
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-086", 
+                "id": "DSA-086"
+            }
+        ], 
+        "Vmware": []
+    }
+}

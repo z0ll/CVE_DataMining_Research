@@ -1,0 +1,220 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0266", 
+                "published": "2010-07-15T08:57:12.453-04:00", 
+                "id": "CVE-2010-0266", 
+                "modified": "2010-09-17T01:44:31.717-04:00", 
+                "summary": "Microsoft Office Outlook 2002 SP3, 2003 SP3, and 2007 SP1 and SP2 does not properly verify e-mail attachments with a PR_ATTACH_METHOD property value of ATTACH_BY_REFERENCE, which allows user-assisted remote attackers to execute arbitrary code via a crafted message, aka \"Microsoft Outlook SMB Attachment Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:outlook:2007:sp1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:outlook:2007:sp2"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:outlook:2003:sp3"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:outlook:2002:sp3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.4146", 
+                "id": 4146
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0024852", 
+                "id": "2010-A-0093", 
+                "title": "Microsoft Office Outlook Remote Code Execution Vulnerability"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA10-194A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/Bulletin/MS10-045.mspx", 
+                    "vendor": "MS"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms10_045_outlook_ref_only.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/email/ms10_045_outlook_ref_only.rb", 
+                "title": "Windows ANI LoadAniIcon() Chunk Size Stack Buffer Overflow (SMTP)"
+            }, 
+            {
+                "id": "ms10_045_outlook_ref_resolve.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/email/ms10_045_outlook_ref_resolve.rb", 
+                "title": "Windows ANI LoadAniIcon() Chunk Size Stack Buffer Overflow (SMTP)"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/outlook_smb_attachment", 
+                "id": "exploit_info/outlook_smb_attachment", 
+                "title": "Microsoft Outlook SMB Attachment ATTACH_BY_REFERENCE vulnerability"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-0266"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:11623", 
+                "title": "Microsoft Outlook SMB Attachment Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:11623"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Outlook SMB Attachment Remote Code Execution Vulnerability (978212)", 
+                "file": "secpod_ms10-045.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "902217"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS10-045: Vulnerability in Microsoft Office Outlook Could Allow Remote Code Execution (978212)", 
+                "file": "smb_nt_ms10-045.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "47713"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in Microsoft Outlook Could Allow Remote Code Execution", 
+                "id": "Vulnerability in Microsoft Outlook Could Allow Remote Code Execution", 
+                "title": "980376"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/978212", 
+                "id": "978212", 
+                "title": "Vulnerability in Microsoft Outlook Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS10-045", 
+                "id": "MS10-045", 
+                "title": "Vulnerability in Microsoft Outlook Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

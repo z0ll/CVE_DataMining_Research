@@ -1,0 +1,224 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0608", 
+                "published": "2004-12-06T00:00:00.000-05:00", 
+                "id": "CVE-2004-0608", 
+                "modified": "2008-09-05T16:38:53.567-04:00", 
+                "summary": "The Unreal Engine, as used in DeusEx 1.112fm and earlier, Devastation 390 and earlier, Mobile Forces 20000 and earlier, Nerf Arena Blast 1.2 and earlier, Postal 2 1337 and earlier, Rune 107 and earlier, Tactical Ops 3.4.0 and earlier, Unreal 1 226f and earlier, Unreal II XMP 7710 and earlier, Unreal Tournament 451b and earlier, Unreal Tournament 2003 2225 and earlier, Unreal Tournament 2004 before 3236, Wheel of Time 333b and earlier, and X-com Enforcer, allows remote attackers to execute arbitrary code via a UDP packet containing a secure query with a long value, which overwrites memory."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:nerf_arena_blast:nerf_arena_blast:1.2"
+            }, 
+            {
+                "id": "cpe:/a:epic_games:unreal_tournament_2003:2199_win32"
+            }, 
+            {
+                "id": "cpe:/a:epic_games:unreal_tournament:451b"
+            }, 
+            {
+                "id": "cpe:/a:ion_storm:deusex:1.112_fm"
+            }, 
+            {
+                "id": "cpe:/a:epic_games:unreal_tournament_2003:2199_linux"
+            }, 
+            {
+                "id": "cpe:/a:epic_games:unreal_tournament_2003:2225_win32"
+            }, 
+            {
+                "id": "cpe:/a:running_with_scissors:postal_2:1337"
+            }, 
+            {
+                "id": "cpe:/a:robert_jordan:wheel_of_time:333.0b"
+            }, 
+            {
+                "id": "cpe:/a:rage_software:mobile_forces:20000.0"
+            }, 
+            {
+                "id": "cpe:/a:infogrames:x-com_enforcer"
+            }, 
+            {
+                "id": "cpe:/a:epic_games:unreal_engine:226f"
+            }, 
+            {
+                "id": "cpe:/a:epic_games:unreal_tournament_2004:win32"
+            }, 
+            {
+                "id": "cpe:/a:epic_games:unreal_engine:433"
+            }, 
+            {
+                "id": "cpe:/a:infogrames:tacticalops:3.4"
+            }, 
+            {
+                "id": "cpe:/a:epic_games:unreal_tournament_2003:2199_macos"
+            }, 
+            {
+                "id": "cpe:/o:gentoo:linux:1.4"
+            }, 
+            {
+                "id": "cpe:/a:dreamforge:tnn_outdoors_pro_hunter"
+            }, 
+            {
+                "id": "cpe:/a:epic_games:unreal_tournament_2004:macos"
+            }, 
+            {
+                "id": "cpe:/a:arush:devastation:390.0"
+            }, 
+            {
+                "id": "cpe:/a:epic_games:unreal_engine:436"
+            }, 
+            {
+                "id": "cpe:/a:epic_games:unreal_tournament_2003:2225_macos"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.722", 
+                "id": 722
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/10570", 
+                "id": 10570
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/16451", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.gentoo.org/security/en/glsa/glsa-200407-14.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/10570", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://aluigi.altervista.org/adv/unsecure-adv.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=108787105023304&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2103080", 
+                "signature": "GPL GAMES Unreal Tournament secure overflow attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "misc-attack", 
+                "id": "sid:3080", 
+                "signature": "SERVER-OTHER Unreal Tournament secure overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ut2004_secure.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/games/ut2004_secure.rb", 
+                "title": "Unreal Tournament 2004 secure Overflow (Win32)"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0608"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Gentoo Security Advisory GLSA 200407-14 (Unreal Tournament)", 
+                "file": "glsa_200407_14.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "54621"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "GLSA-200407-14 : Unreal Tournament 2003/2004: Buffer overflow in secure queries", 
+                "file": "gentoo_GLSA-200407-14.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "14547"
+            }, 
+            {
+                "name": "Unreal Engine Secure Query Remote Overflow", 
+                "file": "unreal_dos.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "12285"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200407-14", 
+                "id": "GLSA-200407-14"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,208 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6195", 
+                "published": "2006-11-30T19:28:00.000-05:00", 
+                "id": "CVE-2006-6195", 
+                "modified": "2008-09-05T17:14:09.163-04:00", 
+                "summary": "Multiple SQL injection vulnerabilities in Fixit iDMS Pro Image Gallery allow remote attackers to execute arbitrary SQL commands via the (1) show_id or (2) parentid parameter to (a) filelist.asp, or the (3) fid parameter to (b) showfile.asp."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:fixit_knowledge_solutions:idms_pro_image_gallery"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33533", 
+                "id": 33533
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21282", 
+                "id": 21282
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/21282", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.aria-security.com/forum/showthread.php?t=39", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1017281", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30513", 
+                    "vendor": "XF"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007182", 
+                "signature": "ET WEB_SPECIFIC_APPS Fixit iDMS Pro Image Gallery SQL Injection Attempt -- filelist.asp show_id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007183", 
+                "signature": "ET WEB_SPECIFIC_APPS Fixit iDMS Pro Image Gallery SQL Injection Attempt -- filelist.asp show_id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007184", 
+                "signature": "ET WEB_SPECIFIC_APPS Fixit iDMS Pro Image Gallery SQL Injection Attempt -- filelist.asp show_id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007185", 
+                "signature": "ET WEB_SPECIFIC_APPS Fixit iDMS Pro Image Gallery SQL Injection Attempt -- filelist.asp show_id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007186", 
+                "signature": "ET WEB_SPECIFIC_APPS Fixit iDMS Pro Image Gallery SQL Injection Attempt -- filelist.asp show_id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007187", 
+                "signature": "ET WEB_SPECIFIC_APPS Fixit iDMS Pro Image Gallery SQL Injection Attempt -- filelist.asp show_id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007188", 
+                "signature": "ET WEB_SPECIFIC_APPS Fixit iDMS Pro Image Gallery SQL Injection Attempt -- filelist.asp parentid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007189", 
+                "signature": "ET WEB_SPECIFIC_APPS Fixit iDMS Pro Image Gallery SQL Injection Attempt -- filelist.asp parentid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007190", 
+                "signature": "ET WEB_SPECIFIC_APPS Fixit iDMS Pro Image Gallery SQL Injection Attempt -- filelist.asp parentid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007191", 
+                "signature": "ET WEB_SPECIFIC_APPS Fixit iDMS Pro Image Gallery SQL Injection Attempt -- filelist.asp parentid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007192", 
+                "signature": "ET WEB_SPECIFIC_APPS Fixit iDMS Pro Image Gallery SQL Injection Attempt -- filelist.asp parentid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007193", 
+                "signature": "ET WEB_SPECIFIC_APPS Fixit iDMS Pro Image Gallery SQL Injection Attempt -- filelist.asp parentid UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007194", 
+                "signature": "ET WEB_SPECIFIC_APPS Fixit iDMS Pro Image Gallery SQL Injection Attempt -- showfile.asp fid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007195", 
+                "signature": "ET WEB_SPECIFIC_APPS Fixit iDMS Pro Image Gallery SQL Injection Attempt -- showfile.asp fid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007196", 
+                "signature": "ET WEB_SPECIFIC_APPS Fixit iDMS Pro Image Gallery SQL Injection Attempt -- showfile.asp fid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007197", 
+                "signature": "ET WEB_SPECIFIC_APPS Fixit iDMS Pro Image Gallery SQL Injection Attempt -- showfile.asp fid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007198", 
+                "signature": "ET WEB_SPECIFIC_APPS Fixit iDMS Pro Image Gallery SQL Injection Attempt -- showfile.asp fid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007199", 
+                "signature": "ET WEB_SPECIFIC_APPS Fixit iDMS Pro Image Gallery SQL Injection Attempt -- showfile.asp fid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6195"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

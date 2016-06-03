@@ -1,0 +1,233 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-1633", 
+                "published": "2010-06-03T10:30:01.570-04:00", 
+                "id": "CVE-2010-1633", 
+                "modified": "2014-03-26T00:05:31.820-04:00", 
+                "summary": "RSA verification recovery in the EVP_PKEY_verify_recover function in OpenSSL 1.x before 1.0.0a, as used by pkeyutl and possibly other applications, returns uninitialized memory upon failure, which might allow context-dependent attackers to bypass intended key requirements or obtain sensitive information via unspecified vectors.  NOTE: some of these details are obtained from third party information."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:openssl:openssl:1.0.0:beta2"
+            }, 
+            {
+                "id": "cpe:/a:openssl:openssl:1.0.0:beta5"
+            }, 
+            {
+                "id": "cpe:/a:openssl:openssl:1.0.0:beta3"
+            }, 
+            {
+                "id": "cpe:/a:openssl:openssl:1.0.0:beta1"
+            }, 
+            {
+                "id": "cpe:/a:openssl:openssl:1.0.0"
+            }, 
+            {
+                "id": "cpe:/a:openssl:openssl:1.0.0:beta4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.53449", 
+                "id": 53449
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/40503", 
+                "id": 40503
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2010/1313", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=598732", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/40503", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openssl.org/news/secadv_20100601.txt", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www-01.ibm.com/support/docview.wss?uid=ssg1S1004564", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/57353", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/40024", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://cvs.openssl.org/filediff?f=openssl/crypto/rsa/rsa_pmeth.c&v1=1.34&v2=1.34.2.1", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://cvs.openssl.org/chngview?cn=19693", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "6.4", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-1633"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24952", 
+                "title": "Vulnerability in OpenSSL 1.x before 1.0.0a, might allow context-dependent attackers to bypass intended key requirements or obtain sensitive information", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:24952"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for openssl FEDORA-2010-17826", 
+                "file": "gb_fedora_2010_17826_openssl_fc12.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "862568"
+            }, 
+            {
+                "name": "Fedora Update for openssl FEDORA-2010-17847", 
+                "file": "gb_fedora_2010_17847_openssl_fc13.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "862566"
+            }, 
+            {
+                "name": "Fedora Update for openssl FEDORA-2010-18736", 
+                "file": "gb_fedora_2010_18736_openssl_fc13.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "862737"
+            }, 
+            {
+                "name": "Fedora Update for openssl FEDORA-2010-9574", 
+                "file": "gb_fedora_2010_9574_openssl_fc13.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "862158"
+            }, 
+            {
+                "name": "Fedora Update for openssl FEDORA-2010-9639", 
+                "file": "gb_fedora_2010_9639_openssl_fc12.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "862152"
+            }, 
+            {
+                "name": "Fedora Update for openssl FEDORA-2011-1255", 
+                "file": "gb_fedora_2011_1255_openssl_fc13.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "862920"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 201110-01 (openssl)", 
+                "file": "glsa_201110_01.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "70764"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 13 : openssl-1.0.0a-1.fc13 (2010-9574)", 
+                "file": "fedora_2010-9574.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "47542"
+            }, 
+            {
+                "name": "Fedora 12 : openssl-1.0.0a-1.fc12 (2010-9639)", 
+                "file": "fedora_2010-9639.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "47546"
+            }, 
+            {
+                "name": "GLSA-201110-01 : OpenSSL: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201110-01.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "56425"
+            }, 
+            {
+                "name": "OpenSSL < 0.9.8o / 1.0.0a Multiple Vulnerabilities", 
+                "file": "openssl_1_0_0a.nasl", 
+                "family": "Web Servers", 
+                "id": "46801"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

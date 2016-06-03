@@ -1,0 +1,177 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-7135", 
+                "published": "2014-01-27T19:55:03.880-05:00", 
+                "id": "CVE-2013-7135", 
+                "modified": "2014-02-21T00:05:51.377-05:00", 
+                "summary": "The Proc::Daemon module 0.14 for Perl uses world-writable permissions for a file that stores a process ID, which allows local users to have an unspecified impact by modifying this file."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:detlef_pilzecker:proc%3a%3aadaemon-run_perl:0.14"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.66223", 
+                "id": 66223
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://rt.cpan.org/Public/Bug/Display.html?id=91450", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2014/01/07/7", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2013/12/18/2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2013/12/16/5", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2014:021", 
+                    "vendor": "MANDRIVA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-7135"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for perl-Proc-Daemon FEDORA-2013-23594", 
+                "file": "gb_fedora_2013_23594_perl-Proc-Daemon_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867271"
+            }, 
+            {
+                "name": "Fedora Update for perl-Proc-Daemon FEDORA-2013-23635", 
+                "file": "gb_fedora_2013_23635_perl-Proc-Daemon_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867207"
+            }, 
+            {
+                "name": "Fedora Update for perl-Proc-Daemon FEDORA-2013-23646", 
+                "file": "gb_fedora_2013_23646_perl-Proc-Daemon_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867205"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 20 : perl-Proc-Daemon-0.14-9.fc20 (2013-23594)", 
+                "file": "fedora_2013-23594.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "71757"
+            }, 
+            {
+                "name": "Fedora 19 : perl-Proc-Daemon-0.14-9.fc19 (2013-23635)", 
+                "file": "fedora_2013-23635.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "71759"
+            }, 
+            {
+                "name": "Fedora 18 : perl-Proc-Daemon-0.14-9.fc18 (2013-23646)", 
+                "file": "fedora_2013-23646.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "71760"
+            }, 
+            {
+                "name": "FreeBSD : otrs -- Scheduler Process ID File Access (1e7f0c11-673a-11e5-98c8-60a44c524f57)", 
+                "file": "freebsd_pkg_1e7f0c11673a11e598c860a44c524f57.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "86198"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : perl-Proc-Daemon (MDVSA-2014:021)", 
+                "file": "mandriva_MDVSA-2014-021.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "72133"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2014:021", 
+                "id": "MDVSA-2014:021"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

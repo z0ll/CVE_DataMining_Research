@@ -1,0 +1,179 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3140", 
+                "published": "2007-06-08T12:30:00.000-04:00", 
+                "id": "CVE-2007-3140", 
+                "modified": "2011-03-07T21:55:43.860-05:00", 
+                "summary": "SQL injection vulnerability in xmlrpc.php in WordPress 2.2 allows remote authenticated users to execute arbitrary SQL commands via a parameter value in an XML RPC wp.suggestCategories methodCall, a different vector than CVE-2007-1897."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:wordpress:wordpress:2.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.3109", 
+                "id": 3109
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/24344", 
+                "id": 24344
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/36321", 
+                "id": 36321
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34746", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/2099", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/24344", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25552", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/36321", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/4039", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://www.openpkg.com/security/advisories/OpenPKG-SA-2007.021.html", 
+                    "vendor": "OPENPKG"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "6.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004654", 
+                "signature": "ET WEB_SPECIFIC_APPS Wordpress 2.2 SQL Injection Attempt -- xmlrpc.php SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004655", 
+                "signature": "ET WEB_SPECIFIC_APPS Wordpress 2.2 SQL Injection Attempt -- xmlrpc.php UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004656", 
+                "signature": "ET WEB_SPECIFIC_APPS Wordpress 2.2 SQL Injection Attempt -- xmlrpc.php INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004657", 
+                "signature": "ET WEB_SPECIFIC_APPS Wordpress 2.2 SQL Injection Attempt -- xmlrpc.php DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004658", 
+                "signature": "ET WEB_SPECIFIC_APPS Wordpress 2.2 SQL Injection Attempt -- xmlrpc.php ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004659", 
+                "signature": "ET WEB_SPECIFIC_APPS Wordpress 2.2 SQL Injection Attempt -- xmlrpc.php UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-3140"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: wordpress, de-wordpress, zh-wordpress", 
+                "file": "freebsd_wordpress5.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "58843"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "FreeBSD : wordpress -- XMLRPC SQL Injection (0838733d-1698-11dc-a197-0011098b2f36)", 
+                "file": "freebsd_pkg_0838733d169811dca1970011098b2f36.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "25591"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

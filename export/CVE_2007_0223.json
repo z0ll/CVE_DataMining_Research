@@ -1,0 +1,181 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0223", 
+                "published": "2007-01-12T21:28:00.000-05:00", 
+                "id": "CVE-2007-0223", 
+                "modified": "2008-11-15T01:39:21.127-05:00", 
+                "summary": "SQL injection vulnerability in shared/code/cp_functions_downloads.php in Nicola Asuni All In One Control Panel (AIOCP) before 1.3.009 allows remote attackers to execute arbitrary SQL commands via the download_category parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:nicola_asuni:all_in_one_control_panel:1.3.004"
+            }, 
+            {
+                "id": "cpe:/a:nicola_asuni:all_in_one_control_panel:1.3.008"
+            }, 
+            {
+                "id": "cpe:/a:nicola_asuni:all_in_one_control_panel:1.3.001"
+            }, 
+            {
+                "id": "cpe:/a:nicola_asuni:all_in_one_control_panel:1.3.002"
+            }, 
+            {
+                "id": "cpe:/a:nicola_asuni:all_in_one_control_panel:1.3.003"
+            }, 
+            {
+                "id": "cpe:/a:nicola_asuni:all_in_one_control_panel:1.3.005"
+            }, 
+            {
+                "id": "cpe:/a:nicola_asuni:all_in_one_control_panel:1.3.006"
+            }, 
+            {
+                "id": "cpe:/a:nicola_asuni:all_in_one_control_panel:1.3.007"
+            }, 
+            {
+                "id": "cpe:/a:nicola_asuni:all_in_one_control_panel:1.3.000"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34379", 
+                "id": 34379
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/22019", 
+                "id": 22019
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/31641", 
+                "id": 31641
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://sourceforge.net/project/shownotes.php?release_id=477845", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23726", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/31591", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/22019", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://osvdb.org/31641", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005675", 
+                "signature": "ET WEB_SPECIFIC_APPS Nicola Asuni All In One Control Panel (AIOCP) SQL Injection Attempt -- cp_functions_downloads.php download_category SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005676", 
+                "signature": "ET WEB_SPECIFIC_APPS Nicola Asuni All In One Control Panel (AIOCP) SQL Injection Attempt -- cp_functions_downloads.php download_category UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005677", 
+                "signature": "ET WEB_SPECIFIC_APPS Nicola Asuni All In One Control Panel (AIOCP) SQL Injection Attempt -- cp_functions_downloads.php download_category INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005678", 
+                "signature": "ET WEB_SPECIFIC_APPS Nicola Asuni All In One Control Panel (AIOCP) SQL Injection Attempt -- cp_functions_downloads.php download_category DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005679", 
+                "signature": "ET WEB_SPECIFIC_APPS Nicola Asuni All In One Control Panel (AIOCP) SQL Injection Attempt -- cp_functions_downloads.php download_category ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005680", 
+                "signature": "ET WEB_SPECIFIC_APPS Nicola Asuni All In One Control Panel (AIOCP) SQL Injection Attempt -- cp_functions_downloads.php download_category UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-0223"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

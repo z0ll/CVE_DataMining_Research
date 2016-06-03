@@ -1,0 +1,417 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3813", 
+                "published": "2015-05-26T11:59:07.307-04:00", 
+                "id": "CVE-2015-3813", 
+                "modified": "2015-05-27T13:15:24.367-04:00", 
+                "summary": "The fragment_add_work function in epan/reassemble.c in the packet-reassembly feature in Wireshark 1.12.x before 1.12.5 does not properly determine the defragmentation state in a case of an insufficient snapshot length, which allows remote attackers to cause a denial of service (memory consumption) via a crafted packet."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:wireshark:wireshark:1.12.3"
+            }, 
+            {
+                "id": "cpe:/a:wireshark:wireshark:1.12.0"
+            }, 
+            {
+                "id": "cpe:/a:wireshark:wireshark:1.12.2"
+            }, 
+            {
+                "id": "cpe:/a:wireshark:wireshark:1.12.4"
+            }, 
+            {
+                "id": "cpe:/a:wireshark:wireshark:1.12.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.75427", 
+                "id": 75427
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://code.wireshark.org/review/gitweb?p=wireshark.git;a=commit;h=c35f2ccb4433718416551cc7a85afb0860529d57", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=11129", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.wireshark.org/security/wnpa-sec-2015-16.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-3813"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:177", 
+                "title": "DSA-3277-1 -- wireshark -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:177"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3277-1 (wireshark - security update)", 
+                "file": "deb_3277.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703277"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 7 : wireshark (CESA-2015:2393)", 
+                "file": "centos_RHSA-2015-2393.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "87156"
+            }, 
+            {
+                "name": "Debian DSA-3277-1 : wireshark - security update", 
+                "file": "debian_DSA-3277.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "83960"
+            }, 
+            {
+                "name": "FreeBSD : wireshark -- multiple vulnerabilities (a13500d0-0570-11e5-aab1-d050996490d0)", 
+                "file": "freebsd_pkg_a13500d0057011e5aab1d050996490d0.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "83902"
+            }, 
+            {
+                "name": "GLSA-201510-03 : Wireshark: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201510-03.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "86688"
+            }, 
+            {
+                "name": "openSUSE Security Update : Wireshark (openSUSE-2015-379)", 
+                "file": "openSUSE-2015-379.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83805"
+            }, 
+            {
+                "name": "Oracle Linux 7 : wireshark (ELSA-2015-2393)", 
+                "file": "oraclelinux_ELSA-2015-2393.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "87038"
+            }, 
+            {
+                "name": "RHEL 7 : wireshark (RHSA-2015:2393)", 
+                "file": "redhat-RHSA-2015-2393.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "86988"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : wireshark on SL7.x x86_64", 
+                "file": "sl_20151119_wireshark_on_SL7_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "87578"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : wireshark (SUSE-SU-2015:1046-1)", 
+                "file": "suse_SU-2015-1046-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84191"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : wireshark (SUSE-SU-2015:1676-1)", 
+                "file": "suse_SU-2015-1676-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "86288"
+            }, 
+            {
+                "name": "SUSE SLED11 Security Update : wireshark (SUSE-SU-2015:1676-2)", 
+                "file": "suse_SU-2015-1676-2.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "86289"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : wireshark (SUSE-SU-2015:1713-1)", 
+                "file": "suse_SU-2015-1713-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "86347"
+            }, 
+            {
+                "name": "Wireshark 1.10.x < 1.10.14 / 1.12.x < 1.12.5 Multiple DoS Vulnerabilities", 
+                "file": "wireshark_1_12_5.nasl", 
+                "family": "Windows", 
+                "id": "83488"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20152393", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-2393.html", 
+                    "id": "RHSA-2015:2393", 
+                    "title": "RHSA-2015:2393: wireshark security, bug fix, and enhancement update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1163581", 
+                    "title": "CVE-2014-8714 wireshark: TN5250 infinite loop (wnpa-sec-2014-23)", 
+                    "id": "1163581", 
+                    "issue date": "2015-07-01", 
+                    "associated redhat": "RHSA-2015:2393"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1163582", 
+                    "title": "CVE-2014-8712 CVE-2014-8713 wireshark: NCP dissector crashes (wnpa-sec-2014-22)", 
+                    "id": "1163582", 
+                    "issue date": "2015-07-01", 
+                    "associated redhat": "RHSA-2015:2393"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1163583", 
+                    "title": "CVE-2014-8711 wireshark: AMQP dissector crash (wnpa-sec-2014-21)", 
+                    "id": "1163583", 
+                    "issue date": "2015-07-01", 
+                    "associated redhat": "RHSA-2015:2393"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1163584", 
+                    "title": "CVE-2014-8710 wireshark: SigComp dissector crash (wnpa-sec-2014-20)", 
+                    "id": "1163584", 
+                    "issue date": "2015-07-01", 
+                    "associated redhat": "RHSA-2015:2393"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1180182", 
+                    "title": "CVE-2015-0562 wireshark: DEC DNA Routing Protocol dissector crash (wnpa-sec-2015-03)", 
+                    "id": "1180182", 
+                    "issue date": "2015-07-01", 
+                    "associated redhat": "RHSA-2015:2393"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1180195", 
+                    "title": "CVE-2015-0563 wireshark: SMTP dissector crash (wnpa-sec-2015-04)", 
+                    "id": "1180195", 
+                    "issue date": "2015-07-01", 
+                    "associated redhat": "RHSA-2015:2393"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1180197", 
+                    "title": "CVE-2015-0564 wireshark: TLS/SSL decryption crash (wnpa-sec-2015-05)", 
+                    "id": "1180197", 
+                    "issue date": "2015-07-01", 
+                    "associated redhat": "RHSA-2015:2393"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1199163", 
+                    "title": "CVE-2015-2188 wireshark: The WCP dissector could crash while decompressing data (wnpa-sec-2015-07)", 
+                    "id": "1199163", 
+                    "issue date": "2015-07-01", 
+                    "associated redhat": "RHSA-2015:2393"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1199165", 
+                    "title": "CVE-2015-2189 wireshark: The pcapng file parser could crash (wnpa-sec-2015-08)", 
+                    "id": "1199165", 
+                    "issue date": "2015-07-01", 
+                    "associated redhat": "RHSA-2015:2393"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1199167", 
+                    "title": "CVE-2015-2191 wireshark: The TNEF dissector could go into an infinite loop on 32-bit architectures (wnpa-sec-2015-10)", 
+                    "id": "1199167", 
+                    "issue date": "2015-07-01", 
+                    "associated redhat": "RHSA-2015:2393"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1219409", 
+                    "title": "CVE-2015-3182 wireshark: crash on sample file genbroad.snoop", 
+                    "id": "1219409", 
+                    "issue date": "2015-07-01", 
+                    "associated redhat": "RHSA-2015:2393"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1222434", 
+                    "title": "CVE-2015-3810 wireshark: WebSocket DoS (wnpa-sec-2015-13)", 
+                    "id": "1222434", 
+                    "issue date": "2015-07-01", 
+                    "associated redhat": "RHSA-2015:2393"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1222436", 
+                    "title": "CVE-2015-3811 wireshark: WCP dissector crash (wnpa-sec-2015-14)", 
+                    "id": "1222436", 
+                    "issue date": "2015-07-01", 
+                    "associated redhat": "RHSA-2015:2393"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1222437", 
+                    "title": "CVE-2015-3812 wireshark: X11 memory leak (wnpa-sec-2015-15)", 
+                    "id": "1222437", 
+                    "issue date": "2015-07-01", 
+                    "associated redhat": "RHSA-2015:2393"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1222438", 
+                    "title": "CVE-2015-3813 wireshark: Reassembly memory leak (wnpa-sec-2015-16)", 
+                    "id": "1222438", 
+                    "issue date": "2015-07-01", 
+                    "associated redhat": "RHSA-2015:2393"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1253354", 
+                    "title": "CVE-2015-6243 wireshark: Dissector table crash (wnpa-sec-2015-23)", 
+                    "id": "1253354", 
+                    "issue date": "2015-07-01", 
+                    "associated redhat": "RHSA-2015:2393"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1253355", 
+                    "title": "CVE-2015-6244 wireshark: ZigBee dissector crash (wnpa-sec-2015-24)", 
+                    "id": "1253355", 
+                    "issue date": "2015-07-01", 
+                    "associated redhat": "RHSA-2015:2393"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1253356", 
+                    "title": "CVE-2015-6245 wireshark: GSM RLC/MAC dissector infinite loop (wnpa-sec-2015-25)", 
+                    "id": "1253356", 
+                    "issue date": "2015-07-01", 
+                    "associated redhat": "RHSA-2015:2393"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1253357", 
+                    "title": "CVE-2015-6246 wireshark: WaveAgent dissector crash (wnpa-sec-2015-26)", 
+                    "id": "1253357", 
+                    "issue date": "2015-07-01", 
+                    "associated redhat": "RHSA-2015:2393"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1253360", 
+                    "title": "CVE-2015-6248 wireshark: Ptvcursor crash (wnpa-sec-2015-28)", 
+                    "id": "1253360", 
+                    "issue date": "2015-07-01", 
+                    "associated redhat": "RHSA-2015:2393"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1267959", 
+                    "title": "wireshark segfaults", 
+                    "id": "1267959", 
+                    "issue date": "2015-07-01", 
+                    "associated redhat": "RHSA-2015:2393"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

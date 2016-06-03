@@ -1,0 +1,258 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4114", 
+                "published": "2008-09-16T19:00:01.430-04:00", 
+                "id": "CVE-2008-4114", 
+                "modified": "2011-08-04T00:00:00.000-04:00", 
+                "summary": "srv.sys in the Server service in Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1 and SP2, Vista Gold and SP1, and Server 2008 allows remote attackers to cause a denial of service (system crash) or possibly have unspecified other impact via an SMB WRITE_ANDX packet with an offset that is inconsistent with the packet size, related to \"insufficiently validating the buffer size,\" as demonstrated by a request to the \\PIPE\\lsarpc named pipe, aka \"SMB Validation Denial of Service Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_vista::sp1:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:::x32"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp:::pro_x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:::x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp4"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp3"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003:::x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp2:pro_x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_vista:sp1"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:::itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2:itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp1:itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_vista:gold"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_vista::gold:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.44069", 
+                "id": 44069
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/31179", 
+                "id": 31179
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA09-013A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/Bulletin/MS09-001.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/45146", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2008/2583", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.vallejo.cc/proyectos/vista_SMB_write_DoS.htm", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1020887", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/31179", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/496354/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.reversemode.com/index.php?option=com_content&task=view&id=54&Itemid=1", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/6463", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/31883", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "7.1", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms09_001_write.rb", 
+                "file": "metasploit-framework/modules/auxiliary/dos/windows/smb/ms09_001_write.rb", 
+                "title": "Microsoft SRV.SYS WriteAndX Invalid DataOffset"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2008-4114"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:6044", 
+                "title": "SMB Validation Denial of Service Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:6044"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:5262", 
+                "title": "Microsoft Windows  WRITE_ANDX SMB command handling Kernel DoS", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:5262"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Vulnerabilities in SMB Could Allow Remote Code Execution (958687)", 
+                "file": "secpod_ms09-001.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "900069"
+            }, 
+            {
+                "name": "kb_smb_name(", 
+                "file": "secpod_ms09-001_remote.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "900233"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS09-001: Vulnerabilities in SMB Could Allow Remote Code Execution (958687)", 
+                "file": "smb_nt_ms09-001.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "35361"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerabilities in SMB Could Allow Remote Code Execution", 
+                "id": "Vulnerabilities in SMB Could Allow Remote Code Execution", 
+                "title": "958687"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/958687", 
+                "id": "958687", 
+                "title": "Vulnerabilities in SMB Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS09-001", 
+                "id": "MS09-001", 
+                "title": "Vulnerabilities in SMB Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

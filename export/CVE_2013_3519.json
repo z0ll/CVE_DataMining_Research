@@ -1,0 +1,219 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3519", 
+                "published": "2013-12-04T13:56:56.413-05:00", 
+                "id": "CVE-2013-3519", 
+                "modified": "2014-03-03T12:45:30.470-05:00", 
+                "summary": "lgtosync.sys in VMware Workstation 9.x before 9.0.3, VMware Player 5.x before 5.0.3, VMware Fusion 5.x before 5.0.4, VMware ESXi 4.0 through 5.1, and VMware ESX 4.0 and 4.1, when a 32-bit Windows guest OS is used, allows guest OS users to gain guest OS privileges via an application that performs a crafted memory allocation."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:vmware:esxi:5.0"
+            }, 
+            {
+                "id": "cpe:/a:vmware:workstation:9.0.1"
+            }, 
+            {
+                "id": "cpe:/a:vmware:workstation:9.0.2"
+            }, 
+            {
+                "id": "cpe:/a:vmware:fusion:5.0.1"
+            }, 
+            {
+                "id": "cpe:/a:vmware:fusion:5.0"
+            }, 
+            {
+                "id": "cpe:/o:vmware:esxi:4.1"
+            }, 
+            {
+                "id": "cpe:/o:vmware:esxi:4.0"
+            }, 
+            {
+                "id": "cpe:/a:vmware:fusion:5.0.3"
+            }, 
+            {
+                "id": "cpe:/a:vmware:player:5.0"
+            }, 
+            {
+                "id": "cpe:/o:vmware:esx:4.1"
+            }, 
+            {
+                "id": "cpe:/a:vmware:player:5.0.2"
+            }, 
+            {
+                "id": "cpe:/a:vmware:fusion:5.0.2"
+            }, 
+            {
+                "id": "cpe:/a:vmware:workstation:9.0"
+            }, 
+            {
+                "id": "cpe:/a:vmware:player:5.0.1"
+            }, 
+            {
+                "id": "cpe:/o:vmware:esx:4.0"
+            }, 
+            {
+                "id": "cpe:/o:vmware:esxi:5.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.11363", 
+                "id": 11363
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0043844", 
+                "id": "2014-A-0019", 
+                "title": "Multiple Vulnerabilities in VMware Fusion"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vmware.com/security/advisories/VMSA-2013-0014.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "5.5", 
+                    "base": "7.9", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "adjacent_network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-3519"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20448", 
+                "title": "VMware Workstation, Fusion, ESXi and ESX patches address a guest privilege escalation", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:20448"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "VMSA-2013-0014 VMware Workstation, Fusion, ESXi and ESX patches address a guest privilege escalation", 
+                "file": "gb_VMSA-2013-0014.nasl", 
+                "family": "VMware Local Security Checks", 
+                "id": "103851"
+            }, 
+            {
+                "name": "VMSA-2013-0014 VMware Workstation, Fusion, ESXi and ESX patches address a guest privilege escalation (remote check)", 
+                "file": "gb_VMSA-2013-0014_remote.nasl", 
+                "family": "General", 
+                "id": "103850"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "VMware Fusion 5.x < 5.0.4 LGTOSYNC.SYS Privilege Escalation (VMSA-2013-0014)", 
+                "file": "macosx_fusion_5_0_4.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "71230"
+            }, 
+            {
+                "name": "VMware ESX / ESXi Guest OS Local Privilege Escalation (VMSA-2013-0014) (remote check)", 
+                "file": "vmware_esx_VMSA-2013-0014_remote.nasl", 
+                "family": "Misc.", 
+                "id": "89669"
+            }, 
+            {
+                "name": "ESXi 5.0 < Build 1022489 Multiple Vulnerabilities (remote check)", 
+                "file": "vmware_esxi_5_0_build_1022489_remote.nasl", 
+                "family": "Misc.", 
+                "id": "70877"
+            }, 
+            {
+                "name": "VMware Player 5.x < 5.0.3 LGTOSYNC.SYS Guest Privilege Escalation (VMSA-2013-0014)", 
+                "file": "vmware_player_priv_esc_vmsa_2013_0014.nasl", 
+                "family": "Windows", 
+                "id": "71231"
+            }, 
+            {
+                "name": "VMSA-2013-0014 : VMware Workstation, Fusion, ESXi and ESX patches address a guest privilege escalation", 
+                "file": "vmware_VMSA-2013-0014.nasl", 
+                "family": "VMware ESX Local Security Checks", 
+                "id": "71214"
+            }, 
+            {
+                "name": "VMware Workstation 9.x < 9.0.3 Multiple Privilege Escalation Vulnerabilities (VMSA-2013-0013 / VMSA-2013-0014)", 
+                "file": "vmware_workstation_linux_9_0_3.nasl", 
+                "family": "General", 
+                "id": "71054"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": [
+            {
+                "url": "https://www.vmware.com/security/advisories/VMSA-2013-0014.html", 
+                "id": "VMSA-2013-0014"
+            }
+        ]
+    }
+}

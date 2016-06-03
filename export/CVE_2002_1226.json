@@ -1,0 +1,229 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-1226", 
+                "published": "2002-10-28T00:00:00.000-05:00", 
+                "id": "CVE-2002-1226", 
+                "modified": "2008-09-05T16:30:05.533-04:00", 
+                "summary": "Unknown vulnerabilities in Heimdal before 0.5 with unknown impact, possibly in the (1) kadmind and (2) kdc servers, may allow remote or local attackers to gain root or other access, but not via buffer overflows (CVE-2002-1225)."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:kth:heimdal:0.4d"
+            }, 
+            {
+                "id": "cpe:/a:kth:heimdal:0.4e"
+            }, 
+            {
+                "id": "cpe:/a:kth:heimdal:0.4b"
+            }, 
+            {
+                "id": "cpe:/a:kth:heimdal:0.4c"
+            }, 
+            {
+                "id": "cpe:/a:kth:heimdal:0.3e"
+            }, 
+            {
+                "id": "cpe:/a:kth:heimdal:0.4a"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.19113", 
+                "id": 19113
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.debian.org/security/2002/dsa-178", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=103341355708817&w=2", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=103462479621246&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "shellcode-detect", 
+                "id": "sid:2101898", 
+                "signature": "GPL EXPLOIT kadmind buffer overflow attempt 2"
+            }, 
+            {
+                "classtype": "shellcode-detect", 
+                "id": "sid:2101894", 
+                "signature": "GPL EXPLOIT kadmind buffer overflow attempt"
+            }, 
+            {
+                "classtype": "shellcode-detect", 
+                "id": "sid:2101896", 
+                "signature": "GPL EXPLOIT kadmind buffer overflow attempt"
+            }, 
+            {
+                "classtype": "shellcode-detect", 
+                "id": "sid:2101899", 
+                "signature": "GPL EXPLOIT kadmind buffer overflow attempt 3"
+            }, 
+            {
+                "classtype": "shellcode-detect", 
+                "id": "sid:2101895", 
+                "signature": "GPL EXPLOIT kadmind buffer overflow attempt"
+            }, 
+            {
+                "classtype": "shellcode-detect", 
+                "id": "sid:2101897", 
+                "signature": "GPL EXPLOIT kadmind buffer overflow attempt"
+            }, 
+            {
+                "classtype": "successful-admin", 
+                "id": "sid:2101900", 
+                "signature": "GPL EXPLOIT successful kadmind buffer overflow attempt"
+            }, 
+            {
+                "classtype": "successful-admin", 
+                "id": "sid:2101901", 
+                "signature": "GPL EXPLOIT successful kadmind buffer overflow attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "shellcode-detect", 
+                "id": "sid:1894", 
+                "signature": "INDICATOR-SHELLCODE kadmind buffer overflow attempt"
+            }, 
+            {
+                "category": "shellcode-detect", 
+                "id": "sid:1895", 
+                "signature": "INDICATOR-SHELLCODE kadmind buffer overflow attempt"
+            }, 
+            {
+                "category": "shellcode-detect", 
+                "id": "sid:1896", 
+                "signature": "INDICATOR-SHELLCODE kadmind buffer overflow attempt"
+            }, 
+            {
+                "category": "shellcode-detect", 
+                "id": "sid:1897", 
+                "signature": "INDICATOR-SHELLCODE kadmind buffer overflow attempt"
+            }, 
+            {
+                "category": "shellcode-detect", 
+                "id": "sid:1898", 
+                "signature": "INDICATOR-SHELLCODE kadmind buffer overflow attempt"
+            }, 
+            {
+                "category": "shellcode-detect", 
+                "id": "sid:1899", 
+                "signature": "INDICATOR-SHELLCODE kadmind buffer overflow attempt"
+            }, 
+            {
+                "category": "successful-admin", 
+                "id": "sid:1900", 
+                "signature": "SERVER-OTHER successful kadmind buffer overflow attempt"
+            }, 
+            {
+                "category": "successful-admin", 
+                "id": "sid:1901", 
+                "signature": "SERVER-OTHER successful kadmind buffer overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-1226"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 178-1 (heimdal)", 
+                "file": "deb_178_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "53431"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-178-1 : heimdal - remote command execution", 
+                "file": "debian_DSA-178.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "15015"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2002-1226.html", 
+                "id": "SuSE-SA:2002:034"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-178", 
+                "id": "DSA-178"
+            }
+        ], 
+        "Vmware": []
+    }
+}

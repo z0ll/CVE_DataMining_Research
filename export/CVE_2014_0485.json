@@ -1,0 +1,198 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0485", 
+                "published": "2014-09-02T10:55:03.323-04:00", 
+                "id": "CVE-2014-0485", 
+                "modified": "2014-09-03T09:33:57.990-04:00", 
+                "summary": "S3QL 1.18.1 and earlier uses the pickle Python module unsafely, which allows remote attackers to execute arbitrary code via a crafted serialized object in (1) common.py or (2) local.py in backends/."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:s3ql_project:s3ql:1.18.1"
+            }, 
+            {
+                "id": "cpe:/a:s3ql_project:s3ql:1.17"
+            }, 
+            {
+                "id": "cpe:/a:s3ql_project:s3ql:1.18"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.70790", 
+                "id": 70790
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bitbucket.org/nikratio/s3ql/commits/091ac263809b4e8", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2014/08/28/3", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2014/dsa-3013", 
+                    "vendor": "DEBIAN"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-0485"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26256", 
+                "title": "DSA-3013-1 s3ql - security update", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26256"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3013-1 (s3ql - security update)", 
+                "file": "deb_3013.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703013"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-3013-1 : s3ql - security update", 
+                "file": "debian_DSA-3013.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "77419"
+            }, 
+            {
+                "name": "Fedora 22 : s3ql-2.13-1.fc22 (2015-10869)", 
+                "file": "fedora_2015-10869.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "84681"
+            }, 
+            {
+                "name": "Fedora 21 : s3ql-2.13-1.fc21 (2015-10884)", 
+                "file": "fedora_2015-10884.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "84682"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3013", 
+                "id": "DSA-3013"
+            }
+        ], 
+        "Vmware": []
+    }
+}

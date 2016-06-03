@@ -1,0 +1,195 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-7347", 
+                "published": "2014-03-31T10:58:45.070-04:00", 
+                "id": "CVE-2013-7347", 
+                "modified": "2014-03-31T14:23:45.470-04:00", 
+                "summary": "Luci in Red Hat Conga does not properly enforce the user session timeout, which might allow attackers to gain access to the session by reading the __ac session cookie.  NOTE: this issue has been SPLIT due to different vulnerability types. Use CVE-2012-3359 for the base64-encoded storage of the user and password in a cookie."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:redhat:conga"
+            }, 
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.66821", 
+                "id": 66821
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=607179", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2013-0128.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "1.9", 
+                    "base": "3.7", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-7347"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : conga (CESA-2013:0128)", 
+                "file": "centos_RHSA-2013-0128.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "63573"
+            }, 
+            {
+                "name": "Oracle Linux 5 : conga (ELSA-2013-0128)", 
+                "file": "oraclelinux_ELSA-2013-0128.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68699"
+            }, 
+            {
+                "name": "RHEL 5 : conga (RHSA-2013:0128)", 
+                "file": "redhat-RHSA-2013-0128.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "64074"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2013-0128.html", 
+                    "id": "RHSA-2013:0128", 
+                    "title": ""
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=607179", 
+                    "title": "CVE-2012-3359 conga: insecure handling of luci web interface sessions", 
+                    "id": "607179", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0128"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=832181", 
+                    "title": "fence_apc_snmp is missing from luci", 
+                    "id": "832181", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0128"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=832183", 
+                    "title": "Luci is missing configuration of ssl for fence_ilo", 
+                    "id": "832183", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0128"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=832185", 
+                    "title": "Luci cannot configure the \"identity_file\" attribute for fence_ilo_mp", 
+                    "id": "832185", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0128"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=835649", 
+                    "title": "luci uninstall will leave /var/lib/luci/var/pts and /usr/lib*/luci/zope/var/pts behind", 
+                    "id": "835649", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0128"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=839732", 
+                    "title": "Conga Add a Service Screen is Missing Option for Restart-Disable Recovery Policy", 
+                    "id": "839732", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0128"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

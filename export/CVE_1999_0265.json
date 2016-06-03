@@ -1,0 +1,136 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0265", 
+                "published": "1997-01-01T00:00:00.000-05:00", 
+                "id": "CVE-1999-0265", 
+                "modified": "2008-09-09T08:34:09.210-04:00", 
+                "summary": "ICMP redirect messages may crash or lock up a host."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:novell:netware:3.12"
+            }, 
+            {
+                "id": "cpe:/o:microware:os-9"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.13813", 
+                "id": 13813
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://support.microsoft.com/default.aspx?scid=kb;%5BLN%5D;Q154174", 
+                    "vendor": "MSKB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "bad-unknown", 
+                "id": "sid:2100472", 
+                "signature": "GPL ICMP_INFO redirect host"
+            }, 
+            {
+                "classtype": "bad-unknown", 
+                "id": "sid:2100473", 
+                "signature": "GPL ICMP_INFO redirect net"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "misc-activity", 
+                "id": "sid:436", 
+                "signature": "PROTOCOL-ICMP Redirect for TOS and Host"
+            }, 
+            {
+                "category": "misc-activity", 
+                "id": "sid:437", 
+                "signature": "PROTOCOL-ICMP Redirect for TOS and Network"
+            }, 
+            {
+                "category": "misc-activity", 
+                "id": "sid:438", 
+                "signature": "PROTOCOL-ICMP Redirect undefined code"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0265"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Q154174", 
+                "id": "Q154174", 
+                "title": ""
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

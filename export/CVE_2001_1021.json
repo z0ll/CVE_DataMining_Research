@@ -1,0 +1,199 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-1021", 
+                "published": "2001-07-26T00:00:00.000-04:00", 
+                "id": "CVE-2001-1021", 
+                "modified": "2008-09-05T16:25:29.360-04:00", 
+                "summary": "Buffer overflows in WS_FTP 2.02 allow remote attackers to execute arbitrary code via long arguments to (1) DELE, (2) MDTM, (3) MLST, (4) MKD, (5) RMD, (6) RNFR, (7) RNTO, (8) SIZE, (9) STAT, (10) XMKD, or (11) XRMD."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:ipswitch:ws_ftp_server:2.0.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.17091", 
+                "id": 17091
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/14115", 
+                "id": 14115
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/static/6911.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.ipswitch.com/Support/WS_FTP-Server/patch-upgrades.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2001-07/0610.html", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2101975", 
+                "signature": "GPL FTP DELE overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102546", 
+                "signature": "GPL FTP MDTM overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2101976", 
+                "signature": "GPL FTP RMD overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102389", 
+                "signature": "GPL FTP RNTO overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2101379", 
+                "signature": "GPL FTP STAT overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102373", 
+                "signature": "GPL FTP XMKD overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102416", 
+                "signature": "GPL FTP invalid MDTM command attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:1379", 
+                "signature": "PROTOCOL-FTP STAT overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:1975", 
+                "signature": "PROTOCOL-FTP DELE overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:1976", 
+                "signature": "PROTOCOL-FTP RMD overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2373", 
+                "signature": "PROTOCOL-FTP XMKD overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2389", 
+                "signature": "PROTOCOL-FTP RNTO overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2416", 
+                "signature": "PROTOCOL-FTP invalid MDTM command attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2546", 
+                "signature": "PROTOCOL-FTP MDTM overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-1021"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "WS FTP overflows", 
+                "file": "wsftp_overflows.nasl", 
+                "family": "FTP", 
+                "id": "11094"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "WS_FTP Multiple Command Long Argument Overflow", 
+                "file": "wsftp_overflows.nasl", 
+                "family": "FTP", 
+                "id": "11094"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

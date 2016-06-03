@@ -1,0 +1,209 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4971", 
+                "published": "2014-07-26T11:55:04.387-04:00", 
+                "id": "CVE-2014-4971", 
+                "modified": "2014-11-13T22:06:24.433-05:00", 
+                "summary": "Microsoft Windows XP SP3 does not validate addresses in certain IRP handler routines, which allows local users to write data to arbitrary memory locations, and consequently gain privileges, via a crafted address in an IOCTL call, related to (1) the MQAC.sys driver in the MQ Access Control subsystem and (2) the BthPan.sys driver in the Bluetooth Personal Area Networking subsystem."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.67213", 
+                "id": 67213
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0055433", 
+                "id": "2014-A-0150", 
+                "title": "Microsoft Message Queuing Service Privilege Escalation Vulnerability"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/109387", 
+                "id": 109387
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://www.korelogic.com/Resources/Advisories/KL-001-2014-003.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "https://www.korelogic.com/Resources/Advisories/KL-001-2014-002.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id/1031025", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/109387", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/34982", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/34112", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS14-062", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://seclists.org/fulldisclosure/2014/Jul/97", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://seclists.org/fulldisclosure/2014/Jul/96", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://packetstormsecurity.com/files/128674/Microsoft-Bluetooth-Personal-Area-Networking-BthPan.sys-Privilege-Escalation.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://blogs.technet.com/b/srd/archive/2014/10/14/accessing-risk-for-the-october-2014-security-updates.aspx", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "bthpan.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/local/bthpan.rb", 
+                "title": "MS14-062 Microsoft Bluetooth Personal Area Networking (BthPan.sys) Privilege Escalation"
+            }, 
+            {
+                "id": "mqac_write.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/local/mqac_write.rb", 
+                "title": "MQAC.sys Arbitrary Write Privilege Escalation"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/34982", 
+                "id": 34982, 
+                "file": ""
+            }, 
+            {
+                "url": "http://www.exploit-db.com/exploits/34112", 
+                "id": 34112, 
+                "file": "platforms/windows/local/34112.txt"
+            }, 
+            {
+                "url": "http://www.exploit-db.com/exploits/34131", 
+                "id": 34131, 
+                "file": "platforms/windows/local/34131.py"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-4971"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26974", 
+                "title": "MQAC arbitrary write privilege escalation vulnerability - CVE-2014-4971 (MS14-062)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:26974"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS14-062: Vulnerability in Message Queuing Service Could Allow Elevation of Privilege (2993254)", 
+                "file": "smb_nt_ms14-062.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "78438"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in Message Queuing Service Could Allow Elevation of Privilege", 
+                "id": "Vulnerability in Message Queuing Service Could Allow Elevation of Privilege", 
+                "title": "2993254"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2993254", 
+                "id": "2993254", 
+                "title": "Vulnerability in Message Queuing Service Could Allow Elevation of Privilege"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS14-062", 
+                "id": "MS14-062", 
+                "title": "Vulnerability in Message Queuing Service Could Allow Elevation of Privilege"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

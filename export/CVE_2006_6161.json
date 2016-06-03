@@ -1,0 +1,298 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6161", 
+                "published": "2006-11-28T18:28:00.000-05:00", 
+                "id": "CVE-2006-6161", 
+                "modified": "2011-03-07T21:45:20.267-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in Doug Luxem Liberum Help Desk 0.97.3 and earlier allow remote attackers to execute arbitrary SQL commands via the (1) id and (2) uid parameter to (a) inout/status.asp, (b) inout/update.asp, and (c) forgotpass.asp.  NOTE: The provenance of this information is unknown; the details are obtained solely from third party information."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:doug_luxem:liberum_help_desk:0.97.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33488", 
+                "id": 33488
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/32884", 
+                "id": 32884
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/47420", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4704", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/32884", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/7493", 
+                    "vendor": "MILW0RM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007294", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- status.asp id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007295", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- status.asp id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007296", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- status.asp id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007297", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- status.asp id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007298", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- status.asp id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007299", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- status.asp id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007300", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- update.asp id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007301", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- update.asp id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007302", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- update.asp id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007303", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- update.asp id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007304", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- update.asp id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007305", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- update.asp id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007306", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- forgotpass.asp id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007307", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- forgotpass.asp id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007308", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- forgotpass.asp id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007309", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- forgotpass.asp id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007310", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- forgotpass.asp id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007311", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- forgotpass.asp id UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007312", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- forgotpass.asp uid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007313", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- forgotpass.asp uid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007314", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- forgotpass.asp uid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007315", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- forgotpass.asp uid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007316", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- forgotpass.asp uid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007317", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- forgotpass.asp uid UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007318", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- update.asp uid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007319", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- update.asp uid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007320", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- update.asp uid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007321", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- update.asp uid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007322", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- update.asp uid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007323", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- update.asp uid UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007324", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- status.asp uid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007325", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- status.asp uid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007326", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- status.asp uid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007327", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- status.asp uid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007328", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- status.asp uid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007329", 
+                "signature": "ET WEB_SPECIFIC_APPS Doug Luxem Liberum Help Desk SQL Injection Attempt -- status.asp uid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6161"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

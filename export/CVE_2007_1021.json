@@ -1,0 +1,157 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1021", 
+                "published": "2007-02-21T06:28:00.000-05:00", 
+                "id": "CVE-2007-1021", 
+                "modified": "2011-03-07T21:51:09.250-05:00", 
+                "summary": "SQL injection vulnerability in inc_listnews.asp in CodeAvalanche News 1.x allows remote attackers to execute arbitrary SQL commands via the CAT_ID parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:xfairguy:codeavalanche_news:1.x"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35098", 
+                "id": 35098
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/22582", 
+                "id": 22582
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/35130", 
+                "id": 35130
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/32528", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/0621", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/22582", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/3317", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://osvdb.org/35130", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004875", 
+                "signature": "ET WEB_SPECIFIC_APPS CodeAvalanche News SQL Injection Attempt -- inc_listnews.asp CAT_ID SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004876", 
+                "signature": "ET WEB_SPECIFIC_APPS CodeAvalanche News SQL Injection Attempt -- inc_listnews.asp CAT_ID UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004877", 
+                "signature": "ET WEB_SPECIFIC_APPS CodeAvalanche News SQL Injection Attempt -- inc_listnews.asp CAT_ID INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004878", 
+                "signature": "ET WEB_SPECIFIC_APPS CodeAvalanche News SQL Injection Attempt -- inc_listnews.asp CAT_ID DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004879", 
+                "signature": "ET WEB_SPECIFIC_APPS CodeAvalanche News SQL Injection Attempt -- inc_listnews.asp CAT_ID ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004880", 
+                "signature": "ET WEB_SPECIFIC_APPS CodeAvalanche News SQL Injection Attempt -- inc_listnews.asp CAT_ID UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1021"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

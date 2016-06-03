@@ -1,0 +1,210 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1933", 
+                "published": "2014-04-17T10:55:11.120-04:00", 
+                "id": "CVE-2014-1933", 
+                "modified": "2014-05-23T00:07:15.767-04:00", 
+                "summary": "The (1) JpegImagePlugin.py and (2) EpsImagePlugin.py scripts in Python Image Library (PIL) 1.1.7 and earlier and Pillow before 2.3.1 uses the names of temporary files on the command line, which makes it easier for local users to conduct symlink attacks by listing the processes."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:pythonware:python_imaging_library:1.1.7"
+            }, 
+            {
+                "id": "cpe:/a:python:pillow:2.3.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.69387", 
+                "id": 69387
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/python-imaging/Pillow/commit/4e9f367dfd3f04c8f5d23f7f759ec12782e10ee7", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2168-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2014/02/11/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2014/02/10/15", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2014-05/msg00002.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "2.1", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-1933"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24565", 
+                "title": "USN-2168-1 -- python-imaging vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24565"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:25172", 
+                "title": "SUSE-SU-2014:0705-1 -- Security update for python-imaging", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:25172"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for python-pillow FEDORA-2014-5487", 
+                "file": "gb_fedora_2014_5487_python-pillow_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867740"
+            }, 
+            {
+                "name": "Ubuntu Update for python-imaging USN-2168-1", 
+                "file": "gb_ubuntu_USN_2168_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841777"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 19 : python-pillow-2.0.0-13.gitd1c6db8.fc19 (2014-5487)", 
+                "file": "fedora_2014-5487.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "73810"
+            }, 
+            {
+                "name": "Fedora 20 : python-pillow-2.2.1-4.fc20 (2014-5492)", 
+                "file": "fedora_2014-5492.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "73811"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : python-imaging (MDVSA-2014:082)", 
+                "file": "mandriva_MDVSA-2014-082.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "73933"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : python-pillow (MDVSA-2015:099)", 
+                "file": "mandriva_MDVSA-2015-099.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "82352"
+            }, 
+            {
+                "name": "openSUSE Security Update : python-imaging (openSUSE-SU-2014:0591-1)", 
+                "file": "openSUSE-2014-326.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75336"
+            }, 
+            {
+                "name": "Oracle Solaris Third-Party Patch Update : py_pil (multiple_vulnerabilities_in_python_image)", 
+                "file": "solaris11_py_pil_20140731.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "80746"
+            }, 
+            {
+                "name": "SuSE 11.3 Security Update : python-imaging (SAT Patch Number 9153)", 
+                "file": "suse_11_python-imaging-140422.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74145"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS / 12.04 LTS / 12.10 / 13.10 : python-imaging vulnerabilities (USN-2168-1)", 
+                "file": "ubuntu_USN-2168-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "73556"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-1933.html", 
+                "id": "openSUSE-SU-2014:0591"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2168-1", 
+                "id": "USN-2168-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

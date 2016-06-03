@@ -1,0 +1,200 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2178", 
+                "published": "2011-08-10T16:55:01.390-04:00", 
+                "id": "CVE-2011-2178", 
+                "modified": "2012-08-02T00:00:00.000-04:00", 
+                "summary": "The virSecurityManagerGetPrivateData function in security/security_manager.c in libvirt 0.8.8 through 0.9.1 uses the wrong argument for a sizeof call, which causes incorrect processing of \"security manager private data\" that \"reopens disk probing\" and might allow guest OS users to read arbitrary files on the host OS.  NOTE: this vulnerability exists because of a CVE-2010-2238 regression."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:redhat:libvirt:0.8.8"
+            }, 
+            {
+                "id": "cpe:/a:redhat:libvirt:0.9.0"
+            }, 
+            {
+                "id": "cpe:/a:redhat:libvirt:0.9.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.58225", 
+                "id": 58225
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://www.redhat.com/archives/libvir-list/2011-May/msg01935.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=709769", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=709775", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1152-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://people.canonical.com/~ubuntu-security/cve/2011/CVE-2011-2178.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2011-06/msg00030.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2011-July/062515.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://libvirt.org/news.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "single_instance", 
+                    "exploit": "2.7", 
+                    "base": "4.4", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-2178"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13975", 
+                "title": "USN-1152-1 -- libvirt vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13975"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for libvirt FEDORA-2011-9091", 
+                "file": "gb_fedora_2011_9091_libvirt_fc15.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863350"
+            }, 
+            {
+                "name": "Ubuntu Update for libvirt USN-1152-1", 
+                "file": "gb_ubuntu_USN_1152_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840680"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 201202-07 (libvirt)", 
+                "file": "glsa_201202_07.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "71182"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 15 : libvirt-0.8.8-7.fc15 (2011-9091)", 
+                "file": "fedora_2011-9091.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "55561"
+            }, 
+            {
+                "name": "GLSA-201202-07 : libvirt: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201202-07.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "58139"
+            }, 
+            {
+                "name": "openSUSE Security Update : libvirt (openSUSE-SU-2011:0643-1)", 
+                "file": "suse_11_4_libvirt-110614.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75929"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS / 10.10 / 11.04 : libvirt vulnerabilities (USN-1152-1)", 
+                "file": "ubuntu_USN-1152-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "55167"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2011-9091", 
+                "id": "FEDORA-2011-9091"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2011-2178.html", 
+                "id": "openSUSE-SU-2011:0643"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1152-1", 
+                "id": "USN-1152-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

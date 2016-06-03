@@ -1,0 +1,182 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6220", 
+                "published": "2006-11-30T20:28:00.000-05:00", 
+                "id": "CVE-2006-6220", 
+                "modified": "2011-03-07T21:45:37.907-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in Recipes Website (Recipes Complete Website) 1.1.14 allow remote attackers to execute arbitrary SQL commands via the (1) recipeid parameter to recipe.php or the (2) categoryid parameter to list.php."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:recipes_complete_website:recipes_complete_website:1.1.14"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33558", 
+                "id": 33558
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21270", 
+                "id": 21270
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30509", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4686", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21270", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23083", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/2834", 
+                    "vendor": "MILW0RM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006939", 
+                "signature": "ET WEB_SPECIFIC_APPS Recipes Complete Website SQL Injection Attempt -- recipe.php recipeid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006940", 
+                "signature": "ET WEB_SPECIFIC_APPS Recipes Complete Website SQL Injection Attempt -- recipe.php recipeid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006941", 
+                "signature": "ET WEB_SPECIFIC_APPS Recipes Complete Website SQL Injection Attempt -- recipe.php recipeid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006942", 
+                "signature": "ET WEB_SPECIFIC_APPS Recipes Complete Website SQL Injection Attempt -- recipe.php recipeid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006943", 
+                "signature": "ET WEB_SPECIFIC_APPS Recipes Complete Website SQL Injection Attempt -- recipe.php recipeid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006944", 
+                "signature": "ET WEB_SPECIFIC_APPS Recipes Complete Website SQL Injection Attempt -- recipe.php recipeid UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006945", 
+                "signature": "ET WEB_SPECIFIC_APPS Recipes Complete Website SQL Injection Attempt -- list.php categoryid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006946", 
+                "signature": "ET WEB_SPECIFIC_APPS Recipes Complete Website SQL Injection Attempt -- list.php categoryid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006947", 
+                "signature": "ET WEB_SPECIFIC_APPS Recipes Complete Website SQL Injection Attempt -- list.php categoryid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006948", 
+                "signature": "ET WEB_SPECIFIC_APPS Recipes Complete Website SQL Injection Attempt -- list.php categoryid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006949", 
+                "signature": "ET WEB_SPECIFIC_APPS Recipes Complete Website SQL Injection Attempt -- list.php categoryid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006950", 
+                "signature": "ET WEB_SPECIFIC_APPS Recipes Complete Website SQL Injection Attempt -- list.php categoryid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6220"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

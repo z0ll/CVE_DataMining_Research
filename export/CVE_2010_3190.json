@@ -1,0 +1,208 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3190", 
+                "published": "2010-08-31T16:00:02.297-04:00", 
+                "id": "CVE-2010-3190", 
+                "modified": "2011-10-06T00:00:00.000-04:00", 
+                "summary": "Untrusted search path vulnerability in the Microsoft Foundation Class (MFC) Library in Microsoft Visual Studio .NET 2003 SP1; Visual Studio 2005 SP1, 2008 SP1, and 2010; and Visual C++ 2005 SP1, 2008 SP1, and 2010 allows local users to gain privileges via a Trojan horse dwmapi.dll file in the current working directory during execution of an MFC application such as AtlTraceTool8.exe (aka ATL MFC Trace Tool), as demonstrated by a directory that contains a TRC, cur, rs, rct, or res file, aka \"MFC Insecure Library Loading Vulnerability.\""
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:visual_c%2b%2b:2005:sp1_redistribution_pkg"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:visual_studio:2005:sp1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:visual_c%2b%2b:2008:sp1_redistribution_pkg"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:visual_c%2b%2b:2010:redistribution_pkg"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:visual_studio:2010"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:visual_studio_.net:2003:sp1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:visual_studio:2008:sp1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.77886", 
+                "id": 77886
+            }, 
+            {
+                "url": "http://www.scip.ch/?vuldb.54584", 
+                "id": 54584
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0026512", 
+                "id": "2011-B-0046", 
+                "title": "Remote Code Execution Vulnerability in Microsoft Foundation Class (MFC) Library"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA11-102A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/Bulletin/MS11-025.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.corelan.be:8800/index.php/2010/08/25/dll-hijacking-kb-2269637-the-unofficial-list/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/41212", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-3190"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:12457", 
+                "title": "MFC Insecure Library Loading Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:12457"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:7378", 
+                "title": "DEPRECATED: Untrusted search path vulnerability in ATL MFC Trace Tool as used in Microsoft Visual Studio 2010", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:7378"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Apple iTunes Multiple Vulnerabilities Sep15 (Windows)", 
+                "file": "gb_apple_itunes_mult_vuln_sep15.nasl", 
+                "family": "General", 
+                "id": "802962"
+            }, 
+            {
+                "name": "Microsoft Foundation Class (MFC) Library Remote Code Execution Vulnerability (2500212)", 
+                "file": "secpod_ms11-025.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "900285"
+            }, 
+            {
+                "name": "Microsoft Visual Studio Insecure Library Loading Vulnerability", 
+                "file": "secpod_ms_visual_studio_insecure_lib_load_vuln.nasl", 
+                "family": "Windows", 
+                "id": "902255"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Apple iTunes < 12.3 Multiple Vulnerabilities (credentialed check)", 
+                "file": "itunes_12_3_0.nasl", 
+                "family": "Windows", 
+                "id": "86001"
+            }, 
+            {
+                "name": "Apple iTunes < 12.3 Multiple Vulnerabilities (uncredentialed check)", 
+                "file": "itunes_12_3_0_banner.nasl", 
+                "family": "Peer-To-Peer File Sharing", 
+                "id": "86601"
+            }, 
+            {
+                "name": "MS11-025: Vulnerability in Microsoft Foundation Class (MFC) Library Could Allow Remote Code Execution (2500212)", 
+                "file": "smb_nt_ms11-025.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "53382"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in Microsoft Foundation Class (MFC) Library Could Allow Remote Code Execution", 
+                "id": "Vulnerability in Microsoft Foundation Class (MFC) Library Could Allow Remote Code Execution", 
+                "title": "2565063"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2500212", 
+                "id": "2500212", 
+                "title": "Vulnerability in Microsoft Foundation Class (MFC) Library Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS11-025", 
+                "id": "MS11-025", 
+                "title": "Vulnerability in Microsoft Foundation Class (MFC) Library Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,178 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1870", 
+                "published": "2011-07-13T19:55:00.897-04:00", 
+                "id": "CVE-2011-1870", 
+                "modified": "2011-10-04T22:54:15.300-04:00", 
+                "summary": "Integer overflow in the Client/Server Run-time Subsystem (aka CSRSS) in the Win32 subsystem in Microsoft Windows XP SP2 and SP3, and Windows Server 2003 SP2, allows local users to gain privileges or cause a denial of service (memory corruption) via a crafted application that triggers an incorrect memory assignment for a user transaction, aka \"CSRSS Local EOP SrvWriteConsoleOutputString Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2:itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2003_server::sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp3"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp:-:sp2:x64"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.57915", 
+                "id": 57915
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/48605", 
+                "id": 48605
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/73795", 
+                "id": 73795
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA11-193A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/Bulletin/MS11-056.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/48605", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://osvdb.org/73795", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-1870"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:12889", 
+                "title": "CSRSS Local EOP SrvWriteConsoleOutputString Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:12889"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Windows CSRSS Privilege Escalation Vulnerabilities (2507938)", 
+                "file": "secpod_ms11-056.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "902609"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS11-056: Vulnerabilities in Windows Client/Server Run-time Subsystem Could Allow Elevation of Privilege (2507938)", 
+                "file": "smb_nt_ms11-056.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "55572"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerabilities in Windows Client/Server Run-time Subsystem Could Allow Elevation of Privilege", 
+                "id": "Vulnerabilities in Windows Client/Server Run-time Subsystem Could Allow Elevation of Privilege", 
+                "title": "2507938"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2507938", 
+                "id": "2507938", 
+                "title": "Vulnerabilities in Windows Client/Server Run-time Subsystem Could Allow Elevation of Privilege"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS11-056", 
+                "id": "MS11-056", 
+                "title": "Vulnerabilities in Windows Client/Server Run-time Subsystem Could Allow Elevation of Privilege"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

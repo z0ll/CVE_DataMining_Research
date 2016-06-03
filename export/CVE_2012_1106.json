@@ -1,0 +1,387 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1106", 
+                "published": "2012-07-03T12:40:32.037-04:00", 
+                "id": "CVE-2012-1106", 
+                "modified": "2012-07-03T00:00:00.000-04:00", 
+                "summary": "The C handler plug-in in Automatic Bug Reporting Tool (ABRT), possibly 2.0.8 and earlier, does not properly set the group (GID) permissions on core dump files for setuid programs when the sysctl fs.suid_dumpable option is set to 2, which allows local users to obtain sensitive information."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:redhat:automatic_bug_reporting_tool:2.0.7"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.61168", 
+                "id": 61168
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/54121", 
+                "id": 54121
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://fedorahosted.org/abrt/changeset/23d6997d7886abe118c28254f7f73f0b19b2d4e0", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/76524", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/54121", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2012-0841.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "1.9", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-1106"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21344", 
+                "title": "RHSA-2012:0841: abrt, libreport, btparser, and python-meh security and bug fix update (Low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21344"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23932", 
+                "title": "ELSA-2012:0841: abrt, libreport, btparser, and python-meh security and bug fix update (Low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23932"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27500", 
+                "title": "DEPRECATED: ELSA-2012-0841 -- abrt, libreport, btparser, and python-meh security and bug fix update (low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27500"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CentOS Update for abrt CESA-2012:0841 centos6", 
+                "file": "gb_CESA-2012_0841_abrt_centos6.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881079"
+            }, 
+            {
+                "name": "RedHat Update for abrt, libreport, btparser, and python-meh RHSA-2012:0841-04", 
+                "file": "gb_RHSA-2012_0841-04_abrt_libreport_btparser_and_python-meh.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870768"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 6 : abrt (CESA-2012:0841)", 
+                "file": "centos_RHSA-2012-0841.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "59924"
+            }, 
+            {
+                "name": "Oracle Linux 6 : abrt / btparser / libreport / python-meh (ELSA-2012-0841)", 
+                "file": "oraclelinux_ELSA-2012-0841.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68553"
+            }, 
+            {
+                "name": "RHEL 6 : abrt, libreport, btparser, and python-meh (RHSA-2012:0841)", 
+                "file": "redhat-RHSA-2012-0841.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "59589"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : abrt, libreport, btparser, and python-meh on SL6.x i386/x86_64", 
+                "file": "sl_20120620_abrt__libreport__btparser__and_python_meh_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "61336"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20120841", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2012-0841.html", 
+                    "id": "RHSA-2012:0841", 
+                    "title": "RHSA-2012:0841: abrt, libreport, btparser, and python-meh security and bug fix update (Low)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=625485", 
+                    "title": "XML report generated by report lib from within Anaconda is not valid XML", 
+                    "id": "625485", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=727494", 
+                    "title": "[RFE] warn if user wants to re-report the same problem", 
+                    "id": "727494", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=745976", 
+                    "title": "\"Report problem with ABRT\" creates incomplete reports", 
+                    "id": "745976", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=746727", 
+                    "title": "/tmp/anaconda-tb-* is not handled properly", 
+                    "id": "746727", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=747594", 
+                    "title": "Can't proceed from \"Select reporter\" window when item is deselected", 
+                    "id": "747594", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=747624", 
+                    "title": "abrt-cli man page is missing", 
+                    "id": "747624", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=749100", 
+                    "title": "abrt-dump-oops contains non-translatable strings", 
+                    "id": "749100", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=749854", 
+                    "title": "CVE-2011-4088 abrt: may leak some personal information to bugzilla with some certain applications", 
+                    "id": "749854", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=751068", 
+                    "title": "abrt-cli shouldn't require abrt-addon-python", 
+                    "id": "751068", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=758366", 
+                    "title": "Typo in /etc/libreport/events.d/python_event.conf", 
+                    "id": "758366", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=759375", 
+                    "title": "ABRT rebase", 
+                    "id": "759375", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=759377", 
+                    "title": "libreport rebase", 
+                    "id": "759377", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=768377", 
+                    "title": "btparser rebase", 
+                    "id": "768377", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=770357", 
+                    "title": "default config file for mailx is missing", 
+                    "id": "770357", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=773242", 
+                    "title": "Moved copy", 
+                    "id": "773242", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=785163", 
+                    "title": "CVE-2012-1106 abrt: Setuid process core dump archived with unsafe GID permissions", 
+                    "id": "785163", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=796176", 
+                    "title": "Run all unit tests in build process", 
+                    "id": "796176", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=796216", 
+                    "title": "Double free in abrt-action-analyze-oops.c", 
+                    "id": "796216", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=799027", 
+                    "title": "ABRT-INSTALL-CCPPH(1) man page is misleading", 
+                    "id": "799027", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=803618", 
+                    "title": "ABRT mailx plugin on by default causes crashes being always labelled as reported", 
+                    "id": "803618", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=811147", 
+                    "title": "Report correct crash_function in the crash sumary", 
+                    "id": "811147", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=823411", 
+                    "title": "Searching for duplicate anaconda bugs while reporting exception against partner-bugzilla during install fails", 
+                    "id": "823411", 
+                    "issue date": "2012-06-20", 
+                    "associated redhat": "RHSA-2012:0841"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,293 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0017", 
+                "published": "2014-03-14T11:55:05.603-04:00", 
+                "id": "CVE-2014-0017", 
+                "modified": "2014-03-26T00:55:45.500-04:00", 
+                "summary": "The RAND_bytes function in libssh before 0.6.3, when forking is enabled, does not properly reset the state of the OpenSSL pseudo-random number generator (PRNG), which causes the state to be shared between children processes and allows local users to obtain sensitive information by leveraging a pid collision."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/310.html", 
+                "id": "CWE-310", 
+                "title": "Cryptographic Issues"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:libssh:libssh:0.6.0"
+            }, 
+            {
+                "id": "cpe:/a:libssh:libssh:0.5.1"
+            }, 
+            {
+                "id": "cpe:/a:libssh:libssh:0.6.1"
+            }, 
+            {
+                "id": "cpe:/a:libssh:libssh:0.5.2"
+            }, 
+            {
+                "id": "cpe:/a:libssh:libssh:0.4.8"
+            }, 
+            {
+                "id": "cpe:/a:libssh:libssh:0.5.0:rc1"
+            }, 
+            {
+                "id": "cpe:/a:libssh:libssh:0.6.2"
+            }, 
+            {
+                "id": "cpe:/a:libssh:libssh:0.5.3"
+            }, 
+            {
+                "id": "cpe:/a:libssh:libssh:0.5.4"
+            }, 
+            {
+                "id": "cpe:/a:libssh:libssh:0.5.5"
+            }, 
+            {
+                "id": "cpe:/a:libssh:libssh:0.4.7"
+            }, 
+            {
+                "id": "cpe:/a:libssh:libssh:0.5.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.12609", 
+                "id": 12609
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.libssh.org/2014/03/04/libssh-0-6-3-security-release/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1072191", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2145-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2014/03/05/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2014/dsa-2879", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2014-03/msg00040.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2014-03/msg00036.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "1.9", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-0017"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24236", 
+                "title": "DSA-2879-1 libssh - security update", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24236"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23904", 
+                "title": "USN-2145-1 -- libssh vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23904"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:25490", 
+                "title": "SUSE-SU-2014:0413-1 -- Security update for libssh2", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:25490"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2879-1 (libssh - security update)", 
+                "file": "deb_2879.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "702879"
+            }, 
+            {
+                "name": "Fedora Update for libssh FEDORA-2014-3473", 
+                "file": "gb_fedora_2014_3473_libssh_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867575"
+            }, 
+            {
+                "name": "Fedora Update for libssh FEDORA-2014-3485", 
+                "file": "gb_fedora_2014_3485_libssh_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867609"
+            }, 
+            {
+                "name": "Ubuntu Update for libssh USN-2145-1", 
+                "file": "gb_ubuntu_USN_2145_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841750"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-2879-1 : libssh - security update", 
+                "file": "debian_DSA-2879.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "72994"
+            }, 
+            {
+                "name": "Fedora 20 : libssh-0.6.3-1.fc20 (2014-3473)", 
+                "file": "fedora_2014-3473.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "72871"
+            }, 
+            {
+                "name": "Fedora 19 : libssh-0.6.3-1.fc19 (2014-3485)", 
+                "file": "fedora_2014-3485.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "73037"
+            }, 
+            {
+                "name": "FreeBSD : libssh -- PRNG state reuse on forking servers (f8c88d50-5fb3-11e4-81bd-5453ed2e2b49)", 
+                "file": "freebsd_pkg_f8c88d505fb311e481bd5453ed2e2b49.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "78730"
+            }, 
+            {
+                "name": "GLSA-201408-03 : LibSSH: Information disclosure", 
+                "file": "gentoo_GLSA-201408-03.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "77112"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : libssh (MDVSA-2014:053)", 
+                "file": "mandriva_MDVSA-2014-053.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "73000"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : libssh (MDVSA-2015:086)", 
+                "file": "mandriva_MDVSA-2015-086.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "82339"
+            }, 
+            {
+                "name": "openSUSE Security Update : libssh (openSUSE-SU-2014:0366-1)", 
+                "file": "openSUSE-2014-208.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75290"
+            }, 
+            {
+                "name": "Slackware 14.0 / 14.1 / current : libssh (SSA:2015-111-04)", 
+                "file": "Slackware_SSA_2015-111-04.nasl", 
+                "family": "Slackware Local Security Checks", 
+                "id": "82917"
+            }, 
+            {
+                "name": "SuSE 11.3 Security Update : libssh2 (SAT Patch Number 8982)", 
+                "file": "suse_11_libssh2-140307.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "73130"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 12.10 / 13.10 : libssh vulnerability (USN-2145-1)", 
+                "file": "ubuntu_USN-2145-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "72980"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-0017.html", 
+                "id": "openSUSE-SU-2014:0366"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-0017.html", 
+                "id": "openSUSE-SU-2014:0370"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2145-1", 
+                "id": "USN-2145-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2879", 
+                "id": "DSA-2879"
+            }
+        ], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,142 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0401", 
+                "published": "2000-05-01T00:00:00.000-04:00", 
+                "id": "CVE-2000-0401", 
+                "modified": "2008-09-10T15:04:35.103-04:00", 
+                "summary": "Buffer overflows in redirect.exe and changepw.exe in PDGSoft shopping cart allow remote attackers to execute arbitrary commands via a long query string."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:pdgsoft:pdg_shopping_cart:1.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.15503", 
+                "id": 15503
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/1256", 
+                "id": 1256
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/1256", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.pdgsoft.com/Security/security2.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=ntbugtraq&m=95928667119963&w=2", 
+                    "vendor": "NTBUGTRAQ"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=95928319715983&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:2239", 
+                "signature": "SERVER-WEBAPP redirect.exe access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:2240", 
+                "signature": "SERVER-WEBAPP changepw.exe access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2000-0401"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "PDGSoft Shopping cart vulnerability", 
+                "file": "changepw.nasl", 
+                "family": "Web application abuses", 
+                "id": "11723"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "PDGSoft Shopping Cart Multiple Vulnerabilities", 
+                "file": "changepw.nasl", 
+                "family": "CGI abuses", 
+                "id": "11723"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

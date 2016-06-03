@@ -1,0 +1,227 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1502", 
+                "published": "2012-06-15T20:55:06.327-04:00", 
+                "id": "CVE-2012-1502", 
+                "modified": "2012-06-20T00:00:00.000-04:00", 
+                "summary": "Double free vulnerability in the PyPAM_conv in PAMmodule.c in PyPam 0.5.0 and earlier allows remote attackers to cause a denial of service (application crash) or possibly execute arbitrary code via a NULL byte in a password string."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:pypam:pypam:0.5.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.60998", 
+                "id": 60998
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/79892", 
+                "id": 79892
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/73857", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/79892", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.lsexperts.de/advisories/lse-2012-03-01.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2012/dsa-2430", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://ubuntu.com/usn/usn-1395-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/48746", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/48332", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/48312", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2012-04/msg00027.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/18579", 
+                "id": 18579, 
+                "file": "platforms/linux/dos/18579.txt"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-1502"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:14779", 
+                "title": "DSA-2430-1 python-pam -- double free", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:14779"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:14895", 
+                "title": "USN-1395-1 -- PyPAM vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:14895"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2430-1 (python-pam)", 
+                "file": "deb_2430_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "71234"
+            }, 
+            {
+                "name": "Ubuntu Update for python-pam USN-1395-1", 
+                "file": "gb_ubuntu_USN_1395_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840926"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-2430-1 : python-pam - double free", 
+                "file": "debian_DSA-2430.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "58303"
+            }, 
+            {
+                "name": "GLSA-201507-09 : PyPAM: Arbitrary code execution", 
+                "file": "gentoo_GLSA-201507-09.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "84654"
+            }, 
+            {
+                "name": "openSUSE Security Update : python-pam (openSUSE-SU-2012:0487-1)", 
+                "file": "openSUSE-2012-222.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74599"
+            }, 
+            {
+                "name": "SuSE 11.1 Security Update : python-pam (SAT Patch Number 6025)", 
+                "file": "suse_11_python-pam-120322.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "64219"
+            }, 
+            {
+                "name": "SuSE 10 Security Update : python-pam (ZYPP Patch Number 8031)", 
+                "file": "suse_python-pam-8031.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "59308"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS / 10.10 / 11.04 / 11.10 : python-pam vulnerability (USN-1395-1)", 
+                "file": "ubuntu_USN-1395-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "58301"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2012-1502.html", 
+                "id": "openSUSE-SU-2012:0487"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1395-1", 
+                "id": "USN-1395-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2430", 
+                "id": "DSA-2430"
+            }
+        ], 
+        "Vmware": []
+    }
+}

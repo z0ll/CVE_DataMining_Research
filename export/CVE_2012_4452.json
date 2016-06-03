@@ -1,0 +1,273 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-4452", 
+                "published": "2012-10-09T19:55:05.237-04:00", 
+                "id": "CVE-2012-4452", 
+                "modified": "2013-01-14T23:33:29.727-05:00", 
+                "summary": "MySQL 5.0.88, and possibly other versions and platforms, allows local users to bypass certain privilege checks by calling CREATE TABLE on a MyISAM table with modified (1) DATA DIRECTORY or (2) INDEX DIRECTORY arguments that are originally associated with pathnames without symlinks, and that can point to tables created at a future time at which a pathname is modified to contain a symlink to a subdirectory of the MySQL data home directory, related to incorrect calculation of the mysql_unpacked_real_data_home value.  NOTE: this vulnerability exists because of a CVE-2009-4030 regression, which was not omitted in other packages and versions such as MySQL 5.0.95 in Red Hat Enterprise Linux 6."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:oracle:mysql:5.0.88"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.62659", 
+                "id": 62659
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/55715", 
+                "id": 55715
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=860808", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/55715", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/09/27/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2013-0121.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "2.1", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-4452"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23174", 
+                "title": "ELSA-2013:0121: mysql security and bug fix update (Low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23174"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20470", 
+                "title": "RHSA-2013:0121: mysql security and bug fix update (Low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20470"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26702", 
+                "title": "DEPRECATED: ELSA-2013-0121 -- mysql security and bug fix update (low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26702"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CentOS Update for mysql CESA-2013:0121 centos5", 
+                "file": "gb_CESA-2013_0121_mysql_centos5.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881559"
+            }, 
+            {
+                "name": "RedHat Update for mysql RHSA-2013:0121-01", 
+                "file": "gb_RHSA-2013_0121-01_mysql.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870888"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : mysql (CESA-2013:0121)", 
+                "file": "centos_RHSA-2013-0121.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "63566"
+            }, 
+            {
+                "name": "MySQL 5.0 < 5.0.88 Multiple Vulnerabilities", 
+                "file": "mysql_5_0_88.nasl", 
+                "family": "Databases", 
+                "id": "42899"
+            }, 
+            {
+                "name": "MySQL 5.0.95 MyISAM Table Symbolic Link Local Restriction Bypass", 
+                "file": "mysql_5_0_95_create_table_bypass.nasl", 
+                "family": "Databases", 
+                "id": "62927"
+            }, 
+            {
+                "name": "Oracle Linux 5 : mysql (ELSA-2013-0121)", 
+                "file": "oraclelinux_ELSA-2013-0121.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68692"
+            }, 
+            {
+                "name": "RHEL 5 : mysql (RHSA-2013:0121)", 
+                "file": "redhat-RHSA-2013-0121.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "63404"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : mysql on SL5.x i386/x86_64", 
+                "file": "sl_20130108_mysql_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "63599"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20130121", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2013-0121.html", 
+                    "id": "RHSA-2013:0121", 
+                    "title": "RHSA-2013:0121: mysql security and bug fix update (Low)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=526850", 
+                    "title": "MySQL 5.0.77 crashes on comparison of date & datetime types to NAME_CONST()", 
+                    "id": "526850", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0121"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=528512", 
+                    "title": "MySQL memory DoS", 
+                    "id": "528512", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0121"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=543730", 
+                    "title": "mysqld segfaults during SHOW CREATE TABLE", 
+                    "id": "543730", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0121"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=548685", 
+                    "title": "Extra characters appear in BLOB after mysqldump/import", 
+                    "id": "548685", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0121"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=654000", 
+                    "title": "Mysql bug 54488 - crash when using explain and prepared statements with subqueries", 
+                    "id": "654000", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0121"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=675906", 
+                    "title": "Restore / import of mysqldump fails on \"Unknown command '\\''\"", 
+                    "id": "675906", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0121"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=806365", 
+                    "title": "mysql-server-5.0.95-1.el5_7.1 has Profiling disabled by default", 
+                    "id": "806365", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0121"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=860808", 
+                    "title": "CVE-2012-4452 mysql: regression of CVE-2009-4030", 
+                    "id": "860808", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0121"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

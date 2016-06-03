@@ -1,0 +1,160 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0402", 
+                "published": "2000-05-30T00:00:00.000-04:00", 
+                "id": "CVE-2000-0402", 
+                "modified": "2008-09-10T15:04:35.320-04:00", 
+                "summary": "The Mixed Mode authentication capability in Microsoft SQL Server 7.0 stores the System Administrator (sa) account in plaintext in a log file which is readable by any user, aka the \"SQL Server 7.0 Service Pack Password\" vulnerability."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:sql_server:7.0:sp2"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:sql_server:7.0:sp1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:sql_server:7.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.15603", 
+                "id": 15603
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/1281", 
+                "id": 1281
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms00-035.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/1281", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/support/kb.asp?ID=263968", 
+                    "vendor": "MSKB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "2.1", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "mssql_payload.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/mssql/mssql_payload.rb", 
+                "title": "Microsoft SQL Server Payload Execution"
+            }, 
+            {
+                "id": "mssql_payload_sqli.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/mssql/mssql_payload_sqli.rb", 
+                "title": "Microsoft SQL Server Payload Execution via SQL Injection"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/21693", 
+                "id": 21693, 
+                "file": "platforms/windows/remote/21693.nasl"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2000-0402"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS00-035: MS SQL7.0 Service Pack may leave passwords on system (263968)", 
+                "file": "smb_nt_ms00-035.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "11330"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Q263968", 
+                "id": "Q263968", 
+                "title": ""
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/", 
+                "id": "", 
+                "title": "Patch Available for 'SQL Server 7.0 Service Pack Password' Vulnerability"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS00-035", 
+                "id": "MS00-035", 
+                "title": "Patch Available for 'SQL Server 7.0 Service Pack Password' Vulnerability"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

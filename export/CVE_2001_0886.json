@@ -1,0 +1,227 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-0886", 
+                "published": "2001-12-21T00:00:00.000-05:00", 
+                "id": "CVE-2001-0886", 
+                "modified": "2011-03-07T21:06:00.377-05:00", 
+                "summary": "Buffer overflow in glob function of glibc allows attackers to cause a denial of service (crash) and possibly execute arbitrary code via a glob pattern that ends in a brace \"{\" character."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:debian:debian_linux:2.1"
+            }, 
+            {
+                "id": "cpe:/o:redhat:linux:7.2"
+            }, 
+            {
+                "id": "cpe:/o:redhat:linux:6.2"
+            }, 
+            {
+                "id": "cpe:/o:redhat:linux:7.1"
+            }, 
+            {
+                "id": "cpe:/o:redhat:linux:7.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.17773", 
+                "id": 17773
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/3707", 
+                "id": 3707
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2001-160.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://sources.redhat.com/ml/bug-glibc/2001-11/msg00109.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/static/7705.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www1.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBTL0112-008", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/3707", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/245956", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.linuxsecurity.com/advisories/other_advisory-1752.html", 
+                    "vendor": "ENGARDE"
+                }, 
+                {
+                    "url": "http://www.linux-mandrake.com/en/security/2001/MDKSA-2001-095.php3", 
+                    "vendor": "MANDRAKE"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2002/dsa-103", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/m-029.shtml", 
+                    "vendor": "CIAC"
+                }, 
+                {
+                    "url": "http://download.immunix.org/ImmunixOS/7.0/updates/IMNX-2001-70-037-01", 
+                    "vendor": "IMMUNIX"
+                }, 
+                {
+                    "url": "http://distro.conectiva.com.br/atualizacoes/?id=a&anuncio=000447", 
+                    "vendor": "CONECTIVA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2101377", 
+                "signature": "GPL DELETED wu-ftp bad file completion attempt"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2101378", 
+                "signature": "GPL DELETED wu-ftp bad file completion attempt with brace"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "misc-attack", 
+                "id": "sid:1377", 
+                "signature": "PROTOCOL-FTP wu-ftp bad file completion attempt"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:1378", 
+                "signature": "PROTOCOL-FTP wu-ftp bad file completion attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-0886"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 103-1 (glibc)", 
+                "file": "deb_103_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "53837"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-103-1 : glibc - buffer overflow", 
+                "file": "debian_DSA-103.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "14940"
+            }, 
+            {
+                "name": "Mandrake Linux Security Advisory : glibc (MDKSA-2001:095)", 
+                "file": "mandrake_MDKSA-2001-095.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "13908"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [
+            {
+                "url": "http://www1.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBTL0112-008", 
+                "id": "HPSBTL0112-008"
+            }
+        ], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2001-0886.html", 
+                "id": "SuSE-SA:2001:046"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2001-160.html", 
+                    "id": "RHSA-2001:160", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-103", 
+                "id": "DSA-103"
+            }
+        ], 
+        "Vmware": []
+    }
+}

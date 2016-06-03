@@ -1,0 +1,228 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8785", 
+                "published": "2016-02-07T22:59:07.823-05:00", 
+                "id": "CVE-2015-8785", 
+                "modified": "2016-02-25T10:25:33.013-05:00", 
+                "summary": "The fuse_fill_write_pages function in fs/fuse/file.c in the Linux kernel before 4.4 allows local users to cause a denial of service (infinite loop) via a writev system call that triggers a zero length for the first segment of an iov."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:4.4:rc8"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.80804", 
+                "id": 80804
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/torvalds/linux/commit/3ca8138f014a913f98e6ef40e939868e1e9ea876", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1290642", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2016/01/24/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=3ca8138f014a913f98e6ef40e939868e1e9ea876", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.9", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-8785"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3503-1 (linux - security update)", 
+                "file": "deb_3503.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703503"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DLA-412-1 : linux-2.6 security update", 
+                "file": "debian_DLA-412.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "88600"
+            }, 
+            {
+                "name": "Debian DSA-3503-1 : linux - security update", 
+                "file": "debian_DSA-3503.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "89122"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : kernel (SUSE-SU-2016:0585-1)", 
+                "file": "suse_SU-2016-0585-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "89022"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : kernel (SUSE-SU-2016:0785-1)", 
+                "file": "suse_SU-2016-0785-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "89993"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : kernel (SUSE-SU-2016:0911-1)", 
+                "file": "suse_SU-2016-0911-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "90264"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux vulnerabilities (USN-2886-1)", 
+                "file": "ubuntu_USN-2886-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "88518"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux vulnerabilities (USN-2907-1)", 
+                "file": "ubuntu_USN-2907-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "88895"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-trusty vulnerabilities (USN-2907-2)", 
+                "file": "ubuntu_USN-2907-2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "88896"
+            }, 
+            {
+                "name": "Ubuntu 15.10 : linux vulnerabilities (USN-2908-1)", 
+                "file": "ubuntu_USN-2908-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "88897"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-wily vulnerabilities (USN-2908-2)", 
+                "file": "ubuntu_USN-2908-2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "88898"
+            }, 
+            {
+                "name": "Ubuntu 15.10 : linux-raspi2 vulnerabilities (USN-2908-3)", 
+                "file": "ubuntu_USN-2908-3.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "88899"
+            }, 
+            {
+                "name": "Ubuntu 15.10 : linux regression (USN-2908-4)", 
+                "file": "ubuntu_USN-2908-4.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "89023"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-wily regression (USN-2908-5)", 
+                "file": "ubuntu_USN-2908-5.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "89024"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-utopic vulnerabilities (USN-2909-1)", 
+                "file": "ubuntu_USN-2909-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "88900"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-utopic regression (USN-2909-2)", 
+                "file": "ubuntu_USN-2909-2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "89025"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-vivid vulnerabilities (USN-2910-1)", 
+                "file": "ubuntu_USN-2910-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "88901"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-vivid regression (USN-2910-2)", 
+                "file": "ubuntu_USN-2910-2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "89026"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

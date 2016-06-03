@@ -1,0 +1,178 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1903", 
+                "published": "2014-02-18T06:55:16.977-05:00", 
+                "id": "CVE-2014-1903", 
+                "modified": "2014-02-21T00:06:46.907-05:00", 
+                "summary": "admin/libraries/view.functions.php in FreePBX 2.9 before 2.9.0.14, 2.10 before 2.10.1.15, 2.11 before 2.11.0.23, and 12 before 12.0.1alpha22 does not restrict the set of functions accessible to the API handler, which allows remote attackers to execute arbitrary PHP code via the function and args parameters to admin/config.php."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:freepbx:freepbx:2.12"
+            }, 
+            {
+                "id": "cpe:/a:freepbx:freepbx:2.11"
+            }, 
+            {
+                "id": "cpe:/a:freepbx:freepbx:2.9"
+            }, 
+            {
+                "id": "cpe:/a:freepbx:freepbx:2.10"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.12491", 
+                "id": 12491
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/103240", 
+                "id": 103240
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/531040/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.freepbx.org/news/2014-02-06/security-vulnerability-notice", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://packetstormsecurity.com/files/125215/FreePBX-2.9-Remote-Code-Execution.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://packetstormsecurity.com/files/125166/FreePBX-2.x-Code-Execution.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://osvdb.org/103240", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://issues.freepbx.org/browse/FREEPBX-7123", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://issues.freepbx.org/browse/FREEPBX-7117", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://code.freepbx.org/changelog/FreePBX_SVN?cs=16429", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://code.freepbx.org/changelog/FreePBX_Framework?cs=a29382efeb293ef4f42aa9b841dfc8eabb2d1e03", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/fulldisclosure/2014-02/0111.html", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/fulldisclosure/2014-02/0097.html", 
+                    "vendor": "FULLDISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "freepbx_config_exec.rb", 
+                "file": "metasploit-framework/modules/exploits/unix/webapp/freepbx_config_exec.rb", 
+                "title": "FreePBX config.php Remote Code Execution"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/32214", 
+                "id": 32214, 
+                "file": "platforms/php/webapps/32214.pl"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/freepbx_config", 
+                "id": "exploit_info/freepbx_config", 
+                "title": "FreePBX Framework Module view.functions.php Remote Code Execution"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-1903"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

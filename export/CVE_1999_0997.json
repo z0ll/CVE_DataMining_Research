@@ -1,0 +1,166 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0997", 
+                "published": "1999-12-20T00:00:00.000-05:00", 
+                "id": "CVE-1999-0997", 
+                "modified": "2008-09-05T16:18:28.777-04:00", 
+                "summary": "wu-ftp with FTP conversion enabled allows an attacker to execute commands via a malformed file name that is interpreted as an argument to the program that does the conversion, e.g. tar or uncompress."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:redhat:linux:5.2"
+            }, 
+            {
+                "id": "cpe:/a:university_of_washington:wu-ftpd:2.5.0"
+            }, 
+            {
+                "id": "cpe:/o:redhat:linux:6.0"
+            }, 
+            {
+                "id": "cpe:/a:university_of_washington:wu-ftpd:2.4.2"
+            }, 
+            {
+                "id": "cpe:/a:millenux_gmbh:anonftp:2.8.1"
+            }, 
+            {
+                "id": "cpe:/o:redhat:linux:6.1"
+            }, 
+            {
+                "id": "cpe:/a:university_of_washington:wu-ftpd:2.6.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.15073", 
+                "id": 15073
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.debian.org/security/2003/dsa-377", 
+                    "vendor": "DEBIAN"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2101530", 
+                "signature": "GPL FTP format string attempt"
+            }, 
+            {
+                "classtype": "bad-unknown", 
+                "id": "sid:2100362", 
+                "signature": "GPL FTP tar parameters"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "bad-unknown", 
+                "id": "sid:362", 
+                "signature": "PROTOCOL-FTP tar parameters"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0997"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 377-1 (wu-ftpd)", 
+                "file": "deb_377_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "53663"
+            }, 
+            {
+                "name": "Slackware Advisory SSA:2003-259-03 WU-FTPD Security Advisory ", 
+                "file": "esoft_slk_ssa_2003_259_03.nasl", 
+                "family": "Slackware Local Security Checks", 
+                "id": "53963"
+            }, 
+            {
+                "name": "wu-ftpd SITE EXEC vulnerability", 
+                "file": "wu_ftpd_site_exec.nasl", 
+                "family": "FTP", 
+                "id": "10452"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-377-1 : wu-ftpd - insecure program execution", 
+                "file": "debian_DSA-377.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "15214"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-377", 
+                "id": "DSA-377"
+            }
+        ], 
+        "Vmware": []
+    }
+}

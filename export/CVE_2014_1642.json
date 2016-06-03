@@ -1,0 +1,250 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1642", 
+                "published": "2014-01-26T11:58:11.620-05:00", 
+                "id": "CVE-2014-1642", 
+                "modified": "2014-04-19T00:47:49.143-04:00", 
+                "summary": "The IRQ setup in Xen 4.2.x and 4.3.x, when using device passthrough and configured to support a large number of CPUs, frees certain memory that may still be intended for use, which allows local guest administrators to cause a denial of service (memory corruption and hypervisor crash) and possibly execute arbitrary code via vectors related to an out-of-memory error that triggers a (1) use-after-free or (2) double free."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:xen:xen:4.2.0"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.2.1"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.3.0"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.2.2"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.3.1"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.2.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.12064", 
+                "id": 12064
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/65097", 
+                "id": 65097
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/102406", 
+                "id": 102406
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/90649", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://xenbits.xen.org/xsa/advisory-83.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id/1029679", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/65097", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2014/01/23/4", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://osvdb.org/102406", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2014-03/msg00011.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2014-February/127607.html", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "4.4", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-1642"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:25390", 
+                "title": "SUSE-SU-2014:0373-1 -- Security update for Xen", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:25390"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for xen FEDORA-2014-2170", 
+                "file": "gb_fedora_2014_2170_xen_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867511"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2014-2188", 
+                "file": "gb_fedora_2014_2188_xen_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867506"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2014-2802", 
+                "file": "gb_fedora_2014_2802_xen_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867554"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2014-2862", 
+                "file": "gb_fedora_2014_2862_xen_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867548"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2014-4424", 
+                "file": "gb_fedora_2014_4424_xen_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867665"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2014-4458", 
+                "file": "gb_fedora_2014_4458_xen_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867662"
+            }, 
+            {
+                "name": "SuSE Update for Xen SUSE-SU-2014:0373-1 (Xen)", 
+                "file": "gb_suse_2014_0373_1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "850573"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 20 : xen-4.3.1-8.fc20 (2014-1552)", 
+                "file": "fedora_2014-1552.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "72251"
+            }, 
+            {
+                "name": "Fedora 19 : xen-4.2.3-14.fc19 (2014-1559)", 
+                "file": "fedora_2014-1559.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "72252"
+            }, 
+            {
+                "name": "GLSA-201407-03 : Xen: Multiple Vunlerabilities", 
+                "file": "gentoo_GLSA-201407-03.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "76544"
+            }, 
+            {
+                "name": "openSUSE Security Update : xen (openSUSE-SU-2014:0483-1)", 
+                "file": "openSUSE-2014-271.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75312"
+            }, 
+            {
+                "name": "SuSE 11.3 Security Update : Xen (SAT Patch Number 8973)", 
+                "file": "suse_11_xen-201402-140227.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "73015"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2014-1552", 
+                "id": "FEDORA-2014-1552"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-1642.html", 
+                "id": "SUSE-SU-2014:0373"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,221 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0097", 
+                "published": "2011-04-13T14:55:01.080-04:00", 
+                "id": "CVE-2011-0097", 
+                "modified": "2013-01-15T00:00:00.000-05:00", 
+                "summary": "Integer underflow in Microsoft Excel 2002 SP3, 2003 SP3, 2007 SP2, and 2010; Office 2004 and 2008 for Mac; Open XML File Format Converter for Mac; Excel Viewer SP2; and Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats SP2 allows remote attackers to execute arbitrary code via a crafted 400h substream in an Excel file, which triggers a stack-based buffer overflow, aka \"Excel Integer Overrun Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:excel:2003:sp3"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:excel:2002:sp3"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:office:2008::mac"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:open_xml_file_format_converter:::mac"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:excel:2010"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:office:2004::mac"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:excel:-:-:x64"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:excel:2007:sp2"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:office_compatibility_pack:2007:sp2"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:excel_viewer:-:sp2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.57072", 
+                "id": 57072
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/47201", 
+                "id": 47201
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/71758", 
+                "id": 71758
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA11-102A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/Bulletin/MS11-021.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2011/0940", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1025337", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/47201", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/secunia_research/2011-31", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/39122", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/71758", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/excel_substream_parsing_integer_overflow", 
+                "id": "exploit_info/excel_substream_parsing_integer_overflow", 
+                "title": "Microsoft Excel Substream Parsing Integer Overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-0097"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:12612", 
+                "title": "Excel Integer Overrun Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:12612"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Office Excel Remote Code Execution Vulnerabilities (2489279)", 
+                "file": "secpod_ms11-021.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "902410"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS11-021 / MS11-022 / MS11-023: Vulnerabilities in Microsoft Office Could Allow Remote Code Execution (2489279 / 2489283 / 2489293) (Mac OS X)", 
+                "file": "macosx_ms_office_apr2011.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "53374"
+            }, 
+            {
+                "name": "MS11-021: Vulnerabilities in Microsoft Excel Could Allow Remote Code Execution (2489279)", 
+                "file": "smb_nt_ms11-021.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "53378"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerabilities in Microsoft Excel Could Allow Remote Code Execution", 
+                "id": "Vulnerabilities in Microsoft Excel Could Allow Remote Code Execution", 
+                "title": "2466156"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2489283", 
+                "id": "2489283", 
+                "title": "Vulnerabilities in Microsoft Excel Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS11-021", 
+                "id": "MS11-021", 
+                "title": "Vulnerabilities in Microsoft Excel Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,146 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-1063", 
+                "published": "1999-06-01T00:00:00.000-04:00", 
+                "id": "CVE-1999-1063", 
+                "modified": "2008-09-05T16:18:38.120-04:00", 
+                "summary": "CDomain whois_raw.cgi whois CGI script allows remote attackers to execute arbitrary commands via shell metacharacters in the fqdn parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:cdomain:cdomainfree:2.4"
+            }, 
+            {
+                "id": "cpe:/a:cdomain:cdomainfree:2.0"
+            }, 
+            {
+                "id": "cpe:/a:cdomain:cdomainfree:2.2"
+            }, 
+            {
+                "id": "cpe:/a:cdomain:cdomainfree:1.0"
+            }, 
+            {
+                "id": "cpe:/a:cdomain:cdomainfree:2.1"
+            }, 
+            {
+                "id": "cpe:/a:cdomain:cdomainfree:2.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14677", 
+                "id": 14677
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/304", 
+                "id": 304
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/static/2251.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/304", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/14019", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:809", 
+                "signature": "SERVER-WEBAPP whois_raw.cgi arbitrary command execution attempt"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:810", 
+                "signature": "SERVER-WEBAPP whois_raw.cgi access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-1063"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "CDomain whois_raw.cgi fqdn Parameter Arbitrary Command Execution", 
+                "file": "whois_raw.nasl", 
+                "family": "CGI abuses", 
+                "id": "10306"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

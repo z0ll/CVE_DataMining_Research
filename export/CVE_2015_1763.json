@@ -1,0 +1,201 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/693.html", 
+                "id": "CWE-693", 
+                "title": "Protection Mechanism Failure"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/664.html", 
+                "id": "CWE-664", 
+                "title": "Improper Control of a Resource Through its Lifetime"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/632.html", 
+                "id": "CWE-632", 
+                "title": "Weaknesses that Affect Files or Directories"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/723.html", 
+                "id": "CWE-723", 
+                "title": "OWASP Top Ten 2004 Category A2 - Broken Access Control"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/944.html", 
+                "id": "CWE-944", 
+                "title": "SFP Secondary Cluster: Access Management"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/19.html", 
+                "id": 19
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/474.html", 
+                "id": 474
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1763", 
+                "published": "2015-07-14T19:59:01.943-04:00", 
+                "id": "CVE-2015-1763", 
+                "modified": "2015-07-15T12:17:47.410-04:00", 
+                "summary": "Microsoft SQL Server 2008 SP3 and SP4, 2008 R2 SP2 and SP3, 2012 SP1 and SP2, and 2014 does not prevent use of uninitialized memory in certain attempts to execute virtual functions, which allows remote authenticated users to execute arbitrary code via a crafted query, aka \"SQL Server Remote Code Execution Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/284.html", 
+                "id": "CWE-284", 
+                "title": "Improper Access Control"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:sql_server:2008:r2_sp2"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:sql_server:2012:sp2"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:sql_server:2014"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:sql_server:2008:r2_sp3"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:sql_server:2012:sp1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:sql_server:2008:sp3"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:sql_server:2008:sp4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.76440", 
+                "id": 76440
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS15-058", 
+                    "vendor": "MS"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "single_instance", 
+                    "exploit": "6.8", 
+                    "base": "8.5", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-1763"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:29315", 
+                "title": "SQL Server remote code execution vulnerability - CVE-2015-1763 (MS15-058)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:29315"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS15-058: Vulnerabilities in SQL Server Could Allow Remote Code Execution (3065718) (uncredentialed check)", 
+                "file": "smb_kb3065718.nasl", 
+                "family": "Windows", 
+                "id": "84737"
+            }, 
+            {
+                "name": "MS15-058: Vulnerabilities in SQL Server Could Allow Remote Code Execution (3065718)", 
+                "file": "smb_nt_ms15-058.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "84738"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerabilities in SQL Server Could Allow Remote Code Execution", 
+                "id": "Vulnerabilities in SQL Server Could Allow Remote Code Execution", 
+                "title": "3045323"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/3065718", 
+                "id": "3065718", 
+                "title": "Vulnerabilities in SQL Server Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS15-058", 
+                "id": "MS15-058", 
+                "title": ""
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

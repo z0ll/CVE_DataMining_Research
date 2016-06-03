@@ -1,0 +1,458 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3131", 
+                "published": "2012-12-13T06:53:33.350-05:00", 
+                "id": "CVE-2011-3131", 
+                "modified": "2012-12-13T00:00:00.000-05:00", 
+                "summary": "Xen 4.1.1 and earlier allows local guest OS kernels with control of a PCI[E] device to cause a denial of service (CPU consumption and host hang) via many crafted DMA requests that are denied by the IOMMU, which triggers a livelock."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:xen:xen:4.1.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.63187", 
+                "id": 63187
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/49146", 
+                "id": 49146
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xenbits.xen.org/hg/staging/xen-4.1-testing.hg/rev/84e3706df07a", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/49146", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2012/dsa-2582", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/51468", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/45622", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://old-list-archives.xen.org/archives/html/xen-devel/2011-08/msg00450.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://old-list-archives.xen.org/archives/html/xen-devel/2011-06/msg01106.html", 
+                    "vendor": "MLIST"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "single_instance", 
+                    "exploit": "3.1", 
+                    "base": "4.6", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-3131"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23388", 
+                "title": "ELSA-2011:1386: kernel security, bug fix, and enhancement update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23388"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28137", 
+                "title": "DEPRECATED: ELSA-2011-1386 -- kernel security, bug fix, and enhancement update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28137"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21885", 
+                "title": "RHSA-2011:1386: kernel security, bug fix, and enhancement update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21885"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20155", 
+                "title": "DSA-2582-1 xen - denial of service", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20155"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2582-1 (xen - several vulnerabilities)", 
+                "file": "deb_2582_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "892582"
+            }, 
+            {
+                "name": "CentOS Update for kernel CESA-2011:1386 centos5 i386", 
+                "file": "gb_CESA-2011_1386_kernel_centos5_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881021"
+            }, 
+            {
+                "name": "CentOS Update for kernel CESA-2011:1386 centos5 x86_64", 
+                "file": "gb_CESA-2011_1386_kernel_centos5_x86_64.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881406"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2011-10834", 
+                "file": "gb_fedora_2011_10834_xen_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864069"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2011-10942", 
+                "file": "gb_fedora_2011_10942_xen_fc15.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863471"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2012-1539", 
+                "file": "gb_fedora_2012_1539_xen_fc15.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863739"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2012-9430", 
+                "file": "gb_fedora_2012_9430_xen_fc15.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864512"
+            }, 
+            {
+                "name": "RedHat Update for kernel RHSA-2011:1386-01", 
+                "file": "gb_RHSA-2011_1386-01_kernel.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870504"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : kernel (CESA-2011:1386)", 
+                "file": "centos_RHSA-2011-1386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "56569"
+            }, 
+            {
+                "name": "Debian DSA-2582-1 : xen - several vulnerabilities", 
+                "file": "debian_DSA-2582.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "63188"
+            }, 
+            {
+                "name": "Oracle Linux 5 : kernel (ELSA-2011-1386)", 
+                "file": "oraclelinux_ELSA-2011-1386.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68375"
+            }, 
+            {
+                "name": "OracleVM 2.2 : xen (OVMSA-2011-0008)", 
+                "file": "oraclevm_OVMSA-2011-0008.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "79474"
+            }, 
+            {
+                "name": "RHEL 5 : kernel (RHSA-2011:1386)", 
+                "file": "redhat-RHSA-2011-1386.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "56577"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL5.x i386/x86_64", 
+                "file": "sl_20111020_kernel_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "61162"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20111386", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2011-1386.html", 
+                    "id": "RHSA-2011:1386", 
+                    "title": "RHSA-2011:1386: kernel security, bug fix, and enhancement update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=684671", 
+                    "title": "CVE-2011-1160 kernel: tpm infoleaks", 
+                    "id": "684671", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=697394", 
+                    "title": "CVE-2011-1585 kernel: cifs session reuse", 
+                    "id": "697394", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=715436", 
+                    "title": "CVE-2011-2484 kernel: taskstats: duplicate entries in listener mode can lead to DoS", 
+                    "id": "715436", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=716538", 
+                    "title": "CVE-2011-2496 kernel: mm: avoid wrapping vm_pgoff in mremap() and stack expansions", 
+                    "id": "716538", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=722393", 
+                    "title": "CVE-2009-4067 kernel: usb: buffer overflow in auerswald_probe()", 
+                    "id": "722393", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=722557", 
+                    "title": "CVE-2011-2695 kernel: ext4: kernel panic when writing data to the last block of sparse file", 
+                    "id": "722557", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=723429", 
+                    "title": "CVE-2011-2699 kernel: ipv6: make fragment identifications less predictable", 
+                    "id": "723429", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=726552", 
+                    "title": "CVE-2011-2723 kernel: gro: only reset frag0 when skb can be pulled", 
+                    "id": "726552", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=728518", 
+                    "title": "win2003 i386 guest BSOD when created with e1000 nic [rhel-5.7.z]", 
+                    "id": "728518", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=730341", 
+                    "title": "CVE-2011-3131 kernel: xen: IOMMU fault livelock", 
+                    "id": "730341", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=730682", 
+                    "title": "[EL5.7] igb: failed to activate WOL on 2nd LAN port on i350 [rhel-5.7.z]", 
+                    "id": "730682", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=730686", 
+                    "title": "Huge performance regression in NFS client [rhel-5.7.z]", 
+                    "id": "730686", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=730917", 
+                    "title": "CVE-2011-2942 kernel: bridge: null pointer dereference in __br_deliver", 
+                    "id": "730917", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=731172", 
+                    "title": "CVE-2011-1833 kernel: ecryptfs: mount source TOCTOU race", 
+                    "id": "731172", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=732658", 
+                    "title": "CVE-2011-3188 kernel: net: improve sequence number generation", 
+                    "id": "732658", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=732869", 
+                    "title": "CVE-2011-3191 kernel: cifs: signedness issue in CIFSFindNext()", 
+                    "id": "732869", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=732878", 
+                    "title": "CVE-2011-3209 kernel: panic occurs when clock_gettime() is called", 
+                    "id": "732878", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=733665", 
+                    "title": "Incorrect values in /proc/sys/vm/dirty_writeback_centises and dirty_expire_centisecs [rhel-5.7.z]", 
+                    "id": "733665", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=736425", 
+                    "title": "CVE-2011-3347 kernel: be2net: promiscuous mode and non-member VLAN packets DoS", 
+                    "id": "736425", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=738389", 
+                    "title": "Patch needed to allow MTU >1500 on vif prior to connecting to bridge [rhel-5.7.z]", 
+                    "id": "738389", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=738392", 
+                    "title": "netfront MTU drops to 1500 after domain migration [rhel-5.7.z]", 
+                    "id": "738392", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=739823", 
+                    "title": "2.6.18-238.1.1.el5 or newer won't boot under Xen HVM due to linux-2.6-virt-nmi-don-t-print-nmi-stuck-messages-on-guests.patch [rhel-5.7.z]", 
+                    "id": "739823", 
+                    "issue date": "2011-10-20", 
+                    "associated redhat": "RHSA-2011:1386"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2582", 
+                "id": "DSA-2582"
+            }
+        ], 
+        "Vmware": []
+    }
+}

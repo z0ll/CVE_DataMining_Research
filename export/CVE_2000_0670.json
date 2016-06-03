@@ -1,0 +1,148 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0670", 
+                "published": "2000-07-12T00:00:00.000-04:00", 
+                "id": "CVE-2000-0670", 
+                "modified": "2008-09-10T15:05:34.210-04:00", 
+                "summary": "The cvsweb CGI script in CVSWeb 1.80 allows remote attackers with write access to a CVS repository to execute arbitrary commands via shell metacharacters."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:cvsweb_developer:cvsweb:1.80"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.15762", 
+                "id": 15762
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/1469", 
+                "id": 1469
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/static/4925.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2000-07/0196.html", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.turbolinux.com/pipermail/tl-security-announce/2000-August/000015.html", 
+                    "vendor": "TURBO"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/1469", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2000-07/0178.html", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-00:37.cvsweb.asc", 
+                    "vendor": "FREEBSD"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-recon", 
+                "id": "sid:823", 
+                "signature": "SERVER-WEBAPP cvsweb.cgi access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1552", 
+                "signature": "SERVER-WEBAPP cvsweb version access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2000-0670"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "CVSweb 1.80 cvsweb.cgi Arbitrary Command Execution", 
+                "file": "cvsweb_shell.nasl", 
+                "family": "CGI abuses", 
+                "id": "10465"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/20000719b", 
+                "id": "20000719b"
+            }
+        ], 
+        "Vmware": []
+    }
+}

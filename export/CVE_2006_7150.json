@@ -1,0 +1,198 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-7150", 
+                "published": "2007-03-07T15:19:00.000-05:00", 
+                "id": "CVE-2006-7150", 
+                "modified": "2008-09-05T17:16:32.920-04:00", 
+                "summary": "Multiple SQL injection vulnerabilities in Mambo 4.6.x allow remote attackers to execute arbitrary SQL commands via the mcname parameter to (1) moscomment.php and (2) com_comment.php."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:mambo:mambo_open_source:4.6.1"
+            }, 
+            {
+                "id": "cpe:/a:mambo:mambo_open_source:4.6::cvs"
+            }, 
+            {
+                "id": "cpe:/a:mambo:mambo_open_source:4.6:rc1"
+            }, 
+            {
+                "id": "cpe:/a:mambo:mambo_open_source:4.6:rc2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35485", 
+                "id": 35485
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/20650", 
+                "id": 20650
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/29707", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/20650", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/449305/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.kapda.ir/advisory-444.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2379", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004427", 
+                "signature": "ET WEB_SPECIFIC_APPS Mambo SQL Injection Attempt -- moscomment.php mcname SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004428", 
+                "signature": "ET WEB_SPECIFIC_APPS Mambo SQL Injection Attempt -- moscomment.php mcname UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004429", 
+                "signature": "ET WEB_SPECIFIC_APPS Mambo SQL Injection Attempt -- moscomment.php mcname INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004430", 
+                "signature": "ET WEB_SPECIFIC_APPS Mambo SQL Injection Attempt -- moscomment.php mcname DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004431", 
+                "signature": "ET WEB_SPECIFIC_APPS Mambo SQL Injection Attempt -- moscomment.php mcname ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004432", 
+                "signature": "ET WEB_SPECIFIC_APPS Mambo SQL Injection Attempt -- moscomment.php mcname UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004433", 
+                "signature": "ET WEB_SPECIFIC_APPS Mambo SQL Injection Attempt -- com_comment.php mcname SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004434", 
+                "signature": "ET WEB_SPECIFIC_APPS Mambo SQL Injection Attempt -- com_comment.php mcname UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004435", 
+                "signature": "ET WEB_SPECIFIC_APPS Mambo SQL Injection Attempt -- com_comment.php mcname INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004436", 
+                "signature": "ET WEB_SPECIFIC_APPS Mambo SQL Injection Attempt -- com_comment.php mcname DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004437", 
+                "signature": "ET WEB_SPECIFIC_APPS Mambo SQL Injection Attempt -- com_comment.php mcname ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004438", 
+                "signature": "ET WEB_SPECIFIC_APPS Mambo SQL Injection Attempt -- com_comment.php mcname UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-7150"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: mambo", 
+                "file": "freebsd_mambo2.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "57458"
+            }
+        ], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

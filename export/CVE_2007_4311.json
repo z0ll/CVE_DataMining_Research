@@ -1,0 +1,171 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-4311", 
+                "published": "2007-08-13T17:17:00.000-04:00", 
+                "id": "CVE-2007-4311", 
+                "modified": "2011-05-25T00:00:00.000-04:00", 
+                "summary": "The xfer_secondary_pool function in drivers/char/random.c in the Linux kernel 2.4 before 2.4.35 performs reseed operations on only the first few bytes of a buffer, which might make it easier for attackers to predict the output of the random number generator, related to incorrect use of the sizeof operator."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/310.html", 
+                "id": "CWE-310", 
+                "title": "Cryptographic Issues"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:2.4.34"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.38293", 
+                "id": 38293
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/25029", 
+                "id": 25029
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/2690", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/25029", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.kernel.org/pub/linux/kernel/v2.4/ChangeLog-2.4.35", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.kernel.org/pub/linux/kernel/v2.4/ChangeLog-2.4.34.6", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2008/dsa-1503", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/29058", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://git.kernel.org/?p=linux/kernel/git/stable/linux-2.4.34.y.git;a=commit;h=faa3369ac2ea7feb0dd266b6a5e8d6ab153cf925", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://git.kernel.org/?p=linux/kernel/git/stable/linux-2.4.34.y.git;a=commit;h=bd67d4c7b11cc33ebdc346bc8926d255b354cd64", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-4311"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:8063", 
+                "title": "DSA-1503 kernel-source-2.4.27 -- several vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:8063"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 1503-1 (kernel-source-2.4.27 (2.4.27-10sarge6))", 
+                "file": "deb_1503_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "60437"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 1503-2 (kernel-source-2.4.27 (2.4.27-10sarge7))", 
+                "file": "deb_1503_2.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "60498"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-1503-1 : kernel-source-2.4.27 - several vulnerabilities", 
+                "file": "debian_DSA-1503.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "31147"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-1503", 
+                "id": "DSA-1503"
+            }
+        ], 
+        "Vmware": []
+    }
+}

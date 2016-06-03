@@ -1,0 +1,165 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-7115", 
+                "published": "2007-03-05T20:19:00.000-05:00", 
+                "id": "CVE-2006-7115", 
+                "modified": "2008-09-10T20:47:20.557-04:00", 
+                "summary": "SQL injection vulnerability in PHPKit 1.6.1 RC2 allows remote attackers to inject arbitrary SQL commands via the catid parameter to include.php when the path parameter is set to faq/faq.php, and other unspecified vectors involving guestbook/print.php."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:phpkit:phpkit:1.6.1:rc2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35418", 
+                "id": 35418
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21002", 
+                "id": 21002
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/31265", 
+                "id": 31265
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30209", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21002", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/451304/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/31265", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.bb-pcsecurity.de/websecurity/532/org/PHPKit_1.6.1_RC2_%28faq-faq.php%29_Remote_SQL_Injection_Exploit.htm", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/17479", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2357", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004695", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPKit SQL Injection Attempt -- include.php catid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004696", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPKit SQL Injection Attempt -- include.php catid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004697", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPKit SQL Injection Attempt -- include.php catid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004698", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPKit SQL Injection Attempt -- include.php catid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004699", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPKit SQL Injection Attempt -- include.php catid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004700", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPKit SQL Injection Attempt -- include.php catid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-7115"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

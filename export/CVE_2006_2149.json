@@ -1,0 +1,156 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-2149", 
+                "published": "2006-05-03T06:02:00.000-04:00", 
+                "id": "CVE-2006-2149", 
+                "modified": "2011-03-07T21:35:26.737-05:00", 
+                "summary": "PHP remote file inclusion vulnerability in sources/lostpw.php in Aardvark Topsites PHP 4.2.2 and earlier, when register_globals is enabled, allows remote attackers to execute arbitrary PHP code via the CONFIG[path] parameter, as demonstrated by including a GIF that contains PHP code."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:avatic:aardvark_topsites_php:4.2.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.30017", 
+                "id": 30017
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/17940", 
+                "id": 17940
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/25158", 
+                "id": 25158
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/1587", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/19911", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/1732", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/26189", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/17940", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/25158", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "6.4", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2002901", 
+                "signature": "ET WEB_SPECIFIC_APPS PHP Aardvark Topsites PHP CONFIG PATH Remote File Include Attempt"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-2149"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Aardvark Topsites <", 
+                "file": "aardvark_422_remote_file_include.nasl", 
+                "family": "Web application abuses", 
+                "id": "200005"
+            }, 
+            {
+                "name": "Aardvark Topsites <= 4.2.2 Remote File Inclusion Vulnerability", 
+                "file": "aardvark_422_remote_file_include.nasl", 
+                "family": "Web application abuses", 
+                "id": "100006"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Aardvark Topsites CONFIG[path] Parameter Remote File Inclusion", 
+                "file": "aardvark_422_remote_file_include.nasl", 
+                "family": "CGI abuses", 
+                "id": "21329"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

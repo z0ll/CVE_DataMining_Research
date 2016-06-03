@@ -1,0 +1,284 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3445", 
+                "published": "2012-08-07T17:55:02.187-04:00", 
+                "id": "CVE-2012-3445", 
+                "modified": "2013-03-21T23:11:32.787-04:00", 
+                "summary": "The virTypedParameterArrayClear function in libvirt 0.9.13 does not properly handle virDomain* API calls with typed parameters, which might allow remote authenticated users to cause a denial of service (libvirtd crash) via an RPC command with nparams set to zero, which triggers an out-of-bounds read or a free of an invalid pointer."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:redhat:libvirt:0.9.13"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.61513", 
+                "id": 61513
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/54748", 
+                "id": 54748
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://www.redhat.com/archives/libvir-list/2012-July/msg01650.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=844734", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/54748", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/07/31/7", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/07/31/4", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/50372", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/50299", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/50118", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2012-1202.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2012-08/msg00023.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "single_instance", 
+                    "exploit": "6.8", 
+                    "base": "3.5", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-3445"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27712", 
+                "title": "DEPRECATED: ELSA-2012-1202 -- libvirt security and bug fix update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27712"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21083", 
+                "title": "RHSA-2012:1202: libvirt security and bug fix update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21083"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23518", 
+                "title": "ELSA-2012:1202: libvirt security and bug fix update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23518"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CentOS Update for libvirt CESA-2012:1202 centos6", 
+                "file": "gb_CESA-2012_1202_libvirt_centos6.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881473"
+            }, 
+            {
+                "name": "Fedora Update for libvirt FEDORA-2012-11843", 
+                "file": "gb_fedora_2012_11843_libvirt_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864648"
+            }, 
+            {
+                "name": "Fedora Update for libvirt FEDORA-2012-12523", 
+                "file": "gb_fedora_2012_12523_libvirt_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864692"
+            }, 
+            {
+                "name": "Fedora Update for libvirt FEDORA-2012-15634", 
+                "file": "gb_fedora_2012_15634_libvirt_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864779"
+            }, 
+            {
+                "name": "Fedora Update for libvirt FEDORA-2012-20531", 
+                "file": "gb_fedora_2012_20531_libvirt_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864970"
+            }, 
+            {
+                "name": "Fedora Update for libvirt FEDORA-2013-1626", 
+                "file": "gb_fedora_2013_1626_libvirt_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865328"
+            }, 
+            {
+                "name": "RedHat Update for libvirt RHSA-2012:1202-01", 
+                "file": "gb_RHSA-2012_1202-01_libvirt.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870813"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 6 : libvirt (CESA-2012:1202)", 
+                "file": "centos_RHSA-2012-1202.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "61661"
+            }, 
+            {
+                "name": "Fedora 16 : libvirt-0.9.6.2-1.fc16 (2012-11843)", 
+                "file": "fedora_2012-11843.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "61631"
+            }, 
+            {
+                "name": "Fedora 17 : libvirt-0.9.11.5-3.fc17 (2012-12523)", 
+                "file": "fedora_2012-12523.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "61779"
+            }, 
+            {
+                "name": "openSUSE Security Update : libvirt (openSUSE-SU-2012:0991-1)", 
+                "file": "openSUSE-2012-514.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74713"
+            }, 
+            {
+                "name": "Oracle Linux 6 : libvirt (ELSA-2012-1202)", 
+                "file": "oraclelinux_ELSA-2012-1202.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68603"
+            }, 
+            {
+                "name": "RHEL 6 : libvirt (RHSA-2012:1202)", 
+                "file": "redhat-RHSA-2012-1202.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "61654"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : libvirt on SL6.x i386/x86_64", 
+                "file": "sl_20120823_libvirt_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "61656"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2012-3445.html", 
+                "id": "openSUSE-SU-2012:0991"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20121202", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2012-1202.html", 
+                    "id": "RHSA-2012:1202", 
+                    "title": "RHSA-2012:1202: libvirt security and bug fix update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=844734", 
+                    "title": "CVE-2012-3445 libvirt: crash in virTypedParameterArrayClear", 
+                    "id": "844734", 
+                    "issue date": "2012-08-23", 
+                    "associated redhat": "RHSA-2012:1202"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=847946", 
+                    "title": "libvirtd may hang during tunneled migration", 
+                    "id": "847946", 
+                    "issue date": "2012-08-23", 
+                    "associated redhat": "RHSA-2012:1202"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

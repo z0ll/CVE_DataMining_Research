@@ -1,0 +1,186 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-0491", 
+                "published": "2005-05-02T00:00:00.000-04:00", 
+                "id": "CVE-2005-0491", 
+                "modified": "2008-09-05T16:46:27.100-04:00", 
+                "summary": "Stack-based buffer overflow in Knox Arkeia Server Backup 5.3.x allows remote attackers to execute arbitrary code via a long type 77 request."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:knox_software:arkeia_server_backup:5.3.0_rc3"
+            }, 
+            {
+                "id": "cpe:/a:knox_software:arkeia_server_backup:5.3.0_rc2"
+            }, 
+            {
+                "id": "cpe:/a:knox_software:arkeia_server_backup:5.3.0_rc1"
+            }, 
+            {
+                "id": "cpe:/a:knox_software:arkeia_server_backup:5.3.0_rc4"
+            }, 
+            {
+                "id": "cpe:/a:knox_software:arkeia_server_backup:5.3.0"
+            }, 
+            {
+                "id": "cpe:/a:knox_software:arkeia_server_backup:5.3.1"
+            }, 
+            {
+                "id": "cpe:/a:knox_software:arkeia_server_backup:5.3.4"
+            }, 
+            {
+                "id": "cpe:/a:knox_software:arkeia_server_backup:5.3.2"
+            }, 
+            {
+                "id": "cpe:/a:knox_software:arkeia_server_backup:5.3.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.24483", 
+                "id": 24483
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/12594", 
+                "id": 12594
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/14011", 
+                "id": 14011
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/12594", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/14327", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/19398", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110887325425794&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-recon", 
+                "id": "sid:3453", 
+                "signature": "SERVER-OTHER Arkeia client backup system info probe"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:3454", 
+                "signature": "SERVER-OTHER Arkeia client backup generic info probe"
+            }, 
+            {
+                "category": "attempted-user", 
+                "id": "sid:3457", 
+                "signature": "SERVER-OTHER Arkeia backup client type 77 overflow attempt"
+            }, 
+            {
+                "category": "attempted-user", 
+                "id": "sid:3458", 
+                "signature": "SERVER-OTHER Arkeia backup client type 84 overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "type77.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/arkeia/type77.rb", 
+                "title": "Arkeia Backup Client Type 77 Overflow (Win32)"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/arkeia_type_77_request", 
+                "id": "exploit_info/arkeia_type_77_request", 
+                "title": "Arkeia Type 77 Request buffer overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-0491"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Knox Arkeia Backup Client Type 77 Request Processing Buffer Remote Overflow", 
+                "file": "arkeia_type77_overflow.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "17158"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

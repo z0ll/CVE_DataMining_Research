@@ -1,0 +1,174 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4642", 
+                "published": "2012-01-03T06:55:03.690-05:00", 
+                "id": "CVE-2011-4642", 
+                "modified": "2012-11-06T00:04:10.297-05:00", 
+                "summary": "mappy.py in Splunk Web in Splunk 4.2.x before 4.2.5 does not properly restrict use of the mappy command to access Python classes, which allows remote authenticated administrators to execute arbitrary code by leveraging the sys module in a request to the search application, as demonstrated by a cross-site request forgery (CSRF) attack, aka SPL-45172."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/352.html", 
+                "id": "CWE-352", 
+                "title": "Cross-Site Request Forgery (CSRF)"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:splunk:splunk:4.2.1"
+            }, 
+            {
+                "id": "cpe:/a:splunk:splunk:4.2.2"
+            }, 
+            {
+                "id": "cpe:/a:splunk:splunk:4.2.3"
+            }, 
+            {
+                "id": "cpe:/a:splunk:splunk:4.2.4"
+            }, 
+            {
+                "id": "cpe:/a:splunk:splunk:4.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.59868", 
+                "id": 59868
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/77695", 
+                "id": 77695
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.splunk.com/view/SP-CAAAGMM", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1026451", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.sec-1.com/blog/wp-content/uploads/2011/12/Attacking_Splunk_Release.pdf", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.sec-1.com/blog/?p=233", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/18245/", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/47232", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "single_instance", 
+                    "exploit": "3.9", 
+                    "base": "4.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "splunk_mappy_exec.rb", 
+                "file": "metasploit-framework/modules/exploits/multi/http/splunk_mappy_exec.rb", 
+                "title": "Splunk Search Remote Code Execution"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/18245", 
+                "id": 18245, 
+                "file": "http://www.exploit-db.com/download/18245"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/splunk_search_jobs_rce", 
+                "id": "exploit_info/splunk_search_jobs_rce", 
+                "title": "Splunk Search Jobs Remote Code Execution"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-4642"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Splunk Multiple Vulnerabilities", 
+                "file": "secpod_splunk_multiple_vuln.nasl", 
+                "family": "Web application abuses", 
+                "id": "902801"
+            }, 
+            {
+                "name": "Splunk Multiple Vulnerabilities", 
+                "file": "secpod_splunk_multiple_vuln.nasl", 
+                "family": "Web application abuses", 
+                "id": "901152"
+            }
+        ], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

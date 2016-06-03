@@ -1,0 +1,253 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0003", 
+                "published": "2012-01-10T16:55:03.727-05:00", 
+                "id": "CVE-2012-0003", 
+                "modified": "2013-03-06T23:50:20.230-05:00", 
+                "summary": "Unspecified vulnerability in winmm.dll in Windows Multimedia Library in Windows Media Player (WMP) in Microsoft Windows XP SP2 and SP3, Server 2003 SP2, Vista SP2, and Server 2008 SP2 allows remote attackers to execute arbitrary code via a crafted MIDI file, aka \"MIDI Remote Code Execution Vulnerability.\""
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_7:-:sp1:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:r2:sp1:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp2:professional_x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_vista::sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_7:-:-:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:r2:sp1:itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_7:-:-:x32"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp::sp3"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_xp:2005:sp3:media_center"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:r2::x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_vista::sp2:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008::sp2:x32"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:-:sp2:itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:r2::itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_7:-:sp1:x32"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2:itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008::sp2:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2003::sp2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.4533", 
+                "id": 4533
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0031000", 
+                "id": "2012-A-0005", 
+                "title": "Multiple Remote Code Execution Vulnerabilities in Microsoft Windows Media"
+            }
+        ], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/51292", 
+                "id": 51292
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA12-010A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1026492", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/51292", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS12-004", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/47485", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2014155", 
+                "signature": "ET CURRENT_EVENTS JavaScript Obfuscation JSXX Script"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2014156", 
+                "signature": "ET WEB_CLIENT Microsoft Windows Media component specific exploit"
+            }, 
+            {
+                "classtype": "trojan-activity", 
+                "id": "sid:2014207", 
+                "signature": "ET WEB_CLIENT Likely MS12-004 midiOutPlayNextPolyEvent Heap Overflow Midi Filename Requested baby.mid"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms12_004_midi.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/browser/ms12_004_midi.rb", 
+                "title": "MS12-004 midiOutPlayNextPolyEvent Heap Overflow"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/18426", 
+                "id": 18426, 
+                "file": "platforms/windows/remote/18426.rb"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/windows_media_midi_invalid_channel", 
+                "id": "exploit_info/windows_media_midi_invalid_channel", 
+                "title": "Windows Media MIDI Invalid Channel"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-0003"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:14337", 
+                "title": "MIDI Remote Code Execution Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:14337"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Windows Media Could Allow Remote Code Execution Vulnerabilities (2636391)", 
+                "file": "secpod_ms12-004.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "902807"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS12-004: Vulnerabilities in Windows Media Could Allow Remote Code Execution (2636391)", 
+                "file": "smb_nt_ms12-004.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "57472"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerabilities in Windows Media Could Allow Remote Code Execution", 
+                "id": "Vulnerabilities in Windows Media Could Allow Remote Code Execution", 
+                "title": "2628642"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2636391", 
+                "id": "2636391", 
+                "title": "Vulnerabilities in Windows Media Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS12-004", 
+                "id": "MS12-004", 
+                "title": "Vulnerabilities in Windows Media Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

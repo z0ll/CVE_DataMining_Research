@@ -1,0 +1,157 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3307", 
+                "published": "2007-06-20T21:30:00.000-04:00", 
+                "id": "CVE-2007-3307", 
+                "modified": "2008-11-15T01:52:09.827-05:00", 
+                "summary": "SQL injection vulnerability in game_listing.php in Solar Empire 2.9.1.1 and earlier allows remote attackers to execute arbitrary SQL commands via the User-Agent HTTP header."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:solar_empire:solar_empire:2.9.1.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.37372", 
+                "id": 37372
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/24519", 
+                "id": 24519
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/36303", 
+                "id": 36303
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/24519", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/4078", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://osvdb.org/36303", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34909", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25716", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006479", 
+                "signature": "ET WEB_SPECIFIC_APPS Solar Empire SQL Injection Attempt -- game_listing.php SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006480", 
+                "signature": "ET WEB_SPECIFIC_APPS Solar Empire SQL Injection Attempt -- game_listing.php UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006481", 
+                "signature": "ET WEB_SPECIFIC_APPS Solar Empire SQL Injection Attempt -- game_listing.php INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006482", 
+                "signature": "ET WEB_SPECIFIC_APPS Solar Empire SQL Injection Attempt -- game_listing.php DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006484", 
+                "signature": "ET WEB_SPECIFIC_APPS Solar Empire SQL Injection Attempt -- game_listing.php ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006485", 
+                "signature": "ET WEB_SPECIFIC_APPS Solar Empire SQL Injection Attempt -- game_listing.php UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-3307"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,177 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-0958", 
+                "published": "2001-09-12T00:00:00.000-04:00", 
+                "id": "CVE-2001-0958", 
+                "modified": "2008-09-05T16:25:19.940-04:00", 
+                "summary": "Buffer overflows in eManager plugin for Trend Micro InterScan VirusWall for NT 3.51 and 3.51J allow remote attackers to execute arbitrary code via long arguments to the CGI programs (1) register.dll, (2) ContentFilter.dll, (3) SFNofitication.dll, (4) register.dll, (5) TOP10.dll, (6) SpamExcp.dll, and (7) spamrule.dll."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:trend_micro:interscan_viruswall:3.32"
+            }, 
+            {
+                "id": "cpe:/a:trend_micro:interscan_viruswall:3.0.1"
+            }, 
+            {
+                "id": "cpe:/a:trend_micro:interscan_emanager:3.51"
+            }, 
+            {
+                "id": "cpe:/a:trend_micro:interscan_viruswall:3.3"
+            }, 
+            {
+                "id": "cpe:/a:trend_micro:interscan_emanager:3.51_j"
+            }, 
+            {
+                "id": "cpe:/a:trend_micro:interscan_viruswall:3.2.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.17350", 
+                "id": 17350
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/3327", 
+                "id": 3327
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/static/7104.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/3327", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2001-09/0099.html", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.trendmicro.co.jp/esolution/solutionDetail.asp?solutionID=3142", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:2231", 
+                "signature": "SERVER-WEBAPP register.dll access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:2232", 
+                "signature": "SERVER-WEBAPP ContentFilter.dll access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:2233", 
+                "signature": "SERVER-WEBAPP SFNofitication.dll access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:2234", 
+                "signature": "SERVER-WEBAPP TOP10.dll access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:2235", 
+                "signature": "SERVER-WEBAPP SpamExcp.dll access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:2236", 
+                "signature": "SERVER-WEBAPP spamrule.dll access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-0958"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Trend Micro Emanager software check", 
+                "file": "trendmicro_emanager.nasl", 
+                "family": "Web application abuses", 
+                "id": "11747"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Trend Micro Emanager Detection", 
+                "file": "trendmicro_emanager.nasl", 
+                "family": "CGI abuses", 
+                "id": "11747"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

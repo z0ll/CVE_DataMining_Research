@@ -1,0 +1,129 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-1078", 
+                "published": "1999-07-29T00:00:00.000-04:00", 
+                "id": "CVE-1999-1078", 
+                "modified": "2008-09-05T16:18:40.227-04:00", 
+                "summary": "WS_FTP Pro 6.0 uses weak encryption for passwords in its initialization files, which allows remote attackers to easily decrypt the passwords and gain privileges."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:ipswitch:ws_ftp_pro:6.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14747", 
+                "id": 14747
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/547", 
+                "id": 547
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/547", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.ntbugtraq.com/default.asp?pid=36&sid=1&A2=ind9907&L=ntbugtraq&D=0&P=10370&F=P", 
+                    "vendor": "NTBUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1166", 
+                "signature": "SERVER-WEBAPP ws_ftp.ini access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-1078"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "WS_FTP client weak stored password", 
+                "file": "ws_ftp_client_weak_stored_pass.nasl", 
+                "family": "Windows", 
+                "id": "14597"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "WS_FTP Pro Client Weak Password Encrypted", 
+                "file": "ws_ftp_client_weak_stored_pass.nasl", 
+                "family": "Windows", 
+                "id": "14597"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

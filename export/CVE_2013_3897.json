@@ -1,0 +1,199 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3897", 
+                "published": "2013-10-09T10:54:25.747-04:00", 
+                "id": "CVE-2013-3897", 
+                "modified": "2013-12-19T23:36:03.907-05:00", 
+                "summary": "Use-after-free vulnerability in the CDisplayPointer class in mshtml.dll in Microsoft Internet Explorer 6 through 11 allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via crafted JavaScript code that uses the onpropertychange event handler, as exploited in the wild in September and October 2013, aka \"Internet Explorer Memory Corruption Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:6"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:10"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:7"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:11:release-preview"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:11:developer-preview"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:8"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:9"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.10627", 
+                "id": 10627
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0040759", 
+                "id": "2013-A-0188", 
+                "title": "Cumulative Security Update for Microsoft Internet Explorer"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/ncas/alerts/TA13-288A", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS13-080", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://blogs.technet.com/b/srd/archive/2013/10/08/ms13-080-addresses-two-vulnerabilities-under-limited-targeted-attacks.aspx", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2017572", 
+                "signature": "ET WEB_CLIENT Possible Microsoft Internet Explorer Use-After-Free CVE-2013-3897"
+            }, 
+            {
+                "classtype": "trojan-activity", 
+                "id": "sid:2019374", 
+                "signature": "ET CURRENT_EVENTS DRIVEBY Sednit EK IE Exploit CVE-2013-3897 M1"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms13_080_cdisplaypointer.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/browser/ms13_080_cdisplaypointer.rb", 
+                "title": "MS13-080 Microsoft Internet Explorer CDisplayPointer Use-After-Free"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/ie_cdisplaypointer_onpropertychange_uaf", 
+                "id": "exploit_info/ie_cdisplaypointer_onpropertychange_uaf", 
+                "title": "Internet Explorer CDisplayPointer Object onpropertychange Use-After-Free"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-3897"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18989", 
+                "title": "Internet Explorer Memory Corruption Vulnerability (CVE-2013-3897) - MS13-080", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:18989"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Internet Explorer Multiple Memory Corruption Vulnerabilities (2879017)", 
+                "file": "gb_microsoft_security_advisory_2887505.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "803867"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS13-080: Cumulative Security Update for Internet Explorer (2879017)", 
+                "file": "smb_nt_ms13-080.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "70332"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Cumulative Security Update for Internet Explorer", 
+                "id": "Cumulative Security Update for Internet Explorer", 
+                "title": "2884101"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2879017", 
+                "id": "2879017", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS13-080", 
+                "id": "MS13-080", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

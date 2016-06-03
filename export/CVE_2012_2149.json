@@ -1,0 +1,225 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2149", 
+                "published": "2012-06-21T11:55:12.520-04:00", 
+                "id": "CVE-2012-2149", 
+                "modified": "2012-10-30T00:03:57.250-04:00", 
+                "summary": "The WPXContentListener::_closeTableRow function in WPXContentListener.cpp in libwpd 0.8.8, as used by OpenOffice.org (OOo) before 3.4, allows remote attackers to execute arbitrary code via a crafted Wordperfect .WPD document that causes a negative array index to be used.  NOTE: some sources report this issue as an integer overflow."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:apache:openoffice.org:3.4:beta_1"
+            }, 
+            {
+                "id": "cpe:/a:fridrich_strba:libwpd:0.8.8"
+            }, 
+            {
+                "id": "cpe:/a:apache:openoffice.org:3.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.5436", 
+                "id": 5436
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/53570", 
+                "id": 53570
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://www.sec-consult.com/files/20120518-0_openoffice_memory_overwrite.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1027069", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/53570", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openoffice.org/security/cves/CVE-2012-2149.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/46992", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2012-1043.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://packetstormsecurity.org/files/112862/libwpd-WPXContentListener-_closeTableRow-Memory-Overwrite.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2012-05/0090.html", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-2149"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21601", 
+                "title": "RHSA-2012:1043: libwpd security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21601"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23100", 
+                "title": "ELSA-2012:1043: libwpd security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23100"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CentOS Update for libwpd CESA-2012:1043 centos5", 
+                "file": "gb_CESA-2012_1043_libwpd_centos5.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881106"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : libwpd (CESA-2012:1043)", 
+                "file": "centos_RHSA-2012-1043.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "59737"
+            }, 
+            {
+                "name": "Debian DLA-44-1 : libwpd security update", 
+                "file": "debian_DLA-44.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "82191"
+            }, 
+            {
+                "name": "GLSA-201408-19 : OpenOffice, LibreOffice: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201408-19.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "77467"
+            }, 
+            {
+                "name": "Apache OpenOffice < 3.4.0 Multiple Memory Corruption Vulnerabilities", 
+                "file": "openoffice_34.nasl", 
+                "family": "Windows", 
+                "id": "59191"
+            }, 
+            {
+                "name": "RHEL 5 : libwpd (RHSA-2012:1043)", 
+                "file": "redhat-RHSA-2012-1043.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "59721"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : libwpd on SL5.x i386/x86_64", 
+                "file": "sl_20120626_libwpd_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "61355"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20121043", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2012-1043.html", 
+                    "id": "RHSA-2012:1043", 
+                    "title": "RHSA-2012:1043: libwpd security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=822207", 
+                    "title": "CVE-2012-2149 libwpd: Memory overwrite flaw by processing certain WordPerfect (WPD) documents", 
+                    "id": "822207", 
+                    "issue date": "2012-06-26", 
+                    "associated redhat": "RHSA-2012:1043"
+                }
+            }
+        ], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/201408-19", 
+                "id": "GLSA-201408-19"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

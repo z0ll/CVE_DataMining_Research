@@ -1,0 +1,173 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2175", 
+                "published": "2007-04-24T12:19:00.000-04:00", 
+                "id": "CVE-2007-2175", 
+                "modified": "2008-09-05T17:22:24.133-04:00", 
+                "summary": "Apple QuickTime Java extensions (QTJava.dll), as used in Safari and other browsers, and when Java is enabled, allows remote attackers to execute arbitrary code via parameters to the toQTPointer method in quicktime.util.QTHandleRef, which can be used to modify arbitrary memory when creating QTPointerRef objects, as demonstrated during the \"PWN 2 0WN\" contest at CanSecWest 2007."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:apple:safari"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.36322", 
+                "id": 36322
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/34178", 
+                "id": 34178
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/420668", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/33827", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.zerodayinitiative.com/advisories/ZDI-07-023.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.theregister.co.uk/2007/04/20/pwn-2-own_winner/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1017950", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.matasano.com/log/812/breaking-macbook-vuln-in-quicktime-affects-win32-apple-code/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.matasano.com/log/806/hot-off-the-matasano-sms-queue-cansec-macbook-challenge-won/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://lists.apple.com/archives/security-announce/2007/May/msg00001.html", 
+                    "vendor": "APPLE"
+                }, 
+                {
+                    "url": "http://docs.info.apple.com/article.html?artnum=305446", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://cansecwest.com/post/2007-04-20-14:54:00.First_Mac_Hacked_Cancel_Or_Allow", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/467319/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/34178", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/420668", 
+                "id": "VU#420668"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "4.9", 
+                    "base": "7.6", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "qtjava_pointer.rb", 
+                "file": "metasploit-framework/modules/exploits/multi/browser/qtjava_pointer.rb", 
+                "title": "Apple QTJava toQTPointer() Arbitrary Memory Access"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2175"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Quicktime < 7.1.6 quicktime.util.QTHandleRef toQTPointer Method Arbitrary Code Execution (Mac OS X)", 
+                "file": "macosx_Quicktime716.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "25122"
+            }, 
+            {
+                "name": "QuickTime < 7.1.6 quicktime.util.QTHandleRef toQTPointer Method Arbitrary Code Execution (Windows)", 
+                "file": "quicktime_716.nasl", 
+                "family": "Windows", 
+                "id": "25123"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

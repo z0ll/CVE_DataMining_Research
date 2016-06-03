@@ -1,0 +1,197 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6200", 
+                "published": "2006-11-30T20:28:00.000-05:00", 
+                "id": "CVE-2006-6200", 
+                "modified": "2011-03-07T21:45:36.000-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in the (1) rate_article and (2) rate_complete functions in modules/News/index.php in the News module in Francisco Burzi PHP-Nuke 7.9 and earlier, when magic_quotes_gpc is disabled, allow remote attackers to execute arbitrary SQL commands via the sid parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:francisco_burzi:php-nuke:7.4"
+            }, 
+            {
+                "id": "cpe:/a:francisco_burzi:php-nuke:7.3"
+            }, 
+            {
+                "id": "cpe:/a:francisco_burzi:php-nuke:7.9"
+            }, 
+            {
+                "id": "cpe:/a:francisco_burzi:php-nuke:7.6"
+            }, 
+            {
+                "id": "cpe:/a:francisco_burzi:php-nuke:7.5"
+            }, 
+            {
+                "id": "cpe:/a:francisco_burzi:php-nuke:7.0"
+            }, 
+            {
+                "id": "cpe:/a:francisco_burzi:php-nuke:7.1"
+            }, 
+            {
+                "id": "cpe:/a:francisco_burzi:php-nuke:7.2"
+            }, 
+            {
+                "id": "cpe:/a:francisco_burzi:php-nuke:7.7"
+            }, 
+            {
+                "id": "cpe:/a:francisco_burzi:php-nuke:7.8"
+            }, 
+            {
+                "id": "cpe:/a:francisco_burzi:php-nuke:7.0_final"
+            }, 
+            {
+                "id": "cpe:/a:francisco_burzi:php-nuke:7.8_patched_3.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33538", 
+                "id": 33538
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21277", 
+                "id": 21277
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/21277", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.neosecurityteam.net/index.php?action=advisories&id=30", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30525", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4739", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/452553/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1017282", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23128", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/1935", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007176", 
+                "signature": "ET WEB_SPECIFIC_APPS Francisco Burzi PHP-Nuke SQL Injection Attempt -- index.php sid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007177", 
+                "signature": "ET WEB_SPECIFIC_APPS Francisco Burzi PHP-Nuke SQL Injection Attempt -- index.php sid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007178", 
+                "signature": "ET WEB_SPECIFIC_APPS Francisco Burzi PHP-Nuke SQL Injection Attempt -- index.php sid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007179", 
+                "signature": "ET WEB_SPECIFIC_APPS Francisco Burzi PHP-Nuke SQL Injection Attempt -- index.php sid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007180", 
+                "signature": "ET WEB_SPECIFIC_APPS Francisco Burzi PHP-Nuke SQL Injection Attempt -- index.php sid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007181", 
+                "signature": "ET WEB_SPECIFIC_APPS Francisco Burzi PHP-Nuke SQL Injection Attempt -- index.php sid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6200"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

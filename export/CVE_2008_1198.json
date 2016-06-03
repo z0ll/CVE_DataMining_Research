@@ -1,0 +1,196 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1198", 
+                "published": "2008-03-06T16:44:00.000-05:00", 
+                "id": "CVE-2008-1198", 
+                "modified": "2008-09-05T17:37:06.473-04:00", 
+                "summary": "The default IPSec ifup script in Red Hat Enterprise Linux 3 through 5 configures racoon to use aggressive IKE mode instead of main IKE mode, which makes it easier for remote attackers to conduct brute force attacks by sniffing an unencrypted preshared key (PSK) hash."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/16.html", 
+                "id": "CWE-16", 
+                "title": "Configuration"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:5.0"
+            }, 
+            {
+                "id": "cpe:/a:red_hat:enterprise_linux:4"
+            }, 
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:3.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.41368", 
+                "id": 41368
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=435274", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/41053", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1019563", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.ernw.de/download/pskattack.pdf", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "7.1", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2008-1198"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23362", 
+                "title": "ELSA-2012:0312: initscripts security and bug fix update (Low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23362"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20759", 
+                "title": "RHSA-2012:0312: initscripts security and bug fix update (Low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20759"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27792", 
+                "title": "DEPRECATED: ELSA-2012-0312 -- initscripts security and bug fix update (low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27792"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "RedHat Update for initscripts RHSA-2012:0312-03", 
+                "file": "gb_RHSA-2012_0312-03_initscripts.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870555"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Oracle Linux 5 : initscripts (ELSA-2012-0312)", 
+                "file": "oraclelinux_ELSA-2012-0312.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68483"
+            }, 
+            {
+                "name": "RHEL 5 : initscripts (RHSA-2012:0312)", 
+                "file": "redhat-RHSA-2012-0312.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "58066"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : initscripts on SL5.x i386/x86_64", 
+                "file": "sl_20120221_initscripts_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "61263"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20120312", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2012-0312.html", 
+                    "id": "RHSA-2012:0312", 
+                    "title": "RHSA-2012:0312: initscripts security and bug fix update (Low)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=435274", 
+                    "title": "CVE-2008-1198 IPSec ifup script allows for aggressive IKE mode", 
+                    "id": "435274", 
+                    "issue date": "2012-02-21", 
+                    "associated redhat": "RHSA-2012:0312"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=679998", 
+                    "title": "[REG][5.6] rm command reports an error message during system booting.", 
+                    "id": "679998", 
+                    "issue date": "2012-02-21", 
+                    "associated redhat": "RHSA-2012:0312"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,188 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1453", 
+                "published": "2014-04-16T14:37:13.413-04:00", 
+                "id": "CVE-2014-1453", 
+                "modified": "2014-06-21T00:39:28.690-04:00", 
+                "summary": "The NFS server (nfsserver) in FreeBSD 8.3 through 10.0 does not acquire locks in the proper order when converting a directory file handle to a vnode, which allows remote authenticated users to cause a denial of service (deadlock) via vectors involving a thread that uses the correct locking order."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:freebsd:freebsd:9.1:release-p4"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:9.2:rc2"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:10.0"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:9.2:rc1"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:9.0:beta2"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:9.0:beta3"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:9.0:beta1"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:9.1:release-p5"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:9.2:prerelease"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:9.1"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:8.3"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:9.2"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:8.4"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:9.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.12858", 
+                "id": 12858
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/66726", 
+                "id": 66726
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securitytracker.com/id/1030041", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/66726", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.freebsd.org/security/advisories/FreeBSD-SA-14:05.nfsserver.asc", 
+                    "vendor": "FREEBSD"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2014/dsa-2952", 
+                    "vendor": "DEBIAN"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "4.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-1453"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24634", 
+                "title": "DSA-2952-1 kfreebsd-9 - security update", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24634"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2952-1 (kfreebsd-9 - security update)", 
+                "file": "deb_2952.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "702952"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-2952-1 : kfreebsd-9 - security update", 
+                "file": "debian_DSA-2952.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "74374"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2952", 
+                "id": "DSA-2952"
+            }
+        ], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,190 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0976", 
+                "published": "2011-02-10T14:00:01.753-05:00", 
+                "id": "CVE-2011-0976", 
+                "modified": "2011-10-04T22:52:42.127-04:00", 
+                "summary": "Microsoft PowerPoint 2002 SP3, 2003 SP3, and 2007 SP2; Office 2004 and 2008 for Mac; Open XML File Format Converter for Mac; Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats SP2; and PowerPoint Viewer 2007 SP2 do not properly handle Office Art containers that have invalid records, which allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via a PowerPoint document with a container that triggers certain access to an uninitialized object, aka \"OfficeArt Atom RCE Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:powerpoint:2007"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.4286", 
+                "id": 4286
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0026525", 
+                "id": "2011-A-0047", 
+                "title": "Multiple Vulnerabilities in Microsoft Office PowerPoint"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA11-102A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://zerodayinitiative.com/advisories/ZDI-11-044/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2011/0941", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1025340", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/516233/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/Bulletin/MS11-022.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/43213", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://dvlabs.tippingpoint.com/blog/2011/02/07/zdi-disclosure-microsoft", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-0976"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:11978", 
+                "title": "OfficeArt Atom RCE Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:11978"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft PowerPoint 2007 OfficeArt Atom Remote Code Execution Vulnerability", 
+                "file": "gb_ms_power_point_code_exec_vuln.nasl", 
+                "family": "Windows", 
+                "id": "801594"
+            }, 
+            {
+                "name": "Microsoft Office PowerPoint Remote Code Execution Vulnerabilities (2489283)", 
+                "file": "secpod_ms11-022.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "902411"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS11-021 / MS11-022 / MS11-023: Vulnerabilities in Microsoft Office Could Allow Remote Code Execution (2489279 / 2489283 / 2489293) (Mac OS X)", 
+                "file": "macosx_ms_office_apr2011.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "53374"
+            }, 
+            {
+                "name": "MS11-022: Vulnerabilities in Microsoft PowerPoint Could Allow Remote Code Execution (2489283)", 
+                "file": "smb_nt_ms11-022.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "53379"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerabilities in Microsoft PowerPoint Could Allow Remote Code Execution", 
+                "id": "Vulnerabilities in Microsoft PowerPoint Could Allow Remote Code Execution", 
+                "title": "2520047"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2489283", 
+                "id": "2489283", 
+                "title": "Vulnerabilities in Microsoft PowerPoint Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS11-022", 
+                "id": "MS11-022", 
+                "title": "Vulnerabilities in Microsoft PowerPoint Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

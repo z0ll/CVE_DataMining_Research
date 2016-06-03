@@ -1,0 +1,143 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-7101", 
+                "published": "2007-03-03T16:19:00.000-05:00", 
+                "id": "CVE-2006-7101", 
+                "modified": "2011-03-07T21:47:51.970-05:00", 
+                "summary": "SQL injection vulnerability in admin.php in PHPWind 5.0.1 and earlier allows remote attackers to execute arbitrary SQL commands via the AdminUser cookie."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:phpwind:phpwind:5.0.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35392", 
+                "id": 35392
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30184", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4462", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/2759", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/22846", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004701", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPWind SQL Injection Attempt -- admin.php SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004702", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPWind SQL Injection Attempt -- admin.php UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005180", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPWind SQL Injection Attempt -- admin.php INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004703", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPWind SQL Injection Attempt -- admin.php DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004704", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPWind SQL Injection Attempt -- admin.php ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005181", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPWind SQL Injection Attempt -- admin.php UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-7101"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

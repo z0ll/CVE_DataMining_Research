@@ -1,0 +1,266 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-0755", 
+                "published": "2005-04-19T00:00:00.000-04:00", 
+                "id": "CVE-2005-0755", 
+                "modified": "2011-03-07T21:20:32.127-05:00", 
+                "summary": "Heap-based buffer overflow in RealPlayer 10 and earlier, Helix Player before 10.0.4, and RealOne Player v1 and v2 allows remote attackers to execute arbitrary code via a long hostname in a RAM file."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:realnetworks:realplayer:10.0:::english"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realplayer:8.0"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realplayer:10.0_6.0.12.690"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:helix_player:10.0.3"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realplayer:10.0::german"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realplayer:10.0:::japanese"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realplayer:8.0::mac_os"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realplayer:8.0::unix"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realone_player:2.0"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realplayer:10.0_beta"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realplayer:10.0"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realone_player:1.0"
+            }, 
+            {
+                "id": "cpe:/a:realnetworks:realplayer:8.0::win32"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.1406", 
+                "id": 1406
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2005-392.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2005-363.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.redhat.com/archives/fedora-announce-list/2005-April/msg00040.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://service.real.com/help/faq/security/050419_player/EN/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://pb.specialised.info/all/adv/real-ram-adv.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=111401615202987&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2005-394.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "4.9", 
+                    "base": "5.1", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-user", 
+                "id": "sid:2438", 
+                "signature": "FILE-MULTIMEDIA RealNetworks RealPlayer playlist file URL overflow attempt"
+            }, 
+            {
+                "category": "attempted-user", 
+                "id": "sid:2439", 
+                "signature": "FILE-MULTIMEDIA RealNetworks RealPlayer playlist http URL overflow attempt"
+            }, 
+            {
+                "category": "attempted-user", 
+                "id": "sid:2440", 
+                "signature": "FILE-MULTIMEDIA RealNetworks RealPlayer playlist rtsp URL overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-0755"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:11205", 
+                "title": "Heap-based buffer overflow in RealPlayer 10 and earlier, Helix Player before 10.0.4, and RealOne Player v1 and v2 allows remote attackers to execute arbitrary code via a long hostname in a RAM file.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:11205"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Gentoo Security Advisory GLSA 200504-21 (RealPlayer)", 
+                "file": "glsa_200504_21.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "54923"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 4 : HelixPlayer (CESA-2005:392)", 
+                "file": "centos_RHSA-2005-392.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "21932"
+            }, 
+            {
+                "name": "Fedora Core 3 : HelixPlayer-1.0.4-1.0.fc3.1 (2005-329)", 
+                "file": "fedora_2005-329.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "19653"
+            }, 
+            {
+                "name": "GLSA-200504-21 : RealPlayer, Helix Player: Buffer overflow vulnerability", 
+                "file": "gentoo_GLSA-200504-21.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "18121"
+            }, 
+            {
+                "name": "RHEL 4 : RealPlayer (RHSA-2005:363)", 
+                "file": "redhat-RHSA-2005-363.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "18108"
+            }, 
+            {
+                "name": "RHEL 4 : HelixPlayer (RHSA-2005:392)", 
+                "file": "redhat-RHSA-2005-392.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "18110"
+            }, 
+            {
+                "name": "RHEL 3 : RealPlayer (RHSA-2005:394)", 
+                "file": "redhat-RHSA-2005-394.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "18111"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2005-329", 
+                "id": "FEDORA-2005-329"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2005-363.html", 
+                    "id": "RHSA-2005:363", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2005-394.html", 
+                    "id": "RHSA-2005:394", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20050392", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2005-392.html", 
+                    "id": "RHSA-2005:392", 
+                    "title": "RHSA-2005:392: HelixPlayer security update (Critical)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=155386", 
+                    "title": "CAN-2005-0755 HelixPlayer buffer overflow", 
+                    "id": "155386", 
+                    "issue date": "2005-04-20", 
+                    "associated redhat": "RHSA-2005:392"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,135 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1602", 
+                "published": "2007-03-22T19:19:00.000-04:00", 
+                "id": "CVE-2007-1602", 
+                "modified": "2008-09-05T17:20:56.340-04:00", 
+                "summary": "SQL injection vulnerability in check_vote.php in Weekly Drawing Contest 0.0.1 allows remote attackers to execute arbitrary SQL commands via the order parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:weekly_drawing_contest:weekly_drawing_contest:0.0.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35781", 
+                "id": 35781
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/462702/100/100/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2453", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004140", 
+                "signature": "ET WEB_SPECIFIC_APPS Weekly Drawing Contest SQL Injection Attempt -- check_vote.php order SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004141", 
+                "signature": "ET WEB_SPECIFIC_APPS Weekly Drawing Contest SQL Injection Attempt -- check_vote.php order UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004142", 
+                "signature": "ET WEB_SPECIFIC_APPS Weekly Drawing Contest SQL Injection Attempt -- check_vote.php order INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004143", 
+                "signature": "ET WEB_SPECIFIC_APPS Weekly Drawing Contest SQL Injection Attempt -- check_vote.php order DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004144", 
+                "signature": "ET WEB_SPECIFIC_APPS Weekly Drawing Contest SQL Injection Attempt -- check_vote.php order ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004145", 
+                "signature": "ET WEB_SPECIFIC_APPS Weekly Drawing Contest SQL Injection Attempt -- check_vote.php order UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1602"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,191 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1254", 
+                "published": "2007-03-03T15:19:00.000-05:00", 
+                "id": "CVE-2007-1254", 
+                "modified": "2008-11-15T01:43:56.577-05:00", 
+                "summary": "SQL injection vulnerability in part.userprofile.php in Connectix Boards 0.7 and earlier allows remote authenticated users to execute arbitrary SQL commands and obtain privileges via the p_skin parameter to index.php."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:connectix:connectix_boards:0.6"
+            }, 
+            {
+                "id": "cpe:/a:connectix:connectix_boards:0.7"
+            }, 
+            {
+                "id": "cpe:/a:connectix:connectix_boards:0.5"
+            }, 
+            {
+                "id": "cpe:/a:connectix:connectix_boards:0.4"
+            }, 
+            {
+                "id": "cpe:/a:connectix:connectix_boards:0.4.4"
+            }, 
+            {
+                "id": "cpe:/a:connectix:connectix_boards:0.4.3"
+            }, 
+            {
+                "id": "cpe:/a:connectix:connectix_boards:0.4.1"
+            }, 
+            {
+                "id": "cpe:/a:connectix:connectix_boards:0.4.2"
+            }, 
+            {
+                "id": "cpe:/a:connectix:connectix_boards:0.5.3"
+            }, 
+            {
+                "id": "cpe:/a:connectix:connectix_boards:0.5.4"
+            }, 
+            {
+                "id": "cpe:/a:connectix:connectix_boards:0.5.1"
+            }, 
+            {
+                "id": "cpe:/a:connectix:connectix_boards:0.5.5"
+            }, 
+            {
+                "id": "cpe:/a:connectix:connectix_boards:0.6.1"
+            }, 
+            {
+                "id": "cpe:/a:connectix:connectix_boards:0.5.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35387", 
+                "id": 35387
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/33537", 
+                "id": 33537
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/460947/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/24255", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/33537", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/3352", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2364", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "6.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004711", 
+                "signature": "ET WEB_SPECIFIC_APPS Connectix Boards SQL Injection Attempt -- index.php p_skin SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004712", 
+                "signature": "ET WEB_SPECIFIC_APPS Connectix Boards SQL Injection Attempt -- index.php p_skin UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004713", 
+                "signature": "ET WEB_SPECIFIC_APPS Connectix Boards SQL Injection Attempt -- index.php p_skin INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004714", 
+                "signature": "ET WEB_SPECIFIC_APPS Connectix Boards SQL Injection Attempt -- index.php p_skin DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004715", 
+                "signature": "ET WEB_SPECIFIC_APPS Connectix Boards SQL Injection Attempt -- index.php p_skin ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004716", 
+                "signature": "ET WEB_SPECIFIC_APPS Connectix Boards SQL Injection Attempt -- index.php p_skin UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1254"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

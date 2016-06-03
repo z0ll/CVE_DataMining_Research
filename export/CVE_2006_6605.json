@@ -1,0 +1,164 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6605", 
+                "published": "2006-12-19T14:28:00.000-05:00", 
+                "id": "CVE-2006-6605", 
+                "modified": "2011-03-07T21:46:32.487-05:00", 
+                "summary": "Stack-based buffer overflow in the POP service in MailEnable Standard 1.98 and earlier; Professional 1.84, and 2.35 and earlier; and Enterprise 1.41, and 2.35 and earlier before ME-10026 allows remote attackers to execute arbitrary code via a long argument to the PASS command."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:mailenable:mailenable_standard:1.98"
+            }, 
+            {
+                "id": "cpe:/a:mailenable:mailenable_enterprise:2.35"
+            }, 
+            {
+                "id": "cpe:/a:mailenable:mailenable_professional:2.35"
+            }, 
+            {
+                "id": "cpe:/a:mailenable:mailenable_enterprise:1.41"
+            }, 
+            {
+                "id": "cpe:/a:mailenable:mailenable_professional:1.84"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.2767", 
+                "id": 2767
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21645", 
+                "id": 21645
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/454713/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.mailenable.com/hotfix/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/secunia_research/2006-75/advisory/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23127", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/5052", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21645", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1017395", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2053", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:1634", 
+                "signature": "PROTOCOL-POP PASS overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/mailenable_pop_pass", 
+                "id": "exploit_info/mailenable_pop_pass", 
+                "title": "MailEnable POP PASS command buffer overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6605"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MailEnable POP Server PASS Command Remote Overflow (ME-10026)", 
+                "file": "mailenable_me_10026.nasl", 
+                "family": "Windows", 
+                "id": "23924"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

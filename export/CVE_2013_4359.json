@@ -1,0 +1,180 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4359", 
+                "published": "2013-09-30T17:55:07.347-04:00", 
+                "id": "CVE-2013-4359", 
+                "modified": "2013-12-30T23:25:32.093-05:00", 
+                "summary": "Integer overflow in kbdint.c in mod_sftp in ProFTPD 1.3.4d and 1.3.5r3 allows remote attackers to cause a denial of service (memory consumption) via a large response count value in an authentication request, which triggers a large memory allocation."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:proftpd:proftpd:1.3.5:rc3"
+            }, 
+            {
+                "id": "cpe:/a:proftpd:proftpd:1.3.4:d"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.10259", 
+                "id": 10259
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://bugs.proftpd.org/show_bug.cgi?id=3973", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2013/09/17/6", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2013/dsa-2767", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2013-10/msg00032.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://kingcope.wordpress.com/2013/09/11/proftpd-mod_sftpmod_sftp_pam-invalid-pool-allocation-in-kbdint-authentication/", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-4359"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19988", 
+                "title": "DSA-2767-1 proftpd-dfsg - denial of service", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:19988"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2767-1 (proftpd-dfsg - denial of service)", 
+                "file": "deb_2767.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "892767"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-2767-1 : proftpd-dfsg - denial of service", 
+                "file": "debian_DSA-2767.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "70201"
+            }, 
+            {
+                "name": "GLSA-201309-15 : ProFTPD: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201309-15.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "70111"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : proftpd (MDVSA-2013:245)", 
+                "file": "mandriva_MDVSA-2013-245.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "70300"
+            }, 
+            {
+                "name": "openSUSE Security Update : proftpd (openSUSE-SU-2013:1563-1)", 
+                "file": "openSUSE-2013-778.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75173"
+            }, 
+            {
+                "name": "openSUSE Security Update : proftpd (openSUSE-2015-410)", 
+                "file": "openSUSE-2015-410.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84134"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2013-4359.html", 
+                "id": "openSUSE-SU-2013:1563"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2767", 
+                "id": "DSA-2767"
+            }
+        ], 
+        "Vmware": []
+    }
+}

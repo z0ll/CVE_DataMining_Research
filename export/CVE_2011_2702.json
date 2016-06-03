@@ -1,0 +1,215 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2702", 
+                "published": "2014-10-27T16:55:22.313-04:00", 
+                "id": "CVE-2011-2702", 
+                "modified": "2014-10-30T20:43:02.160-04:00", 
+                "summary": "Integer signedness error in Glibc before 2.13 and eglibc before 2.13, when using Supplemental Streaming SIMD Extensions 3 (SSSE3) optimization, allows context-dependent attackers to execute arbitrary code via a negative length parameter to (1) memcpy-ssse3-rep.S, (2) memcpy-ssse3.S, or (3) memset-sse2.S in sysdeps/i386/i686/multiarch/, which triggers an out-of-bounds read, as demonstrated using the memcpy function."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:gnu:glibc:2.12"
+            }, 
+            {
+                "id": "cpe:/a:gnu:eglibc:2.12"
+            }, 
+            {
+                "id": "cpe:/a:gnu:glibc:2.12.1"
+            }, 
+            {
+                "id": "cpe:/a:gnu:glibc:2.12.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.4995", 
+                "id": 4995
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/80718", 
+                "id": 80718
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://sourceware.org/git/?p=glibc.git;a=commit;h=a0ac24d98ace90d1ccba6a2f3e7d55600f2fdb6e", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.novell.com/show_bug.cgi?id=706915", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://xorl.wordpress.com/2011/08/06/cve-2011-2702-eglibc-and-glibc-signedness-issue/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/80718", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.nodefense.org/eglibc.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.eglibc.org/cgi-bin/viewvc.cgi/trunk/libc/ChangeLog?view=markup&pathrev=10032", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://seclists.org/oss-sec/2011/q3/153", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://seclists.org/oss-sec/2011/q3/123", 
+                    "vendor": "MLIST"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/20167", 
+                "id": 20167, 
+                "file": "platforms/linux/dos/20167.txt"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-2702"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:15237", 
+                "title": "USN-1396-1 -- GNU C Library vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:15237"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Ubuntu Update for eglibc USN-1396-1", 
+                "file": "gb_ubuntu_USN_1396_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840929"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Ubuntu 8.04 LTS / 10.04 LTS / 10.10 / 11.04 / 11.10 : eglibc, glibc vulnerabilities (USN-1396-1)", 
+                "file": "ubuntu_USN-1396-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "58318"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

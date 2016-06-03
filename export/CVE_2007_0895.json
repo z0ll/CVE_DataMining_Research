@@ -1,0 +1,179 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0895", 
+                "published": "2007-02-12T20:28:00.000-05:00", 
+                "id": "CVE-2007-0895", 
+                "modified": "2011-03-07T21:50:55.063-05:00", 
+                "summary": "Race condition in recursive directory deletion with the (1) -r or (2) -R option in rm in Solaris 8 through 10 before 20070208 allows local users to delete files and directories as the user running rm by moving a low-level directory to a higher level as it is being deleted, which causes rm to chdir to a \"..\" directory that is higher than expected, possibly up to the root file system, a related issue to CVE-2002-0435."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:sun:solaris:8.0"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:10.0::sparc"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:9.0::sparc"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.2910", 
+                "id": 2910
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/31880", 
+                "id": 31880
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://secunia.com/advisories/24082", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/0543", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-102782-1", 
+                    "vendor": "SUNALERT"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/32399", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/31880", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://support.avaya.com/elmodocs2/security/ASA-2007-102.htm", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/24405", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "1.9", 
+                    "base": "2.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-0895"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:8272", 
+                "title": "Security Vulnerability in rm(1) may Lead to Unauthorized Deletion of Files or Directories", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:8272"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Solaris 10 (sparc) : 124244-02", 
+                "file": "solaris10_124244.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "24375"
+            }, 
+            {
+                "name": "Solaris 10 (x86) : 124245-02", 
+                "file": "solaris10_x86_124245.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "24387"
+            }, 
+            {
+                "name": "Solaris 8 (sparc) : 124969-01", 
+                "file": "solaris8_124969.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "24399"
+            }, 
+            {
+                "name": "Solaris 8 (x86) : 124970-01", 
+                "file": "solaris8_x86_124970.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "24402"
+            }, 
+            {
+                "name": "Solaris 9 (sparc) : 123372-02", 
+                "file": "solaris9_123372.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "24404"
+            }, 
+            {
+                "name": "Solaris 9 (x86) : 123373-02", 
+                "file": "solaris9_x86_123373.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "24408"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

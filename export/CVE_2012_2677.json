@@ -1,0 +1,286 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2677", 
+                "published": "2012-07-25T15:55:03.023-04:00", 
+                "id": "CVE-2012-2677", 
+                "modified": "2013-12-05T00:14:10.157-05:00", 
+                "summary": "Integer overflow in the ordered_malloc function in boost/pool/pool.hpp in Boost Pool before 3.9 makes it easier for context-dependent attackers to perform memory-related attacks such as buffer overflows via a large memory chunk size value, which causes less memory to be allocated than expected."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:boost:pool:2.0.0"
+            }, 
+            {
+                "id": "cpe:/a:boost:pool:1.0.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.61411", 
+                "id": 61411
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://svn.boost.org/trac/boost/changeset/78326", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://svn.boost.org/trac/boost/ticket/6701", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/06/07/13", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/06/05/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2013:065", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2012-June/082977.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2012-July/083416.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://kqueue.org/blog/2012/03/05/memory-allocator-security-revisited/", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-2677"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23972", 
+                "title": "ELSA-2013:0668: boost security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23972"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27504", 
+                "title": "DEPRECATED: ELSA-2013-0668 -- boost security update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27504"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21001", 
+                "title": "RHSA-2013:0668: boost security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21001"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23347", 
+                "title": "DEPRECATED: ELSA-2013:0668: boost security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23347"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CentOS Update for boost CESA-2013:0668 centos5", 
+                "file": "gb_CESA-2013_0668_boost_centos5.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881694"
+            }, 
+            {
+                "name": "CentOS Update for boost CESA-2013:0668 centos6", 
+                "file": "gb_CESA-2013_0668_boost_centos6.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881695"
+            }, 
+            {
+                "name": "Fedora Update for boost FEDORA-2012-9029", 
+                "file": "gb_fedora_2012_9029_boost_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864531"
+            }, 
+            {
+                "name": "Fedora Update for boost FEDORA-2012-9818", 
+                "file": "gb_fedora_2012_9818_boost_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864496"
+            }, 
+            {
+                "name": "RedHat Update for boost RHSA-2013:0668-01", 
+                "file": "gb_RHSA-2013_0668-01_boost.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870968"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 / 6 : boost (CESA-2013:0668)", 
+                "file": "centos_RHSA-2013-0668.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "65644"
+            }, 
+            {
+                "name": "F5 Networks BIG-IP : Boost memory allocator vulnerability (SOL16946)", 
+                "file": "f5_bigip_SOL16946.nasl", 
+                "family": "F5 Networks Local Security Checks", 
+                "id": "85954"
+            }, 
+            {
+                "name": "Fedora 16 : boost-1.47.0-7.fc16 (2012-9029)", 
+                "file": "fedora_2012-9029.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "59840"
+            }, 
+            {
+                "name": "Fedora 17 : boost-1.48.0-13.fc17 (2012-9818)", 
+                "file": "fedora_2012-9818.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "59745"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : boost (MDVSA-2013:065)", 
+                "file": "mandriva_MDVSA-2013-065.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "66079"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : boost (ELSA-2013-0668)", 
+                "file": "oraclelinux_ELSA-2013-0668.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68794"
+            }, 
+            {
+                "name": "RHEL 5 / 6 : boost (RHSA-2013:0668)", 
+                "file": "redhat-RHSA-2013-0668.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "65651"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : boost on SL5.x, SL6.x i386/x86_64", 
+                "file": "sl_20130321_boost_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "65653"
+            }, 
+            {
+                "name": "SuSE 11.1 Security Update : boost (SAT Patch Number 6507)", 
+                "file": "suse_11_boost-120705.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "64117"
+            }, 
+            {
+                "name": "SuSE 10 Security Update : boost (ZYPP Patch Number 8210)", 
+                "file": "suse_boost-8210.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "59983"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2012-9029", 
+                "id": "FEDORA-2012-9029"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2012-9818", 
+                "id": "FEDORA-2012-9818"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2013:065", 
+                "id": "MDVSA-2013:065"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20130668", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2013-0668.html", 
+                    "id": "RHSA-2013:0668", 
+                    "title": "RHSA-2013:0668: boost security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=828856", 
+                    "title": "CVE-2012-2677 boost: ordered_malloc() overflow", 
+                    "id": "828856", 
+                    "issue date": "2013-03-21", 
+                    "associated redhat": "RHSA-2013:0668"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

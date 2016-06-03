@@ -1,0 +1,240 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4324", 
+                "published": "2013-10-03T17:55:04.397-04:00", 
+                "id": "CVE-2013-4324", 
+                "modified": "2013-10-30T23:34:55.923-04:00", 
+                "summary": "spice-gtk 0.14, and possibly other versions, invokes the polkit authority using the insecure polkit_unix_process_new API function, which allows local users to bypass intended access restrictions by leveraging a PolkitUnixProcess PolkitSubject race condition via a (1) setuid process or (2) pkexec process, a related issue to CVE-2013-4288."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:6"
+            }, 
+            {
+                "id": "cpe:/a:redhat:spice-gtk:0.14"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.65190", 
+                "id": 65190
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/62538", 
+                "id": 62538
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/62538", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2013/09/18/6", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/54947", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2013-1273.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2013-10/msg00031.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-4324"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21168", 
+                "title": "RHSA-2013:1273: spice-gtk security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21168"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24186", 
+                "title": "ELSA-2013:1273: spice-gtk security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24186"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27031", 
+                "title": "DEPRECATED: ELSA-2013-1273 -- spice-gtk security update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27031"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CentOS Update for spice-glib CESA-2013:1273 centos6", 
+                "file": "gb_CESA-2013_1273_spice-glib_centos6.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881797"
+            }, 
+            {
+                "name": "Fedora Update for spice-gtk FEDORA-2013-17109", 
+                "file": "gb_fedora_2013_17109_spice-gtk_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866947"
+            }, 
+            {
+                "name": "Fedora Update for spice-gtk FEDORA-2013-17195", 
+                "file": "gb_fedora_2013_17195_spice-gtk_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867192"
+            }, 
+            {
+                "name": "RedHat Update for spice-gtk RHSA-2013:1273-01", 
+                "file": "gb_RHSA-2013_1273-01_spice-gtk.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "871038"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 6 : spice-gtk (CESA-2013:1273)", 
+                "file": "centos_RHSA-2013-1273.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "70000"
+            }, 
+            {
+                "name": "Fedora 19 : spice-gtk-0.20-6.fc19 (2013-17109)", 
+                "file": "fedora_2013-17109.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "70157"
+            }, 
+            {
+                "name": "GLSA-201406-27 : polkit, Spice-Gtk, systemd, HPLIP, libvirt: Privilege escalation", 
+                "file": "gentoo_GLSA-201406-27.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "76271"
+            }, 
+            {
+                "name": "openSUSE Security Update : spice-gtk (openSUSE-SU-2013:1562-1)", 
+                "file": "openSUSE-2013-777.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75172"
+            }, 
+            {
+                "name": "Oracle Linux 6 : spice-gtk (ELSA-2013-1273)", 
+                "file": "oraclelinux_ELSA-2013-1273.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "70008"
+            }, 
+            {
+                "name": "RHEL 6 : spice-gtk (RHSA-2013:1273)", 
+                "file": "redhat-RHSA-2013-1273.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "70012"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : spice-gtk on SL6.x i386/x86_64", 
+                "file": "sl_20130919_spice_gtk_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "70017"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2013-4324.html", 
+                "id": "openSUSE-SU-2013:1562"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20131273", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2013-1273.html", 
+                    "id": "RHSA-2013:1273", 
+                    "title": "RHSA-2013:1273: spice-gtk security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1006669", 
+                    "title": "CVE-2013-4324 spice-gtk: Insecure calling of polkit via polkit_unix_process_new()", 
+                    "id": "1006669", 
+                    "issue date": "2013-09-19", 
+                    "associated redhat": "RHSA-2013:1273"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

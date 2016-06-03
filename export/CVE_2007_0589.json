@@ -1,0 +1,140 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0589", 
+                "published": "2007-01-30T13:28:00.000-05:00", 
+                "id": "CVE-2007-0589", 
+                "modified": "2011-03-07T21:50:20.877-05:00", 
+                "summary": "SQL injection vulnerability in Forum Livre 1.0 allows remote attackers to execute arbitrary SQL commands via the user parameter to info_user.asp."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:forum_livre:forum_livre:1.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34715", 
+                "id": 34715
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/36644", 
+                "id": 36644
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://osvdb.org/36644", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/3197", 
+                    "vendor": "MILW0RM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005176", 
+                "signature": "ET WEB_SPECIFIC_APPS Forum Livre SQL Injection Attempt -- info_user.asp user SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005147", 
+                "signature": "ET WEB_SPECIFIC_APPS Forum Livre SQL Injection Attempt -- info_user.asp user UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005148", 
+                "signature": "ET WEB_SPECIFIC_APPS Forum Livre SQL Injection Attempt -- info_user.asp user INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005149", 
+                "signature": "ET WEB_SPECIFIC_APPS Forum Livre SQL Injection Attempt -- info_user.asp user DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005150", 
+                "signature": "ET WEB_SPECIFIC_APPS Forum Livre SQL Injection Attempt -- info_user.asp user ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005151", 
+                "signature": "ET WEB_SPECIFIC_APPS Forum Livre SQL Injection Attempt -- info_user.asp user UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-0589"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,252 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3689", 
+                "published": "2014-11-14T10:59:00.120-05:00", 
+                "id": "CVE-2014-3689", 
+                "modified": "2014-11-14T12:05:50.597-05:00", 
+                "summary": "The vmware-vga driver (hw/display/vmware_vga.c) in QEMU allows local guest users to write to qemu memory locations and gain privileges via unspecified parameters related to rectangle handling."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:14.04::~~lts~~~"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:14.10"
+            }, 
+            {
+                "id": "cpe:/a:qemu:qemu:-"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:10.04::lts"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:12.04::lts"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.68154", 
+                "id": 68154
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/114397", 
+                "id": 114397
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://www.mail-archive.com/qemu-devel@nongnu.org/msg261580.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2409-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/114397", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2014/dsa-3067", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2014/dsa-3066", 
+                    "vendor": "DEBIAN"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-3689"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28286", 
+                "title": "USN-2409-1 -- QEMU vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28286"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28093", 
+                "title": "DSA-3066-1 -- qemu security update", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28093"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27312", 
+                "title": "DSA-3067-1 -- qemu-kvm security update", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27312"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3066-1 (qemu - security update)", 
+                "file": "deb_3066.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703066"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 3067-1 (qemu-kvm - security update)", 
+                "file": "deb_3067.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703067"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-3066-1 : qemu - security update", 
+                "file": "debian_DSA-3066.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "78897"
+            }, 
+            {
+                "name": "Debian DSA-3067-1 : qemu-kvm - security update", 
+                "file": "debian_DSA-3067.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "78898"
+            }, 
+            {
+                "name": "Fedora 21 : qemu-2.1.2-6.fc21 (2014-13993)", 
+                "file": "fedora_2014-13993.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "79073"
+            }, 
+            {
+                "name": "Fedora 20 : qemu-1.6.2-10.fc20 (2014-14033)", 
+                "file": "fedora_2014-14033.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "79089"
+            }, 
+            {
+                "name": "GLSA-201412-37 : QEMU: Multiple Vulnerabilities", 
+                "file": "gentoo_GLSA-201412-37.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "80242"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : qemu (MDVSA-2014:220)", 
+                "file": "mandriva_MDVSA-2014-220.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "79407"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : qemu (MDVSA-2015:061)", 
+                "file": "mandriva_MDVSA-2015-061.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "81944"
+            }, 
+            {
+                "name": "openSUSE Security Update : xen (openSUSE-2016-413)", 
+                "file": "openSUSE-2016-413.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "90260"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : xen (SUSE-SU-2016:0873-1)", 
+                "file": "suse_SU-2016-0873-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "90186"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : xen (SUSE-SU-2016:0955-1)", 
+                "file": "suse_SU-2016-0955-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "90396"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS / 12.04 LTS / 14.04 / 14.10 : qemu, qemu-kvm vulnerabilities (USN-2409-1)", 
+                "file": "ubuntu_USN-2409-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "79244"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2409-1", 
+                "id": "USN-2409-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3066", 
+                "id": "DSA-3066"
+            }, 
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3067", 
+                "id": "DSA-3067"
+            }
+        ], 
+        "Vmware": []
+    }
+}

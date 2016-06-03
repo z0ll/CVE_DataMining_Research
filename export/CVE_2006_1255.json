@@ -1,0 +1,165 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-1255", 
+                "published": "2006-03-18T20:02:00.000-05:00", 
+                "id": "CVE-2006-1255", 
+                "modified": "2011-03-07T21:32:34.737-05:00", 
+                "summary": "Stack-based buffer overflow in the IMAP service in Mercur Messaging 5.0 SP3 and earlier allows remote attackers to cause a denial of service (application crash) and possibly execute arbitrary code via a long string to the (1) LOGIN or (2) SELECT command, a different set of attack vectors and possibly a different vulnerability than CVE-2003-1177."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:mercur:mercur_messaging:2005_5.0_sp3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.29226", 
+                "id": 29226
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/17138", 
+                "id": 17138
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/23950", 
+                "id": 23950
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/25290", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/0977", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/17138", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/23950", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/19267", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lists.grok.org.uk/pipermail/full-disclosure/2006-March/043972.html", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://lists.grok.org.uk/pipermail/full-disclosure/2006-March/043972.html", 
+                    "vendor": "FULLDISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "mercur_imap_select_overflow.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/imap/mercur_imap_select_overflow.rb", 
+                "title": "Mercur v5.0 IMAP SP3 SELECT Buffer Overflow"
+            }, 
+            {
+                "id": "mercur_login.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/imap/mercur_login.rb", 
+                "title": "Mercur Messaging 2005 IMAP Login Buffer Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/mercur_imap_login", 
+                "id": "exploit_info/mercur_imap_login", 
+                "title": "MERCUR Messaging IMAP LOGIN command buffer overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-1255"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Mercur Mailserver/Messaging version <", 
+                "file": "mercur_imap_buffer_overflow.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "200050"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MERCUR Messaging IMAP Service Multiple Command Remote Overflow", 
+                "file": "mercur_imap_buffer_overflow.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "21116"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

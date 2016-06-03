@@ -1,0 +1,220 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4936", 
+                "published": "2013-07-29T20:56:16.067-04:00", 
+                "id": "CVE-2013-4936", 
+                "modified": "2014-09-23T01:38:19.550-04:00", 
+                "summary": "The IsDFP_Frame function in plugins/profinet/packet-pn-rt.c in the PROFINET Real-Time dissector in Wireshark 1.10.x before 1.10.1 does not validate MAC addresses, which allows remote attackers to cause a denial of service (NULL pointer dereference and application crash) via a crafted packet."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:wireshark:wireshark:1.10.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.9770", 
+                "id": 9770
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0039822", 
+                "id": "2013-B-0077", 
+                "title": "Multiple Denial of Service Vulnerabilities in Wireshark"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=8904", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://anonsvn.wireshark.org/viewvc/trunk/plugins/profinet/packet-pn-rt.c?r1=50651&r2=50650&pathrev=50651", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://www.wireshark.org/security/wnpa-sec-2013-53.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.wireshark.org/docs/relnotes/wireshark-1.10.1.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.gentoo.org/security/en/glsa/glsa-201308-05.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/54425", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/54296", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://anonsvn.wireshark.org/viewvc?view=revision&revision=50651", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-4936"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27258", 
+                "title": "ELSA-2013-1569 -- wireshark security, bug fix, and enhancement update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27258"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26946", 
+                "title": "RHSA-2013:1569 -- wireshark security, bug fix, and enhancement update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26946"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:16971", 
+                "title": "The dissect_smtp function in epan/dissectors/packet-smtp.c in the PROFINET Real-Time dissector in Wireshark 1.10.x before 1.10.1 does not initialize certain structure members", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:16971"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "RedHat Update for wireshark RHSA-2013:1569-02", 
+                "file": "gb_RHSA-2013_1569-02_wireshark.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "871070"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : wireshark (ALAS-2013-251)", 
+                "file": "ala_ALAS-2013-251.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "71268"
+            }, 
+            {
+                "name": "CentOS 6 : wireshark (CESA-2013:1569)", 
+                "file": "centos_RHSA-2013-1569.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "79162"
+            }, 
+            {
+                "name": "F5 Networks BIG-IP : Multiple Wireshark vulnerabilities (SOL15868)", 
+                "file": "f5_bigip_SOL15868.nasl", 
+                "family": "F5 Networks Local Security Checks", 
+                "id": "79601"
+            }, 
+            {
+                "name": "GLSA-201308-05 : Wireshark: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201308-05.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "69500"
+            }, 
+            {
+                "name": "Oracle Linux 6 : wireshark (ELSA-2013-1569)", 
+                "file": "oraclelinux_ELSA-2013-1569.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "71105"
+            }, 
+            {
+                "name": "RHEL 6 : wireshark (RHSA-2013:1569)", 
+                "file": "redhat-RHSA-2013-1569.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "71005"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : wireshark on SL6.x i386/x86_64", 
+                "file": "sl_20131121_wireshark_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "71301"
+            }, 
+            {
+                "name": "Oracle Solaris Third-Party Patch Update : wireshark (multiple_vulnerabilities_in_wireshark6)", 
+                "file": "solaris11_wireshark_20130924_2.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "80808"
+            }, 
+            {
+                "name": "Wireshark 1.10.x < 1.10.1 Multiple Vulnerabilities", 
+                "file": "wireshark_1_10_1.nasl", 
+                "family": "Windows", 
+                "id": "69105"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/201308-05", 
+                "id": "GLSA-201308-05"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

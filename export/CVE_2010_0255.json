@@ -1,0 +1,222 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0255", 
+                "published": "2010-02-04T15:15:49.967-05:00", 
+                "id": "CVE-2010-0255", 
+                "modified": "2010-08-21T00:00:00.000-04:00", 
+                "summary": "Microsoft Internet Explorer 5.01 SP4, 6, 6 SP1, 7, and 8 does not prevent rendering of non-HTML local files as HTML documents, which allows remote attackers to bypass intended access restrictions and read arbitrary files via vectors involving JavaScript exploit code that constructs a reference to a file://127.0.0.1 URL, aka the dynamic OBJECT tag vulnerability, as demonstrated by obtaining the data from an index.dat file, a variant of CVE-2009-1140 and related to CVE-2008-1448."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:ie:7"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:6:sp1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:5.01:sp4"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:8"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:6"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.4080", 
+                "id": 4080
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/38056", 
+                "id": 38056
+            }, 
+            {
+                "url": "http://www.securityfocus.com/bid/38055", 
+                "id": 38055
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/62156", 
+                "id": 62156
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA10-159B.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/38056", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/38055", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/509345/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms10-035.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/advisory/980088.mspx", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.coresecurity.com/content/internet-explorer-dynamic-object-tag", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://support.avaya.com/css/P8/documents/100089747", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://osvdb.org/62156", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://isc.sans.org/diary.html?n&storyid=8152", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://blogs.technet.com/msrc/archive/2010/02/03/security-advisory-980088-released.aspx", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "4.3", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2011695", 
+                "signature": "ET WEB_CLIENT Possible Microsoft Internet Explorer Dynamic Object Tag/URLMON Sniffing Cross Domain Information Disclosure Attempt"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-0255"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:7145", 
+                "title": "Cross-Domain Information Disclosure Vulnerability (CVE-2010-0255)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:7145"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Internet Explorer Information Disclosure Vulnerability (980088)", 
+                "file": "gb_ms_ie_npl_info_disc_vuln.nasl", 
+                "family": "General", 
+                "id": "800461"
+            }, 
+            {
+                "name": "Microsoft Internet Explorer Multiple Vulnerabilities (982381)", 
+                "file": "secpod_ms10-035.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "902191"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS10-035: Cumulative Security Update for Internet Explorer (982381)", 
+                "file": "smb_nt_ms10-035.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "46842"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Cumulative Security Update for Internet Explorer", 
+                "id": "Cumulative Security Update for Internet Explorer", 
+                "title": "982381"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/982381", 
+                "id": "982381", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS10-035", 
+                "id": "MS10-035", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

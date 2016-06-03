@@ -1,0 +1,154 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-1511", 
+                "published": "1999-11-10T00:00:00.000-05:00", 
+                "id": "CVE-1999-1511", 
+                "modified": "2008-09-05T16:19:41.990-04:00", 
+                "summary": "Buffer overflows in Xtramail 1.11 allow attackers to cause a denial of service (crash) and possibly execute arbitrary commands via (1) a long PASS command in the POP3 service, (2) a long HELO command in the SMTP service, or (3) a long user name in the Control Service."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:artisoft:xtramail:1.11"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14970", 
+                "id": 14970
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/791", 
+                "id": 791
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/static/3488.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/791", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=94226003804744&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2101634", 
+                "signature": "GPL POP3 POP3 PASS overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2101636", 
+                "signature": "GPL DELETED Xtramail Username overflow attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:1634", 
+                "signature": "PROTOCOL-POP PASS overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:1636", 
+                "signature": "SERVER-OTHER Xtramail Username overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-1511"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "XtraMail Control Service Username Overflow", 
+                "file": "xtramail_control.nasl", 
+                "family": "Misc.", 
+                "id": "10323"
+            }, 
+            {
+                "name": "XtraMail SMTP HELO Command Remote Overflow", 
+                "file": "xtramail_helo.nasl", 
+                "family": "SMTP problems", 
+                "id": "10324"
+            }, 
+            {
+                "name": "XtraMail POP3 PASS Command Remote Overflow", 
+                "file": "xtramail_pop_overflow.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "10325"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

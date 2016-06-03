@@ -1,0 +1,224 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-4849", 
+                "published": "2007-09-12T16:17:00.000-04:00", 
+                "id": "CVE-2007-4849", 
+                "modified": "2008-09-05T17:29:17.077-04:00", 
+                "summary": "JFFS2, as used on One Laptop Per Child (OLPC) build 542 and possibly other Linux systems, when POSIX ACL support is enabled, does not properly store permissions during (1) inode creation or (2) ACL setting, which might allow local users to access restricted files or directories after a remount of a filesystem, related to \"legacy modes\" and an inconsistency between dentry permissions and inode permissions."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:one_laptop_per_child:olpc_linux:build_542"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.38764", 
+                "id": 38764
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/25838", 
+                "id": 25838
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://lists.infradead.org/pipermail/linux-mtd-cvs/2007-August/005897.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://git.infradead.org/?p=mtd-2.6.git;a=commitdiff;h=9ed437c50d89eabae763dd422579f73fdebf288d", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://dev.laptop.org/ticket/2732", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/usn-574-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/usn-558-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/25838", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2007/dsa-1378", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/28706", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/28170", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/26978", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "4.4", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-4849"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20370", 
+                "title": "DSA-1378-1 fai-kernels linux-2.6 user-mode-linux - several vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20370"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18649", 
+                "title": "DSA-1378-2 fai-kernels linux-2.6 user-mode-linux - several vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18649"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17735", 
+                "title": "USN-558-1 -- linux-source-2.6.17/20/22 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17735"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17238", 
+                "title": "USN-574-1 -- linux-source-2.6.17/20/22 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17238"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 1378-1 (linux-2.6)", 
+                "file": "deb_1378_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "58636"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 1378-2 (linux-2.6)", 
+                "file": "deb_1378_2.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "58637"
+            }, 
+            {
+                "name": "Ubuntu Update for quagga USN-2941-1", 
+                "file": "gb_ubuntu_USN_558_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840180"
+            }, 
+            {
+                "name": "Ubuntu Update for quagga USN-2941-1", 
+                "file": "gb_ubuntu_USN_574_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840307"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Ubuntu 6.10 / 7.04 / 7.10 : linux-source-2.6.17/20/22 vulnerabilities (USN-558-1)", 
+                "file": "ubuntu_USN-558-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "29740"
+            }, 
+            {
+                "name": "Ubuntu 6.10 / 7.04 / 7.10 : linux-source-2.6.17/20/22 vulnerabilities (USN-574-1)", 
+                "file": "ubuntu_USN-574-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "30183"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-558-1", 
+                "id": "USN-558-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-574-1", 
+                "id": "USN-574-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-1378", 
+                "id": "DSA-1378"
+            }
+        ], 
+        "Vmware": []
+    }
+}

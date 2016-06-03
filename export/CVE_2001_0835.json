@@ -1,0 +1,185 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-0835", 
+                "published": "2001-12-06T00:00:00.000-05:00", 
+                "id": "CVE-2001-0835", 
+                "modified": "2008-09-05T16:25:02.177-04:00", 
+                "summary": "Cross-site scripting vulnerability in Webalizer 2.01-06, and possibly other versions, allows remote attackers to inject arbitrary HTML tags by specifying them in (1) search keywords embedded in HTTP referrer information, or (2) host names that are retrieved via a reverse DNS lookup."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:bradford_barrett:webalizer:2.0.6"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.17693", 
+                "id": 17693
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/3473", 
+                "id": 3473
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/3473", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2001-141.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.mrunix.net/webalizer/news.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=100394630702875&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://lists.suse.com/archives/suse-security-announce/2001-Nov/0001.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/static/7351.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/static/7350.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2001-140.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.linuxsecurity.com/advisories/other_advisory-1677.html", 
+                    "vendor": "ENGARDE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2101847", 
+                "signature": "GPL WEB_SERVER webalizer access"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1847", 
+                "signature": "SERVER-WEBAPP webalizer access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-0835"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Webalizer Cross Site Scripting Vulnerability", 
+                "file": "webalizer.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "10816"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Webalizer < 2.01-09 Multiple XSS", 
+                "file": "webalizer.nasl", 
+                "family": "CGI abuses : XSS", 
+                "id": "10816"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2001-0835.html", 
+                "id": "SuSE-SA:2001:040"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2001-140.html", 
+                    "id": "RHSA-2001:140", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2001-141.html", 
+                    "id": "RHSA-2001:141", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

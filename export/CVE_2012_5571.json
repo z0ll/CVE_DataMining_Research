@@ -1,0 +1,232 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-5571", 
+                "published": "2012-12-17T20:55:03.570-05:00", 
+                "id": "CVE-2012-5571", 
+                "modified": "2013-02-25T23:52:03.503-05:00", 
+                "summary": "OpenStack Keystone Essex (2012.1) and Folsom (2012.2) does not properly handle EC2 tokens when the user role has been removed from a tenant, which allows remote authenticated users to bypass intended authorization restrictions by leveraging a token for the removed user role."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/255.html", 
+                "id": "CWE-255", 
+                "title": "Credentials Management"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:openstack:folsom:2012.2"
+            }, 
+            {
+                "id": "cpe:/a:openstack:essex:2012.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.63196", 
+                "id": 63196
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/56726", 
+                "id": 56726
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/openstack/keystone/commit/9d68b40cb9ea818c48152e6c712ff41586ad9653", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://github.com/openstack/keystone/commit/8735009dc5b895db265a1cd573f39f4acfca2a19", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://github.com/openstack/keystone/commit/37308dd4f3e33f7bd0f71d83fd51734d1870713b", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugs.launchpad.net/keystone/+bug/1064914", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/11/28/6", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/11/28/5", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/80333", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1641-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/56726", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/51436", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/51423", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2012-1557.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2012-1556.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2012-December/094286.html", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "single_instance", 
+                    "exploit": "6.8", 
+                    "base": "3.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-5571"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17820", 
+                "title": "USN-1641-1 -- keystone vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17820"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for openstack-keystone FEDORA-2012-19341", 
+                "file": "gb_fedora_2012_19341_openstack-keystone_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864927"
+            }, 
+            {
+                "name": "Ubuntu Update for keystone USN-1641-1", 
+                "file": "gb_ubuntu_USN_1641_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841227"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 17 : openstack-keystone-2012.1.3-3.fc17 (2012-19341)", 
+                "file": "fedora_2012-19341.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "63210"
+            }, 
+            {
+                "name": "Fedora 18 : openstack-keystone-2012.2.1-1.fc18 (2012-19584)", 
+                "file": "fedora_2012-19584.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "63213"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 12.10 : keystone vulnerabilities (USN-1641-1)", 
+                "file": "ubuntu_USN-1641-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "63093"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2012-19341", 
+                "id": "FEDORA-2012-19341"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2012-1556.html", 
+                    "id": "RHSA-2012:1556", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2012-1557.html", 
+                    "id": "RHSA-2012:1557", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1641-1", 
+                "id": "USN-1641-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

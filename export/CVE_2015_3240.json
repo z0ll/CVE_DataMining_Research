@@ -1,0 +1,185 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3240", 
+                "published": "2015-11-09T11:59:01.557-05:00", 
+                "id": "CVE-2015-3240", 
+                "modified": "2015-11-10T11:13:45.827-05:00", 
+                "summary": "The pluto IKE daemon in libreswan before 3.15 and Openswan before 2.6.45, when built with NSS, allows remote attackers to cause a denial of service (assertion failure and daemon restart) via a zero DH g^x value in a KE payload in a IKE packet."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:libreswan:libreswan:3.14"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.79096", 
+                "id": 79096
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://lists.openswan.org/pipermail/users/2015-August/023401.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "https://libreswan.org/security/CVE-2015-3240/CVE-2015-3240.txt", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id/1033418", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-1979.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "4.3", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-3240"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "CentOS 7 : libreswan (CESA-2015:1979)", 
+                "file": "centos_RHSA-2015-1979.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "86711"
+            }, 
+            {
+                "name": "GLSA-201603-13 : Libreswan: Multiple Vulnerabilities", 
+                "file": "gentoo_GLSA-201603-13.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "89906"
+            }, 
+            {
+                "name": "Oracle Linux 7 : libreswan (ELSA-2015-1979)", 
+                "file": "oraclelinux_ELSA-2015-1979.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "86715"
+            }, 
+            {
+                "name": "RHEL 7 : libreswan (RHSA-2015:1979)", 
+                "file": "redhat-RHSA-2015-1979.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "86744"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : libreswan on SL7.x x86_64", 
+                "file": "sl_20151104_libreswan_on_SL7_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "86749"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151979", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1979.html", 
+                    "id": "RHSA-2015:1979", 
+                    "title": "RHSA-2015:1979: libreswan security and enhancement update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1232320", 
+                    "title": "CVE-2015-3240 libreswan / openswan: denial of service via IKE daemon restart when receiving a bad DH gx value", 
+                    "id": "1232320", 
+                    "issue date": "2015-11-03", 
+                    "associated redhat": "RHSA-2015:1979"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1268775", 
+                    "title": "libreswan should support strictcrlpolicy alias for crl-strict= option to support openswan migration", 
+                    "id": "1268775", 
+                    "issue date": "2015-11-03", 
+                    "associated redhat": "RHSA-2015:1979"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1273719", 
+                    "title": "libreswan FIPS test mistakenly looks for non-existent file hashes and reports FIPS failure", 
+                    "id": "1273719", 
+                    "issue date": "2015-11-03", 
+                    "associated redhat": "RHSA-2015:1979"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

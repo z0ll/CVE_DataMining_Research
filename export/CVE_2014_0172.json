@@ -1,0 +1,210 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0172", 
+                "published": "2014-04-11T11:55:18.757-04:00", 
+                "id": "CVE-2014-0172", 
+                "modified": "2014-05-16T00:23:47.603-04:00", 
+                "summary": "Integer overflow in the check_section function in dwarf_begin_elf.c in the libdw library, as used in elfutils 0.153 and possibly through 0.158 allows remote attackers to cause a denial of service (application crash) or possibly execute arbitrary code via a malformed compressed debug section in an ELF file, which triggers a heap-based buffer overflow."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:elfutils_project:elfutils:0.154"
+            }, 
+            {
+                "id": "cpe:/a:elfutils_project:elfutils:0.155"
+            }, 
+            {
+                "id": "cpe:/a:elfutils_project:elfutils:0.153"
+            }, 
+            {
+                "id": "cpe:/a:elfutils_project:elfutils:0.158"
+            }, 
+            {
+                "id": "cpe:/a:elfutils_project:elfutils:0.156"
+            }, 
+            {
+                "id": "cpe:/a:elfutils_project:elfutils:0.157"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.69303", 
+                "id": 69303
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/66714", 
+                "id": 66714
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://lists.fedorahosted.org/pipermail/elfutils-devel/2014-April/003921.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1085663", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2188-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/66714", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://seclists.org/oss-sec/2014/q2/54", 
+                    "vendor": "MLIST"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-0172"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24740", 
+                "title": "USN-2188-1 -- elfutils vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24740"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for elfutils FEDORA-2014-5015", 
+                "file": "gb_fedora_2014_5015_elfutils_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867708"
+            }, 
+            {
+                "name": "Fedora Update for elfutils FEDORA-2014-5031", 
+                "file": "gb_fedora_2014_5031_elfutils_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867752"
+            }, 
+            {
+                "name": "Ubuntu Update for elfutils USN-2188-1", 
+                "file": "gb_ubuntu_USN_2188_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841793"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : elfutils (ALAS-2014-345)", 
+                "file": "ala_ALAS-2014-345.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "78288"
+            }, 
+            {
+                "name": "Fedora 20 : elfutils-0.158-3.fc20 (2014-5015)", 
+                "file": "fedora_2014-5015.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "73627"
+            }, 
+            {
+                "name": "Fedora 19 : elfutils-0.158-3.fc19 (2014-5031)", 
+                "file": "fedora_2014-5031.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "73773"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : elfutils (MDVSA-2015:104)", 
+                "file": "mandriva_MDVSA-2015-104.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "82357"
+            }, 
+            {
+                "name": "openSUSE Security Update : elfutils (openSUSE-SU-2014:0974-1)", 
+                "file": "openSUSE-2014-491.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "77135"
+            }, 
+            {
+                "name": "Ubuntu 12.10 / 13.10 / 14.04 : elfutils vulnerability (USN-2188-1)", 
+                "file": "ubuntu_USN-2188-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "73802"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2188-1", 
+                "id": "USN-2188-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

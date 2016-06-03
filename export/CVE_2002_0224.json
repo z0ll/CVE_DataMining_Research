@@ -1,0 +1,209 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0224", 
+                "published": "2002-05-16T00:00:00.000-04:00", 
+                "id": "CVE-2002-0224", 
+                "modified": "2008-09-10T20:00:44.413-04:00", 
+                "summary": "The MSDTC (Microsoft Distributed Transaction Service Coordinator) for Microsoft Windows 2000, Microsoft IIS 5.0 and SQL Server 6.5 through SQL 2000 0.0 allows remote attackers to cause a denial of service (crash or hang) via malformed (random) input."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_2000:::server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp2:professional"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp2:datacenter_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp1:professional"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:sql_server:7.0"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp1:advanced_server"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:sql_server:2000:sp1"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp2:advanced_server"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:sql_server:2000:sp2"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:5.0"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp1:datacenter_server"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:sql_server:7.0:sp3"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:sql_server:2000"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:sql_server:7.0:sp2"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:sql_server:7.0:sp1"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000:::professional"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp2:server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000:::advanced_server"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000::sp1:server"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:sql_server:6.5"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2000:::datacenter_server"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.18130", 
+                "id": 18130
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/4006", 
+                "id": 4006
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/4006", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/static/8046.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://online.securityfocus.com/archive/1/268593", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://online.securityfocus.com/archive/1/253360", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-dos", 
+                "id": "sid:1408", 
+                "signature": "SERVER-OTHER MSDTC attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-0224"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "MSDTC denial of service by flooding with nul bytes", 
+                "file": "msdtc_dos.nasl", 
+                "family": "Denial of Service", 
+                "id": "10939"
+            }, 
+            {
+                "name": "Cumulative Patch for Internet Information Services (Q327696)", 
+                "file": "smb_nt_ms02-018.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "10943"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS02-018: Microsoft Windows Distributed Transaction Coordinator (DTC) Malformed Input DoS (319733) (intrusive check)", 
+                "file": "msdtc_dos.nasl", 
+                "family": "Windows", 
+                "id": "10939"
+            }, 
+            {
+                "name": "MS02-018: Cumulative Patch for Internet Information Services (327696)", 
+                "file": "smb_nt_ms02-018.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "10943"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

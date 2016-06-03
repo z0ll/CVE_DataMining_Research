@@ -1,0 +1,131 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-1408", 
+                "published": "2001-07-05T00:00:00.000-04:00", 
+                "id": "CVE-2001-1408", 
+                "modified": "2008-09-05T16:26:28.717-04:00", 
+                "summary": "Directory traversal vulnerability in readmsg.php in WebMail 2.0.1 in Cobalt Qube 3 allows remote attackers to read arbitrary files via a .. (dot dot) in the mailbox parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:cobalt:qube:3.0"
+            }, 
+            {
+                "id": "cpe:/a:cobalt:webmail:2.0.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.16969", 
+                "id": 16969
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/static/6805.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2001-08/0245.html", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2001-07/0092.html", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:2000", 
+                "signature": "SERVER-WEBAPP readmsg.php access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2001-1408"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "readmsg.php detection", 
+                "file": "cobalt_cube_webmail_dir_trav.nasl", 
+                "family": "Web application abuses", 
+                "id": "11073"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Cobalt Qube WebMail readmsg.php mailbox Parameter Traversal Arbitrary File Access", 
+                "file": "cobalt_cube_webmail_dir_trav.nasl", 
+                "family": "CGI abuses", 
+                "id": "11073"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,216 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1806", 
+                "published": "2014-05-14T07:13:06.287-04:00", 
+                "id": "CVE-2014-1806", 
+                "modified": "2014-06-21T00:39:54.880-04:00", 
+                "summary": "The .NET Remoting implementation in Microsoft .NET Framework 1.1 SP1, 2.0 SP2, 3.5, 3.5.1, 4, 4.5, and 4.5.1 does not properly restrict memory access, which allows remote attackers to execute arbitrary code via vectors involving malformed objects, aka \"TypeFilterLevel Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:.net_framework:1.1:sp1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:.net_framework:4.5.1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:.net_framework:2.0:sp2"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:.net_framework:4.5"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:.net_framework:3.5"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:.net_framework:3.5.1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:.net_framework:4.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.13230", 
+                "id": 13230
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0050455", 
+                "id": "2014-A-0073", 
+                "title": "Microsoft .NET Framework Privilege Escalation Vulnerability"
+            }
+        ], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/67286", 
+                "id": 67286
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/67286", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS14-026", 
+                    "vendor": "MS"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/35280", 
+                "id": 35280, 
+                "file": "platforms/windows/remote/35280.txt"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-1806"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24648", 
+                "title": "Vulnerability in .NET Framework could allow elevation of privilege - MS14-026", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:24648"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS14-026: Vulnerability in .NET Framework Could Allow Elevation of Privilege (2958732)", 
+                "file": "smb_nt_ms14-026.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "73985"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in .NET Framework Could Allow Elevation of Privilege", 
+                "id": "Vulnerability in .NET Framework Could Allow Elevation of Privilege", 
+                "title": "2931366"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2958732", 
+                "id": "2958732", 
+                "title": "Vulnerability in .NET Framework Could Allow Elevation of Privilege"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS14-026", 
+                "id": "MS14-026", 
+                "title": "Vulnerability in .NET Framework Could Allow Elevation of Privilege"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

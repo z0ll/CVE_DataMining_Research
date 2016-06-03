@@ -1,0 +1,265 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3195", 
+                "published": "2014-10-08T06:55:06.580-04:00", 
+                "id": "CVE-2014-3195", 
+                "modified": "2014-10-24T03:18:34.760-04:00", 
+                "summary": "Google V8, as used in Google Chrome before 38.0.2125.101, does not properly track JavaScript heap-memory allocations as allocations of uninitialized memory and does not properly concatenate arrays of double-precision floating-point numbers, which allows remote attackers to obtain sensitive information via crafted JavaScript code, related to the PagedSpace::AllocateRaw and NewSpace::AllocateRaw functions in heap/spaces-inl.h, the LargeObjectSpace::AllocateRaw function in heap/spaces.cc, and the Runtime_ArrayConcat function in runtime.cc."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:google:chrome:38.0.2125.7"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.67781", 
+                "id": 67781
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0055371", 
+                "id": "2014-B-0134", 
+                "title": "Multiple Vulnerabilities in Google Chrome"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://crbug.com/403409", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://code.google.com/p/v8/source/detail?r=23268", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://code.google.com/p/v8/source/detail?r=23144", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2014-1626.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://googlechromereleases.blogspot.com/2014/10/stable-channel-update.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-3195"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27125", 
+                "title": "RHSA-2014:1626: chromium-browser security update (Critical)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27125"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27038", 
+                "title": "USN-2345-1 -- Oxide vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27038"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "FreeBSD : chromium -- multiple vulnerabilities (d2bbcc01-4ec3-11e4-ab3f-00262d5ed8ee)", 
+                "file": "freebsd_pkg_d2bbcc014ec311e4ab3f00262d5ed8ee.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "78104"
+            }, 
+            {
+                "name": "GLSA-201412-13 : Chromium: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201412-13.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "79966"
+            }, 
+            {
+                "name": "Google Chrome < 38.0.2125.101 Multiple Vulnerabilities", 
+                "file": "google_chrome_38_0_2125_101.nasl", 
+                "family": "Windows", 
+                "id": "78080"
+            }, 
+            {
+                "name": "Google Chrome < 38.0.2125.101 Multiple Vulnerabilities (Mac OS X)", 
+                "file": "macosx_google_chrome_38_0_2125_101.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "78081"
+            }, 
+            {
+                "name": "openSUSE Security Update : chromium (openSUSE-SU-2014:1378-1)", 
+                "file": "openSUSE-2014-634.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "79267"
+            }, 
+            {
+                "name": "RHEL 6 : chromium-browser (RHSA-2014:1626)", 
+                "file": "redhat-RHSA-2014-1626.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "78415"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : oxide-qt vulnerabilities (USN-2345-1)", 
+                "file": "ubuntu_USN-2345-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "78465"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20141626", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2014-1626.html", 
+                    "id": "RHSA-2014:1626", 
+                    "title": "RHSA-2014:1626: chromium-browser security update (Critical)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1150848", 
+                    "title": "CVE-2014-3188 v8: IPC and v8 issue fixed in Google Chrome 38.0.2125.101", 
+                    "id": "1150848", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1626"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1150849", 
+                    "title": "CVE-2014-3195 v8: information leak fixed in Google Chrome 38.0.2125.101", 
+                    "id": "1150849", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1626"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1151368", 
+                    "title": "CVE-2014-3189 CVE-2014-3198 chromium: OOB reads in PDFium fixed in Chrome 38.0.2125.101", 
+                    "id": "1151368", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1626"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1151381", 
+                    "title": "CVE-2014-3190 CVE-2014-3191 CVE-2014-3193 CVE-2014-3199 chromium: multiple security fixes in Chrome 38.0.2125.101", 
+                    "id": "1151381", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1626"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1151383", 
+                    "title": "CVE-2014-3194 chromium: use-after-free issue in Web Workers fixed in Chrome 38.0.2125.101", 
+                    "id": "1151383", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1626"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1151395", 
+                    "title": "CVE-2014-3192 chromium: use-after-free in DOM, fixed in Chrome 38.0.2125.101", 
+                    "id": "1151395", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1626"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1151422", 
+                    "title": "CVE-2014-3197 chromium: information leak in XSS Auditor fixed in Chrome 38.0.2125.101", 
+                    "id": "1151422", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1626"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1151425", 
+                    "title": "CVE-2014-3200 chromium: multiple unspecified issues fixed in Chrome 38.0.2125.101", 
+                    "id": "1151425", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1626"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

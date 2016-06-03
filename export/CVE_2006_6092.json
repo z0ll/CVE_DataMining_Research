@@ -1,0 +1,430 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6092", 
+                "published": "2006-11-24T13:07:00.000-05:00", 
+                "id": "CVE-2006-6092", 
+                "modified": "2011-03-07T21:45:10.393-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in vehiclelistings.asp in 20/20 Auto Gallery allow remote attackers to execute arbitrary SQL commands via the (1) vehicleID, (2) categoryID_list, (3) sale_type, (4) stock_number, (5) manufacturer, (6) model, (7) vehicleID, (8) year, (9) vin, and (10) listing_price parameters."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:20_20_applications:20_20_auto_gallery"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33431", 
+                "id": 33431
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21154", 
+                "id": 21154
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30400", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4601", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21154", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/451947/100/100/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/22974", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://s-a-p.ca/index.php?page=OurAdvisories&id=38", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/1916", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007504", 
+                "signature": "ET DELETED 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp vehicleID SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007505", 
+                "signature": "ET DELETED 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp vehicleID UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007506", 
+                "signature": "ET DELETED 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp vehicleID INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007507", 
+                "signature": "ET DELETED 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp vehicleID DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007508", 
+                "signature": "ET DELETED 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp vehicleID ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007509", 
+                "signature": "ET DELETED 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp vehicleID UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007510", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp categoryID_list SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007511", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp categoryID_list UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007512", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp categoryID_list INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007513", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp categoryID_list DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007514", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp categoryID_list ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007515", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp categoryID_list UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007516", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp sale_type SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007517", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp sale_type UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007518", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp sale_type INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007519", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp sale_type DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007520", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp sale_type ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007521", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp sale_type UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007522", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp stock_number SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007523", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp stock_number UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007524", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp stock_number INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007525", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp stock_number DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007526", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp stock_number ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007527", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp stock_number UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007528", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp manufacturer SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007529", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp manufacturer UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007530", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp manufacturer INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007531", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp manufacturer DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007532", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp manufacturer ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007533", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp manufacturer UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007534", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp model SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007535", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp model UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007536", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp model INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007537", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp model DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007538", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp model ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007539", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp model UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007540", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp vehicleID SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007541", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp vehicleID UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007542", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp vehicleID INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007543", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp vehicleID DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007544", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp vehicleID ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007545", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp vehicleID UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007546", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp year SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007547", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp year UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007548", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp year INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007549", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp year DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007550", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp year ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007551", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp year UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007552", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp vin SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007553", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp vin UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007554", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp vin INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007555", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp vin DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007556", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp vin ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007557", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp vin UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007558", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp listing_price SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007559", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp listing_price UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007560", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp listing_price INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007561", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp listing_price DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007562", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp listing_price ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007563", 
+                "signature": "ET WEB_SPECIFIC_APPS 20/20 Auto Gallery SQL Injection Attempt -- vehiclelistings.asp listing_price UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6092"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,299 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2756", 
+                "published": "2015-04-01T10:59:08.757-04:00", 
+                "id": "CVE-2015-2756", 
+                "modified": "2016-01-13T21:59:04.343-05:00", 
+                "summary": "QEMU, as used in Xen 3.3.x through 4.5.x, does not properly restrict access to PCI command registers, which might allow local HVM guest users to cause a denial of service (non-maskable interrupt and host crash) by disabling the (1) memory or (2) I/O decoding for a PCI Express device and then accessing the device, which triggers an Unsupported Request (UR) response."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:xen:xen:4.3.0"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.4.1:-"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.4.0:-"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.3.1"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.3.2"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.5.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.74497", 
+                "id": 74497
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xenbits.xen.org/xsa/advisory-126.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2608-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id/1031998", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2015/dsa-3259", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://lists.nongnu.org/archive/html/qemu-devel/2015-03/msg06179.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-April/154579.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-April/154574.html", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.9", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-2756"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28687", 
+                "title": "USN-2608-1 -- qemu vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28687"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:29063", 
+                "title": "DSA-3259-1 qemu -- qemu", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:29063"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:47", 
+                "title": "DSA-3259-1 -- qemu -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:47"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3259-1 (qemu - security update)", 
+                "file": "deb_3259.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703259"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-3259-1 : qemu - security update (Venom)", 
+                "file": "debian_DSA-3259.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "83422"
+            }, 
+            {
+                "name": "Fedora 21 : xen-4.4.2-2.fc21 (2015-5208)", 
+                "file": "fedora_2015-5208.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "82729"
+            }, 
+            {
+                "name": "Fedora 22 : xen-4.5.0-7.fc22 (2015-5295)", 
+                "file": "fedora_2015-5295.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "82952"
+            }, 
+            {
+                "name": "Fedora 20 : xen-4.3.4-2.fc20 (2015-5402)", 
+                "file": "fedora_2015-5402.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "82730"
+            }, 
+            {
+                "name": "FreeBSD : xen-tools -- Unmediated PCI command register access in qemu (79f401cd-27e6-11e5-a4a5-002590263bf5)", 
+                "file": "freebsd_pkg_79f401cd27e611e5a4a5002590263bf5.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "84705"
+            }, 
+            {
+                "name": "GLSA-201504-04 : Xen: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201504-04.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "82734"
+            }, 
+            {
+                "name": "openSUSE Security Update : xen (openSUSE-2015-314)", 
+                "file": "openSUSE-2015-314.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "82907"
+            }, 
+            {
+                "name": "openSUSE Security Update : xen (openSUSE-2015-434) (Venom)", 
+                "file": "openSUSE-2015-434.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84333"
+            }, 
+            {
+                "name": "OracleVM 3.3 : xen (OVMSA-2015-0057) (Venom)", 
+                "file": "oraclevm_OVMSA-2015-0057.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "83482"
+            }, 
+            {
+                "name": "OracleVM 3.2 : xen (OVMSA-2015-0058) (Venom)", 
+                "file": "oraclevm_OVMSA-2015-0058.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "83483"
+            }, 
+            {
+                "name": "OracleVM 3.2 : xen (OVMSA-2015-0068) (POODLE) (Venom)", 
+                "file": "oraclevm_OVMSA-2015-0068.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "84140"
+            }, 
+            {
+                "name": "OracleVM 2.2 : xen (OVMSA-2016-0012)", 
+                "file": "oraclevm_OVMSA-2016-0012.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "88737"
+            }, 
+            {
+                "name": "SuSE 11.3 Security Update : Xen (SAT Patch Number 10560)", 
+                "file": "suse_11_xen-201503-150330.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "82990"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : xen (SUSE-SU-2015:0701-1)", 
+                "file": "suse_SU-2015-0701-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83714"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : Xen (SUSE-SU-2015:0745-1)", 
+                "file": "suse_SU-2015-0745-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83718"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : Xen (SUSE-SU-2015:0746-1)", 
+                "file": "suse_SU-2015-0746-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83719"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : Xen (SUSE-SU-2015:0747-1)", 
+                "file": "suse_SU-2015-0747-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83720"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 14.04 / 14.10 / 15.04 : qemu, qemu-kvm vulnerabilities (USN-2608-1) (Venom)", 
+                "file": "ubuntu_USN-2608-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83435"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2015-5208", 
+                "id": "FEDORA-2015-5208"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2015-5402", 
+                "id": "FEDORA-2015-5402"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2608-1", 
+                "id": "USN-2608-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3259", 
+                "id": "DSA-3259"
+            }
+        ], 
+        "Vmware": []
+    }
+}

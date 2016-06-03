@@ -1,0 +1,230 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3516", 
+                "published": "2009-10-01T11:30:00.313-04:00", 
+                "id": "CVE-2009-3516", 
+                "modified": "2010-08-21T01:35:57.937-04:00", 
+                "summary": "gssd in IBM AIX 5.3.x through 5.3.9 and 6.1.0 through 6.1.2 does not properly handle the NFSv4 Kerberos credential cache, which allows local users to bypass intended access restrictions for Kerberized NFSv4 shares via unspecified vectors."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/255.html", 
+                "id": "CWE-255", 
+                "title": "Credentials Management"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:ibm:aix:5.3.8"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:6.1.0"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:5.3.0"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:5.3.7"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:6.1"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:6.1.2"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:6.1.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.50330", 
+                "id": 50330
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/36545", 
+                "id": 36545
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/36545", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://aix.software.ibm.com/aix/efixes/security/nfs4_advisory.asc", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2009/2788", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www-01.ibm.com/support/docview.wss?uid=isg1IZ50496", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www-01.ibm.com/support/docview.wss?uid=isg1IZ50444", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www-01.ibm.com/support/docview.wss?uid=isg1IZ50399", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www-01.ibm.com/support/docview.wss?uid=isg1IZ49278", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www-01.ibm.com/support/docview.wss?uid=isg1IZ49096", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www-01.ibm.com/support/docview.wss?uid=isg1IZ49024", 
+                    "vendor": "AIXAPAR"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-3516"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:6318", 
+                "title": "AIX NFSv4 Kerberos vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:6318"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "AIX 6.1 : bos.net.nfs.client (U823848)", 
+                "file": "aix_U823848.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "39026"
+            }, 
+            {
+                "name": "AIX 6.1 TL 1 : bos.net.nfs.client (U823931)", 
+                "file": "aix_U823931.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "39079"
+            }, 
+            {
+                "name": "AIX 6.1 TL 2 : bos.net.nfs.client (U824054)", 
+                "file": "aix_U824054.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "39136"
+            }, 
+            {
+                "name": "AIX 5.3 TL 7 : bos.net.nfs.client (U825042)", 
+                "file": "aix_U825042.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "39637"
+            }, 
+            {
+                "name": "AIX 5.3 TL 8 : bos.net.nfs.client (U825103)", 
+                "file": "aix_U825103.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "39666"
+            }, 
+            {
+                "name": "AIX 5.3 TL 9 : bos.net.nfs.client (U825202)", 
+                "file": "aix_U825202.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "39706"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IZ49024", 
+                "id": "IZ49024"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IZ49096", 
+                "id": "IZ49096"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IZ49278", 
+                "id": "IZ49278"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IZ50399", 
+                "id": "IZ50399"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IZ50444", 
+                "id": "IZ50444"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IZ50496", 
+                "id": "IZ50496"
+            }
+        ], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

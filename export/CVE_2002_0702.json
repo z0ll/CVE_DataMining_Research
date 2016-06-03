@@ -1,0 +1,194 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0702", 
+                "published": "2002-07-26T00:00:00.000-04:00", 
+                "id": "CVE-2002-0702", 
+                "modified": "2008-09-05T16:28:43.693-04:00", 
+                "summary": "Format string vulnerabilities in the logging routines for dynamic DNS code (print.c) of ISC DHCP daemon (DHCPD) 3 to 3.0.1rc8, with the NSUPDATE option enabled, allow remote malicious DNS servers to execute arbitrary code via format strings in a DNS server response."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:isc:dhcpd:3.0.1:rc6"
+            }, 
+            {
+                "id": "cpe:/a:isc:dhcpd:3.0.1:rc5"
+            }, 
+            {
+                "id": "cpe:/a:isc:dhcpd:3.0.1:rc4"
+            }, 
+            {
+                "id": "cpe:/a:isc:dhcpd:3.0.1:rc3"
+            }, 
+            {
+                "id": "cpe:/a:isc:dhcpd:3.0.1:rc8"
+            }, 
+            {
+                "id": "cpe:/a:isc:dhcpd:3.0.1:rc7"
+            }, 
+            {
+                "id": "cpe:/a:isc:dhcpd:3.0"
+            }, 
+            {
+                "id": "cpe:/a:isc:dhcpd:3.0.1:rc2"
+            }, 
+            {
+                "id": "cpe:/a:isc:dhcpd:3.0.1:rc1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.18472", 
+                "id": 18472
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/4701", 
+                "id": 4701
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.cert.org/advisories/CA-2002-12.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/854315", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/4701", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.linux-mandrake.com/en/security/2002/MDKSA-2002-037.php", 
+                    "vendor": "MANDRAKE"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/static/9039.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.novell.com/linux/security/advisories/2002_19_dhcp.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/vulnwatch/2002-q2/0063.html", 
+                    "vendor": "VULNWATCH"
+                }, 
+                {
+                    "url": "ftp://ftp.caldera.com/pub/security/OpenLinux/CSSA-2002-028.0.txt", 
+                    "vendor": "CALDERA"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=102089498828206&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://distro.conectiva.com.br/atualizacoes/?id=a&anuncio=000483", 
+                    "vendor": "CONECTIVA"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/854315", 
+                "id": "VU#854315"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2102039", 
+                "signature": "GPL EXPLOIT bootp hostname format string attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "misc-attack", 
+                "id": "sid:2039", 
+                "signature": "SERVER-OTHER bootp hostname format string attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-0702"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Mandrake Linux Security Advisory : dhcp (MDKSA-2002:037)", 
+                "file": "mandrake_MDKSA-2002-037.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "13942"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2002-0702.html", 
+                "id": "SuSE-SA:2002:019"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,148 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6268", 
+                "published": "2006-12-04T06:28:00.000-05:00", 
+                "id": "CVE-2006-6268", 
+                "modified": "2008-09-05T17:14:20.303-04:00", 
+                "summary": "SQL injection vulnerability in system/core/profile/profile.inc.php in Neocrome Land Down Under (LDU) 8.x and earlier allows remote authenticated users to execute arbitrary SQL commands via a url-encoded id parameter to users.php that begins with a valid filename, as demonstrated by \"default.gif\" followed by a double-encoded NULL and   (apostrophe) (%2500%2527)."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:neocrome:land_down_under:8.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33605", 
+                "id": 33605
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21227", 
+                "id": 21227
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/21227", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/452259/100/100/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.nukedx.com/?viewdoc=51", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/1954", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006880", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Land Down Under (LDU) SQL Injection Attempt -- users.php id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006881", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Land Down Under (LDU) SQL Injection Attempt -- users.php id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006882", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Land Down Under (LDU) SQL Injection Attempt -- users.php id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006883", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Land Down Under (LDU) SQL Injection Attempt -- users.php id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006884", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Land Down Under (LDU) SQL Injection Attempt -- users.php id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006885", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Land Down Under (LDU) SQL Injection Attempt -- users.php id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6268"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

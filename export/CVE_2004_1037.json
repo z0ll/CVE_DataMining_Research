@@ -1,0 +1,190 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-1037", 
+                "published": "2005-03-01T00:00:00.000-05:00", 
+                "id": "CVE-2004-1037", 
+                "modified": "2008-09-05T16:40:10.123-04:00", 
+                "summary": "The search function in TWiki 20030201 allows remote attackers to execute arbitrary commands via shell metacharacters in a search string."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:twiki:twiki:2003-02-01"
+            }, 
+            {
+                "id": "cpe:/o:gentoo:linux"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.24015", 
+                "id": 24015
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/11674", 
+                "id": 11674
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/11714", 
+                "id": 11714
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/11674", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/18062", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/p-039.shtml", 
+                    "vendor": "CIAC"
+                }, 
+                {
+                    "url": "http://twiki.org/cgi-bin/view/Codev/SecurityAlertExecuteCommandsWithSearch", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://security.gentoo.org/glsa/glsa-200411-33.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2004-11/0201.html", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=110037207516456&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://distro.conectiva.com.br/atualizacoes/?id=a&anuncio=000918", 
+                    "vendor": "CONECTIVA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "twiki_search.rb", 
+                "file": "metasploit-framework/modules/exploits/unix/webapp/twiki_search.rb", 
+                "title": "TWiki Search Function Arbitrary Command Execution"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/twiki_search", 
+                "id": "exploit_info/twiki_search", 
+                "title": "TWiki Search.pm shell command injection"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-1037"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: twiki", 
+                "file": "freebsd_twiki.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52300"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 200411-33 (www-apps/twiki)", 
+                "file": "glsa_200411_33.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "54754"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "FreeBSD : twiki -- arbitrary shell command execution (b4af3ede-36e9-11d9-a9e7-0001020eed82)", 
+                "file": "freebsd_pkg_b4af3ede36e911d9a9e70001020eed82.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "36281"
+            }, 
+            {
+                "name": "FreeBSD : twiki -- arbitrary shell command execution (196)", 
+                "file": "freebsd_twiki_20040902.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "15815"
+            }, 
+            {
+                "name": "GLSA-200411-33 : TWiki: Arbitrary command execution", 
+                "file": "gentoo_GLSA-200411-33.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "15827"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200411-33", 
+                "id": "GLSA-200411-33"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

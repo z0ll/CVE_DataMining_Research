@@ -1,0 +1,230 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0574", 
+                "published": "2004-11-03T00:00:00.000-05:00", 
+                "id": "CVE-2004-0574", 
+                "modified": "2008-09-10T15:26:51.697-04:00", 
+                "summary": "The Network News Transfer Protocol (NNTP) component of Microsoft Windows NT Server 4.0, Windows 2000 Server, Windows Server 2003, Exchange 2000 Server, and Exchange Server 2003 allows remote attackers to execute arbitrary code via XPAT patterns, possibly related to improper length validation and an \"unchecked buffer,\" leading to off-by-one and heap-based buffer overflows."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_2000:::server"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:exchange_server:2003"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:exchange_server:2000"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_2003_server:r2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_nt:4.0::server"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.883", 
+                "id": 883
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/10697", 
+                "id": 10697
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/203126", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/17641", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms04-036.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/17661", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.coresecurity.com/common/showdoc.php?idx=420&idxseccion=10", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/p-012.shtml", 
+                    "vendor": "CIAC"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=109761632831563&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/203126", 
+                "id": "VU#203126"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2103078", 
+                "signature": "GPL MISC nntp SEARCH pattern overflow attempt"
+            }, 
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2102927", 
+                "signature": "GPL MISC NNTP XPAT pattern overflow attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2927", 
+                "signature": "OS-WINDOWS Microsoft Windows XPAT pattern overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:3078", 
+                "signature": "PROTOCOL-NNTP Microsoft Windows SEARCH pattern overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0574"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:4392", 
+                "title": "Windows Server 2003 NNTP Component Buffer Overflow", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:4392"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:246", 
+                "title": "Network News Transfer Protocol Buffer Overflow", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:246"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:5070", 
+                "title": "Windows NT NNTP Component Buffer Overflow", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:5070"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:5926", 
+                "title": "Windows 2000 NNTP Component Buffer Overflow", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:5926"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:5021", 
+                "title": "Vulnerability in NNTP Could Allow Remote Code Execution", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:5021"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Windows NT NNTP Component Buffer Overflow", 
+                "file": "gb_ms04_036.nasl", 
+                "family": "Buffer overflow", 
+                "id": "100608"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS04-036: Microsoft NNTP Component Remote Overflow (883935) (uncredentialed check)", 
+                "file": "msnntp_code_execution.nasl", 
+                "family": "Windows", 
+                "id": "15465"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in NNTP Could Allow Remote Code Execution", 
+                "id": "Vulnerability in NNTP Could Allow Remote Code Execution", 
+                "title": "883935"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/883935", 
+                "id": "883935", 
+                "title": "Vulnerability in NNTP Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS04-036", 
+                "id": "MS04-036", 
+                "title": "Vulnerability in NNTP Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

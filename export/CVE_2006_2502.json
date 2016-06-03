@@ -1,0 +1,144 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-2502", 
+                "published": "2006-05-22T12:06:00.000-04:00", 
+                "id": "CVE-2006-2502", 
+                "modified": "2011-03-07T21:36:19.437-05:00", 
+                "summary": "Stack-based buffer overflow in pop3d in Cyrus IMAPD (cyrus-imapd) 2.3.2, when the popsubfolders option is enabled, allows remote attackers to execute arbitrary code via a long USER command."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:cyrus:imapd:2.3.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.30337", 
+                "id": 30337
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/18056", 
+                "id": 18056
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/1891", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/18056", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/fulldisclosure/2006-05/0527.html", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/26578", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1016131", 
+                    "vendor": "SECTRACK"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "4.9", 
+                    "base": "5.1", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:1866", 
+                "signature": "PROTOCOL-POP USER overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "cyrus_pop3d_popsubfolders.rb", 
+                "file": "metasploit-framework/modules/exploits/linux/pop3/cyrus_pop3d_popsubfolders.rb", 
+                "title": "Cyrus IMAPD pop3d popsubfolders USER Buffer Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/cyrus_imap_pop3d_subfolders_rh", 
+                "id": "exploit_info/cyrus_imap_pop3d_subfolders_rh", 
+                "title": "Cyrus IMAP pop3d popsubfolders buffer overflow"
+            }, 
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/cyrus_imap_pop3d_subfolders", 
+                "id": "exploit_info/cyrus_imap_pop3d_subfolders", 
+                "title": "Cyrus IMAP pop3d popsubfolders buffer overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-2502"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

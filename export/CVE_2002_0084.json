@@ -1,0 +1,191 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0084", 
+                "published": "2002-03-15T00:00:00.000-05:00", 
+                "id": "CVE-2002-0084", 
+                "modified": "2008-09-10T15:11:18.603-04:00", 
+                "summary": "Buffer overflow in the fscache_setup function of cachefsd in Solaris 2.6, 7, and 8 allows local users to gain root privileges via a long mount argument."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:sun:solaris:2.6"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:8.0::x86"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:8.0::sparc"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:7.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.17977", 
+                "id": 17977
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/161931", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.esecurityonline.com/advisories/eSO4198.asp", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F44309", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://cert.uni-stuttgart.de/archive/bugtraq/2002/04/msg00416.html", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/161931", 
+                "id": "VU#161931"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "rpc-portmap", 
+                "id": "sid:2101747", 
+                "signature": "GPL RPC portmap cachefsd request TCP"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2101751", 
+                "signature": "GPL EXPLOIT cachefsd buffer overflow attempt"
+            }, 
+            {
+                "classtype": "rpc-portmap", 
+                "id": "sid:2101746", 
+                "signature": "GPL RPC portmap cachefsd request UDP"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:1746", 
+                "signature": "PROTOCOL-RPC portmap cachefsd request UDP"
+            }, 
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:1747", 
+                "signature": "PROTOCOL-RPC portmap cachefsd request TCP"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:1751", 
+                "signature": "SERVER-OTHER cachefsd buffer overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-0084"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:43", 
+                "title": "Solaris 7 cachefsd Buffer Overrun Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:43"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:97", 
+                "title": "Solaris cachefsd Buffer Overrun Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:97"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Solaris Update for kpasswd, libgss.so.1 and libkadm5clnt.so.1 109224-11", 
+                "file": "gb_solaris_110896_03.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "855358"
+            }, 
+            {
+                "name": "Solaris Update for kpasswd, libgss.so.1 and libkadm5clnt.so.1 109224-11", 
+                "file": "gb_solaris_110897_03.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "855405"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Solaris cachefsd fscache_setup Function Remote Overflow", 
+                "file": "cachefsd_overflow.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "10951"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

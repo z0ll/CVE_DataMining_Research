@@ -1,0 +1,258 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-4792", 
+                "published": "2012-12-30T13:55:01.477-05:00", 
+                "id": "CVE-2012-4792", 
+                "modified": "2013-11-02T23:27:30.657-04:00", 
+                "summary": "Use-after-free vulnerability in Microsoft Internet Explorer 6 through 8 allows remote attackers to execute arbitrary code via a crafted web site that triggers access to an object that (1) was not properly allocated or (2) is deleted, as demonstrated by a CDwnBindInfo object, and exploited in the wild in December 2012."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:7"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:6"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:8"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.7227", 
+                "id": 7227
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA13-015A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA13-008A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/154201", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/windows/browser/ie_cbutton_uaf.rb", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS13-008", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/advisory/2794220", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://packetstormsecurity.com/files/119168/Microsoft-Internet-Explorer-CDwnBindInfo-Object-Use-After-Free.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://labs.alienvault.com/labs/index.php/2012/just-another-water-hole-campaign-using-an-internet-explorer-0day/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://eromang.zataz.com/2012/12/29/attack-and-ie-0day-informations-used-against-council-on-foreign-relations/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://blogs.technet.com/b/srd/archive/2012/12/31/microsoft-quot-fix-it-quot-available-for-internet-explorer-6-7-and-8.aspx", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://blogs.technet.com/b/srd/archive/2012/12/29/new-vulnerability-affecting-internet-explorer-8-users.aspx", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://blog.fireeye.com/research/2012/12/council-foreign-relations-water-hole-attack-details.html", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/154201", 
+                "id": "VU#154201"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2016132", 
+                "signature": "ET CURRENT_EVENTS Escaped Unicode Char in Window Location CVE-2012-4792 EIP"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2016133", 
+                "signature": "ET CURRENT_EVENTS Escaped Unicode Char in Location CVE-2012-4792 EIP (Exploit Specific replace)"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2016134", 
+                "signature": "ET CURRENT_EVENTS Escaped Unicode Char in Location CVE-2012-4792 EIP % Hex Encode"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2016135", 
+                "signature": "ET CURRENT_EVENTS CFR DRIVEBY CVE-2012-4792 DNS Query for C2 domain"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2016136", 
+                "signature": "ET CURRENT_EVENTS Metasploit CVE-2012-4792 EIP in URI IE 8"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2016137", 
+                "signature": "ET CURRENT_EVENTS CVE-2012-4792 EIP in URI (1)"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2016138", 
+                "signature": "ET CURRENT_EVENTS Possible Exodus Intel IE HTML+TIME EIP Control Technique"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2016170", 
+                "signature": "ET CURRENT_EVENTS CVE-2012-4792 EIP in URI (2)"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ie_cbutton_uaf.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/browser/ie_cbutton_uaf.rb", 
+                "title": "MS13-008 Microsoft Internet Explorer CButton Object Use-After-Free Vulnerability"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/ie_cbutton_uaf", 
+                "id": "exploit_info/ie_cbutton_uaf", 
+                "title": "Internet Explorer CButton Use After Free Vulnerability"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-4792"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:16361", 
+                "title": "Internet Explorer Use After Free Vulnerability - MS13-008", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:16361"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Internet Explorer Remote Code Execution Vulnerability (2794220)", 
+                "file": "secpod_ms_ie_remote_code_exec_vuln.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "902699"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS KB2794220: Vulnerability in Internet Explorer Could Allow Remote Code Execution (deprecated)", 
+                "file": "smb_kb2794220.nasl", 
+                "family": "Windows", 
+                "id": "63372"
+            }, 
+            {
+                "name": "MS13-008: Security Update for Internet Explorer (2799329)", 
+                "file": "smb_nt_ms13-008.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "63522"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Security Update for Internet Explorer", 
+                "id": "Security Update for Internet Explorer", 
+                "title": "2799329"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2799329", 
+                "id": "2799329", 
+                "title": "Security Update for Internet Explorer"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS13-008", 
+                "id": "MS13-008", 
+                "title": "Security Update for Internet Explorer"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

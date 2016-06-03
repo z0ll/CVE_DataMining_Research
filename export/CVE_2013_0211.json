@@ -1,0 +1,252 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0211", 
+                "published": "2013-09-30T18:55:04.557-04:00", 
+                "id": "CVE-2013-0211", 
+                "modified": "2015-03-25T21:59:03.567-04:00", 
+                "summary": "Integer signedness error in the archive_write_zip_data function in archive_write_set_format_zip.c in libarchive 3.1.2 and earlier, when running on 64-bit machines, allows context-dependent attackers to cause a denial of service (crash) via unspecified vectors, which triggers an improper conversion between unsigned and signed types, leading to a buffer overflow."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:libarchive:libarchive:3.1.2::~~~x64~~"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.65075", 
+                "id": 65075
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/libarchive/libarchive/commit/22531545514043e04633e1c015c7540b9de9dbe4", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=902998", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2013:147", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-updates/2015-03/msg00065.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2013-April/101876.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2013-April/101872.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2013-April/101700.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2013-April/101687.html", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-0211"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for libarchive FEDORA-2013-4522", 
+                "file": "gb_fedora_2013_4522_libarchive_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865561"
+            }, 
+            {
+                "name": "Fedora Update for libarchive FEDORA-2013-4537", 
+                "file": "gb_fedora_2013_4537_libarchive_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865547"
+            }, 
+            {
+                "name": "Fedora Update for mingw-libarchive FEDORA-2013-4576", 
+                "file": "gb_fedora_2013_4576_mingw-libarchive_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865534"
+            }, 
+            {
+                "name": "Fedora Update for mingw-libarchive FEDORA-2013-4592", 
+                "file": "gb_fedora_2013_4592_mingw-libarchive_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865532"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 17 : libarchive-3.0.4-3.fc17 (2013-4522)", 
+                "file": "fedora_2013-4522.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "65953"
+            }, 
+            {
+                "name": "Fedora 18 : libarchive-3.0.4-4.fc18 (2013-4537)", 
+                "file": "fedora_2013-4537.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "65954"
+            }, 
+            {
+                "name": "Fedora 17 : mingw-libarchive-3.0.4-4.fc17 (2013-4576)", 
+                "file": "fedora_2013-4576.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "65837"
+            }, 
+            {
+                "name": "Fedora 18 : mingw-libarchive-3.0.4-4.fc18 (2013-4592)", 
+                "file": "fedora_2013-4592.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "65838"
+            }, 
+            {
+                "name": "FreeBSD : libarchive -- multiple vulnerabilities (7c63775e-be31-11e5-b5fe-002590263bf5)", 
+                "file": "freebsd_pkg_7c63775ebe3111e5b5fe002590263bf5.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "87984"
+            }, 
+            {
+                "name": "GLSA-201406-02 : libarchive: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201406-02.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "74259"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : libarchive (MDVSA-2013:147)", 
+                "file": "mandriva_MDVSA-2013-147.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "66157"
+            }, 
+            {
+                "name": "openSUSE Security Update : libarchive (openSUSE-2015-248)", 
+                "file": "openSUSE-2015-248.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "82012"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : libarchive (SUSE-SU-2015:0667-1)", 
+                "file": "suse_SU-2015-0667-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83710"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 14.04 / 14.10 : libarchive vulnerabilities (USN-2549-1)", 
+                "file": "ubuntu_USN-2549-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "82268"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2013-4522", 
+                "id": "FEDORA-2013-4522"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2013-4537", 
+                "id": "FEDORA-2013-4537"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2013-4576", 
+                "id": "FEDORA-2013-4576"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2013-4592", 
+                "id": "FEDORA-2013-4592"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2013:147", 
+                "id": "MDVSA-2013:147"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2013-0211.html", 
+                "id": "openSUSE-SU-2015:0568"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2549-1", 
+                "id": "USN-2549-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

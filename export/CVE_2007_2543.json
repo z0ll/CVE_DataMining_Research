@@ -1,0 +1,161 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2543", 
+                "published": "2007-05-08T21:19:00.000-04:00", 
+                "id": "CVE-2007-2543", 
+                "modified": "2011-03-07T21:54:28.657-05:00", 
+                "summary": "SQL injection vulnerability in game.php in the Flashgames 1.0.1 module for XOOPS allows remote attackers to execute arbitrary SQL commands via the lid parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:xoops:flashgames_module:1.0.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.36655", 
+                "id": 36655
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/23820", 
+                "id": 23820
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/34472", 
+                "id": 34472
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34076", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1668", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/23820", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/3849", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25155", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/34472", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003823", 
+                "signature": "ET WEB_SPECIFIC_APPS Flashgames SQL Injection Attempt -- game.php lid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003824", 
+                "signature": "ET WEB_SPECIFIC_APPS Flashgames SQL Injection Attempt -- game.php lid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003825", 
+                "signature": "ET WEB_SPECIFIC_APPS Flashgames SQL Injection Attempt -- game.php lid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003826", 
+                "signature": "ET WEB_SPECIFIC_APPS Flashgames SQL Injection Attempt -- game.php lid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003827", 
+                "signature": "ET WEB_SPECIFIC_APPS Flashgames SQL Injection Attempt -- game.php lid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003828", 
+                "signature": "ET WEB_SPECIFIC_APPS Flashgames SQL Injection Attempt -- game.php lid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2543"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,148 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2810", 
+                "published": "2007-05-22T15:30:00.000-04:00", 
+                "id": "CVE-2007-2810", 
+                "modified": "2008-09-05T17:24:05.017-04:00", 
+                "summary": "SQL injection vulnerability in down_indir.asp in Gazi Download Portal allows remote attackers to execute arbitrary SQL commands via the id parameter.  NOTE: the provenance of this information is unknown; the details are obtained solely from third party information."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:gazi_download_portal:gazi_download_portal"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.36931", 
+                "id": 36931
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/23714", 
+                "id": 23714
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/23714", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25347", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34409", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2715", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003999", 
+                "signature": "ET WEB_SPECIFIC_APPS Gazi Download Portal SQL Injection Attempt -- down_indir.asp id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004000", 
+                "signature": "ET WEB_SPECIFIC_APPS Gazi Download Portal SQL Injection Attempt -- down_indir.asp id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004001", 
+                "signature": "ET WEB_SPECIFIC_APPS Gazi Download Portal SQL Injection Attempt -- down_indir.asp id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004002", 
+                "signature": "ET WEB_SPECIFIC_APPS Gazi Download Portal SQL Injection Attempt -- down_indir.asp id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004003", 
+                "signature": "ET WEB_SPECIFIC_APPS Gazi Download Portal SQL Injection Attempt -- down_indir.asp id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004004", 
+                "signature": "ET WEB_SPECIFIC_APPS Gazi Download Portal SQL Injection Attempt -- down_indir.asp id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2810"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

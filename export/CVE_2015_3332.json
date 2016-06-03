@@ -1,0 +1,178 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3332", 
+                "published": "2015-05-27T06:59:08.860-04:00", 
+                "id": "CVE-2015-3332", 
+                "modified": "2015-06-03T22:04:31.873-04:00", 
+                "summary": "A certain backport in the TCP Fast Open implementation for the Linux kernel before 3.18 does not properly maintain a count value, which allow local users to cause a denial of service (system crash) via the Fast Open feature, as demonstrated by visiting the chrome://flags/#enable-tcp-fast-open URL when using certain 3.10.x through 3.16.x kernel builds, including longterm-maintenance releases and ckt (aka Canonical Kernel Team) builds."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.17.8"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.75567", 
+                "id": 75567
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1213951", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugs.debian.org/782515", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/04/14/14", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2015/dsa-3237", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://article.gmane.org/gmane.linux.network/359588", 
+                    "vendor": "MLIST"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.9", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-3332"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:72", 
+                "title": "DSA-3237-1 -- linux -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:72"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3237-1 (linux - security update)", 
+                "file": "deb_3237.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703237"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-3237-1 : linux - security update", 
+                "file": "debian_DSA-3237.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "83065"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : kernel (SUSE-SU-2015:1071-1)", 
+                "file": "suse_SU-2015-1071-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84227"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-utopic vulnerabilities (USN-2615-1)", 
+                "file": "ubuntu_USN-2615-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83761"
+            }, 
+            {
+                "name": "Ubuntu 14.10 : linux vulnerabilities (USN-2616-1)", 
+                "file": "ubuntu_USN-2616-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83762"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-trusty vulnerability (USN-2619-1)", 
+                "file": "ubuntu_USN-2619-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83810"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux vulnerability (USN-2620-1)", 
+                "file": "ubuntu_USN-2620-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83811"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3237", 
+                "id": "DSA-3237"
+            }
+        ], 
+        "Vmware": []
+    }
+}

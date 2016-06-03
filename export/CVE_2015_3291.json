@@ -1,0 +1,185 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3291", 
+                "published": "2015-08-31T06:59:09.737-04:00", 
+                "id": "CVE-2015-3291", 
+                "modified": "2015-08-31T13:55:13.130-04:00", 
+                "summary": "arch/x86/entry/entry_64.S in the Linux kernel before 4.1.6 on the x86_64 platform does not properly determine when nested NMI processing is occurring, which allows local users to cause a denial of service (skipped NMI) by modifying the rsp register, issuing a syscall instruction, and triggering an NMI."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/17.html", 
+                "id": "CWE-17", 
+                "title": "Code"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:4.1.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.77496", 
+                "id": 77496
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/torvalds/linux/commit/810bc075f78ff2c221536eb3008eac6a492dba2d", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243489", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/07/22/7", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.kernel.org/pub/linux/kernel/v4.x/ChangeLog-4.1.6", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=810bc075f78ff2c221536eb3008eac6a492dba2d", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "2.1", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-3291"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:157", 
+                "title": "DSA-3313-1 -- linux -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:157"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3313-1 (linux - security update)", 
+                "file": "deb_3313.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703313"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-3313-1 : linux - security update", 
+                "file": "debian_DSA-3313.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "84965"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-trusty vulnerabilities (USN-2687-1)", 
+                "file": "ubuntu_USN-2687-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85075"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux vulnerabilities (USN-2688-1)", 
+                "file": "ubuntu_USN-2688-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85076"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-utopic vulnerabilities (USN-2689-1)", 
+                "file": "ubuntu_USN-2689-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85077"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-vivid vulnerabilities (USN-2690-1)", 
+                "file": "ubuntu_USN-2690-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85078"
+            }, 
+            {
+                "name": "Ubuntu 15.04 : linux vulnerabilities (USN-2691-1)", 
+                "file": "ubuntu_USN-2691-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85079"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux vulnerabilities (USN-2700-1)", 
+                "file": "ubuntu_USN-2700-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85158"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-trusty vulnerabilities (USN-2701-1)", 
+                "file": "ubuntu_USN-2701-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85159"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

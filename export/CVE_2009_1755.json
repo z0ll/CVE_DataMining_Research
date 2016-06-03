@@ -1,0 +1,181 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1755", 
+                "published": "2009-05-22T07:52:40.547-04:00", 
+                "id": "CVE-2009-1755", 
+                "modified": "2009-05-29T00:00:00.000-04:00", 
+                "summary": "Off-by-one error in the packet_read_query_section function in packet.c in nsd 3.2.1, and process_query_section in query.c in nsd 2.3.7, allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via unspecified vectors that trigger a buffer overflow."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:nlnetlabs:nsd:2.1.3"
+            }, 
+            {
+                "id": "cpe:/a:nlnetlabs:nsd:2.1.2"
+            }, 
+            {
+                "id": "cpe:/a:nlnetlabs:nsd:2.1.4"
+            }, 
+            {
+                "id": "cpe:/a:nlnetlabs:nsd:2.0.2"
+            }, 
+            {
+                "id": "cpe:/a:nlnetlabs:nsd:2.1.0"
+            }, 
+            {
+                "id": "cpe:/a:nlnetlabs:nsd:2.0.0"
+            }, 
+            {
+                "id": "cpe:/a:nlnetlabs:nsd:2.0.1"
+            }, 
+            {
+                "id": "cpe:/a:nlnetlabs:nsd:2.1.5"
+            }, 
+            {
+                "id": "cpe:/a:nlnetlabs:nsd:3.2.1"
+            }, 
+            {
+                "id": "cpe:/a:nlnetlabs:nsd:2.3.7"
+            }, 
+            {
+                "id": "cpe:/a:nlnetlabs:nsd:2.1.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.48270", 
+                "id": 48270
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.nlnetlabs.nl/publications/NSD_vulnerability_announcement.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=529420", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=529418", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2009/05/19/1", 
+                    "vendor": "MLIST"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-1755"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13592", 
+                "title": "DSA-1803-1 nsd, nsd3 -- buffer overflow", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13592"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:8294", 
+                "title": "DSA-1803 nsd, nsd3 -- buffer overflow", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:8294"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: nsd", 
+                "file": "freebsd_nsd.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "64048"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-1803-1 : nsd, nsd3 - buffer overflow", 
+                "file": "debian_DSA-1803.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "38869"
+            }, 
+            {
+                "name": "FreeBSD : nsd -- buffer overflow vulnerability (37a8603d-4494-11de-bea7-000c29a67389)", 
+                "file": "freebsd_pkg_37a8603d449411debea7000c29a67389.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "38838"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

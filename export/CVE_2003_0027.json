@@ -1,0 +1,221 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0027", 
+                "published": "2003-02-07T00:00:00.000-05:00", 
+                "id": "CVE-2003-0027", 
+                "modified": "2008-09-10T20:05:24.493-04:00", 
+                "summary": "Directory traversal vulnerability in Sun Kodak Color Management System (KCMS) library service daemon (kcms_server) allows remote attackers to read arbitrary files via the KCS_OPEN_PROFILE procedure."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:sun:solaris:2.6"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:9.0:x86_update_2"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:8.0"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:8.0::x86"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:9.0::sparc"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:7.0::x86"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:2.5.1::x86"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:2.5.1"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:7.0"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:2.6::x86"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.20112", 
+                "id": 20112
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/6665", 
+                "id": 6665
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/850785", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.entercept.com/news/uspr/01-22-03.asp", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/11129", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/6665", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert/50104", 
+                    "vendor": "SUNALERT"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=104326556329850&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/850785", 
+                "id": "VU#850785"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "rpc-portmap", 
+                "id": "sid:2102006", 
+                "signature": "GPL RPC portmap kcms_server request TCP"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:2102007", 
+                "signature": "GPL RPC kcms_server directory traversal attempt"
+            }, 
+            {
+                "classtype": "rpc-portmap", 
+                "id": "sid:2102005", 
+                "signature": "GPL RPC portmap kcms_server request UDP"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:2005", 
+                "signature": "PROTOCOL-RPC portmap kcms_server request UDP"
+            }, 
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:2006", 
+                "signature": "PROTOCOL-RPC portmap kcms_server request TCP"
+            }, 
+            {
+                "category": "misc-attack", 
+                "id": "sid:2007", 
+                "signature": "PROTOCOL-RPC kcms_server directory traversal attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "solaris_kcms_readfile.rb", 
+                "file": "metasploit-framework/modules/auxiliary/admin/sunrpc/solaris_kcms_readfile.rb", 
+                "title": "Solaris KCMS + TTDB Arbitrary File Read"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2003-0027"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:120", 
+                "title": "Solaris 7 KCMS Arbitrary File Access Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:120"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:2592", 
+                "title": "KCMS KCS_OPEN_PROFILE File Disclosure Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:2592"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:195", 
+                "title": "Solaris 8 KCMS Arbitrary File Access Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:195"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Solaris Update for kpasswd, libgss.so.1 and libkadm5clnt.so.1 109224-11", 
+                "file": "gb_solaris_111400_04.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "855335"
+            }
+        ], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

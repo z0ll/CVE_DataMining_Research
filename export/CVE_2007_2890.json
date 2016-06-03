@@ -1,0 +1,161 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2890", 
+                "published": "2007-05-29T21:30:00.000-04:00", 
+                "id": "CVE-2007-2890", 
+                "modified": "2011-03-07T21:55:16.033-05:00", 
+                "summary": "SQL injection vulnerability in category.php in cpCommerce 1.1.0 and earlier allows remote attackers to execute arbitrary SQL commands via the id_category parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:cpcommerce:cpcommerce:1.1.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.36998", 
+                "id": 36998
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/24138", 
+                "id": 24138
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/36315", 
+                "id": 36315
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1956", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/24138", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/3981", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://osvdb.org/36315", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34484", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25412", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004053", 
+                "signature": "ET WEB_SPECIFIC_APPS cpCommerce SQL Injection Attempt -- category.php id_category SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004054", 
+                "signature": "ET WEB_SPECIFIC_APPS cpCommerce SQL Injection Attempt -- category.php id_category UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004055", 
+                "signature": "ET WEB_SPECIFIC_APPS cpCommerce SQL Injection Attempt -- category.php id_category INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004056", 
+                "signature": "ET WEB_SPECIFIC_APPS cpCommerce SQL Injection Attempt -- category.php id_category DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004057", 
+                "signature": "ET WEB_SPECIFIC_APPS cpCommerce SQL Injection Attempt -- category.php id_category ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004058", 
+                "signature": "ET WEB_SPECIFIC_APPS cpCommerce SQL Injection Attempt -- category.php id_category UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2890"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

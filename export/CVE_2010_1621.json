@@ -1,0 +1,239 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-1621", 
+                "published": "2010-05-14T15:30:01.453-04:00", 
+                "id": "CVE-2010-1621", 
+                "modified": "2011-10-26T23:13:07.590-04:00", 
+                "summary": "The mysql_uninstall_plugin function in sql/sql_plugin.cc in MySQL 5.1 before 5.1.46 does not check privileges before uninstalling a plugin, which allows remote attackers to uninstall arbitrary plugins via the UNINSTALL PLUGIN command."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:mysql:mysql:5.1.45"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.53212", 
+                "id": 53212
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/39543", 
+                "id": 39543
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/39543", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:093", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://dev.mysql.com/doc/refman/5.1/en/news-5-1-46.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://bugs.mysql.com/bug.php?id=51770", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2010-1621"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:14934", 
+                "title": "USN-1397-1 -- MySQL vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:14934"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:12968", 
+                "title": "USN-950-1 -- mysql-dfsg-5.0, mysql-dfsg-5.1 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:12968"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for mysql FEDORA-2010-7355", 
+                "file": "gb_fedora_2010_7355_mysql_fc11.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "861948"
+            }, 
+            {
+                "name": "Fedora Update for mysql FEDORA-2010-7414", 
+                "file": "gb_fedora_2010_7414_mysql_fc12.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "861936"
+            }, 
+            {
+                "name": "Mandriva Update for mdkonline MDVA-2010:093 (mdkonline)", 
+                "file": "gb_mandriva_MDVA_2010_093.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "830938"
+            }, 
+            {
+                "name": "Mandriva Update for mysql MDVSA-2010:093 (mysql)", 
+                "file": "gb_mandriva_MDVSA_2010_093.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "831033"
+            }, 
+            {
+                "name": "Ubuntu Update for mysql-5.1 USN-1397-1", 
+                "file": "gb_ubuntu_USN_1397_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840944"
+            }, 
+            {
+                "name": "Ubuntu Update for MySQL vulnerabilities USN-950-1", 
+                "file": "gb_ubuntu_USN_950_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840442"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 201201-02 (MySQL)", 
+                "file": "glsa_201201_02.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "70803"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 13 : mysql-5.1.46-1.fc13 (2010-7350)", 
+                "file": "fedora_2010-7350.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "47457"
+            }, 
+            {
+                "name": "Fedora 11 : mysql-5.1.46-1.fc11 (2010-7355)", 
+                "file": "fedora_2010-7355.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "47458"
+            }, 
+            {
+                "name": "Fedora 12 : mysql-5.1.46-1.fc12 (2010-7414)", 
+                "file": "fedora_2010-7414.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "47461"
+            }, 
+            {
+                "name": "GLSA-201201-02 : MySQL: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201201-02.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "57446"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : mysql (MDVSA-2010:093)", 
+                "file": "mandriva_MDVSA-2010-093.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "48182"
+            }, 
+            {
+                "name": "MySQL Community Server 5.1 < 5.1.46 Multiple Vulnerabilities", 
+                "file": "mysql_5_1_46.nasl", 
+                "family": "Databases", 
+                "id": "46328"
+            }, 
+            {
+                "name": "openSUSE Security Update : libmysqlclient-devel (openSUSE-SU-2010:0730-1)", 
+                "file": "suse_11_2_libmysqlclient-devel-101006.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "50016"
+            }, 
+            {
+                "name": "Ubuntu 8.04 LTS / 10.04 LTS / 10.10 / 11.04 / 11.10 : mysql-5.1, mysql-dfsg-5.0, mysql-dfsg-5.1 vulnerabilities (USN-1397-1)", 
+                "file": "ubuntu_USN-1397-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "58325"
+            }, 
+            {
+                "name": "Ubuntu 6.06 LTS / 8.04 LTS / 9.04 / 9.10 / 10.04 LTS : mysql-dfsg-5.0, mysql-dfsg-5.1 vulnerabilities (USN-950-1)", 
+                "file": "ubuntu_USN-950-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "46855"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:093", 
+                "id": "MDVSA-2010:093"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

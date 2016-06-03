@@ -1,0 +1,150 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0270", 
+                "published": "1998-04-03T00:00:00.000-05:00", 
+                "id": "CVE-1999-0270", 
+                "modified": "2011-03-07T21:00:25.437-05:00", 
+                "summary": "Directory traversal vulnerability in pfdispaly.cgi program (sometimes referred to as \"pfdisplay\") for SGI s Performer API Search Tool (performer_tools) allows remote attackers to read arbitrary files."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:sgi:irix:6.3"
+            }, 
+            {
+                "id": "cpe:/o:sgi:irix:6.2"
+            }, 
+            {
+                "id": "cpe:/o:sgi:irix:6.4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14103", 
+                "id": 14103
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/64", 
+                "id": 64
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/134", 
+                "id": 134
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/810", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/64", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/134", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/i-041.shtml", 
+                    "vendor": "CIAC"
+                }, 
+                {
+                    "url": "ftp://patches.sgi.com/support/free/security/advisories/19980401-01-P", 
+                    "vendor": "SGI"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1655", 
+                "signature": "SERVER-WEBAPP pfdispaly.cgi arbitrary command execution attempt"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1656", 
+                "signature": "SERVER-WEBAPP pfdispaly.cgi access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0270"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "IRIX pfdispaly Arbitrary File Access", 
+                "file": "pfdipaly.nasl", 
+                "family": "CGI abuses", 
+                "id": "10174"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

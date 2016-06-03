@@ -1,0 +1,698 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-2596", 
+                "published": "2013-04-12T22:59:46.627-04:00", 
+                "id": "CVE-2013-2596", 
+                "modified": "2015-03-23T21:59:44.717-04:00", 
+                "summary": "Integer overflow in the fb_mmap function in drivers/video/fbmem.c in the Linux kernel before 3.8.9, as used in a certain Motorola build of Android 4.1.2 and other products, allows local users to create a read-write memory mapping for the entirety of kernel memory, and consequently gain privileges, via crafted /dev/graphics/fb0 mmap2 system calls, as demonstrated by the Motochopper pwn program."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/h:motorola:atrix_hd:-"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.8.3"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.8.2"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.8.5"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.8.4"
+            }, 
+            {
+                "id": "cpe:/h:qualcomm:msm8960:-"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.8.7"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.8.0"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.8.6"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.8.8"
+            }, 
+            {
+                "id": "cpe:/o:motorola:android:4.1.2"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.8.1"
+            }, 
+            {
+                "id": "cpe:/h:motorola:razr_m:-"
+            }, 
+            {
+                "id": "cpe:/h:motorola:razr_hd:-"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.8425", 
+                "id": 8425
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/torvalds/linux/commit/fc9bbca8f650e5f738af8806317c0a041a48ae4a", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://github.com/torvalds/linux/commit/b4cbb197c7e7a68dbad0d491242e3ca67420c13e", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://marc.info/?l=linux-kernel&m=136616837923938&w=2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=fc9bbca8f650e5f738af8806317c0a041a48ae4a", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=b4cbb197c7e7a68dbad0d491242e3ca67420c13e", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2013:176", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://www.kernel.org/pub/linux/kernel/v3.x/ChangeLog-3.8.9", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.droidrzr.com/index.php/topic/15208-root-motochopper-yet-another-android-root-exploit/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.droid-life.com/2013/04/09/root-method-released-for-droid-razr-hd-running-android-4-1-2-other-devices-too/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-0695.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://forum.xda-developers.com/showthread.php?t=2255491", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "6.9", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-2596"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27086", 
+                "title": "RHSA-2014:1392: kernel security, bug fix, and enhancement update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27086"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27024", 
+                "title": "ELSA-2014-1392 -- kernel security, bug fix, and enhancement update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27024"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:29248", 
+                "title": "RHSA-2015:0803 -- kernel security and bug fix update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:29248"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27227", 
+                "title": "ELSA-2014-3083 -- Unbreakable Enterprise kernel Security update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27227"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27136", 
+                "title": "ELSA-2014-3082 -- Unbreakable Enterprise kernel security update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27136"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "CentOS 6 : kernel (CESA-2014:1392)", 
+                "file": "centos_RHSA-2014-1392.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "79181"
+            }, 
+            {
+                "name": "CentOS 5 : kernel (CESA-2016:0450)", 
+                "file": "centos_RHSA-2016-0450.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "89968"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : kernel (MDVSA-2013:176)", 
+                "file": "mandriva_MDVSA-2013-176.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "66975"
+            }, 
+            {
+                "name": "Oracle Linux 6 : kernel (ELSA-2014-1392)", 
+                "file": "oraclelinux_ELSA-2014-1392.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "78618"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2014-3082)", 
+                "file": "oraclelinux_ELSA-2014-3082.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "78579"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2014-3083)", 
+                "file": "oraclelinux_ELSA-2014-3083.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "78580"
+            }, 
+            {
+                "name": "Oracle Linux 5 : kernel (ELSA-2016-0450)", 
+                "file": "oraclelinux_ELSA-2016-0450.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "89953"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2014:1392)", 
+                "file": "redhat-RHSA-2014-1392.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "78409"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2015:0695)", 
+                "file": "redhat-RHSA-2015-0695.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "81906"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2015:0782)", 
+                "file": "redhat-RHSA-2015-0782.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "82636"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2015:0803)", 
+                "file": "redhat-RHSA-2015-0803.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "82790"
+            }, 
+            {
+                "name": "RHEL 5 : kernel (RHSA-2016:0450)", 
+                "file": "redhat-RHSA-2016-0450.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "89956"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL6.x i386/x86_64", 
+                "file": "sl_20141014_kernel_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "78845"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL5.x i386/x86_64", 
+                "file": "sl_20160315_kernel_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "89957"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2013:176", 
+                "id": "MDVSA-2013:176"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-0695.html", 
+                    "id": "RHSA-2015:0695", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-0782.html", 
+                    "id": "RHSA-2015:0782", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20141392", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2014-1392.html", 
+                    "id": "RHSA-2014:1392", 
+                    "title": "RHSA-2014:1392: kernel security, bug fix, and enhancement update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=739866", 
+                    "title": "checkpolicy cannot parse /selinux/policy on ppc64 and s390x", 
+                    "id": "739866", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=786463", 
+                    "title": "nfs mount hangs when kerberos ticket expires", 
+                    "id": "786463", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=889471", 
+                    "title": "[Btrfs] BUG: unable to handle kernel NULL pointer dereference at (null)  btrfs_get_sb should return error when open_ctree failed", 
+                    "id": "889471", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=915862", 
+                    "title": "The sync mount option does not work for NFSv4 mounts in RHEL6", 
+                    "id": "915862", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=997651", 
+                    "title": "possible recursive locking detected", 
+                    "id": "997651", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=998024", 
+                    "title": "nfsd sometimes grants delegations too soon following conflicting open requests", 
+                    "id": "998024", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1010882", 
+                    "title": "kvm: backport \"Improve create VCPU parameter\"", 
+                    "id": "1010882", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1024854", 
+                    "title": "CVE-2013-4483 kernel: ipc: ipc_rcu_putref refcount races", 
+                    "id": "1024854", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1027480", 
+                    "title": "alb_send_learning_packets using an obsolete EtherType", 
+                    "id": "1027480", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1030411", 
+                    "title": "resizing thin-snapshot with external origin should return zeros behind origin's end", 
+                    "id": "1030411", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1031488", 
+                    "title": "Restore the mask bit correctly in eoi_ioapic_irq()", 
+                    "id": "1031488", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1034490", 
+                    "title": "CVE-2013-2596 kernel: integer overflow in fb_mmap", 
+                    "id": "1034490", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1036972", 
+                    "title": "use after free in new nfsd DRC code", 
+                    "id": "1036972", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1044438", 
+                    "title": "cifs: Unable to append to an existing file in cache=none mode.", 
+                    "id": "1044438", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1059496", 
+                    "title": "KVM: x86 emulator: Implement jmp far opcode ff/5", 
+                    "id": "1059496", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1063836", 
+                    "title": "kvm: 23090: cpu0 unhandled wrmsr 0x391 data 2000000f", 
+                    "id": "1063836", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1065304", 
+                    "title": "kernel/sched: incorrect setup of sched_group->cpu_power for NUMA systems", 
+                    "id": "1065304", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1069028", 
+                    "title": "ixgbevf prematurely strips VLAN tags", 
+                    "id": "1069028", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1072373", 
+                    "title": "Along with the increase of vCPUs in guest, and guest OS will spend more time to boot up in specified machine.", 
+                    "id": "1072373", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1077463", 
+                    "title": "gfs2: quotas not refreshed in gfs2_adjust_quota", 
+                    "id": "1077463", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1090423", 
+                    "title": "Data integrity issue on rebuilding RAID 6 with 100MB resync speed", 
+                    "id": "1090423", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1093076", 
+                    "title": "CVE-2014-3122 Kernel: mm: try_to_unmap_cluster() should lock_page() before mlocking", 
+                    "id": "1093076", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1094265", 
+                    "title": "CVE-2014-0181 kernel: net: insufficient permision checks of netlink messages", 
+                    "id": "1094265", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1095627", 
+                    "title": "missing vhost schedule causing thread starvation", 
+                    "id": "1095627", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1100523", 
+                    "title": "ext4 filesystem option 'max_batch_time' actually displays 'min_batch_time' in /proc/mounts", 
+                    "id": "1100523", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1113409", 
+                    "title": "CVE-2014-4653 Kernel: ALSA: control: do not access controls outside of protected regions", 
+                    "id": "1113409", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1113445", 
+                    "title": "CVE-2014-4654 CVE-2014-4655 Kernel: ALSA: control: use-after-free in replacing user controls", 
+                    "id": "1113445", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1113899", 
+                    "title": "CVE-2014-4608 kernel: lzo1x_decompress_safe() integer overflow", 
+                    "id": "1113899", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1118123", 
+                    "title": "[Hyper-V][REHL 6.6] fcopy large file from host to guest failed", 
+                    "id": "1118123", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1122472", 
+                    "title": "CVE-2014-5045 kernel: vfs: refcount issues during unmount on symlink", 
+                    "id": "1122472", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1122982", 
+                    "title": "CVE-2014-5077 Kernel: net: SCTP: fix a NULL pointer dereference during INIT collisions", 
+                    "id": "1122982", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1124351", 
+                    "title": "raid1 Data corruption after recovery with bitmap", 
+                    "id": "1124351", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1127231", 
+                    "title": "dmeventd hanging while handling lost leg in RAID1 LV", 
+                    "id": "1127231", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1131951", 
+                    "title": "CVE-2014-3601 kernel: kvm: invalid parameter passing in kvm_iommu_map_pages()", 
+                    "id": "1131951", 
+                    "issue date": "2014-10-14", 
+                    "associated redhat": "RHSA-2014:1392"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20150803", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-0803.html", 
+                    "id": "RHSA-2015:0803", 
+                    "title": "RHSA-2015:0803: kernel security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1034490", 
+                    "title": "CVE-2013-2596 kernel: integer overflow in fb_mmap", 
+                    "id": "1034490", 
+                    "issue date": "2015-04-14", 
+                    "associated redhat": "RHSA-2015:0803"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1134099", 
+                    "title": "CVE-2014-5471 CVE-2014-5472 kernel: isofs: unbound recursion when processing relocated directories", 
+                    "id": "1134099", 
+                    "issue date": "2015-04-14", 
+                    "associated redhat": "RHSA-2015:0803"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1181166", 
+                    "title": "CVE-2014-8159 kernel: infiniband: uverbs: unprotected physical memory access", 
+                    "id": "1181166", 
+                    "issue date": "2015-04-14", 
+                    "associated redhat": "RHSA-2015:0803"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20160450", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2016-0450.html", 
+                    "id": "RHSA-2016:0450", 
+                    "title": "RHSA-2016:0450: kernel security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1034490", 
+                    "title": "CVE-2013-2596 kernel: integer overflow in fb_mmap", 
+                    "id": "1034490", 
+                    "issue date": "2016-03-15", 
+                    "associated redhat": "RHSA-2016:0450"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1196274", 
+                    "title": "CVE-2015-2151 xen: hypervisor memory corruption due to x86 emulator flaw (xsa123)", 
+                    "id": "1196274", 
+                    "issue date": "2016-03-15", 
+                    "associated redhat": "RHSA-2016:0450"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

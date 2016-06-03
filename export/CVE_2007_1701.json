@@ -1,0 +1,309 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1701", 
+                "published": "2007-03-26T21:19:00.000-04:00", 
+                "id": "CVE-2007-1701", 
+                "modified": "2012-11-05T22:35:28.577-05:00", 
+                "summary": "PHP 4 before 4.4.5, and PHP 5 before 5.2.1, when register_globals is enabled, allows context-dependent attackers to execute arbitrary code via deserialization of session data, which overwrites arbitrary global variables, as demonstrated by calling session_decode on a string beginning with \"_SESSION|s:39:\"."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:php:php:4.4.4"
+            }, 
+            {
+                "id": "cpe:/a:php:php:5.2.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35853", 
+                "id": 35853
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/23120", 
+                "id": 23120
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/33658", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/2374", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1991", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/23120", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.php-security.org/MOPB/MOPB-31-2007.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?lang=en&cc=us&objectID=c01086137", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?lang=en&cc=us&objectID=c01056506", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://security.gentoo.org/glsa/glsa-200705-19.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25850", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25445", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25423", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?lang=en&cc=us&objectID=c01086137", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?lang=en&cc=us&objectID=c01056506", 
+                    "vendor": "HP"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1701"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22487", 
+                "title": "ELSA-2007:0082: php security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22487"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:11034", 
+                "title": "PHP 4 before 4.4.5, and PHP 5 before 5.2.1, when register_globals is enabled, allows context-dependent attackers to execute arbitrary code via deserialization of session data, which overwrites arbitrary global variables, as demonstrated by calling session_decode on a string beginning with \"_SESSIONs:39:\".", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:11034"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "PHP Session Data Deserialization Arbitrary Code Execution Vulnerability", 
+                "file": "gb_php_23120.nasl", 
+                "family": "Web application abuses", 
+                "id": "100602"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 200705-19 (php)", 
+                "file": "glsa_200705_19.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "58297"
+            }, 
+            {
+                "name": "PHP version smaller than 4.4.5", 
+                "file": "nopsec_php_4_4_5.nasl", 
+                "family": "Web application abuses", 
+                "id": "110174"
+            }, 
+            {
+                "name": "PHP version smaller than 5.2.1", 
+                "file": "nopsec_php_5_2_1.nasl", 
+                "family": "Web application abuses", 
+                "id": "110175"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 3 / 4 : php (CESA-2007:0076)", 
+                "file": "centos_RHSA-2007-0076.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "24673"
+            }, 
+            {
+                "name": "GLSA-200705-19 : PHP: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-200705-19.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "25340"
+            }, 
+            {
+                "name": "Oracle Linux 3 / 4 : php (ELSA-2007-0076)", 
+                "file": "oraclelinux_ELSA-2007-0076.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "67451"
+            }, 
+            {
+                "name": "PHP < 4.4.5 Multiple Vulnerabilities", 
+                "file": "php_4_4_5.nasl", 
+                "family": "CGI abuses", 
+                "id": "24906"
+            }, 
+            {
+                "name": "PHP < 5.2.1 Multiple Vulnerabilities", 
+                "file": "php_5_2_1.nasl", 
+                "family": "CGI abuses", 
+                "id": "24907"
+            }, 
+            {
+                "name": "RHEL 3 / 4 : php (RHSA-2007:0076)", 
+                "file": "redhat-RHSA-2007-0076.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "24677"
+            }, 
+            {
+                "name": "RHEL 2.1 : php (RHSA-2007:0081)", 
+                "file": "redhat-RHSA-2007-0081.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "24697"
+            }, 
+            {
+                "name": "RHEL 5 : php (RHSA-2007:0082)", 
+                "file": "redhat-RHSA-2007-0082.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "25317"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [
+            {
+                "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?lang=en&cc=us&objectID=c01086137", 
+                "id": "HPSBTU02232"
+            }, 
+            {
+                "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?lang=en&cc=us&objectID=c01056506", 
+                "id": "HPSBMA02215"
+            }, 
+            {
+                "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?lang=en&cc=us&objectID=c01086137", 
+                "id": "SSRT071429"
+            }, 
+            {
+                "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?lang=en&cc=us&objectID=c01056506", 
+                "id": "SSRT071423"
+            }
+        ], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20070076", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2007-0076.html", 
+                    "id": "RHSA-2007:0076", 
+                    "title": "RHSA-2007:0076: php security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=228858", 
+                    "title": "CVE-2007-0906 PHP security issues (CVE-2007-0907, CVE-2007-0908, CVE-2007-0909,  CVE-2007-0910, CVE-2007-0988)", 
+                    "id": "228858", 
+                    "issue date": "2007-02-19", 
+                    "associated redhat": "RHSA-2007:0076"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20070082", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2007-0082.html", 
+                    "id": "RHSA-2007:0082", 
+                    "title": "RHSA-2007:0082: php security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=229013", 
+                    "title": "CVE-2007-0906 PHP security issues (CVE-2007-0907, CVE-2007-0908, CVE-2007-0909,  CVE-2007-0910, CVE-2007-0988)", 
+                    "id": "229013", 
+                    "issue date": "2007-03-13", 
+                    "associated redhat": "RHSA-2007:0082"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=231597", 
+                    "title": "CVE-2007-1285 PHP Variable Destructor Deep Recursion Stack Overflow", 
+                    "id": "231597", 
+                    "issue date": "2007-03-13", 
+                    "associated redhat": "RHSA-2007:0082"
+                }
+            }
+        ], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200705-19", 
+                "id": "GLSA-200705-19"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

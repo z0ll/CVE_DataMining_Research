@@ -1,0 +1,242 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3589", 
+                "published": "2014-02-15T09:57:07.113-05:00", 
+                "id": "CVE-2011-3589", 
+                "modified": "2014-03-05T23:32:08.960-05:00", 
+                "summary": "The Red Hat mkdumprd script for kexec-tools, as distributed in the kexec-tools 1.x before 1.102pre-154 and 2.x before 2.0.0-209 packages in Red Hat Enterprise Linux, uses world-readable permissions for vmcore files, which allows local users to obtain sensitive information by inspecting the file content, as demonstrated by a search for a root SSH key."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/310.html", 
+                "id": "CWE-310", 
+                "title": "Cryptographic Issues"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:redhat:kexec-tools:2.0.0-188"
+            }, 
+            {
+                "id": "cpe:/a:redhat:kexec-tools:1.102pre-126"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.66406", 
+                "id": 66406
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=716439", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2012-0152.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2011-1532.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "5.5", 
+                    "base": "5.7", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "adjacent_network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-3589"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23123", 
+                "title": "ELSA-2012:0152: kexec-tools security, bug fix, and enhancement update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23123"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20599", 
+                "title": "RHSA-2012:0152: kexec-tools security, bug fix, and enhancement update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20599"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27152", 
+                "title": "RHSA-2011:1532 -- kexec-tools security, bug fix, and enhancement update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27152"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27447", 
+                "title": "ELSA-2011-1532 -- kexec-tools security, bug fix, and enhancement update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27447"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27862", 
+                "title": "DEPRECATED: ELSA-2012-0152 -- kexec-tools security, bug fix, and enhancement update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27862"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "RedHat Update for kexec-tools RHSA-2011:1532-03", 
+                "file": "gb_RHSA-2011_1532-03_kexec-tools.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870730"
+            }, 
+            {
+                "name": "RedHat Update for kexec-tools RHSA-2012:0152-03", 
+                "file": "gb_RHSA-2012_0152-03_kexec-tools.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870559"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Oracle Linux 5 : kexec-tools (ELSA-2012-0152)", 
+                "file": "oraclelinux_ELSA-2012-0152.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68470"
+            }, 
+            {
+                "name": "RHEL 6 : kexec-tools (RHSA-2011:1532)", 
+                "file": "redhat-RHSA-2011-1532.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "57013"
+            }, 
+            {
+                "name": "RHEL 5 : kexec-tools (RHSA-2012:0152)", 
+                "file": "redhat-RHSA-2012-0152.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "58053"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2011-1532.html", 
+                    "id": "RHSA-2011:1532", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20120152", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2012-0152.html", 
+                    "id": "RHSA-2012:0152", 
+                    "title": "RHSA-2012:0152: kexec-tools security, bug fix, and enhancement update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=662530", 
+                    "title": "ln: creating symbolic link `/tmp/initrd.ta4308/lib/libc.so.6' to `/lib/power6/libc.so.6': File exists", 
+                    "id": "662530", 
+                    "issue date": "2012-02-21", 
+                    "associated redhat": "RHSA-2012:0152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=678308", 
+                    "title": "kexec kernel crashes due to use of reserved memory range", 
+                    "id": "678308", 
+                    "issue date": "2012-02-21", 
+                    "associated redhat": "RHSA-2012:0152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=709622", 
+                    "title": "Non-portable \"while\" loop form used", 
+                    "id": "709622", 
+                    "issue date": "2012-02-21", 
+                    "associated redhat": "RHSA-2012:0152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=716439", 
+                    "title": "CVE-2011-3588 CVE-2011-3589 CVE-2011-3590 kexec-tools: Multiple security flaws by management of kdump core files and ramdisk images", 
+                    "id": "716439", 
+                    "issue date": "2012-02-21", 
+                    "associated redhat": "RHSA-2012:0152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=748319", 
+                    "title": "fsck: WARNING: couldn't open /etc/fstab: No such file or directory", 
+                    "id": "748319", 
+                    "issue date": "2012-02-21", 
+                    "associated redhat": "RHSA-2012:0152"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

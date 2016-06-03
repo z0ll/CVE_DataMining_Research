@@ -1,0 +1,216 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6181", 
+                "published": "2006-11-30T19:28:00.000-05:00", 
+                "id": "CVE-2006-6181", 
+                "modified": "2011-03-07T21:45:34.110-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in default.asp in ClickTech ClickContact allow remote attackers to execute arbitrary SQL commands via the (1) AlphaSort, (2) In, and (3) orderby parameters."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:clicktech:clickcontact"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33519", 
+                "id": 33519
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21302", 
+                "id": 21302
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4741", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21302", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/452825/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.aria-security.com/forum/showthread.php?t=51", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23119", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30534", 
+                    "vendor": "XF"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007265", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech ClickContact SQL Injection Attempt -- default.asp AlphaSort SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007266", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech ClickContact SQL Injection Attempt -- default.asp AlphaSort UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007267", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech ClickContact SQL Injection Attempt -- default.asp AlphaSort INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007268", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech ClickContact SQL Injection Attempt -- default.asp AlphaSort DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007269", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech ClickContact SQL Injection Attempt -- default.asp AlphaSort ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007270", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech ClickContact SQL Injection Attempt -- default.asp AlphaSort UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007271", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech ClickContact SQL Injection Attempt -- default.asp In SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007272", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech ClickContact SQL Injection Attempt -- default.asp In UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007273", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech ClickContact SQL Injection Attempt -- default.asp In INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007274", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech ClickContact SQL Injection Attempt -- default.asp In DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007275", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech ClickContact SQL Injection Attempt -- default.asp In ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007276", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech ClickContact SQL Injection Attempt -- default.asp In UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007277", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech ClickContact SQL Injection Attempt -- default.asp orderby SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007278", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech ClickContact SQL Injection Attempt -- default.asp orderby UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007279", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech ClickContact SQL Injection Attempt -- default.asp orderby INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007280", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech ClickContact SQL Injection Attempt -- default.asp orderby DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007281", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech ClickContact SQL Injection Attempt -- default.asp orderby ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007282", 
+                "signature": "ET WEB_SPECIFIC_APPS ClickTech ClickContact SQL Injection Attempt -- default.asp orderby UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6181"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

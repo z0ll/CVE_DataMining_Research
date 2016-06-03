@@ -1,0 +1,195 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-5613", 
+                "published": "2012-12-03T07:49:43.643-05:00", 
+                "id": "CVE-2012-5613", 
+                "modified": "2014-02-20T23:55:26.343-05:00", 
+                "summary": "** DISPUTED **  MySQL 5.5.19 and possibly other versions, and MariaDB 5.5.28a and possibly other versions, when configured to assign the FILE privilege to users who should not have administrative privileges, allows remote authenticated users to gain privileges by leveraging the FILE privilege to create files as the MySQL administrator.  NOTE: the vendor disputes this issue, stating that this is only a vulnerability when the administrator does not follow recommendations in the product s installation documentation.  NOTE: it could be argued that this should not be included in CVE because it is a configuration issue."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/16.html", 
+                "id": "CWE-16", 
+                "title": "Configuration"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:oracle:mysql:5.5.19"
+            }, 
+            {
+                "id": "cpe:/a:mariadb:mariadb:5.5.28a"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.63111", 
+                "id": 63111
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/12/02/4", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/12/02/3", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://security.gentoo.org/glsa/glsa-201308-06.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/53372", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://seclists.org/fulldisclosure/2012/Dec/6", 
+                    "vendor": "FULLDISC"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2013-02/msg00000.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "single_instance", 
+                    "exploit": "6.8", 
+                    "base": "6.0", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2015992", 
+                "signature": "ET EXPLOIT MySQL (Linux) Database Privilege Elevation (Exploit Specific)"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "mysql_mof.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/mysql/mysql_mof.rb", 
+                "title": "Oracle MySQL for Microsoft Windows MOF Execution"
+            }, 
+            {
+                "id": "mysql_start_up.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/mysql/mysql_start_up.rb", 
+                "title": "Oracle MySQL for Microsoft Windows FILE Privilege Abuse"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/mysql_file", 
+                "id": "exploit_info/mysql_file", 
+                "title": "MySQL FILE privilege elevation"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-5613"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:25951", 
+                "title": "SUSE-SU-2013:0262-1 -- Security update for MySQL", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:25951"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Ubuntu Update for mysql-5.5 USN-1807-1", 
+                "file": "gb_ubuntu_USN_1807_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841406"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "GLSA-201308-06 : MySQL: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201308-06.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "69508"
+            }, 
+            {
+                "name": "SuSE 11.2 Security Update : MySQL (SAT Patch Number 7251)", 
+                "file": "suse_11_libmysqlclient-devel-121227.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "64531"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS / 11.10 / 12.04 LTS / 12.10 : mysql-5.1, mysql-5.5, mysql-dfsg-5.1 vulnerabilities (USN-1807-1)", 
+                "file": "ubuntu_USN-1807-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "66215"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2012-5613.html", 
+                "id": "SUSE-SU-2013:0262"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/201308-06", 
+                "id": "GLSA-201308-06"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

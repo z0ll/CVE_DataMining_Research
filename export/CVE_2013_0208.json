@@ -1,0 +1,219 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0208", 
+                "published": "2013-02-13T11:55:01.617-05:00", 
+                "id": "CVE-2013-0208", 
+                "modified": "2013-02-14T00:00:00.000-05:00", 
+                "summary": "The boot-from-volume feature in OpenStack Compute (Nova) Folsom and Essex, when using nova-volumes, allows remote authenticated users to boot from other users  volumes via a volume id in the block_device_mapping parameter."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:11.10"
+            }, 
+            {
+                "id": "cpe:/a:openstack:folsom:-"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:12.04:-:lts"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:12.10"
+            }, 
+            {
+                "id": "cpe:/a:openstack:essex:-"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.63563", 
+                "id": 63563
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/57613", 
+                "id": 57613
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/89661", 
+                "id": 89661
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/openstack/nova/commit/317cc0af385536dee43ef2addad50a91357fc1ad", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://github.com/openstack/nova/commit/243d516cea9d3caa5a8267b12d2f577dcb24193b", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=902629", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "https://bugs.launchpad.net/nova/+bug/1069904", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/81697", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1709-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/57613", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2013/01/29/9", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/51992", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/51963", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2013-0208.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://osvdb.org/89661", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "6.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-0208"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18089", 
+                "title": "USN-1709-1 -- nova vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18089"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for openstack-nova FEDORA-2013-1816", 
+                "file": "gb_fedora_2013_1816_openstack-nova_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865334"
+            }, 
+            {
+                "name": "Ubuntu Update for nova USN-1709-1", 
+                "file": "gb_ubuntu_USN_1709_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841300"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "openSUSE Security Update : openstack (openSUSE-2013-237)", 
+                "file": "openSUSE-2013-237.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74936"
+            }, 
+            {
+                "name": "Ubuntu 11.10 / 12.04 LTS / 12.10 : nova vulnerability (USN-1709-1)", 
+                "file": "ubuntu_USN-1709-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "64290"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2013-0208.html", 
+                    "id": "RHSA-2013:0208", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1709-1", 
+                "id": "USN-1709-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

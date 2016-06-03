@@ -1,0 +1,235 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3897", 
+                "published": "2009-11-24T12:30:00.407-05:00", 
+                "id": "CVE-2009-3897", 
+                "modified": "2010-01-28T02:00:01.907-05:00", 
+                "summary": "Dovecot 1.2.x before 1.2.8 sets 0777 permissions during creation of certain directories at installation time, which allows local users to access arbitrary user accounts by replacing the auth socket, related to the parent directories of the base_dir directory, and possibly the base_dir directory itself."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:dovecot:dovecot:1.2.3"
+            }, 
+            {
+                "id": "cpe:/a:dovecot:dovecot:1.2.0"
+            }, 
+            {
+                "id": "cpe:/a:dovecot:dovecot:1.2.2"
+            }, 
+            {
+                "id": "cpe:/a:dovecot:dovecot:1.2.4"
+            }, 
+            {
+                "id": "cpe:/a:dovecot:dovecot:1.2.7"
+            }, 
+            {
+                "id": "cpe:/a:dovecot:dovecot:1.2.6"
+            }, 
+            {
+                "id": "cpe:/a:dovecot:dovecot:1.2.1"
+            }, 
+            {
+                "id": "cpe:/a:dovecot:dovecot:1.2.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.50904", 
+                "id": 50904
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/37084", 
+                "id": 37084
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/60316", 
+                "id": 60316
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2009/3306", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/37084", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.dovecot.org/list/dovecot-news/2009-November/000143.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://marc.info/?l=oss-security&m=125900267208712&w=2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://marc.info/?l=oss-security&m=125871729029145&w=2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/54363", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/60316", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:306", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/37443", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://marc.info/?l=oss-security&m=125900271508796&w=2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://marc.info/?l=oss-security&m=125881481222441&w=2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2010-01/msg00007.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-3897"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: dovecot", 
+                "file": "freebsd_dovecot2.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "66522"
+            }, 
+            {
+                "name": "Dovecot base_dir Insecure Permissions Security Bypass Vulnerability", 
+                "file": "gb_dovecot_base_dir_sec_bypass_vuln.nasl", 
+                "family": "General", 
+                "id": "801055"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 201110-04 (Dovecot)", 
+                "file": "glsa_201110_04.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "70767"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "FreeBSD : dovecot -- Insecure directory permissions (30211c45-e52a-11de-b5cd-00e0815b8da8)", 
+                "file": "freebsd_pkg_30211c45e52a11deb5cd00e0815b8da8.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "43104"
+            }, 
+            {
+                "name": "GLSA-201110-04 : Dovecot: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201110-04.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "56446"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : dovecot (MDVSA-2009:306)", 
+                "file": "mandriva_MDVSA-2009-306.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "48160"
+            }, 
+            {
+                "name": "openSUSE Security Update : dovecot12 (dovecot12-1811)", 
+                "file": "suse_11_2_dovecot12-100118.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "44053"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:306", 
+                "id": "MDVSA-2009:306"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2009-3897.html", 
+                "id": "SUSE-SR:2010:001"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,194 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-0199", 
+                "published": "2005-05-02T00:00:00.000-04:00", 
+                "id": "CVE-2005-0199", 
+                "modified": "2008-09-05T16:45:35.527-04:00", 
+                "summary": "Integer underflow in the Lists_MakeMask() function in lists.c in ngIRCd before 0.8.2 allows remote attackers to cause a denial of service (application crash) and possibly execute arbitrary code via a long MODE line that causes an incorrect length calculation, which leads to a buffer overflow."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:ngircd:ngircd:0.7.5"
+            }, 
+            {
+                "id": "cpe:/a:ngircd:ngircd:0.7.6"
+            }, 
+            {
+                "id": "cpe:/a:ngircd:ngircd:0.7.7"
+            }, 
+            {
+                "id": "cpe:/a:ngircd:ngircd:0.7"
+            }, 
+            {
+                "id": "cpe:/a:ngircd:ngircd:0.8"
+            }, 
+            {
+                "id": "cpe:/a:ngircd:ngircd:0.6"
+            }, 
+            {
+                "id": "cpe:/a:ngircd:ngircd:0.7.1"
+            }, 
+            {
+                "id": "cpe:/a:ngircd:ngircd:0.6.1"
+            }, 
+            {
+                "id": "cpe:/a:ngircd:ngircd:0.8.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.24333", 
+                "id": 24333
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/12397", 
+                "id": 12397
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/19143", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/12397", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.gentoo.org/security/en/glsa/glsa-200501-40.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://arthur.ath.cx/pipermail/ngircd-ml/2005-January/000228.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://bugs.gentoo.org/show_bug.cgi?id=79705", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1013047", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/14059", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/14056", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-0199"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: ngircd", 
+                "file": "freebsd_ngircd0.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52190"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 200501-40 (ngIRCd)", 
+                "file": "glsa_200501_40.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "54826"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "FreeBSD : ngircd -- buffer overflow vulnerability (7f6dd1bd-7d99-11d9-a9e7-0001020eed82)", 
+                "file": "freebsd_pkg_7f6dd1bd7d9911d9a9e70001020eed82.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "19002"
+            }, 
+            {
+                "name": "GLSA-200501-40 : ngIRCd: Buffer overflow", 
+                "file": "gentoo_GLSA-200501-40.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "16431"
+            }, 
+            {
+                "name": "ngIRCd < 0.8.2 Lists_MakeMask() Remote Overflow DoS", 
+                "file": "ngircd_overflow.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "16274"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200501-40", 
+                "id": "GLSA-200501-40"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

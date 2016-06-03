@@ -1,0 +1,192 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0454", 
+                "published": "2013-03-26T17:55:01.100-04:00", 
+                "id": "CVE-2013-0454", 
+                "modified": "2013-10-10T15:18:36.637-04:00", 
+                "summary": "The SMB2 implementation in Samba 3.6.x before 3.6.6, as used on the IBM Storwize V7000 Unified 1.3 before 1.3.2.3 and 1.4 before 1.4.0.1 and possibly other products, does not properly enforce CIFS share attributes, which allows remote authenticated users to (1) write to a read-only share; (2) trigger data-integrity problems related to the oplock, locking, coherency, or leases attribute; or (3) have an unspecified impact by leveraging incorrect handling of the browseable or \"hide unreadable\" parameter."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:samba:samba:3.6.2"
+            }, 
+            {
+                "id": "cpe:/a:samba:samba:3.6.0"
+            }, 
+            {
+                "id": "cpe:/a:samba:samba:3.6.5"
+            }, 
+            {
+                "id": "cpe:/a:samba:samba:3.6.1"
+            }, 
+            {
+                "id": "cpe:/a:ibm:storwize:v7000:1.4"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:12.04:-:lts"
+            }, 
+            {
+                "id": "cpe:/a:ibm:storwize:v7000:1.3"
+            }, 
+            {
+                "id": "cpe:/a:samba:samba:3.6.3"
+            }, 
+            {
+                "id": "cpe:/a:samba:samba:3.6.4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.8152", 
+                "id": 8152
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://www.samba.org/samba/security/CVE-2013-0454", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://lists.samba.org/archive/samba-announce/2012/000259.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "https://bugzilla.samba.org/show_bug.cgi?id=8738", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=928419", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/80970", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1802-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=ssg1S1004289", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "4.0", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-0454"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18270", 
+                "title": "USN-1802-1 -- samba vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18270"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Ubuntu Update for samba USN-1802-1", 
+                "file": "gb_ubuntu_USN_1802_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841403"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "openSUSE Security Update : samba (openSUSE-SU-2013:0933-1)", 
+                "file": "openSUSE-2013-435.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75007"
+            }, 
+            {
+                "name": "Samba 3.6.x < 3.6.6 Remote Security Bypass", 
+                "file": "samba_3_6_6.nasl", 
+                "family": "Misc.", 
+                "id": "67118"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : samba vulnerability (USN-1802-1)", 
+                "file": "ubuntu_USN-1802-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "65994"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1802-1", 
+                "id": "USN-1802-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

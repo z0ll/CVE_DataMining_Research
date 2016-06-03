@@ -1,0 +1,219 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1895", 
+                "published": "2014-04-01T02:35:53.577-04:00", 
+                "id": "CVE-2014-1895", 
+                "modified": "2014-04-19T00:48:03.333-04:00", 
+                "summary": "Off-by-one error in the flask_security_avc_cachestats function in xsm/flask/flask_op.c in Xen 4.2.x and 4.3.x, when the maximum number of physical CPUs are in use, allows local users to cause a denial of service (host crash) or obtain sensitive information from hypervisor memory by leveraging a FLASK_AVC_CACHESTAT hypercall, which triggers a buffer over-read."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:xen:xen:4.2.0"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.2.1"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.3.0"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.2.2"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.3.1"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.2.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.12236", 
+                "id": 12236
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xenbits.xen.org/xsa/advisory-85.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2014/02/10/6", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2014/02/07/12", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2014-03/msg00011.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "7.8", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "single_instance", 
+                    "exploit": "4.4", 
+                    "base": "5.8", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "adjacent_network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-1895"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:25390", 
+                "title": "SUSE-SU-2014:0373-1 -- Security update for Xen", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:25390"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for xen FEDORA-2014-2170", 
+                "file": "gb_fedora_2014_2170_xen_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867511"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2014-2188", 
+                "file": "gb_fedora_2014_2188_xen_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867506"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2014-2802", 
+                "file": "gb_fedora_2014_2802_xen_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867554"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2014-2862", 
+                "file": "gb_fedora_2014_2862_xen_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867548"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2014-4424", 
+                "file": "gb_fedora_2014_4424_xen_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867665"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2014-4458", 
+                "file": "gb_fedora_2014_4458_xen_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867662"
+            }, 
+            {
+                "name": "SuSE Update for Xen SUSE-SU-2014:0373-1 (Xen)", 
+                "file": "gb_suse_2014_0373_1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "850573"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 20 : xen-4.3.1-9.fc20 (2014-2170)", 
+                "file": "fedora_2014-2170.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "72539"
+            }, 
+            {
+                "name": "Fedora 19 : xen-4.2.3-15.fc19 (2014-2188)", 
+                "file": "fedora_2014-2188.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "72540"
+            }, 
+            {
+                "name": "GLSA-201407-03 : Xen: Multiple Vunlerabilities", 
+                "file": "gentoo_GLSA-201407-03.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "76544"
+            }, 
+            {
+                "name": "openSUSE Security Update : xen (openSUSE-SU-2014:0483-1)", 
+                "file": "openSUSE-2014-271.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75312"
+            }, 
+            {
+                "name": "SuSE 11.3 Security Update : Xen (SAT Patch Number 8973)", 
+                "file": "suse_11_xen-201402-140227.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "73015"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2014-1895.html", 
+                "id": "SUSE-SU-2014:0373"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

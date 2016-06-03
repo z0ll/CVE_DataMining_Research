@@ -1,0 +1,148 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6842", 
+                "published": "2006-12-31T00:00:00.000-05:00", 
+                "id": "CVE-2006-6842", 
+                "modified": "2011-03-07T21:47:09.250-05:00", 
+                "summary": "SQL injection vulnerability in admin/admin_acronyms.php in the Acronym Mod 0.9.5 for phpBB2 Plus 1.53 allows remote attackers to execute arbitrary SQL commands via the id parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:codemonkeyx:acronym_mod:0.9.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34147", 
+                "id": 34147
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21805", 
+                "id": 21805
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/31129", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/0009", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21805", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/3033", 
+                    "vendor": "MILW0RM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005967", 
+                "signature": "ET WEB_SPECIFIC_APPS phpBB2 Plus SQL Injection Attempt -- admin_acronyms.php id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005968", 
+                "signature": "ET WEB_SPECIFIC_APPS phpBB2 Plus SQL Injection Attempt -- admin_acronyms.php id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005969", 
+                "signature": "ET WEB_SPECIFIC_APPS phpBB2 Plus SQL Injection Attempt -- admin_acronyms.php id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005970", 
+                "signature": "ET WEB_SPECIFIC_APPS phpBB2 Plus SQL Injection Attempt -- admin_acronyms.php id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005971", 
+                "signature": "ET WEB_SPECIFIC_APPS phpBB2 Plus SQL Injection Attempt -- admin_acronyms.php id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005972", 
+                "signature": "ET WEB_SPECIFIC_APPS phpBB2 Plus SQL Injection Attempt -- admin_acronyms.php id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6842"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

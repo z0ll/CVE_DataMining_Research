@@ -1,0 +1,154 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-1717", 
+                "published": "2002-12-31T00:00:00.000-05:00", 
+                "id": "CVE-2002-1717", 
+                "modified": "2008-09-05T16:31:20.277-04:00", 
+                "summary": "Microsoft Internet Information Server (IIS) 5.1 allows remote attackers to view path information via a GET request to (1) /_vti_pvt/access.cnf, (2) /_vti_pvt/botinfs.cnf, (3) /_vti_pvt/bots.cnf, or (4) /_vti_pvt/linkinfo.cnf."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:5.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.19360", 
+                "id": 19360
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/4078", 
+                "id": 4078
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/8174", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/4078", 
+                    "vendor": "BID"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:955", 
+                "signature": "SERVER-OTHER Microsoft Frontpage access.cnf access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:958", 
+                "signature": "SERVER-OTHER Microsoft Frontpage service.cnf access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:961", 
+                "signature": "SERVER-OTHER Microsoft Frontpage services.cnf access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:963", 
+                "signature": "SERVER-OTHER Microsoft Frontpage svcacl.cnf access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:965", 
+                "signature": "SERVER-OTHER Microsoft Frontpage writeto.cnf access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:977", 
+                "signature": "SERVER-IIS .cnf access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-1717"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Check for IIS .cnf file leakage", 
+                "file": "iis_dot_cnf.nasl", 
+                "family": "Web Servers", 
+                "id": "10575"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Microsoft IIS Multiple .cnf File Information Disclosure", 
+                "file": "iis_dot_cnf.nasl", 
+                "family": "Web Servers", 
+                "id": "10575"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

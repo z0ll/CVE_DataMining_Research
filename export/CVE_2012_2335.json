@@ -1,0 +1,269 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2335", 
+                "published": "2012-05-11T06:15:48.480-04:00", 
+                "id": "CVE-2012-2335", 
+                "modified": "2013-07-23T05:39:19.080-04:00", 
+                "summary": "php-wrapper.fcgi does not properly handle command-line arguments, which allows remote attackers to bypass a protection mechanism in PHP 5.3.12 and 5.4.2 and execute arbitrary code by leveraging improper interaction between the PHP sapi/cgi/cgi_main.c component and a query string beginning with a +- sequence."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:php:php:5.4.2"
+            }, 
+            {
+                "id": "cpe:/a:php:php:5.3.12"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.60731", 
+                "id": 60731
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0039574", 
+                "id": "2013-B-0075", 
+                "title": "Multiple Vulnerabilities in HP System Management Homepage"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/520827", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "https://h20564.www2.hp.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c03839862", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "https://h20564.www2.hp.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c03839862", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "https://bugs.php.net/bug.php?id=61910", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/75652", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.php.net/archive/2012.php#id2012-05-06-1", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/49014", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2012-07/msg00003.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://git.php.net/?p=php-src.git;a=blob;f=sapi/cgi/cgi_main.c;h=a7ac26f0#l1569", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://eindbazen.net/2012/05/php-cgi-advisory-cve-2012-1823/", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/520827", 
+                "id": "VU#520827"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:22063", 
+                "signature": "SERVER-WEBAPP PHP-CGI remote file include attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-2335"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17519", 
+                "title": "USN-1481-1 -- php5 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17519"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Mandriva Update for php MDVSA-2012:068-1 (php)", 
+                "file": "gb_mandriva_MDVSA_2012_068_1.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "831627"
+            }, 
+            {
+                "name": "Ubuntu Update for php5 USN-1481-1", 
+                "file": "gb_ubuntu_USN_1481_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841052"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 201209-03 (php)", 
+                "file": "glsa_201209_03.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "72420"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "GLSA-201209-03 : PHP: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201209-03.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "62236"
+            }, 
+            {
+                "name": "HP System Management Homepage < 7.2.1.0 Multiple Vulnerabilities (BEAST)", 
+                "file": "hpsmh_7_2_1_0.nasl", 
+                "family": "Web Servers", 
+                "id": "69020"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : php (MDVSA-2012:068-1)", 
+                "file": "mandriva_MDVSA-2012-068.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "59010"
+            }, 
+            {
+                "name": "openSUSE Security Update : php5 (openSUSE-2012-288)", 
+                "file": "openSUSE-2012-288.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74630"
+            }, 
+            {
+                "name": "PHP 5.3.x < 5.3.13 CGI Query String Code Execution", 
+                "file": "php_5_3_13.nasl", 
+                "family": "CGI abuses", 
+                "id": "59056"
+            }, 
+            {
+                "name": "PHP 5.4.x < 5.4.3 Multiple Vulnerabilities", 
+                "file": "php_5_4_3.nasl", 
+                "family": "CGI abuses", 
+                "id": "59057"
+            }, 
+            {
+                "name": "Apache PHP-CGI Remote Code Execution", 
+                "file": "php_cgi_remote_code_execution.nasl", 
+                "family": "CGI abuses", 
+                "id": "70728"
+            }, 
+            {
+                "name": "SuSE 11.1 Security Update : PHP5 (SAT Patch Number 6316)", 
+                "file": "suse_11_apache2-mod_php5-120518.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "64100"
+            }, 
+            {
+                "name": "SuSE 11.2 Security Update : PHP5 (SAT Patch Number 6440)", 
+                "file": "suse_11_apache2-mod_php53-120618.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "64104"
+            }, 
+            {
+                "name": "SuSE 10 Security Update : PHP5 (ZYPP Patch Number 8133)", 
+                "file": "suse_apache2-mod_php5-8133.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "59445"
+            }, 
+            {
+                "name": "Ubuntu 8.04 LTS / 10.04 LTS / 11.04 / 11.10 / 12.04 LTS : php5 vulnerabilities (USN-1481-1)", 
+                "file": "ubuntu_USN-1481-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "59603"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [
+            {
+                "url": "https://h20564.www2.hp.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c03839862", 
+                "id": "HPSBMU02900"
+            }, 
+            {
+                "url": "https://h20564.www2.hp.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c03839862", 
+                "id": "SSRT100992"
+            }
+        ], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2012-2335.html", 
+                "id": "SUSE-SU-2012:0840"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

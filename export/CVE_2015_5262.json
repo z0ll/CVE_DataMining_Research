@@ -1,0 +1,201 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5262", 
+                "published": "2015-10-27T12:59:07.557-04:00", 
+                "id": "CVE-2015-5262", 
+                "modified": "2015-10-28T17:00:26.660-04:00", 
+                "summary": "http/conn/ssl/SSLConnectionSocketFactory.java in Apache HttpComponents HttpClient before 4.3.6 ignores the http.socket.timeout configuration setting during an SSL handshake, which allows remote attackers to cause a denial of service (HTTPS call hang) via unspecified vectors."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:fedoraproject:fedora:23"
+            }, 
+            {
+                "id": "cpe:/o:fedoraproject:fedora:22"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:14.04::~~lts~~~"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:12.04::~~lts~~~"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:15.04"
+            }, 
+            {
+                "id": "cpe:/a:apache:httpclient:4.3.5"
+            }, 
+            {
+                "id": "cpe:/o:fedoraproject:fedora:21"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.78297", 
+                "id": 78297
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://issues.apache.org/jira/browse/HTTPCLIENT-1478", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1261538", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2769-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id/1033743", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://svn.apache.org/viewvc?view=revision&revision=1626784", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-October/168030.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-October/167999.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-October/167962.html", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "4.3", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-5262"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Debian DLA-322-1 : commons-httpclient security update", 
+                "file": "debian_DLA-322.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "86225"
+            }, 
+            {
+                "name": "Fedora 21 : jakarta-commons-httpclient-3.1-20.fc21 (2015-15588)", 
+                "file": "fedora_2015-15588.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "86228"
+            }, 
+            {
+                "name": "Fedora 22 : jakarta-commons-httpclient-3.1-23.fc22 (2015-15589)", 
+                "file": "fedora_2015-15589.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "86229"
+            }, 
+            {
+                "name": "Fedora 23 : jakarta-commons-httpclient-3.1-23.fc23 (2015-15590)", 
+                "file": "fedora_2015-15590.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "86230"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 14.04 / 15.04 : commons-httpclient vulnerabilities (USN-2769-1)", 
+                "file": "ubuntu_USN-2769-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "86401"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2015-15588", 
+                "id": "FEDORA-2015-15588"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2015-15589", 
+                "id": "FEDORA-2015-15589"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2015-15590", 
+                "id": "FEDORA-2015-15590"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2769-1", 
+                "id": "USN-2769-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

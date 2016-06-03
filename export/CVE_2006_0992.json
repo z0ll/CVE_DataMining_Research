@@ -1,0 +1,179 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-0992", 
+                "published": "2006-04-14T06:02:00.000-04:00", 
+                "id": "CVE-2006-0992", 
+                "modified": "2011-03-07T21:31:32.330-05:00", 
+                "summary": "Stack-based buffer overflow in Novell GroupWise Messenger before 2.0 Public Beta 2 allows remote attackers to execute arbitrary code via a long Accept-Language value without a comma or semicolon.  NOTE: due to a typo, the original ZDI advisory accidentally referenced CVE-2006-0092.  This is the correct identifier."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:novell:groupwise_messenger:2.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.2152", 
+                "id": 2152
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/17503", 
+                "id": 17503
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/24617", 
+                "id": 24617
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.zerodayinitiative.com/advisories/ZDI-06-008.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/17503", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://support.novell.com/cgi-bin/search/searchtid.cgi?10100861.htm", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/1355", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/430911/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/25828", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/24617", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/1679", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1015911", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/19663", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://metasploit.blogspot.com/2006/04/exploit-development-groupwise_14.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://cirt.dk/advisories/cirt-42-advisory.txt", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2002865", 
+                "signature": "ET WEB_SERVER Novell GroupWise Messenger Accept Language Buffer Overflow"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "novell_messenger_acceptlang.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/http/novell_messenger_acceptlang.rb", 
+                "title": "Novell Messenger Server 2.0 Accept-Language Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/groupwise_messenger_accept_language", 
+                "id": "exploit_info/groupwise_messenger_accept_language", 
+                "title": "Novell GroupWise Messenger Accept-Language buffer overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-0992"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Novell GroupWise Messenger Accept Language Remote Overflow", 
+                "file": "nmma_overflow.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "21243"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

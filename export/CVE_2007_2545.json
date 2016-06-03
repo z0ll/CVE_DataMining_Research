@@ -1,0 +1,249 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2545", 
+                "published": "2007-05-08T21:19:00.000-04:00", 
+                "id": "CVE-2007-2545", 
+                "modified": "2011-03-07T21:54:28.830-05:00", 
+                "summary": "Multiple PHP remote file inclusion vulnerabilities in Persism CMS 0.9.2 and earlier allow remote attackers to execute arbitrary PHP code via a URL in the system[path] parameter to (1) blocks/headerfile.php, (2) files/blocks/latest_files.php, (3) filters/headerfile.php, (4) forums/blocks/latest_posts.php, (5) groups/headerfile.php, (6) links/blocks/links.php, (7) menu/headerfile.php, (8) news/blocks/latest_news.php, (9) settings/headerfile.php, or (10) users/headerfile.php, in modules/."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:persism_cms:persism_cms:0.9.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.36657", 
+                "id": 36657
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/23828", 
+                "id": 23828
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/37767", 
+                "id": 37767
+            }, 
+            {
+                "url": "http://www.osvdb.org/37768", 
+                "id": 37768
+            }, 
+            {
+                "url": "http://www.osvdb.org/37769", 
+                "id": 37769
+            }, 
+            {
+                "url": "http://www.osvdb.org/37770", 
+                "id": 37770
+            }, 
+            {
+                "url": "http://www.osvdb.org/37771", 
+                "id": 37771
+            }, 
+            {
+                "url": "http://www.osvdb.org/37772", 
+                "id": 37772
+            }, 
+            {
+                "url": "http://www.osvdb.org/37773", 
+                "id": 37773
+            }, 
+            {
+                "url": "http://www.osvdb.org/37774", 
+                "id": 37774
+            }, 
+            {
+                "url": "http://www.osvdb.org/37775", 
+                "id": 37775
+            }, 
+            {
+                "url": "http://www.osvdb.org/37776", 
+                "id": 37776
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34102", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1671", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/23828", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/3853", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://osvdb.org/37776", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/37775", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/37774", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/37773", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/37772", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/37771", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/37770", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/37769", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/37768", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://osvdb.org/37767", 
+                    "vendor": "OSVDB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003660", 
+                "signature": "ET WEB_SPECIFIC_APPS Persism CMS Remote Inclusion Attempt - Headerfile.php System"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003661", 
+                "signature": "ET WEB_SPECIFIC_APPS Persism CMS Remote Inclusion Attempt -- latest_files.php System"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003662", 
+                "signature": "ET WEB_SPECIFIC_APPS Persism CMS Remote Inclusion Attempt -- latest_posts.php System"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003663", 
+                "signature": "ET WEB_SPECIFIC_APPS Persism CMS Remote Inclusion Attempt -- groups_headerfile.php System"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003664", 
+                "signature": "ET WEB_SPECIFIC_APPS Persism CMS Remote Inclusion Attempt -- filters_headerfile.php System"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003665", 
+                "signature": "ET WEB_SPECIFIC_APPS Persism CMS Remote Inclusion Attempt -- links.php System"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003666", 
+                "signature": "ET WEB_SPECIFIC_APPS Persism CMS Remote Inclusion Attempt -- menu_headerfile.php System"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003667", 
+                "signature": "ET WEB_SPECIFIC_APPS Persism CMS Remote Inclusion Attempt -- latest_news.php System"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003668", 
+                "signature": "ET WEB_SPECIFIC_APPS Persism CMS Remote Inclusion Attempt -- settings_headerfile.php System"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2003681", 
+                "signature": "ET WEB_SPECIFIC_APPS Persism CMS Remote Inclusion Attempt -- users_headerfile.php System"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2545"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

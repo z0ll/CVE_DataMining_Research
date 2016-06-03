@@ -1,0 +1,343 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0452", 
+                "published": "2012-02-10T21:55:00.830-05:00", 
+                "id": "CVE-2012-0452", 
+                "modified": "2013-11-15T00:31:35.460-05:00", 
+                "summary": "Use-after-free vulnerability in Mozilla Firefox 10.x before 10.0.1, Thunderbird 10.x before 10.0.1, and SeaMonkey 2.7 allows remote attackers to cause a denial of service (application crash) or possibly execute arbitrary code via vectors that trigger failure of an nsXBLDocumentInfo::ReadPrototypeBindings function call, related to the cycle collector s access to a hash table containing a stale XBL binding."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:mozilla:seamonkey:2.7"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:thunderbird:10.0"
+            }, 
+            {
+                "id": "cpe:/a:mozilla:firefox:10.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.4630", 
+                "id": 4630
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/51975", 
+                "id": 51975
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=724284", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1360-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/51975", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.mozilla.org/security/announce/2012/mfsa2012-10.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2012:018", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2012:017", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/49055", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2012-02/msg00013.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2012-02/msg00012.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-0452"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:15017", 
+                "title": "Use-after-free vulnerability in Mozilla Firefox 10.x before 10.0.1, Thunderbird 10.x before 10.0.1, and SeaMonkey 2.7 allows remote attackers to cause a denial of service (application crash) or possibly execute arbitrary code via vectors that trigger failure of an nsXBLDocumentInfo::ReadPrototypeBindings function call, related to the cycle collector's access to a hash table containing a stale XBL binding.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:15017"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:15485", 
+                "title": "USN-1369-1 -- Thunderbird vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:15485"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:14740", 
+                "title": "USN-1360-1 -- Firefox vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:14740"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: firefox", 
+                "file": "freebsd_firefox62.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "70728"
+            }, 
+            {
+                "name": "Mandriva Update for firefox MDVSA-2012:017 (firefox)", 
+                "file": "gb_mandriva_MDVSA_2012_017.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "831539"
+            }, 
+            {
+                "name": "Mandriva Update for mozilla-thunderbird MDVSA-2012:018 (mozilla-thunderbird)", 
+                "file": "gb_mandriva_MDVSA_2012_018.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "831565"
+            }, 
+            {
+                "name": "Mozilla Products XBL Binding Memory Corruption Vulnerability - (MAC OS X)", 
+                "file": "gb_mozilla_prdts_xbl_bind_mem_crptn_vuln_macosx.nasl", 
+                "family": "General", 
+                "id": "802593"
+            }, 
+            {
+                "name": "Mozilla Products XBL Binding Memory Corruption Vulnerability - (Windows)", 
+                "file": "gb_mozilla_prdts_xbl_bind_mem_crptn_vuln_win.nasl", 
+                "family": "General", 
+                "id": "802592"
+            }, 
+            {
+                "name": "SuSE Update for MozillaFirefox openSUSE-SU-2012:0258-1 (MozillaFirefox)", 
+                "file": "gb_suse_2012_0258_1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "850236"
+            }, 
+            {
+                "name": "Ubuntu Update for firefox USN-1360-1", 
+                "file": "gb_ubuntu_USN_1360_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840903"
+            }, 
+            {
+                "name": "Ubuntu Update for thunderbird USN-1369-1", 
+                "file": "gb_ubuntu_USN_1369_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840935"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "FreeBSD : mozilla -- use-after-free in nsXBLDocumentInfo::ReadPrototypeBindings (eba9aa94-549c-11e1-b6b7-0011856a6e37)", 
+                "file": "freebsd_pkg_eba9aa94549c11e1b6b70011856a6e37.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "57911"
+            }, 
+            {
+                "name": "GLSA-201301-01 : Mozilla Products: Multiple vulnerabilities (BEAST)", 
+                "file": "gentoo_GLSA-201301-01.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "63402"
+            }, 
+            {
+                "name": "Firefox < 10.0.1 Memory Corruption (Mac OS X)", 
+                "file": "macosx_firefox_10_0_1.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "58070"
+            }, 
+            {
+                "name": "Thunderbird 10.x < 10.0.1 Memory Corruption (Mac OS X)", 
+                "file": "macosx_thunderbird_10_0_1.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "58071"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : firefox (MDVSA-2012:017)", 
+                "file": "mandriva_MDVSA-2012-017.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "57912"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : mozilla-thunderbird (MDVSA-2012:018)", 
+                "file": "mandriva_MDVSA-2012-018.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "61944"
+            }, 
+            {
+                "name": "Firefox 10.x < 10.0.1 Memory Corruption", 
+                "file": "mozilla_firefox_1001.nasl", 
+                "family": "Windows", 
+                "id": "57919"
+            }, 
+            {
+                "name": "Mozilla Thunderbird 10.x < 10.0.1 Memory Corruption", 
+                "file": "mozilla_thunderbird_1001.nasl", 
+                "family": "Windows", 
+                "id": "57920"
+            }, 
+            {
+                "name": "openSUSE Security Update : MozillaFirefox / MozillaThunderbird / seamonkey / etc (openSUSE-SU-2012:0567-1)", 
+                "file": "openSUSE-2012-254.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74612"
+            }, 
+            {
+                "name": "openSUSE Security Update : MozillaFirefox / MozillaThunderbird / seamonkey / etc (openSUSE-2012-92)", 
+                "file": "openSUSE-2012-92.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74857"
+            }, 
+            {
+                "name": "SeaMonkey < 2.7.1 Memory Corruption", 
+                "file": "seamonkey_271.nasl", 
+                "family": "Windows", 
+                "id": "57921"
+            }, 
+            {
+                "name": "openSUSE Security Update : MozillaFirefox (MozillaFirefox-5799)", 
+                "file": "suse_11_4_MozillaFirefox-120213.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75952"
+            }, 
+            {
+                "name": "openSUSE Security Update : seamonkey (seamonkey-5804)", 
+                "file": "suse_11_4_seamonkey-120213.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "76027"
+            }, 
+            {
+                "name": "SuSE 11.1 Security Update : Mozilla Firefox (SAT Patch Number 5807)", 
+                "file": "suse_11_MozillaFirefox-120213.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "57970"
+            }, 
+            {
+                "name": "SuSE 11.1 Security Update : Mozilla Firefox (SAT Patch Number 5807)", 
+                "file": "suse_11_MozillaFirefox-120214.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "57971"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS / 10.10 / 11.04 / 11.10 : firefox vulnerability (USN-1360-1)", 
+                "file": "ubuntu_USN-1360-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "57934"
+            }, 
+            {
+                "name": "Ubuntu 11.10 : thunderbird vulnerabilities (USN-1369-1)", 
+                "file": "ubuntu_USN-1369-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "58037"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2012:017", 
+                "id": "MDVSA-2012:017"
+            }, 
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2012:018", 
+                "id": "MDVSA-2012:018"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2012-0452.html", 
+                "id": "SUSE-SU-2012:0261"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2012-0452.html", 
+                "id": "openSUSE-SU-2012:0258"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1360-1", 
+                "id": "USN-1360-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

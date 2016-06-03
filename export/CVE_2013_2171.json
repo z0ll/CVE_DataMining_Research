@@ -1,0 +1,164 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-2171", 
+                "published": "2013-07-01T23:43:33.647-04:00", 
+                "id": "CVE-2013-2171", 
+                "modified": "2013-08-22T02:52:14.103-04:00", 
+                "summary": "The vm_map_lookup function in sys/vm/vm_map.c in the mmap implementation in the kernel in FreeBSD 9.0 through 9.1-RELEASE-p4 does not properly determine whether a task should have write access to a memory location, which allows local users to bypass filesystem write permissions and consequently gain privileges via a crafted application that leverages read permissions, and makes mmap and ptrace system calls."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:freebsd:freebsd:9.1:release-p4"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:9.0"
+            }, 
+            {
+                "id": "cpe:/o:freebsd:freebsd:9.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.9238", 
+                "id": 9238
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.freebsd.org/security/advisories/FreeBSD-SA-13:06.mmap.asc", 
+                    "vendor": "FREEBSD"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2013/dsa-2714", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://svnweb.freebsd.org/base?view=revision&revision=251901", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "6.9", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "mmap.rb", 
+                "file": "metasploit-framework/modules/exploits/freebsd/local/mmap.rb", 
+                "title": "FreeBSD 9 Address Space Manipulation Privilege Escalation"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/26454", 
+                "id": 26454, 
+                "file": "platforms/freebsd/local/26454.rb"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-2171"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19666", 
+                "title": "DSA-2714-1 kfreebsd-9 - programming error", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:19666"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2714-1 (kfreebsd-9 - programming error)", 
+                "file": "deb_2714.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "892714"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-2714-1 : kfreebsd-9 - programming error", 
+                "file": "debian_DSA-2714.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "66976"
+            }, 
+            {
+                "name": "FreeBSD : FreeBSD -- Privilege escalation via mmap (abef280d-d829-11e2-b71c-8c705af55518)", 
+                "file": "freebsd_pkg_abef280dd82911e2b71c8c705af55518.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "66919"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2714", 
+                "id": "DSA-2714"
+            }
+        ], 
+        "Vmware": []
+    }
+}

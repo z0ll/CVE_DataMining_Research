@@ -1,0 +1,154 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-1169", 
+                "published": "2002-11-04T00:00:00.000-05:00", 
+                "id": "CVE-2002-1169", 
+                "modified": "2008-09-10T15:14:00.103-04:00", 
+                "summary": "IBM Web Traffic Express Caching Proxy Server 3.6 and 4.x before 4.0.1.26 allows remote attackers to cause a denial of service (crash) via an HTTP request to helpout.exe with a missing HTTP version number, which causes ibmproxy.exe to crash."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:ibm:websphere_caching_proxy_server:3.6"
+            }, 
+            {
+                "id": "cpe:/a:ibm:websphere_caching_proxy_server:4.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.19123", 
+                "id": 19123
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/6002", 
+                "id": 6002
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/2090", 
+                "id": 2090
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.rapid7.com/advisories/R7-0007.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/static/10452.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/6002", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/2090", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www-1.ibm.com/support/search.wss?rs=0&q=IY35970&apar=only", 
+                    "vendor": "AIXAPAR"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:2057", 
+                "signature": "SERVER-WEBAPP helpout.exe access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-1169"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "WebSphere Edge caching proxy denial of service", 
+                "file": "websphere_cache_DoS.nasl", 
+                "family": "Denial of Service", 
+                "id": "11162"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "IBM WebSphere Edge Caching Proxy DoS", 
+                "file": "websphere_cache_DoS.nasl", 
+                "family": "Web Servers", 
+                "id": "11162"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IY35970", 
+                "id": "IY35970"
+            }
+        ], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,183 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8567", 
+                "published": "2014-11-14T10:59:02.607-05:00", 
+                "id": "CVE-2014-8567", 
+                "modified": "2014-12-16T15:05:41.813-05:00", 
+                "summary": "The mod_auth_mellon module before 0.8.1 allows remote attackers to cause a denial of service (Apache HTTP server crash) via a crafted logout request that triggers a read of uninitialized data."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:uninett:mod_auth_mellon:0.8.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.72874", 
+                "id": 72874
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://postlister.uninett.no/sympa/arc/modmellon/2014-11/msg00000.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "https://github.com/UNINETT/mod_auth_mellon/commit/0f5b4fd860fa7e3a6c47201637aab05395f32647", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2014-1803.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://linux.oracle.com/errata/ELSA-2014-1803.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "9.2", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "9.4", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-8567"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28374", 
+                "title": "RHSA-2014:1803 -- mod_auth_mellon security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28374"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28281", 
+                "title": "ELSA-2014-1803 -- mod_auth_mellon security update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28281"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "CentOS 6 : mod_auth_mellon (CESA-2014:1803)", 
+                "file": "centos_RHSA-2014-1803.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "78876"
+            }, 
+            {
+                "name": "Oracle Linux 6 : mod_auth_mellon (ELSA-2014-1803)", 
+                "file": "oraclelinux_ELSA-2014-1803.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "78883"
+            }, 
+            {
+                "name": "RHEL 6 : mod_auth_mellon (RHSA-2014:1803)", 
+                "file": "redhat-RHSA-2014-1803.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "78884"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : mod_auth_mellon on SL6.x i386/x86_64", 
+                "file": "sl_20141105_mod_auth_mellon_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "79081"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20141803", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2014-1803.html", 
+                    "id": "RHSA-2014:1803", 
+                    "title": "RHSA-2014:1803: mod_auth_mellon security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1157281", 
+                    "title": "CVE-2014-8566 mod_auth_mellon: remote memory disclosure flaw", 
+                    "id": "1157281", 
+                    "issue date": "2014-11-05", 
+                    "associated redhat": "RHSA-2014:1803"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1157954", 
+                    "title": "CVE-2014-8567 mod_auth_mellon: logout processing leads to denial of service", 
+                    "id": "1157954", 
+                    "issue date": "2014-11-05", 
+                    "associated redhat": "RHSA-2014:1803"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

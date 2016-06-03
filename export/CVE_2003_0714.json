@@ -1,0 +1,198 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0714", 
+                "published": "2003-11-17T00:00:00.000-05:00", 
+                "id": "CVE-2003-0714", 
+                "modified": "2008-09-05T16:35:03.327-04:00", 
+                "summary": "The Internet Mail Service in Exchange Server 5.5 and Exchange 2000 allows remote attackers to cause a denial of service (memory exhaustion) by directly connecting to the SMTP service and sending a certain extended verb request, possibly triggering a buffer overflow in Exchange 2000."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:exchange_server:2000"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:exchange_server:5.5"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:exchange_server:5.5:sp2"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:exchange_server:2000:sp3"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:exchange_server:5.5:sp3"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:exchange_server:5.5:sp1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:exchange_server:2000:sp2"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:exchange_server:5.5:sp4"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:exchange_server:2000:sp1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.333", 
+                "id": 333
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/8838", 
+                "id": 8838
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/2674", 
+                "id": 2674
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/422156", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.cert.org/advisories/CA-2003-27.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/8838", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms03-046.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=106682909006586&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/422156", 
+                "id": "VU#422156"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:2253", 
+                "signature": "SERVER-MAIL XEXCH50 overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms03_046_exchange2000_xexch50.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/smtp/ms03_046_exchange2000_xexch50.rb", 
+                "title": "MS03-046 Exchange 2000 XEXCH50 Heap Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2003-0714"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Exchange XEXCH50 Remote Buffer Overflow", 
+                "file": "exchange_xexch50_overflow.nasl", 
+                "family": "SMTP problems", 
+                "id": "11889"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Exchange XEXCH50 Remote Buffer Overflow", 
+                "file": "exchange_xexch50_overflow.nasl", 
+                "family": "SMTP problems", 
+                "id": "11889"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in Exchange Server Could Allow Arbitrary Code Execution", 
+                "id": "Vulnerability in Exchange Server Could Allow Arbitrary Code Execution", 
+                "title": "829436"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/829436", 
+                "id": "829436", 
+                "title": "Vulnerability in Exchange Server Could Allow Arbitrary Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS03-046", 
+                "id": "MS03-046", 
+                "title": "Vulnerability in Exchange Server Could Allow Arbitrary Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,172 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0718", 
+                "published": "2004-11-03T00:00:00.000-05:00", 
+                "id": "CVE-2003-0718", 
+                "modified": "2008-09-10T15:20:14.633-04:00", 
+                "summary": "The WebDAV Message Handler for Internet Information Services (IIS) 5.0, 5.1, and 6.0 allows remote attackers to cause a denial of service (memory and CPU exhaustion, application crash) via a PROPFIND request with an XML message containing XML elements with a large number of attributes."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:5.1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:6.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_information_server:5.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.885", 
+                "id": 885
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/10688", 
+                "id": 10688
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/17656", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/17645", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms04-030.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=109762641822064&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1079", 
+                "signature": "OS-WINDOWS Microsoft Windows WebDAV propfind access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2003-0718"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:1330", 
+                "title": "Windows 2000 IIS WebDAV Message Handler Denial of Service Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:1330"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:4767", 
+                "title": "Windows Server 2003 IIS WebDAV Message Handler Denial of Service Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:4767"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:1427", 
+                "title": "Windows XP IIS WebDAV Message Handler Denial of Service Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:1427"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS04-030: WebDAV XML Message Handler Denial of Service (824151)", 
+                "file": "smb_nt_ms04-030.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "15455"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in WebDAV XML Message Handler Could Lead to a Denial of Service", 
+                "id": "Vulnerability in WebDAV XML Message Handler Could Lead to a Denial of Service", 
+                "title": "824151"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/824151", 
+                "id": "824151", 
+                "title": "Vulnerability in WebDAV XML Message Handler Could Lead to a Denial of Service"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS04-030", 
+                "id": "MS04-030", 
+                "title": "Vulnerability in WebDAV XML Message Handler Could Lead to a Denial of Service"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

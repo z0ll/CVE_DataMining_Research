@@ -1,0 +1,229 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/693.html", 
+                "id": "CWE-693", 
+                "title": "Protection Mechanism Failure"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/664.html", 
+                "id": "CWE-664", 
+                "title": "Improper Control of a Resource Through its Lifetime"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/632.html", 
+                "id": "CWE-632", 
+                "title": "Weaknesses that Affect Files or Directories"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/723.html", 
+                "id": "CWE-723", 
+                "title": "OWASP Top Ten 2004 Category A2 - Broken Access Control"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/944.html", 
+                "id": "CWE-944", 
+                "title": "SFP Secondary Cluster: Access Management"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/19.html", 
+                "id": 19
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/474.html", 
+                "id": 474
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1427", 
+                "published": "2015-02-17T10:59:04.560-05:00", 
+                "id": "CVE-2015-1427", 
+                "modified": "2015-06-25T11:16:18.183-04:00", 
+                "summary": "The Groovy scripting engine in Elasticsearch before 1.3.8 and 1.4.x before 1.4.3 allows remote attackers to bypass the sandbox protection mechanism and execute arbitrary shell commands via a crafted script."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/284.html", 
+                "id": "CWE-284", 
+                "title": "Improper Access Control"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:elasticsearch:elasticsearch:1.3.7"
+            }, 
+            {
+                "id": "cpe:/a:elasticsearch:elasticsearch:1.4.0"
+            }, 
+            {
+                "id": "cpe:/a:elasticsearch:elasticsearch:1.4.2"
+            }, 
+            {
+                "id": "cpe:/a:elasticsearch:elasticsearch:1.4.1"
+            }, 
+            {
+                "id": "cpe:/a:elasticsearch:elasticsearch:1.4.0:beta1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.74222", 
+                "id": 74222
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/72585", 
+                "id": 72585
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.elasticsearch.com/blog/elasticsearch-1-4-3-1-3-8-released/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://www.elastic.co/community/security/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/100850", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/72585", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/534689/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://packetstormsecurity.com/files/130784/ElasticSearch-Unauthenticated-Remote-Code-Execution.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://packetstormsecurity.com/files/130368/Elasticsearch-1.3.7-1.4.2-Sandbox-Escape-Command-Execution.html", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2020648", 
+                "signature": "ET WEB_SERVER Possible CVE-2015-1427 Elastic Search Sandbox Escape Remote Code Execution Attempt"
+            }, 
+            {
+                "classtype": "trojan-activity", 
+                "id": "sid:2021351", 
+                "signature": "ET CURRENT_EVENTS Possible Elasticsearch CVE-2015-1427 Exploit Campaign SSL Certificate"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "search_groovy_script.rb", 
+                "file": "metasploit-framework/modules/exploits/multi/elasticsearch/search_groovy_script.rb", 
+                "title": "ElasticSearch Search Groovy Sandbox Bypass"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/36337", 
+                "id": 36337, 
+                "file": "platforms/linux/remote/36337.py"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-1427"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [
+            {
+                "url": "https://nmap.org/nsedoc/scripts/http-vuln-cve2015-1427.html", 
+                "file": "http-vuln-cve2015-1427.nse", 
+                "family": "vuln, intrusive"
+            }
+        ], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Elasticsearch Groovy Script RCE", 
+                "file": "elasticsearch_rce_CVE-2015-1427.nasl", 
+                "family": "CGI abuses", 
+                "id": "81816"
+            }, 
+            {
+                "name": "FreeBSD : elasticsearch -- remote OS command execution via Groovy scripting engine (026759e0-1ba3-11e5-b43d-002590263bf5)", 
+                "file": "freebsd_pkg_026759e01ba311e5b43d002590263bf5.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "84409"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

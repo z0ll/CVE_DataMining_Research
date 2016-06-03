@@ -1,0 +1,166 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0008", 
+                "published": "2002-01-31T00:00:00.000-05:00", 
+                "id": "CVE-2002-0008", 
+                "modified": "2008-09-10T15:11:02.820-04:00", 
+                "summary": "Bugzilla before 2.14.1 allows remote attackers to (1) spoof a user comment via an HTTP request to process_bug.cgi using the \"who\" parameter, instead of the Bugzilla_login cookie, or (2) post a bug as another user by modifying the reporter parameter to enter_bug.cgi, which is passed to post_bug.cgi."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:mozilla:bugzilla:2.14.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.17920", 
+                "id": 17920
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/3794", 
+                "id": 3794
+            }, 
+            {
+                "url": "http://www.securityfocus.com/bid/3793", 
+                "id": 3793
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.bugzilla.org/security2_14_1.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://bugzilla.mozilla.org/show_bug.cgi?id=108516", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://bugzilla.mozilla.org/show_bug.cgi?id=108385", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2002-01/0034.html", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/3794", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/3793", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/static/7805.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/static/7804.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2002-001.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:2053", 
+                "signature": "SERVER-WEBAPP Bugtraq process_bug.cgi access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:2054", 
+                "signature": "SERVER-WEBAPP Bugtraq enter_bug.cgi arbitrary command attempt"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:2055", 
+                "signature": "SERVER-WEBAPP Bugtraq enter_bug.cgi access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-0008"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2002-001.html", 
+                    "id": "RHSA-2002:001", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,217 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-3217", 
+                "published": "2008-07-18T12:41:00.000-04:00", 
+                "id": "CVE-2008-3217", 
+                "modified": "2008-09-10T21:12:08.633-04:00", 
+                "summary": "PowerDNS Recursor before 3.1.6 does not always use the strongest random number generator for source port selection, which makes it easier for remote attack vectors to conduct DNS cache poisoning.  NOTE: this is related to incomplete integration of security improvements associated with addressing CVE-2008-1637."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:powerdns:recursor:3.1.1"
+            }, 
+            {
+                "id": "cpe:/a:powerdns:recursor:3.0"
+            }, 
+            {
+                "id": "cpe:/a:powerdns:recursor:3.1.4"
+            }, 
+            {
+                "id": "cpe:/a:powerdns:recursor:3.1.5"
+            }, 
+            {
+                "id": "cpe:/a:powerdns:recursor:3.0.1"
+            }, 
+            {
+                "id": "cpe:/a:powerdns:recursor:3.1.2"
+            }, 
+            {
+                "id": "cpe:/a:powerdns:recursor:3.1.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.43290", 
+                "id": 43290
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/30782", 
+                "id": 30782
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://wiki.powerdns.com/cgi-bin/trac.fcgi/changeset/1179", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://www.redhat.com/archives/fedora-package-announce/2008-July/msg01353.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/43925", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/30782", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2008/07/16/12", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2008/07/10/6", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2008/07/09/10", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/31311", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://doc.powerdns.com/changelog.html#CHANGELOG-RECURSOR-3-1-6", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2008-3217"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20332", 
+                "title": "DSA-1544-1 pdns-recursor - cache poisoning vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20332"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:8177", 
+                "title": "DSA-1544 pdns-recursor -- design flaw", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:8177"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19578", 
+                "title": "DSA-1544-2 pdns-recursor - predictable randomness", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:19578"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Family Connections argv[1] Parameter Remote Arbitrary Command Execution Vulnerability", 
+                "file": "gb_fedora_2008_6893_pdns-recursor_fc9.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "860055"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-1544-2 : pdns-recursor - design flaw", 
+                "file": "debian_DSA-1544.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "31950"
+            }, 
+            {
+                "name": "Fedora 9 : pdns-recursor-3.1.7-2.fc9 (2008-6893)", 
+                "file": "fedora_2008-6893.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "33770"
+            }, 
+            {
+                "name": "GLSA-200804-22 : PowerDNS Recursor: DNS Cache Poisoning", 
+                "file": "gentoo_GLSA-200804-22.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "32015"
+            }, 
+            {
+                "name": "PowerDNS Recursor 3.x < 3.1.6 DNS Predictable Transaction ID (TRXID) Cache Poisoning", 
+                "file": "pdns_recursor_cache_poisining.nasl", 
+                "family": "DNS", 
+                "id": "34044"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2008-6893", 
+                "id": "FEDORA-2008-6893"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

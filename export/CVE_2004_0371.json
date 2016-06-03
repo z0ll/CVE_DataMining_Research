@@ -1,0 +1,204 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0371", 
+                "published": "2004-05-04T00:00:00.000-04:00", 
+                "id": "CVE-2004-0371", 
+                "modified": "2008-09-10T15:25:59.257-04:00", 
+                "summary": "Heimdal 0.6.x before 0.6.1 and 0.5.x before 0.5.3 does not properly perform certain consistency checks for cross-realm requests, which allows remote attackers with control of a realm to impersonate others in the cross-realm trust path."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:kth:heimdal:0.4d"
+            }, 
+            {
+                "id": "cpe:/a:kth:heimdal:0.4e"
+            }, 
+            {
+                "id": "cpe:/a:kth:heimdal:0.6.0"
+            }, 
+            {
+                "id": "cpe:/a:kth:heimdal:0.5.2"
+            }, 
+            {
+                "id": "cpe:/a:kth:heimdal:0.4b"
+            }, 
+            {
+                "id": "cpe:/a:kth:heimdal:0.5.1"
+            }, 
+            {
+                "id": "cpe:/a:kth:heimdal:0.4c"
+            }, 
+            {
+                "id": "cpe:/a:kth:heimdal:0.5"
+            }, 
+            {
+                "id": "cpe:/a:kth:heimdal:0.4a"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.21834", 
+                "id": 21834
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/15701", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2004/dsa-476", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://www.pdc.kth.se/heimdal/advisory/2004-04-01/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://security.gentoo.org/glsa/glsa-200404-09.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "ftp://ftp.openbsd.org/pub/OpenBSD/patches/3.5/common/009_kerberos.patch", 
+                    "vendor": "OPENBSD"
+                }, 
+                {
+                    "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-04:08.heimdal.asc", 
+                    "vendor": "FREEBSD"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0371"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 476-1 (heimdal)", 
+                "file": "deb_476_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "53174"
+            }, 
+            {
+                "name": "FreeBSD Ports: heimdal", 
+                "file": "freebsd_heimdal0.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52472"
+            }, 
+            {
+                "name": "FreeBSD Security Advisory (FreeBSD-SA-04:08.heimdal.asc)", 
+                "file": "freebsdsa_heimdal.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52650"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 200404-09 (heimdal)", 
+                "file": "glsa_200404_09.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "54548"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-476-1 : heimdal - cross-realm", 
+                "file": "debian_DSA-476.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "15313"
+            }, 
+            {
+                "name": "FreeBSD : Incorrect cross-realm trust handling in Heimdal (65)", 
+                "file": "freebsd_heimdal_061.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "12549"
+            }, 
+            {
+                "name": "FreeBSD : Incorrect cross-realm trust handling in Heimdal (bfb36941-84fa-11d8-a41f-0020ed76ef5a)", 
+                "file": "freebsd_pkg_bfb3694184fa11d8a41f0020ed76ef5a.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "37254"
+            }, 
+            {
+                "name": "GLSA-200404-09 : Cross-realm trust vulnerability in Heimdal", 
+                "file": "gentoo_GLSA-200404-09.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "14474"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200404-09", 
+                "id": "GLSA-200404-09"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-476", 
+                "id": "DSA-476"
+            }
+        ], 
+        "Vmware": []
+    }
+}

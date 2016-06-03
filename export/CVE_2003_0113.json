@@ -1,0 +1,189 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0113", 
+                "published": "2003-05-12T00:00:00.000-04:00", 
+                "id": "CVE-2003-0113", 
+                "modified": "2008-09-10T15:17:57.570-04:00", 
+                "summary": "Buffer overflow in URLMON.DLL in Microsoft Internet Explorer 5.01, 5.5 and 6.0 allows remote attackers to execute arbitrary code via an HTTP response containing long values in (1) Content-type and (2) Content-encoding fields."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:ie:6.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:5.5:sp1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:6.0:sp1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:5.5:sp2"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:5.0.1:sp2"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:5.0.1:sp1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:5.0.1:sp3"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:5.5"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:ie:5.0.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.48", 
+                "id": 48
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/169753", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/ms03-015.asp", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=105138417416900&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=105718285107246&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/169753", 
+                "id": "VU#169753"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:100000119", 
+                "signature": "GPL WEB_CLIENT Internet Explorer URLMON.DLL Content-Encoding Overflow Attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-admin", 
+                "id": "sid:3461", 
+                "signature": "SERVER-MAIL Content-Type overflow attempt"
+            }, 
+            {
+                "category": "attempted-admin", 
+                "id": "sid:3462", 
+                "signature": "BROWSER-IE Microsoft Internet Explorer Content-Encoding overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2003-0113"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:926", 
+                "title": "IE URLMON Buffer Overflow", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:926"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "IE 5.01 5.5 6.0 Cumulative patch (890923)", 
+                "file": "smb_nt_ms02-005.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "10861"
+            }
+        ], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Cumulative Patch for Internet Explorer", 
+                "id": "Cumulative Patch for Internet Explorer", 
+                "title": "813489"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/813489", 
+                "id": "813489", 
+                "title": "Cumulative Patch for Internet Explorer"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS03-015", 
+                "id": "MS03-015", 
+                "title": "Cumulative Patch for Internet Explorer"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

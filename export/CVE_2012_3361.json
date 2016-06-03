@@ -1,0 +1,258 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3361", 
+                "published": "2012-07-22T12:55:48.227-04:00", 
+                "id": "CVE-2012-3361", 
+                "modified": "2012-08-16T23:53:53.677-04:00", 
+                "summary": "virt/disk/api.py in OpenStack Compute (Nova) Folsom (2012.2), Essex (2012.1), and Diablo (2011.3) allows remote authenticated users to overwrite arbitrary files via a symlink attack on a file in an image."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:openstack:diablo:2011.3"
+            }, 
+            {
+                "id": "cpe:/a:openstack:folsom:2012.2"
+            }, 
+            {
+                "id": "cpe:/a:openstack:essex:2012.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.61379", 
+                "id": 61379
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/54278", 
+                "id": 54278
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/openstack/nova/commit/b0feaffdb2b1c51182b8dce41b367f3449af5dd9", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://github.com/openstack/nova/commit/2427d4a99bed35baefd8f17ba422cb7aae8dcca7", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://review.openstack.org/#/c/9268/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://lists.launchpad.net/openstack/msg14089.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "https://bugs.launchpad.net/nova/+bug/1015531", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1497-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/54278", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/49802", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/49763", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2012-July/083984.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2012-July/083969.html", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "5.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-3361"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17962", 
+                "title": "USN-1545-1 -- nova vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17962"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17908", 
+                "title": "USN-1497-1 -- nova vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17908"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for openstack-nova FEDORA-2012-10418", 
+                "file": "gb_fedora_2012_10418_openstack-nova_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864557"
+            }, 
+            {
+                "name": "Fedora Update for openstack-nova FEDORA-2012-10420", 
+                "file": "gb_fedora_2012_10420_openstack-nova_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864556"
+            }, 
+            {
+                "name": "Fedora Update for openstack-nova FEDORA-2012-10939", 
+                "file": "gb_fedora_2012_10939_openstack-nova_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864565"
+            }, 
+            {
+                "name": "Fedora Update for openstack-nova FEDORA-2012-11756", 
+                "file": "gb_fedora_2012_11756_openstack-nova_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864637"
+            }, 
+            {
+                "name": "Fedora Update for openstack-nova FEDORA-2013-1816", 
+                "file": "gb_fedora_2013_1816_openstack-nova_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865334"
+            }, 
+            {
+                "name": "Ubuntu Update for nova USN-1497-1", 
+                "file": "gb_ubuntu_USN_1497_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841074"
+            }, 
+            {
+                "name": "Ubuntu Update for nova USN-1545-1", 
+                "file": "gb_ubuntu_USN_1545_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841121"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 16 : openstack-nova-2011.3.1-11.fc16 (2012-10418)", 
+                "file": "fedora_2012-10418.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "60071"
+            }, 
+            {
+                "name": "Fedora 17 : openstack-nova-2012.1.1-3.fc17 (2012-10420)", 
+                "file": "fedora_2012-10420.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "60072"
+            }, 
+            {
+                "name": "Fedora 17 : openstack-nova-2012.1.1-15.fc17 (2012-11756)", 
+                "file": "fedora_2012-11756.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "61615"
+            }, 
+            {
+                "name": "Ubuntu 11.10 / 12.04 LTS : nova vulnerabilities (USN-1497-1)", 
+                "file": "ubuntu_USN-1497-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "59845"
+            }, 
+            {
+                "name": "Ubuntu 11.10 / 12.04 LTS : nova vulnerability (USN-1545-1)", 
+                "file": "ubuntu_USN-1545-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "61643"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2012-10418", 
+                "id": "FEDORA-2012-10418"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2012-10420", 
+                "id": "FEDORA-2012-10420"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1497-1", 
+                "id": "USN-1497-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

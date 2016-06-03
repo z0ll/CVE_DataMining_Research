@@ -1,0 +1,191 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1607", 
+                "published": "2007-03-22T19:19:00.000-04:00", 
+                "id": "CVE-2007-1607", 
+                "modified": "2008-11-13T01:35:32.537-05:00", 
+                "summary": "search.php in w-Agora (Web-Agora) allows remote attackers to obtain potentially sensitive information via a   (quote) value followed by certain SQL sequences in the (1) search_forum or (2) search_user parameter, which force a SQL error."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:w-agora:w-agora:4.2.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35786", 
+                "id": 35786
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/23057", 
+                "id": 23057
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/34376", 
+                "id": 34376
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/23057", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/463286/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/24605", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/34376", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/33177", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2462", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004128", 
+                "signature": "ET WEB_SPECIFIC_APPS w-Agora SQL Injection Attempt -- search.php search_forum SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004129", 
+                "signature": "ET WEB_SPECIFIC_APPS w-Agora SQL Injection Attempt -- search.php search_forum UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004130", 
+                "signature": "ET WEB_SPECIFIC_APPS w-Agora SQL Injection Attempt -- search.php search_forum INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004131", 
+                "signature": "ET WEB_SPECIFIC_APPS w-Agora SQL Injection Attempt -- search.php search_forum DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004132", 
+                "signature": "ET WEB_SPECIFIC_APPS w-Agora SQL Injection Attempt -- search.php search_forum ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004133", 
+                "signature": "ET WEB_SPECIFIC_APPS w-Agora SQL Injection Attempt -- search.php search_forum UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004134", 
+                "signature": "ET WEB_SPECIFIC_APPS w-Agora SQL Injection Attempt -- search.php search_user SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004135", 
+                "signature": "ET WEB_SPECIFIC_APPS w-Agora SQL Injection Attempt -- search.php search_user UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004136", 
+                "signature": "ET WEB_SPECIFIC_APPS w-Agora SQL Injection Attempt -- search.php search_user INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004137", 
+                "signature": "ET WEB_SPECIFIC_APPS w-Agora SQL Injection Attempt -- search.php search_user DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004138", 
+                "signature": "ET WEB_SPECIFIC_APPS w-Agora SQL Injection Attempt -- search.php search_user ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004139", 
+                "signature": "ET WEB_SPECIFIC_APPS w-Agora SQL Injection Attempt -- search.php search_user UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1607"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

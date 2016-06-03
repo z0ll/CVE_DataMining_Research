@@ -1,0 +1,172 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1012", 
+                "published": "2012-06-07T15:55:07.757-04:00", 
+                "id": "CVE-2012-1012", 
+                "modified": "2012-06-12T00:00:00.000-04:00", 
+                "summary": "server/server_stubs.c in the kadmin protocol implementation in MIT Kerberos 5 (aka krb5) 1.10 before 1.10.1 does not properly restrict access to (1) SET_STRING and (2) GET_STRINGS operations, which might allow remote authenticated administrators to modify or read string attributes by leveraging the global list privilege."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:mit:kerberos:5-1.10"
+            }, 
+            {
+                "id": "cpe:/a:mit:kerberos:5-1.10.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.60914", 
+                "id": 60914
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=796438", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://web.mit.edu/kerberos/krb5-1.10/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://src.mit.edu/fisheye/changelog/krb5/?cs=25704", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://krbdev.mit.edu/rt/Ticket/Display.html?user=guest&pass=guest&id=7093", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "5.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-1012"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17877", 
+                "title": "USN-1520-1 -- krb5 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17877"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for krb5 FEDORA-2012-11388", 
+                "file": "gb_fedora_2012_11388_krb5_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864588"
+            }, 
+            {
+                "name": "Fedora Update for krb5 FEDORA-2012-2187", 
+                "file": "gb_fedora_2012_2187_krb5_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864436"
+            }, 
+            {
+                "name": "Fedora Update for krb5 FEDORA-2013-3116", 
+                "file": "gb_fedora_2013_3116_krb5_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865472"
+            }, 
+            {
+                "name": "Fedora Update for krb5 FEDORA-2013-5286", 
+                "file": "gb_fedora_2013_5286_krb5_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865563"
+            }, 
+            {
+                "name": "Fedora Update for krb5 FEDORA-2013-8219", 
+                "file": "gb_fedora_2013_8219_krb5_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865642"
+            }, 
+            {
+                "name": "Ubuntu Update for krb5 USN-1520-1", 
+                "file": "gb_ubuntu_USN_1520_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841097"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Ubuntu 10.04 LTS / 11.04 / 11.10 / 12.04 LTS : krb5 vulnerabilities (USN-1520-1)", 
+                "file": "ubuntu_USN-1520-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "61379"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

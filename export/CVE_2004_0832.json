@@ -1,0 +1,216 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0832", 
+                "published": "2004-11-03T00:00:00.000-05:00", 
+                "id": "CVE-2004-0832", 
+                "modified": "2010-08-21T00:21:21.657-04:00", 
+                "summary": "The (1) ntlm_fetch_string and (2) ntlm_get_string functions in Squid 2.5.6 and earlier, with NTLM authentication enabled, allow remote attackers to cause a denial of service (application crash) via an NTLMSSP packet that causes a negative value to be passed to memcpy."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:squid:squid:2.5.6"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.22366", 
+                "id": 22366
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/11098", 
+                "id": 11098
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/17218", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.trustix.org/errata/2004/0047/", 
+                    "vendor": "TRUSTIX"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/11098", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.gentoo.org/security/en/glsa/glsa-200409-04.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://www1.uk.squid-cache.org/squid/Versions/v2/2.5/bugs/#squid-2.5.STABLE6-ntlm_fetch_string", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.squid-cache.org/bugs/show_bug.cgi?id=1045", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2004:093", 
+                    "vendor": "MANDRAKE"
+                }, 
+                {
+                    "url": "http://fedoranews.org/updates/FEDORA--.shtml", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0832"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:10489", 
+                "title": "The (1) ntlm_fetch_string and (2) ntlm_get_string functions in Squid 2.5.6 and earlier, with NTLM authentication enabled, allow remote attackers to cause a denial of service (application crash) via an NTLMSSP packet that causes a negative value to be passed to memcpy.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:10489"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: squid", 
+                "file": "freebsd_squid9.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52337"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 200409-04 (squid)", 
+                "file": "glsa_200409_04.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "54661"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "FreeBSD : squid -- NTLM authentication denial-of-service vulnerability (064225c5-1f53-11d9-836a-0090962cff2a)", 
+                "file": "freebsd_pkg_064225c51f5311d9836a0090962cff2a.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "18829"
+            }, 
+            {
+                "name": "GLSA-200409-04 : Squid: Denial of service when using NTLM authentication", 
+                "file": "gentoo_GLSA-200409-04.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "14651"
+            }, 
+            {
+                "name": "Mandrake Linux Security Advisory : squid (MDKSA-2004:093)", 
+                "file": "mandrake_MDKSA-2004-093.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "14749"
+            }, 
+            {
+                "name": "RHEL 3 : squid (RHSA-2004:462)", 
+                "file": "redhat-RHSA-2004-462.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "15410"
+            }, 
+            {
+                "name": "Ubuntu 4.10 : squid vulnerabilities (USN-19-1)", 
+                "file": "ubuntu_USN-19-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "20602"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FLSA-2006:152809", 
+                "id": "FLSA-2006:152809"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20040462", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2004-462.html", 
+                    "id": "RHSA-2004:462", 
+                    "title": "RHSA-2004:462: squid security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=131750", 
+                    "title": "CAN-2004-0832 Certain malformed NTLMSSP packets could crash the NTLM helpers provided by Squid", 
+                    "id": "131750", 
+                    "issue date": "2004-09-30", 
+                    "associated redhat": "RHSA-2004:462"
+                }
+            }
+        ], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200409-04 ", 
+                "id": "GLSA-200409-04 "
+            }, 
+            {
+                "url": "https://security.gentoo.org/glsa/200409-04", 
+                "id": "GLSA-200409-04"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

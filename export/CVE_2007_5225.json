@@ -1,0 +1,224 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5225", 
+                "published": "2007-10-04T20:17:00.000-04:00", 
+                "id": "CVE-2007-5225", 
+                "modified": "2011-10-11T00:00:00.000-04:00", 
+                "summary": "Integer signedness error in FIFO filesystems (named pipes) on Sun Solaris 8 through 10 allows local users to read the contents of unspecified memory locations via a negative maximum length value to the I_PEEK ioctl."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:sun:solaris:8.0"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:10.0"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:9.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.3359", 
+                "id": 3359
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/25905", 
+                "id": 25905
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/36918", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/3339", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1018766", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/25905", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/481501/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/5227", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/4516", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://support.avaya.com/elmodocs2/security/ASA-2007-463.htm", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-103061-1", 
+                    "vendor": "SUNALERT"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/27654", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/27024", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=603", 
+                    "vendor": "IDEFENSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.9", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/5227", 
+                "id": 5227, 
+                "file": "platforms/solaris/local/5227.c"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-5225"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:2170", 
+                "title": "Security Vulnerability in Solaris Named Pipes (pipe(2)) May Allow Unauthorized Data Access", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:2170"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Solaris Update for ping 116775-04", 
+                "file": "gb_solaris_117471_04.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "855144"
+            }, 
+            {
+                "name": "Solaris Update for ping 116775-04", 
+                "file": "gb_solaris_117472_04.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "855428"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Solaris 10 (sparc) : 127737-01", 
+                "file": "solaris10_127737.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "26908"
+            }, 
+            {
+                "name": "Solaris 10 (x86) : 127738-01", 
+                "file": "solaris10_x86_127738.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "27084"
+            }, 
+            {
+                "name": "Solaris 8 (sparc) : 109454-06", 
+                "file": "solaris8_109454.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "26909"
+            }, 
+            {
+                "name": "Solaris 8 (x86) : 109455-06", 
+                "file": "solaris8_x86_109455.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "27088"
+            }, 
+            {
+                "name": "Solaris 9 (sparc) : 117471-04", 
+                "file": "solaris9_117471.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "26910"
+            }, 
+            {
+                "name": "Solaris 9 (x86) : 117472-04", 
+                "file": "solaris9_x86_117472.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "27097"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

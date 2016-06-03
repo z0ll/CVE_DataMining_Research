@@ -1,0 +1,563 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0274", 
+                "published": "2015-03-16T06:59:05.007-04:00", 
+                "id": "CVE-2015-0274", 
+                "modified": "2015-03-26T21:59:52.033-04:00", 
+                "summary": "The XFS implementation in the Linux kernel before 3.15 improperly uses an old size value during remote attribute replacement, which allows local users to cause a denial of service (transaction overrun and data corruption) or possibly gain privileges by leveraging XFS filesystem access."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/19.html", 
+                "id": "CWE-19", 
+                "title": "Data Handling"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.14.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.73905", 
+                "id": 73905
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/torvalds/linux/commit/8275cdd0e7ac550dcce2b3ef6d2fb3b808c1ae59", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1195248", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2544-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2543-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id/1031853", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-0694.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-0290.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=8275cdd0e7ac550dcce2b3ef6d2fb3b808c1ae59", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-0274"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : kernel (ALAS-2015-489)", 
+                "file": "ala_ALAS-2015-489.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "81677"
+            }, 
+            {
+                "name": "CentOS 7 : kernel (CESA-2015:0290)", 
+                "file": "centos_RHSA-2015-0290.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "81885"
+            }, 
+            {
+                "name": "RHEL 7 : kernel (RHSA-2015:0290)", 
+                "file": "redhat-RHSA-2015-0290.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "81626"
+            }, 
+            {
+                "name": "RHEL 6 : kernel-rt (RHSA-2015:0694)", 
+                "file": "redhat-RHSA-2015-0694.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "81905"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL7.x x86_64", 
+                "file": "sl_20150305_kernel_on_SL7_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "82254"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-trusty vulnerabilities (USN-2543-1)", 
+                "file": "ubuntu_USN-2543-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "82070"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux vulnerabilities (USN-2544-1)", 
+                "file": "ubuntu_USN-2544-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "82071"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-0694.html", 
+                    "id": "RHSA-2015:0694", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20150290", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-0290.html", 
+                    "id": "RHSA-2015:0290", 
+                    "title": "RHSA-2015:0290: kernel security, bug fix, and enhancement update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=839966", 
+                    "title": "Trigger RHEL7 crash in guest domU, host don't generate core file", 
+                    "id": "839966", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=915335", 
+                    "title": "RFE: Multiple virtio-rng devices support", 
+                    "id": "915335", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=968147", 
+                    "title": "enable online multiple hot-added CPUs cause RHEL7.0 guest hang(soft lockup)", 
+                    "id": "968147", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1043379", 
+                    "title": "guest screen fail to return back to the originally screen after resume from S3(still black screen)", 
+                    "id": "1043379", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1050834", 
+                    "title": "lockdep warning in flush_work() when hotunplugging a virtio-scsi disk (scsi-block + iscsi://)", 
+                    "id": "1050834", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1058608", 
+                    "title": "[RFE] btrfs-progs: btrfs resize doesn't support T/P/E suffix", 
+                    "id": "1058608", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1065474", 
+                    "title": "Size of external origin needs to be aligned with thin pool chunk size", 
+                    "id": "1065474", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1067126", 
+                    "title": "Virt-manager doesn't configure bridge for VM", 
+                    "id": "1067126", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1068627", 
+                    "title": "implement lazy save/restore of debug registers", 
+                    "id": "1068627", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1071340", 
+                    "title": "FCoE target: kernel panic when initiator connects to target", 
+                    "id": "1071340", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1074747", 
+                    "title": "kvm unit test \"realmode\" fails", 
+                    "id": "1074747", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1078775", 
+                    "title": "During query cpuinfo during guest boot from  ipxe repeatedly in AMD hosts, vm repeatedly reboot.", 
+                    "id": "1078775", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1079841", 
+                    "title": "kvm unit test \"debug\" fails", 
+                    "id": "1079841", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1080894", 
+                    "title": "dm-cache: crash on creating cache", 
+                    "id": "1080894", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1083860", 
+                    "title": "kernel panic when virtscsi_init fails", 
+                    "id": "1083860", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1083969", 
+                    "title": "libguestfs-test-tool hangs when the guest is boot with -cpu host", 
+                    "id": "1083969", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1086058", 
+                    "title": "fail to boot L2 guest on wildcatpass Haswell host", 
+                    "id": "1086058", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1088784", 
+                    "title": "qemu ' KVM internal error. Suberror: 1'  when  query cpu frequently during pxe boot in Intel \"Q95xx\" host", 
+                    "id": "1088784", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1091818", 
+                    "title": "Windows guest booting failed with apicv and hv_vapic", 
+                    "id": "1091818", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1095099", 
+                    "title": "RHEL7.0 guest hang during kdump with qxl shared irq", 
+                    "id": "1095099", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1098643", 
+                    "title": "sync with latest upstream dm-thin provisioning improvements and fixes (through 3.15)", 
+                    "id": "1098643", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1102641", 
+                    "title": "BUG: It is not possible to communicate between local program and local ipv6 address when at least one 'netlabelctl unlbl' rule is added", 
+                    "id": "1102641", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1104097", 
+                    "title": "CVE-2014-3940 Kernel: missing check during hugepage migration", 
+                    "id": "1104097", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1115201", 
+                    "title": "[xfs] can't create inodes in newly added space after xfs_growfs", 
+                    "id": "1115201", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1117542", 
+                    "title": "Support for movntdq", 
+                    "id": "1117542", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1119662", 
+                    "title": "BUG: NetLabel lead to kernel panic on some SELinux levels", 
+                    "id": "1119662", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1120850", 
+                    "title": "unable recover NFSv3 locks NLM_DENIED_NOLOCK", 
+                    "id": "1120850", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1124880", 
+                    "title": "[fuse] java.io.FileNotFoundException (FNF) during time period with unrecovered disk errors", 
+                    "id": "1124880", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1127218", 
+                    "title": "Include fix commit daba287b299ec7a (\"ipv4: fix DO and PROBE pmtu mode regarding local fragmentation with UFO/CORK\")", 
+                    "id": "1127218", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1131552", 
+                    "title": "Solarflare devices do not provide PCIe ACS support, limiting device assignment use case due to IOMMU grouping", 
+                    "id": "1131552", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1141399", 
+                    "title": "Device 'vfio-pci' could not be initialized when passing through Intel 82599", 
+                    "id": "1141399", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1151353", 
+                    "title": "CVE-2014-8086 Kernel: fs: ext4 race condition", 
+                    "id": "1151353", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1153322", 
+                    "title": "CVE-2014-3690 kernel: kvm: vmx: invalid host cr4 handling across vm entries", 
+                    "id": "1153322", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1161565", 
+                    "title": "CVE-2014-7825 CVE-2014-7826 kernel: insufficient syscall number validation in perf and ftrace subsystems", 
+                    "id": "1161565", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1164266", 
+                    "title": "CVE-2014-8884 kernel: usb: buffer overflow in ttusb-dec", 
+                    "id": "1164266", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1173580", 
+                    "title": "CVE-2014-8709 kernel: net: mac80211: plain text information leak", 
+                    "id": "1173580", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1182059", 
+                    "title": "CVE-2014-8160 kernel: iptables restriction bypass if a protocol handler kernel module not loaded", 
+                    "id": "1182059", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1195248", 
+                    "title": "CVE-2015-0274 kernel: xfs: replacing remote attributes memory corruption", 
+                    "id": "1195248", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1198457", 
+                    "title": "CVE-2014-8173 kernel: NULL pointer dereference in madvise(MADV_WILLNEED) support", 
+                    "id": "1198457", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1198503", 
+                    "title": "CVE-2014-8172 kernel: soft lockup on aio", 
+                    "id": "1198503", 
+                    "issue date": "2015-03-05", 
+                    "associated redhat": "RHSA-2015:0290"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2543-1", 
+                "id": "USN-2543-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2544-1", 
+                "id": "USN-2544-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

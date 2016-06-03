@@ -1,0 +1,170 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5229", 
+                "published": "2016-04-08T11:59:00.137-04:00", 
+                "id": "CVE-2015-5229", 
+                "modified": "2016-04-08T11:59:01.433-04:00", 
+                "summary": "The calloc function in the glibc package in Red Hat Enterprise Linux (RHEL) 6.7 and 7.2 does not properly initialize memory areas, which might allow context-dependent attackers to cause a denial of service (hang or crash) via unspecified vectors."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": []
+    }, 
+    "References": {
+        "SCIP": [], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1293976", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1256285", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1246713", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2016-0176.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "not_calculated", 
+                    "access complexity": "not_defined", 
+                    "confidentiality impact": "not_defined", 
+                    "authentication": "not_defined", 
+                    "exploit": "not_calculated", 
+                    "base": "not_defined", 
+                    "integrity impact": "not_defined", 
+                    "availability impact": "not_defined", 
+                    "access vector": "not_defined"
+                }
+            ], 
+            "severity": "Not Defined", 
+            "Top alert": false, 
+            "Top vulnerable": "Not Defined"
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-5229"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Amazon Linux AMI : glibc (ALAS-2016-660)", 
+                "file": "ala_ALAS-2016-660.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "89841"
+            }, 
+            {
+                "name": "CentOS 7 : glibc (CESA-2016:0176)", 
+                "file": "centos_RHSA-2016-0176.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "88758"
+            }, 
+            {
+                "name": "Oracle Linux 7 : glibc (ELSA-2016-0176)", 
+                "file": "oraclelinux_ELSA-2016-0176.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "88777"
+            }, 
+            {
+                "name": "RHEL 7 : glibc (RHSA-2016:0176)", 
+                "file": "redhat-RHSA-2016-0176.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "88785"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : glibc on SL7.x x86_64", 
+                "file": "sl_20160216_glibc_on_SL7_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "88798"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20160176", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2016-0176.html", 
+                    "id": "RHSA-2016:0176", 
+                    "title": "RHSA-2016:0176: glibc security and bug fix update (Critical)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1256285", 
+                    "title": "CVE-2015-5229 glibc: calloc may return non-zero memory", 
+                    "id": "1256285", 
+                    "issue date": "2016-02-16", 
+                    "associated redhat": "RHSA-2016:0176"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1293532", 
+                    "title": "CVE-2015-7547 glibc: getaddrinfo stack-based buffer overflow", 
+                    "id": "1293532", 
+                    "issue date": "2016-02-16", 
+                    "associated redhat": "RHSA-2016:0176"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1298956", 
+                    "title": "\"monstartup: out of memory\" on PPC64LE [rhel-7.2.z]", 
+                    "id": "1298956", 
+                    "issue date": "2016-02-16", 
+                    "associated redhat": "RHSA-2016:0176"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

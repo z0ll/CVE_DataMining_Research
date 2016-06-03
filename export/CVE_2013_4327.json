@@ -1,0 +1,212 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4327", 
+                "published": "2013-10-03T17:55:04.443-04:00", 
+                "id": "CVE-2013-4327", 
+                "modified": "2013-12-30T23:25:30.360-05:00", 
+                "summary": "systemd does not properly use D-Bus for communication with a polkit authority, which allows local users to bypass intended access restrictions by leveraging a PolkitUnixProcess PolkitSubject race condition via a (1) setuid process or (2) pkexec process, a related issue to CVE-2013-4288."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:13.04"
+            }, 
+            {
+                "id": "cpe:/a:ubuntu_developers:systemd:-"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.65192", 
+                "id": 65192
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1006680", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1961-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2013/09/18/6", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2013/dsa-2777", 
+                    "vendor": "DEBIAN"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-4327"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18931", 
+                "title": "USN-1961-1 -- systemd vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18931"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19967", 
+                "title": "DSA-2777-1 systemd - several", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:19967"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2777-1 (systemd - several vulnerabilities)", 
+                "file": "deb_2777.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "892777"
+            }, 
+            {
+                "name": "Fedora Update for systemd FEDORA-2013-17119", 
+                "file": "gb_fedora_2013_17119_systemd_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866905"
+            }, 
+            {
+                "name": "Fedora Update for systemd FEDORA-2013-17203", 
+                "file": "gb_fedora_2013_17203_systemd_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866928"
+            }, 
+            {
+                "name": "Ubuntu Update for systemd USN-1961-1", 
+                "file": "gb_ubuntu_USN_1961_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841567"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-2777-1 : systemd - several vulnerabilities", 
+                "file": "debian_DSA-2777.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "70402"
+            }, 
+            {
+                "name": "Fedora 19 : systemd-204-15.fc19 (2013-17119)", 
+                "file": "fedora_2013-17119.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "70046"
+            }, 
+            {
+                "name": "Fedora 20 : systemd-207-4.fc20 (2013-17176)", 
+                "file": "fedora_2013-17176.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "70064"
+            }, 
+            {
+                "name": "Fedora 18 : systemd-201-2.fc18.8 (2013-17203)", 
+                "file": "fedora_2013-17203.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "70065"
+            }, 
+            {
+                "name": "GLSA-201406-27 : polkit, Spice-Gtk, systemd, HPLIP, libvirt: Privilege escalation", 
+                "file": "gentoo_GLSA-201406-27.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "76271"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : polkit (MDVSA-2013:243)", 
+                "file": "mandriva_MDVSA-2013-243.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "70185"
+            }, 
+            {
+                "name": "Ubuntu 13.04 : systemd vulnerability (USN-1961-1)", 
+                "file": "ubuntu_USN-1961-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "69979"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1961-1", 
+                "id": "USN-1961-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2777", 
+                "id": "DSA-2777"
+            }
+        ], 
+        "Vmware": []
+    }
+}

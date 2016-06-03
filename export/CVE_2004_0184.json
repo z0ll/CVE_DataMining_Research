@@ -1,0 +1,277 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0184", 
+                "published": "2004-05-04T00:00:00.000-04:00", 
+                "id": "CVE-2004-0184", 
+                "modified": "2010-08-21T00:19:42.533-04:00", 
+                "summary": "Integer underflow in the isakmp_id_print for TCPDUMP 3.8.1 and earlier allows remote attackers to cause a denial of service (crash) via an ISAKMP packet with an Identification payload with a length that becomes less than 8 during byte order conversion, which causes an out-of-bounds read, as demonstrated by the Striker ISAKMP Protocol Test Suite."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:lbl:tcpdump:3.8.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.21823", 
+                "id": 21823
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/10004", 
+                "id": 10004
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/4750", 
+                "id": 4750
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/492558", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2004/dsa-478", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "https://bugzilla.fedora.us/show_bug.cgi?id=1468", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/15679", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.tcpdump.org/tcpdump-changes.txt", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/10004", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2004-219.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.rapid7.com/advisories/R7-0017.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1009593", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/11258", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=108067265931525&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.trustix.org/errata/2004/0015", 
+                    "vendor": "TRUSTIX"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/492558", 
+                "id": "VU#492558"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-dos", 
+                "id": "sid:2102486", 
+                "signature": "GPL EXPLOIT ISAKMP invalid identification payload attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-dos", 
+                "id": "sid:2486", 
+                "signature": "SERVER-OTHER ISAKMP invalid identification payload attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0184"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:9581", 
+                "title": "Integer underflow in the isakmp_id_print for TCPDUMP 3.8.1 and earlier allows remote attackers to cause a denial of service (crash) via an ISAKMP packet with an Identification payload with a length that becomes less than 8 during byte order conversion, which causes an out-of-bounds read, as demonstrated by the Striker ISAKMP Protocol Test Suite.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:9581"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:976", 
+                "title": "tcpdump Identification Payload in ISAKMP Packets Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:976"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 478-1 (tcpdump)", 
+                "file": "deb_478_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "53175"
+            }, 
+            {
+                "name": "Slackware Advisory SSA:2004-108-01 tcpdump denial of service ", 
+                "file": "esoft_slk_ssa_2004_108_01.nasl", 
+                "family": "Slackware Local Security Checks", 
+                "id": "53941"
+            }, 
+            {
+                "name": "FreeBSD Ports: tcpdump", 
+                "file": "freebsd_tcpdump.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52483"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-478-1 : tcpdump - denial of service", 
+                "file": "debian_DSA-478.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "15315"
+            }, 
+            {
+                "name": "FreeBSD : tcpdump ISAKMP payload handling remote denial-of-service (f8551668-de09-4d7b-9720-f1360929df07)", 
+                "file": "freebsd_pkg_f8551668de094d7b9720f1360929df07.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "19180"
+            }, 
+            {
+                "name": "Mac OS X Multiple Vulnerabilities (Security Update 2004-09-07)", 
+                "file": "macosx_SecUpd20040907.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "14676"
+            }, 
+            {
+                "name": "Mandrake Linux Security Advisory : tcpdump (MDKSA-2004:030)", 
+                "file": "mandrake_MDKSA-2004-030.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "14129"
+            }, 
+            {
+                "name": "RHEL 2.1 / 3 : tcpdump (RHSA-2004:219)", 
+                "file": "redhat-RHSA-2004-219.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "12498"
+            }, 
+            {
+                "name": "Slackware 8.1 / 9.0 / 9.1 / current : tcpdump denial of service (SSA:2004-108-01)", 
+                "file": "Slackware_SSA_2004-108-01.nasl", 
+                "family": "Slackware Local Security Checks", 
+                "id": "18783"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2004-1468", 
+                "id": "FEDORA-2004-1468"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20040219", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2004-219.html", 
+                    "id": "RHSA-2004:219", 
+                    "title": "RHSA-2004:219: tcpdump security update (Low)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=120022", 
+                    "title": "CAN-2004-0183/0184 tcpdump ISAKMP crash", 
+                    "id": "120022", 
+                    "issue date": "2004-05-26", 
+                    "associated redhat": "RHSA-2004:219"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=123030", 
+                    "title": "CAN-2004-0183/0184 tcpdump ISAKMP crash", 
+                    "id": "123030", 
+                    "issue date": "2004-05-26", 
+                    "associated redhat": "RHSA-2004:219"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-478", 
+                "id": "DSA-478"
+            }
+        ], 
+        "Vmware": []
+    }
+}

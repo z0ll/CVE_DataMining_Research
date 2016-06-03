@@ -1,0 +1,175 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-0722", 
+                "published": "2003-09-22T00:00:00.000-04:00", 
+                "id": "CVE-2003-0722", 
+                "modified": "2008-09-10T15:20:14.897-04:00", 
+                "summary": "The default installation of sadmind on Solaris uses weak authentication (AUTH_SYS), which allows local and remote attackers to spoof Solstice AdminSuite clients and gain root privileges via a certain sequence of RPC packets."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:sun:solaris"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.20832", 
+                "id": 20832
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/8615", 
+                "id": 8615
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/4585", 
+                "id": 4585
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/41870", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/8615", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.idefense.com/advisory/09.16.03.txt", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/n-148.shtml", 
+                    "vendor": "CIAC"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/9742", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/vulnwatch/2003-q3/0115.html", 
+                    "vendor": "VULNWATCH"
+                }, 
+                {
+                    "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-56740-1&searchclause=security", 
+                    "vendor": "SUNALERT"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=106391959014331&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/41870", 
+                "id": "VU#41870"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "sadmind_exec.rb", 
+                "file": "metasploit-framework/modules/exploits/solaris/sunrpc/sadmind_exec.rb", 
+                "title": "Solaris sadmind Command Execution"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/sadmind_auth_sys", 
+                "id": "exploit_info/sadmind_auth_sys", 
+                "title": "sadmind AUTH_SYS authentication vulnerability"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2003-0722"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:1273", 
+                "title": "Solaris SAdmin Client Credentials Remote Administrative Access Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:1273"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "sadmin service", 
+                "file": "rpc_sadmin.nasl", 
+                "family": "RPC", 
+                "id": "10229"
+            }, 
+            {
+                "name": "Solaris sadmind AUTH_SYS Credential Remote Command Execution", 
+                "file": "rpc_sadmin2.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "11841"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

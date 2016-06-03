@@ -1,0 +1,174 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6387", 
+                "published": "2006-12-07T20:28:00.000-05:00", 
+                "id": "CVE-2006-6387", 
+                "modified": "2008-09-05T17:14:36.940-04:00", 
+                "summary": "Multiple SQL injection vulnerabilities in LINK Content Management Server (CMS) allow remote attackers to execute arbitrary SQL commands via the (1) IDMeniGlavni parameter to navigacija.php, and the (2) IDStranicaPodaci parameter to prikazInformacije.php.  NOTE: The provenance of this information is unknown; the details are obtained solely from third party information."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:link_content_management_server:link_content_management_server"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33697", 
+                "id": 33697
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21464", 
+                "id": 21464
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://secunia.com/advisories/23107", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30744", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/21464", 
+                    "vendor": "BID"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006657", 
+                "signature": "ET WEB_SPECIFIC_APPS LINK Content Management Server (CMS) SQL Injection Attempt -- navigacija.php IDMeniGlavni SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006658", 
+                "signature": "ET WEB_SPECIFIC_APPS LINK Content Management Server (CMS) SQL Injection Attempt -- navigacija.php IDMeniGlavni UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006659", 
+                "signature": "ET WEB_SPECIFIC_APPS LINK Content Management Server (CMS) SQL Injection Attempt -- navigacija.php IDMeniGlavni INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006660", 
+                "signature": "ET WEB_SPECIFIC_APPS LINK Content Management Server (CMS) SQL Injection Attempt -- navigacija.php IDMeniGlavni DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006661", 
+                "signature": "ET WEB_SPECIFIC_APPS LINK Content Management Server (CMS) SQL Injection Attempt -- navigacija.php IDMeniGlavni ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006662", 
+                "signature": "ET WEB_SPECIFIC_APPS LINK Content Management Server (CMS) SQL Injection Attempt -- navigacija.php IDMeniGlavni UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006663", 
+                "signature": "ET WEB_SPECIFIC_APPS LINK Content Management Server (CMS) SQL Injection Attempt -- prikazInformacije.php IDStranicaPodaci SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006664", 
+                "signature": "ET WEB_SPECIFIC_APPS LINK Content Management Server (CMS) SQL Injection Attempt -- prikazInformacije.php IDStranicaPodaci UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006665", 
+                "signature": "ET WEB_SPECIFIC_APPS LINK Content Management Server (CMS) SQL Injection Attempt -- prikazInformacije.php IDStranicaPodaci INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006666", 
+                "signature": "ET WEB_SPECIFIC_APPS LINK Content Management Server (CMS) SQL Injection Attempt -- prikazInformacije.php IDStranicaPodaci DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006667", 
+                "signature": "ET WEB_SPECIFIC_APPS LINK Content Management Server (CMS) SQL Injection Attempt -- prikazInformacije.php IDStranicaPodaci ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006668", 
+                "signature": "ET WEB_SPECIFIC_APPS LINK Content Management Server (CMS) SQL Injection Attempt -- prikazInformacije.php IDStranicaPodaci UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6387"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

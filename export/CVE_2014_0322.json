@@ -1,0 +1,238 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0322", 
+                "published": "2014-02-14T11:55:07.500-05:00", 
+                "id": "CVE-2014-0322", 
+                "modified": "2014-05-16T00:23:57.543-04:00", 
+                "summary": "Use-after-free vulnerability in Microsoft Internet Explorer 9 and 10 allows remote attackers to execute arbitrary code via vectors involving crafted JavaScript code, CMarkup, and the onpropertychange attribute of a script element, as exploited in the wild in January and February 2014."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:10"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.12320", 
+                "id": 12320
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0046163", 
+                "id": "2014-A-0037", 
+                "title": "Cumulative Security Update for Microsoft Internet Explorer"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/103354", 
+                "id": 103354
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/732479", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "https://www.dropbox.com/s/pyxjgycmudirbqe/CVE-2014-0322.zip", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/103354", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.fireeye.com/blog/uncategorized/2014/02/operation-snowman-deputydog-actor-compromises-us-veterans-of-foreign-wars-website.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.fireeye.com/blog/technical/cyber-exploits/2014/02/new-ie-zero-day-found-in-watering-hole-attack-2.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/32904", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/32851", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://twitter.com/nanoc0re/statuses/434251658344673281", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS14-012", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/advisory/2934088", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://community.websense.com/blogs/securitylabs/archive/2014/02/13/msie-0-day-exploit-cve-2014-0322-possibly-targeting-french-aerospace-organization.aspx", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/732479", 
+                "id": "VU#732479"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "9.3", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2018147", 
+                "signature": "ET WEB_CLIENT Possible IE10 Use After Free CVE-2014-0322"
+            }, 
+            {
+                "classtype": "trojan-activity", 
+                "id": "sid:2018179", 
+                "signature": "ET CURRENT_EVENTS Obfuscation Technique Used in CVE-2014-0322 Attacks"
+            }, 
+            {
+                "classtype": "trojan-activity", 
+                "id": "sid:2018439", 
+                "signature": "ET CURRENT_EVENTS Common Bad Actor Indicators Used in Various Targeted 0-day Attacks"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms14_012_cmarkup_uaf.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/browser/ms14_012_cmarkup_uaf.rb", 
+                "title": "MS14-012 Microsoft Internet Explorer CMarkup Use-After-Free"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/32904", 
+                "id": 32904, 
+                "file": "platforms/windows/remote/32904.rb"
+            }, 
+            {
+                "url": "http://www.exploit-db.com/exploits/32851", 
+                "id": 32851, 
+                "file": "platforms/windows/remote/32851.html"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/ie_cmarkup_uaf", 
+                "id": "exploit_info/ie_cmarkup_uaf", 
+                "title": "Internet Explorer CMarkup Object Handling Use-after-free Vulnerability"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-0322"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22660", 
+                "title": "Internet Explorer Memory Corruption Vulnerability (CVE-2014-0322) - MS14-012", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:22660"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS KB2934088: Vulnerability in Internet Explorer Could Allow Remote Code Execution", 
+                "file": "smb_kb2934088.nasl", 
+                "family": "Windows", 
+                "id": "72605"
+            }, 
+            {
+                "name": "MS14-012: Cumulative Security Update for Internet Explorer (2925418)", 
+                "file": "smb_nt_ms14-012.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "72930"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Cumulative Security Update for Internet Explorer", 
+                "id": "Cumulative Security Update for Internet Explorer", 
+                "title": "2925418"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2925418", 
+                "id": "2925418", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS14-012", 
+                "id": "MS14-012", 
+                "title": "Cumulative Security Update for Internet Explorer"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

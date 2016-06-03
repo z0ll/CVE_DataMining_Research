@@ -1,0 +1,276 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1776", 
+                "published": "2014-04-27T06:55:03.340-04:00", 
+                "id": "CVE-2014-1776", 
+                "modified": "2014-05-16T00:25:19.903-04:00", 
+                "summary": "Use-after-free vulnerability in Microsoft Internet Explorer 6 through 11 allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via vectors related to the CMarkup::IsConnectedToPrimaryMarkup function, as exploited in the wild in April 2014.  NOTE: this issue originally emphasized VGX.DLL, but Microsoft clarified that \"VGX.DLL does not contain the vulnerable code leveraged in this exploit. Disabling VGX.DLL is an exploit-specific workaround that provides an immediate, effective workaround to help block known attacks.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:10"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:8"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:9"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:6"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:7"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:internet_explorer:11:-"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.13076", 
+                "id": 13076
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/67075", 
+                "id": 67075
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/106311", 
+                "id": 106311
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/222929", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "https://technet.microsoft.com/library/security/2963983", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.signalsec.com/cve-2014-1776-ie-0day-analysis/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/67075", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/106311", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.fireeye.com/blog/uncategorized/2014/04/new-zero-day-exploit-targeting-internet-explorer-versions-9-through-11-identified-in-targeted-attacks.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS14-021", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1030154", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://blogs.technet.com/b/srd/archive/2014/04/30/protection-strategies-for-the-security-advisory-2963983-ie-0day.aspx", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/222929", 
+                "id": "VU#222929"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2018434", 
+                "signature": "ET WEB_CLIENT Microsoft Application Crash Report Indicates Potential VGX Memory Corruption"
+            }, 
+            {
+                "classtype": "trojan-activity", 
+                "id": "sid:2018439", 
+                "signature": "ET CURRENT_EVENTS Common Bad Actor Indicators Used in Various Targeted 0-day Attacks"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2018436", 
+                "signature": "ET WEB_CLIENT Microsoft Application Crash Report Indicates Potential VGX Memory Corruption 2"
+            }, 
+            {
+                "classtype": "trojan-activity", 
+                "id": "sid:2019368", 
+                "signature": "ET CURRENT_EVENTS DRIVEBY Sednit EK IE Exploit CVE-2014-1776 M1"
+            }, 
+            {
+                "classtype": "trojan-activity", 
+                "id": "sid:2019369", 
+                "signature": "ET CURRENT_EVENTS DRIVEBY Sednit EK IE Exploit CVE-2014-1776 M2"
+            }, 
+            {
+                "classtype": "trojan-activity", 
+                "id": "sid:2019370", 
+                "signature": "ET CURRENT_EVENTS DRIVEBY Sednit EK IE Exploit CVE-2014-1776 M3"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-1776"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24704", 
+                "title": "Internet Explorer Memory corruption vulnerability (CVE-2014-1776) - MS14-021", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:24704"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS KB2963983: Vulnerability in Internet Explorer Could Allow Remote Code Execution", 
+                "file": "smb_kb2963983.nasl", 
+                "family": "Windows", 
+                "id": "73739"
+            }, 
+            {
+                "name": "MS14-021: Security Update for Internet Explorer (2965111)", 
+                "file": "smb_nt_ms14-021.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "73805"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Security Update for Internet Explorer", 
+                "id": "Security Update for Internet Explorer", 
+                "title": "2964444"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2965111", 
+                "id": "2965111", 
+                "title": "Security Update for Internet Explorer"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS14-021", 
+                "id": "MS14-021", 
+                "title": "Security Update for Internet Explorer"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

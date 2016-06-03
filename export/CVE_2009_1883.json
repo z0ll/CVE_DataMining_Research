@@ -1,0 +1,369 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1883", 
+                "published": "2009-09-18T06:30:00.877-04:00", 
+                "id": "CVE-2009-1883", 
+                "modified": "2012-03-19T00:00:00.000-04:00", 
+                "summary": "The z90crypt_unlocked_ioctl function in the z90crypt driver in the Linux kernel 2.6.9 does not perform a capability check for the Z90QUIESCE operation, which allows local users to leverage euid 0 privileges to force a driver outage."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:2.6.9"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.50089", 
+                "id": 50089
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=505983", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-852-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2009-1438.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2009/09/15/3", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2009/09/15/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/37105", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/36759", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2010-02/msg00007.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "4.4", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-1883"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13735", 
+                "title": "DSA-1929-1 linux-2.6 -- privilege escalation/denial of service/sensitive memory leak", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13735"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:9513", 
+                "title": "The z90crypt_unlocked_ioctl function in the z90crypt driver in the Linux kernel 2.6.9 does not perform a capability check for the Z90QUIESCE operation, which allows local users to leverage euid 0 privileges to force a driver outage.", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:9513"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13527", 
+                "title": "USN-852-1 -- linux, linux-source-2.6.15 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13527"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 1929-1 (linux-2.6)", 
+                "file": "deb_1929_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "66209"
+            }, 
+            {
+                "name": "CentOS Update for kernel CESA-2009:1438 centos4 i386", 
+                "file": "gb_CESA-2009_1438_kernel_centos4_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880935"
+            }, 
+            {
+                "name": "CentOS Security Advisory CESA-2009:1438 (kernel)", 
+                "file": "ovcesa2009_1438.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "64940"
+            }, 
+            {
+                "name": "RedHat Security Advisory RHSA-2009:1438", 
+                "file": "RHSA_2009_1438.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "64835"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 4 : kernel (CESA-2009:1438)", 
+                "file": "centos_RHSA-2009-1438.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "43790"
+            }, 
+            {
+                "name": "Debian DSA-1929-1 : linux-2.6 - privilege escalation/denial of service/sensitive memory leak", 
+                "file": "debian_DSA-1929.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "44794"
+            }, 
+            {
+                "name": "Oracle Linux 4 : kernel (ELSA-2009-1438)", 
+                "file": "oraclelinux_ELSA-2009-1438.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "67925"
+            }, 
+            {
+                "name": "RHEL 4 : kernel (RHSA-2009:1438)", 
+                "file": "redhat-RHSA-2009-1438.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "40998"
+            }, 
+            {
+                "name": "SuSE9 Security Update : the Linux kernel (YOU Patch Number 12578)", 
+                "file": "suse9_12578.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "44654"
+            }, 
+            {
+                "name": "Ubuntu 6.06 LTS / 8.04 LTS / 8.10 / 9.04 : linux, linux-source-2.6.15 vulnerabilities (USN-852-1)", 
+                "file": "ubuntu_USN-852-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "42209"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2009-1883.html", 
+                "id": "SUSE-SA:2010:013"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20091438", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2009-1438.html", 
+                    "id": "RHSA-2009:1438", 
+                    "title": "RHSA-2009:1438: kernel security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=505983", 
+                    "title": "CVE-2009-1883 kernel: missing capability check in z90crypt", 
+                    "id": "505983", 
+                    "issue date": "2009-09-15", 
+                    "associated redhat": "RHSA-2009:1438"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=511171", 
+                    "title": "CVE-2009-1895 kernel: personality: fix PER_CLEAR_ON_SETID", 
+                    "id": "511171", 
+                    "issue date": "2009-09-15", 
+                    "associated redhat": "RHSA-2009:1438"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=513192", 
+                    "title": "[Emulex 4.9 bug] DMA zone exhaustion from lpfc driver memory leak", 
+                    "id": "513192", 
+                    "issue date": "2009-09-15", 
+                    "associated redhat": "RHSA-2009:1438"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=515255", 
+                    "title": "NFS problems on RHEL 4 where logs show different lengths", 
+                    "id": "515255", 
+                    "issue date": "2009-09-15", 
+                    "associated redhat": "RHSA-2009:1438"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=515392", 
+                    "title": "CVE-2009-2847 kernel: information leak in sigaltstack", 
+                    "id": "515392", 
+                    "issue date": "2009-09-15", 
+                    "associated redhat": "RHSA-2009:1438"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=515423", 
+                    "title": "CVE-2009-2848 kernel: execve: must clear current->clear_child_tid", 
+                    "id": "515423", 
+                    "issue date": "2009-09-15", 
+                    "associated redhat": "RHSA-2009:1438"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=516184", 
+                    "title": "MPT driver CC_CSMI_SAS_GET_CNTLR_CONFIG IOCTL fails [rhel-4.8.z]", 
+                    "id": "516184", 
+                    "issue date": "2009-09-15", 
+                    "associated redhat": "RHSA-2009:1438"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=517295", 
+                    "title": "Missing mptscsi RAID1 disk causes kernel panic when rebooted before array rebuild. [rhel-4.8.z]", 
+                    "id": "517295", 
+                    "issue date": "2009-09-15", 
+                    "associated redhat": "RHSA-2009:1438"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=517904", 
+                    "title": "kernel: security: implement mmap_min_addr infrastructure [rhel-4.8.z]", 
+                    "id": "517904", 
+                    "issue date": "2009-09-15", 
+                    "associated redhat": "RHSA-2009:1438"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=517964", 
+                    "title": "kernel: build with -fno-delete-null-pointer-checks [rhel-4.8.z]", 
+                    "id": "517964", 
+                    "issue date": "2009-09-15", 
+                    "associated redhat": "RHSA-2009:1438"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=517965", 
+                    "title": "MegaRAID SAS 1078 tape I/O errors when using mt erase [rhel-4.8.z]", 
+                    "id": "517965", 
+                    "issue date": "2009-09-15", 
+                    "associated redhat": "RHSA-2009:1438"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=518707", 
+                    "title": "num_mtt settings of 2097152 fails in RHEL with infiniband HCA [rhel-4.8.z]", 
+                    "id": "518707", 
+                    "issue date": "2009-09-15", 
+                    "associated redhat": "RHSA-2009:1438"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=519428", 
+                    "title": "[NetApp 4.8 bug] Issues with \"qioctlmod\" module on RHEL4.8 hosts with QLogic FC inbox drivers [rhel-4.8.z]", 
+                    "id": "519428", 
+                    "issue date": "2009-09-15", 
+                    "associated redhat": "RHSA-2009:1438"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=519429", 
+                    "title": "[RHEL 4] Lookups due to infinite loops in posix_locks_deadlock [rhel-4.8.z]", 
+                    "id": "519429", 
+                    "issue date": "2009-09-15", 
+                    "associated redhat": "RHSA-2009:1438"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=519446", 
+                    "title": "kernel: ptrace: don't use REMOVE_LINKS/SET_LINKS for reparenting [rhel-4.9] [rhel-4.8.z]", 
+                    "id": "519446", 
+                    "issue date": "2009-09-15", 
+                    "associated redhat": "RHSA-2009:1438"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-852-1", 
+                "id": "USN-852-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

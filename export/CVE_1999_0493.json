@@ -1,0 +1,160 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0493", 
+                "published": "1999-06-07T00:00:00.000-04:00", 
+                "id": "CVE-1999-0493", 
+                "modified": "2008-09-09T08:34:38.837-04:00", 
+                "summary": "rpc.statd allows remote attackers to forward RPC calls to the local operating system via the SM_MON and SM_NOTIFY commands, which in turn could be used to remotely exploit other bugs such as in automountd."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:sun:solaris:2.6"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:2.3"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:2.5.1::x86"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:2.5.1"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:2.5::x86"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:2.4::x86"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:2.4"
+            }, 
+            {
+                "id": "cpe:/o:sun:solaris:2.6::x86"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14686", 
+                "id": 14686
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/450", 
+                "id": 450
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.cert.org/advisories/CA-99-05-statd-automountd.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/450", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.ciac.org/ciac/bulletins/j-045.shtml", 
+                    "vendor": "CIAC"
+                }, 
+                {
+                    "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doctype=coll&doc=secbull/186&type=0&nav=sec.sba", 
+                    "vendor": "SUN"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=91547759121289&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:576", 
+                "signature": "PROTOCOL-RPC portmap amountd request UDP"
+            }, 
+            {
+                "category": "rpc-portmap", 
+                "id": "sid:1263", 
+                "signature": "PROTOCOL-RPC portmap amountd request TCP"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0493"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "statd service", 
+                "file": "rpc_statd.nasl", 
+                "family": "RPC", 
+                "id": "10235"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

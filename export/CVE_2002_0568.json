@@ -1,0 +1,176 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0568", 
+                "published": "2002-07-03T00:00:00.000-04:00", 
+                "id": "CVE-2002-0568", 
+                "modified": "2008-09-05T16:28:22.100-04:00", 
+                "summary": "Oracle 9i Application Server stores XSQL and SOAP configuration files insecurely, which allows local users to obtain sensitive information including usernames and passwords by requesting (1) XSQLConfig.xml or (2) soapConfig.xml through a virtual directory."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:oracle:oracle8i:8.1.7"
+            }, 
+            {
+                "id": "cpe:/a:oracle:oracle9i:9.0.1"
+            }, 
+            {
+                "id": "cpe:/a:oracle:oracle8i:8.1.7.1"
+            }, 
+            {
+                "id": "cpe:/a:oracle:application_server:1.0.2"
+            }, 
+            {
+                "id": "cpe:/a:oracle:oracle9i:9.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.18388", 
+                "id": 18388
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/4290", 
+                "id": 4290
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/476619", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://www.cert.org/advisories/CA-2002-08.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/4290", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.nextgenss.com/papers/hpoas.pdf", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=101301813117562&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/476619", 
+                "id": "VU#476619"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "2.1", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1871", 
+                "signature": "SERVER-WEBAPP Oracle XSQLConfig.xml access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-0568"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Oracle 9iAS SOAP configuration file retrieval", 
+                "file": "oracle9i_soapconfig.nasl", 
+                "family": "Web application abuses", 
+                "id": "11224"
+            }, 
+            {
+                "name": "Oracle XSQLServlet XSQLConfig.xml File", 
+                "file": "oracle9i_XSQLServlet_XSQLConfig.nasl", 
+                "family": "Web application abuses", 
+                "id": "10855"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Oracle 9iAS XSQLServlet soapConfig.xml Authentication Credentials Disclosure", 
+                "file": "oracle9i_soapconfig.nasl", 
+                "family": "Databases", 
+                "id": "11224"
+            }, 
+            {
+                "name": "Oracle Application Server XSQLServlet XSQLConfig.xml Information Disclosure", 
+                "file": "oracle9i_XSQLServlet_XSQLConfig.nasl", 
+                "family": "Databases", 
+                "id": "10855"
+            }, 
+            {
+                "name": "Oracle Application Server Multiple Vulnerabilities", 
+                "file": "oracle_application_server_pci.nasl", 
+                "family": "Web Servers", 
+                "id": "57619"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

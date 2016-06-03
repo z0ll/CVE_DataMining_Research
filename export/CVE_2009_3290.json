@@ -1,0 +1,401 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3290", 
+                "published": "2009-09-22T06:30:00.717-04:00", 
+                "id": "CVE-2009-3290", 
+                "modified": "2012-03-19T00:00:00.000-04:00", 
+                "summary": "The kvm_emulate_hypercall function in arch/x86/kvm/x86.c in KVM in the Linux kernel 2.6.25-rc1, and other versions before 2.6.31, when running on x86 systems, does not prevent access to MMU hypercalls from ring 0, which allows local guest OS users to cause a denial of service (guest kernel crash) and read or write guest kernel memory via unspecified \"random addresses.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:2.6.25:rc1"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:2.6.30"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.50151", 
+                "id": 50151
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://patchwork.kernel.org/patch/38926/", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=524124", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-852-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2009-1465.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2009/09/22/8", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2009/09/21/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2009/09/18/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/37105", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=07708c4af1346ab1521b26a202f438366b7bcffd", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-3290"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22837", 
+                "title": "ELSA-2009:1465: kvm security and bug fix update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22837"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:11328", 
+                "title": "The kvm_emulate_hypercall function in arch/x86/kvm/x86.c in KVM in the Linux kernel 2.6.25-rc1, and other versions before 2.6.31, when running on x86 systems, does not prevent access to MMU hypercalls from ring 0, which allows local guest OS users to cause a denial of service (guest kernel crash) and read or write guest kernel memory via unspecified \"random addresses.\"", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:11328"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13413", 
+                "title": "DSA-1907-1 kvm -- several vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13413"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:7639", 
+                "title": "DSA-1915 linux-2.6 -- privilege escalation/denial of service/sensitive memory leak", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:7639"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:7760", 
+                "title": "DSA-1907 kvm -- several vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:7760"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13588", 
+                "title": "DSA-1915-1 linux-2.6 -- privilege escalation/denial of service/sensitive memory leak", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13588"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13527", 
+                "title": "USN-852-1 -- linux, linux-source-2.6.15 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13527"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 1907-1 (kvm)", 
+                "file": "deb_1907_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "66053"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 1915-1 (linux-2.6)", 
+                "file": "deb_1915_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "66098"
+            }, 
+            {
+                "name": "Fedora Core 10 FEDORA-2009-10165 (kernel)", 
+                "file": "fcore_2009_10165.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "64999"
+            }, 
+            {
+                "name": "Fedora Core 10 FEDORA-2009-10525 (kernel)", 
+                "file": "fcore_2009_10525.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "66048"
+            }, 
+            {
+                "name": "Fedora Core 11 FEDORA-2009-10639 (kernel)", 
+                "file": "fcore_2009_10639.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "66133"
+            }, 
+            {
+                "name": "Fedora Core 11 FEDORA-2009-11032 (kernel)", 
+                "file": "fcore_2009_11032.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "66200"
+            }, 
+            {
+                "name": "Fedora Core 10 FEDORA-2009-11038 (kernel)", 
+                "file": "fcore_2009_11038.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "66202"
+            }, 
+            {
+                "name": "Fedora Core 11 FEDORA-2009-12786 (kernel)", 
+                "file": "fcore_2009_12786.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "66452"
+            }, 
+            {
+                "name": "Fedora Core 10 FEDORA-2009-13098 (kernel)", 
+                "file": "fcore_2009_13098.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "66509"
+            }, 
+            {
+                "name": "Fedora Core 11 FEDORA-2009-13694 (kernel)", 
+                "file": "fcore_2009_13694.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "66581"
+            }, 
+            {
+                "name": "CentOS Update for kvm-83-105.el5_ CESA-2009:1465 centos5 i386", 
+                "file": "gb_CESA-2009_1465_kvm-83-105.el5__centos5_i386.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "880812"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2010-0919", 
+                "file": "gb_fedora_2010_0919_kernel_fc11.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "861694"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2010-1500", 
+                "file": "gb_fedora_2010_1500_kernel_fc11.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "861615"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2010-1804", 
+                "file": "gb_fedora_2010_1804_kernel_fc11.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "861742"
+            }, 
+            {
+                "name": "Mandriva Security Advisory MDVSA-2009:289 (kernel)", 
+                "file": "mdksa_2009_289.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "66124"
+            }, 
+            {
+                "name": "CentOS Security Advisory CESA-2009:1465 (kvm)", 
+                "file": "ovcesa2009_1465.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "66169"
+            }, 
+            {
+                "name": "RedHat Security Advisory RHSA-2009:1465", 
+                "file": "RHSA_2009_1465.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "64990"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : kvm (CESA-2009:1465)", 
+                "file": "centos_RHSA-2009-1465.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "43796"
+            }, 
+            {
+                "name": "Debian DSA-1907-1 : kvm - several vulnerabilities", 
+                "file": "debian_DSA-1907.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "44772"
+            }, 
+            {
+                "name": "Debian DSA-1915-1 : linux-2.6 - privilege escalation/denial of service/sensitive memory leak", 
+                "file": "debian_DSA-1915.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "44780"
+            }, 
+            {
+                "name": "Fedora 10 : kernel-2.6.27.35-170.2.94.fc10 (2009-10165)", 
+                "file": "fedora_2009-10165.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "41973"
+            }, 
+            {
+                "name": "Fedora 11 : kernel-2.6.30.9-90.fc11 (2009-10639)", 
+                "file": "fedora_2009-10639.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "42271"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : kernel (MDVSA-2009:289)", 
+                "file": "mandriva_MDVSA-2009-289.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "42284"
+            }, 
+            {
+                "name": "Oracle Linux 5 : kvm (ELSA-2009-1465)", 
+                "file": "oraclelinux_ELSA-2009-1465.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "67932"
+            }, 
+            {
+                "name": "RHEL 5 : kvm (RHSA-2009:1465)", 
+                "file": "redhat-RHSA-2009-1465.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "63897"
+            }, 
+            {
+                "name": "Ubuntu 6.06 LTS / 8.04 LTS / 8.10 / 9.04 : linux, linux-source-2.6.15 vulnerabilities (USN-852-1)", 
+                "file": "ubuntu_USN-852-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "42209"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20091465", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2009-1465.html", 
+                    "id": "RHSA-2009:1465", 
+                    "title": "RHSA-2009:1465: kvm security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=520694", 
+                    "title": "NMI filtering for AMD (Windows 2008 R2 KVM guest can not restart when set it as multiple cpus)", 
+                    "id": "520694", 
+                    "issue date": "2009-09-29", 
+                    "associated redhat": "RHSA-2009:1465"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=521793", 
+                    "title": "windows 64 bit does vmexit on each cr8 access.", 
+                    "id": "521793", 
+                    "issue date": "2009-09-29", 
+                    "associated redhat": "RHSA-2009:1465"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=521794", 
+                    "title": "rtc-td-hack stopped working. Time drifts in windows", 
+                    "id": "521794", 
+                    "issue date": "2009-09-29", 
+                    "associated redhat": "RHSA-2009:1465"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=524124", 
+                    "title": "CVE-2009-3290 kernel: KVM: x86: Disallow hypercalls for guest callers in rings > 0", 
+                    "id": "524124", 
+                    "issue date": "2009-09-29", 
+                    "associated redhat": "RHSA-2009:1465"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=524557", 
+                    "title": "QEMU crash (during virtio-net WHQL tests for Win2008 R2)", 
+                    "id": "524557", 
+                    "issue date": "2009-09-29", 
+                    "associated redhat": "RHSA-2009:1465"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-852-1", 
+                "id": "USN-852-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

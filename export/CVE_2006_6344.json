@@ -1,0 +1,229 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6344", 
+                "published": "2006-12-06T20:28:00.000-05:00", 
+                "id": "CVE-2006-6344", 
+                "modified": "2011-03-07T21:45:47.893-05:00", 
+                "summary": "Multiple unspecified vulnerabilities in Neocrome Seditio 1.10 and earlier have unknown impact and attack vectors related to (1) plugins/ipsearch/ipsearch.admin.php, and (2) pfs/pfs.edit.inc.php, (3) users/users.register.inc.php in system/core.  NOTE: the users.profile.inc.php vector is identified by CVE-2006-6177.  NOTE: these issues might be related to SQL injection."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:neocrome:seditio:1.10"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33656", 
+                "id": 33656
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2006/4805", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.neocrome.net/page.php?id=2233", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/23180", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006736", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- ipsearch.admin.php SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006737", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- ipsearch.admin.php UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006738", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- ipsearch.admin.php INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006739", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- ipsearch.admin.php DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006740", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- ipsearch.admin.php ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006741", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- ipsearch.admin.php UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006742", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- pfs.edit.inc.php SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006743", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- pfs.edit.inc.php UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006744", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- pfs.edit.inc.php INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006745", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- pfs.edit.inc.php DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006746", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- pfs.edit.inc.php ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006747", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- pfs.edit.inc.php UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006748", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- users.register.inc.php SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006749", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- users.register.inc.php UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006750", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- users.register.inc.php INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006751", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- users.register.inc.php DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006752", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- users.register.inc.php ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006753", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- users.register.inc.php UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006754", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- polls.php id SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006755", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- polls.php id UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006756", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- polls.php id INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006757", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- polls.php id DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006758", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- polls.php id ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006759", 
+                "signature": "ET WEB_SPECIFIC_APPS Neocrome Seditio SQL Injection Attempt -- polls.php id UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6344"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

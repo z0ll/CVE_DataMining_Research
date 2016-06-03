@@ -1,0 +1,317 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2686", 
+                "published": "2013-02-08T14:55:00.890-05:00", 
+                "id": "CVE-2012-2686", 
+                "modified": "2014-01-17T00:06:29.790-05:00", 
+                "summary": "crypto/evp/e_aes_cbc_hmac_sha1.c in the AES-NI functionality in the TLS 1.1 and 1.2 implementations in OpenSSL 1.0.1 before 1.0.1d allows remote attackers to cause a denial of service (application crash) via crafted CBC data."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/310.html", 
+                "id": "CWE-310", 
+                "title": "Cryptographic Issues"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:openssl:openssl:1.0.1a"
+            }, 
+            {
+                "id": "cpe:/a:openssl:openssl:1.0.1c"
+            }, 
+            {
+                "id": "cpe:/a:openssl:openssl:1.0.1"
+            }, 
+            {
+                "id": "cpe:/a:openssl:openssl:1.0.1b"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.7598", 
+                "id": 7598
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0040373", 
+                "id": "2013-A-0179", 
+                "title": "Apple Mac OS X Security Update 2013-004"
+            }, 
+            {
+                "Disa key": "V0037605", 
+                "id": "2013-A-0077", 
+                "title": "Multiple Vulnerabilities in OpenSSL"
+            }
+        ], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/57755", 
+                "id": 57755
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://git.openssl.org/gitweb/?p=openssl.git;a=commit;h=125093b59f3c2a2d33785b5563d929d0472f1721", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=908029", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/57755", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openssl.org/news/secadv_20130204.txt", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://support.apple.com/kb/HT5880", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/55139", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/55108", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://marc.info/?l=bugtraq&m=137545771702053&w=2", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://marc.info/?l=bugtraq&m=137545771702053&w=2", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://lists.apple.com/archives/security-announce/2013/Sep/msg00002.html", 
+                    "vendor": "APPLE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "openssl_aesni.rb", 
+                "file": "metasploit-framework/modules/auxiliary/dos/ssl/openssl_aesni.rb", 
+                "title": "OpenSSL DTLS Fragment Buffer Overflow DoS"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-2686"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18365", 
+                "title": "USN-1732-3 -- openssl vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18365"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18302", 
+                "title": "USN-1732-1 -- openssl vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18302"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24870", 
+                "title": "OpenSSL vulnerability in 1.0.1 before 1.0.1d, allows remote attackers to cause a denial of service (application crash)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:24870"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17780", 
+                "title": "USN-1732-2 -- openssl regression", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17780"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19660", 
+                "title": "HP-UX  Apache Web Server, Remote Denial of Service (DoS)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:19660"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18868", 
+                "title": "OpenSSL vulnerability 1.0.1 before 1.0.1d in VisualSVN Server (CVE-2012-2686)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:18868"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Ubuntu Update for openssl USN-1732-1", 
+                "file": "gb_ubuntu_USN_1732_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841327"
+            }, 
+            {
+                "name": "Ubuntu Update for openssl USN-1732-2", 
+                "file": "gb_ubuntu_USN_1732_2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841348"
+            }, 
+            {
+                "name": "Ubuntu Update for openssl USN-1732-3", 
+                "file": "gb_ubuntu_USN_1732_3.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841378"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "FreeBSD : OpenSSL -- TLS 1.1, 1.2 denial of service (00b0d8cd-7097-11e2-98d9-003067c2616f)", 
+                "file": "freebsd_pkg_00b0d8cd709711e298d9003067c2616f.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "64488"
+            }, 
+            {
+                "name": "GLSA-201312-03 : OpenSSL: Multiple Vulnerabilities", 
+                "file": "gentoo_GLSA-201312-03.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "71169"
+            }, 
+            {
+                "name": "IBM Tivoli Endpoint Manager Server < 8.2.1372 Multiple Vulnerabilities", 
+                "file": "ibm_tem_8_2_1372.nasl", 
+                "family": "CGI abuses", 
+                "id": "66270"
+            }, 
+            {
+                "name": "Mac OS X 10.8 < 10.8.5 Multiple Vulnerabilities", 
+                "file": "macosx_10_8_5.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "69877"
+            }, 
+            {
+                "name": "Mac OS X Multiple Vulnerabilities (Security Update 2013-004)", 
+                "file": "macosx_SecUpd2013-004.nasl", 
+                "family": "MacOS X Local Security Checks", 
+                "id": "69878"
+            }, 
+            {
+                "name": "OpenSSL 1.0.1 < 1.0.1d Multiple Vulnerabilities", 
+                "file": "openssl_1_0_1d.nasl", 
+                "family": "Web Servers", 
+                "id": "64534"
+            }, 
+            {
+                "name": "openSUSE Security Update : openssl (openSUSE-SU-2013:0336-1)", 
+                "file": "openSUSE-2013-153.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74901"
+            }, 
+            {
+                "name": "openSUSE Security Update : openssl (openSUSE-SU-2013:0337-1)", 
+                "file": "openSUSE-2013-154.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74902"
+            }, 
+            {
+                "name": "RHEL 6 : rhevm-spice-client (RHSA-2014:0416)", 
+                "file": "redhat-RHSA-2014-0416.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "79013"
+            }, 
+            {
+                "name": "Slackware 12.1 / 12.2 / 13.0 / 13.1 / 13.37 / 14.0 / current : openssl (SSA:2013-040-01)", 
+                "file": "Slackware_SSA_2013-040-01.nasl", 
+                "family": "Slackware Local Security Checks", 
+                "id": "64535"
+            }, 
+            {
+                "name": "Ubuntu 8.04 LTS / 10.04 LTS / 11.10 / 12.04 LTS / 12.10 : openssl vulnerabilities (USN-1732-1)", 
+                "file": "ubuntu_USN-1732-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "64798"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 12.10 : openssl regression (USN-1732-2)", 
+                "file": "ubuntu_USN-1732-2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "64968"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 12.10 : openssl vulnerability (USN-1732-3)", 
+                "file": "ubuntu_USN-1732-3.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "65684"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [
+            {
+                "url": "http://marc.info/?l=bugtraq&m=137545771702053&w=2", 
+                "id": "HPSBUX02909"
+            }, 
+            {
+                "url": "http://marc.info/?l=bugtraq&m=137545771702053&w=2", 
+                "id": "SSRT101289"
+            }
+        ], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

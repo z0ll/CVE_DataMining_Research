@@ -1,0 +1,206 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-2669", 
+                "published": "2009-08-05T15:30:01.127-04:00", 
+                "id": "CVE-2009-2669", 
+                "modified": "2009-08-12T01:30:39.717-04:00", 
+                "summary": "A certain debugging component in IBM AIX 5.3 and 6.1 does not properly handle the (1) _LIB_INIT_DBG and (2) _LIB_INIT_DBG_FILE environment variables, which allows local users to gain privileges by leveraging a setuid-root program to create an arbitrary root-owned file with world-writable permissions, related to libC.a (aka the XL C++ runtime library) in AIX 5.3 and libc.a in AIX 6.1."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:ibm:aix:5.3"
+            }, 
+            {
+                "id": "cpe:/o:ibm:aix:6.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.49263", 
+                "id": 49263
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/35934", 
+                "id": 35934
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/35934", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IZ56206", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IZ56205", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IZ56204", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.ibm.com/support/docview.wss?uid=isg1IZ56203", 
+                    "vendor": "AIXAPAR"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2009/2151", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/36156", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=815", 
+                    "vendor": "IDEFENSE"
+                }, 
+                {
+                    "url": "http://aix.software.ibm.com/aix/efixes/security/libC_advisory.asc", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/9645", 
+                "id": 9645, 
+                "file": "platforms/aix/local/9645.sh"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-2669"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "AIX 6.1 TL 0 : libC (IZ56203)", 
+                "file": "aix_IZ56203.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "64341"
+            }, 
+            {
+                "name": "AIX 6.1 TL 1 : libC (IZ56204)", 
+                "file": "aix_IZ56204.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "64342"
+            }, 
+            {
+                "name": "AIX 6.1 TL 2 : libC (IZ56205)", 
+                "file": "aix_IZ56205.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "64343"
+            }, 
+            {
+                "name": "AIX 6.1 TL 3 : libC (IZ56206)", 
+                "file": "aix_IZ56206.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "64344"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IZ54090", 
+                "id": "IZ54090"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IZ54091", 
+                "id": "IZ54091"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IZ54593", 
+                "id": "IZ54593"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IZ56203", 
+                "id": "IZ56203"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IZ56204", 
+                "id": "IZ56204"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IZ56205", 
+                "id": "IZ56205"
+            }, 
+            {
+                "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IZ56206", 
+                "id": "IZ56206"
+            }
+        ], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

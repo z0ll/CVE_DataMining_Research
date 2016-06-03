@@ -1,0 +1,144 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2911", 
+                "published": "2007-05-30T06:30:00.000-04:00", 
+                "id": "CVE-2007-2911", 
+                "modified": "2008-11-13T01:40:38.700-05:00", 
+                "summary": "SQL injection vulnerability in admincp/attachment.php in Jelsoft vBulletin before 3.6.6 allows remote authenticated administrators to execute arbitrary SQL commands via the \"Attached After\" field (GPC[ search ][ datelineafter ] variable), a related issue to CVE-2007-1573."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:jelsoft:vbulletin:3.6.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.37017", 
+                "id": 37017
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/38147", 
+                "id": 38147
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vbulletin.com/forum/project.php?issueid=21615", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://osvdb.org/38147", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34784", 
+                    "vendor": "XF"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "single_instance", 
+                    "exploit": "6.8", 
+                    "base": "8.5", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004077", 
+                "signature": "ET WEB_SPECIFIC_APPS Jelsoft vBulletin SQL Injection Attempt -- attachment.php SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004078", 
+                "signature": "ET WEB_SPECIFIC_APPS Jelsoft vBulletin SQL Injection Attempt -- attachment.php UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004079", 
+                "signature": "ET WEB_SPECIFIC_APPS Jelsoft vBulletin SQL Injection Attempt -- attachment.php INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004080", 
+                "signature": "ET WEB_SPECIFIC_APPS Jelsoft vBulletin SQL Injection Attempt -- attachment.php DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004081", 
+                "signature": "ET WEB_SPECIFIC_APPS Jelsoft vBulletin SQL Injection Attempt -- attachment.php ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004082", 
+                "signature": "ET WEB_SPECIFIC_APPS Jelsoft vBulletin SQL Injection Attempt -- attachment.php UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2911"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

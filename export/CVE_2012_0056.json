@@ -1,0 +1,474 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0056", 
+                "published": "2012-01-27T10:55:04.813-05:00", 
+                "id": "CVE-2012-0056", 
+                "modified": "2014-07-17T00:41:50.430-04:00", 
+                "summary": "The mem_write function in the Linux kernel before 3.2.2, when ASLR is disabled, does not properly check permissions when writing to /proc/<pid>/mem, which allows local users to gain privileges by modifying process memory, as demonstrated by Mempodipper."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:2.6.39"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.60029", 
+                "id": 60029
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/51625", 
+                "id": 51625
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=782642", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/51625", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2012-0061.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2012-0052.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/01/22/4", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/01/19/4", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/01/18/2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/01/18/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.kernel.org/pub/linux/kernel/v3.x/ChangeLog-3.2.2", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://ubuntu.com/usn/usn-1336-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/47708", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=e268337dfe26dfc7efd422a804dbb27977a3cccc", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://blog.zx2c4.com/749", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "6.9", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/18411", 
+                "id": 18411, 
+                "file": "platforms/linux/local/18411.c"
+            }, 
+            {
+                "url": "http://www.exploit-db.com/exploits/35161", 
+                "id": 35161, 
+                "file": "platforms/linux/local/35161.txt"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-0056"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27936", 
+                "title": "DEPRECATED: ELSA-2012-0052 -- kernel security and bug fix update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27936"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23795", 
+                "title": "ELSA-2012:0052: kernel security and bug fix update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23795"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21212", 
+                "title": "RHSA-2012:0052: kernel security and bug fix update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21212"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:15372", 
+                "title": "USN-1336-1 -- Linux kernel vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:15372"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27842", 
+                "title": "ELSA-2012-2001 -- Unbreakable Enterprise kernel security and bug fix update\n\t\t          (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27842"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:14660", 
+                "title": "USN-1342-1 -- Linux kernel (Oneiric backport) vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:14660"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:15162", 
+                "title": "USN-1364-1 -- Linux kernel (OMAP4) vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:15162"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CentOS Update for kernel CESA-2012:0052 centos6", 
+                "file": "gb_CESA-2012_0052_kernel_centos6.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881102"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-0861", 
+                "file": "gb_fedora_2012_0861_kernel_fc15.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863700"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-0876", 
+                "file": "gb_fedora_2012_0876_kernel_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863895"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-11348", 
+                "file": "gb_fedora_2012_11348_kernel_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864592"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-12684", 
+                "file": "gb_fedora_2012_12684_kernel_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864687"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-1497", 
+                "file": "gb_fedora_2012_1497_kernel_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863791"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-1503", 
+                "file": "gb_fedora_2012_1503_kernel_fc15.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863727"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-17479", 
+                "file": "gb_fedora_2012_17479_kernel_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864844"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-18691", 
+                "file": "gb_fedora_2012_18691_kernel_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864900"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-20240", 
+                "file": "gb_fedora_2012_20240_kernel_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864947"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-2753", 
+                "file": "gb_fedora_2012_2753_kernel_fc15.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863753"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-3030", 
+                "file": "gb_fedora_2012_3030_kernel_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864081"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-3350", 
+                "file": "gb_fedora_2012_3350_kernel_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863817"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-3356", 
+                "file": "gb_fedora_2012_3356_kernel_fc15.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863766"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-3712", 
+                "file": "gb_fedora_2012_3712_kernel_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863905"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-3715", 
+                "file": "gb_fedora_2012_3715_kernel_fc15.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864109"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-4410", 
+                "file": "gb_fedora_2012_4410_kernel_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864096"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-6406", 
+                "file": "gb_fedora_2012_6406_kernel_fc15.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864178"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-7538", 
+                "file": "gb_fedora_2012_7538_kernel_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864233"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-7594", 
+                "file": "gb_fedora_2012_7594_kernel_fc15.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864237"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-8890", 
+                "file": "gb_fedora_2012_8890_kernel_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864452"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-8931", 
+                "file": "gb_fedora_2012_8931_kernel_fc15.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864488"
+            }, 
+            {
+                "name": "RedHat Update for kernel RHSA-2012:0052-01", 
+                "file": "gb_RHSA-2012_0052-01_kernel.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870689"
+            }, 
+            {
+                "name": "Ubuntu Update for linux USN-1336-1", 
+                "file": "gb_ubuntu_USN_1336_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840941"
+            }, 
+            {
+                "name": "Ubuntu Update for linux-lts-backport-oneiric USN-1342-1", 
+                "file": "gb_ubuntu_USN_1342_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840882"
+            }, 
+            {
+                "name": "Ubuntu Update for linux-ti-omap4 USN-1364-1", 
+                "file": "gb_ubuntu_USN_1364_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "840951"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 6 : kernel (CESA-2012:0052)", 
+                "file": "centos_RHSA-2012-0052.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "57669"
+            }, 
+            {
+                "name": "Fedora 15 : kernel-2.6.41.10-3.fc15 (2012-0861)", 
+                "file": "fedora_2012-0861.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "57673"
+            }, 
+            {
+                "name": "Fedora 16 : kernel-3.2.1-3.fc16 (2012-0876)", 
+                "file": "fedora_2012-0876.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "57674"
+            }, 
+            {
+                "name": "openSUSE Security Update : kernel (openSUSE-2012-65)", 
+                "file": "openSUSE-2012-65.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74767"
+            }, 
+            {
+                "name": "Oracle Linux 6 : kernel (ELSA-2012-0052)", 
+                "file": "oraclelinux_ELSA-2012-0052.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68435"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2012-2001)", 
+                "file": "oraclelinux_ELSA-2012-2001.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68668"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2012:0052)", 
+                "file": "redhat-RHSA-2012-0052.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "57657"
+            }, 
+            {
+                "name": "RHEL 6 : MRG (RHSA-2012:0061)", 
+                "file": "redhat-RHSA-2012-0061.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "76636"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL6.x i386/x86_64", 
+                "file": "sl_20120123_kernel_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "61221"
+            }, 
+            {
+                "name": "Ubuntu 11.10 : linux vulnerability (USN-1336-1)", 
+                "file": "ubuntu_USN-1336-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "57660"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS : linux-lts-backport-oneiric vulnerability (USN-1342-1)", 
+                "file": "ubuntu_USN-1342-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "57697"
+            }, 
+            {
+                "name": "USN-1364-1 : linux-ti-omap4 vulnerabilities", 
+                "file": "ubuntu_USN-1364-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "57938"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2012-0061.html", 
+                    "id": "RHSA-2012:0061", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20120052", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2012-0052.html", 
+                    "id": "RHSA-2012:0052", 
+                    "title": "RHSA-2012:0052: kernel security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=782642", 
+                    "title": "CVE-2012-0056 kernel: proc: /proc/<pid>/mem mem_write insufficient permission checking", 
+                    "id": "782642", 
+                    "issue date": "2012-01-23", 
+                    "associated redhat": "RHSA-2012:0052"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1336-1", 
+                "id": "USN-1336-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

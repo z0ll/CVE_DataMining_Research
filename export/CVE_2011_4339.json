@@ -1,0 +1,436 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4339", 
+                "published": "2011-12-14T22:57:34.183-05:00", 
+                "id": "CVE-2011-4339", 
+                "modified": "2013-05-29T23:10:43.257-04:00", 
+                "summary": "ipmievd (aka the IPMI event daemon) in OpenIPMI, as used in the ipmitool package 1.8.11 in Red Hat Enterprise Linux (RHEL) 6, Debian GNU/Linux, Fedora 16, and other products uses 0666 permissions for its ipmievd.pid PID file, which allows local users to kill arbitrary processes by writing to this file."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:corey_minyard:openipmi:1.8.11"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.59685", 
+                "id": 59685
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=742837", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/71763", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.xerox.com/download/security/security-bulletin/16287-4d6b7b0c81f7b/cert_XRX13-003_v1.0.pdf", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2011-1814.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2011:196", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2011/dsa-2376", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/47376", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/47228", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/47173", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2013-0123.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2011/12/13/1", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2012-January/071580.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2012-January/071575.html", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "3.6", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2011-4339"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27619", 
+                "title": "DEPRECATED: ELSA-2013-0123 -- OpenIPMI security, bug fix, and enhancement update (low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27619"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:15157", 
+                "title": "DSA-2376-1 ipmitool -- insecure pid file", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:15157"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22166", 
+                "title": "RHSA-2011:1814: ipmitool security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22166"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27696", 
+                "title": "DEPRECATED: ELSA-2011-1814 -- ipmitool security update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27696"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20287", 
+                "title": "RHSA-2013:0123: OpenIPMI security, bug fix, and enhancement update (Low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20287"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22807", 
+                "title": "ELSA-2011:1814: ipmitool security update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22807"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:15293", 
+                "title": "DSA-2376-2 ipmitool -- insecure pid file", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:15293"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23486", 
+                "title": "ELSA-2013:0123: OpenIPMI security, bug fix, and enhancement update (Low)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23486"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2376-1 (ipmitool)", 
+                "file": "deb_2376_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "70693"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 2376-2 (ipmitool)", 
+                "file": "deb_2376_2.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "70695"
+            }, 
+            {
+                "name": "CentOS Update for ipmitool CESA-2011:1814 centos6", 
+                "file": "gb_CESA-2011_1814_ipmitool_centos6.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881362"
+            }, 
+            {
+                "name": "CentOS Update for OpenIPMI CESA-2013:0123 centos5", 
+                "file": "gb_CESA-2013_0123_OpenIPMI_centos5.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881560"
+            }, 
+            {
+                "name": "Fedora Update for ipmitool FEDORA-2011-17065", 
+                "file": "gb_fedora_2011_17065_ipmitool_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863890"
+            }, 
+            {
+                "name": "Fedora Update for ipmitool FEDORA-2011-17071", 
+                "file": "gb_fedora_2011_17071_ipmitool_fc15.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "863674"
+            }, 
+            {
+                "name": "Mandriva Update for ipmitool MDVSA-2011:196 (ipmitool)", 
+                "file": "gb_mandriva_MDVSA_2011_196.nasl", 
+                "family": "Mandrake Local Security Checks", 
+                "id": "831515"
+            }, 
+            {
+                "name": "RedHat Update for ipmitool RHSA-2011:1814-01", 
+                "file": "gb_RHSA-2011_1814-01_ipmitool.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870715"
+            }, 
+            {
+                "name": "RedHat Update for OpenIPMI RHSA-2013:0123-01", 
+                "file": "gb_RHSA-2013_0123-01_OpenIPMI.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870878"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 6 : ipmitool (CESA-2011:1814)", 
+                "file": "centos_RHSA-2011-1814.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "57379"
+            }, 
+            {
+                "name": "CentOS 5 : OpenIPMI (CESA-2013:0123)", 
+                "file": "centos_RHSA-2013-0123.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "63568"
+            }, 
+            {
+                "name": "Debian DSA-2376-2 : ipmitool - insecure PID file", 
+                "file": "debian_DSA-2376.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "57516"
+            }, 
+            {
+                "name": "Fedora 16 : ipmitool-1.8.11-8.fc16 (2011-17065)", 
+                "file": "fedora_2011-17065.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "57419"
+            }, 
+            {
+                "name": "Fedora 15 : ipmitool-1.8.11-7.fc15 (2011-17071)", 
+                "file": "fedora_2011-17071.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "57420"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : ipmitool (MDVSA-2011:196)", 
+                "file": "mandriva_MDVSA-2011-196.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "57413"
+            }, 
+            {
+                "name": "Oracle Linux 6 : ipmitool (ELSA-2011-1814)", 
+                "file": "oraclelinux_ELSA-2011-1814.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68405"
+            }, 
+            {
+                "name": "Oracle Linux 5 : OpenIPMI (ELSA-2013-0123)", 
+                "file": "oraclelinux_ELSA-2013-0123.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68694"
+            }, 
+            {
+                "name": "RHEL 6 : ipmitool (RHSA-2011:1814)", 
+                "file": "redhat-RHSA-2011-1814.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "57295"
+            }, 
+            {
+                "name": "RHEL 5 : OpenIPMI (RHSA-2013:0123)", 
+                "file": "redhat-RHSA-2013-0123.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "63406"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : ipmitool on SL6.x i386/x86_64", 
+                "file": "sl_20111213_ipmitool_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "61206"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : OpenIPMI on SL5.x i386/x86_64", 
+                "file": "sl_20130108_OpenIPMI_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "63601"
+            }, 
+            {
+                "name": "Oracle Solaris Third-Party Patch Update : ipmitool (cve_2011_4339_access_controls)", 
+                "file": "solaris11_ipmitool_20121120.nasl", 
+                "family": "Solaris Local Security Checks", 
+                "id": "80645"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2011-17065", 
+                "id": "FEDORA-2011-17065"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2011-17071", 
+                "id": "FEDORA-2011-17071"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2011:196", 
+                "id": "MDVSA-2011:196"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20111814", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2011-1814.html", 
+                    "id": "RHSA-2011:1814", 
+                    "title": "RHSA-2011:1814: ipmitool security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=742837", 
+                    "title": "CVE-2011-4339 OpenIPMI: IPMI event daemon creates PID file with world writeable permissions", 
+                    "id": "742837", 
+                    "issue date": "2011-12-13", 
+                    "associated redhat": "RHSA-2011:1814"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20130123", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2013-0123.html", 
+                    "id": "RHSA-2013:0123", 
+                    "title": "RHSA-2013:0123: OpenIPMI security, bug fix, and enhancement update (Low)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=658762", 
+                    "title": "ipmitool delloem accesses IPMI before acting (e.g. listing help)", 
+                    "id": "658762", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0123"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=671059", 
+                    "title": "bad performance of ipmitool sdr by update to 2.0.16", 
+                    "id": "671059", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0123"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=740780", 
+                    "title": "ipmitool -o list return always 1", 
+                    "id": "740780", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0123"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=742837", 
+                    "title": "CVE-2011-4339 OpenIPMI: IPMI event daemon creates PID file with world writeable permissions", 
+                    "id": "742837", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0123"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=749796", 
+                    "title": "Bad performance for ipmitool sdr in verbose mode", 
+                    "id": "749796", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0123"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=829705", 
+                    "title": "initscript of ipmi contains incomplete path and cannot start by certain users", 
+                    "id": "829705", 
+                    "issue date": "2013-01-08", 
+                    "associated redhat": "RHSA-2013:0123"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2376", 
+                "id": "DSA-2376"
+            }
+        ], 
+        "Vmware": []
+    }
+}

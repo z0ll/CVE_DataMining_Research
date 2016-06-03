@@ -1,0 +1,194 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-3431", 
+                "published": "2008-08-05T15:41:00.000-04:00", 
+                "id": "CVE-2008-3431", 
+                "modified": "2011-03-07T22:10:49.033-05:00", 
+                "summary": "The VBoxDrvNtDeviceControl function in VBoxDrv.sys in Sun xVM VirtualBox before 1.6.4 uses the METHOD_NEITHER communication method for IOCTLs and does not properly validate a buffer associated with the Irp object, which allows local users to gain privileges by opening the \\\\.\\VBoxDrv device and calling DeviceIoControl to send a crafted kernel address."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:sun:xvm_virtualbox:1.3.4"
+            }, 
+            {
+                "id": "cpe:/a:sun:xvm_virtualbox:1.5.6"
+            }, 
+            {
+                "id": "cpe:/a:sun:xvm_virtualbox:1.5.0"
+            }, 
+            {
+                "id": "cpe:/a:sun:xvm_virtualbox:1.6.2"
+            }, 
+            {
+                "id": "cpe:/a:sun:xvm_virtualbox:1.3.6"
+            }, 
+            {
+                "id": "cpe:/a:sun:xvm_virtualbox:1.3.8"
+            }, 
+            {
+                "id": "cpe:/a:sun:xvm_virtualbox:1.5.2"
+            }, 
+            {
+                "id": "cpe:/a:sun:xvm_virtualbox:1.3.2"
+            }, 
+            {
+                "id": "cpe:/a:sun:xvm_virtualbox:1.6.0"
+            }, 
+            {
+                "id": "cpe:/a:sun:xvm_virtualbox:1.4.0"
+            }, 
+            {
+                "id": "cpe:/a:sun:xvm_virtualbox:1.5.4"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.43544", 
+                "id": 43544
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/30481", 
+                "id": 30481
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/44202", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2008/2293", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/30481", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/495095/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.milw0rm.com/exploits/6218", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://www.coresecurity.com/content/virtualbox-privilege-escalation-vulnerability", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://virtualbox.org/wiki/Changelog", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-240095-1", 
+                    "vendor": "SUNALERT"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1020625", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/4107", 
+                    "vendor": "SREASON"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/31361", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/6218", 
+                "id": 6218, 
+                "file": "platforms/multiple/dos/6218.txt"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2008-3431"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Sun xVM VirtualBox < 1.6.4 Local Privilege Escalation", 
+                "file": "virtualbox_1_6_4.nasl", 
+                "family": "Windows", 
+                "id": "33819"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,182 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0232", 
+                "published": "2013-03-20T11:55:00.910-04:00", 
+                "id": "CVE-2013-0232", 
+                "modified": "2013-08-29T02:46:18.417-04:00", 
+                "summary": "includes/functions.php in ZoneMinder Video Server 1.24.0, 1.25.0, and earlier allows remote attackers to execute arbitrary commands via shell metacharacters in the (1) runState parameter in the packageControl function; or (2) key or (3) command parameter in the setDeviceStatusX10 function."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:zoneminder:zoneminder:1.24.1"
+            }, 
+            {
+                "id": "cpe:/a:zoneminder:zoneminder:1.25.0"
+            }, 
+            {
+                "id": "cpe:/a:zoneminder:zoneminder:1.24.3"
+            }, 
+            {
+                "id": "cpe:/a:zoneminder:zoneminder:1.24.4"
+            }, 
+            {
+                "id": "cpe:/a:zoneminder:zoneminder:1.24.2"
+            }, 
+            {
+                "id": "cpe:/a:zoneminder:zoneminder:1.24.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.63801", 
+                "id": 63801
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/89529", 
+                "id": 89529
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.zoneminder.com/forums/viewtopic.php?f=29&t=20771", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/89529", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2013/01/28/2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/24310", 
+                    "vendor": "EXPLOIT-DB"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2013/dsa-2640", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://itsecuritysolutions.org/2013-01-22-ZoneMinder-Video-Server-arbitrary-command-execution-vulnerability/", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=698910", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "zoneminder_packagecontrol_exec.rb", 
+                "file": "metasploit-framework/modules/exploits/unix/webapp/zoneminder_packagecontrol_exec.rb", 
+                "title": "ZoneMinder Video Server packageControl Command Execution"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/24310", 
+                "id": 24310, 
+                "file": "http://www.exploit-db.com/download/24310"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-0232"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20151", 
+                "title": "DSA-2640-1 zoneminder - several issues", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20151"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2640-1 (zoneminder - several issues)", 
+                "file": "deb_2640.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "892640"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-2640-1 : zoneminder - several issues", 
+                "file": "debian_DSA-2640.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "65556"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2640", 
+                "id": "DSA-2640"
+            }
+        ], 
+        "Vmware": []
+    }
+}

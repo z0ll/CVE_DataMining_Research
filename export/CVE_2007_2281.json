@@ -1,0 +1,206 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2281", 
+                "published": "2009-12-18T14:30:00.233-05:00", 
+                "id": "CVE-2007-2281", 
+                "modified": "2009-12-23T01:26:09.767-05:00", 
+                "summary": "Integer overflow in the _ncp32._NtrpTCPReceiveMsg function in rds.exe in the Cell Manager Database Service in the Application Recovery Manager component in HP OpenView Storage Data Protector 5.50 and 6.0 allows remote attackers to execute arbitrary code via a large value in the size parameter."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:hp:openview_storage_data_protector:6.0"
+            }, 
+            {
+                "id": "cpe:/a:hp:openview_storage_data_protector:5.50"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.51208", 
+                "id": 51208
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/37386", 
+                "id": 37386
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://securitytracker.com/id?1023361", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2009/3594", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/37386", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://marc.info/?l=bugtraq&m=126106261622540&w=2", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://marc.info/?l=bugtraq&m=126106261622540&w=2", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://marc.info/?l=bugtraq&m=126106261622540&w=2", 
+                    "vendor": "HP"
+                }, 
+                {
+                    "url": "http://dvlabs.tippingpoint.com/advisory/TPTI-09-15", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-admin", 
+                "id": "sid:2010546", 
+                "signature": "ET EXPLOIT HP Open View Data Protector Buffer Overflow Attempt"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-2281"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "HP-UX PHSS_36588 : s700_800 11.X OV DP6.00 PA-RISC patch - CS packet", 
+                "file": "hpux_PHSS_36588.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "43134"
+            }, 
+            {
+                "name": "HP-UX PHSS_36589 : s700_800 11.X OV DP6.00 IA-64 patch - CS packet", 
+                "file": "hpux_PHSS_36589.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "43135"
+            }, 
+            {
+                "name": "HP-UX PHSS_36622 : s700_800 11.X OV DP6.00 PA-RISC patch - CORE packet", 
+                "file": "hpux_PHSS_36622.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "43136"
+            }, 
+            {
+                "name": "HP-UX PHSS_36623 : s700_800 11.X OV DP6.00 IA-64 patch - CORE packet", 
+                "file": "hpux_PHSS_36623.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "43137"
+            }, 
+            {
+                "name": "HP-UX PHSS_36799 : s700_800 11.X OV DP5.50 PA RISC patch - CS packet", 
+                "file": "hpux_PHSS_36799.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "43138"
+            }, 
+            {
+                "name": "HP-UX PHSS_36800 : s700_800 11.23 OV DP5.50 IA-64 patch - CS packet", 
+                "file": "hpux_PHSS_36800.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "43139"
+            }, 
+            {
+                "name": "HP-UX PHSS_37382 : s700_800 11.X OV DP5.50 PA-RISC patch - CORE packet", 
+                "file": "hpux_PHSS_37382.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "43140"
+            }, 
+            {
+                "name": "HP-UX PHSS_37383 : s700_800 11.23 OV DP5.50 IA-64 patch - CORE packet", 
+                "file": "hpux_PHSS_37383.nasl", 
+                "family": "HP-UX Local Security Checks", 
+                "id": "43141"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [
+            {
+                "url": "http://marc.info/?l=bugtraq&m=126106261622540&w=2", 
+                "id": "HPSBMA02252"
+            }, 
+            {
+                "url": "http://marc.info/?l=bugtraq&m=126106261622540&w=2", 
+                "id": "SSRT061259"
+            }, 
+            {
+                "url": "http://marc.info/?l=bugtraq&m=126106261622540&w=2", 
+                "id": "SSRT061258"
+            }
+        ], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,310 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6152", 
+                "published": "2006-11-28T18:28:00.000-05:00", 
+                "id": "CVE-2006-6152", 
+                "modified": "2008-09-05T17:14:02.740-04:00", 
+                "summary": "Multiple SQL injection vulnerabilities in vSpin.net Classified System 2004 allow remote attackers to execute arbitrary SQL commands via the (1) cat parameter to (a) cat.asp, or the (2) keyword, (3) order, (4) sort, (5) menuSelect, or (6) state parameter to (b) search.asp."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:vspin.net:classified_system:2004"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.33479", 
+                "id": 33479
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/21190", 
+                "id": 21190
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/21190", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/452179/100/100/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://securitytracker.com/id?1017259", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/22987", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://s-a-p.ca/index.php?page=OurAdvisories&id=47", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/30444", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/1926", 
+                    "vendor": "SREASON"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007416", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- cat.asp cat SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007417", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- cat.asp cat UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007418", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- cat.asp cat INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007419", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- cat.asp cat DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007420", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- cat.asp cat ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007421", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- cat.asp cat UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007422", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp keyword SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007423", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp keyword UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007424", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp keyword INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007425", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp keyword DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007426", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp keyword ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007427", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp keyword UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007428", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp order SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007429", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp order UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007430", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp order INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007431", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp order DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007432", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp order ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007433", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp order UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007434", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp sort SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007435", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp sort UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007436", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp sort INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007437", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp sort DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007438", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp sort ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007439", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp sort UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007440", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp menuSelect SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007441", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp menuSelect UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007442", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp menuSelect INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007443", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp menuSelect DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007444", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp menuSelect ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007445", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp menuSelect UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007446", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp state SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007447", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp state UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007448", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp state INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007449", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp state DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007450", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp state ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2007451", 
+                "signature": "ET WEB_SPECIFIC_APPS vSpin.net Classified System SQL Injection Attempt -- search.asp state UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6152"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

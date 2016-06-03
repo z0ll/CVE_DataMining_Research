@@ -1,0 +1,189 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2878", 
+                "published": "2005-09-13T19:03:00.000-04:00", 
+                "id": "CVE-2005-2878", 
+                "modified": "2008-09-05T16:52:54.640-04:00", 
+                "summary": "Format string vulnerability in search.c in the imap4d server in GNU Mailutils 0.6 allows remote authenticated users to execute arbitrary code via format string specifiers in the SEARCH command."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:gnu:mailutils:0.6"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.26279", 
+                "id": 26279
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/14794", 
+                "id": 14794
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/19306", 
+                "id": 19306
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.idefense.com/application/poi/display?id=303&type=vulnerabilities&flashstatus=true", 
+                    "vendor": "IDEFENSE"
+                }, 
+                {
+                    "url": "http://savannah.gnu.org/patch/index.php?func=detailitem&item_id=4407", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/14794", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.rosiello.org/archivio/imap4d_FreeBSD_exploit.c", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.gentoo.org/security/en/glsa/glsa-200509-10.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2005/dsa-841", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/17020", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/16783", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=112785181316043&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:100000207", 
+                "signature": "GPL DELETED GNU Mailutils imap4d hex attempt"
+            }, 
+            {
+                "classtype": "misc-attack", 
+                "id": "sid:100000136", 
+                "signature": "GPL DELETED GNU imapd search format string attempt"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2005-2878"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Gentoo Security Advisory GLSA 200509-10 (mailutils)", 
+                "file": "glsa_200509_10.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "55359"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-841-1 : mailutils - format string vulnerability", 
+                "file": "debian_DSA-841.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "19845"
+            }, 
+            {
+                "name": "GLSA-200509-10 : Mailutils: Format string vulnerability in imap4d", 
+                "file": "gentoo_GLSA-200509-10.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "19742"
+            }, 
+            {
+                "name": "GNU Mailutils imap4d Search Command Remote Format String", 
+                "file": "gnu_mailutils_search_format_string.nasl", 
+                "family": "Gain a shell remotely", 
+                "id": "19605"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200509-10", 
+                "id": "GLSA-200509-10"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-841", 
+                "id": "DSA-841"
+            }
+        ], 
+        "Vmware": []
+    }
+}

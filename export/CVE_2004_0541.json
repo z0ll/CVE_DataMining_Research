@@ -1,0 +1,248 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0541", 
+                "published": "2004-08-06T00:00:00.000-04:00", 
+                "id": "CVE-2004-0541", 
+                "modified": "2010-08-21T00:20:43.207-04:00", 
+                "summary": "Buffer overflow in the ntlm_check_auth (NTLM authentication) function for Squid Web Proxy Cache 2.5.x and 3.x, when compiled with NTLM handlers enabled, allows remote attackers to execute arbitrary code via a long password (\"pass\" variable)."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:national_science_foundation:squid_web_proxy_cache:2.5_stable"
+            }, 
+            {
+                "id": "cpe:/a:national_science_foundation:squid_web_proxy_cache:3_pre"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.823", 
+                "id": 823
+            }, 
+            {
+                "url": "http://www.scip.ch/?vuldb.698", 
+                "id": 698
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/10500", 
+                "id": 10500
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/16360", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2004-242.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.idefense.com/application/poi/display?id=107&type=vulnerabilities", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://www.gentoo.org/security/en/glsa/glsa-200406-13.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://www.trustix.net/errata/2004/0033/", 
+                    "vendor": "TRUSTIX"
+                }, 
+                {
+                    "url": "ftp://patches.sgi.com/support/free/security/advisories/20040604-01-U.asc", 
+                    "vendor": "SGI"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/10500", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://fedoranews.org/updates/FEDORA--.shtml", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "squid_ntlm_authenticate.rb", 
+                "file": "metasploit-framework/modules/exploits/linux/proxy/squid_ntlm_authenticate.rb", 
+                "title": "Squid NTLM Authenticate Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0541"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:10722", 
+                "title": "Buffer overflow in the ntlm_check_auth (NTLM authentication) function for Squid Web Proxy Cache 2.5.x and 3.x, when compiled with NTLM handlers enabled, allows remote attackers to execute arbitrary code via a long password (\"pass\" variable).", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:10722"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:980", 
+                "title": "NTLM Authentication BO in Squid Web Proxy Cache", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:980"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Ports: squid", 
+                "file": "freebsd_squid11.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "52454"
+            }, 
+            {
+                "name": "Gentoo Security Advisory GLSA 200406-13 (squid)", 
+                "file": "glsa_200406_13.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "54598"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "FreeBSD : Buffer overflow in Squid NTLM authentication helper (6f955451-ba54-11d8-b88c-000d610a3b12)", 
+                "file": "freebsd_pkg_6f955451ba5411d8b88c000d610a3b12.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "36518"
+            }, 
+            {
+                "name": "FreeBSD : Buffer overflow in Squid NTLM authentication helper (183)", 
+                "file": "freebsd_squid_255_9.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "12616"
+            }, 
+            {
+                "name": "GLSA-200406-13 : Squid: NTLM authentication helper buffer overflow", 
+                "file": "gentoo_GLSA-200406-13.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "14524"
+            }, 
+            {
+                "name": "Mandrake Linux Security Advisory : squid (MDKSA-2004:059)", 
+                "file": "mandrake_MDKSA-2004-059.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "14158"
+            }, 
+            {
+                "name": "RHEL 3 : squid (RHSA-2004:242)", 
+                "file": "redhat-RHSA-2004-242.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "12504"
+            }, 
+            {
+                "name": "Squid ntlm_check_auth Function NTLM Authentication Helper Password Handling Remote Overflow", 
+                "file": "squid_ntlm.nasl", 
+                "family": "Firewalls", 
+                "id": "12294"
+            }, 
+            {
+                "name": "SuSE-SA:2004:016: squid", 
+                "file": "suse_SA_2004_016.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "13832"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FLSA-2006:152809", 
+                "id": "FLSA-2006:152809"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2004-0541.html", 
+                "id": "SuSE-SA:2004:016"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20040242", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2004-242.html", 
+                    "id": "RHSA-2004:242", 
+                    "title": "RHSA-2004:242: squid security update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=125507", 
+                    "title": "CAN-2004-0541 Squid NTLM authentication helper overflow", 
+                    "id": "125507", 
+                    "issue date": "2004-06-09", 
+                    "associated redhat": "RHSA-2004:242"
+                }
+            }
+        ], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/200406-13", 
+                "id": "GLSA-200406-13"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,173 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0693", 
+                "published": "2007-05-30T16:30:00.000-04:00", 
+                "id": "CVE-2007-0693", 
+                "modified": "2011-03-07T21:50:33.330-05:00", 
+                "summary": "SQL injection vulnerability in news.php in DGNews 2.1 allows remote attackers to execute arbitrary SQL commands via the catid parameter in a newslist action.  NOTE: this issue can produce resultant cross-site scripting (XSS)."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:dian_gemilang:dgnews:1.5.1"
+            }, 
+            {
+                "id": "cpe:/a:dian_gemilang:dgnews:2.1"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.37025", 
+                "id": 37025
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/24201", 
+                "id": 24201
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/34227", 
+                "id": 34227
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1981", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/24201", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/archive/1/469828/100/0/threaded", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/34227", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/34539", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/2740", 
+                    "vendor": "SREASON"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/25438", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "6.8", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004083", 
+                "signature": "ET WEB_SPECIFIC_APPS DGNews SQL Injection Attempt -- news.php catid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004084", 
+                "signature": "ET WEB_SPECIFIC_APPS DGNews SQL Injection Attempt -- news.php catid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004085", 
+                "signature": "ET WEB_SPECIFIC_APPS DGNews SQL Injection Attempt -- news.php catid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004086", 
+                "signature": "ET WEB_SPECIFIC_APPS DGNews SQL Injection Attempt -- news.php catid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004087", 
+                "signature": "ET WEB_SPECIFIC_APPS DGNews SQL Injection Attempt -- news.php catid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004088", 
+                "signature": "ET WEB_SPECIFIC_APPS DGNews SQL Injection Attempt -- news.php catid UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004585", 
+                "signature": "ET WEB_SPECIFIC_APPS DGNews XSS Attempt -- news.php catid"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-0693"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

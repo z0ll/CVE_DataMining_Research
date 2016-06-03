@@ -1,0 +1,197 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-1244", 
+                "published": "2004-02-08T00:00:00.000-05:00", 
+                "id": "CVE-2004-1244", 
+                "modified": "2008-09-10T15:29:40.757-04:00", 
+                "summary": "Windows Media Player 9 allows remote attackers to execute arbitrary code via a PNG file containing large (1) width or (2) height values, aka the \"PNG Processing Vulnerability.\""
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:windows_media_player:9"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.21548", 
+                "id": 21548
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA05-039A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/259890", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/19096", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/bulletin/MS05-009.mspx", 
+                    "vendor": "MS"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/259890", 
+                "id": "VU#259890"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2103134", 
+                "signature": "GPL WEB_CLIENT PNG large colour depth download attempt"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2103133", 
+                "signature": "GPL WEB_CLIENT PNG large image height download attempt"
+            }, 
+            {
+                "classtype": "attempted-user", 
+                "id": "sid:2103132", 
+                "signature": "GPL WEB_CLIENT PNG large image width download attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-user", 
+                "id": "sid:3132", 
+                "signature": "FILE-IMAGE Microsoft and libpng multiple products PNG large image width overflow attempt"
+            }, 
+            {
+                "category": "attempted-user", 
+                "id": "sid:3133", 
+                "signature": "FILE-IMAGE Microsoft Multiple Products PNG large image height download attempt"
+            }, 
+            {
+                "category": "attempted-user", 
+                "id": "sid:3134", 
+                "signature": "FILE-IMAGE Microsoft PNG large colour depth download attempt"
+            }, 
+            {
+                "category": "attempted-user", 
+                "id": "sid:32889", 
+                "signature": "FILE-IMAGE Microsoft and libpng multiple products PNG large image width overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-1244"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:1568", 
+                "title": "Server 2003 Media Player PNG Processing Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:1568"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:2379", 
+                "title": "Windows 2000 Media Player PNG Processing Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:2379"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:1306", 
+                "title": "Windows XP Media Player PNG Processing Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:1306"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS05-009: Vulnerability in PNG Processing Could Allow Remote Code Execution (890261)", 
+                "file": "smb_nt_ms05-009.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "16328"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in PNG Processing Could Allow Remote Code Execution", 
+                "id": "Vulnerability in PNG Processing Could Allow Remote Code Execution", 
+                "title": "890261"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/890261", 
+                "id": "890261", 
+                "title": "Vulnerability in PNG Processing Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS05-009", 
+                "id": "MS05-009", 
+                "title": "Vulnerability in PNG Processing Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

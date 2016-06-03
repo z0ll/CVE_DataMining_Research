@@ -1,0 +1,214 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-0193", 
+                "published": "2004-03-15T00:00:00.000-05:00", 
+                "id": "CVE-2004-0193", 
+                "modified": "2008-09-05T16:37:46.677-04:00", 
+                "summary": "Heap-based buffer overflow in the ISS Protocol Analysis Module (PAM), as used in certain versions of RealSecure Network 7.0 and Server Sensor 7.0, Proventia A, G, and M Series, RealSecure Desktop 7.0 and 3.6, RealSecure Guard 3.6, RealSecure Sentry 3.6, BlackICE PC Protection 3.6, and BlackICE Server Protection 3.6, allows remote attackers to execute arbitrary code via an SMB packet containing an authentication request with a long username."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/h:iss:proventia_m_series_xpu:1.30"
+            }, 
+            {
+                "id": "cpe:/a:iss:blackice_agent_server:3.6eca"
+            }, 
+            {
+                "id": "cpe:/a:iss:realsecure_desktop:7.0epk"
+            }, 
+            {
+                "id": "cpe:/a:iss:realsecure_sentry:3.6ecf"
+            }, 
+            {
+                "id": "cpe:/a:iss:realsecure_desktop:7.0ebg"
+            }, 
+            {
+                "id": "cpe:/a:iss:blackice_pc_protection:3.6cbd"
+            }, 
+            {
+                "id": "cpe:/a:iss:realsecure_network:7.0:xpu_20.15"
+            }, 
+            {
+                "id": "cpe:/a:iss:realsecure_desktop:3.6ecf"
+            }, 
+            {
+                "id": "cpe:/h:iss:proventia_a_series_xpu:20.15"
+            }, 
+            {
+                "id": "cpe:/h:iss:proventia_g_series_xpu:22.3"
+            }, 
+            {
+                "id": "cpe:/a:iss:realsecure_guard:3.6ecb"
+            }, 
+            {
+                "id": "cpe:/a:iss:realsecure_desktop:3.6eca"
+            }, 
+            {
+                "id": "cpe:/a:iss:realsecure_server_sensor:7.0:xpu20.16"
+            }, 
+            {
+                "id": "cpe:/a:iss:blackice_server_protection:3.6cbz"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.533", 
+                "id": 533
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/9752", 
+                "id": 9752
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/4072", 
+                "id": 4072
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.kb.cert.org/vuls/id/150326", 
+                    "vendor": "CERT-VN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/alerts/id/165", 
+                    "vendor": "ISS"
+                }, 
+                {
+                    "url": "http://www.eeye.com/html/Research/Upcoming/20040213.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/15207", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/9752", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/4072", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://www.eeye.com/html/Research/Advisories/AD20040226.html", 
+                    "vendor": "EEYE"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/10988", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=107789851117176&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": [
+            {
+                "url": "http://www.kb.cert.org/vuls/id/150326", 
+                "id": "VU#150326"
+            }
+        ]
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "protocol-command", 
+                "id": "sid:2401", 
+                "signature": "NETBIOS SMB Session Setup andx username overflow attempt"
+            }, 
+            {
+                "category": "protocol-command", 
+                "id": "sid:2402", 
+                "signature": "NETBIOS SMB-DS Session Setup andx username overflow attempt"
+            }, 
+            {
+                "category": "protocol-command", 
+                "id": "sid:2403", 
+                "signature": "NETBIOS SMB Session Setup unicode username overflow attempt"
+            }, 
+            {
+                "category": "protocol-command", 
+                "id": "sid:2404", 
+                "signature": "NETBIOS SMB-DS Session Setup unicode andx username overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-0193"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "ISS BlackICE Multiple Remote Vulnerabilities", 
+                "file": "blackice_version_checker.nasl", 
+                "family": "Windows", 
+                "id": "12114"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

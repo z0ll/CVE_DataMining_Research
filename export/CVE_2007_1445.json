@@ -1,0 +1,155 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1445", 
+                "published": "2007-03-13T20:19:00.000-04:00", 
+                "id": "CVE-2007-1445", 
+                "modified": "2011-03-07T21:52:09.143-05:00", 
+                "summary": "SQL injection vulnerability in the heme preview feature for default.asp in BP Blog 7.0 through 7.0.2 allows remote attackers to execute arbitrary SQL commands via the layout parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:betaparticle:betaparticle_blog:7.0"
+            }, 
+            {
+                "id": "cpe:/a:betaparticle:betaparticle_blog:7.0.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35610", 
+                "id": 35610
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/33997", 
+                "id": 33997
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://secunia.com/advisories/24473", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://blog.betaparticle.com/template_permalink.asp?id=134", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/0919", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://osvdb.org/33997", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/3466", 
+                    "vendor": "MILW0RM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004331", 
+                "signature": "ET WEB_SPECIFIC_APPS BP Blog SQL Injection Attempt -- default.asp layout SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004332", 
+                "signature": "ET WEB_SPECIFIC_APPS BP Blog SQL Injection Attempt -- default.asp layout UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004333", 
+                "signature": "ET WEB_SPECIFIC_APPS BP Blog SQL Injection Attempt -- default.asp layout INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004334", 
+                "signature": "ET WEB_SPECIFIC_APPS BP Blog SQL Injection Attempt -- default.asp layout DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004335", 
+                "signature": "ET WEB_SPECIFIC_APPS BP Blog SQL Injection Attempt -- default.asp layout ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004336", 
+                "signature": "ET WEB_SPECIFIC_APPS BP Blog SQL Injection Attempt -- default.asp layout UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1445"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

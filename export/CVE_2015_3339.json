@@ -1,0 +1,1106 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/867.html", 
+                "id": "CWE-867", 
+                "title": "2011 Top 25 - Weaknesses On the Cusp"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/801.html", 
+                "id": "CWE-801", 
+                "title": "2010 Top 25 - Insecure Interaction Between Components"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/361.html", 
+                "id": "CWE-361", 
+                "title": "Time and State"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/743.html", 
+                "id": "CWE-743", 
+                "title": "CERT C Secure Coding Section 09 - Input Output (FIO)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/751.html", 
+                "id": "CWE-751", 
+                "title": "2009 Top 25 - Insecure Interaction Between Components"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/852.html", 
+                "id": "CWE-852", 
+                "title": "CERT Java Secure Coding Section 07 - Visibility and Atomicity (VNA)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/877.html", 
+                "id": "CWE-877", 
+                "title": "CERT C++ Secure Coding Section 09 - Input Output (FIO)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/882.html", 
+                "id": "CWE-882", 
+                "title": "CERT C++ Secure Coding Section 14 - Concurrency (CON)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/988.html", 
+                "id": "CWE-988", 
+                "title": "SFP Secondary Cluster: Race Condition Window"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/26.html", 
+                "id": 26
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/29.html", 
+                "id": 29
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3339", 
+                "published": "2015-05-27T06:59:11.047-04:00", 
+                "id": "CVE-2015-3339", 
+                "modified": "2015-06-30T10:21:02.343-04:00", 
+                "summary": "Race condition in the prepare_binprm function in fs/exec.c in the Linux kernel before 3.19.6 allows local users to gain privileges by executing a setuid program at a time instant when a chown to root is in progress, and the ownership is changed but the setuid bit is not yet stripped."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/362.html", 
+                "id": "CWE-362", 
+                "title": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.19.5"
+            }, 
+            {
+                "id": "cpe:/o:debian:debian_linux:7.0"
+            }, 
+            {
+                "id": "cpe:/o:debian:debian_linux:8.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.75137", 
+                "id": 75137
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/torvalds/linux/commit/8b01fc86b9f425899f8a3a8fc1c47d73c2c20543", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1214030", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2015/04/20/5", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.kernel.org/pub/linux/kernel/v3.x/ChangeLog-3.19.6", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2015/dsa-3237", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=8b01fc86b9f425899f8a3a8fc1c47d73c2c20543", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "1.9", 
+                    "base": "6.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-3339"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:72", 
+                "title": "DSA-3237-1 -- linux -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:72"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3237-1 (linux - security update)", 
+                "file": "deb_3237.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703237"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 6 : kernel (CESA-2015:1272)", 
+                "file": "centos_RHSA-2015-1272.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "85010"
+            }, 
+            {
+                "name": "CentOS 7 : kernel (CESA-2015:2152)", 
+                "file": "centos_RHSA-2015-2152.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "87135"
+            }, 
+            {
+                "name": "Debian DLA-246-2 : linux-2.6 regression update", 
+                "file": "debian_DLA-246.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "84252"
+            }, 
+            {
+                "name": "Debian DSA-3237-1 : linux - security update", 
+                "file": "debian_DSA-3237.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "83065"
+            }, 
+            {
+                "name": "Fedora 22 : kernel-4.0.1-300.fc22 (2015-7371)", 
+                "file": "fedora_2015-7371.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "83228"
+            }, 
+            {
+                "name": "Fedora 21 : kernel-3.19.7-200.fc21 (2015-7736)", 
+                "file": "fedora_2015-7736.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "83387"
+            }, 
+            {
+                "name": "Fedora 20 : kernel-3.19.8-100.fc20 (2015-8518)", 
+                "file": "fedora_2015-8518.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "83839"
+            }, 
+            {
+                "name": "openSUSE Security Update : the Linux Kernel (openSUSE-2015-543)", 
+                "file": "openSUSE-2015-543.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85432"
+            }, 
+            {
+                "name": "openSUSE Security Update : the Linux Kernel (openSUSE-2016-124)", 
+                "file": "openSUSE-2016-124.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "88545"
+            }, 
+            {
+                "name": "Oracle Linux 6 : kernel (ELSA-2015-1272)", 
+                "file": "oraclelinux_ELSA-2015-1272.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85097"
+            }, 
+            {
+                "name": "Oracle Linux 7 : kernel (ELSA-2015-2152)", 
+                "file": "oraclelinux_ELSA-2015-2152.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "87090"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : Unbreakable Enterprise kernel (ELSA-2015-3053)", 
+                "file": "oraclelinux_ELSA-2015-3053.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85118"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2015-3054)", 
+                "file": "oraclelinux_ELSA-2015-3054.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85175"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2015-3055)", 
+                "file": "oraclelinux_ELSA-2015-3055.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85176"
+            }, 
+            {
+                "name": "Oracle Linux 6 / 7 : Unbreakable Enterprise kernel (ELSA-2015-3064)", 
+                "file": "oraclelinux_ELSA-2015-3064.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "85177"
+            }, 
+            {
+                "name": "OracleVM 3.3 : kernel-uek (OVMSA-2015-0104)", 
+                "file": "oraclevm_OVMSA-2015-0104.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "85145"
+            }, 
+            {
+                "name": "OracleVM 3.3 : kernel-uek (OVMSA-2015-0109)", 
+                "file": "oraclevm_OVMSA-2015-0109.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "85188"
+            }, 
+            {
+                "name": "OracleVM 3.2 : kernel-uek (OVMSA-2016-0037)", 
+                "file": "oraclevm_OVMSA-2016-0037.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "90019"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2015:1272)", 
+                "file": "redhat-RHSA-2015-1272.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "84936"
+            }, 
+            {
+                "name": "RHEL 7 : kernel (RHSA-2015:2152)", 
+                "file": "redhat-RHSA-2015-2152.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "86972"
+            }, 
+            {
+                "name": "RHEL 7 : kernel-rt (RHSA-2015:2411)", 
+                "file": "redhat-RHSA-2015-2411.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "88571"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL6.x i386/x86_64", 
+                "file": "sl_20150722_kernel_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "85198"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL7.x x86_64", 
+                "file": "sl_20151119_kernel_on_SL7_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "87559"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : kernel (SUSE-SU-2015:1071-1)", 
+                "file": "suse_SU-2015-1071-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84227"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : kernel (SUSE-SU-2015:1174-1)", 
+                "file": "suse_SU-2015-1174-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84545"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS : linux vulnerability (USN-2583-1)", 
+                "file": "ubuntu_USN-2583-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83175"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS : linux-ec2 vulnerability (USN-2584-1)", 
+                "file": "ubuntu_USN-2584-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83176"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux vulnerability (USN-2596-1)", 
+                "file": "ubuntu_USN-2596-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83257"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-trusty vulnerability (USN-2597-1)", 
+                "file": "ubuntu_USN-2597-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83258"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux vulnerability (USN-2598-1)", 
+                "file": "ubuntu_USN-2598-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83259"
+            }, 
+            {
+                "name": "Ubuntu 14.04 : linux-lts-utopic vulnerability (USN-2599-1)", 
+                "file": "ubuntu_USN-2599-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83260"
+            }, 
+            {
+                "name": "Ubuntu 14.10 : linux vulnerability (USN-2600-1)", 
+                "file": "ubuntu_USN-2600-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83261"
+            }, 
+            {
+                "name": "Ubuntu 15.04 : linux vulnerability (USN-2601-1)", 
+                "file": "ubuntu_USN-2601-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "83262"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20151272", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-1272.html", 
+                    "id": "RHSA-2015:1272", 
+                    "title": "RHSA-2015:1272: kernel security, bug fix, and enhancement update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=734360", 
+                    "title": "\"opcontrol --deinit\" cause kernel panic inside guest os.", 
+                    "id": "734360", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=840708", 
+                    "title": "misleading (typo) print for \"max_report_luns\"", 
+                    "id": "840708", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=986761", 
+                    "title": "guest kernel will print many \"serial8250: too much work for irq3\" when using kvm with isa-serial", 
+                    "id": "986761", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1025868", 
+                    "title": "kernel panic when installing RHEL4 with Opteron G3 CPU model", 
+                    "id": "1025868", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1066702", 
+                    "title": "Hugepage allocations hang on numa nodes with insufficient memory", 
+                    "id": "1066702", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1104097", 
+                    "title": "CVE-2014-3940 Kernel: missing check during hugepage migration", 
+                    "id": "1104097", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1113406", 
+                    "title": "CVE-2014-4652 Kernel: ALSA: control: protect user controls against races & memory disclosure", 
+                    "id": "1113406", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1115545", 
+                    "title": "NFS4: remove incorrect \"Lock reclaim failed!\" warning when delegations are used", 
+                    "id": "1115545", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1116398", 
+                    "title": "RHEV-H crashes and reboots when ksmd (MOM) is enabled", 
+                    "id": "1116398", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1141391", 
+                    "title": "CVE-2014-3184 Kernel: HID: off by one error in various _report_fixup routines", 
+                    "id": "1141391", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1144128", 
+                    "title": "FUSE: Scheduling while atomic OOPSes when using inval_entry", 
+                    "id": "1144128", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1145751", 
+                    "title": "kvm_clock lacks protection against tsc going backwards", 
+                    "id": "1145751", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1150510", 
+                    "title": "kernel ignores ACPI memory devices (PNP0C80) present at boot time", 
+                    "id": "1150510", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1156661", 
+                    "title": "Kernel crash when unmounting Ext4 filesystem", 
+                    "id": "1156661", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1171317", 
+                    "title": "xfs may crash after unmount if a log write is delayed", 
+                    "id": "1171317", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1172797", 
+                    "title": "CVE-2014-8133 kernel: x86: espfix(64) bypass via set_thread_area and CLONE_SETTLS", 
+                    "id": "1172797", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1173580", 
+                    "title": "CVE-2014-8709 kernel: net: mac80211: plain text information leak", 
+                    "id": "1173580", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1183773", 
+                    "title": "clock_event_device:min_delta_ns can overflow and can never go down", 
+                    "id": "1183773", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1186448", 
+                    "title": "CVE-2015-0239  kernel: kvm: insufficient sysenter emulation when invoked from 16-bit code", 
+                    "id": "1186448", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1187940", 
+                    "title": "Regression: Loading memory mapped files does not use the optimal sized (large) I/O any more in kernel 2.6.32-504.3.3.el6.x86_64", 
+                    "id": "1187940", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1193830", 
+                    "title": "CVE-2014-9683 kernel: buffer overflow in eCryptfs", 
+                    "id": "1193830", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1196319", 
+                    "title": "Backport the dm-switch target to RHEL 6", 
+                    "id": "1196319", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1200541", 
+                    "title": "Reset socket ignored when socket state is LAST-ACK and connection state is SYN-SENT", 
+                    "id": "1200541", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1208065", 
+                    "title": "O_TRUNC ignored on NFS file with invalid cache entry", 
+                    "id": "1208065", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1214030", 
+                    "title": "CVE-2015-3339 kernel: race condition between chown() and execve()", 
+                    "id": "1214030", 
+                    "issue date": "2015-07-22", 
+                    "associated redhat": "RHSA-2015:1272"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20152152", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-2152.html", 
+                    "id": "RHSA-2015:2152", 
+                    "title": "RHSA-2015:2152: kernel security, bug fix, and enhancement update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=839466", 
+                    "title": "ext4: ext4 driver should reject nonsensical mount options for ext2 and ext3", 
+                    "id": "839466", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1033907", 
+                    "title": "Test case failure: Outputs - DVI on Radeon HD 7850 [1002:6819]", 
+                    "id": "1033907", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1033908", 
+                    "title": "Test case failure: Multihead - Large Desktop on Radeon HD 7850 [1002:6819]", 
+                    "id": "1033908", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1033910", 
+                    "title": "Test case failure: Panning on Radeon HD 7850 [1002:6819]", 
+                    "id": "1033910", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1033911", 
+                    "title": "Test case failure: Screen - Change Monitors on Radeon HD 7850 [1002:6819]", 
+                    "id": "1033911", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1034497", 
+                    "title": "Test case failure: KMS - Log out after suspend/resume on AMD/ATI Kaveri [1002:1304]", 
+                    "id": "1034497", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1036792", 
+                    "title": "PXE boot 5-10x slower in RHEL due to invalid guest state emulation", 
+                    "id": "1036792", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1064059", 
+                    "title": "clock_nanosleep returns early with TIMER_ABSTIME", 
+                    "id": "1064059", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1076738", 
+                    "title": "No RHGB on some new ATI hardware", 
+                    "id": "1076738", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1076769", 
+                    "title": "Test case failure: KMS - Log out after suspend/resume on ATI Pitcairn PRO [Radeon HD 7850] [1002:6819]", 
+                    "id": "1076769", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1144897", 
+                    "title": "CVE-2014-3647 kernel: kvm: noncanonical rip after emulation", 
+                    "id": "1144897", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1163762", 
+                    "title": "CVE-2010-5313 CVE-2014-7842 kernel: kvm: reporting emulation failures to userspace", 
+                    "id": "1163762", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1177260", 
+                    "title": "CVE-2014-9419 kernel: partial ASLR bypass through TLS base addresses leak", 
+                    "id": "1177260", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1182243", 
+                    "title": "partition scan in losetup does not succeed when bound repeatedly", 
+                    "id": "1182243", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1184155", 
+                    "title": "Dynamic tickless feature not working in RHEL7 KVM guest", 
+                    "id": "1184155", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1185469", 
+                    "title": "CVE-2013-7421 Linux kernel: crypto api unprivileged arbitrary module load via request_module()", 
+                    "id": "1185469", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1186112", 
+                    "title": "[thinkpad] Support the Lenovo early 2015 models touchpad (X1 Carbon 3rd, T450, W541)", 
+                    "id": "1186112", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1186448", 
+                    "title": "CVE-2015-0239 kernel: kvm: insufficient sysenter emulation when invoked from 16-bit code", 
+                    "id": "1186448", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1190546", 
+                    "title": "CVE-2014-9644 Linux kernel: crypto api unprivileged arbitrary module load via request_module()", 
+                    "id": "1190546", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1191604", 
+                    "title": "DM RAID - Add support for 'raid0' mappings to device-mapper raid target", 
+                    "id": "1191604", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1198109", 
+                    "title": "CVE-2014-8171 kernel: memcg: OOM handling DoS", 
+                    "id": "1198109", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1205258", 
+                    "title": "Busy loop in recv(MSG_PEEK|MSG_WAITALL)", 
+                    "id": "1205258", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1206198", 
+                    "title": "Intel 9-series PCH chipset ACS quirks", 
+                    "id": "1206198", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1209367", 
+                    "title": "CVE-2015-2925 Kernel: vfs: Do not allow escaping from bind mounts", 
+                    "id": "1209367", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1214030", 
+                    "title": "CVE-2015-3339 kernel: race condition between chown() and execve()", 
+                    "id": "1214030", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1218454", 
+                    "title": "CVE-2015-6526 kernel: perf on ppc64 can loop forever getting userlevel stacktraces", 
+                    "id": "1218454", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1218879", 
+                    "title": "CVE-2015-4170 kernel: pty layer race condition on tty ldisc shutdown.", 
+                    "id": "1218879", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1233284", 
+                    "title": "RHEL7: repeated NFS4 server untainted kernel panic with RIP locks_in_grace called from nfsd4_process_open2, xfs used as export for diskless NFS clients", 
+                    "id": "1233284", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1243998", 
+                    "title": "CVE-2015-7837 kernel: securelevel disabled after kexec [rhel-7.2]", 
+                    "id": "1243998", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1249107", 
+                    "title": "[targetcli] cannot discover iSCSI target with IPv6", 
+                    "id": "1249107", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1251331", 
+                    "title": "Lenovo W541 Xorg freezes when mini display port cable is plugged in - 3.10.0-267.el7 WARNING: at drivers/gpu/drm/drm_dp_mst_topology.c:1272 process_single_tx_qlock+0x4b6/0x540 [drm_kms_helper]()", 
+                    "id": "1251331", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1257528", 
+                    "title": "CVE-2015-5283 kernel: Creating multiple sockets when SCTP module isn't loaded leads to kernel panic", 
+                    "id": "1257528", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1268270", 
+                    "title": "CVE-2015-7613 kernel: Unauthorized access to IPC objects with SysV shm", 
+                    "id": "1268270", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1272472", 
+                    "title": "CVE-2015-7837 kernel: securelevel disabled after kexec", 
+                    "id": "1272472", 
+                    "issue date": "2015-11-19", 
+                    "associated redhat": "RHSA-2015:2152"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20152411", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-2411.html", 
+                    "id": "RHSA-2015:2411", 
+                    "title": "RHSA-2015:2411: kernel-rt security, bug fix, and enhancement update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1177260", 
+                    "title": "CVE-2014-9419 kernel: partial ASLR bypass through TLS base addresses leak", 
+                    "id": "1177260", 
+                    "issue date": "2015-07-06", 
+                    "associated redhat": "RHSA-2015:2411"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1185469", 
+                    "title": "CVE-2013-7421 Linux kernel: crypto api unprivileged arbitrary module load via request_module()", 
+                    "id": "1185469", 
+                    "issue date": "2015-07-06", 
+                    "associated redhat": "RHSA-2015:2411"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1190546", 
+                    "title": "CVE-2014-9644 Linux kernel: crypto api unprivileged arbitrary module load via request_module()", 
+                    "id": "1190546", 
+                    "issue date": "2015-07-06", 
+                    "associated redhat": "RHSA-2015:2411"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1198109", 
+                    "title": "CVE-2014-8171 kernel: memcg: OOM handling DoS", 
+                    "id": "1198109", 
+                    "issue date": "2015-07-06", 
+                    "associated redhat": "RHSA-2015:2411"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1209190", 
+                    "title": "kernel-rt: rebase tree to match RHEL7.1.z source tree", 
+                    "id": "1209190", 
+                    "issue date": "2015-07-06", 
+                    "associated redhat": "RHSA-2015:2411"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1209367", 
+                    "title": "CVE-2015-2925 Kernel: vfs: Do not allow escaping from bind mounts", 
+                    "id": "1209367", 
+                    "issue date": "2015-07-06", 
+                    "associated redhat": "RHSA-2015:2411"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1211724", 
+                    "title": "kernel-rt: rebase to the RHEL7.1.z batch3 source tree", 
+                    "id": "1211724", 
+                    "issue date": "2015-07-06", 
+                    "associated redhat": "RHSA-2015:2411"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1214030", 
+                    "title": "CVE-2015-3339 kernel: race condition between chown() and execve()", 
+                    "id": "1214030", 
+                    "issue date": "2015-07-06", 
+                    "associated redhat": "RHSA-2015:2411"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1218879", 
+                    "title": "CVE-2015-4170 kernel: pty layer race condition on tty ldisc shutdown.", 
+                    "id": "1218879", 
+                    "issue date": "2015-07-06", 
+                    "associated redhat": "RHSA-2015:2411"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1230391", 
+                    "title": "kernel-rt: update to the RHEL7.1.z batch 4 source tree", 
+                    "id": "1230391", 
+                    "issue date": "2015-07-06", 
+                    "associated redhat": "RHSA-2015:2411"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1230395", 
+                    "title": "kernel-rt: update to the RHEL7.1.z batch 5 source tree", 
+                    "id": "1230395", 
+                    "issue date": "2015-07-06", 
+                    "associated redhat": "RHSA-2015:2411"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1257528", 
+                    "title": "CVE-2015-5283 kernel: Creating multiple sockets when SCTP module isn't loaded leads to kernel panic", 
+                    "id": "1257528", 
+                    "issue date": "2015-07-06", 
+                    "associated redhat": "RHSA-2015:2411"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1265251", 
+                    "title": "kernel-rt: update to the RHEL7.1.z batch 6 source tree", 
+                    "id": "1265251", 
+                    "issue date": "2015-07-06", 
+                    "associated redhat": "RHSA-2015:2411"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1268270", 
+                    "title": "CVE-2015-7613 kernel: Unauthorized access to IPC objects with SysV shm", 
+                    "id": "1268270", 
+                    "issue date": "2015-07-06", 
+                    "associated redhat": "RHSA-2015:2411"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1272472", 
+                    "title": "CVE-2015-7837 kernel: securelevel disabled after kexec", 
+                    "id": "1272472", 
+                    "issue date": "2015-07-06", 
+                    "associated redhat": "RHSA-2015:2411"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3237", 
+                "id": "DSA-3237"
+            }
+        ], 
+        "Vmware": []
+    }
+}

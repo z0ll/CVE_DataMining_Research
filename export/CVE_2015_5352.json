@@ -1,0 +1,206 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5352", 
+                "published": "2015-08-02T21:59:01.137-04:00", 
+                "id": "CVE-2015-5352", 
+                "modified": "2015-08-03T14:55:07.177-04:00", 
+                "summary": "The x11_open_helper function in channels.c in ssh in OpenSSH before 6.9, when ForwardX11Trusted mode is not used, lacks a check of the refusal deadline for X connections, which makes it easier for remote attackers to bypass intended access restrictions via a connection outside of the permitted time window."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:openbsd:openssh:6.8"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.76326", 
+                "id": 76326
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://anongit.mindrot.org/openssh.git/commit/?h=V_6_9&id=1bf477d3cdf1a864646d59820878783d42357a1d", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.openssh.com/txt/release-6.9", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://openwall.com/lists/oss-security/2015/07/01/10", 
+                    "vendor": "MLIST"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "8.6", 
+                    "base": "4.3", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-5352"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:268", 
+                "title": "AIX OpenSSH vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.cisecurity:def:268"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "AIX OpenSSH Vulnerability : openssh_advisory5.asc", 
+                "file": "aix_openssh_advisory5.nasl", 
+                "family": "AIX Local Security Checks", 
+                "id": "85930"
+            }, 
+            {
+                "name": "Amazon Linux AMI : openssh (ALAS-2015-568)", 
+                "file": "ala_ALAS-2015-568.nasl", 
+                "family": "Amazon Linux Local Security Checks", 
+                "id": "84928"
+            }, 
+            {
+                "name": "Fedora 22 : openssh-6.9p1-1.fc22 (2015-11063)", 
+                "file": "fedora_2015-11063.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "84687"
+            }, 
+            {
+                "name": "Fedora 21 : openssh-6.6.1p1-13.fc21 (2015-11067)", 
+                "file": "fedora_2015-11067.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "84688"
+            }, 
+            {
+                "name": "GLSA-201512-04 : OpenSSH: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201512-04.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "87545"
+            }, 
+            {
+                "name": "OpenSSH < 6.9 Multiple Vulnerabilities", 
+                "file": "openssh_69.nasl", 
+                "family": "Misc.", 
+                "id": "84638"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : openssh (SUSE-SU-2015:1544-1) (Logjam)", 
+                "file": "suse_SU-2015-1544-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85928"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : openssh (SUSE-SU-2015:1547-1) (Logjam)", 
+                "file": "suse_SU-2015-1547-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85929"
+            }, 
+            {
+                "name": "SUSE SLED11 Security Update : openssh (SUSE-SU-2015:1547-2) (Logjam)", 
+                "file": "suse_SU-2015-1547-2.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85941"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : openssh (SUSE-SU-2015:1581-1) (Logjam)", 
+                "file": "suse_SU-2015-1581-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "86057"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : openssh (SUSE-SU-2015:1695-1) (Logjam)", 
+                "file": "suse_SU-2015-1695-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "86339"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : openssh (SUSE-SU-2015:1840-1) (Logjam)", 
+                "file": "suse_SU-2015-1840-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "86695"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 14.04 / 15.04 : openssh vulnerabilities (USN-2710-1)", 
+                "file": "ubuntu_USN-2710-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85445"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 14.04 / 15.04 : openssh regression (USN-2710-2)", 
+                "file": "ubuntu_USN-2710-2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85533"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

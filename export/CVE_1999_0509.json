@@ -1,0 +1,207 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0509", 
+                "published": "1996-05-29T00:00:00.000-04:00", 
+                "id": "CVE-1999-0509", 
+                "modified": "2008-09-09T00:00:00.000-04:00", 
+                "summary": "Perl, sh, csh, or other shell interpreters are installed in the cgi-bin directory on a WWW site, which allows remote attackers to execute arbitrary commands."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": []
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.13736", 
+                "id": 13736
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": []
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-recon", 
+                "id": "sid:2101649", 
+                "signature": "GPL WEB_SERVER perl command attempt"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "attempted-recon", 
+                "id": "sid:832", 
+                "signature": "SERVER-WEBAPP perl.exe access"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:862", 
+                "signature": "SERVER-WEBAPP csh access"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:865", 
+                "signature": "SERVER-WEBAPP ksh access"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:868", 
+                "signature": "SERVER-WEBAPP rsh access"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:872", 
+                "signature": "SERVER-WEBAPP tcsh access"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:877", 
+                "signature": "SERVER-WEBAPP rksh access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:885", 
+                "signature": "SERVER-WEBAPP bash access"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1309", 
+                "signature": "SERVER-WEBAPP zsh access"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1648", 
+                "signature": "SERVER-WEBAPP perl.exe command attempt"
+            }, 
+            {
+                "category": "attempted-recon", 
+                "id": "sid:1649", 
+                "signature": "SERVER-WEBAPP perl command attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-0509"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Web Server /cgi-bin Perl Interpreter Access", 
+                "file": "perl_cgi.nasl", 
+                "family": "CGI abuses", 
+                "id": "10173"
+            }, 
+            {
+                "name": "Web Server /cgi-bin Shell Access", 
+                "file": "shells.nasl", 
+                "family": "CGI abuses", 
+                "id": "10252"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

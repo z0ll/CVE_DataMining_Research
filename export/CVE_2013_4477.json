@@ -1,0 +1,198 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4477", 
+                "published": "2013-11-02T15:55:04.773-04:00", 
+                "id": "CVE-2013-4477", 
+                "modified": "2014-03-05T23:47:40.700-05:00", 
+                "summary": "The LDAP backend in OpenStack Identity (Keystone) Grizzly and Havana, when removing a role on a tenant for a user who does not have that role, adds the role to the user, which allows local users to gain privileges."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:openstack:havana:-"
+            }, 
+            {
+                "id": "cpe:/a:openstack:grizzly:-"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.65407", 
+                "id": 65407
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2013/10/30/6", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "https://bugs.launchpad.net/keystone/+bug/1242855", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2034-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2014-0113.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "4.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "3.3", 
+                    "integrity impact": "partial", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-4477"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19753", 
+                "title": "USN-2034-1 -- keystone vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:19753"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Fedora Update for openstack-keystone FEDORA-2013-20373", 
+                "file": "gb_fedora_2013_20373_openstack-keystone_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867038"
+            }, 
+            {
+                "name": "Fedora Update for openstack-keystone FEDORA-2013-23589", 
+                "file": "gb_fedora_2013_23589_openstack-keystone_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867346"
+            }, 
+            {
+                "name": "Fedora Update for openstack-keystone FEDORA-2014-4210", 
+                "file": "gb_fedora_2014_4210_openstack-keystone_fc19.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867673"
+            }, 
+            {
+                "name": "Fedora Update for openstack-keystone FEDORA-2014-4903", 
+                "file": "gb_fedora_2014_4903_openstack-keystone_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867703"
+            }, 
+            {
+                "name": "Fedora Update for openstack-keystone FEDORA-2014-5497", 
+                "file": "gb_fedora_2014_5497_openstack-keystone_fc20.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867750"
+            }, 
+            {
+                "name": "Ubuntu Update for keystone USN-2034-1", 
+                "file": "gb_ubuntu_USN_2034_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841635"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Fedora 19 : openstack-keystone-2013.1.4-2.fc19 (2013-20373)", 
+                "file": "fedora_2013-20373.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "70789"
+            }, 
+            {
+                "name": "Fedora 20 : openstack-keystone-2013.2.1-1.fc20 (2013-23589)", 
+                "file": "fedora_2013-23589.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "71765"
+            }, 
+            {
+                "name": "Ubuntu 12.10 / 13.04 / 13.10 : keystone vulnerability (USN-2034-1)", 
+                "file": "ubuntu_USN-2034-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "71094"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2014-0113.html", 
+                    "id": "RHSA-2014:0113", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2034-1", 
+                "id": "USN-2034-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

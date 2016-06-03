@@ -1,0 +1,146 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-1892", 
+                "published": "2004-12-31T00:00:00.000-05:00", 
+                "id": "CVE-2004-1892", 
+                "modified": "2008-09-05T16:42:37.990-04:00", 
+                "summary": "Stack-based buffer overflow in DecodeBase16 function, as used in the (1) IRC module and (2) web server in eMule 0.42d, allows remote attackers to execute arbitrary code via a long string."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:emule:emule:0.42d"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.22950", 
+                "id": 22950
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/10039", 
+                "id": 10039
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/4937", 
+                "id": 4937
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/10039", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.emule-project.net/home/perl/news.cgi?l=1&cat_id=22", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/11289", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/15730", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=108100987429960&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "attempted-user", 
+                "id": "sid:2584", 
+                "signature": "SERVER-OTHER eMule buffer overflow attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2004-1892"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "eMule Plus Web Server detection", 
+                "file": "eMuleWebServer_detect.nasl", 
+                "family": "Peer-To-Peer File Sharing", 
+                "id": "12233"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "eMule IRC Module / Web Server DecodeBase16 Function Remote Overflow", 
+                "file": "eMule_http_flaws.nasl", 
+                "family": "Peer-To-Peer File Sharing", 
+                "id": "42833"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

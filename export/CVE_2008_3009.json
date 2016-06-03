@@ -1,0 +1,206 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-3009", 
+                "published": "2008-12-10T09:00:00.720-05:00", 
+                "id": "CVE-2008-3009", 
+                "modified": "2011-03-07T22:10:05.063-05:00", 
+                "summary": "Microsoft Windows Media Player 6.4, Windows Media Format Runtime 7.1 through 11, and Windows Media Services 4.1, 9, and 2008 do not properly use the Service Principal Name (SPN) identifier when validating replies to authentication requests, which allows remote servers to execute arbitrary code via vectors that employ NTLM credential reflection, aka \"SPN Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/255.html", 
+                "id": "CWE-255", 
+                "title": "Credentials Management"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:windows_media_services:9"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:windows_media_format_runtime:9.5"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:windows_media_format_runtime:11::x64"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:windows_media_format_runtime:11"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:windows_media_player:6.4"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:windows_media_services:4.1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:windows_media_format_runtime:7.1"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:windows_media_format_runtime:9.5::x64"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:windows_media_format_runtime:9"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:windows_media_services:2008"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.45377", 
+                "id": 45377
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0017914", 
+                "id": "2008-B-0081", 
+                "title": "Multiple Windows Media Components Remote Code Execution Vulnerabilities"
+            }
+        ], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/32653", 
+                "id": 32653
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA08-344A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/Bulletin/MS08-076.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.vupen.com/english/advisories/2008/3388", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1021373", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1021372", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/32653", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/33058", 
+                    "vendor": "SECUNIA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2008-3009"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:5942", 
+                "title": "SPN Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:5942"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Vulnerabilities in Windows Media Components Could Allow Remote Code Execution (959807)", 
+                "file": "secpod_ms08-076.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "900060"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS08-076: Vulnerabilities in Windows Media Components Could Allow Remote Code Execution (959807)", 
+                "file": "smb_nt_ms08-076.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "35075"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerabilities in Windows Media Components Could Allow Remote Code Execution", 
+                "id": "Vulnerabilities in Windows Media Components Could Allow Remote Code Execution", 
+                "title": "952068"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/959349", 
+                "id": "959349", 
+                "title": "Vulnerabilities in Windows Media Components Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS08-076", 
+                "id": "MS08-076", 
+                "title": "Vulnerabilities in Windows Media Components Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

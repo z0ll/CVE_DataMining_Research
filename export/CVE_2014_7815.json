@@ -1,0 +1,998 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-7815", 
+                "published": "2014-11-14T10:59:01.497-05:00", 
+                "id": "CVE-2014-7815", 
+                "modified": "2015-03-17T22:02:33.920-04:00", 
+                "summary": "The set_pixel_format function in ui/vnc.c in QEMU allows remote attackers to cause a denial of service (crash) via a small bytes_per_pixel value."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:14.04::~~lts~~~"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:14.10"
+            }, 
+            {
+                "id": "cpe:/a:qemu:qemu:-"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:10.04:-:lts"
+            }, 
+            {
+                "id": "cpe:/o:canonical:ubuntu_linux:12.04:-:lts"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.68155", 
+                "id": 68155
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2409-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1157641", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2014/dsa-3067", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2014/dsa-3066", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-0624.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2015-0349.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://git.qemu.org/?p=qemu.git;a=commit;h=e6908bfe8e07f2b452e78e677da1b45b1c0f6829", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-7815"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28286", 
+                "title": "USN-2409-1 -- QEMU vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28286"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28093", 
+                "title": "DSA-3066-1 -- qemu security update", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:28093"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27312", 
+                "title": "DSA-3067-1 -- qemu-kvm security update", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27312"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3066-1 (qemu - security update)", 
+                "file": "deb_3066.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703066"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 3067-1 (qemu-kvm - security update)", 
+                "file": "deb_3067.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703067"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 7 : qemu-kvm (CESA-2015:0349)", 
+                "file": "centos_RHSA-2015-0349.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "81891"
+            }, 
+            {
+                "name": "Citrix XenServer Multiple Vulnerabilities (CTX200892)", 
+                "file": "citrix_xenserver_CTX200892.nasl", 
+                "family": "Misc.", 
+                "id": "83163"
+            }, 
+            {
+                "name": "Debian DSA-3066-1 : qemu - security update", 
+                "file": "debian_DSA-3066.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "78897"
+            }, 
+            {
+                "name": "Debian DSA-3067-1 : qemu-kvm - security update", 
+                "file": "debian_DSA-3067.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "78898"
+            }, 
+            {
+                "name": "Fedora 21 : qemu-2.1.2-6.fc21 (2014-13993)", 
+                "file": "fedora_2014-13993.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "79073"
+            }, 
+            {
+                "name": "Fedora 20 : qemu-1.6.2-10.fc20 (2014-14033)", 
+                "file": "fedora_2014-14033.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "79089"
+            }, 
+            {
+                "name": "GLSA-201412-01 : QEMU: Multiple Vulnerabilities", 
+                "file": "gentoo_GLSA-201412-01.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "79811"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : qemu (MDVSA-2014:220)", 
+                "file": "mandriva_MDVSA-2014-220.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "79407"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : qemu (MDVSA-2015:061)", 
+                "file": "mandriva_MDVSA-2015-061.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "81944"
+            }, 
+            {
+                "name": "openSUSE Security Update : xen (openSUSE-2016-413)", 
+                "file": "openSUSE-2016-413.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "90260"
+            }, 
+            {
+                "name": "Oracle Linux 7 : qemu-kvm (ELSA-2015-0349)", 
+                "file": "oraclelinux_ELSA-2015-0349.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "81803"
+            }, 
+            {
+                "name": "RHEL 7 : qemu-kvm (RHSA-2015:0349)", 
+                "file": "redhat-RHSA-2015-0349.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "81632"
+            }, 
+            {
+                "name": "RHEL 7 : qemu-kvm-rhev (RHSA-2015:0624)", 
+                "file": "redhat-RHSA-2015-0624.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "81661"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : qemu-kvm on SL7.x x86_64", 
+                "file": "sl_20150305_qemu_kvm_on_SL7_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "82260"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : qemu (SUSE-SU-2015:1782-1)", 
+                "file": "suse_SU-2015-1782-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "86490"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : xen (SUSE-SU-2016:0873-1)", 
+                "file": "suse_SU-2016-0873-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "90186"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : xen (SUSE-SU-2016:0955-1)", 
+                "file": "suse_SU-2016-0955-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "90396"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS / 12.04 LTS / 14.04 / 14.10 : qemu, qemu-kvm vulnerabilities (USN-2409-1)", 
+                "file": "ubuntu_USN-2409-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "79244"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-0624.html", 
+                    "id": "RHSA-2015:0624", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20150349", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2015-0349.html", 
+                    "id": "RHSA-2015:0349", 
+                    "title": "RHSA-2015:0349: qemu-kvm security, bug fix, and enhancement update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=895436", 
+                    "title": "qemu-kvm core dump when guest do S3/S4 with max(232) virtio block devices (multifunction=on)", 
+                    "id": "895436", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=949385", 
+                    "title": "passthrough USB speaker to win2012 guest fail to work well", 
+                    "id": "949385", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=980747", 
+                    "title": "flood with 'xhci: wrote doorbell while xHC stopped or paused' when redirected USB Webcam from usb-host with xHCI controller", 
+                    "id": "980747", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=980833", 
+                    "title": "xhci: FIXME: endpoint stopped w/ xfers running, data might be lost", 
+                    "id": "980833", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=990724", 
+                    "title": "qemu-kvm failing when invalid machine type is provided", 
+                    "id": "990724", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=996011", 
+                    "title": "vlan and queues options cause core dumped when qemu-kvm process quit(or ctrl+c)", 
+                    "id": "996011", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=999789", 
+                    "title": "qemu should give a more friendly prompt when didn't specify read-only for VMDK format disk", 
+                    "id": "999789", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1002493", 
+                    "title": "qemu-img convert rate about 100k/second from qcow2/raw to vmdk format on nfs system file", 
+                    "id": "1002493", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1017685", 
+                    "title": "Gluster etc. should not be a dependency of vscclient and libcacard", 
+                    "id": "1017685", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1021788", 
+                    "title": "the error message \"scsi generic interface too old\" is wrong more often than not", 
+                    "id": "1021788", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1026314", 
+                    "title": "BUG: qemu-kvm hang when use '-sandbox on'+'vnc'+'hda'", 
+                    "id": "1026314", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1027565", 
+                    "title": "fail to reboot guest after migration from RHEL6.5 host to RHEL7.0 host", 
+                    "id": "1027565", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1029271", 
+                    "title": "Format specific information (create type) was wrong when create it specified subformat='streamOptimized'", 
+                    "id": "1029271", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1038914", 
+                    "title": "Guest can't receive any character transmitted from host after hot unplugging virtserialport then hot plugging again", 
+                    "id": "1038914", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1039791", 
+                    "title": "qemu-img creates truncated VMDK image with subformat=twoGbMaxExtentFlat", 
+                    "id": "1039791", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1046574", 
+                    "title": "fail to passthrough the USB speaker redirected from usb-redir with xhci controller", 
+                    "id": "1046574", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1046873", 
+                    "title": "fail to be recognized the hotpluging usb-storage device with xhci controller in win2012R2 guest", 
+                    "id": "1046873", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1049734", 
+                    "title": "PCI: QEMU crash on illegal operation: attaching a function to a non multi-function device", 
+                    "id": "1049734", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1052093", 
+                    "title": "qcow2 corruptions (leaked clusters after installing a rhel7 guest using virtio_scsi)", 
+                    "id": "1052093", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1054077", 
+                    "title": "qemu crash when reboot win7 guest with spice display", 
+                    "id": "1054077", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1064156", 
+                    "title": "[qxl] The guest show black screen while resumed guest which managedsaved in pmsuspended status.", 
+                    "id": "1064156", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1064647", 
+                    "title": "qemu-kvm core dump when hot-plug virtio-blk-pci device with gluster backend", 
+                    "id": "1064647", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1066338", 
+                    "title": "Reduce the migrate cache size during migration causes qemu segment fault", 
+                    "id": "1066338", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1074219", 
+                    "title": "qemu core dump when install a RHEL.7 guest(xhci) with migration", 
+                    "id": "1074219", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1074403", 
+                    "title": "qemu-kvm can not give any warning hint when set sndbuf with negative value", 
+                    "id": "1074403", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1074913", 
+                    "title": "migration can not finish with 1024k 'remaining ram' left after hotunplug 4 nics", 
+                    "id": "1074913", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1075846", 
+                    "title": "qemu-kvm core dumped when hotplug/unhotplug USB3.0 device multi times", 
+                    "id": "1075846", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1076326", 
+                    "title": "qemu-kvm does not quit when booting guest w/ 161 vcpus and \"-no-kvm\"", 
+                    "id": "1076326", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1079147", 
+                    "title": "[WHQL][balloon][virtio-rng]ob named DPWLK-HotADD-Device Test- Verify dirver support  for Hot-Add CPU made win2k8-R2 BSOD (0x7E)", 
+                    "id": "1079147", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1083413", 
+                    "title": "qemu-kvm: iSCSI: Failure. SENSE KEY:ILLEGAL_REQUEST(5) ASCQ:INVALID_FIELD_IN_CDB(0x2400)", 
+                    "id": "1083413", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1085701", 
+                    "title": "Guest hits call trace migrate from RHEL6.5 to RHEL7.0 host with -M 6.1 & balloon & uhci device", 
+                    "id": "1085701", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1086598", 
+                    "title": "migrate_cancel wont take effect on previouly wrong migrate -d cmd", 
+                    "id": "1086598", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1086987", 
+                    "title": "src qemu crashed when starting migration in inmigrate mode", 
+                    "id": "1086987", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1088116", 
+                    "title": "qemu crash when device_del usb-redir", 
+                    "id": "1088116", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1088150", 
+                    "title": "qemu-img coredumpd when try to create a gluster format image", 
+                    "id": "1088150", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1088176", 
+                    "title": "QEMU fail to check whether duplicate ID for block device drive using 'blockdev-add' to hotplug", 
+                    "id": "1088176", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1088695", 
+                    "title": "there are four \"gluster\" in qemu-img supported format list", 
+                    "id": "1088695", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1088822", 
+                    "title": "hot-plug a virtio-scsi disk via 'blockdev-add' always cause QEMU quit", 
+                    "id": "1088822", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1089606", 
+                    "title": "QEMU will not reject invalid number of queues (num_queues = 0) specified for virtio-scsi", 
+                    "id": "1089606", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1093983", 
+                    "title": "there are three \"nbd\" in qemu-img supported format list", 
+                    "id": "1093983", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1094285", 
+                    "title": "Hot plug CPU not working with RHEL6  machine types running on RHEL7 host.", 
+                    "id": "1094285", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1095645", 
+                    "title": "vectors of virtio-scsi-pci will be 0 when set vectors>=129", 
+                    "id": "1095645", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1096576", 
+                    "title": "QEMU core dumped when boot up two scsi-hd disk on the same virtio-scsi-pci controller in Intel host", 
+                    "id": "1096576", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1097020", 
+                    "title": "[RFE] qemu-img: Add/improve Disk2VHD tools creating VHDX images", 
+                    "id": "1097020", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1097363", 
+                    "title": "qemu ' KVM internal error. Suberror: 1'  when  query cpu frequently during pxe boot in Intel \"Q95xx\" host", 
+                    "id": "1097363", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1098086", 
+                    "title": "RFE: Supporting creating vmdk/vdi/vpc format disk with protocols (glusterfs)", 
+                    "id": "1098086", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1104748", 
+                    "title": "48% reduction in IO performance for KVM guest, io=native", 
+                    "id": "1104748", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1107821", 
+                    "title": "rdma migration: seg if destination isn't listening", 
+                    "id": "1107821", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1111450", 
+                    "title": "Guest crash when hotplug usb while disable virt_use_usb", 
+                    "id": "1111450", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1113009", 
+                    "title": "Migration failed with virtio-blk from RHEL6.5.0 host to RHEL7.0 host", 
+                    "id": "1113009", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1116728", 
+                    "title": "Backport qemu_bh_schedule() race condition fix", 
+                    "id": "1116728", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1116941", 
+                    "title": "Return value of virtio_load not checked in virtio_rng_load", 
+                    "id": "1116941", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1118707", 
+                    "title": "VMstate static checker: backport -dump-vmstate feature to export json-encoded vmstate info", 
+                    "id": "1118707", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1122151", 
+                    "title": "Pass close from qemu-ga", 
+                    "id": "1122151", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1123372", 
+                    "title": "qemu-kvm crashed when doing iofuzz testing", 
+                    "id": "1123372", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1130428", 
+                    "title": "After migration of RHEL7.1 guest with \"-vga qxl\", GUI console is hang", 
+                    "id": "1130428", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1131316", 
+                    "title": "fail to specify wwn for virtual IDE CD-ROM", 
+                    "id": "1131316", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1134237", 
+                    "title": "Opening malformed VMDK description file should fail", 
+                    "id": "1134237", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1134241", 
+                    "title": "QEMU fails to correctly read/write on VMDK with big flat extent", 
+                    "id": "1134241", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1134251", 
+                    "title": "Opening an obviously truncated VMDK image should fail", 
+                    "id": "1134251", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1134283", 
+                    "title": "qemu-img convert from ISO to streamOptimized fails", 
+                    "id": "1134283", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1138639", 
+                    "title": "fail to login spice session with password + expire time", 
+                    "id": "1138639", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1138691", 
+                    "title": "Allow qemu-img to bypass the host cache (check, compare, convert, rebase, amend)", 
+                    "id": "1138691", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1140618", 
+                    "title": "Should replace \"qemu-system-i386\" by \"/usr/libexec/qemu-kvm\" in manpage of qemu-kvm for our official qemu-kvm build", 
+                    "id": "1140618", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1140742", 
+                    "title": "Enable native qemu support for Ceph", 
+                    "id": "1140742", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1141667", 
+                    "title": "Qemu crashed if reboot guest after hot remove AC97 sound device", 
+                    "id": "1141667", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1142290", 
+                    "title": "guest is stuck when setting balloon memory with large guest-stats-polling-interval", 
+                    "id": "1142290", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1144818", 
+                    "title": "CVE-2014-3640 qemu: slirp: NULL pointer deref in sosendto()", 
+                    "id": "1144818", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1155518", 
+                    "title": "qemu-kvm: undefined symbol: glfs_discard_async", 
+                    "id": "1155518", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1157641", 
+                    "title": "CVE-2014-7815 qemu: vnc: insufficient bits_per_pixel from the client sanitization", 
+                    "id": "1157641", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1160237", 
+                    "title": "qemu-img convert intermittently corrupts output images", 
+                    "id": "1160237", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1161563", 
+                    "title": "invalid QEMU NOTEs in vmcore that is dumped for multi-VCPU guests", 
+                    "id": "1161563", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1163075", 
+                    "title": "CVE-2014-7840 qemu: insufficient parameter validation during ram load", 
+                    "id": "1163075", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1169454", 
+                    "title": "CVE-2014-8106 qemu: cirrus: insufficient blit region checks", 
+                    "id": "1169454", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1175325", 
+                    "title": "Delete cow block driver", 
+                    "id": "1175325", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1180942", 
+                    "title": "qemu core dumped when unhotplug gpu card assigned to guest", 
+                    "id": "1180942", 
+                    "issue date": "2014-08-15", 
+                    "associated redhat": "RHSA-2015:0349"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2409-1", 
+                "id": "USN-2409-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3066", 
+                "id": "DSA-3066"
+            }, 
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3067", 
+                "id": "DSA-3067"
+            }
+        ], 
+        "Vmware": []
+    }
+}

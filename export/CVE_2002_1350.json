@@ -1,0 +1,219 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-1350", 
+                "published": "2002-12-23T00:00:00.000-05:00", 
+                "id": "CVE-2002-1350", 
+                "modified": "2008-09-05T16:30:21.437-04:00", 
+                "summary": "The BGP decoding routines in tcpdump 3.6.x before 3.7 do not properly copy data, which allows remote attackers to cause a denial of service (application crash)."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:lbl:tcpdump:3.6.2.2.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.19240", 
+                "id": 19240
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/6213", 
+                "id": 6213
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/6213", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2002/dsa-206", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/10695", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=104032975103398&w=2", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.tcpdump.org/lists/workers/2001/10/msg00101.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2003-214.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2003-033.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2003-032.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2003:027", 
+                    "vendor": "MANDRAKE"
+                }, 
+                {
+                    "url": "ftp://ftp.caldera.com/pub/security/OpenLinux/CSSA-2002-050.0.txt", 
+                    "vendor": "CALDERA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "bad-unknown", 
+                "id": "sid:2102159", 
+                "signature": "GPL MISC BGP invalid type 0"
+            }, 
+            {
+                "classtype": "bad-unknown", 
+                "id": "sid:2102158", 
+                "signature": "GPL MISC BGP invalid length"
+            }
+        ], 
+        "Snort": [
+            {
+                "category": "bad-unknown", 
+                "id": "sid:2158", 
+                "signature": "SERVER-OTHER BGP invalid length"
+            }, 
+            {
+                "category": "bad-unknown", 
+                "id": "sid:2159", 
+                "signature": "SERVER-OTHER BGP invalid type 0"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-1350"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 206-1 (tcpdump)", 
+                "file": "deb_206_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "53856"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-206-1 : tcpdump - denial of service", 
+                "file": "debian_DSA-206.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "15043"
+            }, 
+            {
+                "name": "Mandrake Linux Security Advisory : tcpdump (MDKSA-2003:027)", 
+                "file": "mandrake_MDKSA-2003-027.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "14011"
+            }, 
+            {
+                "name": "RHEL 2.1 : tcpdump (RHSA-2003:033)", 
+                "file": "redhat-RHSA-2003-033.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "12358"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2003-032.html", 
+                    "id": "RHSA-2003:032", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2003-033.html", 
+                    "id": "RHSA-2003:033", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2003-214.html", 
+                    "id": "RHSA-2003:214", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-206", 
+                "id": "DSA-206"
+            }
+        ], 
+        "Vmware": []
+    }
+}

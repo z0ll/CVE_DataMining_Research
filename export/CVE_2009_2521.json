@@ -1,0 +1,179 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-2521", 
+                "published": "2009-09-04T06:30:01.907-04:00", 
+                "id": "CVE-2009-2521", 
+                "modified": "2011-06-24T00:00:00.000-04:00", 
+                "summary": "Stack consumption vulnerability in the FTP Service in Microsoft Internet Information Services (IIS) 5.0 through 7.0 allows remote authenticated users to cause a denial of service (daemon crash) via a list (ls) -R command containing a wildcard that references a subdirectory, followed by a .. (dot dot), aka \"IIS FTP Service DoS Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:microsoft:iis:7.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:iis:5.0"
+            }, 
+            {
+                "id": "cpe:/a:microsoft:iis:6.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.4024", 
+                "id": 4024
+            }
+        ], 
+        "IAVM": [
+            {
+                "Disa key": "V0021742", 
+                "id": "2009-B-0052", 
+                "title": "Microsoft FTP Service for Internet Information Services (IIS) Remote Code Execution Vulnerabilities"
+            }
+        ], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA09-286A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://www.microsoft.com/technet/security/Bulletin/MS09-053.mspx", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://support.microsoft.com/default.aspx?scid=kb;%5BLN%5D;Q975191", 
+                    "vendor": "MSKB"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/fulldisclosure/2009-09/0040.html", 
+                    "vendor": "FULLDISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "4.9", 
+                    "base": "2.6", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "iis_list_exhaustion.rb", 
+                "file": "metasploit-framework/modules/auxiliary/dos/windows/ftp/iis_list_exhaustion.rb", 
+                "title": "Microsoft IIS FTP Server LIST Stack Exhaustion"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-2521"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:6508", 
+                "title": "IIS FTP Service DoS Vulnerability", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:6508"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft IIS FTP Service Remote Code Execution Vulnerabilities (975254)", 
+                "file": "secpod_ms09-053.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "900874"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS09-053: Vulnerabilities in FTP Service for Internet Information Services Could Allow Remote Code Execution (975254)", 
+                "file": "smb_nt_ms09-053.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "42109"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/975191", 
+                "id": "975191", 
+                "title": ""
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerabilities in FTP Service for Internet Information Services Could Allow Remote Code Execution", 
+                "id": "Vulnerabilities in FTP Service for Internet Information Services Could Allow Remote Code Execution", 
+                "title": "975254"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/975254", 
+                "id": "975254", 
+                "title": "Vulnerabilities in FTP Service for Internet Information Services Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS09-053", 
+                "id": "MS09-053", 
+                "title": "Vulnerabilities in FTP Service for Internet Information Services Could Allow Remote Code Execution"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

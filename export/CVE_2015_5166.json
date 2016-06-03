@@ -1,0 +1,221 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5166", 
+                "published": "2015-08-12T10:59:25.247-04:00", 
+                "id": "CVE-2015-5166", 
+                "modified": "2016-03-31T08:30:02.367-04:00", 
+                "summary": "Use-after-free vulnerability in QEMU in Xen 4.5.x and earlier does not completely unplug emulated block devices, which allows local HVM guest users to gain privileges by unplugging a block device twice."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:xen:xen:4.5.0"
+            }, 
+            {
+                "id": "cpe:/a:xen:xen:4.5.1"
+            }, 
+            {
+                "id": "cpe:/o:fedoraproject:fedora:22"
+            }, 
+            {
+                "id": "cpe:/o:fedoraproject:fedora:21"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.76878", 
+                "id": 76878
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xenbits.xen.org/xsa/advisory-139.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id/1033175", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-September/167820.html", 
+                    "vendor": "FEDORA"
+                }, 
+                {
+                    "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-September/167792.html", 
+                    "vendor": "FEDORA"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-5166"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Fedora 23 : qemu-2.4.0-1.fc23 (2015-13358)", 
+                "file": "fedora_2015-13358.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "85592"
+            }, 
+            {
+                "name": "Fedora 22 : qemu-2.3.1-1.fc22 (2015-13402)", 
+                "file": "fedora_2015-13402.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "85480"
+            }, 
+            {
+                "name": "Fedora 23 : xen-4.5.1-6.fc23 (2015-14361)", 
+                "file": "fedora_2015-14361.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "85728"
+            }, 
+            {
+                "name": "Fedora 22 : xen-4.5.1-8.fc22 (2015-15944)", 
+                "file": "fedora_2015-15944.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "86162"
+            }, 
+            {
+                "name": "Fedora 21 : xen-4.4.3-3.fc21 (2015-15946)", 
+                "file": "fedora_2015-15946.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "86163"
+            }, 
+            {
+                "name": "FreeBSD : qemu, xen-tools -- use-after-free in QEMU/Xen block unplug protocol (ee99899d-4347-11e5-93ad-002590263bf5)", 
+                "file": "freebsd_pkg_ee99899d434711e593ad002590263bf5.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "85485"
+            }, 
+            {
+                "name": "openSUSE Security Update : xen (openSUSE-2015-729)", 
+                "file": "openSUSE-2015-729.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "86863"
+            }, 
+            {
+                "name": "openSUSE Security Update : xen (openSUSE-2015-750)", 
+                "file": "openSUSE-2015-750.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "86909"
+            }, 
+            {
+                "name": "OracleVM 3.3 : xen (OVMSA-2015-0111)", 
+                "file": "oraclevm_OVMSA-2015-0111.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "85236"
+            }, 
+            {
+                "name": "SUSE SLED12 / SLES12 Security Update : xen (SUSE-SU-2015:1384-1)", 
+                "file": "suse_SU-2015-1384-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85505"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : xen (SUSE-SU-2015:1404-1)", 
+                "file": "suse_SU-2015-1404-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85532"
+            }, 
+            {
+                "name": "SUSE SLED11 / SLES11 Security Update : xen (SUSE-SU-2015:1479-1)", 
+                "file": "suse_SU-2015-1479-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85791"
+            }, 
+            {
+                "name": "SUSE SLED11 Security Update : xen (SUSE-SU-2015:1479-2)", 
+                "file": "suse_SU-2015-1479-2.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "85792"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS / 14.04 / 15.04 : qemu, qemu-kvm vulnerabilities (USN-2724-1)", 
+                "file": "ubuntu_USN-2724-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "85683"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2015-15944", 
+                "id": "FEDORA-2015-15944"
+            }, 
+            {
+                "url": "https://admin.fedoraproject.org/updates/FEDORA-2015-15946", 
+                "id": "FEDORA-2015-15946"
+            }
+        ], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

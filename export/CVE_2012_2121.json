@@ -1,0 +1,673 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2121", 
+                "published": "2012-05-17T07:00:38.210-04:00", 
+                "id": "CVE-2012-2121", 
+                "modified": "2014-01-13T23:17:24.593-05:00", 
+                "summary": "The KVM implementation in the Linux kernel before 3.3.4 does not properly manage the relationships between memory slots and the iommu, which allows guest OS users to cause a denial of service (memory leak and host OS crash) by leveraging administrative access to the guest OS to conduct hotunplug and hotplug operations on devices."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.3.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.60752", 
+                "id": 60752
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/torvalds/linux/commit/09ca8e1173bcb12e2a449698c9ae3b86a8a10195", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=814149", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2037-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-2036-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1577-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1027083", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/04/19/16", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.kernel.org/pub/linux/kernel/v3.x/ChangeLog-3.3.4", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/50732", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2012-0743.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.9", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-2121"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17420", 
+                "title": "USN-1457-1 -- linux vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17420"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27556", 
+                "title": "DEPRECATED: ELSA-2012-0743 -- kernel security and bug fix update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27556"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21460", 
+                "title": "RHSA-2012:0676: kvm security and bug fix update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21460"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27475", 
+                "title": "DEPRECATED: ELSA-2012-0676 -- kvm security and bug fix update (moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27475"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23889", 
+                "title": "ELSA-2012:0743: kernel security and bug fix update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23889"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:16999", 
+                "title": "USN-1470-1 -- linux-lts-backport-natty vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:16999"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18029", 
+                "title": "USN-1577-1 -- linux-ti-omap4 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18029"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:21473", 
+                "title": "RHSA-2012:0743: kernel security and bug fix update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:21473"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23115", 
+                "title": "ELSA-2012:0676: kvm security and bug fix update (Moderate)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23115"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17983", 
+                "title": "USN-1476-1 -- linux-ti-omap4 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17983"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17344", 
+                "title": "USN-1471-1 -- linux-lts-backport-oneiric vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17344"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17991", 
+                "title": "USN-1474-1 -- linux-ti-omap4 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17991"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17660", 
+                "title": "USN-1473-1 -- linux vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17660"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19864", 
+                "title": "USN-2036-1 -- linux vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:19864"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19894", 
+                "title": "USN-2037-1 -- linux-ec2 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:19894"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:14681", 
+                "title": "USN-1260-1 -- Linux kernel (OMAP4) vulnerability", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:14681"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:17987", 
+                "title": "USN-1472-1 -- linux vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:17987"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19799", 
+                "title": "DSA-2668-1 linux-2.6 - several", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:19799"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2668-1 (linux-2.6 - privilege escalation/denial of service/information leak)", 
+                "file": "deb_2668.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "892668"
+            }, 
+            {
+                "name": "CentOS Update for kmod-kvm CESA-2012:0676 centos5", 
+                "file": "gb_CESA-2012_0676_kmod-kvm_centos5.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881216"
+            }, 
+            {
+                "name": "CentOS Update for kernel CESA-2012:0743 centos6", 
+                "file": "gb_CESA-2012_0743_kernel_centos6.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881125"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-6344", 
+                "file": "gb_fedora_2012_6344_kernel_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864363"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2012-6406", 
+                "file": "gb_fedora_2012_6406_kernel_fc15.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864178"
+            }, 
+            {
+                "name": "RedHat Update for kernel RHSA-2012:0743-01", 
+                "file": "gb_RHSA-2012_0743-01_kernel.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870758"
+            }, 
+            {
+                "name": "Ubuntu Update for linux USN-1457-1", 
+                "file": "gb_ubuntu_USN_1457_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841021"
+            }, 
+            {
+                "name": "Ubuntu Update for linux-lts-backport-natty USN-1470-1", 
+                "file": "gb_ubuntu_USN_1470_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841036"
+            }, 
+            {
+                "name": "Ubuntu Update for linux-lts-backport-oneiric USN-1471-1", 
+                "file": "gb_ubuntu_USN_1471_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841042"
+            }, 
+            {
+                "name": "Ubuntu Update for linux USN-1472-1", 
+                "file": "gb_ubuntu_USN_1472_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841040"
+            }, 
+            {
+                "name": "Ubuntu Update for linux USN-1473-1", 
+                "file": "gb_ubuntu_USN_1473_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841044"
+            }, 
+            {
+                "name": "Ubuntu Update for linux-ti-omap4 USN-1474-1", 
+                "file": "gb_ubuntu_USN_1474_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841038"
+            }, 
+            {
+                "name": "Ubuntu Update for linux-ti-omap4 USN-1476-1", 
+                "file": "gb_ubuntu_USN_1476_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841050"
+            }, 
+            {
+                "name": "Ubuntu Update for linux-ti-omap4 USN-1577-1", 
+                "file": "gb_ubuntu_USN_1577_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841159"
+            }, 
+            {
+                "name": "Ubuntu Update for linux USN-2036-1", 
+                "file": "gb_ubuntu_USN_2036_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841642"
+            }, 
+            {
+                "name": "Ubuntu Update for linux-ec2 USN-2037-1", 
+                "file": "gb_ubuntu_USN_2037_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841646"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : kvm (CESA-2012:0676)", 
+                "file": "centos_RHSA-2012-0676.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "59212"
+            }, 
+            {
+                "name": "CentOS 6 : kernel (CESA-2012:0743)", 
+                "file": "centos_RHSA-2012-0743.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "59609"
+            }, 
+            {
+                "name": "Debian DSA-2668-1 : linux-2.6 - privilege escalation/denial of service/information leak", 
+                "file": "debian_DSA-2668.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "66431"
+            }, 
+            {
+                "name": "Fedora 17 : kernel-3.3.2-8.fc17 (2012-6344)", 
+                "file": "fedora_2012-6344.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "58836"
+            }, 
+            {
+                "name": "Fedora 16 : kernel-3.3.2-6.fc16 (2012-6386)", 
+                "file": "fedora_2012-6386.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "58862"
+            }, 
+            {
+                "name": "Fedora 15 : kernel-2.6.43.2-6.fc15 (2012-6406)", 
+                "file": "fedora_2012-6406.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "58881"
+            }, 
+            {
+                "name": "Oracle Linux 5 : kvm (ELSA-2012-0676)", 
+                "file": "oraclelinux_ELSA-2012-0676.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68527"
+            }, 
+            {
+                "name": "Oracle Linux 6 : kernel (ELSA-2012-0743)", 
+                "file": "oraclelinux_ELSA-2012-0743.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68544"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2012-2020)", 
+                "file": "oraclelinux_ELSA-2012-2020.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68675"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2012-2021)", 
+                "file": "oraclelinux_ELSA-2012-2021.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68676"
+            }, 
+            {
+                "name": "OracleVM 3.1 : kernel-uek (OVMSA-2012-0042)", 
+                "file": "oraclevm_OVMSA-2012-0042.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "79484"
+            }, 
+            {
+                "name": "RHEL 5 : kvm (RHSA-2012:0676)", 
+                "file": "redhat-RHSA-2012-0676.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "64037"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2012:0743)", 
+                "file": "redhat-RHSA-2012-0743.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "59562"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kvm on SL5.x x86_64", 
+                "file": "sl_20120521_kvm_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "61315"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL6.x i386/x86_64", 
+                "file": "sl_20120618_kernel_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "61331"
+            }, 
+            {
+                "name": "Ubuntu 11.04 : linux vulnerabilities (USN-1457-1)", 
+                "file": "ubuntu_USN-1457-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "59321"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS : linux-lts-backport-natty vulnerabilities (USN-1470-1)", 
+                "file": "ubuntu_USN-1470-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "59474"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS : linux-lts-backport-oneiric vulnerabilities (USN-1471-1)", 
+                "file": "ubuntu_USN-1471-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "59475"
+            }, 
+            {
+                "name": "Ubuntu 11.10 : linux vulnerabilities (USN-1472-1)", 
+                "file": "ubuntu_USN-1472-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "59476"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux vulnerabilities (USN-1473-1)", 
+                "file": "ubuntu_USN-1473-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "59495"
+            }, 
+            {
+                "name": "USN-1474-1 : linux-ti-omap4 vulnerabilities", 
+                "file": "ubuntu_USN-1474-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "59496"
+            }, 
+            {
+                "name": "USN-1476-1 : linux-ti-omap4 vulnerabilities", 
+                "file": "ubuntu_USN-1476-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "59553"
+            }, 
+            {
+                "name": "USN-1577-1 : linux-ti-omap4 vulnerabilities", 
+                "file": "ubuntu_USN-1577-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "62238"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS : linux vulnerabilities (USN-2036-1)", 
+                "file": "ubuntu_USN-2036-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "71203"
+            }, 
+            {
+                "name": "Ubuntu 10.04 LTS : linux-ec2 vulnerabilities (USN-2037-1)", 
+                "file": "ubuntu_USN-2037-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "71204"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20120676", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2012-0676.html", 
+                    "id": "RHSA-2012:0676", 
+                    "title": "RHSA-2012:0676: kvm security and bug fix update (Moderate)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=808199", 
+                    "title": "CVE-2012-1601 kernel: kvm: irqchip_in_kernel() and vcpu->arch.apic inconsistency", 
+                    "id": "808199", 
+                    "issue date": "2012-05-21", 
+                    "associated redhat": "RHSA-2012:0676"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=814149", 
+                    "title": "CVE-2012-2121 kvm: device assignment page leak", 
+                    "id": "814149", 
+                    "issue date": "2012-05-21", 
+                    "associated redhat": "RHSA-2012:0676"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20120743", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2012-0743.html", 
+                    "id": "RHSA-2012:0743", 
+                    "title": "RHSA-2012:0743: kernel security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=772894", 
+                    "title": "CVE-2012-0044 kernel: drm: integer overflow in drm_mode_dirtyfb_ioctl()", 
+                    "id": "772894", 
+                    "issue date": "2012-06-18", 
+                    "associated redhat": "RHSA-2012:0743"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=803793", 
+                    "title": "CVE-2012-1179 kernel: thp:__split_huge_page() mapcount != page_mapcount BUG_ON()", 
+                    "id": "803793", 
+                    "issue date": "2012-06-18", 
+                    "associated redhat": "RHSA-2012:0743"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=806722", 
+                    "title": "CVE-2012-2123 kernel: fcaps: clear the same personality flags as suid when fcaps are used", 
+                    "id": "806722", 
+                    "issue date": "2012-06-18", 
+                    "associated redhat": "RHSA-2012:0743"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=814149", 
+                    "title": "CVE-2012-2121 kvm: device assignment page leak", 
+                    "id": "814149", 
+                    "issue date": "2012-06-18", 
+                    "associated redhat": "RHSA-2012:0743"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=814278", 
+                    "title": "CVE-2012-2119 kernel: macvtap: zerocopy: vector length is not validated before pinning user pages", 
+                    "id": "814278", 
+                    "issue date": "2012-06-18", 
+                    "associated redhat": "RHSA-2012:0743"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=814657", 
+                    "title": "kernel crash at ieee80211_mgd_probe_ap_send [rhel-6.2.z]", 
+                    "id": "814657", 
+                    "issue date": "2012-06-18", 
+                    "associated redhat": "RHSA-2012:0743"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=816151", 
+                    "title": "CVE-2012-2137 kernel: kvm: buffer overflow in kvm_set_irq()", 
+                    "id": "816151", 
+                    "issue date": "2012-06-18", 
+                    "associated redhat": "RHSA-2012:0743"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=816226", 
+                    "title": "add option to disable 5GHz band to iwlwifi [rhel-6.2.z]", 
+                    "id": "816226", 
+                    "issue date": "2012-06-18", 
+                    "associated redhat": "RHSA-2012:0743"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=816289", 
+                    "title": "CVE-2012-2136 kernel: net: insufficient data_len validation in sock_alloc_send_pskb()", 
+                    "id": "816289", 
+                    "issue date": "2012-06-18", 
+                    "associated redhat": "RHSA-2012:0743"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=818504", 
+                    "title": "Disable LRO for all NICs that have LRO enabled [rhel-6.2.z]", 
+                    "id": "818504", 
+                    "issue date": "2012-06-18", 
+                    "associated redhat": "RHSA-2012:0743"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=818505", 
+                    "title": "xen: fix drive naming [rhel-6.2.z]", 
+                    "id": "818505", 
+                    "issue date": "2012-06-18", 
+                    "associated redhat": "RHSA-2012:0743"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=819614", 
+                    "title": "2.6.32-220 kernel does not work on a HP DL385G6 with HP Smart Array P410 controller and hpsa driver [rhel-6.2.z]", 
+                    "id": "819614", 
+                    "issue date": "2012-06-18", 
+                    "associated redhat": "RHSA-2012:0743"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=822754", 
+                    "title": "CVE-2012-2372 kernel: rds-ping cause kernel panic", 
+                    "id": "822754", 
+                    "issue date": "2012-06-18", 
+                    "associated redhat": "RHSA-2012:0743"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=822821", 
+                    "title": "CVE-2012-2373 kernel: mm: read_pmd_atomic: 32bit PAE pmd walk vs pmd_populate SMP race condition", 
+                    "id": "822821", 
+                    "issue date": "2012-06-18", 
+                    "associated redhat": "RHSA-2012:0743"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1577-1", 
+                "id": "USN-1577-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2036-1", 
+                "id": "USN-2036-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-2037-1", 
+                "id": "USN-2037-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,408 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3433", 
+                "published": "2012-11-24T15:55:02.760-05:00", 
+                "id": "CVE-2012-3433", 
+                "modified": "2013-10-10T23:44:48.850-04:00", 
+                "summary": "Xen 4.0 and 4.1 allows local HVM guest OS kernels to cause a denial of service (domain 0 VCPU hang and kernel panic) by modifying the physical address space in a way that triggers excessive shared page search time during the p2m teardown."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:xen:xen:4.1.0"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.0.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.5927", 
+                "id": 5927
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/54942", 
+                "id": 54942
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/54942", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/08/09/3", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2012/dsa-2531", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://security.gentoo.org/glsa/glsa-201309-24.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/55082", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lists.xen.org/archives/html/xen-devel/2012-08/msg00855.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2012-09/msg00018.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2012-09/msg00017.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2012-08/msg00025.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2012-08/msg00024.html", 
+                    "vendor": "SUSE"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.9", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-3433"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:19782", 
+                "title": "DSA-2531-1 xen - several", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:19782"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 2531-1 (xen)", 
+                "file": "deb_2531_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "71820"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2012-11755", 
+                "file": "gb_fedora_2012_11755_xen_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864636"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2012-11785", 
+                "file": "gb_fedora_2012_11785_xen_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864639"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2012-13434", 
+                "file": "gb_fedora_2012_13434_xen_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864722"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2012-13443", 
+                "file": "gb_fedora_2012_13443_xen_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864720"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2012-17204", 
+                "file": "gb_fedora_2012_17204_xen_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864860"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2012-17408", 
+                "file": "gb_fedora_2012_17408_xen_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864862"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2012-18242", 
+                "file": "gb_fedora_2012_18242_xen_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864881"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2012-18249", 
+                "file": "gb_fedora_2012_18249_xen_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864875"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2012-19717", 
+                "file": "gb_fedora_2012_19717_xen_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864934"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2012-19828", 
+                "file": "gb_fedora_2012_19828_xen_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "864950"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2013-0608", 
+                "file": "gb_fedora_2013_0608_xen_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865222"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2013-10247", 
+                "file": "gb_fedora_2013_10247_xen_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865940"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2013-10929", 
+                "file": "gb_fedora_2013_10929_xen_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866023"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2013-11785", 
+                "file": "gb_fedora_2013_11785_xen_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866049"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2013-11871", 
+                "file": "gb_fedora_2013_11871_xen_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866050"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2013-1269", 
+                "file": "gb_fedora_2013_1269_xen_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865291"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2013-1274", 
+                "file": "gb_fedora_2013_1274_xen_fc16.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865292"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2013-2002", 
+                "file": "gb_fedora_2013_2002_xen_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865361"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2013-4927", 
+                "file": "gb_fedora_2013_4927_xen_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865558"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2013-6723", 
+                "file": "gb_fedora_2013_6723_xen_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865603"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2013-7432", 
+                "file": "gb_fedora_2013_7432_xen_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865616"
+            }, 
+            {
+                "name": "Fedora Update for xen FEDORA-2013-8571", 
+                "file": "gb_fedora_2013_8571_xen_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865643"
+            }, 
+            {
+                "name": "SuSE Update for Security openSUSE-SU-2012:1172-1 (Security)", 
+                "file": "gb_suse_2012_1172_1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "850324"
+            }, 
+            {
+                "name": "SuSE Update for Security openSUSE-SU-2012:1174-1 (Security)", 
+                "file": "gb_suse_2012_1174_1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "850334"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-2531-1 : xen - Denial of Service", 
+                "file": "debian_DSA-2531.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "61578"
+            }, 
+            {
+                "name": "Fedora 17 : xen-4.1.3-2.fc17 (2012-11755)", 
+                "file": "fedora_2012-11755.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "61614"
+            }, 
+            {
+                "name": "Fedora 16 : xen-4.1.3-1.fc16 (2012-11785)", 
+                "file": "fedora_2012-11785.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "61616"
+            }, 
+            {
+                "name": "GLSA-201309-24 : Xen: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201309-24.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "70184"
+            }, 
+            {
+                "name": "openSUSE Security Update : Xen (openSUSE-SU-2012:1174-1)", 
+                "file": "openSUSE-2012-596.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74749"
+            }, 
+            {
+                "name": "openSUSE Security Update : Xen (openSUSE-SU-2012:1172-1)", 
+                "file": "openSUSE-2012-597.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74750"
+            }, 
+            {
+                "name": "openSUSE Security Update : Xen (openSUSE-SU-2012:1176-1)", 
+                "file": "openSUSE-2012-598.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74751"
+            }, 
+            {
+                "name": "OracleVM 3.1 : xen (OVMSA-2012-0034)", 
+                "file": "oraclevm_OVMSA-2012-0034.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "79479"
+            }, 
+            {
+                "name": "OracleVM 3.0 : xen (OVMSA-2012-0035)", 
+                "file": "oraclevm_OVMSA-2012-0035.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "79480"
+            }, 
+            {
+                "name": "OracleVM 3.2 : xen (OVMSA-2015-0068) (POODLE) (Venom)", 
+                "file": "oraclevm_OVMSA-2015-0068.nasl", 
+                "family": "OracleVM Local Security Checks", 
+                "id": "84140"
+            }, 
+            {
+                "name": "SuSE 11.1 Security Update : Xen  (SAT Patch Number 6653)", 
+                "file": "suse_11_xen-201208-120803.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "64234"
+            }, 
+            {
+                "name": "SuSE 11.2 Security Update : Xen and libvirt (SAT Patch Number 6640)", 
+                "file": "suse_11_xen-201208-120805.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "64235"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2012-3433.html", 
+                "id": "SUSE-SU-2012:1043"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2012-3433.html", 
+                "id": "SUSE-SU-2012:1044"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2012-3433.html", 
+                "id": "openSUSE-SU-2012:1172"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2012-3433.html", 
+                "id": "openSUSE-SU-2012:1174"
+            }
+        ], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/201309-24", 
+                "id": "GLSA-201309-24"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-2531", 
+                "id": "DSA-2531"
+            }
+        ], 
+        "Vmware": []
+    }
+}

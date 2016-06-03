@@ -1,0 +1,802 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1797", 
+                "published": "2013-03-22T07:59:11.567-04:00", 
+                "id": "CVE-2013-1797", 
+                "modified": "2014-01-27T23:51:57.040-05:00", 
+                "summary": "Use-after-free vulnerability in arch/x86/kvm/x86.c in the Linux kernel through 3.8.4 allows guest OS users to cause a denial of service (host OS memory corruption) or possibly have unspecified other impact via a crafted application that triggers use of a guest physical address (GPA) in (1) movable or (2) removable memory during an MSR_KVM_SYSTEM_TIME kvm_set_msr_common operation."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.8.0"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.8.3"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.8.1"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.8.4"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:3.8.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.8068", 
+                "id": 8068
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/torvalds/linux/commit/0b79459b482e85cb7426aa7da683a9f2c97aeae1", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=917013", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1813-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1812-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/USN-1809-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2013/03/20/9", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2013:176", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2013-1026.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2013-0928.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2013-0746.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2013-0744.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2013-0727.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2013-07/msg00018.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2013-06/msg00005.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2013-05/msg00018.html", 
+                    "vendor": "SUSE"
+                }, 
+                {
+                    "url": "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=0b79459b482e85cb7426aa7da683a9f2c97aeae1", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "high", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.2", 
+                    "base": "6.8", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "adjacent_network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-1797"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20911", 
+                "title": "RHSA-2013:0727: kvm security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20911"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:24665", 
+                "title": "SUSE-SU-2014:0287-1 -- Security update for Linux kernel", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:24665"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:23777", 
+                "title": "ELSA-2013:0744: kernel security and bug fix update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:23777"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:25846", 
+                "title": "SUSE-SU-2013:0759-1 -- Security update for Linux kernel", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:25846"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:26098", 
+                "title": "SUSE-SU-2013:0759-2 -- Security update for Linux kernel", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:26098"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27090", 
+                "title": "DEPRECATED: ELSA-2013-0727 -- kvm security update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27090"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27308", 
+                "title": "DEPRECATED: ELSA-2013-0744 -- kernel security and bug fix update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27308"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:22550", 
+                "title": "ELSA-2013:0727: kvm security update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:22550"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:20990", 
+                "title": "RHSA-2013:0744: kernel security and bug fix update (Important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:20990"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:27454", 
+                "title": "ELSA-2013-2519 -- Unbreakable Enterprise kernel Security update (important)", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:27454"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18195", 
+                "title": "USN-1812-1 -- linux-lts-quantal vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18195"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18181", 
+                "title": "USN-1809-1 -- linux vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18181"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:18296", 
+                "title": "USN-1813-1 -- linux vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:18296"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "CentOS Update for kmod-kvm CESA-2013:0727 centos5", 
+                "file": "gb_CESA-2013_0727_kmod-kvm_centos5.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881709"
+            }, 
+            {
+                "name": "CentOS Update for kernel CESA-2013:0744 centos6", 
+                "file": "gb_CESA-2013_0744_kernel_centos6.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "881723"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-10695", 
+                "file": "gb_fedora_2013_10695_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865961"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-12530", 
+                "file": "gb_fedora_2013_12530_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866067"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-12990", 
+                "file": "gb_fedora_2013_12990_kernel_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866210"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-13536", 
+                "file": "gb_fedora_2013_13536_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866121"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-15151", 
+                "file": "gb_fedora_2013_15151_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866832"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-16336", 
+                "file": "gb_fedora_2013_16336_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866896"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-17010", 
+                "file": "gb_fedora_2013_17010_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866901"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-17942", 
+                "file": "gb_fedora_2013_17942_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866934"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-18364", 
+                "file": "gb_fedora_2013_18364_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866964"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-18822", 
+                "file": "gb_fedora_2013_18822_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867001"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-20748", 
+                "file": "gb_fedora_2013_20748_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867054"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-21822", 
+                "file": "gb_fedora_2013_21822_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867096"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-22695", 
+                "file": "gb_fedora_2013_22695_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "867119"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-4240", 
+                "file": "gb_fedora_2013_4240_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865494"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-4357", 
+                "file": "gb_fedora_2013_4357_kernel_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865509"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-6041", 
+                "file": "gb_fedora_2013_6041_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865576"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-6537", 
+                "file": "gb_fedora_2013_6537_kernel_fc18.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865593"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-6999", 
+                "file": "gb_fedora_2013_6999_kernel_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "865597"
+            }, 
+            {
+                "name": "Fedora Update for kernel FEDORA-2013-9123", 
+                "file": "gb_fedora_2013_9123_kernel_fc17.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "866035"
+            }, 
+            {
+                "name": "RedHat Update for kernel RHSA-2013:0744-01", 
+                "file": "gb_RHSA-2013_0744-01_kernel.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "870987"
+            }, 
+            {
+                "name": "SuSE Update for kernel openSUSE-SU-2013:0847-1 (kernel)", 
+                "file": "gb_suse_2013_0847_1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "850480"
+            }, 
+            {
+                "name": "SuSE Update for kernel openSUSE-SU-2013:0925-1 (kernel)", 
+                "file": "gb_suse_2013_0925_1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "850483"
+            }, 
+            {
+                "name": "SuSE Update for 3.0.80 openSUSE-SU-2013:1187-1 (3.0.80)", 
+                "file": "gb_suse_2013_1187_1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "850509"
+            }, 
+            {
+                "name": "Ubuntu Update for linux USN-1809-1", 
+                "file": "gb_ubuntu_USN_1809_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841408"
+            }, 
+            {
+                "name": "Ubuntu Update for linux-lts-quantal USN-1812-1", 
+                "file": "gb_ubuntu_USN_1812_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841412"
+            }, 
+            {
+                "name": "Ubuntu Update for linux USN-1813-1", 
+                "file": "gb_ubuntu_USN_1813_1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "841414"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "CentOS 5 : kvm (CESA-2013:0727)", 
+                "file": "centos_RHSA-2013-0727.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "65920"
+            }, 
+            {
+                "name": "CentOS 6 : kernel (CESA-2013:0744)", 
+                "file": "centos_RHSA-2013-0744.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "66204"
+            }, 
+            {
+                "name": "Fedora 18 : kernel-3.8.4-202.fc18 (2013-4240)", 
+                "file": "fedora_2013-4240.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "65664"
+            }, 
+            {
+                "name": "Fedora 17 : kernel-3.8.4-102.fc17 (2013-4357)", 
+                "file": "fedora_2013-4357.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "65759"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : kernel (MDVSA-2013:176)", 
+                "file": "mandriva_MDVSA-2013-176.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "66975"
+            }, 
+            {
+                "name": "openSUSE Security Update : kernel (openSUSE-SU-2013:0923-1)", 
+                "file": "openSUSE-2013-398.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "74985"
+            }, 
+            {
+                "name": "openSUSE Security Update : kernel (openSUSE-SU-2013:0824-1)", 
+                "file": "openSUSE-2013-440.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75012"
+            }, 
+            {
+                "name": "openSUSE Security Update : kernel (openSUSE-SU-2013:0847-1)", 
+                "file": "openSUSE-2013-454.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "75018"
+            }, 
+            {
+                "name": "Oracle Linux 5 : kvm (ELSA-2013-0727)", 
+                "file": "oraclelinux_ELSA-2013-0727.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68804"
+            }, 
+            {
+                "name": "Oracle Linux 6 : kernel (ELSA-2013-0744)", 
+                "file": "oraclelinux_ELSA-2013-0744.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68807"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2013-2519)", 
+                "file": "oraclelinux_ELSA-2013-2519.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68851"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2013-2523)", 
+                "file": "oraclelinux_ELSA-2013-2523.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68853"
+            }, 
+            {
+                "name": "Oracle Linux 5 / 6 : Unbreakable Enterprise kernel (ELSA-2013-2525)", 
+                "file": "oraclelinux_ELSA-2013-2525.nasl", 
+                "family": "Oracle Linux Local Security Checks", 
+                "id": "68855"
+            }, 
+            {
+                "name": "RHEL 5 : kvm (RHSA-2013:0727)", 
+                "file": "redhat-RHSA-2013-0727.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "65905"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2013:0744)", 
+                "file": "redhat-RHSA-2013-0744.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "66192"
+            }, 
+            {
+                "name": "RHEL 6 : rhev-hypervisor6 (RHSA-2013:0746)", 
+                "file": "redhat-RHSA-2013-0746.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "78955"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2013:0928)", 
+                "file": "redhat-RHSA-2013-0928.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "78963"
+            }, 
+            {
+                "name": "RHEL 6 : kernel (RHSA-2013:1026)", 
+                "file": "redhat-RHSA-2013-1026.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "78964"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kvm on SL5.x x86_64", 
+                "file": "sl_20130409_kvm_on_SL5_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "65906"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : kernel on SL6.x i386/x86_64", 
+                "file": "sl_20130423_kernel_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "66214"
+            }, 
+            {
+                "name": "SuSE 11.2 Security Update : Linux kernel (SAT Patch Numbers 7667 / 7669 / 7675)", 
+                "file": "suse_11_kernel-130426.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "66344"
+            }, 
+            {
+                "name": "SUSE SLES11 Security Update : kernel (SUSE-SU-2014:0287-1)", 
+                "file": "suse_SU-2014-0287-1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "83611"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux vulnerabilities (USN-1809-1)", 
+                "file": "ubuntu_USN-1809-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "66291"
+            }, 
+            {
+                "name": "Ubuntu 12.04 LTS : linux-lts-quantal vulnerabilities (USN-1812-1)", 
+                "file": "ubuntu_USN-1812-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "66292"
+            }, 
+            {
+                "name": "Ubuntu 12.10 : linux vulnerabilities (USN-1813-1)", 
+                "file": "ubuntu_USN-1813-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "66302"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2013:176", 
+                "id": "MDVSA-2013:176"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2013-1797.html", 
+                "id": "openSUSE-SU-2013:0847"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2013-1797.html", 
+                "id": "openSUSE-SU-2013:0925"
+            }, 
+            {
+                "url": "https://www.suse.com/security/cve/CVE-2013-1797.html", 
+                "id": "openSUSE-SU-2013:1187"
+            }
+        ], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2013-0746.html", 
+                    "id": "RHSA-2013:0746", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2013-0928.html", 
+                    "id": "RHSA-2013:0928", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2013-1026.html", 
+                    "id": "RHSA-2013:1026", 
+                    "title": ""
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20130727", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2013-0727.html", 
+                    "id": "RHSA-2013:0727", 
+                    "title": "RHSA-2013:0727: kvm security update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=917012", 
+                    "title": "CVE-2013-1796 kernel: kvm: buffer overflow in handling of MSR_KVM_SYSTEM_TIME", 
+                    "id": "917012", 
+                    "issue date": "2013-04-09", 
+                    "associated redhat": "RHSA-2013:0727"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=917013", 
+                    "title": "CVE-2013-1797 kernel: kvm: after free issue with the handling of MSR_KVM_SYSTEM_TIME", 
+                    "id": "917013", 
+                    "issue date": "2013-04-09", 
+                    "associated redhat": "RHSA-2013:0727"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=917017", 
+                    "title": "CVE-2013-1798 kernel: kvm: out-of-bounds access in ioapic indirect register reads", 
+                    "id": "917017", 
+                    "issue date": "2013-04-09", 
+                    "associated redhat": "RHSA-2013:0727"
+                }
+            }, 
+            {
+                "Redhat": {
+                    "oval": "oval:com.redhat.rhsa:def:20130744", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2013-0744.html", 
+                    "id": "RHSA-2013:0744", 
+                    "title": "RHSA-2013:0744: kernel security and bug fix update (Important)"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=914298", 
+                    "title": "CVE-2013-0349 kernel: bluetooth HIDP implementation information disclosure", 
+                    "id": "914298", 
+                    "issue date": "2013-04-23", 
+                    "associated redhat": "RHSA-2013:0744"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=915592", 
+                    "title": "CVE-2013-1767 Kernel: tmpfs: fix use-after-free of mempolicy object", 
+                    "id": "915592", 
+                    "issue date": "2013-04-23", 
+                    "associated redhat": "RHSA-2013:0744"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=916115", 
+                    "title": "CVE-2013-1773 kernel: VFAT slab-based buffer overflow", 
+                    "id": "916115", 
+                    "issue date": "2013-04-23", 
+                    "associated redhat": "RHSA-2013:0744"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=916191", 
+                    "title": "CVE-2013-1774 Kernel: USB io_ti driver NULL pointer dereference in routine chase_port", 
+                    "id": "916191", 
+                    "issue date": "2013-04-23", 
+                    "associated redhat": "RHSA-2013:0744"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=916646", 
+                    "title": "CVE-2013-1792 Kernel: keys: race condition in install_user_keyrings()", 
+                    "id": "916646", 
+                    "issue date": "2013-04-23", 
+                    "associated redhat": "RHSA-2013:0744"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=917012", 
+                    "title": "CVE-2013-1796 kernel: kvm: buffer overflow in handling of MSR_KVM_SYSTEM_TIME", 
+                    "id": "917012", 
+                    "issue date": "2013-04-23", 
+                    "associated redhat": "RHSA-2013:0744"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=917013", 
+                    "title": "CVE-2013-1797 kernel: kvm: after free issue with the handling of MSR_KVM_SYSTEM_TIME", 
+                    "id": "917013", 
+                    "issue date": "2013-04-23", 
+                    "associated redhat": "RHSA-2013:0744"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=917017", 
+                    "title": "CVE-2013-1798 kernel: kvm: out-of-bounds access in ioapic indirect register reads", 
+                    "id": "917017", 
+                    "issue date": "2013-04-23", 
+                    "associated redhat": "RHSA-2013:0744"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=919164", 
+                    "title": "CVE-2013-1827 Kernel: dccp: check ccid before NULL poiter dereference", 
+                    "id": "919164", 
+                    "issue date": "2013-04-23", 
+                    "associated redhat": "RHSA-2013:0744"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=919384", 
+                    "title": "CVE-2013-1826 Kernel: xfrm_user: return error pointer instead of NULL", 
+                    "id": "919384", 
+                    "issue date": "2013-04-23", 
+                    "associated redhat": "RHSA-2013:0744"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=920471", 
+                    "title": "CVE-2013-0913 Kernel: drm/i915: heap writing overflow", 
+                    "id": "920471", 
+                    "issue date": "2013-04-23", 
+                    "associated redhat": "RHSA-2013:0744"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=922344", 
+                    "title": "CVE-2012-6547 Kernel: net/tun: ioctl() based information leaks", 
+                    "id": "922344", 
+                    "issue date": "2013-04-23", 
+                    "associated redhat": "RHSA-2013:0744"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=922383", 
+                    "title": "CVE-2012-6546 Kernel: atm: information leak in getsockopt & getsockname", 
+                    "id": "922383", 
+                    "issue date": "2013-04-23", 
+                    "associated redhat": "RHSA-2013:0744"
+                }
+            }, 
+            {
+                "bugzilla": {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=922424", 
+                    "title": "CVE-2012-6537 Kernel: xfrm_user information leaks copy_to_user_", 
+                    "id": "922424", 
+                    "issue date": "2013-04-23", 
+                    "associated redhat": "RHSA-2013:0744"
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1809-1", 
+                "id": "USN-1809-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1812-1", 
+                "id": "USN-1812-1"
+            }, 
+            {
+                "url": "http://www.ubuntu.com/usn/USN-1813-1", 
+                "id": "USN-1813-1"
+            }
+        ], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

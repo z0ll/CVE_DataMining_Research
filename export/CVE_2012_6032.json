@@ -1,0 +1,183 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-6032", 
+                "published": "2012-11-23T15:55:04.197-05:00", 
+                "id": "CVE-2012-6032", 
+                "modified": "2013-10-10T23:47:46.103-04:00", 
+                "summary": "Multiple integer overflows in the (1) tmh_copy_from_client and (2) tmh_copy_to_client functions in the Transcendent Memory (TMEM) in Xen 4.0, 4.1, and 4.2 allow local guest OS users to cause a denial of service (memory corruption and host crash) via unspecified vectors. NOTE: this issue was originally published as part of CVE-2012-3497, which was too general; CVE-2012-3497 has been SPLIT into this ID and others."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:xen:xen:4.1.0"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.0.0"
+            }, 
+            {
+                "id": "cpe:/o:xen:xen:4.2.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.63034", 
+                "id": 63034
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/55410", 
+                "id": 55410
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/85199", 
+                "id": 85199
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/78268", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id?1027482", 
+                    "vendor": "SECTRACK"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/55410", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2012/09/05/8", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://wiki.xen.org/wiki/Security_Announcements#XSA-15_multiple_TMEM_hypercall_vulnerabilities", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://security.gentoo.org/glsa/glsa-201309-24.xml", 
+                    "vendor": "GENTOO"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/55082", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/50472", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://osvdb.org/85199", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://lists.xen.org/archives/html/xen-announce/2012-09/msg00006.html", 
+                    "vendor": "MLIST"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "4.9", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2012-6032"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Gentoo Linux Local Check: https://security.gentoo.org/glsa/201604-03", 
+                "file": "glsa-201604-03.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "18627"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "GLSA-201309-24 : Xen: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201309-24.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "70184"
+            }, 
+            {
+                "name": "GLSA-201604-03 : Xen: Multiple vulnerabilities (Venom)", 
+                "file": "gentoo_GLSA-201604-03.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "90380"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [
+            {
+                "url": "https://security.gentoo.org/glsa/201309-24", 
+                "id": "GLSA-201309-24"
+            }
+        ], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

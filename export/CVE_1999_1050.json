@@ -1,0 +1,154 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-1050", 
+                "published": "1999-11-12T00:00:00.000-05:00", 
+                "id": "CVE-1999-1050", 
+                "modified": "2008-09-05T16:18:36.307-04:00", 
+                "summary": "Directory traversal vulnerability in Matt Wright FormHandler.cgi script allows remote attackers to read arbitrary files via (1) a .. (dot dot) in the reply_message_attach attachment parameter, or (2) by specifying the filename as a template."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:matt_wright:formhandler.cgi:1.0"
+            }, 
+            {
+                "id": "cpe:/a:matt_wright:formhandler.cgi:3.0"
+            }, 
+            {
+                "id": "cpe:/a:matt_wright:formhandler.cgi:2.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.14973", 
+                "id": 14973
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/799", 
+                "id": 799
+            }, 
+            {
+                "url": "http://www.securityfocus.com/bid/798", 
+                "id": 798
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/static/3550.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/799", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/798", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/34939", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/34600", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1593", 
+                "signature": "SERVER-WEBAPP FormHandler.cgi external site redirection attempt"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1594", 
+                "signature": "SERVER-WEBAPP FormHandler.cgi access"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1628", 
+                "signature": "SERVER-WEBAPP FormHandler.cgi directory traversal attempt attempt"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-1999-1050"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Matt Wright FormHandler.cgi Arbitrary File Access", 
+                "file": "formhandler.nasl", 
+                "family": "CGI abuses", 
+                "id": "10075"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

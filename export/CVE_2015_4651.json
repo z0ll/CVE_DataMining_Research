@@ -1,0 +1,177 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4651", 
+                "published": "2015-07-21T21:59:03.157-04:00", 
+                "id": "CVE-2015-4651", 
+                "modified": "2015-08-21T12:28:52.700-04:00", 
+                "summary": "The dissect_wccp2r1_address_table_info function in epan/dissectors/packet-wccp.c in the WCCP dissector in Wireshark 1.12.x before 1.12.6 does not properly determine whether enough memory is available for storing IP address strings, which allows remote attackers to cause a denial of service (application crash) via a crafted packet."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:wireshark:wireshark:1.12.3"
+            }, 
+            {
+                "id": "cpe:/a:wireshark:wireshark:1.12.0"
+            }, 
+            {
+                "id": "cpe:/a:wireshark:wireshark:1.12.2"
+            }, 
+            {
+                "id": "cpe:/a:wireshark:wireshark:1.12.4"
+            }, 
+            {
+                "id": "cpe:/a:wireshark:wireshark:1.12.1"
+            }, 
+            {
+                "id": "cpe:/a:wireshark:wireshark:1.12.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.76766", 
+                "id": 76766
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://code.wireshark.org/review/gitweb?p=wireshark.git;a=commit;h=524ed1df6e6126cd63ba419ccb82c83636d77ee4", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=11153", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.wireshark.org/security/wnpa-sec-2015-19.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2015/dsa-3294", 
+                    "vendor": "DEBIAN"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-4651"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.cisecurity:def:79", 
+                "title": "DSA-3294-1 -- wireshark -- security update", 
+                "class": "patch", 
+                "id": "oval:org.cisecurity:def:79"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 3294-1 (wireshark - security update)", 
+                "file": "deb_3294.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "703294"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-3294-1 : wireshark - security update", 
+                "file": "debian_DSA-3294.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "84350"
+            }, 
+            {
+                "name": "GLSA-201510-03 : Wireshark: Multiple vulnerabilities", 
+                "file": "gentoo_GLSA-201510-03.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "86688"
+            }, 
+            {
+                "name": "openSUSE Security Update : wireshark (openSUSE-2015-478)", 
+                "file": "openSUSE-2015-478.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "84657"
+            }, 
+            {
+                "name": "Wireshark 1.12.x < 1.12.6 Multiple DoS Vulnerabilities", 
+                "file": "wireshark_1_12_6.nasl", 
+                "family": "Windows", 
+                "id": "84398"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-3294", 
+                "id": "DSA-3294"
+            }
+        ], 
+        "Vmware": []
+    }
+}

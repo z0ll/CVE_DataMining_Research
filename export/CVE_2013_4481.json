@@ -1,0 +1,206 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/867.html", 
+                "id": "CWE-867", 
+                "title": "2011 Top 25 - Weaknesses On the Cusp"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/801.html", 
+                "id": "CWE-801", 
+                "title": "2010 Top 25 - Insecure Interaction Between Components"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/361.html", 
+                "id": "CWE-361", 
+                "title": "Time and State"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/743.html", 
+                "id": "CWE-743", 
+                "title": "CERT C Secure Coding Section 09 - Input Output (FIO)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/751.html", 
+                "id": "CWE-751", 
+                "title": "2009 Top 25 - Insecure Interaction Between Components"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/852.html", 
+                "id": "CWE-852", 
+                "title": "CERT Java Secure Coding Section 07 - Visibility and Atomicity (VNA)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/877.html", 
+                "id": "CWE-877", 
+                "title": "CERT C++ Secure Coding Section 09 - Input Output (FIO)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/882.html", 
+                "id": "CWE-882", 
+                "title": "CERT C++ Secure Coding Section 14 - Concurrency (CON)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/988.html", 
+                "id": "CWE-988", 
+                "title": "SFP Secondary Cluster: Race Condition Window"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/26.html", 
+                "id": 26
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/29.html", 
+                "id": 29
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4481", 
+                "published": "2013-11-23T06:55:04.680-05:00", 
+                "id": "CVE-2013-4481", 
+                "modified": "2013-11-25T10:41:41.790-05:00", 
+                "summary": "Race condition in Luci 0.26.0 creates /var/lib/luci/etc/luci.ini with world-readable permissions before restricting the permissions, which allows local users to read the file and obtain sensitive information such as \"authentication secrets.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/362.html", 
+                "id": "CWE-362", 
+                "title": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:redhat:enterprise_linux:6"
+            }, 
+            {
+                "id": "cpe:/a:scientificlinux:luci:0.26.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.65547", 
+                "id": 65547
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=988998", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://rhn.redhat.com/errata/RHSA-2013-1603.html", 
+                    "vendor": "REDHAT"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "1.9", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Low", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-4481"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "CentOS 6 : luci (CESA-2013:1603)", 
+                "file": "centos_RHSA-2013-1603.nasl", 
+                "family": "CentOS Local Security Checks", 
+                "id": "79165"
+            }, 
+            {
+                "name": "RHEL 6 : luci (RHSA-2013:1603)", 
+                "file": "redhat-RHSA-2013-1603.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "71008"
+            }, 
+            {
+                "name": "Scientific Linux Security Update : luci on SL6.x i386/x86_64", 
+                "file": "sl_20131121_luci_on_SL6_x.nasl", 
+                "family": "Scientific Linux Local Security Checks", 
+                "id": "71195"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2013-1603.html", 
+                    "id": "RHSA-2013:1603", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

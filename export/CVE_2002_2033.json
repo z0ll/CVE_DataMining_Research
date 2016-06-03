@@ -1,0 +1,165 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-2033", 
+                "published": "2002-12-31T00:00:00.000-05:00", 
+                "id": "CVE-2002-2033", 
+                "modified": "2008-09-05T16:32:09.387-04:00", 
+                "summary": "faqmanager.cgi in FAQManager 2.2.5 and earlier allows remote attackers to read arbitrary files by specifying the filename in the toc parameter with a trailing null character (%00)."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:faqmanager:faqmanager.cgi:2.2.1"
+            }, 
+            {
+                "id": "cpe:/a:faqmanager:faqmanager.cgi:2.1.1"
+            }, 
+            {
+                "id": "cpe:/a:faqmanager:faqmanager.cgi:2.1"
+            }, 
+            {
+                "id": "cpe:/a:faqmanager:faqmanager.cgi:2.1.2"
+            }, 
+            {
+                "id": "cpe:/a:faqmanager:faqmanager.cgi:2.0"
+            }, 
+            {
+                "id": "cpe:/a:faqmanager:faqmanager.cgi:2.2.5"
+            }, 
+            {
+                "id": "cpe:/a:faqmanager:faqmanager.cgi:2.2.4"
+            }, 
+            {
+                "id": "cpe:/a:faqmanager:faqmanager.cgi:2.2"
+            }, 
+            {
+                "id": "cpe:/a:faqmanager:faqmanager.cgi:2.2.2"
+            }, 
+            {
+                "id": "cpe:/a:faqmanager:faqmanager.cgi:2.2.3"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.19675", 
+                "id": 19675
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/3810", 
+                "id": 3810
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/3810", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.iss.net/security_center/static/7833.php", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://archives.neohapsis.com/archives/bugtraq/2002-01/0065.html", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "none", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:1590", 
+                "signature": "SERVER-WEBAPP faqmanager.cgi arbitrary file access attempt"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:1591", 
+                "signature": "SERVER-WEBAPP faqmanager.cgi access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2002-2033"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FAQManager Arbitrary File Reading Vulnerability", 
+                "file": "faqmanager.nasl", 
+                "family": "Web application abuses", 
+                "id": "10837"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "FAQManager faqmanager.cgi toc Parameter Arbitrary File Access", 
+                "file": "faqmanager.nasl", 
+                "family": "CGI abuses", 
+                "id": "10837"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,291 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1046", 
+                "published": "2009-03-23T12:30:01.577-04:00", 
+                "id": "CVE-2009-1046", 
+                "modified": "2016-04-05T21:59:00.273-04:00", 
+                "summary": "The console selection feature in the Linux kernel 2.6.28 before 2.6.28.4, 2.6.25, and possibly earlier versions, when the UTF-8 console is used, allows physically proximate attackers to cause a denial of service (memory corruption) by selecting a small number of 3-byte UTF-8 characters, which triggers an \"off-by-two memory error.\" NOTE: it is not clear whether this issue crosses privilege boundaries."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/399.html", 
+                "id": "CWE-399", 
+                "title": "Resource Management Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:linux:linux_kernel:2.6.28.2"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:2.6.28.1"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:2.6.28.3"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:2.6.25"
+            }, 
+            {
+                "id": "cpe:/o:linux:linux_kernel:2.6.28"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.47248", 
+                "id": 47248
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/33672", 
+                "id": 33672
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.securityfocus.com/bid/33672", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://lists.openwall.net/linux-kernel/2009/02/02/364", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://lists.openwall.net/linux-kernel/2009/01/30/333", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.ubuntu.com/usn/usn-751-1", 
+                    "vendor": "UBUNTU"
+                }, 
+                {
+                    "url": "http://www.redhat.com/support/errata/RHSA-2009-0451.html", 
+                    "vendor": "REDHAT"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2009/02/12/9", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2009/02/12/11", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2009/02/12/10", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.kernel.org/pub/linux/kernel/v2.6/ChangeLog-2.6.28.4", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2009/dsa-1800", 
+                    "vendor": "DEBIAN"
+                }, 
+                {
+                    "url": "http://www.debian.org/security/2009/dsa-1787", 
+                    "vendor": "DEBIAN"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "medium", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "3.4", 
+                    "base": "4.7", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/9083", 
+                "id": 9083, 
+                "file": "platforms/linux/local/9083.c"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2009-1046"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13750", 
+                "title": "DSA-1800-1 linux-2.6 -- denial of service/privilege escalation/sensitive memory leak", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13750"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:13537", 
+                "title": "DSA-1787-1 linux-2.6.24 -- denial of service/privilege escalation/information leak", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:13537"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:8300", 
+                "title": "DSA-1800 linux-2.6 -- denial of service/privilege escalation/sensitive memory leak", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:8300"
+            }, 
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:12994", 
+                "title": "USN-751-1 -- linux, linux-source-2.6.22 vulnerabilities", 
+                "class": "patch", 
+                "id": "oval:org.mitre.oval:def:12994"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Debian Security Advisory DSA 1787-1 (linux-2.6.24)", 
+                "file": "deb_1787_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "63939"
+            }, 
+            {
+                "name": "Debian Security Advisory DSA 1800-1 (linux-2.6)", 
+                "file": "deb_1800_1.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "64034"
+            }, 
+            {
+                "name": "RedHat Security Advisory RHSA-2009:0451", 
+                "file": "RHSA_2009_0451.nasl", 
+                "family": "Red Hat Local Security Checks", 
+                "id": "63908"
+            }, 
+            {
+                "name": "SLES10: Security update for Linux kernel", 
+                "file": "sles10_kernel1.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "65812"
+            }, 
+            {
+                "name": "SuSE Security Advisory SUSE-SA:2009:045 (kernel)", 
+                "file": "suse_sa_2009_045.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "64761"
+            }, 
+            {
+                "name": "Ubuntu USN-776-2 (kvm)", 
+                "file": "ubuntu_776_2.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "64175"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "Debian DSA-1787-1 : linux-2.6.24 - denial of service/privilege escalation/information leak", 
+                "file": "debian_DSA-1787.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "38668"
+            }, 
+            {
+                "name": "Debian DSA-1800-1 : linux-2.6 - denial of service/privilege escalation/sensitive memory leak", 
+                "file": "debian_DSA-1800.nasl", 
+                "family": "Debian Local Security Checks", 
+                "id": "38795"
+            }, 
+            {
+                "name": "openSUSE Security Update : kernel (kernel-1211)", 
+                "file": "suse_11_0_kernel-090814.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "40783"
+            }, 
+            {
+                "name": "SuSE 10 Security Update : Linux kernel (ZYPP Patch Number 6109)", 
+                "file": "suse_kernel-6109.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "41538"
+            }, 
+            {
+                "name": "SuSE 10 Security Update : Linux kernel (ZYPP Patch Number 6113)", 
+                "file": "suse_kernel-6113.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "59136"
+            }, 
+            {
+                "name": "Ubuntu 7.10 / 8.04 LTS / 8.10 : linux, linux-source-2.6.22 vulnerabilities (USN-751-1)", 
+                "file": "ubuntu_USN-751-1.nasl", 
+                "family": "Ubuntu Local Security Checks", 
+                "id": "37337"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [
+            {
+                "Redhat": {
+                    "oval": "", 
+                    "url": "https://rhn.redhat.com/errata/RHSA-2009-0451.html", 
+                    "id": "RHSA-2009:0451", 
+                    "title": ""
+                }
+            }
+        ], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [
+            {
+                "url": "http://www.ubuntu.com/usn/USN-751-1", 
+                "id": "USN-751-1"
+            }
+        ], 
+        "Debian": [
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-1787", 
+                "id": "DSA-1787"
+            }, 
+            {
+                "url": "https://security-tracker.debian.org/tracker/DSA-1800", 
+                "id": "DSA-1800"
+            }
+        ], 
+        "Vmware": []
+    }
+}

@@ -1,0 +1,177 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-1200", 
+                "published": "2003-12-29T00:00:00.000-05:00", 
+                "id": "CVE-2003-1200", 
+                "modified": "2008-09-05T16:36:18.387-04:00", 
+                "summary": "Stack-based buffer overflow in FORM2RAW.exe in Alt-N MDaemon 6.5.2 through 6.8.5 allows remote attackers to execute arbitrary code via a long From parameter to Form2Raw.cgi."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:alt-n:mdaemon:6.8.3"
+            }, 
+            {
+                "id": "cpe:/a:alt-n:mdaemon:6.8.2"
+            }, 
+            {
+                "id": "cpe:/a:alt-n:mdaemon:6.8.5"
+            }, 
+            {
+                "id": "cpe:/a:alt-n:mdaemon:6.8.4"
+            }, 
+            {
+                "id": "cpe:/a:alt-n:mdaemon:6.5.2"
+            }, 
+            {
+                "id": "cpe:/a:alt-n:mdaemon:6.7.5"
+            }, 
+            {
+                "id": "cpe:/a:alt-n:mdaemon:6.7.9"
+            }, 
+            {
+                "id": "cpe:/a:alt-n:mdaemon:6.8.1"
+            }, 
+            {
+                "id": "cpe:/a:alt-n:mdaemon:6.8.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.461", 
+                "id": 461
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/9317", 
+                "id": 9317
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/3255", 
+                "id": 3255
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/14097", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/9317", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/archive/1/348454", 
+                    "vendor": "BUGTRAQ"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/3255", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/10512", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://marc.theaimsgroup.com/?l=bugtraq&m=107936753929354&w=2", 
+                    "vendor": "BUGTRAQ"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": [
+            {
+                "category": "web-application", 
+                "id": "sid:2433", 
+                "signature": "SERVER-WEBAPP MDaemon form2raw.cgi overflow attempt"
+            }, 
+            {
+                "category": "web-application", 
+                "id": "sid:2434", 
+                "signature": "SERVER-WEBAPP MDaemon form2raw.cgi access"
+            }
+        ]
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "mdaemon_worldclient_form2raw.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/http/mdaemon_worldclient_form2raw.rb", 
+                "title": "McAfee ePolicy Orchestrator / ProtectionPilot Overflow"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": [
+            {
+                "url": "http://www.saintcorporation.com/cgi-bin/exploit_info/mdaemon_worldclient_form2raw", 
+                "id": "exploit_info/mdaemon_worldclient_form2raw", 
+                "title": "MDaemon WorldClient form2raw.cgi From buffer overflow"
+            }
+        ]
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2003-1200"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

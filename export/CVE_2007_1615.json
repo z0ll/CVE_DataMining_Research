@@ -1,0 +1,152 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1615", 
+                "published": "2007-03-22T20:19:00.000-04:00", 
+                "id": "CVE-2007-1615", 
+                "modified": "2011-03-07T21:52:28.923-05:00", 
+                "summary": "SQL injection vulnerability in index.php in ScriptMagix Jokes 2.0 and earlier allows remote attackers to execute arbitrary SQL commands via the catid parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:scriptmagix:scriptmagix_jokes:2.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.35793", 
+                "id": 35793
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/23015", 
+                "id": 23015
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.vupen.com/english/advisories/2007/1012", 
+                    "vendor": "VUPEN"
+                }, 
+                {
+                    "url": "http://secunia.com/advisories/24595", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/3509", 
+                    "vendor": "MILW0RM"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/33063", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/23015", 
+                    "vendor": "BID"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004116", 
+                "signature": "ET WEB_SPECIFIC_APPS ScriptMagix Jokes SQL Injection Attempt -- index.php catid SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004117", 
+                "signature": "ET WEB_SPECIFIC_APPS ScriptMagix Jokes SQL Injection Attempt -- index.php catid UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004118", 
+                "signature": "ET WEB_SPECIFIC_APPS ScriptMagix Jokes SQL Injection Attempt -- index.php catid INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004119", 
+                "signature": "ET WEB_SPECIFIC_APPS ScriptMagix Jokes SQL Injection Attempt -- index.php catid DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004120", 
+                "signature": "ET WEB_SPECIFIC_APPS ScriptMagix Jokes SQL Injection Attempt -- index.php catid ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2004121", 
+                "signature": "ET WEB_SPECIFIC_APPS ScriptMagix Jokes SQL Injection Attempt -- index.php catid UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-1615"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

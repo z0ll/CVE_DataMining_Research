@@ -1,0 +1,212 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0008", 
+                "published": "2013-01-09T13:09:40.320-05:00", 
+                "id": "CVE-2013-0008", 
+                "modified": "2013-12-13T00:09:33.913-05:00", 
+                "summary": "win32k.sys in the kernel-mode drivers in Microsoft Windows Vista SP2, Windows Server 2008 SP2, R2, and R2 SP1, Windows 7 Gold and SP1, Windows 8, Windows Server 2012, and Windows RT does not properly handle window broadcast messages, which allows local users to gain privileges via a crafted application, aka \"Win32k Improper Message Handling Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/264.html", 
+                "id": "CWE-264", 
+                "title": "Permissions, Privileges, and Access Controls"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_7:::x86"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_7:-:sp1:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:r2::itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:r2:sp1:itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_7:::x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:-:sp2:itanium"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:r2::x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_vista::sp2:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008::sp2:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_8:-:-:x86"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_8:-:-:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_vista::sp2"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_7::sp1:x86"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2012:-"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:r2:sp1:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_rt:-"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008::sp2:x86"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.7257", 
+                "id": 7257
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://www.us-cert.gov/cas/techalerts/TA13-008A.html", 
+                    "vendor": "CERT"
+                }, 
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS13-005", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.exploit-db.com/exploits/24485", 
+                    "vendor": "EXPLOIT-DB"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "3.9", 
+                    "base": "7.2", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "local"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms13_005_hwnd_broadcast.rb", 
+                "file": "metasploit-framework/modules/exploits/windows/local/ms13_005_hwnd_broadcast.rb", 
+                "title": "MS11-080 AfdJoinLeaf Privilege Escalation"
+            }
+        ], 
+        "ExploitDB": [
+            {
+                "url": "http://www.exploit-db.com/exploits/24485", 
+                "id": 24485, 
+                "file": "platforms/windows/dos/24485.txt"
+            }
+        ], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2013-0008"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:16326", 
+                "title": "Win32k Improper Message Handling Vulnerability - MS13-005", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:16326"
+            }
+        ], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "Microsoft Windows Kernel-Mode Drivers Privilege Elevation Vulnerability (2778930)", 
+                "file": "secpod_ms13-005.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "902938"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "MS13-005: Vulnerability in Windows Kernel-Mode Driver Could Allow Elevation of Privilege (2778930)", 
+                "file": "smb_nt_ms13-005.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "63423"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in Windows Kernel-Mode Driver Could Allow Elevation of Privilege", 
+                "id": "Vulnerability in Windows Kernel-Mode Driver Could Allow Elevation of Privilege", 
+                "title": "2778930"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/2778930", 
+                "id": "2778930", 
+                "title": "Vulnerability in Windows Kernel-Mode Driver Could Allow Elevation of Privilege"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS13-005", 
+                "id": "MS13-005", 
+                "title": "Vulnerability in Windows Kernel-Mode Driver Could Allow Elevation of Privilege"
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

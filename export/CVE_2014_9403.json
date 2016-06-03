@@ -1,0 +1,156 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9403", 
+                "published": "2014-12-19T10:59:32.457-05:00", 
+                "id": "CVE-2014-9403", 
+                "modified": "2015-09-28T20:31:41.397-04:00", 
+                "summary": "The CWebAdminMod::ChanPage function in modules/webadmin.cpp in ZNC before 1.4 allows remote authenticated users to cause a denial of service (NULL pointer dereference and crash) by adding a channel with the same name as an existing channel but without the leading # character, related to a \"use-after-delete\" error."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:znc:znc:1.2"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.73332", 
+                "id": 73332
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/66926", 
+                "id": 66926
+            }
+        ], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://github.com/znc/znc/issues/528", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://github.com/znc/znc/blob/master/ChangeLog.md", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/66926", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.openwall.com/lists/oss-security/2014/12/18/2", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:013", 
+                    "vendor": "MANDRIVA"
+                }, 
+                {
+                    "url": "http://advisories.mageia.org/MGASA-2014-0543.html", 
+                    "vendor": "CONFIRM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "single_instance", 
+                    "exploit": "8.0", 
+                    "base": "4.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-9403"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "ZNC NULL Pointer Dereference Denial Of Service Vulnerability", 
+                "file": "sw_znc_66926.nasl", 
+                "family": "Denial of Service", 
+                "id": "66215"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "GLSA-201412-31 : ZNC: Denial of Service", 
+                "file": "gentoo_GLSA-201412-31.nasl", 
+                "family": "Gentoo Local Security Checks", 
+                "id": "80109"
+            }, 
+            {
+                "name": "Mandriva Linux Security Advisory : znc (MDVSA-2015:013)", 
+                "file": "mandriva_MDVSA-2015-013.nasl", 
+                "family": "Mandriva Local Security Checks", 
+                "id": "80432"
+            }, 
+            {
+                "name": "openSUSE Security Update : znc (openSUSE-2015-845)", 
+                "file": "openSUSE-2015-845.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "87166"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [
+            {
+                "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:013", 
+                "id": "MDVSA-2015:013"
+            }
+        ], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

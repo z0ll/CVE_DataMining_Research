@@ -1,0 +1,135 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6831", 
+                "published": "2006-12-31T00:00:00.000-05:00", 
+                "id": "CVE-2006-6831", 
+                "modified": "2011-03-07T21:47:08.250-05:00", 
+                "summary": "SQL injection vulnerability in faqDsp.asp in aFAQ 1.0 allows remote attackers to execute arbitrary SQL commands via the catcode parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:alan_ward:a-faq:1.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.34136", 
+                "id": 34136
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/31130", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://milw0rm.com/exploits/3031", 
+                    "vendor": "MILW0RM"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005979", 
+                "signature": "ET WEB_SPECIFIC_APPS aFAQ SQL Injection Attempt -- faqDsp.asp catcode SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005980", 
+                "signature": "ET WEB_SPECIFIC_APPS aFAQ SQL Injection Attempt -- faqDsp.asp catcode UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005981", 
+                "signature": "ET WEB_SPECIFIC_APPS aFAQ SQL Injection Attempt -- faqDsp.asp catcode INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005982", 
+                "signature": "ET WEB_SPECIFIC_APPS aFAQ SQL Injection Attempt -- faqDsp.asp catcode DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005983", 
+                "signature": "ET WEB_SPECIFIC_APPS aFAQ SQL Injection Attempt -- faqDsp.asp catcode ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2005984", 
+                "signature": "ET WEB_SPECIFIC_APPS aFAQ SQL Injection Attempt -- faqDsp.asp catcode UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-6831"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

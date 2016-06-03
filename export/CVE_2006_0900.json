@@ -1,0 +1,160 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-0900", 
+                "published": "2006-02-27T14:06:00.000-05:00", 
+                "id": "CVE-2006-0900", 
+                "modified": "2008-09-10T16:03:33.227-04:00", 
+                "summary": "nfsd in FreeBSD 6.0 kernel allows remote attackers to cause a denial of service via a crafted NFS mount request, as demonstrated by the ProtoVer NFS test suite."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/o:freebsd:freebsd:6.0"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.2063", 
+                "id": 2063
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [
+            {
+                "url": "http://www.securityfocus.com/bid/16838", 
+                "id": 16838
+            }
+        ], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/23511", 
+                "id": 23511
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://secunia.com/advisories/19017", 
+                    "vendor": "SECUNIA"
+                }, 
+                {
+                    "url": "http://lists.immunitysec.com/pipermail/dailydave/2006-February/002982.html", 
+                    "vendor": "MLIST"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/24918", 
+                    "vendor": "XF"
+                }, 
+                {
+                    "url": "http://www.securityfocus.com/bid/16838", 
+                    "vendor": "BID"
+                }, 
+                {
+                    "url": "http://www.osvdb.org/23511", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://securityreason.com/securityalert/521", 
+                    "vendor": "SREASON"
+                }, 
+                {
+                    "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-06:10.nfs.asc", 
+                    "vendor": "FREEBSD"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.8", 
+                    "integrity impact": "none", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "attempted-dos", 
+                "id": "sid:2002853", 
+                "signature": "ET DOS FreeBSD NFS RPC Kernel Panic"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "nfsd_mount.rb", 
+                "file": "metasploit-framework/modules/auxiliary/dos/freebsd/nfsd/nfsd_mount.rb", 
+                "title": "FreeBSD Remote NFS RPC Request Denial of Service"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2006-0900"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [
+            {
+                "name": "FreeBSD Security Advisory (FreeBSD-SA-06:10.nfs.asc)", 
+                "file": "freebsdsa_nfs.nasl", 
+                "family": "FreeBSD Local Security Checks", 
+                "id": "56353"
+            }
+        ], 
+        "Nessus": [
+            {
+                "name": "FreeBSD nfsd Malformed NFS Mount Request Remote DoS", 
+                "file": "freebsd_nfsd_dos.nasl", 
+                "family": "Denial of Service", 
+                "id": "20989"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

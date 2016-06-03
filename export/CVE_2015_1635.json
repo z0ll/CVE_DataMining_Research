@@ -1,0 +1,240 @@
+{
+    "Information": {
+        "Category": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/74.html", 
+                "id": "CWE-74", 
+                "title": "Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection)"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/913.html", 
+                "id": "CWE-913", 
+                "title": "Improper Control of Dynamically-Managed Code Resources"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/691.html", 
+                "id": "CWE-691", 
+                "title": "Insufficient Control Flow Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/752.html", 
+                "id": "CWE-752", 
+                "title": "2009 Top 25 - Risky Resource Management"
+            }, 
+            {
+                "url": "https://cwe.mitre.org/data/definitions/991.html", 
+                "id": "CWE-991", 
+                "title": "SFP Secondary Cluster: Tainted Input to Environment"
+            }
+        ], 
+        "CAPEC": [
+            {
+                "url": "https://capec.mitre.org/data/definitions/35.html", 
+                "id": 35
+            }, 
+            {
+                "url": "https://capec.mitre.org/data/definitions/77.html", 
+                "id": 77
+            }
+        ], 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1635", 
+                "published": "2015-04-14T16:59:01.263-04:00", 
+                "id": "CVE-2015-1635", 
+                "modified": "2015-09-30T14:14:52.373-04:00", 
+                "summary": "HTTP.sys in Microsoft Windows 7 SP1, Windows Server 2008 R2 SP1, Windows 8, Windows 8.1, and Windows Server 2012 Gold and R2 allows remote attackers to execute arbitrary code via crafted HTTP requests, aka \"HTTP.sys Remote Code Execution Vulnerability.\""
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/94.html", 
+                "id": "CWE-94", 
+                "title": "Improper Control of Generation of Code ('Code Injection')"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/o:microsoft:windows_server_2012:r2:-:~-~datacenter~~~"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_8:-::~~~~x64~"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_8:-::~~~~x86~"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_8.1:-:-:~-~-~-~x64~"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_8.1:-:-:~-~-~-~x86~"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_7::sp1:x64"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_7::sp1:x86"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2012:r2:-:~-~essentials~~~"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2008:r2:sp1"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2012:r2:-:~-~standard~~~"
+            }, 
+            {
+                "id": "cpe:/o:microsoft:windows_server_2012:-:gold"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.74833", 
+                "id": 74833
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://technet.microsoft.com/security/bulletin/MS15-034", 
+                    "vendor": "MS"
+                }, 
+                {
+                    "url": "http://www.securitytracker.com/id/1032109", 
+                    "vendor": "SECTRACK"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "10.0", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "complete", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "10.0", 
+                    "integrity impact": "complete", 
+                    "availability impact": "complete", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": [
+                {
+                    "id": "CWE-691", 
+                    "title": "Insufficient Control Flow Management"
+                }
+            ], 
+            "Top vulnerable": true
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2020912", 
+                "signature": "ET WEB_SERVER Possible IIS Integer Overflow DoS (CVE-2015-1635)"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [
+            {
+                "id": "ms15_034_ulonglongadd.rb", 
+                "file": "metasploit-framework/modules/auxiliary/dos/http/ms15_034_ulonglongadd.rb", 
+                "title": "MS15-034 HTTP Protocol Stack Request Handling Denial-of-Service"
+            }, 
+            {
+                "id": "ms15_034_http_sys_memory_dump.rb", 
+                "file": "metasploit-framework/modules/auxiliary/scanner/http/ms15_034_http_sys_memory_dump.rb", 
+                "title": "MS15-034 HTTP Protocol Stack Request Handling HTTP.SYS Memory Information Disclosure"
+            }
+        ], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2015-1635"
+    }, 
+    "Scanners": {
+        "Oval": [
+            {
+                "url": "http://oval.mitre.org/repository/data/getDef?id=oval:org.mitre.oval:def:28623", 
+                "title": "HTTP.sys Remote code execution vulnerability - CVE-2015-1635 (MS15-034)", 
+                "class": "vulnerability", 
+                "id": "oval:org.mitre.oval:def:28623"
+            }
+        ], 
+        "Nmap": [
+            {
+                "url": "https://nmap.org/nsedoc/scripts/http-vuln-cve2015-1635.html", 
+                "file": "http-vuln-cve2015-1635.nse", 
+                "family": "vuln, safe"
+            }
+        ], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "MS15-034: Vulnerability in HTTP.sys Could Allow Remote Code Execution (3042553) (uncredentialed check)", 
+                "file": "ms15-034.nasl", 
+                "family": "Windows", 
+                "id": "82828"
+            }, 
+            {
+                "name": "MS15-034: Vulnerability in HTTP.sys Could Allow Remote Code Execution (3042553)", 
+                "file": "smb_nt_ms15-034.nasl", 
+                "family": "Windows : Microsoft Bulletins", 
+                "id": "82771"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [
+            {
+                "url": "https://support.microsoft.com/en-us/kb/Vulnerability in HTTP.sys Could Allow Remote Code Execution", 
+                "id": "Vulnerability in HTTP.sys Could Allow Remote Code Execution", 
+                "title": "3042553"
+            }, 
+            {
+                "url": "https://support.microsoft.com/en-us/kb/3042553", 
+                "id": "3042553", 
+                "title": "Vulnerability in HTTP.sys Could Allow Remote Code Execution"
+            }
+        ], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [
+            {
+                "url": "http://technet.microsoft.com/en-us/security/bulletin/MS15-034", 
+                "id": "MS15-034", 
+                "title": ""
+            }
+        ], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

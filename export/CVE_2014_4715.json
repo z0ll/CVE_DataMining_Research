@@ -1,0 +1,137 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4715", 
+                "published": "2014-07-03T00:22:16.123-04:00", 
+                "id": "CVE-2014-4715", 
+                "modified": "2014-07-17T01:07:46.153-04:00", 
+                "summary": "Yann Collet LZ4 before r119, when used on certain 32-bit platforms that allocate memory beyond 0x80000000, does not properly detect integer overflows, which allows context-dependent attackers to cause a denial of service (memory corruption) or possibly have unspecified other impact via a crafted Literal Run, a different vulnerability than CVE-2014-4611."
+            }
+        ], 
+        "CWE": [
+            {
+                "url": "https://cwe.mitre.org/data/definitions/189.html", 
+                "id": "CWE-189", 
+                "title": "Numeric Errors"
+            }
+        ], 
+        "CPE": [
+            {
+                "id": "cpe:/a:yann_collet:lz4:r118"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.66982", 
+                "id": 66982
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [], 
+        "Other": {
+            "References": [
+                {
+                    "url": "https://code.google.com/p/lz4/source/detail?r=119", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "https://code.google.com/p/lz4/issues/detail?id=134", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://fastcompression.blogspot.fr/2014/07/software-vulnerabilities-how-it-works.html", 
+                    "vendor": "CONFIRM"
+                }, 
+                {
+                    "url": "http://blog.securitymouse.com/2014/07/i-was-wrong-proving-lz4-exploitable.html", 
+                    "vendor": "MISC"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "2.9", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "none", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "5.0", 
+                    "integrity impact": "none", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "Moderate", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2014-4715"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": [
+            {
+                "name": "Fedora 20 : kernel-3.15.4-200.fc20 (2014-8171)", 
+                "file": "fedora_2014-8171.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "76468"
+            }, 
+            {
+                "name": "Fedora 19 : kernel-3.14.13-100.fc19 (2014-8487)", 
+                "file": "fedora_2014-8487.nasl", 
+                "family": "Fedora Local Security Checks", 
+                "id": "76851"
+            }, 
+            {
+                "name": "openSUSE Security Update : the Linux Kernel (openSUSE-SU-2014:1677-1)", 
+                "file": "openSUSE-2014-793.nasl", 
+                "family": "SuSE Local Security Checks", 
+                "id": "80152"
+            }
+        ]
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}

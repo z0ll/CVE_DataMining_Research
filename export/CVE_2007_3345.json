@@ -1,0 +1,294 @@
+{
+    "Information": {
+        "Category": null, 
+        "CAPEC": null, 
+        "CVE": [
+            {
+                "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3345", 
+                "published": "2007-06-22T14:30:00.000-04:00", 
+                "id": "CVE-2007-3345", 
+                "modified": "2008-11-15T01:52:16.670-05:00", 
+                "summary": "Multiple SQL injection vulnerabilities in index.php in PHPAccounts 0.5 allow remote attackers to execute arbitrary SQL commands via the (1) Outgoing_Type_ID, (2) Outgoing_ID, (3) Project_ID, (4) Client_ID, (5) Invoice_ID, or (6) Vendor_ID parameter."
+            }
+        ], 
+        "CWE": null, 
+        "CPE": [
+            {
+                "id": "cpe:/a:php_accounts:php_accounts:0.5"
+            }
+        ]
+    }, 
+    "References": {
+        "SCIP": [
+            {
+                "url": "http://www.scip.ch/?vuldb.37412", 
+                "id": 37412
+            }
+        ], 
+        "IAVM": [], 
+        "BID": [], 
+        "OSVDB": [
+            {
+                "url": "http://www.osvdb.org/35980", 
+                "id": 35980
+            }
+        ], 
+        "Other": {
+            "References": [
+                {
+                    "url": "http://pridels-team.blogspot.com/2007/06/phpaccounts-vuln.html", 
+                    "vendor": "MISC"
+                }, 
+                {
+                    "url": "http://osvdb.org/35980", 
+                    "vendor": "OSVDB"
+                }, 
+                {
+                    "url": "http://xforce.iss.net/xforce/xfdb/35028", 
+                    "vendor": "XF"
+                }
+            ]
+        }, 
+        "CertVN": []
+    }, 
+    "Risk": [
+        {
+            "CVSS v2": [
+                {
+                    "impact": "6.4", 
+                    "access complexity": "low", 
+                    "confidentiality impact": "partial", 
+                    "authentication": "none", 
+                    "exploit": "10.0", 
+                    "base": "7.5", 
+                    "integrity impact": "partial", 
+                    "availability impact": "partial", 
+                    "access vector": "network"
+                }
+            ], 
+            "severity": "High", 
+            "Top alert": false, 
+            "Top vulnerable": false
+        }
+    ], 
+    "Rules": {
+        "Suricata": [
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006510", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Outgoing_Type_ID SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006511", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Outgoing_Type_ID UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006512", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Outgoing_Type_ID INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006513", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Outgoing_Type_ID DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006514", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Outgoing_Type_ID ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006515", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Outgoing_Type_ID UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006516", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Outgoing_ID SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006517", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Outgoing_ID UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006518", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Outgoing_ID INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006519", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Outgoing_ID DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006520", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Outgoing_ID ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006521", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Outgoing_ID UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006522", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Project_ID SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006523", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Project_ID UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006524", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Project_ID INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006525", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Project_ID DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006526", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Project_ID ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006527", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Project_ID UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006528", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Client_ID SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006529", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Client_ID UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006530", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Client_ID INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006531", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Client_ID DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006532", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Client_ID ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006533", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Client_ID UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006534", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Invoice_ID SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006535", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Invoice_ID UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006536", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Invoice_ID INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006537", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Invoice_ID DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006538", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Invoice_ID ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006539", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Invoice_ID UPDATE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006540", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Vendor_ID SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006541", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Vendor_ID UNION SELECT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006542", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Vendor_ID INSERT"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006543", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Vendor_ID DELETE"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006544", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Vendor_ID ASCII"
+            }, 
+            {
+                "classtype": "web-application", 
+                "id": "sid:2006545", 
+                "signature": "ET WEB_SPECIFIC_APPS PHPAccounts SQL Injection Attempt -- index.php Vendor_ID UPDATE"
+            }
+        ], 
+        "Snort": []
+    }, 
+    "Exploits": {
+        "Metasploit": [], 
+        "ExploitDB": [], 
+        "Elliot D2": [], 
+        "Saint": []
+    }, 
+    "vFeed": {
+        "Product": "vFeed - The Correlated Vulnerability and Threat Database", 
+        "Contact": "@toolswatch", 
+        "Author": "NJ OUCHN", 
+        "URL": "https://github.com/toolswatch/vFeed", 
+        "Version": "0.6.5", 
+        "id": "VFD-2007-3345"
+    }, 
+    "Scanners": {
+        "Oval": [], 
+        "Nmap": [], 
+        "OpenVas": [], 
+        "Nessus": []
+    }, 
+    "Patches": {
+        "Fedora": [], 
+        "HP": [], 
+        "Microsoft KB": [], 
+        "Mandriva": [], 
+        "Cisco": [], 
+        "IBM AIX Apar": [], 
+        "Suse": [], 
+        "Redhat": [], 
+        "Gentoo": [], 
+        "Microsoft Bulletins": [], 
+        "Ubuntu": [], 
+        "Debian": [], 
+        "Vmware": []
+    }
+}
