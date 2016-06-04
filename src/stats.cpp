@@ -24,7 +24,7 @@ vector<string> readfilenames()
         ifs >> str;
         if (str.length() > 4)
         {
-            str = "export/" + str;
+            str = "rawdata/" + str;
             filenames.push_back(str);     
         }
     }
@@ -106,10 +106,10 @@ int main()
     }
     
     // CWE table
-    printTableStats(CWEs, "data/CWE.csv");
-    printTableStats(CAPECs, "data/CAPEC.csv");
-    printTableStats(Risks, "data/Risk.csv");
-    printTableStats(CPEs, "data/CPE.csv");
+    printTableStats(CWEs, "statistics/CWE.csv");
+    printTableStats(CAPECs, "statistics/CAPEC.csv");
+    printTableStats(Risks, "statistics/Risk.csv");
+    printTableStats(CPEs, "statistics/CPE.csv");
     progressBar(0.9);
     
     // double-variable
@@ -122,9 +122,9 @@ int main()
     calculateList(CWE_Risk, CWEs, Risks);
     calculateList(CWE_CAPEC, CWEs, CAPECs);
     calculateList(CPE_CWE, CPETop200, CWEs);
-    printList(CWE_Risk, "data/CWE_Risk.csv");
-    printList(CWE_CAPEC, "data/CWE_CAPEC.csv");
-    printList(CPE_CWE, "data/CPE_CWE.csv");
+    printList(CWE_Risk, "statistics/CWE_Risk.csv");
+    printList(CWE_CAPEC, "statistics/CWE_CAPEC.csv");
+    printList(CPE_CWE, "statistics/CPE_CWE.csv");
    
    
     progressBar(1);
