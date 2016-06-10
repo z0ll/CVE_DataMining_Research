@@ -21,12 +21,13 @@ class JsonHelper
 {
 public:
     Item* parse(FILE*); 
-    
+    Document parseComplete(FILE*);
+    string CAPECStringfy(int);
+    string CPEStringSimplify(string);   
+
 private:
     void getCWE(string&, Value&);
     void getCAPEC(set<string> &, Value&);
     void getRisk(string&, Value&);
     void getCPE(set<string> &, Value&);
-    string CPEStringSimplify(string);   
-    string CAPECStringfy(int);
 };
